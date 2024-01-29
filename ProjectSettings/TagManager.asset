@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Collision_Level
+  - Collision_Player_Local
+  - Collision_Player_Remote
+  - Collision_Projectile
+  - Collision_Enemy
+  - 
+  - Hitbox_Player
+  - Hitbox_Ally
+  - Hibox_Enemy
+  - 
+  - Damage_Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 3734285785
+    locked: 0
+  - name: Player_Behind
+    uniqueID: 2849864635
+    locked: 0
+  - name: Wall
+    uniqueID: 280144955
+    locked: 0
+  - name: Player_Front
+    uniqueID: 3130667863
+    locked: 0
+  - name: Wall_Above
+    uniqueID: 1504768681
+    locked: 0

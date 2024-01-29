@@ -1,0 +1,12 @@
+﻿{
+  "name": "GamePlay.Enemy.Spawn.Processor.Runtime",
+  "references": [
+    "GUID:67f67dcce9d9e8a43a8e45bc1fe5534c",
+    "GUID:8a671dd4d32949c0a2914de8aba23216",
+    "GUID:e587f8c64e1c420f93fbe3833ccb6def",
+    "GUID:f38aae42bdf8425ca292c68947a20558",
+    "GUID:176371d9ecf14a348fc4fc86548c5b17",
+    "GUID:a8f6b895322c45408ed64cb258c91d51",
+    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9"
+  ]
+}

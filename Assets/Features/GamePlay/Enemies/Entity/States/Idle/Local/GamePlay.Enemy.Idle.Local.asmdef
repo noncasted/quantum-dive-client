@@ -1,0 +1,27 @@
+{
+    "name": "GamePlay.Enemy.Idle.Local",
+    "rootNamespace": "",
+    "references": [
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:10b508286ef3b1d498113145693b7dfb",
+        "GUID:d3bedd8eef274f4c90fb28daf433ded3",
+        "GUID:8265c01205983f8408e9dbff4433b2ff",
+        "GUID:aac41f60988d442497259de79205647b",
+        "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
+        "GUID:699865ac82ed4bfc98e47c9342127ab0",
+        "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+        "GUID:527e199203c94a05960eadfb90a65aba",
+        "GUID:cc57a3ad1b7f41d58b9d8177398bbb5e",
+        "GUID:3645d3881bb043458b3711f767e534ae"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

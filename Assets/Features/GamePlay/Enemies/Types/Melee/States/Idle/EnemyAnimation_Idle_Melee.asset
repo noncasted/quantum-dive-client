@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8179604948855924090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Idle_1
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1909937126, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &-3069094088736352689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Idle_2
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1541233577, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bfc97ed04345c7b49e6ec98fa478c1, type: 3}
+  m_Name: EnemyAnimation_Idle_Melee
+  m_EditorClassIdentifier: 
+  _data:
+    _time: 1
+    _name: Idle
+  _frames:
+  - {fileID: 8098143943722786578}
+  - {fileID: -8179604948855924090}
+  - {fileID: -3069094088736352689}
+  - {fileID: 3229562957338612022}
+  _sprites:
+  - {fileID: 489319138, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  - {fileID: -1909937126, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  - {fileID: -1541233577, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  - {fileID: -1591837207, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _animationName: Idle
+--- !u!114 &3229562957338612022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Idle_3
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1591837207, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &8098143943722786578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Idle_0
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 489319138, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 0
+  _events: []

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef62f88dda264ba79e4daf83859d9113, type: 3}
+  m_Name: BowComponent_Strafe_State
+  m_EditorClassIdentifier: 
+  _pushParams:
+    _time: 0.25
+    _distance: 2
+    _curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2.1770682
+        outSlope: 2.1770682
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.054166667
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.1804758
+        outSlope: 0.1804758
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.28750002
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  _playerAnimation: {fileID: 11400000, guid: 8d0650fb907750d4a8d8bcfe5e881fd4, type: 2}
+  _bowAnimation: {fileID: 11400000, guid: cc0e1a472af94354abf2ff2ba202570e, type: 2}
+  _definition: {fileID: 11400000, guid: bcef0776f40fb444998bcc858106244c, type: 2}
+  _transitions:
+  - {fileID: 11400000, guid: c1aa85a6905cc524bbfe04771a4a700a, type: 2}

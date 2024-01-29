@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 587b9e80e7e24d16a9bb11585aa6163a, type: 3}
+  m_Name: EnemyConfig_Range_Local
+  m_EditorClassIdentifier: 
+  _localStateMachine: {fileID: 11400000, guid: 3076f7688b56f50468ca9f1c46c666b0, type: 2}
+  _stateSelector: {fileID: 11400000, guid: 0b65c5af3c667c34cbdd77ef22ab9efa, type: 2}
+  _targetSearcher: {fileID: 11400000, guid: 8fe59e689afe3ca4481da09c6712f900, type: 2}
+  _health: {fileID: 11400000, guid: 03e3a9ae01c6dd3458ae47ae025d2931, type: 2}
+  _damageProcessor: {fileID: 11400000, guid: ec0cf3d5e48700e4e9b2c204d40678fa, type: 2}
+  _spriteSorting: {fileID: 11400000, guid: bdca88c8217e16540b48c09711997763, type: 2}
+  _idle: {fileID: 11400000, guid: 000bc25829c17eb4ca8087ae4dc6f7d0, type: 2}
+  _respawn: {fileID: 11400000, guid: 66d14b86061332f4d801f30ecb87ed9f, type: 2}
+  _following: {fileID: 11400000, guid: 69f2cd6525cfb9a47a04dfc96ddc2fe5, type: 2}
+  _shoot: {fileID: 11400000, guid: be9a838d95f96094fbe4b5b2be3758eb, type: 2}
+  _damaged: {fileID: 11400000, guid: e795a1de85fd5de49b1fa793c96f9cf8, type: 2}
+  _death: {fileID: 11400000, guid: 6145573ce4ed26848aefbd43efd8b6d9, type: 2}
+  _push: {fileID: 11400000, guid: f6bf667a9544abc4597fecf5ffffa5d8, type: 2}
+  _remoteStateMachine: {fileID: 11400000, guid: 2bb794e7999ec24459bbab4766740fb2, type: 2}
+  _networkPropertiesInjector: {fileID: 11400000, guid: 73ef5d41a048a494dbf4571389027346, type: 2}
+  _transformSync: {fileID: 11400000, guid: 2d7165a2796f476459b7b60e32fd0185, type: 2}

@@ -1,0 +1,25 @@
+{
+    "name": "GamePlay.Enemy.Bootstrap.Remote",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fb8dc4a772c14b09997d8c095ee55015",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+        "GUID:b9cfcdce878345ea803b2ed938d16e4f",
+        "GUID:4cb33ddb764f4a22986b78f754fe0bc5",
+        "GUID:f60712f7c5ea4162b9d86912c1cc1708",
+        "GUID:672c847731364869b84f35653f1f6b42",
+        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+        "GUID:d89cb064a6d60b243b67336a6540d7a7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

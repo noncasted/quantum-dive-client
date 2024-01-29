@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8682413419208575137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Respawn_4
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1904080708, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &-5003930511530420039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Respawn_2
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1902672276, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &-4541700377364113773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Respawn_1
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1395033884, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &-2816793258606979112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Respawn_5
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1685545840, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f71292a24334e89876eb45603eec2f0, type: 3}
+  m_Name: EnemyAnimation_Respawn_Range
+  m_EditorClassIdentifier: 
+  _data:
+    _time: 0.5
+    _name: Respawn
+  _frames:
+  - {fileID: 4008460238439398256}
+  - {fileID: -4541700377364113773}
+  - {fileID: -5003930511530420039}
+  - {fileID: 6629340612401945759}
+  - {fileID: -8682413419208575137}
+  - {fileID: -2816793258606979112}
+  - {fileID: 961578390300249328}
+  - {fileID: 1037592201445668209}
+  _sprites:
+  - {fileID: 377619999, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -1395033884, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -1902672276, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: 1779374694, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -1904080708, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -1685545840, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: 1182138429, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -1693813927, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _animationName: Respawn
+--- !u!114 &961578390300249328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Respawn_6
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1182138429, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &1037592201445668209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Respawn_7
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1693813927, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &4008460238439398256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Respawn_0
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 377619999, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &6629340612401945759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Respawn_3
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1779374694, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []

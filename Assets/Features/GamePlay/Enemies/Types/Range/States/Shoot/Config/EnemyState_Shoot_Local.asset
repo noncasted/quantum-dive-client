@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3033fec7c29647ca8b7b422af3017813, type: 3}
+  m_Name: EnemyState_Shoot_Local
+  m_EditorClassIdentifier: 
+  _animation: {fileID: 11400000, guid: b9bc6578878071e49b2354e1f9aa42a3, type: 2}
+  _definition: {fileID: 11400000, guid: b4b8c26da9688f0468da2170b5b242df, type: 2}
+  _config: {fileID: 11400000, guid: 9a010284b4b1dec43808b910ae04db33, type: 2}

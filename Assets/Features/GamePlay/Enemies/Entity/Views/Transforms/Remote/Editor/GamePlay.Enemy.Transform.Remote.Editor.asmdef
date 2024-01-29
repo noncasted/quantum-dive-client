@@ -1,0 +1,16 @@
+﻿{
+  "name": "GamePlay.Enemy.Transform.Remote.Editor",
+  "rootNamespace": "",
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "references":[ "GUID:d945054fb520ae0408f2ec087ffa5163", "GUID:e6579f5da6f22eb42869badd62086205" ]
+}

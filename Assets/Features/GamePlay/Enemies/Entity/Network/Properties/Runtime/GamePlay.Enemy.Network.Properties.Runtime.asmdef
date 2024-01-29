@@ -1,0 +1,14 @@
+﻿{
+  "name": "GamePlay.Enemy.Network.Properties.Runtime",
+  "references": [
+    "GUID:672c847731364869b84f35653f1f6b42",
+    "GUID:7e2f66033f9a634418d0fce71635d73f",
+    "GUID:ecece143389945a3b5eba849d4e1ea31",
+    "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:4cb33ddb764f4a22986b78f754fe0bc5",
+    "GUID:1cd599a51b25f654caab6ee282e32afd",
+    "GUID:af9bf093d60b4b249d657338415f3336",
+    "GUID:c2cdc9528dfe4a4db832cf36688e85e3"
+  ]
+}

@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4786793505056735862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Player_Respawn_2
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -178866265, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  _containsEvent: 0
+  _event: {fileID: 0}
+--- !u!114 &-4327823829106770508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Player_Respawn_1
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -226000592, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  _containsEvent: 0
+  _event: {fileID: 0}
+--- !u!114 &-1173763151352249506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Player_Respawn_3
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1113838808, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  _containsEvent: 0
+  _event: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086c859beb4540039c0b5704f5403c00, type: 3}
+  m_Name: Animation_Respawn
+  m_EditorClassIdentifier: 
+  _data:
+    _time: 1
+    _name: Player_Respawn
+  _frames:
+  - {fileID: 6618381166125642897}
+  - {fileID: -4327823829106770508}
+  - {fileID: -4786793505056735862}
+  - {fileID: -1173763151352249506}
+  - {fileID: 2527514545730338875}
+  - {fileID: 1170608858773259482}
+  _sprites:
+  - {fileID: -2115851634, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  - {fileID: -226000592, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  - {fileID: -178866265, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  - {fileID: -1113838808, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  - {fileID: 447509043, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  - {fileID: -1923630860, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  _animationName: Player_Respawn
+--- !u!114 &1170608858773259482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Player_Respawn_5
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1923630860, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  _containsEvent: 0
+  _event: {fileID: 0}
+--- !u!114 &2527514545730338875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Player_Respawn_4
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 447509043, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  _containsEvent: 0
+  _event: {fileID: 0}
+--- !u!114 &6618381166125642897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Player_Respawn_0
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -2115851634, guid: c77368aed67f02d4ebc394ef51000403, type: 3}
+  _containsEvent: 0
+  _event: {fileID: 0}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c05f7582d3242aa87e6750c9cc9d919, type: 3}
+  m_Name: EnemyDefinition_Range
+  m_EditorClassIdentifier: 
+  _id: 1
+  _name: Range
+  _startupInstances: 10
+  _editorIcon: {fileID: 2800000, guid: 6a752b51f5d758f42ad1a8eab3f936f0, type: 3}
+  _localPrefab: {fileID: 3689467288068943158, guid: cb4bf3cbae1de5c44bf23694dc89adf2, type: 3}
+  _remotePrefab: {fileID: 723349392901673955, guid: 3803b13e3d183394583ba39a76a01d86, type: 3}

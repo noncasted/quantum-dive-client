@@ -1,0 +1,55 @@
+﻿using System.Collections.Generic;
+using Common.Architecture.Container.Abstract;
+using Common.Architecture.Scopes.Runtime.Services;
+using Common.Architecture.Scopes.Runtime.Utils;
+using Cysharp.Threading.Tasks;
+using GamePlay.Player.Entity.Equipment.Abstract.Factory;
+using GamePlay.Player.Services.Registries.Equipment.Common;
+using Sirenix.OdinInspector;
+using UnityEditor;
+using UnityEngine;
+
+namespace GamePlay.Player.Services.Registries.Equipment.Runtime
+{
+    [InlineEditor]
+    [CreateAssetMenu(fileName = EquipmentRegistryRoutes.ServiceName,
+        menuName = EquipmentRegistryRoutes.ServicePath)]
+    public class EquipmentRegistryFactory : ScriptableObject, IServiceFactory
+    {
+        [SerializeField] private EquipmentFactory[] _equipments;
+        
+        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        {
+            services.Register<EquipmentRegistry>()
+                .As<IEquipmentRegistry>()
+                .WithParameter(_equipments)
+                .AsSelfResolvable();
+        }
+        
+        [Button("Scan")]
+        private void Scan()
+        {
+#if UNITY_EDITOR
+            var definitions = new List<EquipmentFactory>();
+            var guids = AssetDatabase.FindAssets($"t:{typeof(EquipmentFactory)}");
+
+            foreach (var guid in guids)
+            {
+                var assetPath = AssetDatabase.GUIDToAssetPath(guid);
+                var asset = AssetDatabase.LoadAssetAtPath<EquipmentFactory>(assetPath);
+
+                if (asset == null)
+                    continue;
+
+                definitions.Add(asset);
+            }
+
+            Undo.RecordObject(this, "Assign definitions");
+
+            _equipments = definitions.ToArray();
+
+            Undo.RecordObject(this, "Assign definitions");
+#endif
+        }
+    }
+}

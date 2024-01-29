@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7977535323567278348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Damaged_2
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -155229683, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &-611071410341868362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Damaged_0
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1651495298, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963d21b630764233a4022265d3c57022, type: 3}
+  m_Name: EnemyAnimation_Damaged_Range
+  m_EditorClassIdentifier: 
+  _data:
+    _time: 0.5
+    _name: Damaged
+  _frames:
+  - {fileID: -611071410341868362}
+  - {fileID: 7738998996906128429}
+  _sprites:
+  - {fileID: 1651495298, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -1754647444, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -155229683, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _animationName: Damaged
+--- !u!114 &7738998996906128429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Damaged_1
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1754647444, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []

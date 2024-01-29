@@ -1,0 +1,24 @@
+{
+    "name": "GamePlay.Player.StateMachine.Remote.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
+        "GUID:18cd62688a47441f8ed820361786719b",
+        "GUID:fa9915635b0341e4ab6e73abc00d46f0",
+        "GUID:c31268840a1d493eacf10036579b818b",
+        "GUID:72ee10059c044befb9afe61cb72eaf8d",
+        "GUID:edd14c109d07427682a6f5b7a262a359",
+        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+        "GUID:65c3fcbb851ff9441a22dd049195dc8f",
+        "GUID:47083761e726d344ebda60ec45a5396c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

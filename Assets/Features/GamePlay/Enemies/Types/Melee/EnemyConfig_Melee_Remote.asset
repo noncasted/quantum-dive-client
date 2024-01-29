@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a44d327b41345a881a322de2f36b9d8, type: 3}
+  m_Name: EnemyConfig_Melee_Remote
+  m_EditorClassIdentifier: 
+  _remoteStateMachine: {fileID: 11400000, guid: 2bb794e7999ec24459bbab4766740fb2, type: 2}
+  _transformSync: {fileID: 11400000, guid: 2d7165a2796f476459b7b60e32fd0185, type: 2}
+  _idle: {fileID: 11400000, guid: b85ed942934f23c4192dbfb2734148b9, type: 2}
+  _respawn: {fileID: 11400000, guid: 1ebc22a242fbbe4458003112cf9673ca, type: 2}
+  _damaged: {fileID: 11400000, guid: c30126ad02e86c14ead5fd8c13a51eb3, type: 2}
+  _death: {fileID: 11400000, guid: 8b163c770a9659948a30fdcf26df832a, type: 2}
+  _following: {fileID: 11400000, guid: cc5b29fbb28ea04488640b02f791e4f7, type: 2}
+  _meleeAttack: {fileID: 11400000, guid: b5a279d196af2cc4e809fa6ee01e80b4, type: 2}
+  _spriteSorting: {fileID: 11400000, guid: bdca88c8217e16540b48c09711997763, type: 2}
+  _networkPropertiesInjector: {fileID: 11400000, guid: 73ef5d41a048a494dbf4571389027346, type: 2}
+  _health: {fileID: 11400000, guid: 9d330615524bc4d4c966e5cf13de895e, type: 2}

@@ -1,0 +1,20 @@
+{
+    "name": "GamePlay.Projectiles.Registry",
+    "rootNamespace": "",
+    "references": [
+        "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
+        "GUID:67f67dcce9d9e8a43a8e45bc1fe5534c",
+        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+        "GUID:861793575c7c4a2d82251cc54eeb8bf5",
+        "GUID:d89cb064a6d60b243b67336a6540d7a7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,14 @@
+﻿{
+  "name": "GamePlay.Enemy.Root.Local",
+  "references": [
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:4cb33ddb764f4a22986b78f754fe0bc5",
+    "GUID:672c847731364869b84f35653f1f6b42",
+    "GUID:d89cb064a6d60b243b67336a6540d7a7",
+    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+    "GUID:527e199203c94a05960eadfb90a65aba",
+    "GUID:ea8a3562e464425fb3442268f196d9e1",
+    "GUID:483c1c97199d48899ab2ef29bc389d0d",
+    "GUID:5a0b2aea9a2a4de78518f42301cb3375"
+  ]
+}

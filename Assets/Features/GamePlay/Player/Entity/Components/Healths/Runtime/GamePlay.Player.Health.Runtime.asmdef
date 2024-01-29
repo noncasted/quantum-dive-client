@@ -1,0 +1,10 @@
+﻿{
+  "name": "GamePlay.Player.Health.Runtime",
+  "references": [
+    "GUID:9b51a48d04164033bd0ea196e24c1113",
+    "GUID:8f9012bdd1b116c48ab480004500c8f3",
+    "GUID:65c3fcbb851ff9441a22dd049195dc8f",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:40eb4d6272f84671a242114857028fa1"
+  ]
+}

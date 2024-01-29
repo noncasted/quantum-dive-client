@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.EnemyServices.Registry.Runtime",
+  "references":[ "GUID:f2894a9a55f74e49bbe8a7453341e693", "GUID:67f67dcce9d9e8a43a8e45bc1fe5534c", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9", "GUID:f51ebe6a0ceec4240a699833d6309b23" ]
+}

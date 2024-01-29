@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae52b548f73eb040a012c8315869e7f, type: 3}
+  m_Name: EnemyLogs_StateMachine_Local
+  m_EditorClassIdentifier: 
+  _isEnabled: 0
+  _logs:
+    _keys: 00000000010000000200000003000000
+    _values: 00010000
+  _logParameters:
+    _isMessageColored: 0
+    _color: {r: 0, g: 0, b: 0, a: 0}
+    _headers:
+    - {fileID: 11400000, guid: 471c29dcbd353b14297bd44d6cff3d49, type: 2}
+    - {fileID: 11400000, guid: b4afbcba6c6923a4a9b7585b93f0cd26, type: 2}
+    - {fileID: 11400000, guid: f6606c327cb960449bf0e3258d0dccb0, type: 2}

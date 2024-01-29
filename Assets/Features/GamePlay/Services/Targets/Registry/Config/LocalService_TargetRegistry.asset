@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d7a6e01bd3a4005b46f0ac5d807923d, type: 3}
+  m_Name: LocalService_TargetRegistry
+  m_EditorClassIdentifier: 
+  _gizmosConfig: {fileID: 11400000, guid: a025251ec8d775944815eb4d50478c09, type: 2}

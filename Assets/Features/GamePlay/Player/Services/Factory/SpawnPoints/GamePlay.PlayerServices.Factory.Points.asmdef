@@ -1,0 +1,7 @@
+{
+  "name": "GamePlay.PlayerServices.Factory.Points",
+  "references": [
+    "GUID:e4924bae8b7f4512af86f641579b370f",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2"
+  ]
+}

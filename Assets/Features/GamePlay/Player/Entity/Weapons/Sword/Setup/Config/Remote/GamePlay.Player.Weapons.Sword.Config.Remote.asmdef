@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Player.Weapons.Sword.Config.Remote",
+  "references":[ "GUID:fa0e265ba965494c9ed8bed74f0d918e", "GUID:65c3fcbb851ff9441a22dd049195dc8f", "GUID:5e7079ca8f6615a47866f25ec94bae65", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:25a5d5e910674662a31aca5c98fe58a1" ]
+}

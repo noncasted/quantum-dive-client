@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Player.SubPush.Runtime",
+  "references":[ "GUID:776d03a35f1b52c4a9aed9f56d7b4229", "GUID:f51ebe6a0ceec4240a699833d6309b23", "GUID:04243451437dcfe48b583ab43ef0a8fa", "GUID:653035ca38aa68b428118c9a452c37a0", "GUID:65c3fcbb851ff9441a22dd049195dc8f", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:7f52ea8fad364986a09776cd470868d3" ]
+}

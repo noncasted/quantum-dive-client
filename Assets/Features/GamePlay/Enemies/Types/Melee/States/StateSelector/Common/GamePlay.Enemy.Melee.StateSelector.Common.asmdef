@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Enemy.Melee.StateSelector.Common",
+  "references":[ "GUID:d97d9c764948444d98c823fdaa970d62" ]
+}

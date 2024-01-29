@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Player.Weapons.Bow.Config.Remote",
+  "references":[ "GUID:b05b159862734a98954de233c33ae0c5", "GUID:65c3fcbb851ff9441a22dd049195dc8f", "GUID:5e7079ca8f6615a47866f25ec94bae65", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:cba6ac8ac64c48208b19a46ce9ddf862", "GUID:ed3143b9b3134f1ab6ad76169c5ebf96", "GUID:f8ad9e753f9147608b26d5a2571ea357", "GUID:6e0698aa384a406f9c81cc2f5e7ba07e", "GUID:6c2db941bade13442848b216ff408243", "GUID:d234107fd6fb40299e3ad303a33c367c" ]
+}

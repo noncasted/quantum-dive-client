@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c4d69be947142c9b7b4e56e4089f0c6, type: 3}
+  m_Name: BowComponent_Shoot_Stance
+  m_EditorClassIdentifier: 
+  _bowAnimation: {fileID: 11400000, guid: 8829fdc9d843fef4baf6cb31d69fca0e, type: 2}
+  _playerAnimation: {fileID: 11400000, guid: 4b16145171b06da44aeab1e40cf32f2b, type: 2}
+  _definition: {fileID: 11400000, guid: c1aa85a6905cc524bbfe04771a4a700a, type: 2}
+  _transitions:
+  - {fileID: 11400000, guid: bcef0776f40fb444998bcc858106244c, type: 2}
+  - {fileID: 11400000, guid: 2da25a48209984c42b121948fe2aa3e0, type: 2}

@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7450802498809558614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Shoot_0
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 92276784, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &-3073736151814594868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Shoot_7
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 2124960850, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &-2691917843689397480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b115e546ef4a4b1fb399555d92d552b9, type: 3}
+  m_Name: EnemyShootEvent_Shoot_3
+  m_EditorClassIdentifier: 
+--- !u!114 &-2414992046450286888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Shoot_2
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1236726008, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1222743934e48d599f7a01d12b35adf, type: 3}
+  m_Name: EnemyAnimation_Shoot
+  m_EditorClassIdentifier: 
+  _data:
+    _time: 1
+    _name: Shoot
+  _frames:
+  - {fileID: -7450802498809558614}
+  - {fileID: 5957847584704271804}
+  - {fileID: -2414992046450286888}
+  - {fileID: 2263486802365542171}
+  - {fileID: 1543300808961833825}
+  - {fileID: 4511192802146461308}
+  - {fileID: 8760282509804176942}
+  - {fileID: -3073736151814594868}
+  _sprites:
+  - {fileID: 92276784, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: 1336661179, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -1236726008, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: 716715025, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: 1678353549, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -963921467, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -925298454, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: 2124960850, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _animationName: Shoot
+  _shootEvent: {fileID: -2691917843689397480}
+--- !u!114 &1543300808961833825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Shoot_4
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1678353549, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &2263486802365542171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Shoot_3
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 716715025, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 1
+  _events:
+  - {fileID: -2691917843689397480}
+--- !u!114 &4511192802146461308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Shoot_5
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -963921467, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &5957847584704271804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Shoot_1
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1336661179, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &8760282509804176942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Shoot_6
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -925298454, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []

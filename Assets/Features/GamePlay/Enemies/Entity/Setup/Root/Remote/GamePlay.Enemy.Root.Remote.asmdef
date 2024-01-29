@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Enemy.Root.Remote",
+  "references":[ "GUID:f51ebe6a0ceec4240a699833d6309b23", "GUID:4cb33ddb764f4a22986b78f754fe0bc5", "GUID:672c847731364869b84f35653f1f6b42", "GUID:d89cb064a6d60b243b67336a6540d7a7", "GUID:b0214a6008ed146ff8f122a6a9c2f6cc", "GUID:5a0b2aea9a2a4de78518f42301cb3375" ]
+}

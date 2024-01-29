@@ -1,0 +1,13 @@
+{
+  "name": "GamePlay.Player.Weapons.Bow.ShootPoints.Runtime",
+  "references": [
+    "GUID:ef686d706e9141d43a435dca8eecdde5",
+    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+    "GUID:5a6ca98db01d77741890b42e259b7291",
+    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
+    "GUID:65c3fcbb851ff9441a22dd049195dc8f",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:94e5ca42c58876942a8ffdd1c63b952f",
+    "GUID:f625955ae4f64d9b8121b9d9465af505"
+  ]
+}

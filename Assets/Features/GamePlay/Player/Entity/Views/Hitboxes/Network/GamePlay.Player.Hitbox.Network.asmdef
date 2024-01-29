@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Player.Hitbox.Network",
+  "references":[ "GUID:2435b9189672c5848ae4cc81c2cf0e13", "GUID:62300bc9a85e40f0a0b8dbebfca5842f", "GUID:954bed7845ef3b94c8f2d8ca3cd76154" ]
+}

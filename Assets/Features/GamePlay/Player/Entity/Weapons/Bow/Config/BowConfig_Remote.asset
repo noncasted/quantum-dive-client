@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4cf8ede3c147a6a46afcccfc60e7b5, type: 3}
+  m_Name: BowConfig_Remote
+  m_EditorClassIdentifier: 
+  _aim: {fileID: 11400000, guid: a48abead2f33b124dad142f1ea40ef9d, type: 2}
+  _reload: {fileID: 11400000, guid: d78bf546b23c3dc4281a566dd35d430f, type: 2}
+  _shoot: {fileID: 11400000, guid: c802d9d578e7bc2479b8bd35905368ca, type: 2}
+  _strafes: {fileID: 11400000, guid: 985f870509faf4a40b818c0cd9787848, type: 2}
+  _projectileStarter: {fileID: 11400000, guid: 734b5736097cc44479d64b30f87a7742, type: 2}
+  _rotation: {fileID: 11400000, guid: 4470bc9229c686246a03a089a46a4a09, type: 2}

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-101793589594642012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420b4814d8868c443ae796e180394d9b, type: 3}
+  m_Name: GlobalConfig_SceneData_ServicesScene
+  m_EditorClassIdentifier: 
+  _name:
+    m_SceneAsset: {fileID: 102900000, guid: fa9902c71b5f7cd4f98e1a5c19e15def, type: 3}
+    m_SceneName: Services_Global
+  _reference:
+    m_AssetGUID: fa9902c71b5f7cd4f98e1a5c19e15def
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea80077ce545cf749a170808f9c1a1ff, type: 3}
+  m_Name: GlobalConfig
+  m_EditorClassIdentifier: 
+  _audio: {fileID: 11400000, guid: a31106a227296924abca8468c1dd7d6c, type: 2}
+  _camera: {fileID: 11400000, guid: 548182730858bee42925b0b2f19e48dc, type: 2}
+  _input: {fileID: 11400000, guid: f2d99df2725cdbe40b484cabbe33f9b5, type: 2}
+  _system: {fileID: 11400000, guid: 234a30f9a9563ba4695033a8b17cae64, type: 2}
+  _network: {fileID: 11400000, guid: 649d534f012d93848a5d2d1dc76defcc, type: 2}
+  _ui: {fileID: 11400000, guid: 87b0be3b60ebed6449a2a25fe3fbf67b, type: 2}
+  _gameLoop: {fileID: 11400000, guid: 24bc63408099b334f8050f4463f479ab, type: 2}
+  _publisherSdk: {fileID: 11400000, guid: a7a6608e698f54249907145b756aff63, type: 2}
+  _backend: {fileID: 11400000, guid: e78942d14aeb14b4e93daa5d02828353, type: 2}
+  _settings: {fileID: 11400000, guid: f619e9043e5db8e4485bd99397fc6c79, type: 2}
+  _defaultCallbacks: {fileID: 11400000, guid: 52a269503aa4bb54d9967845c5229de3, type: 2}
+  _scopeDestroyHandler: {fileID: 11400000, guid: 02e2e7d47289c7246bfdc5d97a5e0b5a, type: 2}
+  _scope: {fileID: 4425232438733536047, guid: 6dff990b64ff40b4980ef90789bf70a4, type: 3}
+  _servicesScene: {fileID: -101793589594642012}

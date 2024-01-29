@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6649965130177373416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: MeleeAttack_0
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1842685155, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &-5759353062631303073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: MeleeAttack_3
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 722752143, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &-3972063807840451871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61da05bd01d0423c9b997e9e28b602fd, type: 3}
+  m_Name: EnemyMeleeAttackEvent_MeleeAttack_2
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e323fd22b4de4418b81f33e5d3b0d67e, type: 3}
+  m_Name: EnemyAnimation_MeleeAttack
+  m_EditorClassIdentifier: 
+  _data:
+    _time: 1.5
+    _name: MeleeAttack
+  _frames:
+  - {fileID: -6649965130177373416}
+  - {fileID: 3141828867117961100}
+  - {fileID: 6918871956697961788}
+  - {fileID: -5759353062631303073}
+  - {fileID: 696803530567905145}
+  - {fileID: 5492420328192729962}
+  - {fileID: 6632816923242203614}
+  _sprites:
+  - {fileID: 1842685155, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  - {fileID: -305851791, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  - {fileID: 1227386581, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  - {fileID: 722752143, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  - {fileID: 1680744846, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  - {fileID: -1736677991, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  - {fileID: -1297837628, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _animationName: MeleeAttack
+  _meleeAttackEvent: {fileID: -3972063807840451871}
+--- !u!114 &696803530567905145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: MeleeAttack_4
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1680744846, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &3141828867117961100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: MeleeAttack_1
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -305851791, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &5492420328192729962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: MeleeAttack_5
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1736677991, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &6632816923242203614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: MeleeAttack_6
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1297837628, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &6918871956697961788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: MeleeAttack_2
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1227386581, guid: 22fc7608390be5743a4f9559ff442393, type: 3}
+  _containsEvent: 1
+  _events:
+  - {fileID: -3972063807840451871}

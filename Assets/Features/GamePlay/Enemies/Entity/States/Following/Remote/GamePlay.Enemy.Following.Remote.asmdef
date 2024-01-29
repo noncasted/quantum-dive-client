@@ -1,0 +1,15 @@
+﻿{
+  "name": "GamePlay.Enemy.Following.Remote",
+  "references": [
+    "GUID:87c37c46dfd9454380a9559a46f1be34",
+    "GUID:4cb33ddb764f4a22986b78f754fe0bc5",
+    "GUID:7e2f66033f9a634418d0fce71635d73f",
+    "GUID:10b508286ef3b1d498113145693b7dfb",
+    "GUID:d44e25549d13469a8a277f4beb75308f",
+    "GUID:aac41f60988d442497259de79205647b",
+    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
+    "GUID:699865ac82ed4bfc98e47c9342127ab0",
+    "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2"
+  ]
+}

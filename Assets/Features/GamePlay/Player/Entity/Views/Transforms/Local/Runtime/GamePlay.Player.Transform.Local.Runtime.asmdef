@@ -1,0 +1,22 @@
+{
+    "name": "GamePlay.Player.Transform.Local.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:aaedc93bbf702d34e8e6d773e0108d7c",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:fe4adae493555af4788e53948d7966ca",
+        "GUID:5a6ca98db01d77741890b42e259b7291",
+        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+        "GUID:65c3fcbb851ff9441a22dd049195dc8f",
+        "GUID:5e5187e14e0636c48a513418c1e4e134"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

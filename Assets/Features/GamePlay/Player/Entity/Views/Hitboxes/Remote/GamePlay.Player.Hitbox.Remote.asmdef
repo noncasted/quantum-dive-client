@@ -1,0 +1,14 @@
+﻿{
+  "name": "GamePlay.Player.Hitbox.Remote",
+  "references": [
+    "GUID:aaedc93bbf702d34e8e6d773e0108d7c",
+    "GUID:2435b9189672c5848ae4cc81c2cf0e13",
+    "GUID:9cfd74e03b544251808825a0d52ed401",
+    "GUID:72ee10059c044befb9afe61cb72eaf8d",
+    "GUID:c78a7dbfd9ed46b2b27149ec340d0b5c",
+    "GUID:6dc79ecacad54fd8bf10905a5d77b08f",
+    "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:dc70dc890b8a4913acb1c03b25e1e3ae"
+  ]
+}

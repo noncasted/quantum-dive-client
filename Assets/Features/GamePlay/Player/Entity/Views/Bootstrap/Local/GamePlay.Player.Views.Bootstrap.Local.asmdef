@@ -1,0 +1,21 @@
+{
+  "name": "GamePlay.Player.Views.Bootstrap.Local",
+  "references": [
+    "GUID:5e7079ca8f6615a47866f25ec94bae65",
+    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+    "GUID:aaedc93bbf702d34e8e6d773e0108d7c",
+    "GUID:239f9a8379f7b964b8f8c879fed530fb",
+    "GUID:9a286a02eeeb6bc45a393a0ca6c650f9",
+    "GUID:ab1b3c60e062ceb40ac9ae59913b9e15",
+    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
+    "GUID:8358514cc19e4fa43acfb78a22566558",
+    "GUID:653035ca38aa68b428118c9a452c37a0",
+    "GUID:cccef2e047ca63e41923842cb1749709",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:44265e8886254d92835254b3bd1a2a7b",
+    "GUID:475e7352b7684936814b6c47a79525dc",
+    "GUID:d7f245ec195547edb9c81809078172dd",
+    "GUID:65c3fcbb851ff9441a22dd049195dc8f",
+    "GUID:d95427421dff4580b80c96d9901d0146"
+  ]
+}

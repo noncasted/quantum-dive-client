@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7130948477116671989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5271532ca2141769281f3f4ccfae783, type: 3}
+  m_Name: LoggerHeader_PlayerLogs_StateMachine_Remote
+  m_EditorClassIdentifier: 
+  _name: StateMachine
+  _isColored: 1
+  _color: {r: 0.41960788, g: 0.7803922, b: 0.67058825, a: 1}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c27ba8c86744dbf810fbd1263172528, type: 3}
+  m_Name: PlayerLogs_StateMachine_Remote
+  m_EditorClassIdentifier: 
+  _isEnabled: 1
+  _logs:
+    _keys: 00000000010000000200000003000000
+    _values: 01010101
+  _logParameters:
+    _isMessageColored: 0
+    _color: {r: 0, g: 0, b: 0, a: 0}
+    _headers:
+    - {fileID: 11400000, guid: 15e13e47c907a134a9f81a86fa7e15a2, type: 2}
+    - {fileID: -7130948477116671989}

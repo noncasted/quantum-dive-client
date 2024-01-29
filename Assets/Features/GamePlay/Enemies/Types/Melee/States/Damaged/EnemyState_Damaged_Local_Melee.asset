@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad40dccd6e334903a4313434ff6bb4b4, type: 3}
+  m_Name: EnemyState_Damaged_Local_Melee
+  m_EditorClassIdentifier: 
+  _pushConfig: {fileID: 11400000, guid: 711e4687b02283a44b843826563a5b5c, type: 2}
+  _animation: {fileID: 11400000, guid: 46bbd38880bd4ba4b882a054bc55f846, type: 2}
+  _definition: {fileID: 11400000, guid: 3142c575a8a494447bf363c9f2390c84, type: 2}

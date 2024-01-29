@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Player.Weapons.Sword.TargetsSearch.Runtime",
+  "references":[ "GUID:2435b9189672c5848ae4cc81c2cf0e13", "GUID:66415be395f24ef296248b13e0120996", "GUID:9dab7ae2c0ec48340870bbfaaeedd676", "GUID:65c3fcbb851ff9441a22dd049195dc8f", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:2cb1b3fc50dc4994a116b6b7186bc291" ]
+}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255a58f135094a30ac74bbbb0179a725, type: 3}
+  m_Name: PlayerConfig_Remote
+  m_EditorClassIdentifier: 
+  _spriteSorting: {fileID: 11400000, guid: 6e2eae41be748e945bc273ea2a6383de, type: 2}
+  _equipmentSlotsStorage: {fileID: 11400000, guid: f5b45f0ce3755924ba99239d66f95bcc, type: 2}
+  _equipper: {fileID: 11400000, guid: de61473a6e8261f49a6d3d1a7906de06, type: 2}
+  _networkProperties: {fileID: 11400000, guid: 4eb54ad9bbc070141a952bfb4248308b, type: 2}
+  _rotationSync: {fileID: 11400000, guid: 6f887b7ce6c52b3468c1b0e60da73380, type: 2}
+  _remoteStateMachine: {fileID: 11400000, guid: 1faedbe54ee26654eb2f60c61114a79d, type: 2}
+  _remoteIdle: {fileID: 11400000, guid: e02de05437649a145ad515a7c2bee4e2, type: 2}
+  _remoteRun: {fileID: 11400000, guid: 9ab694a72b13edb428957658def0c344, type: 2}
+  _remoteRespawn: {fileID: 11400000, guid: e76ac109ba03abb4389d2937fc33dbe0, type: 2}
+  _remoteDamaged: {fileID: 11400000, guid: 1ba245b3258e8294ea917fe894bc2b17, type: 2}
+  _remoteRoll: {fileID: 11400000, guid: 78ca266ad160a8e459e70d8e2c8a027c, type: 2}

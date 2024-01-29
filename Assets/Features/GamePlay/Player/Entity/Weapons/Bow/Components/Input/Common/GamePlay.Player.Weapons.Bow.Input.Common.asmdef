@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Player.Weapons.Bow.Input.Common",
+  "references":[ "GUID:8f9012bdd1b116c48ab480004500c8f3", "GUID:b6431b7d3eb44c7fb19b3735d729087f" ]
+}

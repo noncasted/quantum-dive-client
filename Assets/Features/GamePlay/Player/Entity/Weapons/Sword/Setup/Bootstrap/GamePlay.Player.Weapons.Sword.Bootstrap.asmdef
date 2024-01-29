@@ -1,0 +1,14 @@
+﻿{
+  "name": "GamePlay.Player.Weapons.Sword.Bootstrap",
+  "references": [
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
+    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+    "GUID:4ff0aa6a0b234785b07cdc06c6a2fba9",
+    "GUID:f91bbcf75a264f7ea83fb82e6a0ed8fb",
+    "GUID:aaedc93bbf702d34e8e6d773e0108d7c",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:f60712f7c5ea4162b9d86912c1cc1708",
+    "GUID:65c3fcbb851ff9441a22dd049195dc8f"
+  ]
+}

@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Player.Weapons.Sword.Attack.Common",
+  "references":[ "GUID:c075eee8fbb245bf9a56dfe2f04f736d", "GUID:8f9012bdd1b116c48ab480004500c8f3", "GUID:3e7167d9f58d47b7839bb3ce134a78f1", "GUID:eedb8e7302e941e19735cd090c3960c3", "GUID:9c221aad6c194a8fb7ac7c64a5cf6928", "GUID:b0275d8a7d994d97ae1652be17935f0f", "GUID:1df29afa6177f8e4fa19b25367556ac2" ]
+}

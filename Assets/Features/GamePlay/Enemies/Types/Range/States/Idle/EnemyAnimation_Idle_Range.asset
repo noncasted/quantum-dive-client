@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3668956001847034221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Idle_1
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -517972128, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &-2197189720637706286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Idle_5
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -1347944586, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bfc97ed04345c7b49e6ec98fa478c1, type: 3}
+  m_Name: EnemyAnimation_Idle_Range
+  m_EditorClassIdentifier: 
+  _data:
+    _time: 1
+    _name: Idle
+  _frames:
+  - {fileID: 2649998157868325385}
+  - {fileID: -3668956001847034221}
+  - {fileID: 8556343407719892253}
+  - {fileID: 7479188074893963053}
+  - {fileID: 9057403459966306227}
+  - {fileID: -2197189720637706286}
+  _sprites:
+  - {fileID: 1801245656, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -517972128, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: 499243680, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: 1321145609, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -2046342792, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  - {fileID: -1347944586, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _animationName: Idle
+--- !u!114 &2649998157868325385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Idle_0
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1801245656, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &7479188074893963053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Idle_3
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 1321145609, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &8556343407719892253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Idle_2
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: 499243680, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []
+--- !u!114 &9057403459966306227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3adf0443b09f431f864812adc7e256a6, type: 3}
+  m_Name: Idle_4
+  m_EditorClassIdentifier: 
+  _sprite: {fileID: -2046342792, guid: cc2d54f99f7ba59419b2d745cccd28fe, type: 3}
+  _containsEvent: 0
+  _events: []

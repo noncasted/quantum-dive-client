@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d91d76bc76974d65a2efcb00808b1240, type: 3}
+  m_Name: EquipmentFactory_Sword
+  m_EditorClassIdentifier: 
+  _localPrefab: {fileID: 6867954593836526438, guid: a4549477240d9194ea14702d618f0492, type: 3}
+  _remotePrefab: {fileID: 6867954593836526438, guid: 1e65757431758b44e99494d7b9cd1e6f, type: 3}
+  _definition: {fileID: 11400000, guid: 2675a31514874fa42aa985115507741f, type: 2}

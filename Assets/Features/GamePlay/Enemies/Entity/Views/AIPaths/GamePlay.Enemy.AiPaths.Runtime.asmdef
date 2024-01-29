@@ -1,0 +1,23 @@
+{
+    "name": "GamePlay.Enemy.AiPaths.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4cb33ddb764f4a22986b78f754fe0bc5",
+        "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+        "GUID:ff238d216f5745abb2a890d1a43416ce",
+        "GUID:3645d3881bb043458b3711f767e534ae",
+        "GUID:efa45043feb7e4147a305b73b5cea642",
+        "GUID:f4059aaf6c60a4a58a177a2609feb769",
+        "GUID:de4e6084e6d474788bb8c799d6b461eb"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

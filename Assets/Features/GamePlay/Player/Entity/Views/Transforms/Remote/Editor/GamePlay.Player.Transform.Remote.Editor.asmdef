@@ -1,0 +1,19 @@
+﻿{
+  "name": "GamePlay.Player.Transform.Remote.Editor",
+  "rootNamespace": "",
+  "references": [
+    "GUID:d945054fb520ae0408f2ec087ffa5163",
+    "GUID:8d579440f4684bffaef914165466b523"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

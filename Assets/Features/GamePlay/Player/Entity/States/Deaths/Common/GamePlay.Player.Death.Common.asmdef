@@ -1,0 +1,16 @@
+{
+    "name": "GamePlay.Player.Death.Common",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8f9012bdd1b116c48ab480004500c8f3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

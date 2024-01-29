@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Enemy.Setup.Abstract",
+  "references":[ "GUID:e07e6ccd9241474dbca4e70862df2bc2" ]
+}

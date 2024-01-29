@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Services.Projectiles.Network",
+  "references":[ "GUID:ad14d18655924e768ccb5dfe8ec105cc", "GUID:f51ebe6a0ceec4240a699833d6309b23", "GUID:dec28d2fc9064a05abcbf9e3264fa16a", "GUID:fdc2cf7c250a4094dae93475802ae81f", "GUID:62300bc9a85e40f0a0b8dbebfca5842f", "GUID:ab4995b896714081969c9230c54a372c", "GUID:69e5c45a1bcb48238edb3f30d0eb17a6", "GUID:67f67dcce9d9e8a43a8e45bc1fe5534c", "GUID:954bed7845ef3b94c8f2d8ca3cd76154", "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9" ]
+}

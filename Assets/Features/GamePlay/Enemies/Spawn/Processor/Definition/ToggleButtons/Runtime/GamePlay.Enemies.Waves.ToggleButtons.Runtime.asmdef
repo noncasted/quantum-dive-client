@@ -1,0 +1,18 @@
+{
+    "name": "GamePlay.Enemies.Waves.ToggleButtons.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:94e5ca42c58876942a8ffdd1c63b952f",
+        "GUID:a8f6b895322c45408ed64cb258c91d51",
+        "GUID:e587f8c64e1c420f93fbe3833ccb6def"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

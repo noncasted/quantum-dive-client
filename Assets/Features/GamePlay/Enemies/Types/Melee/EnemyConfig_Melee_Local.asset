@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c753399a6a402cb944c9bc7038a2a8, type: 3}
+  m_Name: EnemyConfig_Melee_Local
+  m_EditorClassIdentifier: 
+  _localStateMachine: {fileID: 11400000, guid: 3076f7688b56f50468ca9f1c46c666b0, type: 2}
+  _stateSelector: {fileID: 11400000, guid: 412cc13656f0cc146878528b17783c39, type: 2}
+  _targetSearcher: {fileID: 11400000, guid: 36c71a7d41fb80c4aaf20cdecc5ad73b, type: 2}
+  _health: {fileID: 11400000, guid: fc191145322e44146ac0ffff31a5d4bc, type: 2}
+  _damageProcessor: {fileID: 11400000, guid: ec0cf3d5e48700e4e9b2c204d40678fa, type: 2}
+  _spriteSorting: {fileID: 11400000, guid: bdca88c8217e16540b48c09711997763, type: 2}
+  _idle: {fileID: 11400000, guid: 987d21619b1c2d142bc738a45ec43f05, type: 2}
+  _respawn: {fileID: 11400000, guid: e942892073cf5c549a8da067c1cc7605, type: 2}
+  _following: {fileID: 11400000, guid: f67833236ba29fc459fa60efc2bdb6fe, type: 2}
+  _damaged: {fileID: 11400000, guid: 3e3c3e84ccd76b2438bea43acddbfa1d, type: 2}
+  _death: {fileID: 11400000, guid: d07ee45472da5c242a2a60f659cdd937, type: 2}
+  _localMeleeAttack: {fileID: 11400000, guid: 83dfa1b92a0388c4db5e48a2475194ae, type: 2}
+  _push: {fileID: 11400000, guid: f6bf667a9544abc4597fecf5ffffa5d8, type: 2}
+  _remoteStateMachine: {fileID: 11400000, guid: 2bb794e7999ec24459bbab4766740fb2, type: 2}
+  _networkPropertiesInjector: {fileID: 11400000, guid: 73ef5d41a048a494dbf4571389027346, type: 2}
+  _transformSync: {fileID: 11400000, guid: 2d7165a2796f476459b7b60e32fd0185, type: 2}

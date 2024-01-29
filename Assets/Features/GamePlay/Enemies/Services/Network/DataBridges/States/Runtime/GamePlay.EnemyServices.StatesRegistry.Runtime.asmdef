@@ -1,0 +1,20 @@
+{
+  "name": "GamePlay.EnemyServices.StatesRegistry.Runtime",
+  "rootNamespace": "",
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "references": [
+    "GUID:87c37c46dfd9454380a9559a46f1be34",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:7a806c05a199b99499ba9519941a4e4d",
+    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23"
+  ]
+}

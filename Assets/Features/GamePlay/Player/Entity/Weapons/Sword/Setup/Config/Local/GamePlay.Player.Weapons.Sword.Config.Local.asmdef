@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Player.Weapons.Sword.Config.Local",
+  "references":[ "GUID:c075eee8fbb245bf9a56dfe2f04f736d", "GUID:65c3fcbb851ff9441a22dd049195dc8f", "GUID:696b1380a28e4c77bcc51c28fe10023d", "GUID:4f280fba04434de19dd0af3ddbe7c3ef", "GUID:17ecc56f155a4996b9a4b2b42fda2d29", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:5e7079ca8f6615a47866f25ec94bae65", "GUID:fa0e265ba965494c9ed8bed74f0d918e" ]
+}

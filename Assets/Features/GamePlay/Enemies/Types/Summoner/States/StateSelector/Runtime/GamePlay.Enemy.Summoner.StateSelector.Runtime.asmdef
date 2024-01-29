@@ -1,0 +1,9 @@
+﻿{
+  "name": "GamePlay.Enemy.Summoner.StateSelector.Runtime",
+  "references": [
+    "GUID:527e199203c94a05960eadfb90a65aba",
+    "GUID:2f35dcee41e4c9e46827b4b52b2e49a4",
+    "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2"
+  ]
+}

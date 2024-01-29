@@ -1,0 +1,14 @@
+﻿{
+  "name": "GamePlay.Enemy.Hitbox.Local",
+  "references": [
+    "GUID:4cb33ddb764f4a22986b78f754fe0bc5",
+    "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:2435b9189672c5848ae4cc81c2cf0e13",
+    "GUID:9cfd74e03b544251808825a0d52ed401",
+    "GUID:04243451437dcfe48b583ab43ef0a8fa",
+    "GUID:6f32726480644b1bb3ae01704a4f353d",
+    "GUID:af9bf093d60b4b249d657338415f3336",
+    "GUID:672c847731364869b84f35653f1f6b42"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "GamePlay.Enemy.Transform.Local.Runtime",
+  "rootNamespace": "",
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "references":[ "GUID:a85336a0fb8c444cba97e3b4f07734ca", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:f700ee923fcc3ee438d723173a09c365", "GUID:5a6ca98db01d77741890b42e259b7291" ]
+}

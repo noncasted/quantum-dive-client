@@ -1,0 +1,20 @@
+{
+    "name": "Global.Input.View.Combat",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c713b254602614c43a1d94a2a13ba844",
+        "GUID:b03721a1eeb8491da187242f7870dca2",
+        "GUID:bbe6b1b7444754c4e943bc85a35f6d65",
+        "GUID:9dbe345fbe8e47cb8a0d24c890f0feff",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

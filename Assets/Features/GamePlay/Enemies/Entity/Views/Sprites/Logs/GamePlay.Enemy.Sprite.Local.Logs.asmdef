@@ -1,0 +1,14 @@
+{
+    "name": "GamePlay.Enemy.Sprite.Local.Logs",
+    "rootNamespace": "",
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false,
+    "references":[ "GUID:fe4adae493555af4788e53948d7966ca", "GUID:94e5ca42c58876942a8ffdd1c63b952f", "GUID:3bf840a6fca072a4fbda0e90399bb704" ]
+}

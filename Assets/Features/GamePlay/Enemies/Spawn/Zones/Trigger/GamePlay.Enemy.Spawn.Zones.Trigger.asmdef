@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Enemy.Spawn.Zones.Trigger",
+  "references":[ "GUID:cbb116dda917436dbc817f301009c22c" ]
+}

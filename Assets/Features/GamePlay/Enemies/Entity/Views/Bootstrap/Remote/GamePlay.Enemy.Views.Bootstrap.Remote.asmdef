@@ -1,0 +1,17 @@
+﻿{
+  "name": "GamePlay.Enemy.Views.Bootstrap.Remote",
+  "references": [
+    "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:10b508286ef3b1d498113145693b7dfb",
+    "GUID:52182ac2492995c469034815920266b8",
+    "GUID:2df1bee7daecc7546bbfd10daa1cf6b3",
+    "GUID:de19aa2e50794ab8b485869d52ea5f5f",
+    "GUID:287b9d77b8b64c619022dca7d594289e",
+    "GUID:cba95793f8404b33a54ac8f44e5ae4bf",
+    "GUID:c260e868bcc5423db856245e6ecb862d",
+    "GUID:3f8ce053aee347da9a26f5a7b021a4b1",
+    "GUID:161183806381402698a6af6b3b858411",
+    "GUID:ecb1e56e6f2c4d439215a54ed08a2141"
+  ]
+}
