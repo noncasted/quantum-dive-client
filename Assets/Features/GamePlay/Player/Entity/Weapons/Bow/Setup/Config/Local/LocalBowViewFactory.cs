@@ -12,7 +12,7 @@ using UnityEngine;
 namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Local
 {
     [DisallowMultipleComponent]
-    public class LocalBowViewSetup : EntitySetupView, IEntityViewFactory
+    public class LocalBowViewFactory : EntitySetupView, IEntityViewFactory
     {
         [SerializeField] private BowSpriteFactory _sprite;
         [SerializeField] private BowTransformFactory _transform;

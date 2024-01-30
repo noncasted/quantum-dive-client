@@ -1,9 +1,10 @@
-﻿using GamePlay.Player.Entity.Equipment.Abstract.Factory;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Player.Entity.Equipment.Abstract.Factory;
 
 namespace GamePlay.Player.Entity.Equipment.Equipper.Local
 {
     public interface IEquipper
     {
-        void Equip(IEquipmentFactory factory);
+        UniTask Equip(IEquipmentConfig config);
     }
 }

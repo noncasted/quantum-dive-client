@@ -1,21 +1,21 @@
-﻿using Common.Architecture.Entities.Runtime;
-using Internal.Services.Options.Runtime;
-using VContainer.Unity;
+﻿using Common.Architecture.Container.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Common.Architecture.Scopes.Runtime.Services;
+using Common.Architecture.Scopes.Runtime.Utils;
+using Cysharp.Threading.Tasks;
+using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace Common.Architecture.Entities.Factory
 {
-    public class EntityCreatorFactory : IEntityCreatorFactory
+    [InlineEditor]
+    [CreateAssetMenu(fileName = "EntityCreatorFactory", menuName = "Global/Common/EntityCreator")]
+    public class EntityCreatorFactory : ScriptableObject, IServiceFactory
     {
-        public EntityCreatorFactory(IOptions options)
+        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
         {
-            _options = options;
-        }
-        
-        private readonly IOptions _options;
-
-        public IEntityCreator Create(IEntityConfig config, LifetimeScope parent)
-        {
-            return new EntityCreator(_options, config, parent);
+            services.Register<EntityCreator>()
+                .As<IEntityCreator>();
         }
     }
 }

@@ -12,7 +12,7 @@ using UnityEngine;
 namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Remote
 {
     [DisallowMultipleComponent]
-    public class RemoteBowViewSetup : EntitySetupView, IEntityViewFactory
+    public class RemoteBowViewFactory : EntitySetupView, IEntityViewFactory
     {
         [SerializeField] private BowSpriteFactory _sprite;
         [SerializeField] private BowTransformFactory _transform;

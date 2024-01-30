@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
+using Features.GamePlay.Player.Entity.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.ProjectilesAmount;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.ShotDelays;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.Spreadings;
@@ -22,7 +23,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Local
     [InlineEditor]
     [CreateAssetMenu(fileName = BowConfigRoutes.LocalName,
         menuName = BowConfigRoutes.LocalPath)]
-    public class LocalBowConfig : ScriptableObject, IEntityConfig
+    public class LocalBowConfig : ScriptableObject, IEquipmentInstanceConfig
     {
         [SerializeField] private DefaultCallbacksComponentFactory _defaultCallbacks;
         [SerializeField] private BowRootFactory _root;
@@ -60,7 +61,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Local
         [FoldoutGroup("Combat")] [SerializeField] [Indent]
         private StrafeInputFactory _strafesInput;
 
-        [SerializeField] private LocalBowViewSetup _prefab;
+        [SerializeField] private LocalBowViewFactory _prefab;
 
         public EntitySetupView Prefab => _prefab;
 

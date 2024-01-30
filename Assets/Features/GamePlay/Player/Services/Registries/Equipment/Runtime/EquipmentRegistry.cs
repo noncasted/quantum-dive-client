@@ -5,12 +5,12 @@ namespace GamePlay.Player.Services.Registries.Equipment.Runtime
 {
     public class EquipmentRegistry : IEquipmentRegistry
     {
-        public EquipmentRegistry(EquipmentFactory[] factories)
+        public EquipmentRegistry(EquipmentConfig[] factories)
         {
             var length = factories.Length;
 
-            var factoriesDictionary = new Dictionary<int, IEquipmentFactory>();
-            var idsDictionary = new Dictionary<IEquipmentFactory, int>();
+            var factoriesDictionary = new Dictionary<int, IEquipmentConfig>();
+            var idsDictionary = new Dictionary<IEquipmentConfig, int>();
             
             for (var i = 0; i < length; i++)
             {
@@ -23,15 +23,15 @@ namespace GamePlay.Player.Services.Registries.Equipment.Runtime
             _ids = idsDictionary;
         }
 
-        private readonly IReadOnlyDictionary<int, IEquipmentFactory> _factories;
-        private readonly IReadOnlyDictionary<IEquipmentFactory, int> _ids;
+        private readonly IReadOnlyDictionary<int, IEquipmentConfig> _factories;
+        private readonly IReadOnlyDictionary<IEquipmentConfig, int> _ids;
 
-        public int GetId(IEquipmentFactory factory)
+        public int GetId(IEquipmentConfig config)
         {
-            return _ids[factory];
+            return _ids[config];
         }
 
-        public IEquipmentFactory GetFactory(int id)
+        public IEquipmentConfig GetFactory(int id)
         {
             return _factories[id];
         }

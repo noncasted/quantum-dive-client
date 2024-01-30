@@ -1,12 +1,20 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using VContainer.Unity;
 
 namespace Common.Architecture.Entities.Runtime
 {
     public interface IEntityCreator
     {
-        IEntityConfig Config { get; }
+        UniTask<T> Create<T>(
+            LifetimeScope parent,
+            EntitySetupView view,
+            IEntityConfig config);
         
-        UniTask<T> Create<T>(EntitySetupView view, IReadOnlyList<IComponentFactory> runtimeFactories);
+        UniTask<T> Create<T>(
+            LifetimeScope parent,
+            EntitySetupView view,
+            IEntityConfig config,
+            IReadOnlyList<IComponentFactory> runtimeFactories);
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
+using Features.GamePlay.Player.Entity.Equipment.Equipper.Factory;
 using GamePlay.Player.Entity.Equipment.Abstract.Factory;
 using GamePlay.Player.Entity.Equipment.Slots.Binder.Runtime;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Runtime;
@@ -13,22 +15,24 @@ namespace GamePlay.Player.Entity.Equipment.Equipper.Remote
 {
     public class RemoteEquipper : RagonProperty, IEquipperSync
     {
+
         public RemoteEquipper(
             IEquipmentSlotsStorage storage,
             IEquipmentSlotBinder binder,
-            LifetimeScope rootScope,
+            IEquipmentFactory factory,
             IEquipmentRegistry registry,
             IEntityProvider entityProvider) : base(0, false)
         {
             _storage = storage;
             _binder = binder;
-            _rootScope = rootScope;
+            _factory = factory;
             _registry = registry;
             _entityProvider = entityProvider;
         }
         
         private readonly IEquipmentSlotsStorage _storage;
         private readonly IEquipmentSlotBinder _binder;
+        private readonly IEquipmentFactory _factory;
         private readonly LifetimeScope _rootScope;
         private readonly IEquipmentRegistry _registry;
         private readonly IEntityProvider _entityProvider;
@@ -36,9 +40,9 @@ namespace GamePlay.Player.Entity.Equipment.Equipper.Remote
         private readonly List<int> _buffer = new();
         private readonly List<int> _equipped = new();
 
-        public void OnEquipped(IEquipmentFactory equipmentFactory)
+        public void OnEquipped(IEquipmentConfig equipmentConfig)
         {
-            var id = _registry.GetId(equipmentFactory);
+            var id = _registry.GetId(equipmentConfig);
 
             _buffer.Add(id);
             MarkAsChanged();
@@ -75,7 +79,7 @@ namespace GamePlay.Player.Entity.Equipment.Equipper.Remote
                 
                 var factory = _registry.GetFactory(id);
                 
-                Equip(factory);
+                Equip(factory).Forget();
             }
 
             foreach (var id in _equipped)
@@ -87,10 +91,11 @@ namespace GamePlay.Player.Entity.Equipment.Equipper.Remote
             }
         }
         
-        private void Equip(IEquipmentFactory factory)
+        private async UniTask Equip(IEquipmentConfig config)
         {
-            factory.CreateRemote(_storage, _binder, _rootScope)
-                .Forget();
+            var equipment = await _factory.Create(config.Local);
+            _binder.Bind(config.Slot, equipment.Transform);
+            _storage.Equip(equipment);
         }
     }
 }

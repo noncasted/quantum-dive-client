@@ -4,10 +4,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Factory.Common
 {
     public class BowFactoryRoutes
     {
-        private const string _root = BowAssetsPaths.Root + _name + "/";
-        private const string _name = "Factory";
+        private const string Root = BowAssetsPaths.Root + "Factory/";
 
         public const string ComponentName = BowAssetsPrefixes.Config + "Factory";
-        public const string ComponentPath = _root + "Factory";
+        public const string ComponentPath = Root + "Factory";
     }
 }

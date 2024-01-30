@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
+using Features.GamePlay.Player.Entity.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Runtime;
@@ -14,7 +15,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Local
     [InlineEditor]
     [CreateAssetMenu(fileName = SwordConfigRoutes.LocalName,
         menuName = SwordConfigRoutes.LocalPath)]
-    public class LocalSwordConfig : ScriptableObject, IEntityConfig
+    public class LocalSwordConfig : ScriptableObject, IEquipmentInstanceConfig
     {
         [SerializeField] private DefaultCallbacksComponentFactory _defaultCallbacks;
         [SerializeField] private SwordRootFactory _root;
@@ -23,7 +24,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Local
         [SerializeField] [Indent] private InputReceiverFactory _input;
         [SerializeField] [Indent] private TargetsSearcherFactory _targetsSearcher;
 
-        [SerializeField] private LocalSwordViewSetup _prefab;
+        [SerializeField] private LocalSwordViewFactory _prefab;
 
         public EntitySetupView Prefab => _prefab;
 

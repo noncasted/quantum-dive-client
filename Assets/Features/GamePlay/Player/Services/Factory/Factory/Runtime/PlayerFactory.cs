@@ -27,7 +27,7 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
         public PlayerFactory(
             IDynamicEntityFactory dynamicEntityFactory,
             INetworkFactoriesRegistry factoriesRegistry,
-            IEntityCreatorFactory creatorFactory,
+            IEntityCreator creator,
             IPlayersList playersList, 
             IPlayerProvider playerProvider,
             LocalPlayerConfig localConfig,
@@ -38,18 +38,24 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
         {
             _dynamicEntityFactory = dynamicEntityFactory;
             _factoriesRegistry = factoriesRegistry;
+            _creator = creator;
             _playersList = playersList;
             _playerProvider = playerProvider;
+            _localConfig = localConfig;
+            _remoteConfig = remoteConfig;
+            _parentScope = parentScope;
             _equipment = equipment;
             _logger = logger;
-            _localCreator = creatorFactory.Create(localConfig, parentScope);
-            _remoteCreator = creatorFactory.Create(remoteConfig, parentScope);
         }
 
         private readonly IDynamicEntityFactory _dynamicEntityFactory;
         private readonly INetworkFactoriesRegistry _factoriesRegistry;
+        private readonly IEntityCreator _creator;
         private readonly IPlayersList _playersList;
         private readonly IPlayerProvider _playerProvider;
+        private readonly LocalPlayerConfig _localConfig;
+        private readonly RemotePlayerConfig _remoteConfig;
+        private readonly LifetimeScope _parentScope;
         private readonly DefaultEquipmentConfig _equipment;
 
         private readonly PlayerFactoryLogger _logger;
@@ -59,8 +65,6 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
         private readonly ObjectIdGenerator _typeGenerator = new();
 
         private ushort _id;
-        private readonly IEntityCreator _localCreator;
-        private readonly IEntityCreator _remoteCreator;
 
         public ushort Id => _id;
 
@@ -85,9 +89,9 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
             var type = _typeGenerator.Generate(Id, 1);
             var entity = _dynamicEntityFactory.Create(type);
 
-            var view = Object.Instantiate(_localCreator.Config.Prefab, spawnPosition, Quaternion.identity);
+            var view = Object.Instantiate(_localConfig.Prefab, spawnPosition, Quaternion.identity);
             var entityComponentFactory = new EntityComponentFactory(entity);
-            var root = await _localCreator.Create<ILocalPlayerRoot>(view, new[] { entityComponentFactory });
+            var root = await _creator.Create<ILocalPlayerRoot>(_parentScope, view, _localConfig, new[] { entityComponentFactory });
             
             var payload = new PlayerSpawnPayload(spawnPosition);
             await _dynamicEntityFactory.Send(entity, payload);
@@ -106,9 +110,9 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
         public async UniTaskVoid OnRemoteCreated(int objectId, RagonEntity entity)
         {
             var spawnPosition = entity.GetAttachPayload<PlayerSpawnPayload>().Position;
-            var view = Object.Instantiate(_remoteCreator.Config.Prefab, spawnPosition, Quaternion.identity);
+            var view = Object.Instantiate(_remoteConfig.Prefab, spawnPosition, Quaternion.identity);
             var entityComponentFactory = new EntityComponentFactory(entity);
-            var root = await _remoteCreator.Create<IPlayerRoot>(view, new[] { entityComponentFactory });
+            var root = await _creator.Create<IPlayerRoot>(_parentScope, view, _remoteConfig, new[] { entityComponentFactory });
 
             var player = new NetworkPlayer(entity, root);
             _playersList.Add(entity.Owner, player);

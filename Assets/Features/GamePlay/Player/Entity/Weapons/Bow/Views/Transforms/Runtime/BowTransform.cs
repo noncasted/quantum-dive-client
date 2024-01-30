@@ -11,6 +11,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Views.Transforms.Runtime
         
         private readonly Transform _transform;
 
+        public Transform Transform => _transform;
+
         public void SetPosition(Vector2 position)
         {
             _transform.position = position;

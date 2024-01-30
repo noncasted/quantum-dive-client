@@ -9,8 +9,8 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
     [Serializable]
     public class DefaultEquipmentConfig
     {
-        [SerializeField] [Indent] private EquipmentFactory[] _equipment;
+        [SerializeField] [Indent] private EquipmentConfig[] _equipment;
 
-        public IReadOnlyList<IEquipmentFactory> Equipment => _equipment;
+        public IReadOnlyList<IEquipmentConfig> Equipment => _equipment;
     }
 }

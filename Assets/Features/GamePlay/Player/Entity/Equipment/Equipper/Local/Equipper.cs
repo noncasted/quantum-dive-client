@@ -1,8 +1,9 @@
-﻿using GamePlay.Player.Entity.Equipment.Abstract.Factory;
+﻿using Cysharp.Threading.Tasks;
+using Features.GamePlay.Player.Entity.Equipment.Equipper.Factory;
+using GamePlay.Player.Entity.Equipment.Abstract.Factory;
 using GamePlay.Player.Entity.Equipment.Equipper.Remote;
 using GamePlay.Player.Entity.Equipment.Slots.Binder.Runtime;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Runtime;
-using GamePlay.Player.Entity.Setup.Scope;
 using VContainer.Unity;
 
 namespace GamePlay.Player.Entity.Equipment.Equipper.Local
@@ -12,26 +13,28 @@ namespace GamePlay.Player.Entity.Equipment.Equipper.Local
         public Equipper(
             IEquipmentSlotsStorage storage,
             IEquipmentSlotBinder binder,
-            LifetimeScope rootScope,
+            IEquipmentFactory factory,
             IEquipperSync sync)
         {
             _storage = storage;
             _binder = binder;
-            _rootScope = rootScope;
+            _factory = factory;
             _sync = sync;
         }
 
         private readonly IEquipmentSlotsStorage _storage;
         private readonly IEquipmentSlotBinder _binder;
+        private readonly IEquipmentFactory _factory;
         private readonly LifetimeScope _rootScope;
         private readonly IEquipperSync _sync;
 
-        public void Equip(IEquipmentFactory factory)
+        public async UniTask Equip(IEquipmentConfig config)
         {
-            factory.CreateLocal(_storage, _binder, _rootScope)
-                .Forget();
+            var equipment = await _factory.Create(config.Local);
+            _binder.Bind(config.Slot, equipment.Transform);
+            _storage.Equip(equipment);
 
-            _sync.OnEquipped(factory);
+            _sync.OnEquipped(config);
         }
     }
 }

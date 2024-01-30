@@ -16,7 +16,7 @@ namespace GamePlay.Player.Services.Registries.Equipment.Runtime
         menuName = EquipmentRegistryRoutes.ServicePath)]
     public class EquipmentRegistryFactory : ScriptableObject, IServiceFactory
     {
-        [SerializeField] private EquipmentFactory[] _equipments;
+        [SerializeField] private EquipmentConfig[] _equipments;
         
         public async UniTask Create(IServiceCollection services, IScopeUtils utils)
         {
@@ -30,13 +30,13 @@ namespace GamePlay.Player.Services.Registries.Equipment.Runtime
         private void Scan()
         {
 #if UNITY_EDITOR
-            var definitions = new List<EquipmentFactory>();
-            var guids = AssetDatabase.FindAssets($"t:{typeof(EquipmentFactory)}");
+            var definitions = new List<EquipmentConfig>();
+            var guids = AssetDatabase.FindAssets($"t:{typeof(EquipmentConfig)}");
 
             foreach (var guid in guids)
             {
                 var assetPath = AssetDatabase.GUIDToAssetPath(guid);
-                var asset = AssetDatabase.LoadAssetAtPath<EquipmentFactory>(assetPath);
+                var asset = AssetDatabase.LoadAssetAtPath<EquipmentConfig>(assetPath);
 
                 if (asset == null)
                     continue;

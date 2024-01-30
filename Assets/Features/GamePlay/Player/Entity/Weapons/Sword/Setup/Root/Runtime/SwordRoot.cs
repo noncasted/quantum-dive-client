@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Entities.Runtime.Callbacks;
-using Cysharp.Threading.Tasks;
+using Features.GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
 using GamePlay.Player.Entity.Equipment.Abstract.Definition;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
 
@@ -10,19 +10,23 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime
     public class SwordRoot : IEquipment
     {
         public SwordRoot(
+            ISwordTransform transform,
             IEntityCallbacks callbacks,
             SwordSlotDefinition definition)
         {
+            _transform = transform;
             _callbacks = callbacks;
             _definition = definition;
         }
 
+        private readonly ISwordTransform _transform;
         private readonly IEntityCallbacks _callbacks;
         private readonly SwordSlotDefinition _definition;
 
         private bool _isActive;
 
         public SlotDefinition Slot => _definition;
+        public Transform Transform => _transform.Transform;
 
         public void Select()
         {

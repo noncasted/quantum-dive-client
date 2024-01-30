@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
+using Features.GamePlay.Player.Entity.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Remote;
 using GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Common;
@@ -17,7 +18,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Remote
     [InlineEditor]
     [CreateAssetMenu(fileName = BowConfigRoutes.RemoteName,
         menuName = BowConfigRoutes.RemotePath)]
-    public class RemoteBowConfig : ScriptableObject, IEntityConfig
+    public class RemoteBowConfig : ScriptableObject, IEquipmentInstanceConfig
     {
         [SerializeField] private DefaultCallbacksComponentFactory _defaultCallbacks;
         [SerializeField] private BowRootFactory _root;
@@ -40,7 +41,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Remote
         [FoldoutGroup("Common")] [SerializeField] [Indent]
         private RemoteBowRotationFactory _rotation;
 
-        [SerializeField] private RemoteBowViewSetup _prefab;
+        [SerializeField] private RemoteBowViewFactory _prefab;
 
         public EntitySetupView Prefab => _prefab;
 

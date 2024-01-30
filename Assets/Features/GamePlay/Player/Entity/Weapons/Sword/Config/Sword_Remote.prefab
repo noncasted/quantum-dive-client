@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8527886517411686086}
+  - component: {fileID: 6298836901267254036}
   - component: {fileID: 4066352501060955166}
-  - component: {fileID: 6867954593836526438}
   - component: {fileID: 3169391969492725392}
+  - component: {fileID: 5608724775413565673}
   m_Layer: 0
   m_Name: Sword_Remote
   m_TagString: Untagged
@@ -26,14 +27,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6293006689981034355}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6298836901267254036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6293006689981034355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20063989c2043de9893af203adb1958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Groups:
+  - Name: Views
+    Components:
+    - {fileID: 3169391969492725392}
+    - {fileID: 4066352501060955166}
+    - {fileID: 5608724775413565673}
 --- !u!114 &4066352501060955166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,18 +69,6 @@ MonoBehaviour:
     TypeName: 
   autoRun: 0
   autoInjectGameObjects: []
---- !u!114 &6867954593836526438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6293006689981034355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a55bba9fe3e44329550d57ec8489dc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3169391969492725392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,4 +81,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c8c92ba86b540febbce3f7cb83d8586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _assets: {fileID: 11400000, guid: c4b69eaf82a42e14987b952e1d29321a, type: 2}
+  _scope: {fileID: 4066352501060955166}
+  _transform: {fileID: 5608724775413565673}
+--- !u!114 &5608724775413565673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6293006689981034355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05bbc57b839491a8f02c58aec364864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

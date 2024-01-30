@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
@@ -11,26 +12,29 @@ namespace Common.Architecture.Entities.Runtime
 {
     public class EntityCreator : IEntityCreator
     {
-        public EntityCreator(IOptions options, IEntityConfig config, LifetimeScope parent)
+        public EntityCreator(IOptions options)
         {
             _options = options;
-            _config = config;
-            _parent = parent;
         }
 
         private readonly IOptions _options;
-        private readonly IEntityConfig _config;
-        private readonly LifetimeScope _parent;
 
-        public IEntityConfig Config => _config;
+        public UniTask<T> Create<T>(LifetimeScope parent, EntitySetupView view, IEntityConfig config)
+        {
+            return Create<T>(parent, view, config, Array.Empty<IComponentFactory>());
+        }
 
-        public async UniTask<T> Create<T>(EntitySetupView view, IReadOnlyList<IComponentFactory> runtimeFactories)
+        public async UniTask<T> Create<T>(
+            LifetimeScope parent,
+            EntitySetupView view,
+            IEntityConfig config,
+            IReadOnlyList<IComponentFactory> runtimeFactories)
         {
             var utils =  CreateUtils(view);
             var builder = new ContainerBuilder();
             
-            await CreateServices(builder, utils, view, runtimeFactories);
-            await BuildContainer(builder, utils);
+            await CreateServices(builder, utils, config, view, runtimeFactories);
+            await BuildContainer(builder, utils, parent);
             
             return view.Scope.Container.Resolve<T>();
         }
@@ -47,12 +51,13 @@ namespace Common.Architecture.Entities.Runtime
         private async UniTask CreateServices(
             IServiceCollection services, 
             IEntityUtils utils,
+            IEntityConfig config,
             EntitySetupView view,
             IReadOnlyList<IComponentFactory> runtimeFactories)
         {
             var tasks = new List<UniTask>();
 
-            foreach (var factory in _config.Components)
+            foreach (var factory in config.Components)
                 factory.Create(services, utils);
 
             foreach (var factory in runtimeFactories)
@@ -63,9 +68,12 @@ namespace Common.Architecture.Entities.Runtime
             await UniTask.WhenAll(tasks);
         }
 
-        private async UniTask BuildContainer(IDependenciesBuilder builder, IEntityUtils utils)
+        private async UniTask BuildContainer(
+            IDependenciesBuilder builder,
+            IEntityUtils utils,
+            LifetimeScope parent)
         {
-            using (LifetimeScope.EnqueueParent(_parent))
+            using (LifetimeScope.EnqueueParent(parent))
             {
                 using (LifetimeScope.Enqueue(Register))
                 {

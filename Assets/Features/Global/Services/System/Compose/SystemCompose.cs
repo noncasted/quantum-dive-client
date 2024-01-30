@@ -23,7 +23,7 @@ namespace Global.System.Compose
         [SerializeField] private ResourcesCleanerFactory _resourcesCleaner;
         [SerializeField] private UpdaterFactory _updater;
         [SerializeField] private AnimatorsUpdaterFactory _animatorsUpdater;
-        [SerializeField] private EntityCreatorServiceFactory _entityCreator;
+        [SerializeField] private EntityCreatorFactory _entityCreator;
 
         public IReadOnlyList<IServiceFactory> Factories => new IServiceFactory[]
         {
