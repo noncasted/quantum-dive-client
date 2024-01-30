@@ -1,8 +1,6 @@
 ﻿using System;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Common.Damages;
-
 
 namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
 {

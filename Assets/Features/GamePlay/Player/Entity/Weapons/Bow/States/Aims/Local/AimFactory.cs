@@ -1,6 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common.Animations;

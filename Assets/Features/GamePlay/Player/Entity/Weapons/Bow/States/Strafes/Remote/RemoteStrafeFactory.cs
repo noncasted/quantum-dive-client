@@ -1,6 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common.Animations;
 using Sirenix.OdinInspector;

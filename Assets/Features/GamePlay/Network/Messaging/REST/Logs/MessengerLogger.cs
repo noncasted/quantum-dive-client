@@ -1,7 +1,7 @@
 ﻿using System;
-//using GamePlay.Player.Entity.Definition;
 using Internal.Services.Loggers.Runtime;
 using Ragon.Client;
+//using GamePlay.Player.Entity.Definition;
 
 namespace GamePlay.Network.Messaging.REST.Logs
 {

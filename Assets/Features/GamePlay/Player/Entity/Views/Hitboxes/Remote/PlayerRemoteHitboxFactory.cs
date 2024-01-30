@@ -1,7 +1,5 @@
-﻿using System;
-using Common.Architecture.Container.Abstract;
+﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Setup.Abstract;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
 using GamePlay.Player.Entity.Views.Hitboxes.Debug;
 using GamePlay.Player.Entity.Views.Hitboxes.Network;

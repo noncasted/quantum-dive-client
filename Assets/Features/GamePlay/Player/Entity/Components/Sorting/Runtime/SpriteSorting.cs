@@ -1,5 +1,4 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
 using Global.System.Updaters.Runtime.Abstract;

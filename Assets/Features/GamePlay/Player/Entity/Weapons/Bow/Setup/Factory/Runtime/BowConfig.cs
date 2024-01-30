@@ -1,5 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
-using Features.GamePlay.Player.Entity.Equipment.Definition;
+﻿using Features.GamePlay.Player.Entity.Equipment.Definition;
 using GamePlay.Player.Entity.Equipment.Abstract.Factory;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
 using GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Local;

@@ -1,11 +1,7 @@
-﻿using System;
-using Common.Architecture.Entities.Runtime;
+﻿using Common.Architecture.Entities.Runtime;
 using Cysharp.Threading.Tasks;
 using Features.GamePlay.Player.Entity.Equipment.Definition;
 using GamePlay.Player.Entity.Equipment.Abstract.Definition;
-using GamePlay.Player.Entity.Equipment.Slots.Binder.Runtime;
-using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
-using GamePlay.Player.Entity.Equipment.Slots.Storage.Runtime;
 using VContainer.Unity;
 using Object = UnityEngine.Object;
 

@@ -2,7 +2,6 @@
 using Features.GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
 using GamePlay.Player.Entity.Equipment.Abstract.Definition;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
-
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime

@@ -1,6 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime

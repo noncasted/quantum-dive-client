@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Equipment.Definition;
+﻿using Features.GamePlay.Player.Entity.Equipment.Definition;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
 using UnityEngine;
 

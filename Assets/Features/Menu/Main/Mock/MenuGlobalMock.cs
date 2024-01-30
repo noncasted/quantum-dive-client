@@ -1,14 +1,9 @@
 ﻿using Common.Architecture.Mocks.Runtime;
 using Common.Architecture.Scopes.Factory;
 using Cysharp.Threading.Tasks;
-using Global.Config.Runtime;
-using Global.GameLoops.Runtime;
 using Menu.Config.Runtime;
-using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using VContainer;
-using VContainer.Unity;
 
 namespace Menu.Main.Mock
 {

@@ -5,7 +5,6 @@ using GamePlay.Player.Entity.Equipment.Abstract.Factory;
 using GamePlay.Player.Entity.Equipment.Slots.Binder.Runtime;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Runtime;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Player.Entity.Setup.Scope;
 using GamePlay.Player.Services.Registries.Equipment.Runtime;
 using Ragon.Client;
 using Ragon.Protocol;

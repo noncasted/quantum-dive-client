@@ -1,9 +1,6 @@
-﻿using Cysharp.Threading.Tasks;
-using Features.GamePlay.Player.Entity.Equipment.Definition;
+﻿using Features.GamePlay.Player.Entity.Equipment.Definition;
 using GamePlay.Player.Entity.Equipment.Abstract.Factory;
-using GamePlay.Player.Entity.Equipment.Slots.Binder.Runtime;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
-using GamePlay.Player.Entity.Equipment.Slots.Storage.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Local;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Remote;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Factory.Common;

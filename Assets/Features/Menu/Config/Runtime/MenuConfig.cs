@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Common.Architecture.Scopes.Runtime.Services;
 using Internal.Services.Scenes.Data;
 using Menu.Cameras.Runtime;

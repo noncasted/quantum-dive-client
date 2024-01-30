@@ -1,5 +1,4 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using Global.Network.Handlers.ClientHandler.Runtime;
 using Global.Network.Session.Logs;
 

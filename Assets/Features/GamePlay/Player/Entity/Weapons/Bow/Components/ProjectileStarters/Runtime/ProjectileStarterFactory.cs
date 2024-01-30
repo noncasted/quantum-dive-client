@@ -1,6 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Common;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Starter;

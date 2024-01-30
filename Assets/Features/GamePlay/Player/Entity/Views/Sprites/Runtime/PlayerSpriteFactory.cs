@@ -1,7 +1,5 @@
-﻿using System;
-using Common.Architecture.Container.Abstract;
+﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Views.Sprites.Logs;
 using UnityEngine;
 using UnityEngine.Rendering;

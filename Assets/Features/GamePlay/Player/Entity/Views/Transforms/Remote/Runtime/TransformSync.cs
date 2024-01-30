@@ -1,8 +1,6 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Entities.Runtime.Callbacks;
 using Common.DataTypes.Network;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
-
 using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Remote.Logs;
 using Global.System.Updaters.Runtime.Abstract;

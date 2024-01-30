@@ -1,6 +1,4 @@
-﻿
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Entities.Runtime.Callbacks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Global.Inputs.View.Implementations.Combat;
 using Global.Inputs.View.Implementations.Movement;
 using UnityEngine;
