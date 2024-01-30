@@ -1,4 +1,5 @@
 ﻿
+using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime.Callbacks;
 using Global.Inputs.View.Implementations.Combat;
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Common;

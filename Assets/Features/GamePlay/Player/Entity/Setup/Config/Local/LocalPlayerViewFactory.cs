@@ -14,7 +14,7 @@ using UnityEngine;
 namespace GamePlay.Player.Entity.Setup.Config.Local
 {
     [DisallowMultipleComponent]
-    public class LocalPlayerViewSetup : EntitySetupView, IEntityViewFactory
+    public class LocalPlayerViewFactory : EntitySetupView, IEntityViewFactory
     {
         [SerializeField] private PlayerAnimatorFactory _animator;
         [SerializeField] private PlayerSpriteFactory _sprite;

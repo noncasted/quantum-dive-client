@@ -1,4 +1,5 @@
-﻿using Common.Architecture.Entities.Runtime.Callbacks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Equipment.Abstract.Definition;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;

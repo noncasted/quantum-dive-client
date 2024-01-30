@@ -1,4 +1,6 @@
-﻿namespace Common.Architecture.Entities.Runtime.Callbacks
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+
+namespace Common.Architecture.Entities.Common.DefaultCallbacks
 {
     public class DefaultCallbacksFactory : ICallbacksFactory
     {

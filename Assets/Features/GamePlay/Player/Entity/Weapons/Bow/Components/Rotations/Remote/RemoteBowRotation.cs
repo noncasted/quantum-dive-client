@@ -1,4 +1,5 @@
-﻿using Common.Architecture.Entities.Runtime.Callbacks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 

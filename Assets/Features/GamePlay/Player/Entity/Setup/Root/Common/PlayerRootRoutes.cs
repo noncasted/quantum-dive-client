@@ -1,6 +1,6 @@
 ﻿using GamePlay.Player.Entity.Setup.Path;
 
-namespace Features.GamePlay.Player.Entity.Setup.Root.Common
+namespace GamePlay.Player.Entity.Setup.Root.Common
 {
     public class PlayerRootRoutes
     {

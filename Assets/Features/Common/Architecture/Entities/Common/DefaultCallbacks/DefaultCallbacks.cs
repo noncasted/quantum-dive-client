@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace Common.Architecture.Entities.Runtime.Callbacks
+namespace Common.Architecture.Entities.Common.DefaultCallbacks
 {
     public interface IEntityAwakeListener
     {

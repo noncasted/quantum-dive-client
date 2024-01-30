@@ -115,7 +115,7 @@ namespace GamePlay.Player.Entity.Setup.Config.Local
         private RemoteRunFactory _remoteRun;
 
 
-        [SerializeField] private LocalPlayerViewSetup _prefab;
+        [SerializeField] private LocalPlayerViewFactory _prefab;
 
         public EntitySetupView Prefab => _prefab;
 

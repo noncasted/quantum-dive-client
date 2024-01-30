@@ -1,5 +1,4 @@
-﻿
-using Common.Architecture.Entities.Runtime.Callbacks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
 using Global.Debugs.Drawing.Runtime;
 using Global.System.Updaters.Runtime.Abstract;

@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using Features.GamePlay.Player.Entity.Setup.Root.Common;
-using Features.GamePlay.Player.Services.List.Definition;
+using GamePlay.Player.Services.List.Definition;
 using Ragon.Client;
 using UnityEngine;
 
-namespace GamePlay.Network.Players.Registry.Runtime
+namespace GamePlay.Player.Services.List.Runtime
 {
     public class PlayersList : IPlayersList, IRagonPlayerLeftListener
     {

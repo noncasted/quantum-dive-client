@@ -61,7 +61,7 @@ namespace GamePlay.Player.Entity.Setup.Config.Remote
         [FoldoutGroup("Network")] [SerializeField]
         private RemoteRollFactory _remoteRoll;
 
-        [SerializeField] private RemotePlayerViewSetup _prefab;
+        [SerializeField] private RemotePlayerViewFactory _prefab;
 
         public EntitySetupView Prefab => _prefab;
 

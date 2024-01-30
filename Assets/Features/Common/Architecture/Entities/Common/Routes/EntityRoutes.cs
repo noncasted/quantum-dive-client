@@ -1,4 +1,4 @@
-﻿namespace Features.Common.Architecture.Entities.Common.Routes
+﻿namespace Common.Architecture.Entities.Common.Routes
 {
     public class EntityRoutes
     {

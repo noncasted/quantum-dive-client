@@ -11,7 +11,7 @@ using UnityEngine;
 namespace GamePlay.Player.Entity.Setup.Config.Remote
 {
     [DisallowMultipleComponent]
-    public class RemotePlayerViewSetup : EntitySetupView, IEntityViewFactory
+    public class RemotePlayerViewFactory : EntitySetupView, IEntityViewFactory
     {
         [SerializeField] private PlayerAnimatorFactory _animator;
         [SerializeField] private PlayerSpriteFactory _sprite;

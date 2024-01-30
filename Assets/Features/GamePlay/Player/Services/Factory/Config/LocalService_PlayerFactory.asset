@@ -20,3 +20,5 @@ MonoBehaviour:
     _equipment:
     - {fileID: 11400000, guid: 23b794dbcfa98394ebe1bbe1748f61bc, type: 2}
     - {fileID: 11400000, guid: 88e60c62abd21204697c43b7dcf09250, type: 2}
+  _localConfig: {fileID: 11400000, guid: 630db9d45e408084fb0188fe67b1dd24, type: 2}
+  _remotePlayerConfig: {fileID: 11400000, guid: 5f4ad740dbff2b44795a123b29213108, type: 2}

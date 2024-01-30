@@ -1,4 +1,5 @@
-﻿using Common.Architecture.Entities.Runtime.Callbacks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Common.Damages;
 using GamePlay.Hitboxes.Runtime;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;

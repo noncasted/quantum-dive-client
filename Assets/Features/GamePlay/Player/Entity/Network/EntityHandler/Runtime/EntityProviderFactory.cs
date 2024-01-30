@@ -1,6 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Network.EntityHandler.Common;
+using GamePlay.Player.Entity.Network.EntityHandler.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
