@@ -1,5 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Runs.Common;
 using GamePlay.Player.Entity.States.Runs.Logs;
 using Sirenix.OdinInspector;
@@ -17,7 +18,7 @@ namespace GamePlay.Player.Entity.States.Runs.Local
         [SerializeField] [Indent] private RunConfigAsset _config;
         [SerializeField] [Indent] private RunDefinition _definition;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbackRegister)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<RunLogger>()
                 .WithParameter(_logSettings);

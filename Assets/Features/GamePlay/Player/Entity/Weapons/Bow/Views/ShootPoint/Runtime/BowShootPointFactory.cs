@@ -1,16 +1,16 @@
 ﻿using System;
 using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.ShootPoint.Runtime
 {
-    [Serializable]
-    public class BowShootPointFactory : IComponentFactory
+    [DisallowMultipleComponent]
+    public class BowShootPointFactory : MonoBehaviour, IComponentFactory
     {
         [SerializeField] private ShootPointProvider _shootPoints;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<BowShootPoint>()
                 .As<IBowShootPoint>()

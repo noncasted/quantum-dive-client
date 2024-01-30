@@ -5,6 +5,6 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
 {
     public interface IPlayerFactory
     {
-        UniTask<IPlayerRoot> Create();
+        UniTask<ILocalPlayerRoot> Create();
     }
 }

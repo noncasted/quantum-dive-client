@@ -1,5 +1,6 @@
-﻿using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
+
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.InputReceiver;
@@ -8,7 +9,7 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
 {
-    public class StrafeEntry : IUpdatable, IFloatingTransition, IPlayerSwitchListener, IComboState
+    public class StrafeEntry : IUpdatable, IFloatingTransition, IEntitySwitchListener, IComboState
     {
         public StrafeEntry(
             IStrafeInputReceiver inputReceiver,

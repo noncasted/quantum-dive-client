@@ -1,7 +1,8 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Equipment.Abstract.Definition;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime
@@ -9,26 +10,19 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime
     public class SwordRoot : IEquipment
     {
         public SwordRoot(
-            IPlayerObjectEventLoop objectEventLoop,
+            IEntityCallbacks callbacks,
             SwordSlotDefinition definition)
         {
-            _objectEventLoop = objectEventLoop;
+            _callbacks = callbacks;
             _definition = definition;
         }
 
-        private readonly IPlayerObjectEventLoop _objectEventLoop;
+        private readonly IEntityCallbacks _callbacks;
         private readonly SwordSlotDefinition _definition;
 
         private bool _isActive;
 
         public SlotDefinition Slot => _definition;
-
-        public async UniTask OnBootstrapped()
-        {
-            _objectEventLoop.InvokeAwake();
-            await _objectEventLoop.InvokeAsyncAwake();
-            _objectEventLoop.InvokeStart();
-        }
 
         public void Select()
         {
@@ -39,7 +33,8 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime
             }
 
             _isActive = true;
-            _objectEventLoop.InvokeEnable();
+
+            _callbacks.Handlers[CallbackStage.Enable].Run();
         }
 
         public void Deselect()
@@ -51,7 +46,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime
             }
 
             _isActive = false;
-            _objectEventLoop.InvokeDisable();
+            _callbacks.Handlers[CallbackStage.Disable].Run();
         }
     }
 }

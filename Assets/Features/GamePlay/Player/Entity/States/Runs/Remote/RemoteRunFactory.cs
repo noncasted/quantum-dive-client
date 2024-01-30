@@ -1,5 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Runs.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -14,7 +15,7 @@ namespace GamePlay.Player.Entity.States.Runs.Remote
         [SerializeField] [Indent] private RunAnimationFactory _runAnimation;
         [SerializeField] [Indent] private RunDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var animation = _runAnimation.Create();
 

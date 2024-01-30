@@ -1,5 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -13,7 +14,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Local
     {
         [SerializeField] [Indent] private RotationConfigAsset _config;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbackRegister)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<BowRotation>()
                 .As<IBowRotation>()

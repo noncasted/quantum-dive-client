@@ -1,16 +1,16 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
 using Common.Tools.UniversalAnimators.Animators.Runtime;
 using Common.Tools.UniversalAnimators.Updaters.Runtime;
 using Cysharp.Threading.Tasks;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.Views.Animators.Logs;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Animators.Runtime
 {
-    public class PlayerAnimator : IPlayerAnimator, IPlayerSwitchListener
+    public class PlayerAnimator : IPlayerAnimator, IEntitySwitchListener
     {
         public PlayerAnimator(
             IAnimatorsUpdater animatorsUpdater,

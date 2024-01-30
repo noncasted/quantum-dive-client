@@ -4,9 +4,12 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Root.Common
 {
     public class BowRootRoutes
     {
-        private const string _root = BowAssetsPaths.Root;
+        private const string Paths = BowAssetsPaths.Root;
+        
+        public const string LocalPath = Paths + "Local";
+        public const string LocalName = BowAssetsPrefixes.Component + "Root_Local";
 
         public const string DefinitionName = "SlotDefinition_Bow";
-        public const string DefinitionPath = _root + "Definition";
+        public const string DefinitionPath = Paths + "Definition";
     }
 }

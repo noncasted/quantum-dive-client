@@ -1,4 +1,10 @@
 ﻿{
   "name": "GamePlay.Projectiles.Pool",
-  "references":[ "GUID:d89cb064a6d60b243b67336a6540d7a7", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:67f67dcce9d9e8a43a8e45bc1fe5534c", "GUID:69e5c45a1bcb48238edb3f30d0eb17a6", "GUID:1a1ac4ee6eff4433a04199a96da530a2", "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9" ]
+  "references": [
+    "GUID:d89cb064a6d60b243b67336a6540d7a7",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
+    "GUID:1a1ac4ee6eff4433a04199a96da530a2",
+    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9"
+  ]
 }

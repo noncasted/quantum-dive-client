@@ -1,4 +1,0 @@
-﻿{
-  "name": "GamePlay.Player.Setup.Bootstrap.Remote",
-  "references":[ "GUID:f51ebe6a0ceec4240a699833d6309b23", "GUID:b0214a6008ed146ff8f122a6a9c2f6cc", "GUID:7adcf9a0f9eb4aa39b12636ab3acc20f", "GUID:9fcaad132baa463fb8555c14c7d6117a", "GUID:aaedc93bbf702d34e8e6d773e0108d7c", "GUID:64dfcc5eaae37b7479f6d4806d16d2c4", "GUID:72ee10059c044befb9afe61cb72eaf8d", "GUID:f60712f7c5ea4162b9d86912c1cc1708", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:5e7079ca8f6615a47866f25ec94bae65", "GUID:65c3fcbb851ff9441a22dd049195dc8f" ]
-}

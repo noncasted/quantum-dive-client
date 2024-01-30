@@ -1,14 +1,15 @@
 ﻿using System;
 using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Views.RigidBodies.Debug.Gizmos;
 using GamePlay.Player.Entity.Views.RigidBodies.Logs;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.RigidBodies.Runtime
 {
-    [Serializable]
-    public class PlayerRigidBodyFactory : IComponentFactory
+    [DisallowMultipleComponent]
+    public class PlayerRigidBodyFactory : MonoBehaviour, IComponentFactory
     {
         [SerializeField] private RigidBodyGizmosConfig _gizmosConfig;
         [SerializeField] private Rigidbody2D _rigidbody;
@@ -16,7 +17,7 @@ namespace GamePlay.Player.Entity.Views.RigidBodies.Runtime
         [SerializeField] private ContactFilter2D _contactFilter;
         [SerializeField] private RigidBodyLogSettings _logSettings;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<RigidBodyLogger>()
                 .WithParameter(_logSettings);

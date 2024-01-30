@@ -1,8 +1,9 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
@@ -19,7 +20,7 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
 {
-    public class Reload : IComboState, IPlayerLocalState, IUpdatable, IPlayerSwitchListener
+    public class Reload : IComboState, IPlayerLocalState, IUpdatable, IEntitySwitchListener
     {
         public Reload(
             IBowShootInputReceiver inputReceiver,

@@ -1,4 +1,6 @@
 ﻿{
   "name": "GamePlay.Network.Entities.Common",
-  "references":[ "GUID:ab8fcff7ea894a14a4e8393a6ba0191c" ]
+  "references": [
+    "GUID:ab8fcff7ea894a14a4e8393a6ba0191c"
+  ]
 }

@@ -1,16 +1,16 @@
-﻿using System;
-using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+﻿using Common.Architecture.Container.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime
 {
-    [Serializable]
-    public class BowAnimatorFactory : IComponentFactory
+    [DisallowMultipleComponent]
+    public class BowAnimatorFactory : MonoBehaviour, IComponentFactory
     {
         [SerializeField] private SpriteRenderer _sprite;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<BowAnimator>()
                 .As<IBowAnimator>()

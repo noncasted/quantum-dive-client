@@ -1,7 +1,7 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Common;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Local;
 using GamePlay.Player.Entity.Views.Sprites.Runtime;
@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.SubStates.Damaged.Remote
 {
-    public class RemoteDamaged : IPlayerEntityAttachedListener, IPlayerSwitchListener
+    public class RemoteDamaged : IEntityAttachListener, IEntitySwitchListener
     {
         public RemoteDamaged(
             IPlayerSpriteMaterial spriteMaterial,

@@ -1,4 +1,16 @@
 ﻿{
   "name": "GamePlay.Player.Transform.Remote.Runtime",
-  "references":[ "GUID:65c3fcbb851ff9441a22dd049195dc8f", "GUID:8492757f688a491e88274975cd7f76d7", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9", "GUID:62300bc9a85e40f0a0b8dbebfca5842f", "GUID:aaedc93bbf702d34e8e6d773e0108d7c", "GUID:04243451437dcfe48b583ab43ef0a8fa", "GUID:8d579440f4684bffaef914165466b523", "GUID:475e7352b7684936814b6c47a79525dc", "GUID:72ee10059c044befb9afe61cb72eaf8d", "GUID:954bed7845ef3b94c8f2d8ca3cd76154" ]
+  "references": [
+    "GUID:8492757f688a491e88274975cd7f76d7",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
+    "GUID:04243451437dcfe48b583ab43ef0a8fa",
+    "GUID:8d579440f4684bffaef914165466b523",
+    "GUID:475e7352b7684936814b6c47a79525dc",
+    "GUID:72ee10059c044befb9afe61cb72eaf8d",
+    "GUID:954bed7845ef3b94c8f2d8ca3cd76154",
+    "GUID:a6bee730cad343c7ac8840da91376019",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:5be6262f59e0487f8f55e7b4b6358c57"
+  ]
 }

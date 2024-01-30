@@ -1,14 +1,14 @@
-﻿using GamePlay.Common.Damages;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using GamePlay.Common.Damages;
 using GamePlay.Hitboxes.Runtime;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
 using GamePlay.Player.Entity.Views.Hitboxes.Network;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Hitboxes.Remote
 {
-    public class RemoteHitbox: IPlayerSwitchListener, IDamageReceiver
+    public class RemoteHitbox : IEntitySwitchListener, IDamageReceiver
     {
         public RemoteHitbox(
             IHitboxRegistry hitboxRegistry,

@@ -1,9 +1,9 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Common.DataTypes.Structs;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Orientation;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Runtime;
@@ -16,7 +16,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Roll.Local
 {
-    public class LocalRoll : IPlayerSwitchListener, IPlayerLocalState, IFloatingTransition
+    public class LocalRoll : IEntitySwitchListener, IPlayerLocalState, IFloatingTransition
     {
         public LocalRoll(
             ILocalStateMachine stateMachine,

@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Common;
 using Sirenix.OdinInspector;
@@ -16,7 +16,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
         [SerializeField] [Indent] private SwordAttackConfig _config;
         [SerializeField] [Indent] private PushParams _pushParams;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var animation = _animation.Create();
 

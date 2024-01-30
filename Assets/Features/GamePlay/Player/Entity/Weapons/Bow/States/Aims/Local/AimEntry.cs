@@ -1,12 +1,13 @@
-﻿using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
+
 using GamePlay.Player.Entity.States.Floating.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
 {
-    public class AimEntry : IFloatingTransition, IUpdatable, IPlayerSwitchListener
+    public class AimEntry : IFloatingTransition, IUpdatable, IEntitySwitchListener
     {
         public AimEntry(
             IAim aim,

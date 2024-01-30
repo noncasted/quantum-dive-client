@@ -1,5 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common.Animations;
 using Sirenix.OdinInspector;
@@ -16,7 +17,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
         [SerializeField] [Indent] private BowStrafeAnimationFactory _bowAnimation;
         [SerializeField] [Indent] private StrafeDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var playerAnimation = _playerAnimation.Create();
             var bowAnimation = _bowAnimation.Create();

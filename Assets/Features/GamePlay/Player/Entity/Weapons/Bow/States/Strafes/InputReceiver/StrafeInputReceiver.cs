@@ -1,11 +1,12 @@
-﻿using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+﻿
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Global.Inputs.View.Implementations.Combat;
 using Global.Inputs.View.Implementations.Movement;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.InputReceiver
 {
-    public class StrafeInputReceiver : IPlayerSwitchListener, IStrafeInputReceiver
+    public class StrafeInputReceiver : IEntitySwitchListener, IStrafeInputReceiver
     {
         public StrafeInputReceiver(IMovementInputView movement, ICombatInput combat)
         {

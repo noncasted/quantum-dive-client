@@ -1,6 +1,6 @@
-﻿using GamePlay.Common.Damages;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using GamePlay.Common.Damages;
 using GamePlay.Player.Entity.Components.Healths.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.States.Deaths.Local;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Local;
 using GamePlay.Player.Entity.Views.DamageReceivers.Runtime;
@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Components.DamageProcessors.Runtime
 {
-    public class DamageProcessor : IPlayerSwitchListener, IDamageProcessor
+    public class DamageProcessor : IEntitySwitchListener, IDamageProcessor
     {
         public DamageProcessor(
             IHealth health,

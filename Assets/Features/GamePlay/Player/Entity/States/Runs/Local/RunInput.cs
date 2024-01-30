@@ -1,5 +1,5 @@
 ﻿using System;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Entity.States.Runs.Logs;
 using GamePlay.Player.Entity.States.Runs.Remote;
 using Global.Inputs.View.Implementations.Movement;
@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Runs.Local
 {
-    public class RunInput : IPlayerSwitchListener, IRunInput
+    public class RunInput : IEntitySwitchListener, IRunInput
     {
         public RunInput(
             IMovementInputView inputView,

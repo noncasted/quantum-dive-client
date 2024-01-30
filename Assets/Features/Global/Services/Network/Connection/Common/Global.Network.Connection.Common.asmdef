@@ -1,4 +1,6 @@
 ﻿{
   "name": "Global.Network.Connection.Common",
-  "references":[ "GUID:43333a51604a49718128b1831e4c6f78" ]
+  "references": [
+    "GUID:43333a51604a49718128b1831e4c6f78"
+  ]
 }

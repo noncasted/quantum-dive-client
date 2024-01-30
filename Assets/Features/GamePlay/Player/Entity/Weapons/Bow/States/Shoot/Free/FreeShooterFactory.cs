@@ -1,4 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Runtime;
 using Sirenix.OdinInspector;
@@ -13,8 +15,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
     {
         [SerializeField] [Indent] private BowShootDefinition _definition;
         [SerializeField] [Indent] private ShootMoveConfig _moveConfig;
-        
-        public override void Create(IServiceCollection services, ICallbackRegister callbacks)
+
+        public override void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<FreeShooter>()
                 .WithParameter(_definition)

@@ -1,7 +1,9 @@
 ﻿using Common.Architecture.Container.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Common;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Logs;
-using GamePlay.Player.Entity.Setup.Abstract;
+
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -14,7 +16,7 @@ namespace GamePlay.Player.Entity.Components.Rotations.Remote.Runtime
     {
         [SerializeField] [Indent] private RemoteRotationLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<RemoteRotationLogger>()
                 .WithParameter(_logSettings);

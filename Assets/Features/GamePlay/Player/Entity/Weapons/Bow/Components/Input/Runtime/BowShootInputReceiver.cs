@@ -1,9 +1,10 @@
-﻿using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+﻿
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Global.Inputs.View.Implementations.Combat;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime
 {
-    public class BowShootInputReceiver : IPlayerSwitchListener, IBowShootInputReceiver
+    public class BowShootInputReceiver : IEntitySwitchListener, IBowShootInputReceiver
     {
         public BowShootInputReceiver(ICombatInput input)
         {

@@ -1,8 +1,8 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Common.DataTypes.Network;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Roll.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
@@ -11,7 +11,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.States.Roll.Remote
 {
-    public class RemoteRoll : IPlayerRemoteState, IPlayerSwitchListener
+    public class RemoteRoll : IPlayerRemoteState, IEntitySwitchListener
     {
         public RemoteRoll(
             IRemoteStateMachine stateMachine,

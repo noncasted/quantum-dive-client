@@ -1,5 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Common;
 using GamePlay.Player.Entity.States.Floating.Logs;
@@ -16,7 +17,7 @@ namespace GamePlay.Player.Entity.States.Floating.Runtime
         [SerializeField] private PlayerStateDefinition[] _statesPriority;
         [SerializeField] private FloatingStateLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbackRegister)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<FloatingStateLogger>()
                 .WithParameter(_logSettings);

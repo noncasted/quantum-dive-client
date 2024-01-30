@@ -1,16 +1,16 @@
-﻿using Common.DataTypes.Structs;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Components.Rotations.Local.Logs;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
 using GamePlay.Player.Entity.Components.Rotations.Orientation;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.Views.RotationPoint.Runtime;
 using Global.Inputs.Utils.Runtime.Projection;
 using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
 {
-    public class Rotation : IPreUpdatable, IRotation, IPlayerSwitchListener
+    public class Rotation : IPreUpdatable, IRotation, IEntitySwitchListener
     {
         public Rotation(
             IInputProjection inputProjection,

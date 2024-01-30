@@ -1,25 +1,26 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Equipment.Abstract.Definition;
 using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Root.Runtime
 {
-    public class BowRoot : IEquipment
+    public class BowRoot : IEquipment, IEntityAwakeListener
     {
         public BowRoot(
-            IPlayerObjectEventLoop objectEventLoop,
+            IEntityCallbacks callbacks,
             BowSlotDefinition definition,
             IBowGameObject gameObject)
         {
-            _objectEventLoop = objectEventLoop;
+            _callbacks = callbacks;
             _definition = definition;
             _gameObject = gameObject;
         }
 
-        private readonly IPlayerObjectEventLoop _objectEventLoop;
+        private readonly IEntityCallbacks _callbacks;
         private readonly BowSlotDefinition _definition;
         private readonly IBowGameObject _gameObject;
 
@@ -27,12 +28,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Root.Runtime
 
         public SlotDefinition Slot => _definition;
 
-        public async UniTask OnBootstrapped()
+        public void OnAwake()
         {
-            _objectEventLoop.InvokeAwake();
-            await _objectEventLoop.InvokeAsyncAwake();
-            _objectEventLoop.InvokeStart();
-            
             _gameObject.Disable();
         }
         
@@ -45,7 +42,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Root.Runtime
             }
 
             _isActive = true;
-            _objectEventLoop.InvokeEnable();
+            _callbacks.Handlers[CallbackStage.Enable].Run();
         }
 
         public void Deselect()
@@ -57,7 +54,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Root.Runtime
             }
 
             _isActive = false;
-            _objectEventLoop.InvokeDisable();
+            _callbacks.Handlers[CallbackStage.Disable].Run();
         }
     }
 }

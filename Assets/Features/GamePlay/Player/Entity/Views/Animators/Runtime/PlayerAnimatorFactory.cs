@@ -1,18 +1,19 @@
 ﻿using System;
 using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Views.Animators.Logs;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Animators.Runtime
 {
-    [Serializable]
-    public class PlayerAnimatorFactory : IComponentFactory
+    [DisallowMultipleComponent]
+    public class PlayerAnimatorFactory : MonoBehaviour, IComponentFactory
     {
         [SerializeField] private AnimatorLogSettings _logSettings;
         [SerializeField] private SpriteRenderer _spriteRenderer;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<AnimatorLogger>()
                 .WithParameter(_logSettings);

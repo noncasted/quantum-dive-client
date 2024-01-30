@@ -1,7 +1,7 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Respawns.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
@@ -9,7 +9,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.States.Respawns.Remote
 {
-    public class PlayerRemoteRespawn : IPlayerRemoteState, IPlayerSwitchListener
+    public class PlayerRemoteRespawn : IPlayerRemoteState, IEntitySwitchListener
     {
         public PlayerRemoteRespawn(
             IRemoteStateMachine stateMachine,

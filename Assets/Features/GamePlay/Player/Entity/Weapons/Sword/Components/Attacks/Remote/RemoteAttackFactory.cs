@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -14,7 +14,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Remote
         [SerializeField] [Indent] private SwordAttackAnimationFactory _animation;
         [SerializeField] [Indent] private SwordAttackDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var animation = _animation.Create();
 

@@ -1,4 +1,6 @@
 ﻿{
   "name": "Lobby.UI.Common",
-  "references":[ "GUID:b27d26855dc04448b87c8443bc9cce18" ]
+  "references": [
+    "GUID:b27d26855dc04448b87c8443bc9cce18"
+  ]
 }

@@ -1,10 +1,11 @@
 ﻿using System;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Common.Damages;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+
 
 namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
 {
-    public class DamageReceiver : IPlayerSwitchListener, IDamageReceiverHandler
+    public class DamageReceiver : IEntitySwitchListener, IDamageReceiverHandler
     {
         public DamageReceiver(IDamageReceiverTrigger trigger)
         {

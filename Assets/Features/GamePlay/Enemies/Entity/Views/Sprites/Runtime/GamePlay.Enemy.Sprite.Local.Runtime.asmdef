@@ -1,14 +1,18 @@
 {
-    "name": "GamePlay.Enemy.Sprite.Local.Runtime",
-    "rootNamespace": "",
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false,
-    "references":[ "GUID:a85336a0fb8c444cba97e3b4f07734ca", "GUID:aef86adbcc15c3241bf0a3f1a49addef", "GUID:e07e6ccd9241474dbca4e70862df2bc2" ]
+  "name": "GamePlay.Enemy.Sprite.Local.Runtime",
+  "rootNamespace": "",
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "references": [
+    "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+    "GUID:aef86adbcc15c3241bf0a3f1a49addef",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2"
+  ]
 }

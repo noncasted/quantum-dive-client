@@ -1,5 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Runs.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
@@ -9,7 +9,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.States.Runs.Remote
 {
-    public class RemoteRun : IPlayerRemoteState, IUpdatable, IPlayerSwitchListener
+    public class RemoteRun : IPlayerRemoteState, IUpdatable, IEntitySwitchListener
     {
         public RemoteRun(
             IUpdater updater,

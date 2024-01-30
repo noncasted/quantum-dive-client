@@ -1,15 +1,16 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
 using Common.Tools.UniversalAnimators.Animators.Runtime;
 using Common.Tools.UniversalAnimators.Updaters.Runtime;
 using Cysharp.Threading.Tasks;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime
 {
-    public class BowAnimator : IBowAnimator, IPlayerSwitchListener
+    public class BowAnimator : IBowAnimator, IEntitySwitchListener
     {
         public BowAnimator(SpriteRenderer spriteRenderer, IAnimatorsUpdater updater)
         {

@@ -1,7 +1,7 @@
-﻿using Common.DataTypes.Structs;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Components.Rotations.Orientation;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Runtime;
@@ -15,7 +15,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Runs.Local
 {
-    public class LocalRun : IPlayerLocalState, IPreFixedUpdatable, IPlayerSwitchListener, IFloatingTransition
+    public class LocalRun : IPlayerLocalState, IPreFixedUpdatable, IEntitySwitchListener, IFloatingTransition
     {
         public LocalRun(
             ILocalStateMachine stateMachine,

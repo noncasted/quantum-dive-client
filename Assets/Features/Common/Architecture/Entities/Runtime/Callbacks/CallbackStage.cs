@@ -3,6 +3,8 @@
     public enum CallbackStage
     {
         Construct,
+        Enable,
+        Disable,
         Dispose
     }
 }

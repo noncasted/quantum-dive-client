@@ -1,8 +1,0 @@
-﻿{
-  "name": "GamePlay.Player.Weapons.Sword.Views.Bootstrap",
-  "references": [
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-    "GUID:66415be395f24ef296248b13e0120996",
-    "GUID:65c3fcbb851ff9441a22dd049195dc8f"
-  ]
-}

@@ -15,12 +15,12 @@ namespace GamePlay.Player.Entity.States.Deaths.Local
         }
 
         private readonly IHitbox _hitbox;
+        
+        public PlayerStateDefinition Definition { get; }
 
         public void Enter()
         {
         }
-
-        public PlayerStateDefinition Definition { get; }
 
         public void Break()
         {

@@ -1,4 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common.Animations;
@@ -18,7 +20,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
         [SerializeField] [Indent] private BowShootDefinition _definition;
         [SerializeField] [Indent] private PlayerStateDefinition[] _transitions;
         
-        public override void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public override void Create(IServiceCollection services, IEntityUtils utils)
         {
             var bowAnimation = _bowAnimation.Create();
             var playerAnimation = _playerAnimation.Create();

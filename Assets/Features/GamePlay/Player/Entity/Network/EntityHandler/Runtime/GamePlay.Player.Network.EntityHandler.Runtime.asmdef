@@ -1,3 +1,9 @@
 ﻿{
-  "name": "GamePlay.Player.Network.EntityHandler.Runtime"
+  "name": "GamePlay.Player.Network.EntityHandler.Runtime",
+  "references": [
+    "GUID:5be6262f59e0487f8f55e7b4b6358c57",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:d4c72429e3c94444bfafdc637920e799",
+    "GUID:a6bee730cad343c7ac8840da91376019"
+  ]
 }

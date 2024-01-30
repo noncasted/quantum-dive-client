@@ -2,7 +2,6 @@
   "name": "GamePlay.Enemy.Death.Local",
   "references": [
     "GUID:87c37c46dfd9454380a9559a46f1be34",
-    "GUID:67f67dcce9d9e8a43a8e45bc1fe5534c",
     "GUID:8265c01205983f8408e9dbff4433b2ff",
     "GUID:10b508286ef3b1d498113145693b7dfb",
     "GUID:52182ac2492995c469034815920266b8",

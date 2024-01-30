@@ -50,16 +50,13 @@ namespace Common.Architecture.Entities.Runtime
             EntitySetupView view,
             IReadOnlyList<IComponentFactory> runtimeFactories)
         {
-            foreach (var factory in _config.Callbacks)
-                factory.AddCallbacks(utils.Callbacks);
-
             var tasks = new List<UniTask>();
 
             foreach (var factory in _config.Components)
-                tasks.Add(factory.Create(services, utils));
+                factory.Create(services, utils);
 
             foreach (var factory in runtimeFactories)
-                tasks.Add(factory.Create(services, utils));
+                factory.Create(services, utils);
             
             view.CreateViews(services, utils);
             

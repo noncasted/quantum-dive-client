@@ -1,4 +1,13 @@
 ﻿{
   "name": "GamePlay.Player.Damaged.Remote",
-  "references":[ "GUID:aaedc93bbf702d34e8e6d773e0108d7c", "GUID:9a286a02eeeb6bc45a393a0ca6c650f9", "GUID:72ee10059c044befb9afe61cb72eaf8d", "GUID:e17a2c557ad84d3e84a1b94c4b9bdf6b", "GUID:9bd5d026afe0406cab16f1fe227640d6", "GUID:f51ebe6a0ceec4240a699833d6309b23", "GUID:65c3fcbb851ff9441a22dd049195dc8f", "GUID:e07e6ccd9241474dbca4e70862df2bc2" ]
+  "references": [
+    "GUID:9a286a02eeeb6bc45a393a0ca6c650f9",
+    "GUID:72ee10059c044befb9afe61cb72eaf8d",
+    "GUID:e17a2c557ad84d3e84a1b94c4b9bdf6b",
+    "GUID:9bd5d026afe0406cab16f1fe227640d6",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:a6bee730cad343c7ac8840da91376019",
+    "GUID:5be6262f59e0487f8f55e7b4b6358c57"
+  ]
 }

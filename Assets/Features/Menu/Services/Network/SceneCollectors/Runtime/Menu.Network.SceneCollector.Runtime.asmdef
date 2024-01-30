@@ -1,7 +1,6 @@
 ﻿{
   "name": "Menu.Network.SceneCollector.Runtime",
   "references": [
-    "GUID:67f67dcce9d9e8a43a8e45bc1fe5534c",
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:b970b98ac3424fd0a4d14c9974b91415",
     "GUID:129a2d34d9b24d59800010a0ce2f1e48",

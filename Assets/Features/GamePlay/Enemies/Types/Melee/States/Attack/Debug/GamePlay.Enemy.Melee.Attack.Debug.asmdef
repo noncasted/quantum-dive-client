@@ -1,4 +1,9 @@
 ﻿{
   "name": "GamePlay.Enemy.Melee.Attack.Debug",
-  "references":[ "GUID:767ae45922ea4bd79ce2db696b63e307", "GUID:04243451437dcfe48b583ab43ef0a8fa", "GUID:6f32726480644b1bb3ae01704a4f353d", "GUID:287b9d77b8b64c619022dca7d594289e" ]
+  "references": [
+    "GUID:767ae45922ea4bd79ce2db696b63e307",
+    "GUID:04243451437dcfe48b583ab43ef0a8fa",
+    "GUID:6f32726480644b1bb3ae01704a4f353d",
+    "GUID:287b9d77b8b64c619022dca7d594289e"
+  ]
 }

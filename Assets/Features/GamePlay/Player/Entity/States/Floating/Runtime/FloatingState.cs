@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Logs;
 using GamePlay.Player.Entity.States.Idles.Local;
@@ -10,7 +10,7 @@ namespace GamePlay.Player.Entity.States.Floating.Runtime
     public class FloatingState : 
         IFloatingState,
         IFloatingTransitionsRegistry,
-        IPlayerSwitchListener
+        IEntitySwitchListener
     {
         public FloatingState(
             IIdle idle,

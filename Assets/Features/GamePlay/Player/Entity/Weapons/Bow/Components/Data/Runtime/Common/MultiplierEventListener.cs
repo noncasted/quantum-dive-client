@@ -1,11 +1,11 @@
 ﻿using System;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Services.Upgrades.Events;
 using Global.System.MessageBrokers.Runtime;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Common
 {
-    public class MultiplierEventListener<T> : IPlayerSwitchListener where T : IMultiplierEvent
+    public class MultiplierEventListener<T> : IEntitySwitchListener where T : IMultiplierEvent
     {
         private IDisposable _listener;
         private Action<float> _target;

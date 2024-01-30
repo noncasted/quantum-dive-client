@@ -1,6 +1,8 @@
 ﻿using Common.Architecture.Container.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Sorting.Common;
-using GamePlay.Player.Entity.Setup.Abstract;
+
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -13,7 +15,7 @@ namespace GamePlay.Player.Entity.Components.Sorting.Runtime
     {
         [SerializeField] private SpriteSortingConfig _config;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<SpriteSorting>()
                 .WithParameter(_config)

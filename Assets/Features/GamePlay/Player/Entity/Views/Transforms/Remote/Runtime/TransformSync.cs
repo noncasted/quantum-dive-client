@@ -1,6 +1,7 @@
-﻿using Common.DataTypes.Network;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using Common.DataTypes.Network;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+
 using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Remote.Logs;
 using Global.System.Updaters.Runtime.Abstract;
@@ -9,7 +10,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.Views.Transforms.Remote.Runtime
 {
-    public class TransformSync : RagonProperty, IPlayerSwitchListener, IFixedUpdatable
+    public class TransformSync : RagonProperty, IEntitySwitchListener, IFixedUpdatable
     {
         protected TransformSync(
             IPlayerTransform transform,

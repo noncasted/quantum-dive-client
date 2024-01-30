@@ -1,6 +1,7 @@
 ﻿using System;
 using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
 using GamePlay.Player.Entity.Views.Hitboxes.Debug;
 using GamePlay.Player.Entity.Views.Hitboxes.Network;
@@ -9,14 +10,14 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Hitboxes.Local
 {
-    [Serializable]
-    public class PlayerLocalHitboxFactory : IComponentFactory
+    [DisallowMultipleComponent]
+    public class PlayerLocalHitboxFactory : MonoBehaviour, IComponentFactory
     {
         [SerializeField] [Indent] private HitboxConfigAsset _hitboxConfig;
         [SerializeField] [Indent] private HitboxGizmosConfig _gizmosConfig;
         [SerializeField] [Indent] private Transform _point;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<LocalHitbox>()
                 .WithParameter<IHitboxConfig>(_hitboxConfig)

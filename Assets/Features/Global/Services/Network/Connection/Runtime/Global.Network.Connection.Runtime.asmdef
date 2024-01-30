@@ -1,7 +1,6 @@
 ﻿{
   "name": "Global.Network.Connection.Runtime",
   "references": [
-    "GUID:bf8c3a32ee9bda34e855fc001837c2c0",
     "GUID:da1917f3a79694c539a148addd06d33b",
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:53a018fe0c1a491f9173419448428c00",

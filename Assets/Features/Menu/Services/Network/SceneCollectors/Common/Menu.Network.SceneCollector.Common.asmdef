@@ -1,4 +1,6 @@
 ﻿{
   "name": "Menu.Network.SceneCollector.Common",
-  "references":[ "GUID:f2c84e1ca25e4962a17647cf41933b42" ]
+  "references": [
+    "GUID:f2c84e1ca25e4962a17647cf41933b42"
+  ]
 }

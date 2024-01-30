@@ -1,4 +1,4 @@
-﻿using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Components.Sorting.Runtime
 {
-    public class SpriteSorting : IPlayerSwitchListener, IPostFixedUpdatable
+    public class SpriteSorting : IEntitySwitchListener, IPostFixedUpdatable
     {
         public SpriteSorting(
             IPlayerSpriteLayer layer,

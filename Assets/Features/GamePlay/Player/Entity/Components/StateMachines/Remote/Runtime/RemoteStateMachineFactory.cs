@@ -1,7 +1,9 @@
 ﻿using Common.Architecture.Container.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Common;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Logs;
-using GamePlay.Player.Entity.Setup.Abstract;
+
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -14,7 +16,7 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
     {
         [SerializeField] [Indent] private RemoteStateMachineLogSettings _logSettings;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<RemoteStateMachineLogger>()
                 .WithParameter(_logSettings);

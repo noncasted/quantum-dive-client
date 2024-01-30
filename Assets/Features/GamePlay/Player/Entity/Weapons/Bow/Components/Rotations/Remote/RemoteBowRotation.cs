@@ -1,6 +1,7 @@
-﻿using Common.DataTypes.Structs;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+
 using GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Common;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Pivots.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Sprites.Runtime;
@@ -9,7 +10,7 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Remote
 {
-    public class RemoteBowRotation : IPlayerSwitchListener, IUpdatable
+    public class RemoteBowRotation : IEntitySwitchListener, IUpdatable
     {
         public RemoteBowRotation(
             IBowTransform transform,            

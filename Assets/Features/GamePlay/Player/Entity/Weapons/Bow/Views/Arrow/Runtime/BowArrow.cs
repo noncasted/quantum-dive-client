@@ -1,10 +1,11 @@
-﻿using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+﻿
+using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Sprites.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime
 {
-    public class BowArrow : IBowArrow, IPlayerSwitchListener
+    public class BowArrow : IBowArrow, IEntitySwitchListener
     {
         public BowArrow(SpriteRenderer spriteRenderer, IBowSprite sprite)
         {

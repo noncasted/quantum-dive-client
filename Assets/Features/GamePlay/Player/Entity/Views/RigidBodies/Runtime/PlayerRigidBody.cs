@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Entity.Views.RigidBodies.Debug.Gizmos;
 using GamePlay.Player.Entity.Views.RigidBodies.Logs;
 using Global.System.Updaters.Runtime.Abstract;
@@ -8,8 +8,9 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.RigidBodies.Runtime
 {
-    public class PlayerRigidBody : IPlayerRigidBody,
-        IPlayerSwitchListener,
+    public class PlayerRigidBody :
+        IPlayerRigidBody,
+        IEntitySwitchListener,
         IFixedUpdatable
     {
         public PlayerRigidBody(

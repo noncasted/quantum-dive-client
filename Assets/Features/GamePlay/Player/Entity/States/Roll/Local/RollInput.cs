@@ -1,5 +1,5 @@
 ﻿using System;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
 using Global.Inputs.Utils.Runtime.Projection;
 using Global.Inputs.View.Implementations.Movement;
@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Roll.Local
 {
-    public class RollInput : IPlayerSwitchListener, IRollInput
+    public class RollInput : IEntitySwitchListener, IRollInput
     {
         public RollInput(
             IRollInputView rollInputView,

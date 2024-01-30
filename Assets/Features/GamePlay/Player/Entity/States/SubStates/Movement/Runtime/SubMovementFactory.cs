@@ -1,5 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Idles.Common;
 using GamePlay.Player.Entity.States.Runs.Common;
 using GamePlay.Player.Entity.States.SubStates.Movement.Common;
@@ -16,7 +17,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime
         [SerializeField] [Indent] private WalkAnimationFactory _walkAnimation;
         [SerializeField] [Indent] private IdleAnimationFactory _idleAnimation;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var runAnimation = _runAnimation.Create();
             var walkAnimation = _walkAnimation.Create();

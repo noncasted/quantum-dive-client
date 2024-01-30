@@ -1,8 +1,9 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Views.Sprites.Runtime;
@@ -17,7 +18,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
 {
-    public class PlayerRemoteStrafe : IPlayerSwitchListener, IPlayerRemoteState, IUpdatable
+    public class PlayerRemoteStrafe : IEntitySwitchListener, IPlayerRemoteState, IUpdatable
     {
         public PlayerRemoteStrafe(
             IRemoteStateMachine stateMachine,

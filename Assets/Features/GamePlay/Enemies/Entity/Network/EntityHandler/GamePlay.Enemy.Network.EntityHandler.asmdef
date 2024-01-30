@@ -1,4 +1,8 @@
 ﻿{
   "name": "GamePlay.Enemy.Network.EntityHandler",
-  "references":[ "GUID:4cb33ddb764f4a22986b78f754fe0bc5", "GUID:3944dd557e8f416c84ad000a528839e7", "GUID:c50bcf42e5334355b142951d2473d15a" ]
+  "references": [
+    "GUID:4cb33ddb764f4a22986b78f754fe0bc5",
+    "GUID:3944dd557e8f416c84ad000a528839e7",
+    "GUID:c50bcf42e5334355b142951d2473d15a"
+  ]
 }

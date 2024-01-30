@@ -1,16 +1,16 @@
-﻿using System;
-using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+﻿using Common.Architecture.Container.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
 {
-    [Serializable]
-    public class PlayerDamageReceiverFactory : IComponentFactory
+    [DisallowMultipleComponent]
+    public class PlayerDamageReceiverFactory : MonoBehaviour, IComponentFactory
     {
         [SerializeField] private DamageReceiverTrigger _trigger;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<DamageReceiver>()
                 .WithParameter<IDamageReceiverTrigger>(_trigger)

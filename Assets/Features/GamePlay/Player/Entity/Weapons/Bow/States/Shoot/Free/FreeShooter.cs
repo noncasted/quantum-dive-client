@@ -1,8 +1,9 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Runtime;
@@ -22,7 +23,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
 {
-    public class FreeShooter : IFloatingTransition, IPlayerLocalState, IPlayerSwitchListener, IUpdatable
+    public class FreeShooter : IFloatingTransition, IPlayerLocalState, IEntitySwitchListener, IUpdatable
     {
         public FreeShooter(
             IFloatingTransitionsRegistry floatingTransitionsRegistry,

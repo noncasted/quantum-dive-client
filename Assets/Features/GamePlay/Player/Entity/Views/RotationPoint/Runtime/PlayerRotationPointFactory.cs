@@ -1,16 +1,17 @@
 ﻿using System;
 using Common.Architecture.Container.Abstract;
-using GamePlay.Player.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.RotationPoint.Runtime
 {
-    [Serializable]
-    public class PlayerRotationPointFactory : IComponentFactory
+    [DisallowMultipleComponent]
+    public class PlayerRotationPointFactory : MonoBehaviour, IComponentFactory
     {
         [SerializeField] private Transform _rotationPoint;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<PlayerRotationPoint>()
                 .As<IPlayerRotationPoint>()

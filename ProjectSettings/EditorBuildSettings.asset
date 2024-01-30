@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Features/GamePlay/Environment/Config/Level_Environment.unity
     guid: 4296669fed8eba84fa497f96039d4dc7
   - enabled: 1
@@ -41,5 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Features/GamePlay/Player/UI/Overlay/Config/UI_Player_Overlay.unity
     guid: cd30bde93590a2d4b95fa00e17cea19c
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 4ed70bf826fe82a4fa5088c5bf70bb3d, type: 2}
   m_UseUCBPForAssetBundles: 0

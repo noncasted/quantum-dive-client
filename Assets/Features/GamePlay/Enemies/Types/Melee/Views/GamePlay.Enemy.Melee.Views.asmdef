@@ -1,4 +1,8 @@
 ﻿{
   "name": "GamePlay.Enemy.Melee.Views",
-  "references":[ "GUID:a85336a0fb8c444cba97e3b4f07734ca", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:161183806381402698a6af6b3b858411" ]
+  "references": [
+    "GUID:a85336a0fb8c444cba97e3b4f07734ca",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:161183806381402698a6af6b3b858411"
+  ]
 }

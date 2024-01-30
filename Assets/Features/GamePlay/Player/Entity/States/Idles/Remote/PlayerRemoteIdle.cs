@@ -1,6 +1,6 @@
-﻿using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
+﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Idles.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
@@ -10,7 +10,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.States.Idles.Remote
 {
-    public class PlayerRemoteIdle : IPlayerRemoteState, IUpdatable, IPlayerSwitchListener
+    public class PlayerRemoteIdle : IPlayerRemoteState, IUpdatable, IEntitySwitchListener
     {
         public PlayerRemoteIdle(
             IRemoteRotation rotation,

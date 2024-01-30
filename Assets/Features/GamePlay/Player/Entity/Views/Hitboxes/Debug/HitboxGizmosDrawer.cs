@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.Entity.Setup.EventLoop.Abstract;
+﻿
+using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
 using Global.Debugs.Drawing.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
@@ -6,7 +7,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Hitboxes.Debug
 {
-    public class HitboxGizmosDrawer : IPlayerSwitchListener, IGizmosUpdatable
+    public class HitboxGizmosDrawer : IEntitySwitchListener, IGizmosUpdatable
     {
         public HitboxGizmosDrawer(
             IShapeDrawer shapeDrawer,

@@ -5,6 +5,6 @@ namespace Common.Architecture.Entities.Runtime
 {
     public interface IComponentFactory
     {
-        UniTask Create(IServiceCollection services, IEntityUtils utils);
+        void Create(IServiceCollection services, IEntityUtils utils);
     }
 }

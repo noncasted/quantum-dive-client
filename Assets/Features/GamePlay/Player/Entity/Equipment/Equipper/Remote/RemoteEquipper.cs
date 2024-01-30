@@ -7,6 +7,7 @@ using GamePlay.Player.Entity.Setup.Scope;
 using GamePlay.Player.Services.Registries.Equipment.Runtime;
 using Ragon.Client;
 using Ragon.Protocol;
+using VContainer.Unity;
 
 namespace GamePlay.Player.Entity.Equipment.Equipper.Remote
 {
@@ -15,7 +16,7 @@ namespace GamePlay.Player.Entity.Equipment.Equipper.Remote
         public RemoteEquipper(
             IEquipmentSlotsStorage storage,
             IEquipmentSlotBinder binder,
-            IParentScopeProvider rootScope,
+            LifetimeScope rootScope,
             IEquipmentRegistry registry,
             IEntityProvider entityProvider) : base(0, false)
         {
@@ -28,7 +29,7 @@ namespace GamePlay.Player.Entity.Equipment.Equipper.Remote
         
         private readonly IEquipmentSlotsStorage _storage;
         private readonly IEquipmentSlotBinder _binder;
-        private readonly IParentScopeProvider _rootScope;
+        private readonly LifetimeScope _rootScope;
         private readonly IEquipmentRegistry _registry;
         private readonly IEntityProvider _entityProvider;
 
@@ -88,7 +89,7 @@ namespace GamePlay.Player.Entity.Equipment.Equipper.Remote
         
         private void Equip(IEquipmentFactory factory)
         {
-            factory.CreateRemote(_storage, _binder, _rootScope.Scope)
+            factory.CreateRemote(_storage, _binder, _rootScope)
                 .Forget();
         }
     }
