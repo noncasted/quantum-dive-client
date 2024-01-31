@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
-using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.ProjectilesAmount;
-using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.ShotDelays;
-using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.Spreadings;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Local;
@@ -38,15 +35,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Local
         [FoldoutGroup("Common")] [SerializeField] [Indent]
         private RotationFactory _rotation;
 
-        [FoldoutGroup("Data")] [SerializeField] [Indent]
-        private ProjectilesAmountDataFactory _projectilesAmountData;
-
-        [FoldoutGroup("Data")] [SerializeField] [Indent]
-        private ShotDelayDataFactory _shotDelayData;
-
-        [FoldoutGroup("Data")] [SerializeField] [Indent]
-        private SpreadingDataFactory _spreadingData;
-
         [FoldoutGroup("Combat")] [SerializeField] [Indent]
         private AimFactory _aim;
 
@@ -75,10 +63,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Local
             _projectileStarter,
             _rotation,
             _shoot,
-
-            _projectilesAmountData,
-            _shotDelayData,
-            _spreadingData,
 
             _aim,
             _reload,

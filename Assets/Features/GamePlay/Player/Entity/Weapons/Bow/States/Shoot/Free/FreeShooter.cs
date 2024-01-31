@@ -9,7 +9,7 @@ using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Runtime;
 using GamePlay.Player.Entity.States.SubStates.Movement.Runtime;
 using GamePlay.Player.Entity.Views.Sprites.Runtime;
-using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.ShotDelays;
+using GamePlay.Player.Entity.Weapons.Bow.Components.Configuration;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Starter;
@@ -18,6 +18,7 @@ using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
+using GamePlay.Projectiles.Factory;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
 
@@ -29,11 +30,11 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
             IFloatingTransitionsRegistry floatingTransitionsRegistry,
             IProjectileStarter projectileStarter,
             IBowRotation rotation,
-            IShotDelayData delayData,
+            IBowConfig config,
             IUpdater updater,
             IBowAnimator animator,
             IBowArrow arrow,
-            IProjectileStarterConfig config,
+            IProjectileStarterConfig projectileConfig,
             IBowGameObject gameObject,
             IRotation playerRotation,
             IPlayerSpriteFlip playerSpriteFlip,
@@ -46,11 +47,11 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
             _floatingTransitionsRegistry = floatingTransitionsRegistry;
             _projectileStarter = projectileStarter;
             _rotation = rotation;
-            _delayData = delayData;
+            _config = config;
             _updater = updater;
             _animator = animator;
             _arrow = arrow;
-            _config = config;
+            _projectileConfig = projectileConfig;
             _gameObject = gameObject;
             _playerRotation = playerRotation;
             _playerSpriteFlip = playerSpriteFlip;
@@ -62,13 +63,13 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
         }
 
         private readonly IBowRotation _rotation;
+        private readonly IBowConfig _config;
         private readonly IFloatingTransitionsRegistry _floatingTransitionsRegistry;
         private readonly IProjectileStarter _projectileStarter;
-        private readonly IShotDelayData _delayData;
         private readonly IUpdater _updater;
         private readonly IBowAnimator _animator;
         private readonly IBowArrow _arrow;
-        private readonly IProjectileStarterConfig _config;
+        private readonly IProjectileStarterConfig _projectileConfig;
         private readonly IBowGameObject _gameObject;
         private readonly IRotation _playerRotation;
         private readonly IPlayerSpriteFlip _playerSpriteFlip;
@@ -85,7 +86,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
 
         public bool IsTransitionFromFloatingAvailable()
         {
-            if (Time.time < _lastShotTime + _delayData.Value)
+            if (Time.time < _lastShotTime + _config.ShotDelay.Value)
                 return false;
 
             if (_inputReceiver.IsPerformed == false || _isProcessing == true)
@@ -148,7 +149,14 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
 
             //await _animator.PlayAimAsync(_cancellation.Token);
 
-            _projectileStarter.Shoot(_rotation.Angle, _config.Data.Definition, _config.Params);
+            var shootParams = new ShootParams(
+                _config.Damage.Value,
+                _config.PushForce.Value,
+                _config.ArrowSpeed.Value,
+                _projectileConfig.Scale,
+                _projectileConfig.Radius);
+
+            _projectileStarter.Shoot(_rotation.Angle, _projectileConfig.Data.Definition, shootParams);
 
             //await _animator.PlayShootAsync(_cancellation.Token);
 

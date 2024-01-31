@@ -2,6 +2,7 @@
 using Common.Architecture.Scopes.Common.DefaultCallbacks;
 using Common.Architecture.Scopes.Common.DestroyHandler;
 using Common.Architecture.Scopes.Runtime.Services;
+using Features.Global.Services.Configs.Compose;
 using Global.Audio.Compose;
 using Global.Backend.Runtime;
 using Global.Cameras.Compose;
@@ -33,6 +34,8 @@ namespace Global.Config.Runtime
         [SerializeField] private BackendFactory _backend;
         [SerializeField] private DefaultCallbacksServiceFactory _defaultCallbacks;
         [SerializeField] private ScopeDestroyHandlerFactory _scopeDestroyHandler;
+        [SerializeField] private ConfigsCompose _configs;
+        
         [SerializeField] private GlobalScope _scope;
         [SerializeField] private SceneData _servicesScene;
 
@@ -47,7 +50,8 @@ namespace Global.Config.Runtime
             _network,
             _input,
             _system,
-            _ui
+            _ui,
+            _configs
         };
 
         private IServiceFactory[] GetFactories()

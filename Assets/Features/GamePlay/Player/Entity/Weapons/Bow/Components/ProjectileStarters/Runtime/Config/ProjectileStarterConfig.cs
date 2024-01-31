@@ -12,6 +12,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runti
         private readonly ProjectileStarterConfigAsset _asset;
 
         public ProjectileData Data => _asset.Data;
-        public ShootParams Params => _asset.Params;
+        public float Scale => _asset.Scale;
+        public float Radius => _asset.Radius;
     }
 }

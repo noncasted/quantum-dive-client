@@ -10,10 +10,14 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runti
         menuName = ProjectileStarterRoutes.ConfigPath)]
     public class ProjectileStarterConfigAsset : ScriptableObject
     {
+        [SerializeField] [Indent] private float _scale;
+        [SerializeField] [Indent] private float _radius;
         [SerializeField] [Indent] private ShootParams _params;
         [SerializeField] [Indent] private ProjectileData _data;
+        
+        public float Scale => _scale;
+        public float Radius => _radius;
 
-        public ShootParams Params => _params;
         public ProjectileData Data => _data;
     }
 }

@@ -5,6 +5,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runti
     public interface IProjectileStarterConfig
     {
         ProjectileData Data { get; }
-        ShootParams Params { get; }
+        float Scale { get; }
+        float Radius { get; }
     }
 }
