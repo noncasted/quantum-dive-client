@@ -1,4 +1,4 @@
-﻿namespace Features.Global.Services.Configs.Registry.Runtime
+﻿namespace Global.Configs.Registry.Runtime
 {
     public class ConfigsRegistry : IConfigsRegistry
     {

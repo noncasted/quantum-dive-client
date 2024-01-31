@@ -1,4 +1,4 @@
-﻿namespace Features.Global.Services.Configs.Abstract
+﻿namespace Global.Configs.Abstract
 {
     public interface IConfigDefinition
     {

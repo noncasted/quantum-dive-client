@@ -2,10 +2,10 @@
 using Common.Architecture.Scopes.Common.DefaultCallbacks;
 using Common.Architecture.Scopes.Common.DestroyHandler;
 using Common.Architecture.Scopes.Runtime.Services;
-using Features.Global.Services.Configs.Compose;
 using Global.Audio.Compose;
 using Global.Backend.Runtime;
 using Global.Cameras.Compose;
+using Global.Configs.Compose;
 using Global.GameLoops.Runtime;
 using Global.Inputs.Compose;
 using Global.Network.Compose;

@@ -1,6 +1,6 @@
 ﻿using Global.Common;
 
-namespace Features.Global.Services.Configs.Common
+namespace Global.Configs.Common
 {
     public class ConfigsRoutes
     {

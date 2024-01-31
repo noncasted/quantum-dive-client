@@ -2,11 +2,12 @@
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using Features.Global.Services.Configs.Upgrades.Common;
+using Global.Configs.Upgrades.Abstract;
+using Global.Configs.Upgrades.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Features.Global.Services.Configs.Upgrades.Runtime
+namespace Global.Configs.Upgrades.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = ConfigsUpgradesRoutes.ServiceName, menuName = ConfigsUpgradesRoutes.ServicePath)]

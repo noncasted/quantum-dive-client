@@ -1,7 +1,7 @@
-﻿using Features.Global.Services.Configs.Common;
-using GamePlay.Common.Paths;
+﻿using GamePlay.Common.Paths;
+using Global.Configs.Common;
 
-namespace Features.Global.Services.Configs.Upgrades.Common
+namespace Global.Configs.Upgrades.Common
 {
     public class ConfigsUpgradesRoutes
     {

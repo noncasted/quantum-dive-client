@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Scopes.Runtime.Services;
-using Features.Global.Services.Configs.Common;
-using Features.Global.Services.Configs.Registry.Runtime;
-using Features.Global.Services.Configs.Upgrades.Runtime;
+using Global.Configs.Common;
+using Global.Configs.Registry.Runtime;
+using Global.Configs.Upgrades.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Features.Global.Services.Configs.Compose
+namespace Global.Configs.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = "ConfigsCompose", menuName = ConfigsRoutes.Root + "Compose")]

@@ -1,7 +1,7 @@
-﻿using Features.Global.Services.Configs.Common;
-using GamePlay.Common.Paths;
+﻿using GamePlay.Common.Paths;
+using Global.Configs.Common;
 
-namespace Features.Global.Services.Configs.Registry.Common
+namespace Global.Configs.Registry.Common
 {
     public class ConfigsRegistryRoutes
     {
