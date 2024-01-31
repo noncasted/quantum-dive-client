@@ -10,7 +10,7 @@ namespace GamePlay.Enemies.Entity.Views.GameObjects
     {
         [SerializeField] private GameObject _gameObject;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<EnemyGameObject>()
                 .As<IEnemyGameObject>()

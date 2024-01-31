@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Common;
@@ -10,10 +11,10 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Local
 {
-    public class BowRotation : IEntitySwitchListener, IUpdatable, IBowRotation
+    public class BowRotation : IEntitySwitchLifetimeListener, IUpdatable, IBowRotation
     {
         public BowRotation(
-            IBowTransform transform,            
+            IBowTransform transform,
             IBowPivotsProvider bowPivotsProvider,
             IInputProjection inputProjection,
             IUpdater updater,
@@ -42,14 +43,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Local
 
         public float Angle => _angle;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Remove(this);
+            _updater.Add(lifetime, this);
         }
 
         public void OnUpdate(float delta)

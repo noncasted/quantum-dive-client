@@ -10,27 +10,24 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 using ContainerBuilder = Common.Architecture.Container.Runtime.ContainerBuilder;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+using Lifetime = Common.Architecture.Lifetimes.Lifetime;
 
 namespace Common.Architecture.Scopes.Runtime
 {
     public class ScopeLoader : IScopeLoader
     {
         public ScopeLoader(
-            ILogger logger,
             ISceneLoader sceneLoader,
             IOptions options,
             LifetimeScope parent,
             IScopeConfig config)
         {
-            _logger = logger;
             _sceneLoader = sceneLoader;
             _options = options;
             _parent = parent;
             _config = config;
         }
 
-        private readonly ILogger _logger;
         private readonly ISceneLoader _sceneLoader;
         private readonly IOptions _options;
         private readonly LifetimeScope _parent;
@@ -45,7 +42,11 @@ namespace Common.Architecture.Scopes.Runtime
             await CreateServices(builder, utils);
             await BuildContainer(builder, utils);
 
-            var loadResult = new ScopeLoadResult(utils.Data.Scope, utils.Callbacks, sceneLoader);
+            var loadResult = new ScopeLoadResult(
+                utils.Data.Scope,
+                utils.Data.Lifetime,
+                utils.Callbacks, 
+                sceneLoader);
 
             return loadResult;
         }
@@ -56,7 +57,8 @@ namespace Common.Architecture.Scopes.Runtime
             var binder = new ScopeBinder(servicesScene.Scene);
             var scope = Object.Instantiate(_config.ScopePrefab);
             binder.MoveToModules(scope.gameObject);
-            var scopeData = new ScopeData(scope);
+            var lifetime = new Lifetime();
+            var scopeData = new ScopeData(scope, lifetime);
             var callbacks = new ScopeCallbacks();
 
             var utils = new ScopeUtils(_options, sceneLoader, binder, scopeData, callbacks);

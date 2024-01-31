@@ -1,6 +1,6 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime.Callbacks;
-using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Transforms.Runtime;
@@ -11,18 +11,18 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Root.Runtime
     public class BowRoot : IEquipment, IEntityAwakeListener
     {
         public BowRoot(
-            IEntityCallbacks callbacks,
+            IEntityCallbacksRegistry callbacksRegistry,
             BowSlotDefinition definition,
             IBowGameObject gameObject,
             IBowTransform transform)
         {
-            _callbacks = callbacks;
+            _callbacksRegistry = callbacksRegistry;
             _definition = definition;
             _gameObject = gameObject;
             _transform = transform;
         }
 
-        private readonly IEntityCallbacks _callbacks;
+        private readonly IEntityCallbacksRegistry _callbacksRegistry;
         private readonly BowSlotDefinition _definition;
         private readonly IBowGameObject _gameObject;
         private readonly IBowTransform _transform;
@@ -46,7 +46,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Root.Runtime
             }
 
             _isActive = true;
-            _callbacks.Handlers[CallbackStage.Enable].Run();
+            _callbacksRegistry.Handlers[CallbackStage.Enable].Run();
         }
 
         public void Deselect()
@@ -58,7 +58,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Root.Runtime
             }
 
             _isActive = false;
-            _callbacks.Handlers[CallbackStage.Disable].Run();
+            _callbacksRegistry.Handlers[CallbackStage.Disable].Run();
         }
     }
 }

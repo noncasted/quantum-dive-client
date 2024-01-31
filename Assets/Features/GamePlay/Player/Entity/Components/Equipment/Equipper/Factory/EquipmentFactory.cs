@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Entities.Runtime;
 using Cysharp.Threading.Tasks;
-using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Components.Equipment.Definition;
 using VContainer.Unity;
 using Object = UnityEngine.Object;
 
-namespace Features.GamePlay.Player.Entity.Components.Equipment.Equipper.Factory
+namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Factory
 {
     public class EquipmentFactory : IEquipmentFactory
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Remote;
 using GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Common;

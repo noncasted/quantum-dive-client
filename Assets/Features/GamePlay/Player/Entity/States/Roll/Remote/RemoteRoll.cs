@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.DataTypes.Network;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
@@ -11,7 +12,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.States.Roll.Remote
 {
-    public class RemoteRoll : IPlayerRemoteState, IEntitySwitchListener
+    public class RemoteRoll : IPlayerRemoteState, IEntitySwitchLifetimeListener
     {
         public RemoteRoll(
             IRemoteStateMachine stateMachine,
@@ -35,14 +36,9 @@ namespace GamePlay.Player.Entity.States.Roll.Remote
 
         private CancellationTokenSource _cancellation;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.RegisterState(_definition, this);
-        }
-
-        public void OnDisabled()
-        {
-            _stateMachine.UnregisterState(_definition);
+            _stateMachine.RegisterState(lifetime, _definition, this);
         }
         
         public void Enter(RagonBuffer buffer)

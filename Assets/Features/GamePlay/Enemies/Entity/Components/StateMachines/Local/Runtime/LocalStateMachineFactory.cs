@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime
     {
         [SerializeField] [Indent] private LocalStateMachineLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbackRegister)
+        public void Create(IServiceCollection services, ICallbackRegistry callbackRegistry)
         {
             services.Register<LocalStateMachineLogger>()
                 .WithParameter(_logSettings);

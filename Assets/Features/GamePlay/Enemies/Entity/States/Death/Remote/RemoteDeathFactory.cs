@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.States.Death.Remote
         [SerializeField] private DeathAnimationFactory _animation;
         [SerializeField] private DeathDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             var animation = _animation.Create();
 

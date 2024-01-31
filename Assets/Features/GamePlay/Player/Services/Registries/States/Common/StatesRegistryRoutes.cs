@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Paths;
 
-namespace GamePlay.Player.Services.Registries.States.Common
+namespace GamePlay.Player.Registries.States.Common
 {
     public class StatesRegistryRoutes
     {

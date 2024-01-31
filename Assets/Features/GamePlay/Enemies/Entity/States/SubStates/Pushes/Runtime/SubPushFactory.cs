@@ -10,7 +10,7 @@ namespace GamePlay.Enemies.Entity.States.SubStates.Pushes.Runtime
     [CreateAssetMenu(fileName = EnemySubPushRoutes.StateName, menuName = EnemySubPushRoutes.StatePath)]
     public class SubPushFactory : ScriptableObject, IEnemyComponentFactory
     {
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<SubPush>()
                 .As<ISubPush>();

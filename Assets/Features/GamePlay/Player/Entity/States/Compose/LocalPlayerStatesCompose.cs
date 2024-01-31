@@ -14,7 +14,7 @@ using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Features.GamePlay.Player.Entity.States.Compose
+namespace GamePlay.Player.Entity.States.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

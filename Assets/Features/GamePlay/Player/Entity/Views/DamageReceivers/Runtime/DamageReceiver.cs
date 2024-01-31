@@ -1,10 +1,11 @@
-﻿using System;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
+using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Common.Damages;
 
 namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
 {
-    public class DamageReceiver : IEntitySwitchListener, IDamageReceiverHandler
+    public class DamageReceiver : IEntitySwitchLifetimeListener, IDamageReceiverHandler
     {
         public DamageReceiver(IDamageReceiverTrigger trigger)
         {
@@ -13,16 +14,13 @@ namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
 
         private readonly IDamageReceiverTrigger _trigger;
 
-        public event Action<Damage> Damaged;
+        private readonly IViewableDelegate<Damage> _damaged = new ViewableDelegate<Damage>();
 
-        public void OnEnabled()
-        {
-            _trigger.Triggered += OnTriggered;
-        }
+        public IViewableDelegate<Damage> Damaged => _damaged; 
 
-        public void OnDisabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _trigger.Triggered -= OnTriggered;
+            _trigger.Triggered.Listen(lifetime, OnTriggered);
         }
 
         private void OnTriggered(Damage damage)

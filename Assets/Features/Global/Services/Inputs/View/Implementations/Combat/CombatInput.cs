@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using Global.Inputs.Constranits.Definition;
 using Global.Inputs.Constranits.Runtime;
 using Global.Inputs.View.Logs;
@@ -30,10 +30,16 @@ namespace Global.Inputs.View.Implementations.Combat
         private readonly Controls.GamePlayActions _gamePlay;
         private readonly InputViewLogger _logger;
         
-        public event Action RangeAttackPerformed;
-        public event Action RangeAttackCanceled;
-        public event Action MeleeAttackPerformed;
-        public event Action MeleeAttackCanceled;
+        
+        private readonly IViewableDelegate _rangeAttackPerformed = new ViewableDelegate();
+        private readonly IViewableDelegate _rangeAttackCanceled = new ViewableDelegate();
+        private readonly IViewableDelegate _meleeAttackPerformed = new ViewableDelegate();
+        private readonly IViewableDelegate _meleeAttackCanceled = new ViewableDelegate();
+        
+        public IViewableDelegate RangeAttackPerformed => _rangeAttackPerformed;
+        public IViewableDelegate RangeAttackCanceled => _rangeAttackCanceled;
+        public IViewableDelegate MeleeAttackPerformed => _meleeAttackPerformed;
+        public IViewableDelegate MeleeAttackCanceled => _meleeAttackCanceled;
         
         public void Listen()
         {

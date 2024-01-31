@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
-using Features.GamePlay.Player.Entity.Components.Equipment.Equipper.Factory;
-using GamePlay.Player.Entity.Components.Equipment.Slots.Binder.Runtime;
+using GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Components.Equipment.Equipper.Factory;
+using GamePlay.Player.Entity.Components.Equipment.Slots.Binder;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Runtime;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Player.Services.Registries.Equipment.Runtime;
+using GamePlay.Player.Registries.Equipment.Runtime;
 using Ragon.Client;
 using Ragon.Protocol;
 using VContainer.Unity;

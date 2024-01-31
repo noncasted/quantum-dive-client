@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Common;
@@ -10,7 +11,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.SubStates.Damaged.Remote
 {
-    public class RemoteDamaged : IEntityAttachListener, IEntitySwitchListener
+    public class RemoteDamaged : IEntitySwitchLifetimeListener, IEntityDisableListener
     {
         public RemoteDamaged(
             IPlayerSpriteMaterial spriteMaterial,
@@ -28,18 +29,13 @@ namespace GamePlay.Player.Entity.States.SubStates.Damaged.Remote
 
         private CancellationTokenSource _cancellation;
 
-        private static readonly int _flickProgressProperty = Shader.PropertyToID("_Progress");
+        private static readonly int FlickProgressProperty = Shader.PropertyToID("_Progress");
 
-        public void OnEntityAttached()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _events.ListenEvent<PlayerDamagedEvent>(OnDamaged);
+            _events.ListenEvent<PlayerDamagedEvent>(lifetime, OnDamaged);
         }
-
-        public void OnEnabled()
-        {
-
-        }
-
+        
         public void OnDisabled()
         {
             _cancellation?.Cancel();
@@ -73,9 +69,9 @@ namespace GamePlay.Player.Entity.States.SubStates.Damaged.Remote
                 isFlicked = !isFlicked;
 
                 if (isFlicked == true)
-                    _spriteMaterial.Material.SetFloat(_flickProgressProperty, 1f);
+                    _spriteMaterial.Material.SetFloat(FlickProgressProperty, 1f);
                 else
-                    _spriteMaterial.Material.SetFloat(_flickProgressProperty, 0f);
+                    _spriteMaterial.Material.SetFloat(FlickProgressProperty, 0f);
 
                 count++;
                 await UniTask.Delay(delay, cancellation);

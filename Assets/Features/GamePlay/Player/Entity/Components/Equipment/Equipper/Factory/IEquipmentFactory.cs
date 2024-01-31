@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
-using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Components.Equipment.Definition;
 
-namespace Features.GamePlay.Player.Entity.Components.Equipment.Equipper.Factory
+namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Factory
 {
     public interface IEquipmentFactory
     {

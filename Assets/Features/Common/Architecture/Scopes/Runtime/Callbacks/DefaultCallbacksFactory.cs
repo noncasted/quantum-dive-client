@@ -1,5 +1,7 @@
-﻿using Common.Architecture.Scopes.Runtime.Services;
+﻿using System;
+using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
+using Cysharp.Threading.Tasks;
 
 namespace Common.Architecture.Scopes.Runtime.Callbacks
 {
@@ -19,27 +21,50 @@ namespace Common.Architecture.Scopes.Runtime.Callbacks
         /// <param name="data"></param>
         public void AddCallbacks(IScopeCallbacks callbacks, IScopeData data)
         {
-            callbacks.AddScopeCallback<IScopeBuiltListener>(
-                listener => listener.OnContainerBuilt(data.Scope), CallbackStage.Construct, 0);
-            callbacks.AddScopeCallback<IScopeAwakeListener>(
-                listener => listener.OnAwake(), CallbackStage.Construct, 1000);
-            callbacks.AddScopeAsyncCallback<IScopeAwakeAsyncListener>(
-                listener => listener.OnAwakeAsync(), CallbackStage.Construct, 2000);
-            callbacks.AddScopeCallback<IScopeEnableListener>(
-                listener => listener.OnEnabled(), CallbackStage.Construct, 3000);
-            callbacks.AddScopeAsyncCallback<IScopeEnableAsyncListener>(
-                listener => listener.OnEnabledAsync(), CallbackStage.Construct, 4000);
+            AddConstruct<IScopeBuiltListener>(listener => listener.OnContainerBuilt(data.Scope), 0);
+            AddConstruct<IScopeAwakeListener>(listener => listener.OnAwake(), 1000);
+            AddAsyncConstruct<IScopeAwakeAsyncListener>(listener => listener.OnAwakeAsync(), 2000);
+            
+            AddSetupComplete<ILifetimeListener>(listener => listener.OnLifetimeCreated(data.Lifetime), 0);
+            AddSetupComplete<IScopeEnableListener>(listener => listener.OnEnabled(), 1000);
+            AddAsyncSetupComplete<IScopeEnableAsyncListener>(listener => listener.OnEnabledAsync(), 2000);
+            AddSetupComplete<IScopeLoadListener>(listener => listener.OnLoaded(), 3000);
+            AddAsyncSetupComplete<IScopeLoadAsyncListener>(listener => listener.OnLoadedAsync(), 4000);
 
-            callbacks.AddScopeCallback<IScopeLoadListener>(
-                listener => listener.OnLoaded(), CallbackStage.SetupComplete, 0);
-            callbacks.AddScopeAsyncCallback<IScopeLoadAsyncListener>(
-                listener => listener.OnLoadedAsync(), CallbackStage.SetupComplete, 1000);
+            AddDispose<IScopeDisableListener>(listener => listener.OnDisabled(), 0);
+            AddAsyncDispose<IScopeDisableAsyncListener>(listener => listener.OnDisabledAsync(), 1000);
+            
+            return;
 
-            callbacks.AddScopeCallback<IScopeDisableListener>(
-                listener => listener.OnDisabled(), CallbackStage.Dispose, 0);
-
-            callbacks.AddScopeAsyncCallback<IScopeDisableAsyncListener>(
-                listener => listener.OnDisabledAsync(), CallbackStage.Dispose, 1000);
+            void AddConstruct<T>(Action<T> invoker, int order)
+            {
+                callbacks.AddScopeCallback(invoker, CallbackStage.Construct, order);
+            }
+            
+            void AddAsyncConstruct<T>(Func<T, UniTask> invoker, int order)
+            {
+                callbacks.AddScopeAsyncCallback(invoker, CallbackStage.Construct, order);
+            }
+            
+            void AddSetupComplete<T>(Action<T> invoker, int order)
+            {
+                callbacks.AddScopeCallback(invoker, CallbackStage.SetupComplete, order);
+            }
+            
+            void AddAsyncSetupComplete<T>(Func<T, UniTask> invoker, int order)
+            {
+                callbacks.AddScopeAsyncCallback(invoker, CallbackStage.SetupComplete, order);
+            }
+            
+            void AddDispose<T>(Action<T> invoker, int order)
+            {
+                callbacks.AddScopeCallback(invoker, CallbackStage.Dispose, order);
+            }
+            
+            void AddAsyncDispose<T>(Func<T, UniTask> invoker, int order)
+            {
+                callbacks.AddScopeAsyncCallback(invoker, CallbackStage.Dispose, order);
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ namespace GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime
         [SerializeField] private Transform _transform;
         [SerializeField] private TransformLogSettings _logSettings;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<TransformLogger>()
                 .WithParameter(_logSettings);

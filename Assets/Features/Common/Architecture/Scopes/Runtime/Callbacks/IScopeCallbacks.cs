@@ -6,13 +6,13 @@ using Cysharp.Threading.Tasks;
 
 namespace Common.Architecture.Scopes.Runtime.Callbacks
 {
-    public interface IScopeCallbacks : ICallbackRegister
+    public interface IScopeCallbacks : ICallbackRegistry
     {
         public IReadOnlyDictionary<CallbackStage, ICallbacksHandler> Handlers { get; }
 
         void AddScopeCallback<T>(Action<T> invoker, CallbackStage stage, int order);
         void AddScopeAsyncCallback<T>(Func<T, UniTask> invoker, CallbackStage stage, int order);
 
-        void AddGenericCallbackRegister(ICallbackRegister callbackRegister);
+        void AddGenericCallbackRegister(ICallbackRegistry callbackRegistry);
     }
 }

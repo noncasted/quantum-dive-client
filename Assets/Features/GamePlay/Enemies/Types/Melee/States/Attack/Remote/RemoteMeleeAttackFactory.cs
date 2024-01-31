@@ -17,7 +17,7 @@ namespace GamePlay.Enemies.Types.Melee.States.Attack.Remote
         [SerializeField] private MeleeAttackDefinition _definition;
         [SerializeField] private MeleeAttackConfig _config;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             var animation = _animation.Create();
 

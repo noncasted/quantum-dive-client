@@ -13,7 +13,7 @@ namespace GamePlay.Enemies.Entity.Components.Sorting.Runtime
     {
         [SerializeField] private SpriteSortingConfig _config;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<SpriteSorting>()
                 .WithParameter(_config)

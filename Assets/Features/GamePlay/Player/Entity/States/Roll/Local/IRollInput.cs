@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Roll.Local
 {
     public interface IRollInput
     {
-        event Action Performed;
+        IViewableDelegate Performed { get; }
 
         Vector2 Direction { get; }
         bool HasInput { get; }

@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
@@ -22,7 +23,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
 {
-    public class FreeShooter : IFloatingTransition, IPlayerLocalState, IEntitySwitchListener, IUpdatable
+    public class FreeShooter : IFloatingTransition, IPlayerLocalState, IEntitySwitchLifetimeListener, IUpdatable
     {
         public FreeShooter(
             IFloatingTransitionsRegistry floatingTransitionsRegistry,
@@ -79,7 +80,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
         private bool _isProcessing;
         private float _lastShotTime;
         private CancellationTokenSource _cancellation;
-        
+
         public PlayerStateDefinition Definition { get; }
 
         public bool IsTransitionFromFloatingAvailable()
@@ -97,42 +98,37 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
         {
             Shoot().Forget();
         }
-        
+
         public void Break()
         {
             Cancel();
             _gameObject.Disable();
             _isProcessing = false;
-            
+
             _subMovement.Exit();
         }
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _floatingTransitionsRegistry.Register(Definition, this);
-            _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _floatingTransitionsRegistry.Unregister(Definition);
-            _updater.Remove(this);
+            _floatingTransitionsRegistry.Register(lifetime, Definition, this);
+            _updater.Add(lifetime, this);
         }
 
         public void OnUpdate(float delta)
+
         {
             if (_isProcessing == true)
             {
                 var orientation = _playerRotation.Orientation;
-                
+
                 _subMovement.SetAnimationRotation(orientation);
                 _playerSpriteFlip.FlipAlong(_playerRotation.Angle);
             }
-            
-            if (IsTransitionFromFloatingAvailable() == false 
+
+            if (IsTransitionFromFloatingAvailable() == false
                 || _stateMachine.IsAvailable(Definition) == false)
                 return;
-            
+
             Shoot().Forget();
         }
 
@@ -144,12 +140,12 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
             _isProcessing = true;
 
             Cancel();
-            
+
             _cancellation = new CancellationTokenSource();
-            
+
             _subMovement.Enter(true, _moveConfig.Speed, MoveType.Walk);
             _gameObject.Enable();
-            
+
             //await _animator.PlayAimAsync(_cancellation.Token);
 
             _projectileStarter.Shoot(_rotation.Angle, _config.Data.Definition, _config.Params);

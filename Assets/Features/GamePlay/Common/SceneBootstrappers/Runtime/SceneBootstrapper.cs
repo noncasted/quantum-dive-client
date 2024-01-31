@@ -30,7 +30,7 @@ namespace GamePlay.Common.SceneBootstrappers.Runtime
             _builders = builders;
         }
 
-        public async UniTask OnContainerBuilt(LifetimeScope parent, ICallbackRegister callbacks)
+        public async UniTask OnContainerBuilt(LifetimeScope parent, ICallbackRegistry callbacks)
         {
             var tasks = new UniTask[_builders.Length];
 

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Logs;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
@@ -16,10 +16,11 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Local.Runtime
 
         private readonly IStateMachineSync _sync;
         private readonly LocalStateMachineLogger _logger;
+        private readonly IViewableDelegate _exited = new ViewableDelegate();
 
         private IPlayerLocalState _current;
 
-        public event Action Exited;
+        public IViewableDelegate Exited => _exited;
 
         public bool IsAvailable(PlayerStateDefinition definition)
         {
@@ -66,7 +67,7 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Local.Runtime
                 _logger.OnExitMiss(playerLocalState.Definition);
                 return;
             }
-            
+
             _logger.OnExited(_current.Definition);
             Exited?.Invoke();
         }

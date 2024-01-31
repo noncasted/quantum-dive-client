@@ -6,8 +6,7 @@ namespace GamePlay.Player.Entity.Views.Transforms.Local.Runtime
 {
     public class PlayerTransform :
         IPlayerTransform,
-        IPlayerPosition,
-        IPlayerTransformProvider
+        IPlayerPosition
     {
         public PlayerTransform(Transform transform, TransformLogger logger, TransformDebugFlag debugFlag)
         {

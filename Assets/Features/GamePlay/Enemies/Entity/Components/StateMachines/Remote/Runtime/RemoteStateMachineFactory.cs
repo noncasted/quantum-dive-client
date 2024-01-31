@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime
     {
         [SerializeField] private RemoteStateMachineLogSettings _logSettings;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<RemoteStateMachineLogger>()
                 .WithParameter(_logSettings);

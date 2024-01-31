@@ -9,7 +9,7 @@ namespace GamePlay.Enemies.Types.Range.Views
     {
         [SerializeField] private ShootPointFactory _shootPoint;
         
-        public void OnBuild(IServiceCollection services, ICallbackRegister callbacks)
+        public void OnBuild(IServiceCollection services, ICallbackRegistry callbacks)
         {
             _shootPoint.Create(services, callbacks);
         }

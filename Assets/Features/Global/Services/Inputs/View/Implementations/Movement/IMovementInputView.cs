@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using UnityEngine;
 
 namespace Global.Inputs.View.Implementations.Movement
 {
     public interface IMovementInputView
     {
-        event Action<Vector2> MovementPerformed;
-        event Action MovementCanceled;
+        IViewableDelegate<Vector2> Performed { get; }
+        IViewableDelegate Canceled { get; }
     }
 }

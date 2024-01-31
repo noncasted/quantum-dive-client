@@ -6,10 +6,10 @@ using Cysharp.Threading.Tasks;
 
 namespace Common.Architecture.Entities.Runtime.Callbacks
 {
-    public class EntityCallbacks : IEntityCallbacks
+    public class EntityCallbacksRegistry : IEntityCallbacksRegistry
     {
         private readonly Dictionary<CallbackStage, ICallbacksHandler> _callbacks = new();
-        private readonly List<ICallbackRegister> _genericRegisters = new();
+        private readonly List<ICallbackRegistry> _genericRegisters = new();
 
         public IReadOnlyDictionary<CallbackStage, ICallbacksHandler> Handlers => _callbacks;
 
@@ -36,9 +36,9 @@ namespace Common.Architecture.Entities.Runtime.Callbacks
             _callbacks[stage].Add(entity);
         }
 
-        public void AddGenericCallbackRegister(ICallbackRegister callbackRegister)
+        public void AddGenericCallbackRegistry(ICallbackRegistry callbackRegistry)
         {
-            _genericRegisters.Add(callbackRegister);
+            _genericRegisters.Add(callbackRegistry);
         }
     }
 }

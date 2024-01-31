@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
@@ -17,7 +18,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
 {
-    public class PlayerRemoteStrafe : IEntitySwitchListener, IPlayerRemoteState, IUpdatable
+    public class PlayerRemoteStrafe : IEntitySwitchLifetimeListener, IPlayerRemoteState, IUpdatable
     {
         public PlayerRemoteStrafe(
             IRemoteStateMachine stateMachine,
@@ -29,7 +30,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
             IBowArrow arrow,
             IProjectileStarterConfig config,
             IUpdater updater,
-            
             PlayerStrafeAnimation playerAnimation,
             BowStrafeAnimation bowAnimation,
             StrafeDefinition definition)
@@ -43,12 +43,12 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
             _arrow = arrow;
             _config = config;
             _updater = updater;
-            
+
             _playerAnimation = playerAnimation;
             _bowAnimation = bowAnimation;
             _definition = definition;
         }
-        
+
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IRemoteRotation _remoteRotation;
         private readonly IPlayerAnimator _playerAnimator;
@@ -58,21 +58,16 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
         private readonly IBowArrow _arrow;
         private readonly IProjectileStarterConfig _config;
         private readonly IUpdater _updater;
-        
+
         private readonly PlayerStrafeAnimation _playerAnimation;
         private readonly BowStrafeAnimation _bowAnimation;
         private readonly StrafeDefinition _definition;
 
         private CancellationTokenSource _cancellation;
-        
-        public void OnEnabled()
-        {
-            _stateMachine.RegisterState(_definition, this);
-        }
 
-        public void OnDisabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.UnregisterState(_definition);
+            _stateMachine.RegisterState(lifetime, _definition, this);
         }
 
         public void Enter(RagonBuffer buffer)
@@ -90,7 +85,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
             _cancellation?.Cancel();
             _cancellation?.Dispose();
             _cancellation = null;
-            
+
             _updater.Remove(this);
             _bowGameObject.Disable();
             _arrow.Hide();
@@ -101,7 +96,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
             _playerAnimation.SetOrientation(_remoteRotation.Orientation);
             _spriteFlip.FlipAlong(_remoteRotation.Angle);
         }
-        
+
         private async UniTaskVoid Process()
         {
             var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);

@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.Views.RigidBodies.Runtime
         [SerializeField] private LayerMask _layerMask;
         [SerializeField] private RigidBodyLogSettings _logSettings;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<RigidBodyLogger>()
                 .WithParameter(_logSettings);

@@ -2,6 +2,5 @@
 {
     public interface ICallbacksFactory
     {
-        void AddCallbacks(IEntityCallbacks callbacks);
     }
 }

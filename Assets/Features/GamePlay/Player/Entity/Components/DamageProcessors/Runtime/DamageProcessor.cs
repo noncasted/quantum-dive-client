@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Common.Damages;
 using GamePlay.Player.Entity.Components.Healths.Runtime;
 using GamePlay.Player.Entity.States.Deaths.Local;
@@ -9,7 +10,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Components.DamageProcessors.Runtime
 {
-    public class DamageProcessor : IEntitySwitchListener, IDamageProcessor
+    public class DamageProcessor : IEntitySwitchLifetimeListener, IDamageProcessor
     {
         public DamageProcessor(
             IHealth health,
@@ -39,18 +40,12 @@ namespace GamePlay.Player.Entity.Components.DamageProcessors.Runtime
 
         private float _lastTimeDamage;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _hitbox.Damaged += OnDamage;
-            _damageReceiverHandler.Damaged += OnDamage;
+            _hitbox.Damaged.Listen(lifetime, OnDamage);
+            _damageReceiverHandler.Damaged.Listen(lifetime, OnDamage);
         }
-
-        public void OnDisabled()
-        {
-            _hitbox.Damaged -= OnDamage;
-            _damageReceiverHandler.Damaged -= OnDamage;
-        }
-
+        
         public void OnDamage(Damage damage)
         {
             if (IsDamageAvailable() == false)

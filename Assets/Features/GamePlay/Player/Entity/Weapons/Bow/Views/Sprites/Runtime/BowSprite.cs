@@ -1,24 +1,27 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.Sprites.Runtime
 {
-    public class BowSprite :  IBowSprite
+    public class BowSprite : IBowSprite
     {
         public BowSprite(SpriteRenderer spriteRenderer)
         {
             _spriteRenderer = spriteRenderer;
         }
-        
+
         private readonly SpriteRenderer _spriteRenderer;
 
-        public event Action<bool> YFlipped;
-        public event Action<int> SortingOrderChanged;
+        private readonly IViewableDelegate<bool> _yFlipped = new ViewableDelegate<bool>();
+        private readonly IViewableDelegate<int> _sortingOrderChanged = new ViewableDelegate<int>();
+
+        public IViewableDelegate<bool> YFlipped => _yFlipped;
+        public IViewableDelegate<int> SortingOrderChanged => _sortingOrderChanged;
 
         public void SetSortingOrder(int order)
         {
             _spriteRenderer.sortingOrder = order;
-            
+
             SortingOrderChanged?.Invoke(order);
         }
 
@@ -30,7 +33,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Views.Sprites.Runtime
         public void FlipX(bool isFlipped)
         {
             _spriteRenderer.flipX = isFlipped;
-            
+
             YFlipped?.Invoke(isFlipped);
         }
     }

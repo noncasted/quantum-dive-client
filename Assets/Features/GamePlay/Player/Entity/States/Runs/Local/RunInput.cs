@@ -1,5 +1,6 @@
-﻿using System;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
+using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Player.Entity.States.Runs.Logs;
 using GamePlay.Player.Entity.States.Runs.Remote;
 using Global.Inputs.View.Implementations.Movement;
@@ -7,7 +8,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Runs.Local
 {
-    public class RunInput : IEntitySwitchListener, IRunInput
+    public class RunInput : IEntitySwitchLifetimeListener, IRunInput
     {
         public RunInput(
             IMovementInputView inputView,
@@ -25,23 +26,20 @@ namespace GamePlay.Player.Entity.States.Runs.Local
 
         private Vector2 _direction;
         private bool _hasInput;
-        
-        public event Action Performed;
-        public event Action Canceled;
 
+        private readonly IViewableDelegate _performed = new ViewableDelegate();
+        private readonly IViewableDelegate _canceled = new ViewableDelegate();
+
+        public IViewableDelegate Performed => _performed;
+        public IViewableDelegate Canceled => _canceled;
+        
         public Vector2 Direction => _direction;
         public bool HasInput => _hasInput;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _inputView.MovementPerformed += OnInputView;
-            _inputView.MovementCanceled += OnCanceled;
-        }
-
-        public void OnDisabled()
-        {
-            _inputView.MovementPerformed -= OnInputView;
-            _inputView.MovementCanceled -= OnCanceled;
+            _inputView.Performed.Listen(lifetime, OnInputView);
+            _inputView.Canceled .Listen(lifetime, OnCanceled);
         }
 
         private void OnInputView(Vector2 direction)

@@ -6,6 +6,6 @@ namespace Common.Architecture.Container.Abstract
     {
         void RegisterAll(IContainerBuilder builder);
         void ResolveAll(IObjectResolver resolver);
-        void ResolveAllWithCallbacks(IObjectResolver resolver, ICallbackRegister callbackRegister);
+        void ResolveAllWithCallbacks(IObjectResolver resolver, ICallbackRegistry callbackRegistry);
     }
 }

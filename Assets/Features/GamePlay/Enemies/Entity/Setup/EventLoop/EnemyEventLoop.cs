@@ -3,7 +3,7 @@ using Common.Architecture.Container.Abstract;
 
 namespace GamePlay.Enemies.Entity.Setup.EventLoop
 {
-    public class EnemyEventLoop : ICallbackRegister, IEnemyEventLoop
+    public class EnemyEventLoop : ICallbackRegistry, IEnemyEventLoop
     {
         private readonly List<IEnemyAwakeListener> _awakes = new();
         private readonly List<IEnemySwitchListener> _switches = new();

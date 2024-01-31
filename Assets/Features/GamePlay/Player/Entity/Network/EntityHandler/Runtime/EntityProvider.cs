@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Ragon.Client;
 
 namespace GamePlay.Player.Entity.Network.EntityHandler.Runtime
@@ -12,6 +14,7 @@ namespace GamePlay.Player.Entity.Network.EntityHandler.Runtime
         }
 
         private readonly RagonEntity _entity;
+        private readonly List<Action> _eventListeners = new();
 
         public int Id => _entity.Id;
         public bool IsAttached => _entity.IsAttached;
@@ -27,7 +30,6 @@ namespace GamePlay.Player.Entity.Network.EntityHandler.Runtime
             _entity.Attached -= OnAttached;
         }
 
-
         public void BindProperty(RagonProperty property)
         {
             if (_entity.IsAttached == true)
@@ -36,9 +38,23 @@ namespace GamePlay.Player.Entity.Network.EntityHandler.Runtime
             _entity.State.AddProperty(property);
         }
 
-        public void ListenEvent<TEvent>(Action<RagonPlayer, TEvent> callback) where TEvent : IRagonEvent, new()
+        public void ListenEvent<TEvent>(ILifetime lifetime, Action<RagonPlayer, TEvent> callback) where TEvent : IRagonEvent, new()
         {
-            _entity.OnEvent(callback);
+            if (_entity.IsAttached == true)
+                Listen();
+            else
+                _eventListeners.Add(Listen);
+            
+            return;
+
+            void Listen()
+            {
+                if (lifetime.IsTerminated == true)
+                    return;
+                
+                var listener = _entity.OnEvent(callback);
+                lifetime.ListenTerminate(() => listener.Dispose());
+            }
         }
 
         public void ReplicateEvent<TEvent>(TEvent data) where TEvent : IRagonEvent, new()
@@ -48,6 +64,8 @@ namespace GamePlay.Player.Entity.Network.EntityHandler.Runtime
 
         private void OnAttached(RagonEntity entity)
         {
+            foreach (var listener in _eventListeners)
+                listener?.Invoke();
         }
     }
 }

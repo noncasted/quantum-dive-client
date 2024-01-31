@@ -8,7 +8,7 @@ namespace GamePlay.Enemies.Entity.Setup.Config.Remote
     {
         [SerializeField] private RemoteEnemyComponents _config;
 
-        public void OnBuild(IServiceCollection services, ICallbackRegister callbacks)
+        public void OnBuild(IServiceCollection services, ICallbackRegistry callbacks)
         {
             var assets = _config.GetAssets();
 

@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Components.Rotations.Orientation;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
@@ -15,7 +16,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Runs.Local
 {
-    public class LocalRun : IPlayerLocalState, IPreFixedUpdatable, IEntitySwitchListener, IFloatingTransition
+    public class LocalRun : IPlayerLocalState, IPreFixedUpdatable, IEntitySwitchLifetimeListener, IFloatingTransition
     {
         public LocalRun(
             ILocalStateMachine stateMachine,
@@ -63,22 +64,14 @@ namespace GamePlay.Player.Entity.States.Runs.Local
 
         public PlayerStateDefinition Definition { get; }
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _input.Performed += OnPerformed;
-            _input.Canceled += OnCanceled;
-
-            _floatingTransitionsRegistry.Register(Definition, this);
-        }
-
-        public void OnDisabled()
-        {
-            _input.Performed -= OnPerformed;
-            _input.Canceled -= OnCanceled;
+            _input.Performed.Listen(lifetime, OnPerformed);
+            _input.Canceled.Listen(lifetime, OnCanceled);
             
-            _floatingTransitionsRegistry.Unregister(Definition);
+            _floatingTransitionsRegistry.Register(lifetime, Definition, this);
         }
-        
+
         public bool IsTransitionFromFloatingAvailable()
         {
             return _input.HasInput;
@@ -96,7 +89,7 @@ namespace GamePlay.Player.Entity.States.Runs.Local
 
             Begin();
         }
-        
+
         private void OnPerformed()
         {
             if (_isStarted == true)
@@ -148,10 +141,10 @@ namespace GamePlay.Player.Entity.States.Runs.Local
                 Debug.LogError("Not started");
 
             var angle = _input.Direction.ToAngle();
-            
+
             _animation.SetOrientation(angle.ToOrientation());
             _spriteFlip.FlipAlong(angle);
-            
+
             _playerRigidBody.Move(_input.Direction, _runConfig.Speed * delta);
         }
     }

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 
 namespace Global.Inputs.View.Implementations.Movement
 {
     public interface IRollInputView
     {
-        event Action Performed;
-        event Action Canceled;
+        IViewableDelegate Performed { get; }
+        IViewableDelegate Canceled { get; }
     }
 }

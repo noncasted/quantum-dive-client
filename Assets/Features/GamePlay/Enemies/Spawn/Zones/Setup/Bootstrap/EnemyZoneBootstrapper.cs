@@ -16,7 +16,7 @@ namespace GamePlay.Enemies.Spawn.Zones.Setup.Bootstrap
         [SerializeField] private EnemyZoneTrigger _zoneTrigger;
         [SerializeField] private EnemySpawnPoints _spawnPoints;
         
-        public override async UniTask Build(LifetimeScope parent, ICallbackRegister callbacks)
+        public override async UniTask Build(LifetimeScope parent, ICallbackRegistry callbacks)
         {
             var scope = GetComponent<EnemyZoneScope>();
 

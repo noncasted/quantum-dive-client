@@ -2,7 +2,7 @@
 
 namespace GamePlay.Player.Entity.Network.EntityHandler.Runtime
 {
-    public interface IPlayerEntityCallbackFactory : ICallbackRegister
+    public interface IPlayerEntityCallbackFactory : ICallbackRegistry
     {
         void InvokeAttached();
     }

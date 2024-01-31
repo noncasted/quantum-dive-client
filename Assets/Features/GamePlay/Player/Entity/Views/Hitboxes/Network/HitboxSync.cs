@@ -1,4 +1,5 @@
 ﻿using System;
+using Common.Architecture.Lifetimes.Viewables;
 using Ragon.Client;
 using Ragon.Protocol;
 
@@ -12,7 +13,9 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Network
 
         private bool _state;
 
-        public event Action<bool> StateChanged;
+        private readonly IViewableDelegate<bool> _stateChanged = new ViewableDelegate<bool>();
+
+        public IViewableDelegate<bool> StateChanged => _stateChanged;
 
         public void SendEnable()
         {

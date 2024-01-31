@@ -2,7 +2,7 @@
 using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Common;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Common;
-using GamePlay.Player.Services.Upgrades.Events;
+using GamePlay.Player.Upgrades.Events;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.ShotDelays
@@ -15,7 +15,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementat
         {
             var multiplierListener = new MultiplierEventListener<ShotDelayMultiplierEvent>();
 
-            utils.Callbacks.Listen(multiplierListener);
+            utils.CallbacksRegistry.Listen(multiplierListener);
 
             services.Register<ShotDelayData>()
                 .As<IShotDelayData>()

@@ -2,7 +2,7 @@
 using Common.Architecture.Entities.Runtime;
 using UnityEngine;
 
-namespace Features.GamePlay.Player.Entity.Weapons.Sword.Views.Transforms
+namespace GamePlay.Player.Entity.Weapons.Sword.Views.Transforms
 {
     [DisallowMultipleComponent]
     public class SwordTransformFactory : MonoBehaviour, IComponentFactory

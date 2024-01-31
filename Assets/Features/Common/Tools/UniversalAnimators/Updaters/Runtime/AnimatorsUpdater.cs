@@ -1,4 +1,5 @@
-﻿using Common.Architecture.Scopes.Runtime.Callbacks;
+﻿using Common.Architecture.Lifetimes;
+using Common.Architecture.Scopes.Runtime.Callbacks;
 using Global.System.Updaters.Runtime.Abstract;
 
 namespace Common.Tools.UniversalAnimators.Updaters.Runtime
@@ -17,15 +18,11 @@ namespace Common.Tools.UniversalAnimators.Updaters.Runtime
         {
             _updater.Add(this);
         }
-
-        public void Register(IUpdatableAnimator animator)
+        
+        public void Register(ILifetime lifetime, IUpdatableAnimator animator)
         {
             _animators.Add(animator);
-        }
-
-        public void Unregister(IUpdatableAnimator animator)
-        {
-            _animators.Remove(animator);
+            lifetime.ListenTerminate(() => _animators.Remove(animator));
         }
 
         public void OnUpdate(float delta)

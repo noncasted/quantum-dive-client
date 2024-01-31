@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Floating.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime;
@@ -6,7 +7,7 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
 {
-    public class AimEntry : IFloatingTransition, IUpdatable, IEntitySwitchListener
+    public class AimEntry : IFloatingTransition, IUpdatable, IEntitySwitchLifetimeListener
     {
         public AimEntry(
             IAim aim,
@@ -28,18 +29,10 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
         private readonly IBowShootInputReceiver _inputReceiver;
         private readonly IFloatingTransitionsRegistry _floatingTransitionsRegistry;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _updater.Add(this);
-
-            _floatingTransitionsRegistry.Register(_aim.Definition, this);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Remove(this);
-            
-            _floatingTransitionsRegistry.Unregister(_aim.Definition);
+            _updater.Add(lifetime, this);
+            _floatingTransitionsRegistry.Register(lifetime, _aim.Definition, this);
         }
         
         public bool IsTransitionFromFloatingAvailable()

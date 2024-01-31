@@ -11,7 +11,7 @@ namespace GamePlay.Enemies.Entity.Components.DamageProcessors.Runtime
         menuName = EnemyDamageProcessorRoutes.ComponentPath)]
     public class DamageProcessorFactory : ScriptableObject, IEnemyComponentFactory
     {
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<DamageProcessor>()
                 .AsCallbackListener();

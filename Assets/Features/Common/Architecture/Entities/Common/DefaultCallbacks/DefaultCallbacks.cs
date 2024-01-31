@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using Common.Architecture.Lifetimes;
+using Cysharp.Threading.Tasks;
 
 namespace Common.Architecture.Entities.Common.DefaultCallbacks
 {
@@ -11,10 +12,15 @@ namespace Common.Architecture.Entities.Common.DefaultCallbacks
     {
         UniTask OnAwakeAsync();
     }
-    
-    public interface IEntityLoadedAsyncListener
+
+    public interface IEntityLifetimeListener
     {
-        UniTask OnLoadedAsync();
+        void OnLifetimeCreated(ILifetime lifetime);
+    }
+
+    public interface IEntitySwitchLifetimeListener
+    {
+        public void OnSwitchLifetimeCreated(ILifetime lifetime);
     }
 
     public interface IEntityEnableListener
@@ -36,10 +42,15 @@ namespace Common.Architecture.Entities.Common.DefaultCallbacks
     {
         UniTask OnDisabledAsync();
     }
-    
+
     public interface IEntityDestroyListener
     {
         void OnDestroyed();
+    }
+
+    public interface IEntityDestroyAsyncListener
+    {
+        UniTask OnDestroyedAsync();
     }
 
     public interface IEntitySwitchListener : IEntityEnableListener, IEntityDisableListener

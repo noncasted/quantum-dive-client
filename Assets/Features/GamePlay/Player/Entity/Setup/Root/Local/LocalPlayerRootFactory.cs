@@ -14,7 +14,7 @@ namespace GamePlay.Player.Entity.Setup.Root.Local
         {
             services.Register<LocalPlayerRoot>()
                 .As<ILocalPlayerRoot>()
-                .WithParameter(utils.Callbacks)
+                .WithParameter(utils.CallbacksRegistry)
                 .AsCallbackListener();
         }
     }

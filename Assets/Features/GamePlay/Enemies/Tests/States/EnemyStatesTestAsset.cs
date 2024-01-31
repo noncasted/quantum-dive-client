@@ -17,7 +17,7 @@ using GamePlay.Network.Objects.Factories.Runtime;
 using GamePlay.Network.Room.Entities.Factory;
 using GamePlay.Network.Room.Lifecycle.Runtime;
 using GamePlay.Network.Room.SceneCollectors.Runtime;
-using GamePlay.Player.Services.List.Runtime;
+using GamePlay.Player.List.Runtime;
 using GamePlay.Projectiles.Bootstrap;
 using GamePlay.Targets.Registry.Runtime;
 using GamePlay.VfxPools.Runtime;

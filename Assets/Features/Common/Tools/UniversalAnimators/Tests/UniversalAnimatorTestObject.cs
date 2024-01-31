@@ -1,4 +1,5 @@
-﻿using Common.Tools.UniversalAnimators.Animators.Runtime;
+﻿using Common.Architecture.Lifetimes;
+using Common.Tools.UniversalAnimators.Animators.Runtime;
 using UnityEngine;
 
 namespace Common.Tools.UniversalAnimators.Tests
@@ -17,7 +18,7 @@ namespace Common.Tools.UniversalAnimators.Tests
 
             loopedAnimation.TestEvent += OnEvent;
 
-            _updater.Register(universalAnimator);
+            _updater.Register(new Lifetime(), universalAnimator);
             
             universalAnimator.PlayLooped(loopedAnimation);
 

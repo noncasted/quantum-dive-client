@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.States.Idle.Local
         [SerializeField] private IdleAnimationFactory _animation;
         [SerializeField] private IdleDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             var animation = _animation.Create();
             

@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
@@ -10,7 +11,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.States.Idles.Remote
 {
-    public class PlayerRemoteIdle : IPlayerRemoteState, IUpdatable, IEntitySwitchListener
+    public class PlayerRemoteIdle : IPlayerRemoteState, IUpdatable, IEntitySwitchLifetimeListener
     {
         public PlayerRemoteIdle(
             IRemoteRotation rotation,
@@ -38,14 +39,9 @@ namespace GamePlay.Player.Entity.States.Idles.Remote
         private readonly IdleAnimation _animation;
         private readonly IdleDefinition _definition;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.RegisterState(_definition, this);
-        }
-
-        public void OnDisabled()
-        {
-            _stateMachine.UnregisterState(_definition);
+            _stateMachine.RegisterState(lifetime, _definition, this);
         }
         
         public void Enter(RagonBuffer buffer)

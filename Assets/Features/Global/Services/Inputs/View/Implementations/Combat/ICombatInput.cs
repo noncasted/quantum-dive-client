@@ -1,13 +1,13 @@
-﻿    using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 
-    namespace Global.Inputs.View.Implementations.Combat
+namespace Global.Inputs.View.Implementations.Combat
+{
+    public interface ICombatInput
     {
-        public interface ICombatInput
-        {
-            event Action RangeAttackPerformed;
-            event Action RangeAttackCanceled;
-        
-            event Action MeleeAttackPerformed;
-            event Action MeleeAttackCanceled;
-        }
+        IViewableDelegate RangeAttackPerformed { get; }
+        IViewableDelegate RangeAttackCanceled { get; }
+
+        IViewableDelegate MeleeAttackPerformed { get; }
+        IViewableDelegate MeleeAttackCanceled { get; }
     }
+}

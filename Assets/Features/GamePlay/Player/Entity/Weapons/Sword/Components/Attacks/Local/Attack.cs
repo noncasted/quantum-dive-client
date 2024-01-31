@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.DataTypes.Structs;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Damages;
@@ -24,7 +25,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
     public class Attack :
         IPlayerLocalState,
         IFloatingTransition,
-        IEntitySwitchListener,
+        IEntitySwitchLifetimeListener,
         IUpdatable
     {
         public Attack(
@@ -80,23 +81,10 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
 
         public PlayerStateDefinition Definition { get; }
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Remove(this);
-
-            if (_isEntered == true)
-            {
-                _stateMachine.Exit(this);
-
-                Break();
-            }
-
-            _isEntered = false;
+            _updater.Add(lifetime, this);
+            lifetime.ListenTerminate(OnLifetimeTerminated);
         }
 
         public void Break()
@@ -173,6 +161,18 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
             _cancellation?.Cancel();
             _cancellation?.Dispose();
             _cancellation = null;
+        }
+        
+        private void OnLifetimeTerminated()
+        {
+            if (_isEntered == true)
+            {
+                _stateMachine.Exit(this);
+
+                Break();
+            }
+
+            _isEntered = false;
         }
     }
 }

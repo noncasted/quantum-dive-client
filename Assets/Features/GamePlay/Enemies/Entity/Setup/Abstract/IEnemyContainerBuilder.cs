@@ -4,6 +4,6 @@ namespace GamePlay.Enemies.Entity.Setup.Abstract
 {
     public interface IEnemyContainerBuilder
     {
-        void OnBuild(IServiceCollection services, ICallbackRegister callbacks);
+        void OnBuild(IServiceCollection services, ICallbackRegistry callbacks);
     }
 }

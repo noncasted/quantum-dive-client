@@ -1,7 +1,7 @@
-﻿using Features.GamePlay.Player.Entity.Network.Common;
+﻿using GamePlay.Player.Entity.Network.Common;
 using GamePlay.Player.Entity.Setup.Path;
 
-namespace GamePlay.Player.Entity.Network.Sync.Properties.Common
+namespace GamePlay.Player.Entity.Network.Properties.Common
 {
     public class NetworkPropertiesRoutes
     {

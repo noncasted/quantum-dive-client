@@ -21,7 +21,7 @@ namespace GamePlay.Enemies.Entity.Views.Bootstrap.Remote
         [SerializeField] private DamagedVfxFactory _damagedVfx;
         [SerializeField] private HealthBarFactory _healthBar;
 
-        public void OnBuild(IServiceCollection services, ICallbackRegister callbacks)
+        public void OnBuild(IServiceCollection services, ICallbackRegistry callbacks)
         {
             _animator.Create(services, callbacks);
             _sprite.Create(services, callbacks);

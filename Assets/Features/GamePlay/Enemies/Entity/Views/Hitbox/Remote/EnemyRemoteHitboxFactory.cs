@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.Views.Hitbox.Remote
         [SerializeField] private GizmosConfig _gizmosConfig;
         [SerializeField] private EnemyHitboxTrigger _trigger;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<RemoteHitbox>()
                 .WithParameter(_origin)

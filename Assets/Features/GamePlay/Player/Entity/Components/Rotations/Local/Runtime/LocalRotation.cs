@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Components.Rotations.Local.Logs;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
@@ -10,7 +11,7 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
 {
-    public class LocalRotation : IPreUpdatable, IRotation, IEntitySwitchListener
+    public class LocalRotation : IPreUpdatable, IRotation, IEntitySwitchLifetimeListener
     {
         public LocalRotation(
             IInputProjection inputProjection,
@@ -35,7 +36,7 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
         private float _angle;
         private Horizontal _side;
         private PlayerOrientation _orientation;
-        
+
         public float Angle
         {
             get
@@ -49,14 +50,9 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
         public Horizontal Side => _side;
         public PlayerOrientation Orientation => _orientation;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Remove(this);
+            _updater.Add(lifetime, this);
         }
 
         public void OnPreUpdate(float delta = 0f)
@@ -66,7 +62,7 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
             _orientation = _angle.ToOrientation();
 
             _logger.OnRotationSet(_angle);
-            
+
             _sync.SetRotation(_angle);
         }
     }

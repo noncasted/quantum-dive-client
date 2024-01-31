@@ -28,12 +28,12 @@ namespace GamePlay.Enemies.Entity.Views.Animators.Runtime
         
         public void OnEnabled()
         {
-            _animatorsUpdater.Register(_animator);
+           // _animatorsUpdater.Register(_animator);
         }
 
         public void OnDisabled()
         {
-            _animatorsUpdater.Unregister(_animator);
+         //   _animatorsUpdater.Unregister(_animator);
         }
         
         public void PlayLooped(ILoopedAnimation animation)

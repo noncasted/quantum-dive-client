@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Components.Compose;
-using Features.GamePlay.Player.Entity.Components.Equipment.Compose;
-using Features.GamePlay.Player.Entity.Network.Compose;
-using Features.GamePlay.Player.Entity.States.Compose;
+using GamePlay.Player.Entity.Components.Compose;
+using GamePlay.Player.Entity.Components.Equipment.Compose;
+using GamePlay.Player.Entity.Network.Compose;
 using GamePlay.Player.Entity.Setup.Config.Common;
 using GamePlay.Player.Entity.Setup.Root.Local;
+using GamePlay.Player.Entity.States.Compose;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

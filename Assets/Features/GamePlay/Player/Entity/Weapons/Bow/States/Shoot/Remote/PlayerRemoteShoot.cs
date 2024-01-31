@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
@@ -15,7 +16,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
 {
-    public class PlayerRemoteShoot : IEntitySwitchListener, IPlayerRemoteState, IUpdatable
+    public class PlayerRemoteShoot : IEntitySwitchLifetimeListener, IPlayerRemoteState, IUpdatable
     {
         public PlayerRemoteShoot(
             IRemoteStateMachine stateMachine,
@@ -57,14 +58,10 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
 
         private CancellationTokenSource _cancellation;
         
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.RegisterState(_definition, this);
-        }
+            _stateMachine.RegisterState(lifetime, _definition, this);
 
-        public void OnDisabled()
-        {
-            _stateMachine.UnregisterState(_definition);
         }
 
         public void Enter(RagonBuffer buffer)

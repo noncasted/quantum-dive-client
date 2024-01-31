@@ -24,6 +24,7 @@ namespace Global.System.ScopeDisposer.Runtime
         {
             _logger.OnUnload(scopeLoadResult.Scenes.Count);
 
+            await scopeLoadResult.Lifetime.Terminate();
             await scopeLoadResult.Callbacks[CallbackStage.Dispose].Run();
             await _sceneUnload.Unload(scopeLoadResult.Scenes);
 

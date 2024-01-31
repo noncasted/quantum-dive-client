@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.Views.Sprites.Runtime
         [SerializeField] private SortingGroup _sortingGroup;
         [SerializeField] private SpriteLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<SpriteLogger>()
                 .WithParameter(_logSettings);

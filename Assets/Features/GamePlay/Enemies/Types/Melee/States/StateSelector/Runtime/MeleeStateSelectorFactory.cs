@@ -12,7 +12,7 @@ namespace GamePlay.Enemies.Types.Melee.States.StateSelector.Runtime
         menuName = MeleeStateSelectorRoutes.ComponentPath)]
     public class MeleeStateSelectorFactory : ScriptableObject, IEnemyComponentFactory
     {
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<MeleeStateSelector>()
                 .As<IStateSelector>();

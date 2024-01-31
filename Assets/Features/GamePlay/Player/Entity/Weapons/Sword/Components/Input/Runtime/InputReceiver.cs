@@ -1,9 +1,10 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Global.Inputs.View.Implementations.Combat;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime
 {
-    public class InputReceiver : IInputReceiver, IEntitySwitchListener
+    public class InputReceiver : IInputReceiver, IEntitySwitchLifetimeListener
     {
         public InputReceiver(ICombatInput input)
         {
@@ -16,16 +17,10 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime
 
         public bool IsPerformed => _isPerformed;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _input.MeleeAttackPerformed += OnPerformed;
-            _input.MeleeAttackCanceled += OnCanceled;
-        }
-
-        public void OnDisabled()
-        {
-            _input.MeleeAttackPerformed -= OnPerformed;
-            _input.MeleeAttackCanceled -= OnCanceled;
+            _input.MeleeAttackPerformed.Listen(lifetime, OnPerformed);
+            _input.MeleeAttackCanceled.Listen(lifetime, OnCanceled);
         }
 
         private void OnPerformed()

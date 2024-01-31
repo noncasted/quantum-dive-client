@@ -12,7 +12,7 @@ namespace GamePlay.Enemies.Entity.Views.Animators.Runtime
         [SerializeField] private AnimatorLogSettings _logSettings;
         [SerializeField] private SpriteRenderer _spriteRenderer;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<AnimatorLogger>()
                 .WithParameter(_logSettings);

@@ -4,6 +4,6 @@ namespace GamePlay.Enemies.Entity.Setup.Abstract
 {
     public interface IEnemyComponentFactory
     {
-        public void Create(IServiceCollection services, ICallbackRegister callbacks);
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks);
     }
 }

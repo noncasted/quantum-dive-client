@@ -15,7 +15,7 @@ namespace GamePlay.Enemies.Entity.States.Damaged.Local
         [SerializeField] private DamagedAnimationFactory _animation;
         [SerializeField] private DamagedDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             var animation = _animation.Create();
             

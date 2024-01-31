@@ -28,7 +28,7 @@ namespace Common.Architecture.Container.Runtime
                 injection.Inject(resolver);
         }
 
-        public void ResolveAllWithCallbacks(IObjectResolver resolver, ICallbackRegister callbackRegistry)
+        public void ResolveAllWithCallbacks(IObjectResolver resolver, ICallbackRegistry callbackRegistry)
         {
             foreach (var registration in _registrations)
                 registration.ResolveWithCallbacks(resolver, callbackRegistry);

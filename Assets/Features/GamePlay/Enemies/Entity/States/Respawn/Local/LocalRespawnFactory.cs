@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.States.Respawn.Local
         [SerializeField] private RespawnAnimationFactory _animation;
         [SerializeField] private RespawnDefinition _definition;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             var animation = _animation.Create();
 

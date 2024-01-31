@@ -1,4 +1,4 @@
-﻿using Features.GamePlay.Player.Entity.Components.Common;
+﻿using GamePlay.Player.Entity.Components.Common;
 using GamePlay.Player.Entity.Setup.Path;
 
 namespace GamePlay.Player.Entity.Components.Rotations.Local.Common

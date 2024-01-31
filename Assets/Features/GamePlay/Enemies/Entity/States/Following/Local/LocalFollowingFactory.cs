@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.States.Following.Local
         [SerializeField] private FollowingAnimationFactory _animation;
         [SerializeField] private FollowingDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             var animation = _animation.Create();
             

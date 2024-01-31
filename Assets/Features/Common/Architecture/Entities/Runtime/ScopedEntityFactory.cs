@@ -7,6 +7,7 @@ using Internal.Services.Options.Runtime;
 using VContainer;
 using VContainer.Unity;
 using ContainerBuilder = Common.Architecture.Container.Runtime.ContainerBuilder;
+using Lifetime = Common.Architecture.Lifetimes.Lifetime;
 
 namespace Common.Architecture.Entities.Runtime
 {
@@ -19,7 +20,9 @@ namespace Common.Architecture.Entities.Runtime
 
         private readonly IOptions _options;
 
-        public UniTask<T> Create<T>(LifetimeScope parent, ScopedEntityViewFactory viewFactory,
+        public UniTask<T> Create<T>(
+            LifetimeScope parent,
+            ScopedEntityViewFactory viewFactory,
             IScopedEntityConfig config)
         {
             return Create<T>(parent, viewFactory, config, Array.Empty<IComponentFactory>());
@@ -42,9 +45,10 @@ namespace Common.Architecture.Entities.Runtime
 
         private IEntityUtils CreateUtils(ScopedEntityViewFactory viewFactory)
         {
-            var callbacks = new EntityCallbacks();
+            var callbacks = new EntityCallbacksRegistry();
+            var lifetime = new Lifetime();
 
-            var utils = new EntityUtils(_options, callbacks, viewFactory.Scope);
+            var utils = new EntityUtils(_options, viewFactory.Scope, lifetime, callbacks);
 
             return utils;
         }
@@ -84,7 +88,7 @@ namespace Common.Architecture.Entities.Runtime
                 }
             }
 
-            builder.ResolveAllWithCallbacks(utils.Scope.Container, utils.Callbacks);
+            builder.ResolveAllWithCallbacks(utils.Scope.Container, utils.CallbacksRegistry);
 
             void Register(IContainerBuilder container)
             {

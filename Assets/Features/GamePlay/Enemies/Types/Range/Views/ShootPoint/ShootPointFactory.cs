@@ -10,7 +10,7 @@ namespace GamePlay.Enemies.Types.Range.Views.ShootPoint
     {
         [SerializeField] private Transform _point;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<ShootPoint>()
                 .WithParameter(_point)

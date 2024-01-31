@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Components.Common;
 using GamePlay.Player.Entity.Components.Combo.Runtime;
+using GamePlay.Player.Entity.Components.Common;
 using GamePlay.Player.Entity.Components.DamageProcessors.Runtime;
 using GamePlay.Player.Entity.Components.Healths.Runtime;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime;
@@ -11,9 +11,8 @@ using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Features.GamePlay.Player.Entity.Components.Compose
+namespace GamePlay.Player.Entity.Components.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

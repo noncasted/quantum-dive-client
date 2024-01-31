@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.SubStates.Damaged.Local
 {
-    public class LocalDamaged : IDamaged, IEntitySwitchListener
+    public class LocalDamaged : IDamaged, IEntityDisableListener
     {
         public LocalDamaged(
             IPlayerSpriteMaterial spriteMaterial,
@@ -30,11 +30,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Damaged.Local
 
         private CancellationTokenSource _cancellation;
 
-        private static readonly int _flickProgressProperty = Shader.PropertyToID("_Progress");
-
-        public void OnEnabled()
-        {
-        }
+        private static readonly int FlickProgressProperty = Shader.PropertyToID("_Progress");
 
         public void OnDisabled()
         {
@@ -83,9 +79,9 @@ namespace GamePlay.Player.Entity.States.SubStates.Damaged.Local
                 isFlicked = !isFlicked;
 
                 if (isFlicked == true)
-                    _spriteMaterial.Material.SetFloat(_flickProgressProperty, 1f);
+                    _spriteMaterial.Material.SetFloat(FlickProgressProperty, 1f);
                 else
-                    _spriteMaterial.Material.SetFloat(_flickProgressProperty, 0f);
+                    _spriteMaterial.Material.SetFloat(FlickProgressProperty, 0f);
 
                 count++;
                 await UniTask.Delay(delay, cancellation);

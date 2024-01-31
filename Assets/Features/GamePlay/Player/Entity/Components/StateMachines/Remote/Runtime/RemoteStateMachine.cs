@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Logs;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
-using GamePlay.Player.Services.Registries.States.Runtime;
+using GamePlay.Player.Registries.States.Runtime;
 using Ragon.Client;
 using Ragon.Client.Compressor;
 using Ragon.Protocol;
@@ -50,16 +51,20 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
 
         public void RegisterState(PlayerStateDefinition definition, IPlayerRemoteState state)
         {
+        }
+        
+        public void RegisterState(ILifetime lifetime, PlayerStateDefinition definition, IPlayerRemoteState state)
+        {
             _states.Add(definition, state);
 
             _logger.OnStateRegistered(_definitionsRegistry.GetId(definition), definition.name);
-        }
 
-        public void UnregisterState(PlayerStateDefinition definition)
-        {
-            _states.Remove(definition);
+            lifetime.ListenTerminate(() =>
+            {
+                _states.Remove(definition);
 
-            _logger.OnStateUnregistered(_definitionsRegistry.GetId(definition), definition.name);
+                _logger.OnStateUnregistered(_definitionsRegistry.GetId(definition), definition.name);
+            });
         }
 
         public void RegisterFlush(PlayerStateDefinition definition, IRemotePayloadFlush flush)

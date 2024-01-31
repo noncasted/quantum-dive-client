@@ -2,6 +2,7 @@
   "name": "GamePlay.Player.Hitbox.Network",
   "references": [
     "GUID:2435b9189672c5848ae4cc81c2cf0e13",
-    "GUID:954bed7845ef3b94c8f2d8ca3cd76154"
+    "GUID:954bed7845ef3b94c8f2d8ca3cd76154",
+    "GUID:3b2ea7622084434a927c413b7fc2fd3a"
   ]
 }

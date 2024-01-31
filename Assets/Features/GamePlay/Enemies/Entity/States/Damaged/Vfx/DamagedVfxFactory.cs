@@ -10,7 +10,7 @@ namespace GamePlay.Enemies.Entity.States.Damaged.Vfx
     {
         [SerializeField] private DamagedVfx _vfx;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.RegisterInstance(_vfx)
                 .As<IDamagedVfx>();

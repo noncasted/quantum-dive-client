@@ -1,5 +1,4 @@
-﻿using Features.GamePlay.Player.Entity.Components.Common;
-using GamePlay.Player.Entity.Components.Equipment.Common;
+﻿using GamePlay.Player.Entity.Components.Equipment.Common;
 using GamePlay.Player.Entity.Setup.Path;
 
 namespace GamePlay.Player.Entity.Components.Equipment.Locker.Common

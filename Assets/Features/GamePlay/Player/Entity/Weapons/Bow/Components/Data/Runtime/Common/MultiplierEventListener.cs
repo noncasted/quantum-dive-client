@@ -1,6 +1,6 @@
 ﻿using System;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
-using GamePlay.Player.Services.Upgrades.Events;
+using GamePlay.Player.Upgrades.Events;
 using Global.System.MessageBrokers.Runtime;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Common

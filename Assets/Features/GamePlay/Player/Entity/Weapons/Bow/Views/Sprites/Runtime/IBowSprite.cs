@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.Sprites.Runtime
 {
     public interface IBowSprite
     {
-        event Action<bool> YFlipped;
-        event Action<int> SortingOrderChanged;
-        
+        IViewableDelegate<bool> YFlipped { get; }
+        IViewableDelegate<int> SortingOrderChanged { get; }
         
         void SetSortingOrder(int order);
         void FlipY(bool isFlipped);

@@ -12,8 +12,11 @@ namespace Common.Architecture.Entities.Common.DefaultCallbacks
     {
         public void Create(IServiceCollection services, IEntityUtils utils)
         {
-            var callbacks = new DefaultCallbacksFactory();
-            callbacks.AddCallbacks(utils.Callbacks);
+            var callbacks = new DefaultCallbacksFactory(utils.CallbacksRegistry, utils);
+            callbacks.AddCallbacks();
+
+            services.RegisterInstance(callbacks)
+                .As<IEntityCallbacks>();
         }
     }
 }

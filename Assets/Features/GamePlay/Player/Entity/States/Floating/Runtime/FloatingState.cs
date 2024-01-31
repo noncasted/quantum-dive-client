@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Logs;
@@ -7,10 +8,10 @@ using GamePlay.Player.Entity.States.Idles.Local;
 
 namespace GamePlay.Player.Entity.States.Floating.Runtime
 {
-    public class FloatingState : 
+    public class FloatingState :
         IFloatingState,
         IFloatingTransitionsRegistry,
-        IEntitySwitchListener
+        IEntitySwitchLifetimeListener
     {
         public FloatingState(
             IIdle idle,
@@ -29,23 +30,20 @@ namespace GamePlay.Player.Entity.States.Floating.Runtime
         private readonly ILocalStateMachine _stateMachine;
 
         private readonly FloatingStateLogger _logger;
-        
+
         private readonly PlayerStateDefinition[] _statesPriority;
         private readonly Dictionary<PlayerStateDefinition, IFloatingTransition> _transitions = new();
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.Exited += Enter;
-        }
-
-        public void OnDisabled()
-        {
-            _stateMachine.Exited -= Enter;
+            _stateMachine.Exited.Listen(lifetime, Enter);
         }
         
-        public void Register(PlayerStateDefinition definition, IFloatingTransition transition)
+        public void Register(ILifetime lifetime, PlayerStateDefinition definition, IFloatingTransition transition)
         {
             _transitions.Add(definition, transition);
+
+            lifetime.ListenTerminate(() => _transitions.Remove(definition));
         }
 
         public void Unregister(PlayerStateDefinition definition)
@@ -63,14 +61,14 @@ namespace GamePlay.Player.Entity.States.Floating.Runtime
                     continue;
 
                 var transition = _transitions[definition];
-                
+
                 if (transition.IsTransitionFromFloatingAvailable() == false)
                     continue;
-                
+
                 transition.EnterFromFloating();
                 return;
             }
-            
+
             _idle.Enter();
         }
     }

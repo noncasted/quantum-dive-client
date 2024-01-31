@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Types.Range.States.Shoot.Remote
         [SerializeField] private ShootAnimationFactory _animation;
         [SerializeField] private ShootDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             var animation = _animation.Create();
             

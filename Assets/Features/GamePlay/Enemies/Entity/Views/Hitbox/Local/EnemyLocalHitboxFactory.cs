@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.Views.Hitbox.Local
         [SerializeField] private GizmosConfig _gizmosConfig;
         [SerializeField] private EnemyHitboxTrigger _trigger;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<LocalHitbox>()
                 .WithParameter(_origin)

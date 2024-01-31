@@ -9,7 +9,7 @@ using GamePlay.Player.Entity.States.SubStates.Damaged.Remote;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Features.GamePlay.Player.Entity.States.Compose
+namespace GamePlay.Player.Entity.States.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

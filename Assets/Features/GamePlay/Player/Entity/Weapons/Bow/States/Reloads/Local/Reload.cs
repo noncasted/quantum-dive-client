@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Combo.Runtime;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
@@ -19,7 +20,7 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
 {
-    public class Reload : IComboState, IPlayerLocalState, IUpdatable, IEntitySwitchListener
+    public class Reload : IComboState, IPlayerLocalState, IUpdatable, IEntitySwitchLifetimeListener
     {
         public Reload(
             IBowShootInputReceiver inputReceiver,
@@ -78,14 +79,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
         public PlayerStateDefinition[] Transitions { get; }
         public PlayerStateDefinition Definition { get; }
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _comboStateMachine.Register(Definition, this);
-        }
-
-        public void OnDisabled()
-        {
-            _comboStateMachine.Unregister(Definition);
+            _comboStateMachine.Register(lifetime, Definition, this);
         }
         
         public bool IsTransitionToComboAvailable()

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Common.Architecture.Lifetimes;
 using Common.Tools.UniversalAnimators.Updaters.Runtime;
 using UnityEngine;
 
@@ -8,9 +9,10 @@ namespace Common.Tools.UniversalAnimators.Tests
     {
         private readonly List<IUpdatableAnimator> _animators = new();
 
-        public void Register(IUpdatableAnimator animator)
+        public void Register(ILifetime lifetime, IUpdatableAnimator animator)
         {
             _animators.Add(animator);
+            lifetime.ListenTerminate(() => _animators.Remove(animator));
         }
 
         public void Unregister(IUpdatableAnimator animator)

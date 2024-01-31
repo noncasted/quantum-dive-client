@@ -13,7 +13,7 @@ namespace GamePlay.Player.Entity.Network.EntityHandler.Runtime
         public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var callbacks = new PlayerEntityCallbackFactory();
-            utils.Callbacks.AddGenericCallbackRegister(callbacks);
+            utils.CallbacksRegistry.AddGenericCallbackRegistry(callbacks);
             
             services.Register<EntityProvider>()
                 .As<IEntityProvider>()

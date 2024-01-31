@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
 using GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Runtime;
+using GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Local

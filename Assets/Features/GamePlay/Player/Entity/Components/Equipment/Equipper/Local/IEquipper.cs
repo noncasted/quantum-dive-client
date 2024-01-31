@@ -1,5 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Components.Equipment.Definition;
 
 namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Local
 {

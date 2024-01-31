@@ -10,7 +10,7 @@ namespace GamePlay.Enemies.Types.Melee.Views
     {
         [SerializeField] private MeleeDamageDealerFactory _damageDealer;
 
-        public void OnBuild(IServiceCollection services, ICallbackRegister callbacks)
+        public void OnBuild(IServiceCollection services, ICallbackRegistry callbacks)
         {
             _damageDealer.Create(services, callbacks);
         }

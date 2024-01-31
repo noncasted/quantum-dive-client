@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Remote;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Common;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime;

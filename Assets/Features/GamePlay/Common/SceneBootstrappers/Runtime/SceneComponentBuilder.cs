@@ -7,6 +7,6 @@ namespace GamePlay.Common.SceneBootstrappers.Runtime
 {
     public abstract class SceneComponentBuilder : MonoBehaviour
     {
-        public abstract UniTask Build(LifetimeScope parent, ICallbackRegister callbacks);
+        public abstract UniTask Build(LifetimeScope parent, ICallbackRegistry callbacks);
     }
 }

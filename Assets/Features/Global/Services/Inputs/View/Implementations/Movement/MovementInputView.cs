@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using Global.Inputs.Constranits.Definition;
 using Global.Inputs.Constranits.Runtime;
 using Global.Inputs.View.Logs;
@@ -27,8 +27,11 @@ namespace Global.Inputs.View.Implementations.Movement
         private readonly Controls.GamePlayActions _gamePlay;
         private readonly InputViewLogger _logger;
 
-        public event Action<Vector2> MovementPerformed;
-        public event Action MovementCanceled;
+        private readonly IViewableDelegate<Vector2> _performed = new ViewableDelegate<Vector2>();
+        private readonly IViewableDelegate _canceled = new ViewableDelegate();
+
+        public IViewableDelegate<Vector2> Performed => _performed;
+        public IViewableDelegate Canceled => _canceled;
         
         public void Listen()
         {
@@ -46,7 +49,7 @@ namespace Global.Inputs.View.Implementations.Movement
         {
             if (_constraintsStorage[InputConstraints.MovementInput] == true)
             {
-                MovementCanceled?.Invoke();
+                Canceled?.Invoke();
 
                 _logger.OnInputCanceledWithConstraint(InputConstraints.MovementInput);
                 return;
@@ -56,7 +59,7 @@ namespace Global.Inputs.View.Implementations.Movement
 
             _logger.OnMovementPressed(value);
 
-            MovementPerformed?.Invoke(value);
+            Performed.Invoke(value);
         }
 
         private void OnMovementCanceled(InputAction.CallbackContext context)
@@ -69,7 +72,7 @@ namespace Global.Inputs.View.Implementations.Movement
 
             _logger.OnMovementCanceled();
 
-            MovementCanceled?.Invoke();
+            Canceled.Invoke();
         }
     }
 }

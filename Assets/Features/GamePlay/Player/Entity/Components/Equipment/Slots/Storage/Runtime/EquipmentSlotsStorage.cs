@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
 
 namespace GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Runtime

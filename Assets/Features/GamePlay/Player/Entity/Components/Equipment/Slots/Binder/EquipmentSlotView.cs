@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Player.Entity.Components.Equipment.Slots.Binder.Runtime
+namespace GamePlay.Player.Entity.Components.Equipment.Slots.Binder
 {
     [DisallowMultipleComponent]
     public class EquipmentSlotView : MonoBehaviour

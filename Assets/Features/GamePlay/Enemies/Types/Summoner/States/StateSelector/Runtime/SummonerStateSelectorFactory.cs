@@ -12,7 +12,7 @@ namespace GamePlay.Enemies.Types.Summoner.States.StateSelector.Runtime
         menuName = SummonerStateSelectorRoutes.ComponentPath)]
     public class SummonerStateSelectorFactory : ScriptableObject, IEnemyComponentFactory
     {
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<SummonerStateSelector>()
                 .As<IStateSelector>();

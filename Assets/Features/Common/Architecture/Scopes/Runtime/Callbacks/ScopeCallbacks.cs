@@ -9,7 +9,7 @@ namespace Common.Architecture.Scopes.Runtime.Callbacks
     public class ScopeCallbacks : IScopeCallbacks
     {
         private readonly Dictionary<CallbackStage, ICallbacksHandler> _callbacks = new();
-        private readonly List<ICallbackRegister> _genericRegisters = new();
+        private readonly List<ICallbackRegistry> _genericRegisters = new();
 
         public IReadOnlyDictionary<CallbackStage, ICallbacksHandler> Handlers => _callbacks;
 
@@ -36,9 +36,9 @@ namespace Common.Architecture.Scopes.Runtime.Callbacks
             _callbacks[stage].Add(entity);
         }
 
-        public void AddGenericCallbackRegister(ICallbackRegister callbackRegister)
+        public void AddGenericCallbackRegister(ICallbackRegistry callbackRegistry)
         {
-            _genericRegisters.Add(callbackRegister);
+            _genericRegisters.Add(callbackRegistry);
         }
     }
 }

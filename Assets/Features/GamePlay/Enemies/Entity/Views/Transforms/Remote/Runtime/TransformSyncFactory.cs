@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.Views.Transforms.Remote.Runtime
     {
         [SerializeField] private TransformSyncLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<TransformSyncLogger>()
                 .WithParameter(_logSettings);

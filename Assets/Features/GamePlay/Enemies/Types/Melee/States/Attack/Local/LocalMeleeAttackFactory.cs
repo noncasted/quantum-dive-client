@@ -19,7 +19,7 @@ namespace GamePlay.Enemies.Types.Melee.States.Attack.Local
         [SerializeField] private MeleeAttackConfig _config;
         [SerializeField] private MeleeAttackGizmosConfig _gizmosConfig;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.RegisterInstance(_config)
                 .As<IMeleeAttackConfig>();

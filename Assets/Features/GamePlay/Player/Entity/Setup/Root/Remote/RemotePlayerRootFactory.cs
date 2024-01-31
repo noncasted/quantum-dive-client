@@ -14,7 +14,7 @@ namespace GamePlay.Player.Entity.Setup.Root.Remote
         {
             services.Register<RemotePlayerRoot>()
                 .As<IRemotePlayerRoot>()
-                .WithParameter(utils.Callbacks)
+                .WithParameter(utils.CallbacksRegistry)
                 .AsCallbackListener();
         }
     }

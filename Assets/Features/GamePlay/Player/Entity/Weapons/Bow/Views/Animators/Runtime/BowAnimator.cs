@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
 using Common.Tools.UniversalAnimators.Animators.Runtime;
@@ -9,7 +10,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime
 {
-    public class BowAnimator : IBowAnimator, IEntitySwitchListener
+    public class BowAnimator : IBowAnimator, IEntitySwitchLifetimeListener
     {
         public BowAnimator(SpriteRenderer spriteRenderer, IAnimatorsUpdater updater)
         {
@@ -20,14 +21,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime
         private readonly IAnimatorsUpdater _updater;
         private readonly UniversalAnimator _animator;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _updater.Register(_animator);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Unregister(_animator);
+            _updater.Register(lifetime, _animator);
         }
         
         public void PlayLooped(ILoopedAnimation animation)

@@ -1,7 +1,7 @@
 ﻿using GamePlay.Player.Entity.Components.Healths.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
 
-namespace GamePlay.Player.Services.Provider.Runtime
+namespace GamePlay.Player.Provider.Runtime
 {
     public interface IPlayerProvider
     {

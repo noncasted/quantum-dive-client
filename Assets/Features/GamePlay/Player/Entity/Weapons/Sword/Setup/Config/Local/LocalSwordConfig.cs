@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Runtime;

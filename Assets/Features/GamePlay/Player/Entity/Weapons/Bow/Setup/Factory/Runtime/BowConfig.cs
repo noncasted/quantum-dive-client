@@ -1,4 +1,4 @@
-﻿using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+﻿using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
 using GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Local;
 using GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Remote;

@@ -1,8 +1,10 @@
-﻿using Common.Architecture.Scopes.Runtime.Callbacks;
+﻿using Common.Architecture.Lifetimes;
+using Common.Architecture.Scopes.Runtime.Callbacks;
 using Global.System.Updaters.Logs;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
 using VContainer;
+using NotImplementedException = System.NotImplementedException;
 
 namespace Global.System.Updaters.Runtime
 {
@@ -98,6 +100,11 @@ namespace Global.System.Updaters.Runtime
             _logger.OnPreUpdatableAdded(_preUpdatables.Count);
         }
 
+        public void Add(ILifetime lifetime, IPreUpdatable updatable)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(IPreUpdatable updatable)
         {
             _preUpdatables.Remove(updatable);
@@ -108,6 +115,14 @@ namespace Global.System.Updaters.Runtime
         public void Add(IUpdatable updatable)
         {
             _updatables.Add(updatable);
+
+            _logger.OnUpdatableAdded(_updatables.Count);
+        }
+
+        public void Add(ILifetime lifetime, IUpdatable updatable)
+        {
+            _updatables.Add(updatable);
+            lifetime.ListenTerminate(() => _updatables.Remove(updatable));
 
             _logger.OnUpdatableAdded(_updatables.Count);
         }
@@ -126,6 +141,14 @@ namespace Global.System.Updaters.Runtime
             _logger.OnFixedUpdatableAdded(_fixedUpdatables.Count);
         }
 
+        public void Add(ILifetime lifetime, IFixedUpdatable updatable)
+        {
+            _fixedUpdatables.Add(updatable);
+            lifetime.ListenTerminate(() => _fixedUpdatables.Remove(updatable));
+
+            _logger.OnFixedUpdatableAdded(_fixedUpdatables.Count);
+        }
+
         public void Remove(IFixedUpdatable updatable)
         {
             _fixedUpdatables.Remove(updatable);
@@ -136,6 +159,14 @@ namespace Global.System.Updaters.Runtime
         public void Add(IPostFixedUpdatable updatable)
         {
             _postFixedUpdatables.Add(updatable);
+
+            _logger.OnPostFixedUpdatableAdded(_postFixedUpdatables.Count);
+        }
+
+        public void Add(ILifetime lifetime, IPostFixedUpdatable updatable)
+        {
+            _postFixedUpdatables.Add(updatable);
+            lifetime.ListenTerminate(() => _postFixedUpdatables.Remove(updatable));
 
             _logger.OnPostFixedUpdatableAdded(_postFixedUpdatables.Count);
         }
@@ -154,16 +185,32 @@ namespace Global.System.Updaters.Runtime
             _logger.OnGizmosUpdatableAdded(_postFixedUpdatables.Count);
         }
 
+        public void Add(ILifetime lifetime, IGizmosUpdatable updatable)
+        {
+            _gizmosUpdatables.Add(updatable);
+            lifetime.ListenTerminate(() => _gizmosUpdatables.Remove(updatable));
+
+            _logger.OnGizmosUpdatableAdded(_postFixedUpdatables.Count);
+        }
+
         public void Remove(IGizmosUpdatable updatable)
         {
-            _gizmosUpdatables.Remove(updatable);
-
+            _gizmosUpdatables.Add(updatable);
+            
             _logger.OnGizmosUpdatableRemoved(_postFixedUpdatables.Count);
         }
 
         public void Add(IPreFixedUpdatable updatable)
         {
             _preFixedUpdatables.Add(updatable);
+
+            _logger.OnPreFixedUpdatableAdded(_preFixedUpdatables.Count);
+        }
+
+        public void Add(ILifetime lifetime, IPreFixedUpdatable updatable)
+        {
+            _preFixedUpdatables.Add(updatable);
+            lifetime.ListenTerminate(() => _preFixedUpdatables.Remove(updatable));
 
             _logger.OnPreFixedUpdatableAdded(_preFixedUpdatables.Count);
         }

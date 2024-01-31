@@ -13,7 +13,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime
         public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<SwordRoot>()
-                .WithParameter(utils.Callbacks)
+                .WithParameter(utils.CallbacksRegistry)
                 .AsCallbackListener();
         }
     }

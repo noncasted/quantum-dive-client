@@ -11,7 +11,7 @@ namespace GamePlay.Enemies.Entity.Network.Properties.Runtime
         menuName = NetworkPropertiesRoutes.ServicePath)]
     public class NetworkPropertiesFactory : ScriptableObject, IEnemyComponentFactory
     {
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<NetworkPropertiesBinder>()
                 .As<INetworkPropertiesBinder>();

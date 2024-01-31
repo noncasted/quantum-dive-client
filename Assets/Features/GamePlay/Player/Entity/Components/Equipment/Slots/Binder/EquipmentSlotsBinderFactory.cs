@@ -2,7 +2,7 @@
 using Common.Architecture.Entities.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Player.Entity.Components.Equipment.Slots.Binder.Runtime
+namespace GamePlay.Player.Entity.Components.Equipment.Slots.Binder
 {
     [DisallowMultipleComponent]
     public class EquipmentSlotsBinderFactory : MonoBehaviour, IComponentFactory

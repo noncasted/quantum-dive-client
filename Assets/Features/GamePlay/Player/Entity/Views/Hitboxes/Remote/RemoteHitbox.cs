@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Common.Damages;
 using GamePlay.Hitboxes.Runtime;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
@@ -8,7 +9,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Hitboxes.Remote
 {
-    public class RemoteHitbox : IEntitySwitchListener, IDamageReceiver
+    public class RemoteHitbox : IEntitySwitchLifetimeListener, IDamageReceiver
     {
         public RemoteHitbox(
             IHitboxRegistry hitboxRegistry,
@@ -34,14 +35,9 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Remote
         public float Radius => _config.Radius;
         public Vector2 Position => _point.position;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateSync.StateChanged += OnStateChanged;
-        }
-
-        public void OnDisabled()
-        {
-            _stateSync.StateChanged -= OnStateChanged;
+            _stateSync.StateChanged.Listen(lifetime, OnStateChanged);
         }
 
         public void ReceiveDamage(Damage damage)

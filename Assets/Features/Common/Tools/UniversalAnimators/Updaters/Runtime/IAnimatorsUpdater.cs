@@ -1,8 +1,9 @@
-﻿namespace Common.Tools.UniversalAnimators.Updaters.Runtime
+﻿using Common.Architecture.Lifetimes;
+
+namespace Common.Tools.UniversalAnimators.Updaters.Runtime
 {
     public interface IAnimatorsUpdater
     {
-        void Register(IUpdatableAnimator animator);
-        void Unregister(IUpdatableAnimator animator);
+        void Register(ILifetime lifetime, IUpdatableAnimator animator);
     }
 }

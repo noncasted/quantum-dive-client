@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Entities.Runtime.Callbacks;
+using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Local;
 using GamePlay.Player.Entity.Components.Healths.Runtime;
@@ -10,43 +10,48 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Setup.Root.Local
 {
-    public class LocalPlayerRoot : ILocalPlayerRoot, IEntityLoadedAsyncListener
+    public class LocalPlayerRoot : ILocalPlayerRoot, IEntityEnableListener
     {
         private LocalPlayerRoot(
             IRespawn respawn,
             INone none,
             IPlayerPosition position,
             IHealth health,
-            IPlayerTransformProvider transform,
+            IPlayerTransform transform,
             IEntityCallbacks callbacks,
             IEquipper equipper)
         {
-            Position = position;
             _respawn = respawn;
             _none = none;
+            _position = position;
             _health = health;
+            _transform = transform;
             _callbacks = callbacks;
-            Transform = transform;
-            Equipper = equipper;
+            _equipper = equipper;
         }
 
         private readonly INone _none;
+        private readonly IPlayerPosition _position;
         private readonly IHealth _health;
+        private readonly IPlayerTransform _transform;
         private readonly IEntityCallbacks _callbacks;
+        private readonly IEquipper _equipper;
         private readonly IRespawn _respawn;
 
         private bool _isActive;
+        private ILifetime _lifetime;
 
         public IHealth Health => _health;
-        public IPlayerPosition Position { get; }
-        public IPlayerTransformProvider Transform { get; }
-        public IEquipper Equipper { get; }
+        public IPlayerPosition Position => _position;
+        public IPlayerTransform Transform => _transform;
+        public IEquipper Equipper => _equipper;
+        public IEntityCallbacks Callbacks => _callbacks;
 
-        public async UniTask OnLoadedAsync()
+        public void OnEnabled()
         {
             _none.Enter();
         }
-        
+
         public void Respawn()
         {
             _respawn.Enter();
@@ -61,7 +66,12 @@ namespace GamePlay.Player.Entity.Setup.Root.Local
             }
 
             _isActive = true;
-            await _callbacks.Handlers[CallbackStage.Enable].Run();
+
+            if (_lifetime != null)
+                await _lifetime.Terminate();
+
+            _lifetime = new Lifetime();
+            await _callbacks.RunEnable(_lifetime);
         }
 
         public async UniTask Disable()
@@ -73,7 +83,9 @@ namespace GamePlay.Player.Entity.Setup.Root.Local
             }
 
             _isActive = false;
-            await _callbacks.Handlers[CallbackStage.Disable].Run();
+
+            await _lifetime.Terminate();
+            await _callbacks.RunDisable();
         }
     }
 }

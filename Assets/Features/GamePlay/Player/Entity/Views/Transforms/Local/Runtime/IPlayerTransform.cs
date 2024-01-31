@@ -5,6 +5,7 @@ namespace GamePlay.Player.Entity.Views.Transforms.Local.Runtime
 {
     public interface IPlayerTransform
     {
+        Transform Transform { get; }
         Vector2 Position { get; }
         float Rotation { get; }
         Horizontal Look { get; }

@@ -3,7 +3,7 @@ using Ragon.Client;
 using Ragon.Protocol;
 using UnityEngine;
 
-namespace GamePlay.Player.Services.Factory.Factory.Runtime
+namespace GamePlay.Player.Factory.Factory.Runtime
 {
     public class PlayerSpawnPayload : IRagonPayload
     {

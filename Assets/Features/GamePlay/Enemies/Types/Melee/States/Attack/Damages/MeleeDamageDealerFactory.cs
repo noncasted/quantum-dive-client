@@ -10,7 +10,7 @@ namespace GamePlay.Enemies.Types.Melee.States.Attack.Damages
     {
         [SerializeField] private DamageTrigger _trigger;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.RegisterComponent(_trigger)
                 .As<IDamageTrigger>();

@@ -15,7 +15,7 @@ namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
         [SerializeField] [Indent] private TargetSearchConfig _config;
         [SerializeField] [Indent] private TargetSearchGizmosConfig _gizmosConfig;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<SearchGizmos>()
                 .WithParameter<ISearchGizmosConfig>(_gizmosConfig)

@@ -19,7 +19,7 @@ namespace GamePlay.Enemies.Entity.Debugs.Flags
         [SerializeField] private RigidBodyDebugFlag _rigidBody;
         [SerializeField] private RemoteStateMachineDebugFlag _remoteStateMachine;
         
-        public void OnBuild(IServiceCollection services, ICallbackRegister callbacks)
+        public void OnBuild(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.RegisterInstance(_localTransform);
             services.RegisterInstance(_remoteTransform);

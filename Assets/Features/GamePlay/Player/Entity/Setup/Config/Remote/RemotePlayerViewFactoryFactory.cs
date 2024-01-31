@@ -1,6 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Player.Entity.Components.Equipment.Slots.Binder.Runtime;
+using GamePlay.Player.Entity.Components.Equipment.Slots.Binder;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Views.GameObjects.Runtime;
 using GamePlay.Player.Entity.Views.Hitboxes.Remote;

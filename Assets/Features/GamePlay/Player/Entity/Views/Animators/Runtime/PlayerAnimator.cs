@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
 using Common.Tools.UniversalAnimators.Animators.Runtime;
@@ -10,7 +11,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Animators.Runtime
 {
-    public class PlayerAnimator : IPlayerAnimator, IEntitySwitchListener
+    public class PlayerAnimator : IPlayerAnimator, IEntitySwitchLifetimeListener
     {
         public PlayerAnimator(
             IAnimatorsUpdater animatorsUpdater,
@@ -26,14 +27,9 @@ namespace GamePlay.Player.Entity.Views.Animators.Runtime
         private readonly UniversalAnimator _animator;
         private readonly AnimatorLogger _logger;
         
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _animatorsUpdater.Register(_animator);
-        }
-
-        public void OnDisabled()
-        {
-            _animatorsUpdater.Unregister(_animator);
+            _animatorsUpdater.Register(lifetime, _animator);
         }
         
         public void PlayLooped(ILoopedAnimation animation)

@@ -1,6 +1,6 @@
-﻿using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+﻿using GamePlay.Player.Entity.Components.Equipment.Definition;
 
-namespace GamePlay.Player.Services.Registries.Equipment.Runtime
+namespace GamePlay.Player.Registries.Equipment.Runtime
 {
     public interface IEquipmentRegistry
     {

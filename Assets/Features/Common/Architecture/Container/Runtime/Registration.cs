@@ -79,7 +79,7 @@ namespace Common.Architecture.Container.Runtime
             resolver.Resolve(Type);
         }
 
-        public void ResolveWithCallbacks(IObjectResolver resolver, ICallbackRegister callbackRegistry)
+        public void ResolveWithCallbacks(IObjectResolver resolver, ICallbackRegistry callbackRegistry)
         {
             if (_isSelfResolvable == false)
                 return;

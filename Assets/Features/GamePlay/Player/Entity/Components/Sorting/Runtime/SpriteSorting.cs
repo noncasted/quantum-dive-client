@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
@@ -6,7 +7,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Components.Sorting.Runtime
 {
-    public class SpriteSorting : IEntitySwitchListener, IPostFixedUpdatable
+    public class SpriteSorting : IEntitySwitchLifetimeListener, IPostFixedUpdatable
     {
         public SpriteSorting(
             IPlayerSpriteLayer layer,
@@ -30,14 +31,9 @@ namespace GamePlay.Player.Entity.Components.Sorting.Runtime
 
         private readonly int _mask;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Remove(this);
+            _updater.Add(lifetime, this);
         }
 
         public void OnPostFixedUpdate(float delta)
@@ -49,7 +45,7 @@ namespace GamePlay.Player.Entity.Components.Sorting.Runtime
                 _layer.SetLayer(_config.BehindWall);
                 return;
             }
-            
+
             var isBottom = IsHit(Vector2.down);
 
             if (isBottom == true)

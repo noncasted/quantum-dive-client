@@ -1,10 +1,10 @@
-﻿using GamePlay.Player.Entity.States.Common;
+﻿using Common.Architecture.Lifetimes;
+using GamePlay.Player.Entity.States.Common;
 
 namespace GamePlay.Player.Entity.States.Floating.Runtime
 {
     public interface IFloatingTransitionsRegistry
     {
-        void Register(PlayerStateDefinition definition, IFloatingTransition transition);
-        void Unregister(PlayerStateDefinition definition);
+        void Register(ILifetime lifetime, PlayerStateDefinition definition, IFloatingTransition transition);
     }
 }

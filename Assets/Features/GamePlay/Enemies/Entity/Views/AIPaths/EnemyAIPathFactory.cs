@@ -11,7 +11,7 @@ namespace GamePlay.Enemies.Entity.Views.AIPaths
     {
         [SerializeField] private AIPath _ai;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             _ai.canMove = false;
             

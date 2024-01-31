@@ -10,7 +10,7 @@ namespace GamePlay.Enemies.Entity.Views.RotationPoint.Runtime
     {
         [SerializeField] private Transform _rotationPoint;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<EnemyRotationPoint>()
                 .As<IEnemyRotationPoint>()

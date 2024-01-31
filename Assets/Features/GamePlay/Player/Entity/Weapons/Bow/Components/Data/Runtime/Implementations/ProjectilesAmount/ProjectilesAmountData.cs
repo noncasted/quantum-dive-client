@@ -1,5 +1,5 @@
 ﻿using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Common;
-using GamePlay.Player.Services.Upgrades.Events;
+using GamePlay.Player.Upgrades.Events;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.ProjectilesAmount

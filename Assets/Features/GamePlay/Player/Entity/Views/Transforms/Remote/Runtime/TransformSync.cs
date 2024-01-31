@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.DataTypes.Network;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
@@ -9,7 +10,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.Views.Transforms.Remote.Runtime
 {
-    public class TransformSync : RagonProperty, IEntitySwitchListener, IFixedUpdatable
+    public class TransformSync : RagonProperty, IEntitySwitchLifetimeListener, IFixedUpdatable
     {
         protected TransformSync(
             IPlayerTransform transform,
@@ -30,14 +31,9 @@ namespace GamePlay.Player.Entity.Views.Transforms.Remote.Runtime
         private readonly IEntityProvider _entityProvider;
         private readonly TransformSyncLogger _logger;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Remove(this);
+            _updater.Add(lifetime, this);
         }
 
         public void OnFixedUpdate(float delta)

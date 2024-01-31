@@ -1,5 +1,6 @@
-﻿using System;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
+using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
 using Global.Inputs.Utils.Runtime.Projection;
 using Global.Inputs.View.Implementations.Movement;
@@ -7,7 +8,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Roll.Local
 {
-    public class RollInput : IEntitySwitchListener, IRollInput
+    public class RollInput : IEntitySwitchLifetimeListener, IRollInput
     {
         public RollInput(
             IRollInputView rollInputView,
@@ -25,22 +26,17 @@ namespace GamePlay.Player.Entity.States.Roll.Local
 
         private Vector2 _direction;
         private bool _hasInput;
+        private readonly IViewableDelegate _performed = new ViewableDelegate();
 
-        public event Action Performed;
+        public IViewableDelegate Performed => _performed;
 
         public Vector2 Direction => _inputProjection.GetDirectionFrom(_position.Position);
         public bool HasInput => _hasInput;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _rollInputView.Performed += OnRollPerformed;
-            _rollInputView.Canceled += OnRollCanceled;
-        }
-
-        public void OnDisabled()
-        {
-            _rollInputView.Performed -= OnRollPerformed;
-            _rollInputView.Canceled -= OnRollCanceled;
+            _rollInputView.Performed.Listen(lifetime, OnRollPerformed);
+            _rollInputView.Canceled.Listen(lifetime, OnRollCanceled);
         }
 
         private void OnRollPerformed()

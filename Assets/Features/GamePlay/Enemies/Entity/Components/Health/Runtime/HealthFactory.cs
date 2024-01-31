@@ -13,7 +13,7 @@ namespace GamePlay.Enemies.Entity.Components.Health.Runtime
     {
         [SerializeField] private HealthConfig _config;
         
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<Health>()
                 .WithParameter<IHealthConfig>(_config)

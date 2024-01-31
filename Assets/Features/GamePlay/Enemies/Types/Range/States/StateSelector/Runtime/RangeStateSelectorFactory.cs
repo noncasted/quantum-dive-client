@@ -12,7 +12,7 @@ namespace GamePlay.Enemies.Types.Range.States.StateSelector.Runtime
         menuName = RangeStateSelectorRoutes.ComponentPath)]
     public class RangeStateSelectorFactory : ScriptableObject, IEnemyComponentFactory
     {
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<RangeStateSelector>()
                 .As<IStateSelector>();

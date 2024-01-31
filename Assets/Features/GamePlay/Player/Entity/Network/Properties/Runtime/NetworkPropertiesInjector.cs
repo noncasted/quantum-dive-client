@@ -5,7 +5,7 @@ using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.States.Runs.Remote;
 using GamePlay.Player.Entity.Views.Transforms.Remote.Runtime;
 
-namespace GamePlay.Player.Entity.Network.Sync.Properties.Runtime
+namespace GamePlay.Player.Entity.Network.Properties.Runtime
 {
     public class NetworkPropertiesInjector
     {

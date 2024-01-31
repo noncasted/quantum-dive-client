@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Services.Provider.Runtime
+﻿namespace GamePlay.Player.Provider.Runtime
 {
     public interface IPlayerHitboxProvider
     {

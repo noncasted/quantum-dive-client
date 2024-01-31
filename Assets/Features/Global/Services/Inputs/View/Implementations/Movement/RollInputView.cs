@@ -1,4 +1,5 @@
 ﻿using System;
+using Common.Architecture.Lifetimes.Viewables;
 using Global.Inputs.Constranits.Definition;
 using Global.Inputs.Constranits.Runtime;
 using Global.Inputs.View.Logs;
@@ -7,9 +8,9 @@ using UnityEngine.InputSystem;
 
 namespace Global.Inputs.View.Implementations.Movement
 {
-    public class RollInput : IRollInputView, IInputSource
+    public class RollInputView : IRollInputView, IInputSource
     {
-        public RollInput(
+        public RollInputView(
             IInputConstraintsStorage constraintsStorage,
             IInputSourcesHandler inputListenersHandler,
             Controls.GamePlayActions gamePlay,
@@ -26,8 +27,11 @@ namespace Global.Inputs.View.Implementations.Movement
         private readonly Controls.GamePlayActions _gamePlay;
         private readonly InputViewLogger _logger;
 
-        public event Action Performed;
-        public event Action Canceled;
+        private readonly IViewableDelegate _performed = new ViewableDelegate();
+        private readonly IViewableDelegate _canceled = new ViewableDelegate();
+
+        public IViewableDelegate Performed => _performed;
+        public IViewableDelegate Canceled => _canceled;
 
         public void Listen()
         {
@@ -53,7 +57,7 @@ namespace Global.Inputs.View.Implementations.Movement
 
             _logger.OnRollPressed();
 
-            Performed?.Invoke();
+            Performed.Invoke();
         }
 
         private void OnCanceled(InputAction.CallbackContext context)
@@ -66,7 +70,7 @@ namespace Global.Inputs.View.Implementations.Movement
 
             _logger.OnRollCanceled();
 
-            Canceled?.Invoke();
+            Canceled.Invoke();
         }
     }
 }

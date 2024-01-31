@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
 using Global.Debugs.Drawing.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
@@ -6,7 +7,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Hitboxes.Debug
 {
-    public class HitboxGizmosDrawer : IEntitySwitchListener, IGizmosUpdatable
+    public class HitboxGizmosDrawer : IEntitySwitchLifetimeListener, IGizmosUpdatable
     {
         public HitboxGizmosDrawer(
             IShapeDrawer shapeDrawer,
@@ -29,14 +30,9 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Debug
         private readonly IHitboxConfig _hitboxConfig;
         private readonly Transform _point;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Remove(this);
+            _updater.Add(lifetime, this);
         }
 
         public void OnGizmosUpdate()

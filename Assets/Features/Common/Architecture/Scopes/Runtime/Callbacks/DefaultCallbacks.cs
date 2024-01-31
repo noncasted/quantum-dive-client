@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using Common.Architecture.Lifetimes;
+using Cysharp.Threading.Tasks;
 using VContainer.Unity;
 
 namespace Common.Architecture.Scopes.Runtime.Callbacks
@@ -11,6 +12,11 @@ namespace Common.Architecture.Scopes.Runtime.Callbacks
     public interface IScopeAwakeAsyncListener
     {
         UniTask OnAwakeAsync();
+    }
+
+    public interface ILifetimeListener
+    {
+        void OnLifetimeCreated(ILifetime lifetime);
     }
 
     public interface IScopeEnableListener

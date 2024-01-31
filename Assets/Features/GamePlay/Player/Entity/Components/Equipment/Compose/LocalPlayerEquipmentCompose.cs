@@ -8,7 +8,7 @@ using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Features.GamePlay.Player.Entity.Components.Equipment.Compose
+namespace GamePlay.Player.Entity.Components.Equipment.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

@@ -2,11 +2,11 @@
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using GamePlay.Player.Services.Provider.Common;
+using GamePlay.Player.Provider.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Player.Services.Provider.Runtime
+namespace GamePlay.Player.Provider.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = PlayerProviderRoutes.ServiceName,

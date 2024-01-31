@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Common.Damages;
 using GamePlay.Hitboxes.Runtime;
 using GamePlay.Player.Entity.Views.DamageReceivers.Runtime;
@@ -38,7 +38,9 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Local
         public float Radius => _config.Radius;
         public Vector2 Position => _point.position;
 
-        public event Action<Damage> Damaged;
+        private readonly IViewableDelegate<Damage> _damaged = new ViewableDelegate<Damage>();
+
+        public IViewableDelegate<Damage> Damaged => _damaged;
 
         public void Enable()
         {

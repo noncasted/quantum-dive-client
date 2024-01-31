@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 
@@ -6,7 +6,7 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Local.Runtime
 {
     public interface ILocalStateMachine
     {
-        event Action Exited;
+        IViewableDelegate Exited { get; }
 
         bool IsAvailable(PlayerStateDefinition definition);
         void Enter(IPlayerLocalState playerLocalState);

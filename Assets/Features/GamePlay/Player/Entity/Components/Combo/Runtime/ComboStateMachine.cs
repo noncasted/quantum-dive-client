@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
@@ -17,14 +18,11 @@ namespace GamePlay.Player.Entity.Components.Combo.Runtime
 
         private readonly Dictionary<PlayerStateDefinition, IComboState> _states = new();
 
-        public void Register(PlayerStateDefinition definition, IComboState state)
+        public void Register(ILifetime lifetime, PlayerStateDefinition definition, IComboState state)
         {
             _states.Add(definition, state);
-        }
 
-        public void Unregister(PlayerStateDefinition definition)
-        {
-            _states.Remove(definition);
+            lifetime.ListenTerminate(() => _states.Remove(definition));
         }
 
         public void TryTransitCombo(IPlayerLocalState from, PlayerStateDefinition[] transitions)

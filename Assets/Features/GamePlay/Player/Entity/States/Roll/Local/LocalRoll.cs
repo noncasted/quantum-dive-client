@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.DataTypes.Structs;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Orientation;
@@ -16,7 +17,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Roll.Local
 {
-    public class LocalRoll : IEntitySwitchListener, IPlayerLocalState, IFloatingTransition
+    public class LocalRoll : IEntitySwitchLifetimeListener, IPlayerLocalState, IFloatingTransition
     {
         public LocalRoll(
             ILocalStateMachine stateMachine,
@@ -57,20 +58,12 @@ namespace GamePlay.Player.Entity.States.Roll.Local
 
         public PlayerStateDefinition Definition => _definition;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _input.Performed += OnPerformed;
-
-            _floatingTransitionsRegistry.Register(Definition, this);
+            _input.Performed.Listen(lifetime, OnPerformed);
+            _floatingTransitionsRegistry.Register(lifetime, Definition, this);
         }
-
-        public void OnDisabled()
-        {
-            _input.Performed -= OnPerformed;
-
-            _floatingTransitionsRegistry.Unregister(Definition);
-        }
-
+        
         public bool IsTransitionFromFloatingAvailable()
         {
             return _input.HasInput;

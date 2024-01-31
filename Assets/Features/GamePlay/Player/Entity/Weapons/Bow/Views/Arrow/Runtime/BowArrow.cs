@@ -1,32 +1,27 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Sprites.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime
 {
-    public class BowArrow : IBowArrow, IEntitySwitchListener
+    public class BowArrow : IBowArrow, IEntitySwitchLifetimeListener
     {
         public BowArrow(SpriteRenderer spriteRenderer, IBowSprite sprite)
         {
             _spriteRenderer = spriteRenderer;
             _sprite = sprite;
         }
-        
+
         private readonly SpriteRenderer _spriteRenderer;
         private readonly IBowSprite _sprite;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _sprite.SortingOrderChanged += OnSortingOrderChanged;
-            _sprite.YFlipped += OnYFlipped;
+            _sprite.SortingOrderChanged.Listen(lifetime, OnSortingOrderChanged);
+            _sprite.YFlipped.Listen(lifetime, OnYFlipped);
         }
 
-        public void OnDisabled()
-        {
-            _sprite.SortingOrderChanged -= OnSortingOrderChanged;
-            _sprite.YFlipped -= OnYFlipped;
-        }
-        
         public void Show(Sprite sprite)
         {
             _spriteRenderer.enabled = true;
@@ -42,7 +37,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime
         {
             _spriteRenderer.sortingOrder = order + 1;
         }
-        
+
         private void OnYFlipped(bool isFlipped)
         {
             _spriteRenderer.flipY = isFlipped;

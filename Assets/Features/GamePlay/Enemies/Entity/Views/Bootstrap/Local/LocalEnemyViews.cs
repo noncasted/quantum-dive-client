@@ -27,7 +27,7 @@ namespace GamePlay.Enemies.Entity.Views.Bootstrap.Local
         [SerializeField] private EnemyRigidBodyFactory _rigidBody;
         [SerializeField] private HealthBarFactory _healthBar;
 
-        public void OnBuild(IServiceCollection services, ICallbackRegister callbacks)
+        public void OnBuild(IServiceCollection services, ICallbackRegistry callbacks)
         {
             _animator.Create(services, callbacks);
             _rotationPoint.Create(services, callbacks);

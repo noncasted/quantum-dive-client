@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Services.Upgrades.Events
+﻿namespace GamePlay.Player.Upgrades.Events
 {
     public readonly struct ProjectilesAmountAddEvent : IAddEvent
     {

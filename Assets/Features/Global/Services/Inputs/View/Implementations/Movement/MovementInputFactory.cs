@@ -13,10 +13,16 @@ namespace Global.Inputs.View.Implementations.Movement
         public override void Create(Controls controls, IServiceCollection services)
         {
             var gamePlay = controls.GamePlay;
-            // services.Register<MouseInput>()
-            //     .WithParameter(gamePlay)
-            //     .As<IMouseInput>()
-            //     .AsSelfResolvable();
+            
+            services.Register<MovementInputView>()
+                .WithParameter(gamePlay)
+                .As<IMovementInputView>()
+                .AsSelfResolvable();
+            
+            services.Register<RollInputView>()
+                .WithParameter(gamePlay)
+                .As<IRollInputView>()
+                .AsSelfResolvable();
         }
     }
 }

@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Common.Damages;
 
 namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
 {
     public interface IDamageReceiverTrigger
     {
-        event Action<Damage> Triggered;
+        IViewableDelegate<Damage> Triggered { get; }
 
         void Enable();
         void Disable();

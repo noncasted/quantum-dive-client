@@ -1,9 +1,32 @@
-﻿using Common.Architecture.Entities.Runtime.Callbacks;
+﻿using System;
+using System.Collections.Generic;
+using Common.Architecture.Container.Abstract;
+using Common.Architecture.Entities.Runtime;
+using Common.Architecture.Entities.Runtime.Callbacks;
+using Common.Architecture.Lifetimes;
+using Cysharp.Threading.Tasks;
 
 namespace Common.Architecture.Entities.Common.DefaultCallbacks
 {
-    public class DefaultCallbacksFactory : ICallbacksFactory
+    public class DefaultCallbacksFactory : IEntityCallbacks, ICallbackRegistry
     {
+        private readonly IEntityCallbacksRegistry _callbacksRegistry;
+        private readonly IEntityUtils _utils;
+
+        private readonly List<IEntitySwitchLifetimeListener> _switchLifetimeListeners = new();
+
+        public DefaultCallbacksFactory(IEntityCallbacksRegistry callbacksRegistry, IEntityUtils utils)
+        {
+            _callbacksRegistry = callbacksRegistry;
+            _utils = utils;
+        }
+        
+        public void Listen(object listener)
+        {
+            if (listener is IEntitySwitchLifetimeListener switchLifetimeListener)
+                _switchLifetimeListeners.Add(switchLifetimeListener);
+        }
+
         /// <summary>
         /// 0 - ContainerBuilt
         /// 1 - Awake
@@ -14,30 +37,87 @@ namespace Common.Architecture.Entities.Common.DefaultCallbacks
         /// 6 - OnLoadedAsync
         /// 7 - OnDisabled
         /// </summary>
-        /// <param name="callbacks"></param>
-        /// <param name="data"></param>
-        public void AddCallbacks(IEntityCallbacks callbacks)
+        public void AddCallbacks()
         {
-            callbacks.AddScopeCallback<IEntityAwakeListener>(
-                listener => listener.OnAwake(), CallbackStage.Construct, 1000);
-            callbacks.AddScopeAsyncCallback<IEntityAwakeAsyncListener>(
-                listener => listener.OnAwakeAsync(), CallbackStage.Construct, 2000);
-            callbacks.AddScopeAsyncCallback<IEntityLoadedAsyncListener>(
-                listener => listener.OnLoadedAsync(), CallbackStage.Construct, 4000);
+            _callbacksRegistry.AddGenericCallbackRegistry(this);
+            
+            AddConstruct<IEntityAwakeListener>(listener => listener.OnAwake(), 0);
+            AddAsyncConstruct<IEntityAwakeAsyncListener>(listener => listener.OnAwakeAsync(), 1000);
+            AddConstruct<IEntityLifetimeListener>(listener => listener.OnLifetimeCreated(_utils.Lifetime), 3000);
 
-            callbacks.AddScopeCallback<IEntityEnableListener>(
-                listener => listener.OnEnabled(), CallbackStage.Enable, 0);
-            callbacks.AddScopeAsyncCallback<IEntityEnableAsyncListener>(
-                listener => listener.OnEnabledAsync(), CallbackStage.Construct, 1000);
+            AddEnable<IEntityEnableListener>(listener => listener.OnEnabled(), 0);
+            AddAsyncEnable<IEntityEnableAsyncListener>(listener => listener.OnEnabledAsync(), 1000);
 
-            callbacks.AddScopeCallback<IEntityDisableListener>(
-                listener => listener.OnDisabled(), CallbackStage.Disable, 0);
+            AddDisable<IEntityDisableListener>(listener => listener.OnDisabled(), 0);
+            AddAsyncDisable<IEntityDisableAsyncListener>(listener => listener.OnDisabledAsync(), 1000);
 
-            callbacks.AddScopeAsyncCallback<IEntityDisableAsyncListener>(
-                listener => listener.OnDisabledAsync(), CallbackStage.Dispose, 1000);
+            AddDispose<IEntityDestroyListener>(listener => listener.OnDestroyed(), 0);
+            AddAsyncDispose<IEntityDestroyAsyncListener>(listener => listener.OnDestroyedAsync(), 1000);
 
-            callbacks.AddScopeCallback<IEntityDestroyListener>(
-                listener => listener.OnDestroyed(), CallbackStage.Dispose, 1000);
+            return;
+
+            void AddConstruct<T>(Action<T> invoker, int order)
+            {
+                _callbacksRegistry.AddScopeCallback(invoker, CallbackStage.Construct, order);
+            }
+
+            void AddAsyncConstruct<T>(Func<T, UniTask> invoker, int order)
+            {
+                _callbacksRegistry.AddScopeAsyncCallback(invoker, CallbackStage.Construct, order);
+            }
+
+            void AddEnable<T>(Action<T> invoker, int order)
+            {
+                _callbacksRegistry.AddScopeCallback(invoker, CallbackStage.Enable, order);
+            }
+
+            void AddAsyncEnable<T>(Func<T, UniTask> invoker, int order)
+            {
+                _callbacksRegistry.AddScopeAsyncCallback(invoker, CallbackStage.Enable, order);
+            }
+
+            void AddDisable<T>(Action<T> invoker, int order)
+            {
+                _callbacksRegistry.AddScopeCallback(invoker, CallbackStage.Disable, order);
+            }
+
+            void AddAsyncDisable<T>(Func<T, UniTask> invoker, int order)
+            {
+                _callbacksRegistry.AddScopeAsyncCallback(invoker, CallbackStage.Disable, order);
+            }
+
+            void AddDispose<T>(Action<T> invoker, int order)
+            {
+                _callbacksRegistry.AddScopeCallback(invoker, CallbackStage.Dispose, order);
+            }
+
+            void AddAsyncDispose<T>(Func<T, UniTask> invoker, int order)
+            {
+                _callbacksRegistry.AddScopeAsyncCallback(invoker, CallbackStage.Dispose, order);
+            }
+        }
+
+        public UniTask RunConstruct()
+        {
+            return _callbacksRegistry.Handlers[CallbackStage.Construct].Run();
+        }
+        
+        public UniTask RunEnable(ILifetime lifetime)
+        {
+            foreach (var listener in _switchLifetimeListeners)
+                listener.OnSwitchLifetimeCreated(lifetime);
+            
+            return _callbacksRegistry.Handlers[CallbackStage.Enable].Run();
+        }
+
+        public UniTask RunDisable()
+        {
+            return _callbacksRegistry.Handlers[CallbackStage.Disable].Run();
+        }
+
+        public UniTask RunDispose()
+        {
+            return _callbacksRegistry.Handlers[CallbackStage.Dispose].Run();
         }
     }
 }

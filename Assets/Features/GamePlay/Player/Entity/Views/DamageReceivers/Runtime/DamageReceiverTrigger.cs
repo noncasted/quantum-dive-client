@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Common.Damages;
 using UnityEngine;
 
@@ -8,11 +8,12 @@ namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
     public class DamageReceiverTrigger : MonoBehaviour, IDamageReceiver, IDamageReceiverTrigger
     {
         private Collider2D _collider;
+        private readonly IViewableDelegate<Damage> _triggered = new ViewableDelegate<Damage>();
 
         public float Radius { get; }
         public Vector2 Position => transform.position;
 
-        public event Action<Damage> Triggered;
+        public IViewableDelegate<Damage> Triggered => _triggered;
 
         private void Awake()
         {

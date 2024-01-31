@@ -15,7 +15,7 @@ namespace GamePlay.Enemies.Types.Range.States.Shoot.Local
         [SerializeField] private ShootDefinition _definition;
         [SerializeField] private ShootConfig _config;
 
-        public void Create(IServiceCollection services, ICallbackRegister callbacks)
+        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
         {
             services.Register<ShootTargetChecker>()
                 .WithParameter<IShootConfig>(_config)

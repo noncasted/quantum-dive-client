@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Views.RigidBodies.Debug.Gizmos;
 using GamePlay.Player.Entity.Views.RigidBodies.Logs;
 using Global.System.Updaters.Runtime.Abstract;
@@ -10,7 +11,7 @@ namespace GamePlay.Player.Entity.Views.RigidBodies.Runtime
 {
     public class PlayerRigidBody :
         IPlayerRigidBody,
-        IEntitySwitchListener,
+        IEntitySwitchLifetimeListener,
         IFixedUpdatable
     {
         public PlayerRigidBody(
@@ -80,14 +81,9 @@ namespace GamePlay.Player.Entity.Views.RigidBodies.Runtime
             _interactions.Clear();
         }
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Remove(this);
+            _updater.Add(lifetime, this);
         }
 
         public void SetPosition(Vector2 position)

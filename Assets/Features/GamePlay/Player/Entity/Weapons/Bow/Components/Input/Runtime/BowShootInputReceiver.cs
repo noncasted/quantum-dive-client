@@ -1,9 +1,10 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Global.Inputs.View.Implementations.Combat;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime
 {
-    public class BowShootInputReceiver : IEntitySwitchListener, IBowShootInputReceiver
+    public class BowShootInputReceiver : IEntitySwitchLifetimeListener, IBowShootInputReceiver
     {
         public BowShootInputReceiver(ICombatInput input)
         {
@@ -16,16 +17,10 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime
 
         public bool IsPerformed => _isPerformed;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _input.RangeAttackPerformed += OnPerformed;
-            _input.RangeAttackCanceled += OnCanceled;
-        }
-
-        public void OnDisabled()
-        {
-            _input.RangeAttackPerformed -= OnPerformed;
-            _input.RangeAttackCanceled -= OnCanceled;
+            _input.RangeAttackPerformed.Listen(lifetime, OnPerformed);
+            _input.RangeAttackCanceled.Listen(lifetime, OnCanceled);
         }
 
         private void OnPerformed()

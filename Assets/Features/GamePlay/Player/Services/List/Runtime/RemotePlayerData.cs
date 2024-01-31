@@ -1,7 +1,7 @@
 ﻿using GamePlay.Player.Entity.Setup.Root.Remote;
 using Ragon.Client;
 
-namespace GamePlay.Player.Services.List.Runtime
+namespace GamePlay.Player.List.Runtime
 {
     public class RemotePlayerData
     {

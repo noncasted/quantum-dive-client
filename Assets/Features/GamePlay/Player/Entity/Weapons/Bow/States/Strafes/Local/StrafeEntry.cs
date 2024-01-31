@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Components.Combo.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Common;
@@ -8,7 +9,7 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
 {
-    public class StrafeEntry : IUpdatable, IFloatingTransition, IEntitySwitchListener, IComboState
+    public class StrafeEntry : IUpdatable, IFloatingTransition, IEntitySwitchLifetimeListener, IComboState
     {
         public StrafeEntry(
             IStrafeInputReceiver inputReceiver,
@@ -39,20 +40,12 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
 
         public PlayerStateDefinition[] Transitions => _transitions;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _floatingTransitionsRegistry.Register(_strafe.Definition, this);
-            _comboStateMachine.Register(_strafe.Definition, this);
+            _floatingTransitionsRegistry.Register(lifetime, _strafe.Definition, this);
+            _comboStateMachine.Register(lifetime, _strafe.Definition, this);
 
             _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _floatingTransitionsRegistry.Unregister(_strafe.Definition);
-            _comboStateMachine.Unregister(_strafe.Definition);
-
-            _updater.Remove(this);
         }
 
         public bool IsTransitionFromFloatingAvailable()

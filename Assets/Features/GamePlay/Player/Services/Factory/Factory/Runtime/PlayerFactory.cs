@@ -8,17 +8,17 @@ using GamePlay.Player.Entity.Setup.Config.Local;
 using GamePlay.Player.Entity.Setup.Config.Remote;
 using GamePlay.Player.Entity.Setup.Root.Common;
 using GamePlay.Player.Entity.Setup.Root.Local;
-using GamePlay.Player.Services.Factory.Factory.Logs;
-using GamePlay.Player.Services.Factory.SpawnPoints;
-using GamePlay.Player.Services.List.Definition;
-using GamePlay.Player.Services.List.Runtime;
-using GamePlay.Player.Services.Provider.Runtime;
+using GamePlay.Player.Factory.Factory.Logs;
+using GamePlay.Player.Factory.SpawnPoints;
+using GamePlay.Player.List.Definition;
+using GamePlay.Player.List.Runtime;
+using GamePlay.Player.Provider.Runtime;
 using Global.Network.Objects.Factories.Abstract;
 using Ragon.Client;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace GamePlay.Player.Services.Factory.Factory.Runtime
+namespace GamePlay.Player.Factory.Factory.Runtime
 {
     public class PlayerFactory : IPlayerFactory, IEntityFactory, IScopeSwitchListener
     {
@@ -93,6 +93,8 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
             
             var payload = new PlayerSpawnPayload(spawnPosition);
             await _dynamicEntityFactory.Send(entity, payload);
+
+            _playerProvider.AssignPlayer(root.Position, root.Health);
             
             var player = new NetworkPlayer(entity, root);
             _playersList.Add(entity.Owner, player);
@@ -100,6 +102,9 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
             foreach (var equipment in _equipment.Equipment)
                 root.Equipper.Equip(equipment);
 
+            await root.Callbacks.RunConstruct();
+            await root.Enable();
+            
             _logger.OnLocalInstantiated(spawnPosition);
             
             return root;
@@ -114,6 +119,9 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
 
             var player = new NetworkPlayer(entity, root);
             _playersList.Add(entity.Owner, player);
+            
+            await root.Callbacks.RunConstruct();
+            await root.Enable();
             
             _logger.OnRemoteInstantiated(spawnPosition);
         }

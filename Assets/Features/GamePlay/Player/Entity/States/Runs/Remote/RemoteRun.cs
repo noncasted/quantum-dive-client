@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Runs.Common;
@@ -9,7 +10,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.States.Runs.Remote
 {
-    public class RemoteRun : IPlayerRemoteState, IUpdatable, IEntitySwitchListener
+    public class RemoteRun : IPlayerRemoteState, IUpdatable, IEntitySwitchLifetimeListener
     {
         public RemoteRun(
             IUpdater updater,
@@ -37,14 +38,9 @@ namespace GamePlay.Player.Entity.States.Runs.Remote
         private readonly RunAnimation _animation;
         private readonly RunDefinition _definition;
         
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.RegisterState(_definition, this);
-        }
-
-        public void OnDisabled()
-        {
-            _stateMachine.UnregisterState(_definition);
+            _stateMachine.RegisterState(lifetime, _definition, this);
         }
         
         public void Enter(RagonBuffer buffer)

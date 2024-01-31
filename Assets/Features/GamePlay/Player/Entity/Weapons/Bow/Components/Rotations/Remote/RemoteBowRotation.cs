@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Common;
@@ -9,7 +10,7 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Remote
 {
-    public class RemoteBowRotation : IEntitySwitchListener, IUpdatable
+    public class RemoteBowRotation : IEntitySwitchLifetimeListener, IUpdatable
     {
         public RemoteBowRotation(
             IBowTransform transform,            
@@ -34,14 +35,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Remote
         private readonly IBowSprite _sprite;
         private readonly IUpdater _updater;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Remove(this);
+            _updater.Add(lifetime, this);
         }
 
         public void OnUpdate(float delta)

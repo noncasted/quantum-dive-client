@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Runs.Local
 {
     public interface IRunInput
     {
-        event Action Performed;
-        event Action Canceled;
-        
+        IViewableDelegate Performed { get; }
+        IViewableDelegate Canceled { get; }
+
         Vector2 Direction { get; }
         bool HasInput { get; }
     }

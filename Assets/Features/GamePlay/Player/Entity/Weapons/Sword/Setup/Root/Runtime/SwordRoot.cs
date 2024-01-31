@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Entities.Runtime.Callbacks;
-using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
-using Features.GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
+using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
+using GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime
@@ -10,16 +10,16 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime
     {
         public SwordRoot(
             ISwordTransform transform,
-            IEntityCallbacks callbacks,
+            IEntityCallbacksRegistry callbacksRegistry,
             SwordSlotDefinition definition)
         {
             _transform = transform;
-            _callbacks = callbacks;
+            _callbacksRegistry = callbacksRegistry;
             _definition = definition;
         }
 
         private readonly ISwordTransform _transform;
-        private readonly IEntityCallbacks _callbacks;
+        private readonly IEntityCallbacksRegistry _callbacksRegistry;
         private readonly SwordSlotDefinition _definition;
 
         private bool _isActive;
@@ -37,7 +37,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime
 
             _isActive = true;
 
-            _callbacks.Handlers[CallbackStage.Enable].Run();
+            _callbacksRegistry.Handlers[CallbackStage.Enable].Run();
         }
 
         public void Deselect()
@@ -49,7 +49,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime
             }
 
             _isActive = false;
-            _callbacks.Handlers[CallbackStage.Disable].Run();
+            _callbacksRegistry.Handlers[CallbackStage.Disable].Run();
         }
     }
 }
