@@ -1,5 +1,4 @@
-﻿using System;
-using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using Ragon.Client;
 using Ragon.Protocol;
 

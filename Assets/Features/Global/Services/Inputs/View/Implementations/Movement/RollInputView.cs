@@ -1,5 +1,4 @@
-﻿using System;
-using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using Global.Inputs.Constranits.Definition;
 using Global.Inputs.Constranits.Runtime;
 using Global.Inputs.View.Logs;
