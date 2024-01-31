@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Equipment.Definition;
+using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Runtime;
@@ -24,9 +25,9 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Local
         [SerializeField] [Indent] private InputReceiverFactory _input;
         [SerializeField] [Indent] private TargetsSearcherFactory _targetsSearcher;
 
-        [SerializeField] private LocalSwordViewFactory _prefab;
+        [SerializeField] private LocalSwordViewFactoryFactory _prefab;
 
-        public EntitySetupView Prefab => _prefab;
+        public ScopedEntityViewFactory Prefab => _prefab;
 
         public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
         {
@@ -36,5 +37,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Local
             _input,
             _targetsSearcher
         };
+        
+        public IReadOnlyList<IComponentsCompose> Composes => Array.Empty<IComponentsCompose>();
     }
 }

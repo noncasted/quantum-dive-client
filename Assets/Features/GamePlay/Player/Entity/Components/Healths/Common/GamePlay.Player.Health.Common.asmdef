@@ -1,6 +1,7 @@
 ﻿{
   "name": "GamePlay.Player.Health.Common",
   "references": [
-    "GUID:8f9012bdd1b116c48ab480004500c8f3"
+    "GUID:8f9012bdd1b116c48ab480004500c8f3",
+    "GUID:6f3a352f07be49868890c1e3e7b705e9"
   ]
 }

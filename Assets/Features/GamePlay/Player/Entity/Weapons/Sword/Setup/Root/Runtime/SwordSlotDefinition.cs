@@ -1,4 +1,4 @@
-﻿using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
+﻿using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Common;
 using UnityEngine;
 

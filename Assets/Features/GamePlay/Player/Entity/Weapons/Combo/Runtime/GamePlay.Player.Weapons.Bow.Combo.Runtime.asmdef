@@ -1,4 +1,0 @@
-﻿{
-  "name": "GamePlay.Player.Weapons.Bow.Combo.Runtime",
-  "references":[ "GUID:1df29afa6177f8e4fa19b25367556ac2", "GUID:47083761e726d344ebda60ec45a5396c", "GUID:145d06f883cb2b94396d697c01e9bd09", "GUID:65c3fcbb851ff9441a22dd049195dc8f", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:566565389f1a4e1e92bf3bdaaa9e079b", "GUID:a6bee730cad343c7ac8840da91376019" ]
-}

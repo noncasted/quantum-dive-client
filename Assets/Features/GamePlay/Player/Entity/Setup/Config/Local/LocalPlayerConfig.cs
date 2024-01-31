@@ -1,33 +1,12 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Player.Entity.Components.DamageProcessors.Runtime;
-using GamePlay.Player.Entity.Components.Healths.Runtime;
-using GamePlay.Player.Entity.Components.Rotations.Local.Runtime;
-using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
-using GamePlay.Player.Entity.Components.Sorting.Runtime;
-using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Player.Entity.Equipment.Equipper.Local;
-using GamePlay.Player.Entity.Equipment.Equipper.Remote;
-using GamePlay.Player.Entity.Equipment.Locker.Runtime;
-using GamePlay.Player.Entity.Equipment.Slots.Storage.Runtime;
-using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Player.Entity.Network.Sync.Properties.Runtime;
+using Features.GamePlay.Player.Entity.Components.Compose;
+using Features.GamePlay.Player.Entity.Components.Equipment.Compose;
+using Features.GamePlay.Player.Entity.Network.Compose;
+using Features.GamePlay.Player.Entity.States.Compose;
 using GamePlay.Player.Entity.Setup.Config.Common;
 using GamePlay.Player.Entity.Setup.Root.Local;
-using GamePlay.Player.Entity.States.Deaths.Local;
-using GamePlay.Player.Entity.States.Floating.Runtime;
-using GamePlay.Player.Entity.States.Idles.Local;
-using GamePlay.Player.Entity.States.None.Runtime;
-using GamePlay.Player.Entity.States.Respawns.Local;
-using GamePlay.Player.Entity.States.Roll.Local;
-using GamePlay.Player.Entity.States.Runs.Local;
-using GamePlay.Player.Entity.States.Runs.Remote;
-using GamePlay.Player.Entity.States.SubStates.Damaged.Local;
-using GamePlay.Player.Entity.States.SubStates.Movement.Runtime;
-using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
-using GamePlay.Player.Entity.Weapons.Combo.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -36,125 +15,32 @@ namespace GamePlay.Player.Entity.Setup.Config.Local
     [InlineEditor]
     [CreateAssetMenu(fileName = PlayerConfigRoutes.LocalName,
         menuName = PlayerConfigRoutes.LocalPath)]
-    public class LocalPlayerConfig : ScriptableObject, IEntityConfig
+    public class LocalPlayerConfig : ScriptableObject, IScopedEntityConfig
     {
         [SerializeField] private DefaultCallbacksComponentFactory _defaultCallbacks;
-        [SerializeField] private EntityProviderFactory _entityProvider;
         [SerializeField] private LocalPlayerRootFactory _root;
+
+        [SerializeField] private LocalPlayerComponentsCompose _components;
+        [SerializeField] private LocalPlayerEquipmentCompose _equipment;
+        [SerializeField] private LocalPlayerStatesCompose _states;
+        [SerializeField] private PlayerNetworkCompose _network;
         
-        [FoldoutGroup("System")] [SerializeField]
-        private RotationFactory _rotation;
+        [SerializeField] private LocalPlayerViewFactoryFactory _prefab;
 
-        [FoldoutGroup("System")] [SerializeField]
-        private StateMachineFactory _stateMachine;
-
-        [FoldoutGroup("System")] [SerializeField]
-        private DamageProcessorFactory _damageProcessor;
-
-        [FoldoutGroup("Data")] [SerializeField]
-        private HealthFactory _health;
-
-        [FoldoutGroup("System")] [SerializeField]
-        private SpriteSortingFactory _spriteSorting;
-
-        [FoldoutGroup("Equipment")] [SerializeField]
-        private EquipmentLockerFactory _equipmentLocker;
-
-        [FoldoutGroup("Equipment")] [SerializeField]
-        private EquipmentSlotsStorageFactory _equipmentSlotsStorage;
-
-        [FoldoutGroup("Equipment")] [SerializeField]
-        private EquipperFactory _equipper;
-
-        [FoldoutGroup("States")] [SerializeField]
-        private FloatingStateFactory _floating;
-
-        [FoldoutGroup("States")] [SerializeField]
-        private LocalIdleFactory _idle;
-
-        [FoldoutGroup("States")] [SerializeField]
-        private NoneFactory _none;
-
-        [FoldoutGroup("States")] [SerializeField]
-        private LocalRespawnFactory _respawn;
-
-        [FoldoutGroup("States")] [SerializeField]
-        private RunFactory _run;
-
-        [FoldoutGroup("States")] [SerializeField]
-        private LocalDeathFactory _death;
-
-        [FoldoutGroup("States")] [SerializeField]
-        private LocalDamagedFactory _damaged;
-
-        [FoldoutGroup("States")] [SerializeField]
-        private LocalRollFactory _roll;
-
-        [FoldoutGroup("System")] [SerializeField]
-        private ComboStateMachineFactory _comboStateMachine;
-
-        [FoldoutGroup("SubStates")] [SerializeField]
-        private SubMovementFactory _subMovement;
-
-        [FoldoutGroup("SubStates")] [SerializeField]
-        private SubPushFactory _subPush;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private NetworkPropertiesFactory _networkProperties;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private RotationSyncFactory _rotationSync;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private RemoteStateMachineFactory _remoteStateMachine;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private RemoteEquipperFactory _remoteEquipper;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private RemoteRunFactory _remoteRun;
-
-
-        [SerializeField] private LocalPlayerViewFactory _prefab;
-
-        public EntitySetupView Prefab => _prefab;
+        public ScopedEntityViewFactory Prefab => _prefab;
 
         public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
         {
             _defaultCallbacks,
-            _entityProvider,
             _root,
-            
-            
-            _rotation,
-            _stateMachine,
-            _damageProcessor,
-            _health,
-            _spriteSorting,
+        };
 
-            _equipmentLocker,
-            _equipmentSlotsStorage,
-            _equipper,
-
-            _floating,
-            _idle,
-            _none,
-            _respawn,
-            _run,
-            _death,
-            _damaged,
-            _roll,
-
-            _comboStateMachine,
-
-            _subMovement,
-            _subPush,
-
-            _networkProperties,
-            _rotationSync,
-            _remoteStateMachine,
-            _remoteEquipper,
-            _remoteRun
+        public IReadOnlyList<IComponentsCompose> Composes => new IComponentsCompose[]
+        {
+            _components,
+            _equipment,
+            _states,
+            _network
         };
     }
 }

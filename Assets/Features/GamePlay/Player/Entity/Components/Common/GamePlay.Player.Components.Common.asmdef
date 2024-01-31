@@ -1,0 +1,7 @@
+﻿{
+  "name": "GamePlay.Player.Components.Common",
+  "references": [
+    "GUID:a6bee730cad343c7ac8840da91376019",
+    "GUID:8f9012bdd1b116c48ab480004500c8f3"
+  ]
+}

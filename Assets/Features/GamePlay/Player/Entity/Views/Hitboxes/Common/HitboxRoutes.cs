@@ -4,7 +4,7 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Common
 {
     public class HitboxRoutes
     {
-        private const string _root = PlayerAssetsPaths.Components + _name;
+        private const string _root = PlayerAssetsPaths.Views + _name;
         private const string _name = "Hitbox";
 
         public const string ConfigName = PlayerAssetsPrefixes.Config + _name;

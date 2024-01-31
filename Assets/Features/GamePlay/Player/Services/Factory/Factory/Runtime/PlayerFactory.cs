@@ -25,7 +25,7 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
         public PlayerFactory(
             IDynamicEntityFactory dynamicEntityFactory,
             INetworkFactoriesRegistry factoriesRegistry,
-            IEntityCreator creator,
+            IScopedEntityFactory factory,
             IPlayersList playersList, 
             IPlayerProvider playerProvider,
             LocalPlayerConfig localConfig,
@@ -36,7 +36,7 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
         {
             _dynamicEntityFactory = dynamicEntityFactory;
             _factoriesRegistry = factoriesRegistry;
-            _creator = creator;
+            _factory = factory;
             _playersList = playersList;
             _playerProvider = playerProvider;
             _localConfig = localConfig;
@@ -48,7 +48,7 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
 
         private readonly IDynamicEntityFactory _dynamicEntityFactory;
         private readonly INetworkFactoriesRegistry _factoriesRegistry;
-        private readonly IEntityCreator _creator;
+        private readonly IScopedEntityFactory _factory;
         private readonly IPlayersList _playersList;
         private readonly IPlayerProvider _playerProvider;
         private readonly LocalPlayerConfig _localConfig;
@@ -89,7 +89,7 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
 
             var view = Object.Instantiate(_localConfig.Prefab, spawnPosition, Quaternion.identity);
             var entityComponentFactory = new EntityComponentFactory(entity);
-            var root = await _creator.Create<ILocalPlayerRoot>(_parentScope, view, _localConfig, new[] { entityComponentFactory });
+            var root = await _factory.Create<ILocalPlayerRoot>(_parentScope, view, _localConfig, new[] { entityComponentFactory });
             
             var payload = new PlayerSpawnPayload(spawnPosition);
             await _dynamicEntityFactory.Send(entity, payload);
@@ -110,7 +110,7 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
             var spawnPosition = entity.GetAttachPayload<PlayerSpawnPayload>().Position;
             var view = Object.Instantiate(_remoteConfig.Prefab, spawnPosition, Quaternion.identity);
             var entityComponentFactory = new EntityComponentFactory(entity);
-            var root = await _creator.Create<IPlayerRoot>(_parentScope, view, _remoteConfig, new[] { entityComponentFactory });
+            var root = await _factory.Create<IPlayerRoot>(_parentScope, view, _remoteConfig, new[] { entityComponentFactory });
 
             var player = new NetworkPlayer(entity, root);
             _playersList.Add(entity.Owner, player);

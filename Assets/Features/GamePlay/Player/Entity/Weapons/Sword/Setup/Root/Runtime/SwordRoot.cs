@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Entities.Runtime.Callbacks;
+using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
 using Features.GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
-using GamePlay.Player.Entity.Equipment.Abstract.Definition;
-using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
+using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime

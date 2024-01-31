@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Player.Entity.Equipment.Abstract.Factory;
+using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
 
 namespace GamePlay.Player.Services.Registries.Equipment.Runtime
 {

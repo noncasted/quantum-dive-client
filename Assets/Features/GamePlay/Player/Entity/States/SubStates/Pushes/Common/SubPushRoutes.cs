@@ -1,13 +1,14 @@
 ﻿using GamePlay.Player.Entity.Setup.Path;
+using GamePlay.Player.Entity.States.Common;
 
 namespace GamePlay.Player.Entity.States.SubStates.Pushes.Common
 {
     public class SubPushRoutes
     {
-        private const string _root = PlayerAssetsPaths.Components + _name;
-        private const string _name = "SubPush";
+        private const string Root = PlayerStatesRoutes.Root + Name;
+        private const string Name = "SubPush";
 
-        public const string StateName = PlayerAssetsPrefixes.Component + _name;
-        public const string StatePath = _root + "/State";
+        public const string StateName = PlayerAssetsPrefixes.Component + Name;
+        public const string StatePath = Root + "/State";
     }
 }

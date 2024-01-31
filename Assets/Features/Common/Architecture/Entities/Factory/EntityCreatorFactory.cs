@@ -14,8 +14,8 @@ namespace Common.Architecture.Entities.Factory
     {
         public async UniTask Create(IServiceCollection services, IScopeUtils utils)
         {
-            services.Register<EntityCreator>()
-                .As<IEntityCreator>();
+            services.Register<ScopedEntityFactory>()
+                .As<IScopedEntityFactory>();
         }
     }
 }

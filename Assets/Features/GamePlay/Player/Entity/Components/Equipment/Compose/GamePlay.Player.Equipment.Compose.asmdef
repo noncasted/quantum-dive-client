@@ -1,0 +1,4 @@
+﻿{
+  "name": "GamePlay.Player.Equipment.Compose",
+  "references":[ "GUID:a6bee730cad343c7ac8840da91376019", "GUID:5cd286deccb44e0ebdd3ac67899eb571", "GUID:ad91b1a77aeb44d782f5498f517b0657", "GUID:692b7bdd1709462b96bf3dc6b1635939", "GUID:4c2d53a1566442429885755e05430edf", "GUID:bcbbef1e30074821b4f51918af96aebd" ]
+}

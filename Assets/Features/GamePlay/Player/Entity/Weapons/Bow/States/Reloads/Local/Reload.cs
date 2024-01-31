@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Cysharp.Threading.Tasks;
+using GamePlay.Player.Entity.Components.Combo.Runtime;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
@@ -14,7 +15,6 @@ using GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
-using GamePlay.Player.Entity.Weapons.Combo.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local

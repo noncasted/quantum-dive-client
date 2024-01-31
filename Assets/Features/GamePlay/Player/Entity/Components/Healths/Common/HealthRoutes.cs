@@ -1,13 +1,14 @@
-﻿using GamePlay.Player.Entity.Setup.Path;
+﻿using Features.GamePlay.Player.Entity.Components.Common;
+using GamePlay.Player.Entity.Setup.Path;
 
 namespace GamePlay.Player.Entity.Components.Healths.Common
 {
     public class HealthRoutes
     {
-        private const string _root = PlayerAssetsPaths.Components + _name;
-        private const string _name = "Health";
+        private const string Root = PlayerComponentsRoutes.Root + Name;
+        private const string Name = "Health";
 
-        public const string ComponentName = PlayerAssetsPrefixes.Component + _name;
-        public const string ComponentPath = _root + "/Component";
+        public const string ComponentName = PlayerAssetsPrefixes.Component + Name;
+        public const string ComponentPath = Root + "/Component";
     }
 }

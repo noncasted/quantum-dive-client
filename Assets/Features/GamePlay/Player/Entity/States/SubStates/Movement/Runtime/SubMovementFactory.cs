@@ -9,7 +9,7 @@ using UnityEngine;
 namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime
 {
     [InlineEditor]
-    [CreateAssetMenu(fileName = MovementRoutes.StateName, menuName = MovementRoutes.StatePath)]
+    [CreateAssetMenu(fileName = SubMovementRoutes.StateName, menuName = SubMovementRoutes.StatePath)]
     public class SubMovementFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] [Indent] private RunAnimationFactory _runAnimation;

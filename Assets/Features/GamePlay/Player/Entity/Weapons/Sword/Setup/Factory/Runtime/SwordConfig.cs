@@ -1,6 +1,5 @@
-﻿using Features.GamePlay.Player.Entity.Equipment.Definition;
-using GamePlay.Player.Entity.Equipment.Abstract.Factory;
-using GamePlay.Player.Entity.Equipment.Slots.Storage.Abstract;
+﻿using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Local;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Remote;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Factory.Common;

@@ -1,19 +1,20 @@
 ﻿using GamePlay.Player.Entity.Setup.Path;
+using GamePlay.Player.Entity.States.Common;
 
 namespace GamePlay.Player.Entity.States.None.Common
 {
     public class NoneRoutes
     {
-        private const string _root = PlayerAssetsPaths.States + _name;
-        private const string _name = "None";
+        private const string Root = PlayerStatesRoutes.Root + Name;
+        private const string Name = "None";
 
-        public const string StateName = PlayerAssetsPrefixes.Component + _name;
-        public const string StatePath = _root + "/State";
+        public const string StateName = PlayerAssetsPrefixes.Component + Name;
+        public const string StatePath = Root + "/State";
 
-        public const string LogsName = PlayerAssetsPrefixes.Logs + _name;
-        public const string LogsPath = _root + "/Logs";
+        public const string LogsName = PlayerAssetsPrefixes.Logs + Name;
+        public const string LogsPath = Root + "/Logs";
         
-        public const string DefinitionName = PlayerAssetsPrefixes.Definition + _name;
-        public const string DefinitionPath = _root + "/Definition";
+        public const string DefinitionName = PlayerAssetsPrefixes.Definition + Name;
+        public const string DefinitionPath = Root + "/Definition";
     }
 }

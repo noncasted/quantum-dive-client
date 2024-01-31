@@ -3,7 +3,7 @@ using Common.Architecture.Container.Abstract;
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using GamePlay.Player.Entity.Equipment.Abstract.Factory;
+using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Services.Registries.Equipment.Common;
 using Sirenix.OdinInspector;
 using UnityEditor;

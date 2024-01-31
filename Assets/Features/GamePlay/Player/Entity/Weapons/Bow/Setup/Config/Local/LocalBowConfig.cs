@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Equipment.Definition;
+using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.ProjectilesAmount;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.ShotDelays;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Data.Runtime.Implementations.Spreadings;
@@ -61,9 +62,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Local
         [FoldoutGroup("Combat")] [SerializeField] [Indent]
         private StrafeInputFactory _strafesInput;
 
-        [SerializeField] private LocalBowViewFactory _prefab;
+        [SerializeField] private LocalBowViewFactoryFactory _prefab;
 
-        public EntitySetupView Prefab => _prefab;
+        public ScopedEntityViewFactory Prefab => _prefab;
 
         public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
         {
@@ -84,5 +85,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Local
             _strafes,
             _strafesInput
         };
+        
+        public IReadOnlyList<IComponentsCompose> Composes => Array.Empty<IComponentsCompose>();
     }
 }

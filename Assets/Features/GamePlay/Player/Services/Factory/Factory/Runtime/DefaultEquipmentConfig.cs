@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using GamePlay.Player.Entity.Equipment.Abstract.Factory;
+using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

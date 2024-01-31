@@ -1,16 +1,17 @@
 ﻿using GamePlay.Player.Entity.Setup.Path;
+using GamePlay.Player.Entity.States.Common;
 
 namespace GamePlay.Player.Entity.States.Floating.Common
 {
     public class FloatingRoutes
     {
-        private const string _root = PlayerAssetsPaths.States + _name;
-        private const string _name = "Floating";
+        private const string Root = PlayerStatesRoutes.Root + Name;
+        private const string Name = "Floating";
 
-        public const string StateName = PlayerAssetsPrefixes.Component + _name;
-        public const string StatePath = _root + "/State";
+        public const string StateName = PlayerAssetsPrefixes.Component + Name;
+        public const string StatePath = Root + "/State";
 
-        public const string LogsName = PlayerAssetsPrefixes.Logs + _name;
-        public const string LogsPath = _root + "/Logs";
+        public const string LogsName = PlayerAssetsPrefixes.Logs + Name;
+        public const string LogsPath = Root + "/Logs";
     }
 }

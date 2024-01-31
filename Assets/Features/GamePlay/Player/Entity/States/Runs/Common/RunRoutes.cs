@@ -1,31 +1,32 @@
 ﻿using GamePlay.Player.Entity.Setup.Path;
+using GamePlay.Player.Entity.States.Common;
 
 namespace GamePlay.Player.Entity.States.Runs.Common
 {
     public class RunRoutes
     {
-        private const string _root = PlayerAssetsPaths.States + _name;
-        private const string _name = "Run";
+        private const string Root = PlayerStatesRoutes.Root + Name;
+        private const string Name = "Run";
 
-        public const string LocalName = PlayerAssetsPrefixes.Component + _name;
-        public const string LocalPath = _root + "/Local";
+        public const string LocalName = PlayerAssetsPrefixes.Component + Name;
+        public const string LocalPath = Root + "/Local";
 
-        public const string RemoteName = PlayerAssetsPrefixes.Component + _name;
-        public const string RemotePath = _root + "/Remote";
+        public const string RemoteName = PlayerAssetsPrefixes.Component + Name;
+        public const string RemotePath = Root + "/Remote";
         
-        public const string ConfigName = PlayerAssetsPrefixes.Config + _name;
-        public const string ConfigPath = _root + "/Config";
+        public const string ConfigName = PlayerAssetsPrefixes.Config + Name;
+        public const string ConfigPath = Root + "/Config";
 
-        public const string LogsName = PlayerAssetsPrefixes.Logs + _name;
-        public const string LogsPath = _root + "/Logs";
+        public const string LogsName = PlayerAssetsPrefixes.Logs + Name;
+        public const string LogsPath = Root + "/Logs";
         
-        public const string DefinitionName = PlayerAssetsPrefixes.Definition + _name;
-        public const string DefinitionPath = _root + "/Definition";
+        public const string DefinitionName = PlayerAssetsPrefixes.Definition + Name;
+        public const string DefinitionPath = Root + "/Definition";
         
         public const string RunAnimationName = "Animation_Run";
-        public const string RunAnimationPath = _root + "/Animation/Run";
+        public const string RunAnimationPath = Root + "/Animation/Run";
         
         public const string WalkAnimationName = "Animation_Walk";
-        public const string WalkAnimationPath = _root + "/Animation/Walk";
+        public const string WalkAnimationPath = Root + "/Animation/Walk";
     }
 }

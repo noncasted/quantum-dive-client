@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Equipment.Definition;
+using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Remote;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Common;
 using GamePlay.Player.Entity.Weapons.Sword.Setup.Root.Runtime;
@@ -20,9 +21,9 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Remote
 
         [SerializeField] [Indent] private RemoteAttackFactory _attack;
 
-        [SerializeField] private RemoteSwordViewFactory _prefab;
+        [SerializeField] private RemoteSwordViewFactoryFactory _prefab;
 
-        public EntitySetupView Prefab => _prefab;
+        public ScopedEntityViewFactory Prefab => _prefab;
 
         public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
         {
@@ -30,5 +31,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Setup.Config.Remote
             _root,
             _attack
         };
+        
+        public IReadOnlyList<IComponentsCompose> Composes => Array.Empty<IComponentsCompose>();
     }
 }

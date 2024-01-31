@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Player.Entity.Equipment.Definition;
+using Features.GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Remote;
 using GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Common;
@@ -41,9 +42,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Remote
         [FoldoutGroup("Common")] [SerializeField] [Indent]
         private RemoteBowRotationFactory _rotation;
 
-        [SerializeField] private RemoteBowViewFactory _prefab;
+        [SerializeField] private RemoteBowViewFactoryFactory _prefab;
 
-        public EntitySetupView Prefab => _prefab;
+        public ScopedEntityViewFactory Prefab => _prefab;
 
         public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
         {
@@ -56,5 +57,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Setup.Config.Remote
             _projectileStarter,
             _rotation
         };
+        
+        public IReadOnlyList<IComponentsCompose> Composes => Array.Empty<IComponentsCompose>();
     }
 }

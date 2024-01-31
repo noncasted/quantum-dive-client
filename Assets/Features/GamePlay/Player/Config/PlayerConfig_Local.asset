@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22b38a7c9394e5083062612339bafde, type: 3}
   m_Name: PlayerConfig_Local
   m_EditorClassIdentifier: 
+  _defaultCallbacks: {fileID: 11400000, guid: 5d0520d060c8a3f41a91f33e17684e74, type: 2}
+  _entityProvider: {fileID: 0}
+  _root: {fileID: 0}
   _rotation: {fileID: 11400000, guid: 5550f8f1b1db89d4fb2d52f3487aefe2, type: 2}
   _stateMachine: {fileID: 11400000, guid: 9f0c65e507c6a68418b7f21f6dda1cd2, type: 2}
   _damageProcessor: {fileID: 11400000, guid: 9e389a317fc67dc4c8fe4d153c994b8a, type: 2}
@@ -36,3 +39,4 @@ MonoBehaviour:
   _remoteStateMachine: {fileID: 11400000, guid: 1faedbe54ee26654eb2f60c61114a79d, type: 2}
   _remoteEquipper: {fileID: 11400000, guid: de61473a6e8261f49a6d3d1a7906de06, type: 2}
   _remoteRun: {fileID: 11400000, guid: 9ab694a72b13edb428957658def0c344, type: 2}
+  _prefab: {fileID: 0}
