@@ -1,14 +1,25 @@
-﻿{
-  "name": "Common.UniversalAnimator.Tests",
-  "references": [
-    "GUID:9627fe5f4fd146c9a1a732e049da291f",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:699865ac82ed4bfc98e47c9342127ab0",
-    "GUID:aac41f60988d442497259de79205647b",
-    "GUID:92c45879a0f342a29c0e271981946ba1",
-    "GUID:6fe3e5bc5e27400aa7e27dded3e1e008",
-    "GUID:3e7167d9f58d47b7839bb3ce134a78f1",
-    "GUID:9f12b849425b4eee835913da917e6c20",
-    "GUID:3b2ea7622084434a927c413b7fc2fd3a"
-  ]
+{
+    "name": "Common.UniversalAnimator.Tests",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9627fe5f4fd146c9a1a732e049da291f",
+        "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
+        "GUID:699865ac82ed4bfc98e47c9342127ab0",
+        "GUID:aac41f60988d442497259de79205647b",
+        "GUID:92c45879a0f342a29c0e271981946ba1",
+        "GUID:6fe3e5bc5e27400aa7e27dded3e1e008",
+        "GUID:3e7167d9f58d47b7839bb3ce134a78f1",
+        "GUID:9f12b849425b4eee835913da917e6c20",
+        "GUID:3b2ea7622084434a927c413b7fc2fd3a",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
