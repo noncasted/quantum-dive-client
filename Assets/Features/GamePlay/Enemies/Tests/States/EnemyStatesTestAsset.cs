@@ -24,6 +24,7 @@ using GamePlay.VfxPools.Runtime;
 using Internal.Services.Scenes.Data;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 using VContainer.Unity;
 
 namespace GamePlay.Enemies.Tests.States
@@ -68,8 +69,8 @@ namespace GamePlay.Enemies.Tests.States
         [FoldoutGroup("Network")] [SerializeField]
         private PlayersRegistryFactory _playersRegistry;
 
-        [FoldoutGroup("Enemy")] [SerializeField]
-        private EnemiesRegistryFactory _enemiesRegistry;
+        [FormerlySerializedAs("_enemiesRegistry")] [FoldoutGroup("Enemy")] [SerializeField]
+        private EnemyListFactory _enemyList;
 
         [FoldoutGroup("Enemy")] [SerializeField]
         private EnemyFactoryServiceFactory _enemyFactory;
@@ -107,7 +108,7 @@ namespace GamePlay.Enemies.Tests.States
             _sceneCollector,
             _dynamicEntityFactory,
             _playersRegistry,
-            _enemiesRegistry,
+            _enemyList,
             _enemyFactory,
             _enemyDefinitionsRegistry,
             _enemyStateDefinitionsRegistry,

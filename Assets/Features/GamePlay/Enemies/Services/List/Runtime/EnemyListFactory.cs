@@ -9,14 +9,14 @@ using UnityEngine;
 namespace GamePlay.Enemies.Services.Registry.Runtime
 {
     [InlineEditor]
-    [CreateAssetMenu(fileName = EnemyRegistryRoutes.ServiceName,
-        menuName = EnemyRegistryRoutes.ServicePath)]
-    public class EnemiesRegistryFactory : ScriptableObject, IServiceFactory
+    [CreateAssetMenu(fileName = EnemyListRoutes.ServiceName,
+        menuName = EnemyListRoutes.ServicePath)]
+    public class EnemyListFactory : ScriptableObject, IServiceFactory
     {
         public async UniTask Create(IServiceCollection services, IScopeUtils utils)
         {
-            services.Register<EnemiesRegistry>()
-                .As<IEnemiesRegistry>();
+            services.Register<EnemyList>()
+                .As<IEnemyList>();
         }
     }
 }

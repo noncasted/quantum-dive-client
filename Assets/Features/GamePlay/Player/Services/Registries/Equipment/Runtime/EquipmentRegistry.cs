@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using Common.DataTypes.Collections.Common;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 
 namespace GamePlay.Player.Registries.Equipment.Runtime
@@ -7,33 +7,19 @@ namespace GamePlay.Player.Registries.Equipment.Runtime
     {
         public EquipmentRegistry(EquipmentConfig[] factories)
         {
-            var length = factories.Length;
-
-            var factoriesDictionary = new Dictionary<int, IEquipmentConfig>();
-            var idsDictionary = new Dictionary<IEquipmentConfig, int>();
-            
-            for (var i = 0; i < length; i++)
-            {
-                var factory = factories[i];
-                factoriesDictionary.Add(i, factory);
-                idsDictionary.Add(factory, i);
-            }
-
-            _factories = factoriesDictionary;
-            _ids = idsDictionary;
+            _configs = new DoubleSideIntDictionary<IEquipmentConfig>(factories);
         }
 
-        private readonly IReadOnlyDictionary<int, IEquipmentConfig> _factories;
-        private readonly IReadOnlyDictionary<IEquipmentConfig, int> _ids;
 
+        private readonly IDoubleSideDictionary<int, IEquipmentConfig> _configs;
         public int GetId(IEquipmentConfig config)
         {
-            return _ids[config];
+            return _configs.Keys[config];
         }
 
         public IEquipmentConfig GetFactory(int id)
         {
-            return _factories[id];
+            return _configs.Values[id];
         }
     }
 }

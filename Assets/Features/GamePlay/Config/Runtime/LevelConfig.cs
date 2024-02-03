@@ -22,7 +22,6 @@ using GamePlay.Network.Room.Lifecycle.Runtime;
 using GamePlay.Network.Room.SceneCollectors.Runtime;
 using GamePlay.Player.Factory.Factory.Runtime;
 using GamePlay.Player.List.Runtime;
-using GamePlay.Player.Provider.Runtime;
 using GamePlay.Player.Registries.Equipment.Runtime;
 using GamePlay.Player.Registries.States.Runtime;
 using GamePlay.Player.UI.Overlay.Runtime.Bootstrap;
@@ -32,6 +31,7 @@ using GamePlay.VfxPools.Runtime;
 using Internal.Services.Scenes.Data;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 using VContainer.Unity;
 
 namespace GamePlay.Config.Runtime
@@ -68,9 +68,6 @@ namespace GamePlay.Config.Runtime
         private PlayerFactoryServiceFactory _playerFactory;
 
         [FoldoutGroup("Player")] [SerializeField]
-        private PlayerProviderFactory _playerProvider;
-
-        [FoldoutGroup("Player")] [SerializeField]
         private EquipmentRegistryFactory _equipmentRegistry;
 
         [FoldoutGroup("Player")] [SerializeField]
@@ -100,8 +97,8 @@ namespace GamePlay.Config.Runtime
         [FoldoutGroup("Network")] [SerializeField]
         private PlayersRegistryFactory _playersRegistry;
 
-        [FoldoutGroup("Enemy")] [SerializeField]
-        private EnemiesRegistryFactory _enemiesRegistry;
+        [FormerlySerializedAs("_enemiesRegistry")] [FoldoutGroup("Enemy")] [SerializeField]
+        private EnemyListFactory _enemyList;
 
         [FoldoutGroup("Enemy")] [SerializeField]
         private EnemyFactoryServiceFactory _enemyFactory;
@@ -133,7 +130,6 @@ namespace GamePlay.Config.Runtime
             _ecs,
             _hitboxRegistry,
             _playerFactory,
-            _playerProvider,
             _equipmentRegistry,
             _statesRegistry,
             _targetRegistry,
@@ -146,7 +142,7 @@ namespace GamePlay.Config.Runtime
             _dynamicEntityFactory,
             _playersRegistry,
 
-            _enemiesRegistry,
+            _enemyList,
             _enemyFactory,
             _enemyDefinitionsRegistry,
             _enemyStateDefinitionsRegistry,

@@ -12,7 +12,6 @@ using GamePlay.Player.Factory.Factory.Logs;
 using GamePlay.Player.Factory.SpawnPoints;
 using GamePlay.Player.List.Definition;
 using GamePlay.Player.List.Runtime;
-using GamePlay.Player.Provider.Runtime;
 using Global.Network.Objects.Factories.Abstract;
 using Ragon.Client;
 using UnityEngine;
@@ -27,7 +26,6 @@ namespace GamePlay.Player.Factory.Factory.Runtime
             INetworkFactoriesRegistry factoriesRegistry,
             IScopedEntityFactory factory,
             IPlayersList playersList, 
-            IPlayerProvider playerProvider,
             LocalPlayerConfig localConfig,
             RemotePlayerConfig remoteConfig,
             LifetimeScope parentScope,
@@ -38,7 +36,6 @@ namespace GamePlay.Player.Factory.Factory.Runtime
             _factoriesRegistry = factoriesRegistry;
             _factory = factory;
             _playersList = playersList;
-            _playerProvider = playerProvider;
             _localConfig = localConfig;
             _remoteConfig = remoteConfig;
             _parentScope = parentScope;
@@ -50,7 +47,6 @@ namespace GamePlay.Player.Factory.Factory.Runtime
         private readonly INetworkFactoriesRegistry _factoriesRegistry;
         private readonly IScopedEntityFactory _factory;
         private readonly IPlayersList _playersList;
-        private readonly IPlayerProvider _playerProvider;
         private readonly LocalPlayerConfig _localConfig;
         private readonly RemotePlayerConfig _remoteConfig;
         private readonly LifetimeScope _parentScope;
@@ -94,8 +90,6 @@ namespace GamePlay.Player.Factory.Factory.Runtime
             var payload = new PlayerSpawnPayload(spawnPosition);
             await _dynamicEntityFactory.Send(entity, payload);
 
-            _playerProvider.AssignPlayer(root.Position, root.Health);
-            
             var player = new NetworkPlayer(entity, root);
             _playersList.Add(entity.Owner, player);
 

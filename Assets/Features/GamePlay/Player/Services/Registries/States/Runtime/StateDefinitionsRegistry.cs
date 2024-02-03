@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using Common.DataTypes.Collections.Common;
 using GamePlay.Player.Entity.States.Common;
 
 namespace GamePlay.Player.Registries.States.Runtime
@@ -7,33 +7,19 @@ namespace GamePlay.Player.Registries.States.Runtime
     {
         public StateDefinitionsRegistry(PlayerStateDefinition[] definitions)
         {
-            var length = definitions.Length;
-
-            var definitionsDictionary = new Dictionary<int, PlayerStateDefinition>();
-            var idsDictionary = new Dictionary<PlayerStateDefinition, int>();
-            
-            for (var i = 0; i < length; i++)
-            {
-                var definition = definitions[i];
-                definitionsDictionary.Add(i, definition);
-                idsDictionary.Add(definition, i);
-            }
-
-            _definitions = definitionsDictionary;
-            _ids = idsDictionary;
+            _definitions = new DoubleSideIntDictionary<PlayerStateDefinition>(definitions);
         }
 
-        private readonly IReadOnlyDictionary<int, PlayerStateDefinition> _definitions;
-        private readonly IReadOnlyDictionary<PlayerStateDefinition, int> _ids;
+        private readonly IDoubleSideDictionary<int, PlayerStateDefinition> _definitions;
 
         public int GetId(PlayerStateDefinition definition)
         {
-            return _ids[definition];
+            return _definitions.Keys[definition];
         }
 
         public PlayerStateDefinition GetDefinition(int id)
         {
-            return _definitions[id];
+            return _definitions.Values[id];
         }
     }
 }

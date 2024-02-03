@@ -1,14 +1,13 @@
 {
-    "name": "GamePlay.PlayerServices.EquipmentRegistry.Runtime",
+    "name": "GamePlay.Player.StatesRegistry.Runtime",
     "rootNamespace": "",
     "references": [
-        "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
-        "GUID:d50d054db0c44a67a9fafb28719ba0b4",
-        "GUID:fedc4140ebaf4ef6a78c67b850e47031",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
         "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-        "GUID:67f67dcce9d9e8a43a8e45bc1fe5534c",
+        "GUID:535b9a9a1cf5438b8493c1bda004ac65",
         "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:268868eb737e485ea3de7810633cbfc7"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
