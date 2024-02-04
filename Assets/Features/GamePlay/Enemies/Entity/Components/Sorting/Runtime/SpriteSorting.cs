@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.Components.Sorting.Runtime
 {
-    public class SpriteSorting : IEnemySwitchListener, IPostFixedUpdatable
+    public class SpriteSorting : IEntitySwitchListener, IPostFixedUpdatable
     {
         public SpriteSorting(
             IEnemySpriteLayer layer,

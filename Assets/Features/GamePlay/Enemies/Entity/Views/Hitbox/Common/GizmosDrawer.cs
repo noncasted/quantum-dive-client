@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.Views.Hitbox.Common
 {
-    public class GizmosDrawer : IEnemySwitchListener, IGizmosUpdatable
+    public class GizmosDrawer : IEntitySwitchListener, IGizmosUpdatable
     {
         public GizmosDrawer(
             IShapeDrawer shapeDrawer,

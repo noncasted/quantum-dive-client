@@ -33,9 +33,9 @@ namespace GamePlay.Enemies.Types.Melee.Config
         [SerializeField] private NetworkPropertiesFactory _networkPropertiesInjector;
         [SerializeField] private HealthFactory _health;
 
-        public override IEnemyComponentFactory[] GetAssets()
+        public override IComponentFactory[] GetAssets()
         {
-            return new IEnemyComponentFactory[]
+            return new IComponentFactory[]
             {
                 _remoteStateMachine,
                 _transformSync,

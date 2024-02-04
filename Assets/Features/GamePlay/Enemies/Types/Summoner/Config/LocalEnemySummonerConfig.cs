@@ -59,9 +59,9 @@ namespace GamePlay.Enemies.Types.Summoner.Config
         [FoldoutGroup("Remote")] [SerializeField]
         private TransformSyncFactory _transformSync;
 
-        public override IEnemyComponentFactory[] GetAssets()
+        public override IComponentFactory[] GetAssets()
         {
-            return new IEnemyComponentFactory[]
+            return new IComponentFactory[]
             {
                 _localStateMachine,
                 _targetSearcher,

@@ -9,11 +9,11 @@ namespace GamePlay.Enemies.Entity.Components.Health.Runtime
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyHealthRoutes.ComponentName,
         menuName = EnemyHealthRoutes.ComponentPath)]
-    public class HealthFactory : ScriptableObject, IEnemyComponentFactory
+    public class HealthFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private HealthConfig _config;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<Health>()
                 .WithParameter<IHealthConfig>(_config)

@@ -10,11 +10,11 @@ namespace GamePlay.Enemies.Entity.Views.Transforms.Remote.Runtime
     [InlineEditor]
     [CreateAssetMenu(fileName = TransformSyncRoutes.ServiceName,
         menuName = TransformSyncRoutes.ServicePath)]
-    public class TransformSyncFactory : ScriptableObject, IEnemyComponentFactory
+    public class TransformSyncFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private TransformSyncLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<TransformSyncLogger>()
                 .WithParameter(_logSettings);

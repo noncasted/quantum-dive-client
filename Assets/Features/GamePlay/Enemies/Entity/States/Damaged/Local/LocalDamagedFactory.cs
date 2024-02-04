@@ -9,13 +9,13 @@ namespace GamePlay.Enemies.Entity.States.Damaged.Local
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyDamagedRoutes.LocalName,
         menuName = EnemyDamagedRoutes.LocalPath)]
-    public class LocalDamagedFactory : ScriptableObject, IEnemyComponentFactory
+    public class LocalDamagedFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private DamagedPushConfig _pushConfig;
         [SerializeField] private DamagedAnimationFactory _animation;
         [SerializeField] private DamagedDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var animation = _animation.Create();
             

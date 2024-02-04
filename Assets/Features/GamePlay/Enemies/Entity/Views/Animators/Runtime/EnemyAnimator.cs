@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.Views.Animators.Runtime
 {
-    public class EnemyAnimator : IEnemyAnimator, IEnemySwitchListener
+    public class EnemyAnimator : IEnemyAnimator, IEntitySwitchListener
     {
         public EnemyAnimator(
             IAnimatorsUpdater animatorsUpdater,

@@ -10,9 +10,9 @@ namespace GamePlay.Enemies.Types.Range.States.StateSelector.Runtime
     [InlineEditor]
     [CreateAssetMenu(fileName = RangeStateSelectorRoutes.ComponentName,
         menuName = RangeStateSelectorRoutes.ComponentPath)]
-    public class RangeStateSelectorFactory : ScriptableObject, IEnemyComponentFactory
+    public class RangeStateSelectorFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<RangeStateSelector>()
                 .As<IStateSelector>();

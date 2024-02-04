@@ -9,12 +9,12 @@ namespace GamePlay.Enemies.Types.Range.States.Shoot.Remote
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyShootRoutes.RemoteName,
         menuName = EnemyShootRoutes.RemotePath)]
-    public class RemoteShootFactory : ScriptableObject, IEnemyComponentFactory
+    public class RemoteShootFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private ShootAnimationFactory _animation;
         [SerializeField] private ShootDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var animation = _animation.Create();
             

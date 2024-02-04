@@ -1,14 +1,14 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Cysharp.Threading.Tasks;
 using GamePlay.Common.Damages;
 using GamePlay.Enemies.Entity.Components.Health.Runtime;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
 using GamePlay.Enemies.Entity.States.Damaged.Local;
 using GamePlay.Enemies.Entity.States.Death.Local;
 using GamePlay.Enemies.Entity.Views.Hitbox.Local;
 
 namespace GamePlay.Enemies.Entity.Components.DamageProcessors.Runtime
 {
-    public class DamageProcessor : IEnemySwitchListener
+    public class DamageProcessor : IEntitySwitchListener
     {
         public DamageProcessor(
             IHitbox hitbox,

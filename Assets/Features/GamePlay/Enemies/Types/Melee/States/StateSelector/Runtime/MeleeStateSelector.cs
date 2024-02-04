@@ -12,7 +12,7 @@ namespace GamePlay.Enemies.Types.Melee.States.StateSelector.Runtime
 {
     public class MeleeStateSelector :
         IStateSelector,
-        IEnemySwitchListener,
+        IEntitySwitchListener,
         IEnemyStateSelectionUpdatable
     {
         public MeleeStateSelector(

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.Views.HealthBars.Runtime
 {
-    public class HealthBar : IEnemySwitchListener
+    public class HealthBar : IEntitySwitchListener
     {
         public HealthBar(IHealth health, Transform cellsRoot, HealthBarCell cellPrefab)
         {

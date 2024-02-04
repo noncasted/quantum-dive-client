@@ -9,7 +9,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Entity.Views.Transforms.Remote.Runtime
 {
-    public class TransformSync : RagonProperty, IEnemySwitchListener, IFixedUpdatable
+    public class TransformSync : RagonProperty, IEntitySwitchListener, IFixedUpdatable
     {
         protected TransformSync(
             IEnemyTransform transform,

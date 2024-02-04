@@ -10,7 +10,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Entity.States.Damaged.Remote
 {
-    public class RemoteDamaged : IEnemyRemoteState, IEnemySwitchListener
+    public class RemoteDamaged : IEnemyRemoteState, IEntitySwitchListener
     {
         public RemoteDamaged(
             IRemoteStateMachine stateMachine,

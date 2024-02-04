@@ -7,14 +7,14 @@ using UnityEngine;
 namespace GamePlay.Enemies.Entity.Views.RigidBodies.Runtime
 {
     [Serializable]
-    public class EnemyRigidBodyFactory : IEnemyComponentFactory
+    public class EnemyRigidBodyFactory : IComponentFactory
     {
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private CircleCollider2D _collider;
         [SerializeField] private LayerMask _layerMask;
         [SerializeField] private RigidBodyLogSettings _logSettings;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<RigidBodyLogger>()
                 .WithParameter(_logSettings);

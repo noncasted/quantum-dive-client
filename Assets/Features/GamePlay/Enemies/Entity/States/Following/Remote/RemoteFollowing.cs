@@ -7,7 +7,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Entity.States.Following.Remote
 {
-    public class RemoteFollowing : IEnemyRemoteState, IEnemySwitchListener
+    public class RemoteFollowing : IEnemyRemoteState, IEntitySwitchListener
     {
         public RemoteFollowing(
             IRemoteStateMachine stateMachine,

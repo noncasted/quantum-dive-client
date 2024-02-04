@@ -11,7 +11,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Types.Melee.States.Attack.Remote
 {
-    public class RemoteMeleeAttack : IEnemyRemoteState, IEnemySwitchListener
+    public class RemoteMeleeAttack : IEnemyRemoteState, IEntitySwitchListener
     {
         public RemoteMeleeAttack(
             IRemoteStateMachine stateMachine,

@@ -10,7 +10,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Entity.States.Respawn.Remote
 {
-    public class RemoteRespawn : IEnemyRemoteState, IEnemySwitchListener
+    public class RemoteRespawn : IEnemyRemoteState, IEntitySwitchListener
     {
         public RemoteRespawn(
             IRemoteStateMachine stateMachine,

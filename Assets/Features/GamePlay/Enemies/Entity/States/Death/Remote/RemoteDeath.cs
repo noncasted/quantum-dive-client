@@ -10,7 +10,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Entity.States.Death.Remote
 {
-    public class RemoteDeath : IEnemyRemoteState, IEnemySwitchListener
+    public class RemoteDeath : IEnemyRemoteState, IEntitySwitchListener
     {
         public RemoteDeath(
             IRemoteStateMachine stateMachine,

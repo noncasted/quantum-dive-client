@@ -7,7 +7,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Entity.States.Idle.Remote
 {
-    public class RemoteIdle : IEnemyRemoteState, IEnemySwitchListener
+    public class RemoteIdle : IEnemyRemoteState, IEntitySwitchListener
     {
         public RemoteIdle(
             IRemoteStateMachine stateMachine,

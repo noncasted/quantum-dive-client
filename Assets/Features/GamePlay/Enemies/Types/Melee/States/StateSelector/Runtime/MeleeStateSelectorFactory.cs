@@ -10,9 +10,9 @@ namespace GamePlay.Enemies.Types.Melee.States.StateSelector.Runtime
     [InlineEditor]
     [CreateAssetMenu(fileName = MeleeStateSelectorRoutes.ComponentName,
         menuName = MeleeStateSelectorRoutes.ComponentPath)]
-    public class MeleeStateSelectorFactory : ScriptableObject, IEnemyComponentFactory
+    public class MeleeStateSelectorFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<MeleeStateSelector>()
                 .As<IStateSelector>();

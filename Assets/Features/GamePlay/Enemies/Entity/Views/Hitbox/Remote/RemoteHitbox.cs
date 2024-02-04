@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.Views.Hitbox.Remote
 {
-    public class RemoteHitbox : IEnemySwitchListener, IDamageReceiver
+    public class RemoteHitbox : IEntitySwitchListener, IDamageReceiver
     {
         public RemoteHitbox(
             IHitboxRegistry hitboxRegistry,

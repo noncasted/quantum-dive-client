@@ -7,14 +7,14 @@ using UnityEngine;
 namespace GamePlay.Enemies.Entity.Views.Hitbox.Local
 {
     [Serializable]
-    public class EnemyLocalHitboxFactory : IEnemyComponentFactory
+    public class EnemyLocalHitboxFactory : IComponentFactory
     {
         [SerializeField] private HitboxConfig _hitboxConfig;
         [SerializeField] private Transform _origin;
         [SerializeField] private GizmosConfig _gizmosConfig;
         [SerializeField] private EnemyHitboxTrigger _trigger;
 
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<LocalHitbox>()
                 .WithParameter(_origin)

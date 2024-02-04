@@ -9,12 +9,12 @@ namespace GamePlay.Enemies.Entity.States.Idle.Local
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyIdleRoutes.LocalName,
         menuName = EnemyIdleRoutes.LocalPath)]
-    public class LocalIdleFactory : ScriptableObject, IEnemyComponentFactory
+    public class LocalIdleFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private IdleAnimationFactory _animation;
         [SerializeField] private IdleDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var animation = _animation.Create();
             

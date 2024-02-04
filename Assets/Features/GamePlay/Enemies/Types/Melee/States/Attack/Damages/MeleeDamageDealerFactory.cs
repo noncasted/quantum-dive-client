@@ -6,11 +6,11 @@ using UnityEngine;
 namespace GamePlay.Enemies.Types.Melee.States.Attack.Damages
 {
     [Serializable]
-    public class MeleeDamageDealerFactory : IEnemyComponentFactory
+    public class MeleeDamageDealerFactory : IComponentFactory
     {
         [SerializeField] private DamageTrigger _trigger;
 
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.RegisterComponent(_trigger)
                 .As<IDamageTrigger>();

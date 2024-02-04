@@ -12,14 +12,14 @@ namespace GamePlay.Enemies.Types.Melee.States.Attack.Local
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyMeleeAttackRoutes.LocalName,
         menuName = EnemyMeleeAttackRoutes.LocalPath)]
-    public class LocalMeleeAttackFactory : ScriptableObject, IEnemyComponentFactory
+    public class LocalMeleeAttackFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private MeleeAttackAnimationFactory _animation;
         [SerializeField] private MeleeAttackDefinition _definition;
         [SerializeField] private MeleeAttackConfig _config;
         [SerializeField] private MeleeAttackGizmosConfig _gizmosConfig;
 
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.RegisterInstance(_config)
                 .As<IMeleeAttackConfig>();

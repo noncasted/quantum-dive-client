@@ -10,7 +10,7 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime
     [InlineEditor]
     [CreateAssetMenu(fileName = LocalStateMachineRoutes.ComponentName,
         menuName = LocalStateMachineRoutes.ComponentPath)]
-    public class LocalStateMachineFactory : ScriptableObject, IEnemyComponentFactory
+    public class LocalStateMachineFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] [Indent] private LocalStateMachineLogSettings _logSettings;
 

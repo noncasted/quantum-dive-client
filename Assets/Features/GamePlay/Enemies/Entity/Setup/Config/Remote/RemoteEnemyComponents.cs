@@ -5,6 +5,6 @@ namespace GamePlay.Enemies.Entity.Setup.Config.Remote
 {
     public abstract class RemoteEnemyComponents : ScriptableObject
     {
-        public abstract IEnemyComponentFactory[] GetAssets();
+        public abstract IComponentFactory[] GetAssets();
     }
 }

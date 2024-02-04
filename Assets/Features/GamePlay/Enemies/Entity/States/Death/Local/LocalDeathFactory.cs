@@ -9,12 +9,12 @@ namespace GamePlay.Enemies.Entity.States.Death.Local
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyDeathRoutes.LocalName,
         menuName = EnemyDeathRoutes.LocalPath)]
-    public class LocalDeathFactory : ScriptableObject, IEnemyComponentFactory
+    public class LocalDeathFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private DeathAnimationFactory _animation;
         [SerializeField] private DeathDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var animation = _animation.Create();
 

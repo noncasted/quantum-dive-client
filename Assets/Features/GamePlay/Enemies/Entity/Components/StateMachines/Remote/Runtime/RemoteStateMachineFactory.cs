@@ -10,11 +10,11 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime
     [InlineEditor]
     [CreateAssetMenu(fileName = RemoteStateMachineRoutes.ComponentName,
         menuName = RemoteStateMachineRoutes.ComponentPath)]
-    public class RemoteStateMachineFactory : ScriptableObject, IEnemyComponentFactory
+    public class RemoteStateMachineFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private RemoteStateMachineLogSettings _logSettings;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<RemoteStateMachineLogger>()
                 .WithParameter(_logSettings);

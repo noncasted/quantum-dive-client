@@ -8,13 +8,13 @@ using UnityEngine.Rendering;
 namespace GamePlay.Enemies.Entity.Views.Sprites.Runtime
 {
     [Serializable]
-    public class EnemySpriteFactory : IEnemyComponentFactory
+    public class EnemySpriteFactory : IComponentFactory
     {
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private SortingGroup _sortingGroup;
         [SerializeField] private SpriteLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<SpriteLogger>()
                 .WithParameter(_logSettings);

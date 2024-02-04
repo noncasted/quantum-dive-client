@@ -7,12 +7,12 @@ using UnityEngine;
 namespace GamePlay.Enemies.Entity.Views.Animators.Runtime
 {
     [Serializable]
-    public class EnemyAnimatorFactory : IEnemyComponentFactory
+    public class EnemyAnimatorFactory : IComponentFactory
     {
         [SerializeField] private AnimatorLogSettings _logSettings;
         [SerializeField] private SpriteRenderer _spriteRenderer;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<AnimatorLogger>()
                 .WithParameter(_logSettings);

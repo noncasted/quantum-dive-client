@@ -9,7 +9,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Types.Range.States.Shoot.Remote
 {
-    public class RemoteShoot : IEnemyRemoteState, IEnemySwitchListener
+    public class RemoteShoot : IEnemyRemoteState, IEntitySwitchListener
     {
         public RemoteShoot(
             IRemoteStateMachine stateMachine,

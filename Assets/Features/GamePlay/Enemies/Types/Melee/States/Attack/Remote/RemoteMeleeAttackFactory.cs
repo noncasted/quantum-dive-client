@@ -11,13 +11,13 @@ namespace GamePlay.Enemies.Types.Melee.States.Attack.Remote
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyMeleeAttackRoutes.RemoteName,
         menuName = EnemyMeleeAttackRoutes.RemotePath)]
-    public class RemoteMeleeAttackFactory : ScriptableObject, IEnemyComponentFactory
+    public class RemoteMeleeAttackFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private MeleeAttackAnimationFactory _animation;
         [SerializeField] private MeleeAttackDefinition _definition;
         [SerializeField] private MeleeAttackConfig _config;
 
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var animation = _animation.Create();
 

@@ -9,12 +9,12 @@ namespace GamePlay.Enemies.Entity.States.Death.Remote
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyDeathRoutes.RemoteName,
         menuName = EnemyDeathRoutes.RemotePath)]
-    public class RemoteDeathFactory : ScriptableObject, IEnemyComponentFactory
+    public class RemoteDeathFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private DeathAnimationFactory _animation;
         [SerializeField] private DeathDefinition _definition;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             var animation = _animation.Create();
 

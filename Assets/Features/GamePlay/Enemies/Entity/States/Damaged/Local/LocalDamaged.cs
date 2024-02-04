@@ -14,7 +14,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.States.Damaged.Local
 {
-    public class LocalDamaged : IEnemySwitchListener, IDamaged, IEnemyLocalState
+    public class LocalDamaged : IEntitySwitchListener, IDamaged, IEnemyLocalState
     {
         public LocalDamaged(
             ILocalStateMachine localStateMachine,

@@ -9,13 +9,13 @@ namespace GamePlay.Enemies.Types.Range.States.Shoot.Local
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyShootRoutes.LocalName,
         menuName = EnemyShootRoutes.LocalPath)]
-    public class LocalShootFactory : ScriptableObject, IEnemyComponentFactory
+    public class LocalShootFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private ShootAnimationFactory _animation;
         [SerializeField] private ShootDefinition _definition;
         [SerializeField] private ShootConfig _config;
 
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<ShootTargetChecker>()
                 .WithParameter<IShootConfig>(_config)

@@ -6,11 +6,11 @@ using UnityEngine;
 namespace GamePlay.Enemies.Entity.Views.RotationPoint.Runtime
 {
     [Serializable]
-    public class EnemyRotationPointFactory : IEnemyComponentFactory
+    public class EnemyRotationPointFactory : IComponentFactory
     {
         [SerializeField] private Transform _rotationPoint;
 
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<EnemyRotationPoint>()
                 .As<IEnemyRotationPoint>()

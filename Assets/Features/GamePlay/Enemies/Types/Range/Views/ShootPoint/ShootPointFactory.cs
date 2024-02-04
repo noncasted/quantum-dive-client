@@ -6,11 +6,11 @@ using UnityEngine;
 namespace GamePlay.Enemies.Types.Range.Views.ShootPoint
 {
     [Serializable]
-    public class ShootPointFactory : IEnemyComponentFactory
+    public class ShootPointFactory : IComponentFactory
     {
         [SerializeField] private Transform _point;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<ShootPoint>()
                 .WithParameter(_point)

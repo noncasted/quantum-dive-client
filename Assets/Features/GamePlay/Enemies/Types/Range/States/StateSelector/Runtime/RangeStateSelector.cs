@@ -12,7 +12,7 @@ namespace GamePlay.Enemies.Types.Range.States.StateSelector.Runtime
 {
     public class RangeStateSelector :
         IStateSelector,
-        IEnemySwitchListener,
+        IEntitySwitchListener,
         IEnemyStateSelectionUpdatable
     {
         public RangeStateSelector(

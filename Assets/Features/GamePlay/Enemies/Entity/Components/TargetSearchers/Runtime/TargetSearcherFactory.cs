@@ -10,12 +10,12 @@ namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
     [InlineEditor]
     [CreateAssetMenu(fileName = TargetSearcherRoutes.ComponentName,
         menuName = TargetSearcherRoutes.ComponentPath)]
-    public class TargetSearcherFactory : ScriptableObject, IEnemyComponentFactory
+    public class TargetSearcherFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] [Indent] private TargetSearchConfig _config;
         [SerializeField] [Indent] private TargetSearchGizmosConfig _gizmosConfig;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<SearchGizmos>()
                 .WithParameter<ISearchGizmosConfig>(_gizmosConfig)

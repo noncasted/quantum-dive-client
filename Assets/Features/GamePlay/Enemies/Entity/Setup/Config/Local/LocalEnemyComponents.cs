@@ -5,6 +5,6 @@ namespace GamePlay.Enemies.Entity.Setup.Config.Local
 {
     public abstract class LocalEnemyComponents : ScriptableObject
     {
-        public abstract IEnemyComponentFactory[] GetAssets();
+        public abstract IComponentFactory[] GetAssets();
     }
 }

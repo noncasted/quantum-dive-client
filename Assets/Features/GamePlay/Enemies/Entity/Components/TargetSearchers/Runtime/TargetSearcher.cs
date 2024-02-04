@@ -15,7 +15,7 @@ namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
         ITargetSearcher,
         IEnemyTargetSearchUpdatable,
         ITargetProvider,
-        IEnemySwitchListener
+        IEntitySwitchListener
     {
         public TargetSearcher(
             ITargetPlayerRegistry targetRegistry,

@@ -7,12 +7,12 @@ using UnityEngine;
 namespace GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime
 {
     [Serializable]
-    public class EnemyTransformFactory : IEnemyComponentFactory
+    public class EnemyTransformFactory : IComponentFactory
     {
         [SerializeField] private Transform _transform;
         [SerializeField] private TransformLogSettings _logSettings;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<TransformLogger>()
                 .WithParameter(_logSettings);

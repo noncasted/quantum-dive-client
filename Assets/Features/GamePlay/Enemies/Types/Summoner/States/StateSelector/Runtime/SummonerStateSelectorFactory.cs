@@ -10,9 +10,9 @@ namespace GamePlay.Enemies.Types.Summoner.States.StateSelector.Runtime
     [InlineEditor]
     [CreateAssetMenu(fileName = SummonerStateSelectorRoutes.ComponentName,
         menuName = SummonerStateSelectorRoutes.ComponentPath)]
-    public class SummonerStateSelectorFactory : ScriptableObject, IEnemyComponentFactory
+    public class SummonerStateSelectorFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<SummonerStateSelector>()
                 .As<IStateSelector>();

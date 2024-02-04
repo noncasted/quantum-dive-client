@@ -7,11 +7,11 @@ using UnityEngine;
 namespace GamePlay.Enemies.Entity.Views.AIPaths
 {
     [Serializable]
-    public class EnemyAIPathFactory : IEnemyComponentFactory
+    public class EnemyAIPathFactory : IComponentFactory
     {
         [SerializeField] private AIPath _ai;
         
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             _ai.canMove = false;
             

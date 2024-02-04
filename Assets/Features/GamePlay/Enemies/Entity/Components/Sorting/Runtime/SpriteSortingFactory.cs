@@ -9,11 +9,11 @@ namespace GamePlay.Enemies.Entity.Components.Sorting.Runtime
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemySpriteSortingRoutes.ComponentName,
         menuName = EnemySpriteSortingRoutes.ComponentPath)]
-    public class SpriteSortingFactory : ScriptableObject, IEnemyComponentFactory
+    public class SpriteSortingFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private SpriteSortingConfig _config;
 
-        public void Create(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<SpriteSorting>()
                 .WithParameter(_config)

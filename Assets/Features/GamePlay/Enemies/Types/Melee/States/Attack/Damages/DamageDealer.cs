@@ -5,7 +5,7 @@ using GamePlay.Enemies.Types.Melee.States.Attack.Common.Config;
 
 namespace GamePlay.Enemies.Types.Melee.States.Attack.Damages
 {
-    public class DamageDealer : IEnemySwitchListener
+    public class DamageDealer : IEntitySwitchListener
     {
         public DamageDealer(
             IDamageTrigger trigger,

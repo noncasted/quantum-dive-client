@@ -9,7 +9,7 @@ namespace GamePlay.Enemies.Entity.Views.RigidBodies.Runtime
 {
     public class EnemyRigidBody : 
         IEnemyRigidBody,
-        IEnemySwitchListener,
+        IEntitySwitchListener,
         IFixedUpdatable
     {
         public EnemyRigidBody(
