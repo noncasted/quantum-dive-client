@@ -1,12 +1,15 @@
 ﻿using System;
+using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemies.Entity.Components.StateSelectors;
 using GamePlay.Enemies.Entity.Network.EntityHandler;
 using GamePlay.Enemies.Entity.Network.Properties.Runtime;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
 using GamePlay.Enemies.Entity.States.Death.Local;
 using GamePlay.Enemies.Entity.States.Respawn.Local;
+using GamePlay.Enemies.Entity.Views.GameObjects;
+using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
 using Ragon.Client;
 using UnityEngine;
 
@@ -15,104 +18,76 @@ namespace GamePlay.Enemies.Entity.Setup.Root.Local
     public class LocalEnemyRoot : ILocalEnemyRoot
     {
         public LocalEnemyRoot(
-            IEnemyEventLoop eventLoop,
             IEntityProvider entityProvider,
-            INetworkPropertiesBinder networkPropertiesBinder,
             IStateSelector stateSelector,
             IRespawn respawn,
-            IDeath death,
-            GameObject gameObject)
+            IEntityCallbacks callbacks,
+            IEnemyTransform transform,
+            IEnemyGameObject gameObject)
         {
-            _eventLoop = eventLoop;
             _entityProvider = entityProvider;
-            _networkPropertiesBinder = networkPropertiesBinder;
             _stateSelector = stateSelector;
             _respawn = respawn;
-            _death = death;
+            _callbacks = callbacks;
+            _transform = transform;
             _gameObject = gameObject;
         }
 
-        private readonly IEnemyEventLoop _eventLoop;
         private readonly IEntityProvider _entityProvider;
-        private readonly INetworkPropertiesBinder _networkPropertiesBinder;
         private readonly IStateSelector _stateSelector;
         private readonly IRespawn _respawn;
-        private readonly IDeath _death;
-        private readonly GameObject _gameObject;
+        private readonly IEntityCallbacks _callbacks;
+        private readonly IEnemyTransform _transform;
+        private readonly IEnemyGameObject _gameObject;
 
         private bool _isActive;
-        private Action<IPoolObject> _returnToPool;
+        private ILifetime _lifetime;
 
-        public GameObject GameObject => _gameObject;
+        public IEntityCallbacks Callbacks => _callbacks;
 
-        public void Construct(Action<IPoolObject> returnToPool)
-        {
-            _returnToPool = returnToPool;
-        }
-
-        public async UniTask OnBootstrapped()
-        {
-            _eventLoop.InvokeAwake();
-
-            _isActive = true;
-        }
-
-        public void OnBeforeAttach(RagonEntity entity)
-        {
-            _entityProvider.SetEntity(entity);
-            _networkPropertiesBinder.BindProperties();
-            _eventLoop.InvokeEnable();
-        }
-
-        public async UniTask OnAttached()
-        {
-            _eventLoop.InvokeEntityAttached();
-
-            await _respawn.Enter();
-            
-            _stateSelector.Start();
-        }
-
-        public void OnTaken()
-        {
-            _death.Died += OnDied;
-        }
-
-        public void OnReturned()
-        {
-            _entityProvider.DestroyEntity();
-            _death.Died -= OnDied;
-
-            _eventLoop.InvokeDisable();
-        }
-
-        public void Enable()
+        public async UniTask Enable(RagonEntity entity, Vector2 position)
         {
             if (_isActive == true)
             {
-                Debug.LogError("Enemy can't be enabled twice");
+                Debug.LogError("Player can't be enabled twice");
                 return;
             }
 
             _isActive = true;
-            _eventLoop.InvokeEnable();
+            
+            _entityProvider.Construct(entity);
+            
+            if (_lifetime != null)
+                await _lifetime.Terminate();
+
+            _lifetime = new Lifetime();
+            await _callbacks.RunEnable(_lifetime);
+            
+            _gameObject.Enable();
+            _transform.SetPosition(position);
         }
 
-        public void Disable()
+        public async UniTask Disable()
         {
             if (_isActive == false)
             {
-                Debug.LogError("Enemy can't be disabled twice");
+                Debug.LogError("Player can't be disabled twice");
                 return;
             }
 
             _isActive = false;
-            _eventLoop.InvokeDisable();
+            _gameObject.Disable();
+            _transform.SetPosition(Vector2.zero);
+
+            await _lifetime.Terminate();
+            await _callbacks.RunDisable();
         }
-        
-        private void OnDied()
+
+        public async UniTask Respawn()
         {
-            _returnToPool?.Invoke(this);
+            await _respawn.Enter();
+            
+            _stateSelector.Start();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using GamePlay.Enemies.Entity.Setup.EventLoop;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Global.Debugs.Drawing.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;

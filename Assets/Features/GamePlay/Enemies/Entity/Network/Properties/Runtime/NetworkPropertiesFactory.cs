@@ -1,6 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
 using GamePlay.Enemies.Entity.Network.Properties.Common;
-using GamePlay.Enemies.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ namespace GamePlay.Enemies.Entity.Network.Properties.Runtime
         public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<NetworkPropertiesBinder>()
-                .As<INetworkPropertiesBinder>();
+                .AsCallbackListener();
         }
     }
 }

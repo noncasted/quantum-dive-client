@@ -1,17 +1,26 @@
-﻿{
-  "name": "GamePlay.Enemy.Transform.Remote.Runtime",
-  "references": [
-    "GUID:4cb33ddb764f4a22986b78f754fe0bc5",
-    "GUID:04243451437dcfe48b583ab43ef0a8fa",
-    "GUID:2df1bee7daecc7546bbfd10daa1cf6b3",
-    "GUID:672c847731364869b84f35653f1f6b42",
-    "GUID:e6579f5da6f22eb42869badd62086205",
-            "GUID:a6bee730cad343c7ac8840da91376019",
-        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+{
+    "name": "GamePlay.Enemy.Transform.Remote.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:04243451437dcfe48b583ab43ef0a8fa",
+        "GUID:2df1bee7daecc7546bbfd10daa1cf6b3",
+        "GUID:2bab53ca096531746a970188315676b8",
+        "GUID:e6579f5da6f22eb42869badd62086205",
+        "GUID:a6bee730cad343c7ac8840da91376019",
         "GUID:3b2ea7622084434a927c413b7fc2fd3a",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-    "GUID:9dbb808b958bccb4c86646297c37a97d",
-    "GUID:954bed7845ef3b94c8f2d8ca3cd76154"
-  ]
+        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+        "GUID:9dbb808b958bccb4c86646297c37a97d",
+        "GUID:954bed7845ef3b94c8f2d8ca3cd76154",
+        "GUID:5be6262f59e0487f8f55e7b4b6358c57"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

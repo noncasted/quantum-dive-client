@@ -1,6 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs;
-using GamePlay.Enemies.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Enemies.Entity.Views.Animators.Logs;
 using GamePlay.Enemies.Entity.Views.RigidBodies.Logs;
 using GamePlay.Enemies.Entity.Views.Sprites.Logs;
@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.Debugs.Flags
 {
-    public class EnemyDebugFlags : MonoBehaviour, IEnemyContainerBuilder
+    public class EnemyDebugFlags : MonoBehaviour, IComponentFactory
     {
         [SerializeField] private LocalTransformDebugFlag _localTransform;
         [SerializeField] private RemoteTransformDebugFlag _remoteTransform;
@@ -19,7 +19,7 @@ namespace GamePlay.Enemies.Entity.Debugs.Flags
         [SerializeField] private RigidBodyDebugFlag _rigidBody;
         [SerializeField] private RemoteStateMachineDebugFlag _remoteStateMachine;
         
-        public void OnBuild(IServiceCollection services, ICallbackRegistry callbacks)
+        public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.RegisterInstance(_localTransform);
             services.RegisterInstance(_remoteTransform);

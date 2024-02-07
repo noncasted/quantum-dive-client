@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Enemies.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Enemies.Entity.States.Damaged.Vfx;
 using GamePlay.Enemies.Entity.Views.AIPaths;
 using GamePlay.Enemies.Entity.Views.Animators.Runtime;
@@ -14,7 +14,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.Views.Bootstrap.Local
 {   
-    public class LocalEnemyViews : MonoBehaviour, IEnemyContainerBuilder
+    public class LocalEnemyViews : ScopedEntityViewFactory, IEntityViewFactory
     {
         [SerializeField] private EnemyAnimatorFactory _animator;
         [SerializeField] private EnemyRotationPointFactory _rotationPoint;
@@ -27,18 +27,18 @@ namespace GamePlay.Enemies.Entity.Views.Bootstrap.Local
         [SerializeField] private EnemyRigidBodyFactory _rigidBody;
         [SerializeField] private HealthBarFactory _healthBar;
 
-        public void OnBuild(IServiceCollection services, ICallbackRegistry callbacks)
+        public override void CreateViews(IServiceCollection services, IEntityUtils utils)
         {
-            _animator.Create(services, callbacks);
-            _rotationPoint.Create(services, callbacks);
-            _sprite.Create(services, callbacks);
-            _transform.Create(services, callbacks);
-            _object.Create(services, callbacks);
-            _aiPath.Create(services, callbacks);
-            _enemyLocalHitbox.Create(services, callbacks);
-            _damagedVfx.Create(services, callbacks);
-            _rigidBody.Create(services, callbacks);
-            _healthBar.Create(services, callbacks);
+            _animator.Create(services, utils);
+            _rotationPoint.Create(services, utils);
+            _sprite.Create(services, utils);
+            _transform.Create(services, utils);
+            _object.Create(services, utils);
+            _aiPath.Create(services, utils);
+            _enemyLocalHitbox.Create(services, utils);
+            _damagedVfx.Create(services, utils);
+            _rigidBody.Create(services, utils);
+            _healthBar.Create(services, utils);
         }
     }
 }

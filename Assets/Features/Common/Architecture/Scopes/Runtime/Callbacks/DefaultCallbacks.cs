@@ -14,7 +14,7 @@ namespace Common.Architecture.Scopes.Runtime.Callbacks
         UniTask OnAwakeAsync();
     }
 
-    public interface ILifetimeListener
+    public interface IScopeLifetimeListener
     {
         void OnLifetimeCreated(ILifetime lifetime);
     }

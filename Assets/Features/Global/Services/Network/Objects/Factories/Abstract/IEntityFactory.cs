@@ -8,6 +8,5 @@ namespace Global.Network.Objects.Factories.Abstract
         ushort Id { get; }
 
         UniTaskVoid OnRemoteCreated(int objectId, RagonEntity entity);
-        void AssignId(ushort id);
     }
 }

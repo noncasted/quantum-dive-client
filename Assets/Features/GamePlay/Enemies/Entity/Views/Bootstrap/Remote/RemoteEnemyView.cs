@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Enemies.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Enemies.Entity.States.Damaged.Vfx;
 using GamePlay.Enemies.Entity.Views.Animators.Runtime;
 using GamePlay.Enemies.Entity.Views.GameObjects;
@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.Views.Bootstrap.Remote
 {
-    public class RemoteEnemyView : MonoBehaviour, IEnemyContainerBuilder
+    public class RemoteEnemyView : ScopedEntityViewFactory, IEntityViewFactory
     {
         [SerializeField] private EnemyAnimatorFactory _animator;
         [SerializeField] private EnemySpriteFactory _sprite;
@@ -21,15 +21,15 @@ namespace GamePlay.Enemies.Entity.Views.Bootstrap.Remote
         [SerializeField] private DamagedVfxFactory _damagedVfx;
         [SerializeField] private HealthBarFactory _healthBar;
 
-        public void OnBuild(IServiceCollection services, ICallbackRegistry callbacks)
+        public override void CreateViews(IServiceCollection services, IEntityUtils utils)
         {
-            _animator.Create(services, callbacks);
-            _sprite.Create(services, callbacks);
-            _transform.Create(services, callbacks);
-            _object.Create(services, callbacks);
-            _hitbox.Create(services, callbacks);
-            _damagedVfx.Create(services, callbacks);
-            _healthBar.Create(services, callbacks);
+            _animator.Create(services, utils);
+            _sprite.Create(services, utils);
+            _transform.Create(services, utils);
+            _object.Create(services, utils);
+            _hitbox.Create(services, utils);
+            _damagedVfx.Create(services, utils);
+            _healthBar.Create(services, utils);
         }
     }
 }

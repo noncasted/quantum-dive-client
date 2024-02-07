@@ -1,15 +1,16 @@
 ﻿using System;
+using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Common.Damages;
-using GamePlay.Enemies.Entity.Network.EntityHandler;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
 using GamePlay.Enemies.Entity.Views.Hitbox.Common;
 using GamePlay.Hitboxes.Runtime;
 using Ragon.Client;
 using UnityEngine;
+using IEntityEvents = GamePlay.Enemies.Entity.Network.EntityHandler.IEntityEvents;
 
 namespace GamePlay.Enemies.Entity.Views.Hitbox.Local
 {
-    public class LocalHitbox : IDamageReceiver, IHitbox, IEnemyAttachListener
+    public class LocalHitbox : IDamageReceiver, IHitbox, IEntitySwitchLifetimeListener
     {
         public LocalHitbox(
             IHitboxRegistry hitboxRegistry,
@@ -40,9 +41,9 @@ namespace GamePlay.Enemies.Entity.Views.Hitbox.Local
 
         public event Action<Damage> DamageReceived;
         
-        public void OnEntityAttached()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _events.ListenEvent<EnemyDamageReceivedEvent>(OnRemoteDamageReceived);
+            _events.ListenEvent<EnemyDamageReceivedEvent>(lifetime, OnRemoteDamageReceived);
         }
         
         public void Enable()

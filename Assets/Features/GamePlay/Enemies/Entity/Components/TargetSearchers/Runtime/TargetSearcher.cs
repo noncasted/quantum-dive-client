@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading;
+using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemies.Entity.Components.TargetSearchers.Debug.Gizmos;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
 using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Enemies.Services.Updater.Runtime;
 using GamePlay.Enemies.Services.Updater.Runtime.Updatables;

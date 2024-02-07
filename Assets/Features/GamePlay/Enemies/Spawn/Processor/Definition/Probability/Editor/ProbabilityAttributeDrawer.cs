@@ -15,8 +15,8 @@ namespace GamePlay.Enemies.Spawn.Processor.Definition.Probability.Editor
 {
     public class ProbabilityAttributeDrawer : OdinAttributeDrawer<EnemyProbabilityAttribute>
     {
-        private readonly Dictionary<EnemyDefinition, Texture> _icons = new();
-        private readonly Dictionary<int, EnemyDefinition> _indexMap = new();
+        private readonly Dictionary<IEnemyDefinition, Texture> _icons = new();
+        private readonly Dictionary<int, IEnemyDefinition> _indexMap = new();
 
         private bool _isDragged = false;
         private int _selectedId;
@@ -47,9 +47,9 @@ namespace GamePlay.Enemies.Spawn.Processor.Definition.Probability.Editor
 
             foreach (var definition in _registry.Definitions)
             {
-                _icons[definition] = definition.EditorIcon;
+                _icons[definition] = definition.EditorData.EditorIcon;
                     
-                switchResolver.TryAdd(definition, false);
+                switchResolver.TryAdd((EnemyDefinition)definition, false);
             }
         }
 
@@ -67,10 +67,10 @@ namespace GamePlay.Enemies.Spawn.Processor.Definition.Probability.Editor
 
                 foreach (var target in _registry.Definitions)
                 {
-                    if (values.ContainsKey(target) == false)
+                    if (values.ContainsKey((EnemyDefinition)target) == false)
                         continue;
 
-                    values[target] = delta;
+                    values[(EnemyDefinition)target] = delta;
                 }
             }
 
@@ -216,8 +216,8 @@ namespace GamePlay.Enemies.Spawn.Processor.Definition.Probability.Editor
 
             var delta = target - origin;
 
-            var selected = _indexMap[_selectedId];
-            var next = _indexMap[_selectedId + 1];
+            var selected = (EnemyDefinition)_indexMap[_selectedId];
+            var next = (EnemyDefinition)_indexMap[_selectedId + 1];
 
             var selectedValue = values[selected];
             var nextValue = values[next];

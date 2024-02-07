@@ -1,5 +1,5 @@
-﻿using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemies.Entity.States.Abstract;
 using GamePlay.Enemies.Entity.States.Idle.Common;
 using GamePlay.Enemies.Entity.Views.Animators.Runtime;

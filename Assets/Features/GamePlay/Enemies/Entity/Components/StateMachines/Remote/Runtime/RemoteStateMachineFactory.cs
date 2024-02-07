@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Container.Abstract;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Common;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs;
-using GamePlay.Enemies.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

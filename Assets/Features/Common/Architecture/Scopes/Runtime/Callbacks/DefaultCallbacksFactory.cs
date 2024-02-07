@@ -25,7 +25,7 @@ namespace Common.Architecture.Scopes.Runtime.Callbacks
             AddConstruct<IScopeAwakeListener>(listener => listener.OnAwake(), 1000);
             AddAsyncConstruct<IScopeAwakeAsyncListener>(listener => listener.OnAwakeAsync(), 2000);
             
-            AddSetupComplete<ILifetimeListener>(listener => listener.OnLifetimeCreated(data.Lifetime), 0);
+            AddSetupComplete<IScopeLifetimeListener>(listener => listener.OnLifetimeCreated(data.Lifetime), 0);
             AddSetupComplete<IScopeEnableListener>(listener => listener.OnEnabled(), 1000);
             AddAsyncSetupComplete<IScopeEnableAsyncListener>(listener => listener.OnEnabledAsync(), 2000);
             AddSetupComplete<IScopeLoadListener>(listener => listener.OnLoaded(), 3000);

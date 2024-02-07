@@ -12,5 +12,15 @@ namespace GamePlay.Enemies.Entity.Views.GameObjects
         private readonly GameObject _gameObject;
 
         public string Name => _gameObject.name;
+        
+        public void Enable()
+        {
+            _gameObject.SetActive(true);
+        }
+
+        public void Disable()
+        {
+            _gameObject.SetActive(false);
+        }
     }
 }

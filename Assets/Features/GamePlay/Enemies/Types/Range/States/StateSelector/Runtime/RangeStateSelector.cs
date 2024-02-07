@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Enemies.Entity.Components.StateSelectors;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
 using GamePlay.Enemies.Entity.States.Abstract;
 using GamePlay.Enemies.Entity.States.Following.Local;
 using GamePlay.Enemies.Entity.States.Idle.Local;

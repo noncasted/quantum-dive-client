@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Common.Architecture.Lifetimes;
 using Common.Architecture.Scopes.Runtime.Callbacks;
 using Global.Network.Objects.EntityListeners.Runtime;
 using Global.Network.Objects.Factories.Abstract;
@@ -29,18 +30,14 @@ namespace GamePlay.Network.Objects.Factories.Registry
             _entityListener.EntityReceived -= OnEntityReceived;
         }
 
-        public void Register(IEntityFactory factory)
+        public ushort Register(IEntityFactory factory, ILifetime lifetime)
         {
             _counter++;
-
-            factory.AssignId(_counter);
-
             _factories.Add(factory.Id, factory);
-        }
-
-        public void Unregister(IEntityFactory factory)
-        {
-            _factories.Remove(factory.Id);
+            
+            lifetime.ListenTerminate(() => _factories.Remove(factory.Id));
+            
+            return _counter;
         }
         
         private void OnEntityReceived(EntityPrefabId id, RagonEntity entity)

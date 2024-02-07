@@ -1,9 +1,9 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.DataTypes.Structs;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
 using GamePlay.Enemies.Entity.States.Abstract;
 using GamePlay.Enemies.Entity.States.Damaged.Common;
 using GamePlay.Enemies.Entity.States.Damaged.Vfx;

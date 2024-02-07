@@ -1,20 +1,28 @@
-﻿{
-  "name": "GamePlay.Enemy.Death.Local",
-  "references": [
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    "GUID:8265c01205983f8408e9dbff4433b2ff",
-    "GUID:10b508286ef3b1d498113145693b7dfb",
-    "GUID:52182ac2492995c469034815920266b8",
-    "GUID:ff180aed7f354b76b29b9ee36cd5e382",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:b0275d8a7d994d97ae1652be17935f0f",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:699865ac82ed4bfc98e47c9342127ab0",
-            "GUID:a6bee730cad343c7ac8840da91376019",
+{
+    "name": "GamePlay.Enemy.Death.Local",
+    "rootNamespace": "",
+    "references": [
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:8265c01205983f8408e9dbff4433b2ff",
+        "GUID:10b508286ef3b1d498113145693b7dfb",
+        "GUID:52182ac2492995c469034815920266b8",
+        "GUID:ff180aed7f354b76b29b9ee36cd5e382",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0275d8a7d994d97ae1652be17935f0f",
+        "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
+        "GUID:699865ac82ed4bfc98e47c9342127ab0",
+        "GUID:a6bee730cad343c7ac8840da91376019",
         "GUID:e07e6ccd9241474dbca4e70862df2bc2",
         "GUID:3b2ea7622084434a927c413b7fc2fd3a",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-    "GUID:287b9d77b8b64c619022dca7d594289e"
-  ]
+        "GUID:287b9d77b8b64c619022dca7d594289e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

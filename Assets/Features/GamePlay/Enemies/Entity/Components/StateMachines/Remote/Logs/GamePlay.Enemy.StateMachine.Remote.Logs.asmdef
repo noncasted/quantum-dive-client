@@ -1,7 +1,7 @@
 ﻿{
   "name": "GamePlay.Enemy.StateMachine.Remote.Logs",
   "references": [
-    "GUID:672c847731364869b84f35653f1f6b42",
+    "GUID:2bab53ca096531746a970188315676b8",
     "GUID:fe4adae493555af4788e53948d7966ca",
     "GUID:419803bd3a429ca458bc39e73d8fea2c",
     "GUID:94e5ca42c58876942a8ffdd1c63b952f",

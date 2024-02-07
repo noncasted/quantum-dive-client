@@ -1,6 +1,6 @@
-﻿using Common.DataTypes.Network;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.DataTypes.Network;
 using GamePlay.Enemies.Entity.Network.EntityHandler;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
 using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Enemies.Entity.Views.Transforms.Remote.Logs;
 using Global.System.Updaters.Runtime.Abstract;

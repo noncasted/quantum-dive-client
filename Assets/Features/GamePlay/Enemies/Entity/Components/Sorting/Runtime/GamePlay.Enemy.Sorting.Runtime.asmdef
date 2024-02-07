@@ -1,16 +1,25 @@
-﻿{
-  "name": "GamePlay.Enemy.Sorting.Runtime",
-  "references": [
-    "GUID:802134de53c145c4a1157594a96b0339",
-    "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
-    "GUID:4cb33ddb764f4a22986b78f754fe0bc5",
-    "GUID:04243451437dcfe48b583ab43ef0a8fa",
-    "GUID:52182ac2492995c469034815920266b8",
-    "GUID:2df1bee7daecc7546bbfd10daa1cf6b3",
-            "GUID:a6bee730cad343c7ac8840da91376019",
-        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+{
+    "name": "GamePlay.Enemy.Sorting.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:802134de53c145c4a1157594a96b0339",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:04243451437dcfe48b583ab43ef0a8fa",
+        "GUID:52182ac2492995c469034815920266b8",
+        "GUID:2df1bee7daecc7546bbfd10daa1cf6b3",
+        "GUID:a6bee730cad343c7ac8840da91376019",
         "GUID:3b2ea7622084434a927c413b7fc2fd3a",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2"
-  ]
+        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+        "GUID:5be6262f59e0487f8f55e7b4b6358c57"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

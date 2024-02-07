@@ -1,6 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
 using GamePlay.Enemies.Entity.Components.StateSelectors;
-using GamePlay.Enemies.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Enemies.Types.Summoner.States.StateSelector.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;

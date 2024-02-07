@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
+using Common.Architecture.Entities.Common.DefaultCallbacks;
 using GamePlay.Enemies.Entity.Components.Health.Runtime;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
 using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.Views.HealthBars.Runtime

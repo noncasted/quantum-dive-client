@@ -1,10 +1,10 @@
-﻿using Global.Network.Objects.Factories.Abstract;
+﻿using Common.Architecture.Lifetimes;
+using Global.Network.Objects.Factories.Abstract;
 
 namespace GamePlay.Network.Objects.Factories.Registry
 {
     public interface INetworkFactoriesRegistry
     {
-        void Register(IEntityFactory factory);
-        void Unregister(IEntityFactory factory);
+        ushort Register(IEntityFactory factory, ILifetime lifetime);
     }
 }

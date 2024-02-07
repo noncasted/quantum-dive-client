@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Enemies.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Enemies.Types.Melee.States.Attack.Common;
 using GamePlay.Enemies.Types.Melee.States.Attack.Common.Animation;
 using GamePlay.Enemies.Types.Melee.States.Attack.Common.Config;

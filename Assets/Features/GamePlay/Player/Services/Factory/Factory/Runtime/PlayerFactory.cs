@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Runtime;
+using Common.Architecture.Lifetimes;
 using Common.Architecture.Scopes.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
@@ -19,13 +20,13 @@ using VContainer.Unity;
 
 namespace GamePlay.Player.Factory.Factory.Runtime
 {
-    public class PlayerFactory : IPlayerFactory, IEntityFactory, IScopeSwitchListener
+    public class PlayerFactory : IPlayerFactory, IEntityFactory, IScopeLifetimeListener
     {
         public PlayerFactory(
             IDynamicEntityFactory dynamicEntityFactory,
             INetworkFactoriesRegistry factoriesRegistry,
             IScopedEntityFactory factory,
-            IPlayersList playersList, 
+            IPlayersList playersList,
             LocalPlayerConfig localConfig,
             RemotePlayerConfig remoteConfig,
             LifetimeScope parentScope,
@@ -62,19 +63,9 @@ namespace GamePlay.Player.Factory.Factory.Runtime
 
         public ushort Id => _id;
 
-        public void AssignId(ushort id)
+        public void OnLifetimeCreated(ILifetime lifetime)
         {
-            _id = id;
-        }
-
-        public void OnEnabled()
-        {
-            _factoriesRegistry.Register(this);
-        }
-
-        public void OnDisabled()
-        {
-            _factoriesRegistry.Unregister(this);
+            _id = _factoriesRegistry.Register(this, lifetime);
         }
 
         public async UniTask<ILocalPlayerRoot> Create()
@@ -85,8 +76,9 @@ namespace GamePlay.Player.Factory.Factory.Runtime
 
             var view = Object.Instantiate(_localConfig.Prefab, spawnPosition, Quaternion.identity);
             var entityComponentFactory = new EntityComponentFactory(entity);
-            var root = await _factory.Create<ILocalPlayerRoot>(_parentScope, view, _localConfig, new[] { entityComponentFactory });
-            
+            var root = await _factory.Create<ILocalPlayerRoot>(_parentScope, view, _localConfig,
+                new[] { entityComponentFactory });
+
             var payload = new PlayerSpawnPayload(spawnPosition);
             await _dynamicEntityFactory.Send(entity, payload);
 
@@ -98,25 +90,26 @@ namespace GamePlay.Player.Factory.Factory.Runtime
 
             await root.Callbacks.RunConstruct();
             await root.Enable();
-            
+
             _logger.OnLocalInstantiated(spawnPosition);
-            
+
             return root;
         }
-        
+
         public async UniTaskVoid OnRemoteCreated(int objectId, RagonEntity entity)
         {
             var spawnPosition = entity.GetAttachPayload<PlayerSpawnPayload>().Position;
             var view = Object.Instantiate(_remoteConfig.Prefab, spawnPosition, Quaternion.identity);
             var entityComponentFactory = new EntityComponentFactory(entity);
-            var root = await _factory.Create<IPlayerRoot>(_parentScope, view, _remoteConfig, new[] { entityComponentFactory });
+            var root = await _factory.Create<IPlayerRoot>(_parentScope, view, _remoteConfig,
+                new[] { entityComponentFactory });
 
             var player = new NetworkPlayer(entity, root);
             _playersList.Add(entity.Owner, player);
-            
+
             await root.Callbacks.RunConstruct();
             await root.Enable();
-            
+
             _logger.OnRemoteInstantiated(spawnPosition);
         }
     }

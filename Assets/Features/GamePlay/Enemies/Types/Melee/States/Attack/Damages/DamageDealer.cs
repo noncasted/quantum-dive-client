@@ -1,5 +1,5 @@
-﻿using GamePlay.Common.Damages;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using GamePlay.Common.Damages;
 using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Enemies.Types.Melee.States.Attack.Common.Config;
 

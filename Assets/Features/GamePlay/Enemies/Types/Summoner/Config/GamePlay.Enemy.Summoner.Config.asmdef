@@ -2,12 +2,10 @@
   "name": "GamePlay.Enemy.Summoner.Config",
   "references": [
     "GUID:d97d9c764948444d98c823fdaa970d62",
-    "GUID:720a9742eabf451f995624fecd453570",
-            "GUID:a6bee730cad343c7ac8840da91376019",
-        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-        "GUID:3b2ea7622084434a927c413b7fc2fd3a",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:e65c3861641d4d11af3ab692039b006f",
+    "GUID:a6bee730cad343c7ac8840da91376019",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:3b2ea7622084434a927c413b7fc2fd3a",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:df7d3528058e43ca8417048c811d9944",
     "GUID:6d68342a725cef14aa63261e29df7944",
     "GUID:ea8a3562e464425fb3442268f196d9e1",
@@ -28,6 +26,7 @@
     "GUID:78cdf7b8b45a42be84a6b9b9fc432f47",
     "GUID:864fc1e5891349c19983abf32338d5aa",
     "GUID:5a0b2aea9a2a4de78518f42301cb3375",
-    "GUID:2cd1058b8fb0415d9dba71fe9948a965"
+    "GUID:2cd1058b8fb0415d9dba71fe9948a965",
+    "GUID:09eeed04a09c422b9c62d681c78d80ec"
   ]
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
+using Common.Architecture.Entities.Common.DefaultCallbacks;
 using GamePlay.Enemies.Entity.Views.RigidBodies.Logs;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;

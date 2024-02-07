@@ -1,7 +1,7 @@
 ﻿using System.Threading;
+using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.Setup.EventLoop;
 using GamePlay.Enemies.Entity.States.Abstract;
 using GamePlay.Enemies.Entity.Views.Animators.Runtime;
 using GamePlay.Enemies.Types.Melee.States.Attack.Common;

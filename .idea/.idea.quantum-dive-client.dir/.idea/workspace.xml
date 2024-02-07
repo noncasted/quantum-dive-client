@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1746e6e-9d0f-4073-ac5c-bdaa4cc53408" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.quantum-dive-client.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.quantum-dive-client.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/Views/HealthBars/Config.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Features/GamePlay/Environment/Artwork/Map_0_Art.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/GamePlay/Environment/Artwork/Map_0_Art.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Features/Global/Services/Inputs/View/Runtime/Controls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/Global/Services/Inputs/View/Runtime/Controls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/States/SubStates/Pushes/Runtime/.idea/.idea.Runtime.dir/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/States/SubStates/Pushes/Runtime/.idea/.idea.Runtime.dir/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/States/SubStates/Pushes/Runtime/.idea/.idea.Runtime.dir/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/States/SubStates/Pushes/Runtime/.idea/.idea.Runtime.dir/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/States/SubStates/Pushes/Runtime/GamePlay.Enemy.Push.Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/States/SubStates/Pushes/Runtime/GamePlay.Enemy.Push.Runtime.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/Views/AIPaths/GamePlay.Enemy.AiPaths.Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/Views/AIPaths/GamePlay.Enemy.AiPaths.Runtime.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/Views/Hitbox/Local/GamePlay.Enemy.Hitbox.Local.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Entity/Views/Hitbox/Local/GamePlay.Enemy.Hitbox.Local.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Types/Melee/States/Attack/Remote/GamePlay.Enemy.Melee.Attack.Remote.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Types/Melee/States/Attack/Remote/GamePlay.Enemy.Melee.Attack.Remote.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Types/Summoner/States/StateSelector/Runtime/GamePlay.Enemy.Summoner.StateSelector.Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Features/GamePlay/Enemies/Types/Summoner/States/StateSelector/Runtime/GamePlay.Enemy.Summoner.StateSelector.Runtime.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/ALINE.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/ALINE.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AstarPathfindingProject.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/BuildReport.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Shapes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Shapes.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,16 +34,18 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="W:\Unity\Editor\2023.1.0f1\Editor\Unity.exe" />
@@ -82,6 +85,7 @@
       <workItem from="1687231827162" duration="18000" />
       <workItem from="1691290119255" duration="10000" />
       <workItem from="1691746940035" duration="5000" />
+      <workItem from="1707162926892" duration="72000" />
     </task>
     <servers />
   </component>

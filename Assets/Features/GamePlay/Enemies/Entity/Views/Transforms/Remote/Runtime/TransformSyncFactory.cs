@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Enemies.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Enemies.Entity.Views.Transforms.Remote.Common;
 using GamePlay.Enemies.Entity.Views.Transforms.Remote.Logs;
 using Sirenix.OdinInspector;

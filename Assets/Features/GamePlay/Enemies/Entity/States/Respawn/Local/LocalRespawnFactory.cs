@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Enemies.Entity.Setup.Abstract;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Enemies.Entity.States.Respawn.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;

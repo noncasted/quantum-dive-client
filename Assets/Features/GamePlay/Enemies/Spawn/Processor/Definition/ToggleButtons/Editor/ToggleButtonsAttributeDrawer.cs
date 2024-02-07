@@ -15,7 +15,7 @@ namespace GamePlay.Enemies.Spawn.Processor.Definition.ToggleButtons.Editor
     [ReadOnlyDictionaryPriority]
     public class ToggleButtonsAttributeDrawer : OdinAttributeDrawer<EnemyToggleAttribute>
     {
-        private readonly Dictionary<EnemyDefinition, Texture> _icons = new();
+        private readonly Dictionary<IEnemyDefinition, Texture> _icons = new();
 
         public override bool CanDrawTypeFilter(Type type)
         {
@@ -50,9 +50,9 @@ namespace GamePlay.Enemies.Spawn.Processor.Definition.ToggleButtons.Editor
 
             foreach (var definition in registry.Definitions)
             {
-                _icons[definition] = definition.EditorIcon;
+                _icons[definition] = definition.EditorData.EditorIcon;
                     
-                switchResolver.TryAdd(definition, false);
+                switchResolver.TryAdd((EnemyDefinition)definition, false);
             }
         }
 
@@ -77,7 +77,7 @@ namespace GamePlay.Enemies.Spawn.Processor.Definition.ToggleButtons.Editor
 
             foreach (var (type, icon) in _icons)
             {
-                var isPressed = switchResolver[type];
+                var isPressed = switchResolver[(EnemyDefinition)type];
 
                 if (isPressed == false)
                     GUI.backgroundColor = Color.white;
@@ -87,7 +87,7 @@ namespace GamePlay.Enemies.Spawn.Processor.Definition.ToggleButtons.Editor
                 valueRect.position = new Vector2(xPosition, valueRect.position.y);
 
                 if (GUI.Button(valueRect, icon, style) == true)
-                    switchResolver[type] = !switchResolver[type];
+                    switchResolver[(EnemyDefinition)type] = !switchResolver[(EnemyDefinition)type];
 
                 xPosition += width;
             }

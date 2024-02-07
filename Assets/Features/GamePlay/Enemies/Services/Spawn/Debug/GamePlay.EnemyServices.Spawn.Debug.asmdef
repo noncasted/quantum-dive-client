@@ -1,4 +1,4 @@
 ﻿{
   "name": "GamePlay.EnemyServices.Spawn.Debug",
-  "references":[ "GUID:e4924bae8b7f4512af86f641579b370f", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:970ee46c1d254668a076ec817b8837ca", "GUID:b0214a6008ed146ff8f122a6a9c2f6cc", "GUID:bc3ad523d30c4d20b3e49ad14a5cbdfd", "GUID:e587f8c64e1c420f93fbe3833ccb6def", "GUID:f51ebe6a0ceec4240a699833d6309b23" ]
+  "references":[ "GUID:e4924bae8b7f4512af86f641579b370f", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:970ee46c1d254668a076ec817b8837ca", "GUID:b0214a6008ed146ff8f122a6a9c2f6cc", "GUID:bc3ad523d30c4d20b3e49ad14a5cbdfd", "GUID:e587f8c64e1c420f93fbe3833ccb6def", "GUID:f51ebe6a0ceec4240a699833d6309b23", "GUID:09eeed04a09c422b9c62d681c78d80ec" ]
 }

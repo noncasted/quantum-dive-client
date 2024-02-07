@@ -2,12 +2,10 @@
   "name": "GamePlay.Enemy.Melee.Config",
   "references": [
     "GUID:d97d9c764948444d98c823fdaa970d62",
-    "GUID:720a9742eabf451f995624fecd453570",
-            "GUID:a6bee730cad343c7ac8840da91376019",
-        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-        "GUID:3b2ea7622084434a927c413b7fc2fd3a",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:e65c3861641d4d11af3ab692039b006f",
+    "GUID:a6bee730cad343c7ac8840da91376019",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:3b2ea7622084434a927c413b7fc2fd3a",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:df7d3528058e43ca8417048c811d9944",
     "GUID:d13a2aed69812b64395d35872dbc7896",
     "GUID:ea8a3562e464425fb3442268f196d9e1",
@@ -30,6 +28,7 @@
     "GUID:f10f845bacd541b1b666906e62f683f6",
     "GUID:864fc1e5891349c19983abf32338d5aa",
     "GUID:5a0b2aea9a2a4de78518f42301cb3375",
-    "GUID:2cd1058b8fb0415d9dba71fe9948a965"
+    "GUID:2cd1058b8fb0415d9dba71fe9948a965",
+    "GUID:09eeed04a09c422b9c62d681c78d80ec"
   ]
 }

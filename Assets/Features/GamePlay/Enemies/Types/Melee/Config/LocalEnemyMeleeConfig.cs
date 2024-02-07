@@ -1,12 +1,13 @@
-﻿using GamePlay.Enemies.Entity.Components.DamageProcessors.Runtime;
+﻿using System.Collections.Generic;
+using GamePlay.Enemies.Entity.Components.DamageProcessors.Runtime;
 using GamePlay.Enemies.Entity.Components.Health.Runtime;
 using GamePlay.Enemies.Entity.Components.Sorting.Runtime;
 using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime;
 using GamePlay.Enemies.Entity.Network.Properties.Runtime;
-using GamePlay.Enemies.Entity.Setup.Abstract;
-using GamePlay.Enemies.Entity.Setup.Config.Local;
+using Common.Architecture.Entities.Runtime;
+using Features.GamePlay.Enemies.Entity.Setup.Configs;
 using GamePlay.Enemies.Entity.States.Damaged.Local;
 using GamePlay.Enemies.Entity.States.Death.Local;
 using GamePlay.Enemies.Entity.States.Following.Local;
@@ -24,7 +25,7 @@ namespace GamePlay.Enemies.Types.Melee.Config
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyMeleeConfigRoutes.LocalName,
         menuName = EnemyMeleeConfigRoutes.LocalPath)]
-    public class LocalEnemyMeleeConfig : LocalEnemyComponents
+    public class LocalEnemyMeleeConfig : ScriptableObject, ILocalEnemyConfig
     {
         [FoldoutGroup("Components")] [SerializeField]
         private LocalStateMachineFactory _localStateMachine;
@@ -39,7 +40,7 @@ namespace GamePlay.Enemies.Types.Melee.Config
         [FoldoutGroup("Components")] [SerializeField]
         private SpriteSortingFactory _spriteSorting;
 
-        [FoldoutGroup("States")] [SerializeField]
+        [FoldoutGroup("States")] [SerializeField] 
         private LocalIdleFactory _idle;
         [FoldoutGroup("States")] [SerializeField]
         private LocalRespawnFactory _respawn;
@@ -62,7 +63,7 @@ namespace GamePlay.Enemies.Types.Melee.Config
         [FoldoutGroup("Remote")] [SerializeField]
         private TransformSyncFactory _transformSync;
 
-        public override IComponentFactory[] GetAssets()
+        public IComponentFactory[] GetAssets()
         {
             return new IComponentFactory[]
             {
@@ -86,5 +87,9 @@ namespace GamePlay.Enemies.Types.Melee.Config
                 _transformSync
             };
         }
+
+        public ScopedEntityViewFactory Prefab { get; }
+        public IReadOnlyList<IComponentFactory> Components { get; }
+        public IReadOnlyList<IComponentsCompose> Composes { get; }
     }
 } 
