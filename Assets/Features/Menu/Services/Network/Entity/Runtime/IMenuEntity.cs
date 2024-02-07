@@ -1,7 +1,7 @@
 ﻿using System;
 using Ragon.Client;
 
-namespace Menu.Network.Entity.Runtime
+namespace Menu.Services.Network.Entity.Runtime
 {
     public interface IMenuEntity
     {

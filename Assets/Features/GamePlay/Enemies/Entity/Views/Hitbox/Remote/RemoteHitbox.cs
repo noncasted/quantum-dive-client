@@ -1,6 +1,6 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using GamePlay.Common.Damages;
-using GamePlay.Enemies.Entity.Network.EntityHandler;
+using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Enemies.Entity.Views.Hitbox.Common;
 using GamePlay.Hitboxes.Runtime;
 using UnityEngine;

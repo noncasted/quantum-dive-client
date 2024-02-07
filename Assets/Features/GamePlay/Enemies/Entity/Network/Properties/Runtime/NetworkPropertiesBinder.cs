@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using GamePlay.Enemies.Entity.Components.Health.Runtime;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.Network.EntityHandler;
+using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Enemies.Entity.Views.Hitbox.Common;
 using GamePlay.Enemies.Entity.Views.Transforms.Remote.Runtime;
 

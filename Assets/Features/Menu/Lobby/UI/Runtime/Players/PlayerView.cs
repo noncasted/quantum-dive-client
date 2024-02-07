@@ -1,4 +1,4 @@
-﻿using Menu.Network.PlayersLists.Runtime;
+﻿using Menu.Services.Network.PlayersLists.Runtime;
 using UnityEngine;
 
 namespace Menu.Lobby.UI.Runtime.Players

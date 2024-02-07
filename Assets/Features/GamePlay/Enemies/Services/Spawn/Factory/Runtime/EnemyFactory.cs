@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Lifetimes;
 using Common.Architecture.Scopes.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Services.Spawn.Definition.Runtime;
+using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
 using GamePlay.Enemies.Services.Spawn.Factory.Logs;
 using GamePlay.Enemies.Services.Spawn.Pool.Runtime;
 using GamePlay.Enemies.Services.Spawn.Registry.Runtime;

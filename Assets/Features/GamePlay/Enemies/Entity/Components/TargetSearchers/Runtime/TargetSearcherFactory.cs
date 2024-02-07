@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Container.Abstract;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Enemies.Entity.Components.TargetSearchers.Common;
 using GamePlay.Enemies.Entity.Components.TargetSearchers.Debug.Gizmos;
-using Common.Architecture.Entities.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Enemies.Services.Spawn.Definition.Runtime;
+using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
 
 namespace GamePlay.Enemies.Services.Spawn.Registry.Runtime
 {

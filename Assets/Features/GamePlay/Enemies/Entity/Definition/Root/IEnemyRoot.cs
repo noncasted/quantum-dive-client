@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 using Ragon.Client;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Setup.Root.Abstract
+namespace GamePlay.Enemies.Entity.Definition.Root
 {
     public interface IEnemyRoot
     {

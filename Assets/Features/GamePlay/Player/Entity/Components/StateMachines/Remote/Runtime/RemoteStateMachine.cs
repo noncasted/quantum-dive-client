@@ -4,7 +4,7 @@ using GamePlay.Player.Entity.Components.StateMachines.Remote.Logs;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
-using GamePlay.Player.Registries.States.Runtime;
+using GamePlay.Player.Services.Registries.States.Runtime;
 using Ragon.Client;
 using Ragon.Client.Compressor;
 using Ragon.Protocol;

@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using GamePlay.Network.Room.Lifecycle.Runtime;
 using Global.Network.Handlers.ClientHandler.Runtime;
-using Menu.Network.PlayersLists.Runtime;
+using Menu.Services.Network.PlayersLists.Runtime;
 using Ragon.Client;
 
 namespace Menu.Main.Controller.Runtime

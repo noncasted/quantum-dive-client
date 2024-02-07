@@ -1,5 +1,5 @@
 ﻿using System;
-using GamePlay.Enemies.Entity.Network.EntityHandler;
+using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
 using Ragon.Client;
 using Ragon.Protocol;
 

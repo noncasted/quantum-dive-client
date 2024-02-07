@@ -1,6 +1,6 @@
-﻿using Features.GamePlay.Enemies.Entity.Setup.Configs;
+﻿using GamePlay.Enemies.Entity.Definition.Config;
 
-namespace GamePlay.Enemies.Services.Spawn.Definition.Runtime
+namespace GamePlay.Enemies.Entity.Definition.Asset.Abstract
 {
     public interface IEnemyConfiguration
     {

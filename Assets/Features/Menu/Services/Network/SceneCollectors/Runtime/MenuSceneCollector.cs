@@ -3,7 +3,7 @@ using Common.Architecture.Scopes.Runtime.Callbacks;
 using Global.Network.Handlers.SceneCollectors.Runtime;
 using Ragon.Client;
 
-namespace Menu.Network.SceneCollectors.Runtime
+namespace Menu.Services.Network.SceneCollectors.Runtime
 {
     public class MenuSceneCollector : IMenuSceneCollector, IScopeAwakeListener
     {

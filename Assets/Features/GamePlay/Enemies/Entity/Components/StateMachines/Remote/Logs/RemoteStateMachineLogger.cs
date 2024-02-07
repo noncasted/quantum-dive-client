@@ -1,4 +1,4 @@
-﻿using GamePlay.Enemies.Entity.Network.EntityHandler;
+﻿using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Enemies.Entity.Views.GameObjects;
 using Internal.Services.Loggers.Runtime;
 

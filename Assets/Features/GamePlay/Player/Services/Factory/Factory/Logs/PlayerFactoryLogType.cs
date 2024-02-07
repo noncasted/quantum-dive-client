@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Factory.Factory.Logs
+﻿namespace GamePlay.Player.Services.Factory.Factory.Logs
 {
     public enum PlayerFactoryLogType
     {

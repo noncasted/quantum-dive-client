@@ -1,5 +1,5 @@
 ﻿
-namespace GamePlay.Enemies.Services.Spawn.Definition.Runtime
+namespace GamePlay.Enemies.Entity.Definition.Asset.Abstract
 {
     public interface IEnemyDefinition
     {

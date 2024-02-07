@@ -2,11 +2,11 @@
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using Menu.Cameras.Common;
+using Menu.Services.Cameras.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Menu.Cameras.Runtime
+namespace Menu.Services.Cameras.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = MenuCameraRoutes.ServiceName, menuName = MenuCameraRoutes.ServicePath)]

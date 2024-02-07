@@ -1,7 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Setup.Root.Local;
-using GamePlay.Enemies.Entity.Setup.Root.Remote;
-using GamePlay.Enemies.Services.Spawn.Definition.Runtime;
+using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemies.Entity.Definition.Root;
 using Ragon.Client;
 using UnityEngine;
 

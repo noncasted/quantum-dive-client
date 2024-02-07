@@ -1,4 +1,4 @@
-﻿namespace Menu.Cameras.Common
+﻿namespace Menu.Services.Cameras.Common
 {
     public class MenuCameraRoutes
     {

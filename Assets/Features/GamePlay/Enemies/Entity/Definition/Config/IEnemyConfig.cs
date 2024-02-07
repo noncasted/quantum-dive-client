@@ -1,6 +1,6 @@
 ﻿using Common.Architecture.Entities.Runtime;
 
-namespace Features.GamePlay.Enemies.Entity.Setup.Configs
+namespace GamePlay.Enemies.Entity.Definition.Config
 {
     public interface IEnemyConfig : IScopedEntityConfig
     {

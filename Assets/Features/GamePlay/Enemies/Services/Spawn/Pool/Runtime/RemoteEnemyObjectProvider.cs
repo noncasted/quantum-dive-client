@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
 using Cysharp.Threading.Tasks;
-using Features.GamePlay.Enemies.Entity.Setup.Configs;
-using GamePlay.Enemies.Entity.Setup.Root.Remote;
-using GamePlay.Enemies.Services.Spawn.Factory.Runtime;
+using GamePlay.Enemies.Entity.Definition.Config;
+using GamePlay.Enemies.Entity.Definition.Root;
 using Ragon.Client;
 using UnityEngine;
 using VContainer.Unity;

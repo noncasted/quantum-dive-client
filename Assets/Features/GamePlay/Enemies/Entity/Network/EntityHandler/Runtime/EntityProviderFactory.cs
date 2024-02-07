@@ -4,7 +4,7 @@ using GamePlay.Enemies.Entity.Network.EntityHandler.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Network.EntityHandler
+namespace GamePlay.Enemies.Entity.Network.EntityHandler.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EntityProviderRoutes.ComponentName, menuName = EntityProviderRoutes.ComponentPath)]

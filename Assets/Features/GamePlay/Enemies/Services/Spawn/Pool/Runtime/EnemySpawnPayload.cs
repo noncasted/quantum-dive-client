@@ -3,7 +3,7 @@ using Ragon.Client;
 using Ragon.Protocol;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Services.Spawn.Factory.Runtime
+namespace GamePlay.Enemies.Services.Spawn.Pool.Runtime
 {
     public class EnemySpawnPayload : IRagonPayload
     {

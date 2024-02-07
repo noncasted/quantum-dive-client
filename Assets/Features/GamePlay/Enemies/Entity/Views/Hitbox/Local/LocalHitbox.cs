@@ -6,7 +6,7 @@ using GamePlay.Enemies.Entity.Views.Hitbox.Common;
 using GamePlay.Hitboxes.Runtime;
 using Ragon.Client;
 using UnityEngine;
-using IEntityEvents = GamePlay.Enemies.Entity.Network.EntityHandler.IEntityEvents;
+using IEntityEvents = GamePlay.Enemies.Entity.Network.EntityHandler.Runtime.IEntityEvents;
 
 namespace GamePlay.Enemies.Entity.Views.Hitbox.Local
 {

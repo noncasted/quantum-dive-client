@@ -2,11 +2,11 @@
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using Menu.Network.SceneCollectors.Common;
+using Menu.Services.Network.SceneCollectors.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Menu.Network.SceneCollectors.Runtime
+namespace Menu.Services.Network.SceneCollectors.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = SceneCollectorRoutes.ServiceName,

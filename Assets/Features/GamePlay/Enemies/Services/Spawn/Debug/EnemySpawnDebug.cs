@@ -1,6 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
 using GamePlay.Common.SceneBootstrappers.Runtime;
-using GamePlay.Enemies.Services.Spawn.Definition.Runtime;
+using GamePlay.Enemies.Entity.Definition.Asset;
 using GamePlay.Enemies.Services.Spawn.Factory.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;

@@ -7,9 +7,9 @@ using Global.Network.Session.Runtime.Create;
 using Global.Network.Session.Runtime.Join;
 using Global.System.MessageBrokers.Runtime;
 using Menu.Main.UI.Runtime;
-using Menu.Network.Entity.Runtime;
-using Menu.Network.PlayersLists.Runtime;
-using Menu.Network.SceneCollectors.Runtime;
+using Menu.Services.Network.Entity.Runtime;
+using Menu.Services.Network.PlayersLists.Runtime;
+using Menu.Services.Network.SceneCollectors.Runtime;
 
 namespace Menu.Main.Controller.Runtime
 {

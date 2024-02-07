@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs;
-using GamePlay.Enemies.Entity.Network.EntityHandler;
+using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Enemies.Entity.States.Abstract;
 using GamePlay.Enemies.Services.Network.DataBridges.States.Runtime;
 using Ragon.Client;

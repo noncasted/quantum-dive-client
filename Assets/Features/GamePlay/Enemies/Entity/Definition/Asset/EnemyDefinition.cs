@@ -1,7 +1,8 @@
-﻿using Sirenix.OdinInspector;
+﻿using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Services.Spawn.Definition.Runtime
+namespace GamePlay.Enemies.Entity.Definition.Asset
 {
     [InlineEditor]
     public abstract class EnemyDefinition : ScriptableObject, IEnemyDefinition

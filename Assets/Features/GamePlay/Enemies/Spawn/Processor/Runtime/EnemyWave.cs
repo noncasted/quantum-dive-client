@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using GamePlay.Enemies.Services.Spawn.Definition.Runtime;
+using GamePlay.Enemies.Entity.Definition.Asset;
 using GamePlay.Enemies.Spawn.Processor.Common;
 using GamePlay.Enemies.Spawn.Processor.Definition.Probability.Runtime;
 using GamePlay.Enemies.Spawn.Processor.Definition.ToggleButtons.Runtime;

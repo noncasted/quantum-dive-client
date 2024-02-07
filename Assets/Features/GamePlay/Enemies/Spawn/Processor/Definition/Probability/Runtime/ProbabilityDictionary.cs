@@ -1,6 +1,6 @@
 ﻿using System;
 using Common.DataTypes.Collections.SerializableDictionaries;
-using GamePlay.Enemies.Services.Spawn.Definition.Runtime;
+using GamePlay.Enemies.Entity.Definition.Asset;
 
 namespace GamePlay.Enemies.Spawn.Processor.Definition.Probability.Runtime
 {

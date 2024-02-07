@@ -1,7 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Setup.Root.Abstract;
 
-namespace GamePlay.Enemies.Entity.Setup.Root.Local
+namespace GamePlay.Enemies.Entity.Definition.Root
 {
     public interface ILocalEnemyRoot : IEnemyRoot
     {

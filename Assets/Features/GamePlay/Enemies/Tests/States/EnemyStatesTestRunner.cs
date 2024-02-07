@@ -1,5 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Services.Spawn.Definition.Runtime;
+using GamePlay.Enemies.Entity.Definition.Asset;
 using GamePlay.Enemies.Services.Spawn.Factory.Runtime;
 using GamePlay.Targets.Registry.Runtime;
 using Sirenix.OdinInspector;

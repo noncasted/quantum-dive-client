@@ -4,7 +4,7 @@ using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
 using Ragon.Client;
 
-namespace GamePlay.Enemies.Entity.Network.EntityHandler
+namespace GamePlay.Enemies.Entity.Network.EntityHandler.Runtime
 {
     public class EntityProvider : IEntityProvider, IPropertyBinder, IEntityEvents, IEntitySwitchLifetimeListener
     {

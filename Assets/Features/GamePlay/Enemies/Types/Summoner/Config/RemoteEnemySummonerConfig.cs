@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using Common.Architecture.Entities.Runtime;
 using GamePlay.Enemies.Entity.Components.Health.Runtime;
 using GamePlay.Enemies.Entity.Components.Sorting.Runtime;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
+using GamePlay.Enemies.Entity.Definition.Config;
 using GamePlay.Enemies.Entity.Network.Properties.Runtime;
-using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Enemies.Entity.Setup.Configs;
 using GamePlay.Enemies.Entity.States.Damaged.Remote;
 using GamePlay.Enemies.Entity.States.Death.Remote;
 using GamePlay.Enemies.Entity.States.Following.Remote;

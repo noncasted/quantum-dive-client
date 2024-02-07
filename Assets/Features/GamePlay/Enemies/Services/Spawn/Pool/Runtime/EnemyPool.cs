@@ -1,13 +1,9 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
-using Common.Architecture.Scopes.Runtime.Callbacks;
-using Common.Tools.ObjectsPools.Runtime;
-using Common.Tools.ObjectsPools.Runtime.Abstract;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
-using GamePlay.Enemies.Entity.Setup.Root.Local;
-using GamePlay.Enemies.Entity.Setup.Root.Remote;
-using GamePlay.Enemies.Services.Spawn.Definition.Runtime;
+using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemies.Entity.Definition.Root;
 using GamePlay.Enemies.Services.Spawn.Registry.Runtime;
 using GamePlay.Network.Objects.Factories.Runtime;
 using Ragon.Client;

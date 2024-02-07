@@ -2,11 +2,11 @@
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using Menu.Network.Entity.Common;
+using Menu.Services.Network.Entity.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Menu.Network.Entity.Runtime
+namespace Menu.Services.Network.Entity.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = MenuEntityRoutes.ServiceName,

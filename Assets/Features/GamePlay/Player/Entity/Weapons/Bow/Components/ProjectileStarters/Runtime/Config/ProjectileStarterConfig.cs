@@ -1,6 +1,4 @@
-﻿using GamePlay.Projectiles.Factory;
-
-namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config
+﻿namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config
 {
     public class ProjectileStarterConfig : IProjectileStarterConfig
     {

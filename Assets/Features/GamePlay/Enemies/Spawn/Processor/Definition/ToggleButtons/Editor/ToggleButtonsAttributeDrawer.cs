@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Common.DataTypes.Collections.ReadOnlyDictionaries.Editor;
-using GamePlay.Enemies.Services.Spawn.Definition.Runtime;
+using GamePlay.Enemies.Entity.Definition.Asset;
+using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
 using GamePlay.Enemies.Services.Spawn.Registry.Runtime;
 using GamePlay.Enemies.Spawn.Processor.Definition.ToggleButtons.Runtime;
 using Sirenix.OdinInspector.Editor;

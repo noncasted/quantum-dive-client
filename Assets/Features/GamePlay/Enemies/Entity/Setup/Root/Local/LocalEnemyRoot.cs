@@ -1,12 +1,9 @@
-﻿using System;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
-using Common.Tools.ObjectsPools.Runtime.Abstract;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemies.Entity.Components.StateSelectors;
-using GamePlay.Enemies.Entity.Network.EntityHandler;
-using GamePlay.Enemies.Entity.Network.Properties.Runtime;
-using GamePlay.Enemies.Entity.States.Death.Local;
+using GamePlay.Enemies.Entity.Definition.Root;
+using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Enemies.Entity.States.Respawn.Local;
 using GamePlay.Enemies.Entity.Views.GameObjects;
 using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
