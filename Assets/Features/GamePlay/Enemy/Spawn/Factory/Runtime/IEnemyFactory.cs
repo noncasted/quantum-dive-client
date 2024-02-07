@@ -1,5 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemy.Entity.Common.Definition.Asset.Abstract;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Spawn.Factory.Runtime

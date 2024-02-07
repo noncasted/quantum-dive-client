@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Structs;
+using GamePlay.Combat.Projectiles.Factory;
+using GamePlay.Combat.Projectiles.Registry.Definition;
 using GamePlay.Player.Entity.Components.Rotations.Orientation;
 using GamePlay.Player.Entity.Weapons.Bow.Views.ShootPoint.Runtime;
-using GamePlay.Projectiles.Factory;
-using GamePlay.Projectiles.Registry.Definition;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Starter
 {

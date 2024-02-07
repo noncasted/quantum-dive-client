@@ -1,8 +1,8 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemy.Entity.Definition.Root;
-using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.Common.Definition.Root;
+using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.Views.GameObjects;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using Ragon.Client;

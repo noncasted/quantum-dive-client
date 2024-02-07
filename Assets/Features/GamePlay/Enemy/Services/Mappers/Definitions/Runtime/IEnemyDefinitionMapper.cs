@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemy.Entity.Common.Definition.Asset.Abstract;
 
 namespace GamePlay.Enemy.Mappers.Definitions.Runtime
 {

@@ -1,8 +1,8 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
+using GamePlay.Combat.Hitboxes.Runtime;
 using GamePlay.Common.Damages;
-using GamePlay.Hitboxes.Runtime;
-using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
 using GamePlay.Player.Entity.Views.Hitboxes.Network;
 using UnityEngine;

@@ -1,12 +1,12 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
 using Common.Architecture.Lifetimes.Viewables;
+using GamePlay.Combat.Hitboxes.Runtime;
 using GamePlay.Common.Damages;
 using GamePlay.Enemy.Entity.Views.Hitbox.Common;
-using GamePlay.Hitboxes.Runtime;
 using Ragon.Client;
 using UnityEngine;
-using IEntityEvents = GamePlay.Enemy.Entity.Network.EntityHandler.Runtime.IEntityEvents;
+using IEntityEvents = GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime.IEntityEvents;
 
 namespace GamePlay.Enemy.Entity.Views.Hitbox.Local
 {

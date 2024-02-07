@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Player.Entity.Definition;
+using GamePlay.Player.Entity.Common.Definition;
 using Ragon.Client;
 using UnityEngine;
 

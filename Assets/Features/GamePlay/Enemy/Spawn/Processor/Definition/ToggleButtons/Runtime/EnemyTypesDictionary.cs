@@ -1,6 +1,6 @@
 ﻿using System;
 using Common.DataTypes.Collections.SerializableDictionaries;
-using GamePlay.Enemy.Entity.Definition.Asset;
+using GamePlay.Enemy.Entity.Common.Definition.Asset;
 
 namespace GamePlay.Enemy.Spawn.Processor.Definition.ToggleButtons.Runtime
 {

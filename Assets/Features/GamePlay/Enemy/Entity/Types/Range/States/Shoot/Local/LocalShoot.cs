@@ -1,12 +1,12 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
+using GamePlay.Combat.Projectiles.Factory;
+using GamePlay.Combat.Targets.Registry.Runtime;
 using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
 using GamePlay.Enemy.Entity.Types.Range.Views.ShootPoint;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
-using GamePlay.Projectiles.Factory;
-using GamePlay.Targets.Registry.Runtime;
 
 namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 {

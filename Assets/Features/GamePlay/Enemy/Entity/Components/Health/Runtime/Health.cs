@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Lifetimes.Viewables;
-using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using Ragon.Client;
 using Ragon.Protocol;
 

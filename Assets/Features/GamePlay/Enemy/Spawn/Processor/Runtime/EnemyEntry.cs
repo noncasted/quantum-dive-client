@@ -1,4 +1,4 @@
-﻿using GamePlay.Enemy.Entity.Definition.Asset;
+﻿using GamePlay.Enemy.Entity.Common.Definition.Asset;
 
 namespace GamePlay.Enemy.Spawn.Processor.Runtime
 {

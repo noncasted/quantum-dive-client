@@ -2,7 +2,7 @@
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using GamePlay.Config.Runtime;
+using GamePlay.Common.Config.Runtime;
 using Global.GameLoops.Common;
 using Menu.Config.Runtime;
 using Sirenix.OdinInspector;

@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
+using GamePlay.Combat.Targets.Registry.Runtime;
 using GamePlay.Enemy.Entity.Components.TargetSearchers.Debug.Gizmos;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Enemy.Updater.Runtime;
 using GamePlay.Enemy.Updater.Runtime.Updatables;
-using GamePlay.Targets.Registry.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Components.TargetSearchers.Runtime

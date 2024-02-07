@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
+using GamePlay.Enemy.Entity.Common.Definition.Config;
 using GamePlay.Enemy.Entity.Components.Compose;
-using GamePlay.Enemy.Entity.Definition.Config;
-using GamePlay.Enemy.Entity.Network.Compose;
+using GamePlay.Enemy.Entity.Components.Network.Compose;
 using GamePlay.Enemy.Entity.States.Compose;
 using Sirenix.OdinInspector;
 using UnityEngine;

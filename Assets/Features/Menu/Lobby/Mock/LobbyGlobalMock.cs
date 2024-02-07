@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Mocks.Runtime;
 using Common.Architecture.Scopes.Factory;
 using Cysharp.Threading.Tasks;
-using GamePlay.Network.Room.Lifecycle.Runtime;
+using GamePlay.System.Network.Room.Lifecycle.Runtime;
 using Global.Network.Connection.Runtime;
 using Global.Network.Handlers.ClientHandler.Runtime;
 using Global.Network.Session.Runtime.Create;

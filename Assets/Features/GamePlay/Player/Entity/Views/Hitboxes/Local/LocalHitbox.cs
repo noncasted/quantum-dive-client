@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Lifetimes.Viewables;
+using GamePlay.Combat.Hitboxes.Runtime;
+using GamePlay.Combat.Targets.Registry.Runtime;
 using GamePlay.Common.Damages;
-using GamePlay.Hitboxes.Runtime;
 using GamePlay.Player.Entity.Views.DamageReceivers.Runtime;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
 using GamePlay.Player.Entity.Views.Hitboxes.Network;
-using GamePlay.Targets.Registry.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Hitboxes.Local

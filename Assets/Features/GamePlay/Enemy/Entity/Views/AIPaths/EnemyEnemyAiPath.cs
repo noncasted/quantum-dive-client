@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Lifetimes;
+using GamePlay.Combat.Targets.Registry.Runtime;
 using GamePlay.Enemy.Updater.Runtime;
 using GamePlay.Enemy.Updater.Runtime.Updatables;
-using GamePlay.Targets.Registry.Runtime;
 using Pathfinding;
 using UnityEngine;
 

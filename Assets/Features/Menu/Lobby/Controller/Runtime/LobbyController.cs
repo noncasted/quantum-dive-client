@@ -1,7 +1,7 @@
 ﻿using System;
 using Common.Architecture.Scopes.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
-using GamePlay.Network.Room.Lifecycle.Runtime;
+using GamePlay.System.Network.Room.Lifecycle.Runtime;
 using Global.Network.Session.Runtime.Leave;
 using Global.System.MessageBrokers.Runtime;
 using Menu.Lobby.Controller.Runtime.Timer;

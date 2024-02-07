@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using GamePlay.Enemy.Entity.Definition.Asset;
-using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemy.Entity.Common.Definition.Asset;
+using GamePlay.Enemy.Entity.Common.Definition.Asset.Abstract;
 using GamePlay.Enemy.Mappers.Definitions.Runtime;
 using GamePlay.Enemy.Spawn.Processor.Definition.Probability.Runtime;
 using GamePlay.Enemy.Spawn.Processor.Definition.ToggleButtons.Runtime;

@@ -2,10 +2,10 @@
 using Common.Architecture.Entities.Runtime;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
-using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
-using GamePlay.Enemy.Entity.Definition.Root;
+using GamePlay.Enemy.Entity.Common.Definition.Asset.Abstract;
+using GamePlay.Enemy.Entity.Common.Definition.Root;
 using GamePlay.Enemy.Mappers.Definitions.Runtime;
-using GamePlay.Network.Objects.Factories.Runtime;
+using GamePlay.System.Network.Objects.Factories.Runtime;
 using Ragon.Client;
 using UnityEngine;
 using UnityEngine.SceneManagement;

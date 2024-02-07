@@ -1,5 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Enemy.Entity.Definition.Asset;
+using GamePlay.Enemy.Entity.Common.Definition.Asset;
 using GamePlay.Enemy.Spawn.Factory.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;

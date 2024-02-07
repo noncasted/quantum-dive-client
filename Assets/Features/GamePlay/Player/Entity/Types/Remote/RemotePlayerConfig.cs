@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
+using GamePlay.Player.Entity.Common.Definition;
 using GamePlay.Player.Entity.Components.Compose;
 using GamePlay.Player.Entity.Components.Equipment.Compose;
-using GamePlay.Player.Entity.Definition;
-using GamePlay.Player.Entity.Network.Compose;
+using GamePlay.Player.Entity.Components.Network.Compose;
 using GamePlay.Player.Entity.States.Compose;
 using GamePlay.Player.Entity.Types.Common;
 using Sirenix.OdinInspector;

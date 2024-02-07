@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
-using GamePlay.Projectiles.Factory;
-using GamePlay.Projectiles.Registry.Definition;
+﻿using GamePlay.Combat.Projectiles.Factory;
+using GamePlay.Combat.Projectiles.Registry.Definition;
+using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

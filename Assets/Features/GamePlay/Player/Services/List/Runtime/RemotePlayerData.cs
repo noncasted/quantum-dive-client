@@ -1,4 +1,4 @@
-﻿using GamePlay.Player.Entity.Definition;
+﻿using GamePlay.Player.Entity.Common.Definition;
 using Ragon.Client;
 
 namespace GamePlay.Player.Services.List.Runtime

@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
+using GamePlay.Player.Entity.Common.Definition;
 using GamePlay.Player.Entity.Components.Root.Common;
-using GamePlay.Player.Entity.Definition;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

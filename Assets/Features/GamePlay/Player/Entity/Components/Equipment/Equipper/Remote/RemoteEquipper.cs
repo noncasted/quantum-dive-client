@@ -4,7 +4,7 @@ using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Factory;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Binder;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Runtime;
-using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Player.Services.Mappers.Equipment.Runtime;
 using Ragon.Client;
 using Ragon.Protocol;

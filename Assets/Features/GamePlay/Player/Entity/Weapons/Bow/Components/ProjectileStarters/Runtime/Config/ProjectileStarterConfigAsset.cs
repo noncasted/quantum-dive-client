@@ -1,5 +1,5 @@
-﻿using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Common;
-using GamePlay.Projectiles.Factory;
+﻿using GamePlay.Combat.Projectiles.Factory;
+using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

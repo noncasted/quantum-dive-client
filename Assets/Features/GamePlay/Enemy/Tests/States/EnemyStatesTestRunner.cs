@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Enemy.Entity.Definition.Asset;
+using GamePlay.Combat.Targets.Registry.Runtime;
+using GamePlay.Enemy.Entity.Common.Definition.Asset;
 using GamePlay.Enemy.Spawn.Factory.Runtime;
-using GamePlay.Targets.Registry.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using VContainer;

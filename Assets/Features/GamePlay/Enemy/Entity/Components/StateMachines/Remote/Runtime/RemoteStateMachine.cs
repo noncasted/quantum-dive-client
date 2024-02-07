@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Lifetimes;
+using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs;
-using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Mappers.States.Runtime;
 using Ragon.Client;

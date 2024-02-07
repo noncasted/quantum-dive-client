@@ -4,7 +4,7 @@ using Common.Architecture.Scopes.Runtime;
 using Common.Architecture.Scopes.Runtime.Callbacks;
 using Common.Architecture.Scopes.Runtime.Services;
 using Cysharp.Threading.Tasks;
-using GamePlay.Config.Runtime;
+using GamePlay.Common.Config.Runtime;
 using Global.Cameras.CurrentProvider.Runtime;
 using Global.Cameras.Persistent.Runtime;
 using Global.GameLoops.Events;
