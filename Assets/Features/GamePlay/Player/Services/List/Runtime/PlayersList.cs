@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Player.List.Definition;
+using GamePlay.Player.Entity.Definition;
 using Ragon.Client;
 using UnityEngine;
 
@@ -7,14 +7,14 @@ namespace GamePlay.Player.List.Runtime
 {
     public class PlayersList : IPlayersList, IRagonPlayerLeftListener
     {
-        private readonly Dictionary<RagonPlayer, INetworkPlayer> _players = new();
+        private readonly Dictionary<RagonPlayer, IPlayerEntity> _players = new();
 
-        public void Add(RagonPlayer player, INetworkPlayer root)
+        public void Add(RagonPlayer player, IPlayerEntity root)
         {
             _players.Add(player, root);
         }
 
-        public INetworkPlayer Get(RagonPlayer player)
+        public IPlayerEntity Get(RagonPlayer player)
         {
             if (_players.ContainsKey(player) == false)
             {

@@ -1,10 +1,9 @@
-﻿using GamePlay.Player.Entity.Weapons.Common.Paths;
+﻿using GamePlay.Player.Entity.Weapons.Common;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Common.Paths
 {
     public class BowAssetsPaths
     {
-        public const string Root = PlayerWeaponsAssetsPaths.Root + "Bow/";
-        public const string Config = Root + "Config";
+        public const string Root = PlayerWeaponsRoutes.Root + "Bow/";
     }
 }

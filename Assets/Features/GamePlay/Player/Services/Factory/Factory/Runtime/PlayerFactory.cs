@@ -5,13 +5,11 @@ using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
 using GamePlay.Network.Objects.Factories.Registry;
 using GamePlay.Network.Objects.Factories.Runtime;
-using GamePlay.Player.Entity.Setup.Config.Local;
-using GamePlay.Player.Entity.Setup.Config.Remote;
-using GamePlay.Player.Entity.Setup.Root.Common;
-using GamePlay.Player.Entity.Setup.Root.Local;
+using GamePlay.Player.Entity.Definition;
+using GamePlay.Player.Entity.Types.Local;
+using GamePlay.Player.Entity.Types.Remote;
 using GamePlay.Player.Factory.Factory.Logs;
 using GamePlay.Player.Factory.SpawnPoints;
-using GamePlay.Player.List.Definition;
 using GamePlay.Player.List.Runtime;
 using Global.Network.Objects.Factories.Abstract;
 using Ragon.Client;
@@ -82,7 +80,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
             var payload = new PlayerSpawnPayload(spawnPosition);
             await _dynamicEntityFactory.Send(entity, payload);
 
-            var player = new NetworkPlayer(entity, root);
+            var player = new PlayerEntity(entity, root);
             _playersList.Add(entity.Owner, player);
 
             foreach (var equipment in _equipment.Equipment)
@@ -104,7 +102,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
             var root = await _factory.Create<IPlayerRoot>(_parentScope, view, _remoteConfig,
                 new[] { entityComponentFactory });
 
-            var player = new NetworkPlayer(entity, root);
+            var player = new PlayerEntity(entity, root);
             _playersList.Add(entity.Owner, player);
 
             await root.Callbacks.RunConstruct();

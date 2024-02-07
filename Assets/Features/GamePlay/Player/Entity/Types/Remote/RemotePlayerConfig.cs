@@ -1,0 +1,40 @@
+﻿using System.Collections.Generic;
+using Common.Architecture.Entities.Runtime;
+using GamePlay.Player.Entity.Components.Compose;
+using GamePlay.Player.Entity.Components.Equipment.Compose;
+using GamePlay.Player.Entity.Definition;
+using GamePlay.Player.Entity.Network.Compose;
+using GamePlay.Player.Entity.States.Compose;
+using GamePlay.Player.Entity.Types.Common;
+using Sirenix.OdinInspector;
+using UnityEngine;
+
+namespace GamePlay.Player.Entity.Types.Remote
+{
+    [InlineEditor]
+    [CreateAssetMenu(fileName = PlayerConfigRoutes.RemoteName,
+        menuName = PlayerConfigRoutes.RemotePath)]
+    public class RemotePlayerConfig : ScriptableObject, IRemotePlayerConfig
+    {
+        [SerializeField] private RemotePlayerComponentsCompose _components;
+        [SerializeField] private RemotePlayerEquipmentCompose _equipment;
+        [SerializeField] private RemotePlayerStatesCompose _states;
+        [SerializeField] private PlayerNetworkCompose _network;
+        
+        [SerializeField] private RemotePlayerViewFactoryFactory _prefab;
+
+        public ScopedEntityViewFactory Prefab => _prefab;
+
+        public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
+        {
+        };
+
+        public IReadOnlyList<IComponentsCompose> Composes => new IComponentsCompose[]
+        {
+            _components,
+            _equipment,
+            _states,
+            _network
+        };
+    }
+}

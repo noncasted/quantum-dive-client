@@ -1,5 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Player.Entity.Setup.Root.Local;
+using GamePlay.Player.Entity.Definition;
 
 namespace GamePlay.Player.Factory.Factory.Runtime
 {

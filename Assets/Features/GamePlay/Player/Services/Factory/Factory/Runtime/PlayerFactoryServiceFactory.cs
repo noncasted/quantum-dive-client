@@ -2,8 +2,8 @@
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using GamePlay.Player.Entity.Setup.Config.Local;
-using GamePlay.Player.Entity.Setup.Config.Remote;
+using GamePlay.Player.Entity.Types.Local;
+using GamePlay.Player.Entity.Types.Remote;
 using GamePlay.Player.Factory.Factory.Common;
 using GamePlay.Player.Factory.Factory.Logs;
 using Sirenix.OdinInspector;

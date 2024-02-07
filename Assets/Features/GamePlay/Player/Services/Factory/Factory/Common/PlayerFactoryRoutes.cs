@@ -1,5 +1,4 @@
-﻿using GamePlay.Common.Paths;
-using GamePlay.Player.Common;
+﻿using GamePlay.Player.Common;
 
 namespace GamePlay.Player.Factory.Factory.Common
 {

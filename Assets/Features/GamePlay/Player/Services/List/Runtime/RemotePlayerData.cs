@@ -1,4 +1,4 @@
-﻿using GamePlay.Player.Entity.Setup.Root.Remote;
+﻿using GamePlay.Player.Entity.Definition;
 using Ragon.Client;
 
 namespace GamePlay.Player.List.Runtime

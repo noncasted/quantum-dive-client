@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.Components.Common;
 using GamePlay.Player.Entity.Components.DamageProcessors.Runtime;
+using GamePlay.Player.Entity.Components.Root.Remote;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.Sorting.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
@@ -20,13 +22,17 @@ namespace GamePlay.Player.Entity.Components.Compose
         [SerializeField] private RemoteRotationFactory _remoteRotation;
         [SerializeField] private SpriteSortingFactory _spriteSorting;
         [SerializeField] private RemoteStateMachineFactory _stateMachine;
+        [SerializeField] private RemotePlayerRootFactory _root;
+        [SerializeField] private DefaultCallbacksComponentFactory _defaultCallbacks;
 
         public IReadOnlyList<IComponentFactory> Factories => new IComponentFactory[]
         {
             _damageProcessor,
             _remoteRotation,
             _spriteSorting,
-            _stateMachine
+            _stateMachine,
+            _root,
+            _defaultCallbacks
         };
     }
 }
