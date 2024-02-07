@@ -1,12 +1,12 @@
-﻿{
+{
   "name": "GamePlay.Player.Weapons.Bow.Shooter.Runtime",
   "references": [
     "GUID:8f9012bdd1b116c48ab480004500c8f3",
-    "GUID:65c3fcbb851ff9441a22dd049195dc8f",
+    
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-    "GUID:8d690bd583f24e5384f5b7db7b4f3b2f",
+    
     "GUID:cc446d88971f482f839e20b96ce1c71e",
-    "GUID:aaedc93bbf702d34e8e6d773e0108d7c",
+    
     "GUID:04243451437dcfe48b583ab43ef0a8fa",
     "GUID:6c2db941bade13442848b216ff408243",
     "GUID:bd864497808440a98c2eace3cac76fa6",
