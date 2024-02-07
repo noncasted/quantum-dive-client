@@ -1,23 +1,23 @@
 {
-    "name": "GamePlay.Player.Rotation.Animation",
-    "rootNamespace": "",
-    "references": [
-        "GUID:aac41f60988d442497259de79205647b",
-        "GUID:b0275d8a7d994d97ae1652be17935f0f",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-        "GUID:6fe3e5bc5e27400aa7e27dded3e1e008",
-        "GUID:3e7167d9f58d47b7839bb3ce134a78f1",
-        "GUID:f625955ae4f64d9b8121b9d9465af505",
-        "GUID:9f12b849425b4eee835913da917e6c20"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "GamePlay.Player.Rotation.Animation",
+  "rootNamespace": "",
+  "references": [
+    "GUID:aac41f60988d442497259de79205647b",
+    "GUID:b0275d8a7d994d97ae1652be17935f0f",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
+    "GUID:6fe3e5bc5e27400aa7e27dded3e1e008",
+    "GUID:3e7167d9f58d47b7839bb3ce134a78f1",
+    "GUID:f625955ae4f64d9b8121b9d9465af505",
+    "GUID:9f12b849425b4eee835913da917e6c20"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

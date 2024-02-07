@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Services.Updater.Runtime
 {
-    [InlineEditor()]
+    [InlineEditor]
     [CreateAssetMenu(fileName = EnemyUpdaterRoutes.ConfigName,
         menuName = EnemyUpdaterRoutes.ConfigPath)]
     public class EnemyUpdaterRatesConfig : ScriptableObject, IRatesConfig

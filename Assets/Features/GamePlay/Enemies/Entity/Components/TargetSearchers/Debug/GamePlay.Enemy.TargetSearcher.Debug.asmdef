@@ -1,4 +1,7 @@
 ﻿{
   "name": "GamePlay.Enemy.TargetSearcher.Debug",
-  "references":[ "GUID:56d88c156c3e47ef8fd2038c400c40fa", "GUID:6f32726480644b1bb3ae01704a4f353d" ]
+  "references": [
+    "GUID:56d88c156c3e47ef8fd2038c400c40fa",
+    "GUID:6f32726480644b1bb3ae01704a4f353d"
+  ]
 }

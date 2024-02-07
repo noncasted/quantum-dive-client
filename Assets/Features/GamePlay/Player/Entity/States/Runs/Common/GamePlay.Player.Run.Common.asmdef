@@ -1,20 +1,20 @@
 {
-    "name": "GamePlay.Player.Run.Common",
-    "rootNamespace": "",
-    "references": [
-        "GUID:8f9012bdd1b116c48ab480004500c8f3",
-        "GUID:eedb8e7302e941e19735cd090c3960c3",
-        "GUID:aac41f60988d442497259de79205647b",
-        "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-        "GUID:1df29afa6177f8e4fa19b25367556ac2"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "GamePlay.Player.Run.Common",
+  "rootNamespace": "",
+  "references": [
+    "GUID:8f9012bdd1b116c48ab480004500c8f3",
+    "GUID:eedb8e7302e941e19735cd090c3960c3",
+    "GUID:aac41f60988d442497259de79205647b",
+    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
+    "GUID:1df29afa6177f8e4fa19b25367556ac2"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

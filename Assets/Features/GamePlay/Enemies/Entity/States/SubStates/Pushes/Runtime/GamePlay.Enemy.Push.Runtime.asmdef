@@ -1,23 +1,23 @@
 {
-    "name": "GamePlay.Enemy.Push.Runtime",
-    "rootNamespace": "",
-    "references": [
-        "GUID:0acbc503dac94a63b4a4744269d11370",
-        "GUID:a6bee730cad343c7ac8840da91376019",
-        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-        "GUID:3b2ea7622084434a927c413b7fc2fd3a",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:04243451437dcfe48b583ab43ef0a8fa",
-        "GUID:d5ea2f23768c11149b671bcd47fd05ce",
-        "GUID:776d03a35f1b52c4a9aed9f56d7b4229"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "GamePlay.Enemy.Push.Runtime",
+  "rootNamespace": "",
+  "references": [
+    "GUID:0acbc503dac94a63b4a4744269d11370",
+    "GUID:a6bee730cad343c7ac8840da91376019",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:3b2ea7622084434a927c413b7fc2fd3a",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:04243451437dcfe48b583ab43ef0a8fa",
+    "GUID:d5ea2f23768c11149b671bcd47fd05ce",
+    "GUID:776d03a35f1b52c4a9aed9f56d7b4229"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

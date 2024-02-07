@@ -1,19 +1,19 @@
 {
-    "name": "GamePlay.Projectiles.Definition",
-    "rootNamespace": "",
-    "references": [
-        "GUID:861793575c7c4a2d82251cc54eeb8bf5",
-        "GUID:1a1ac4ee6eff4433a04199a96da530a2",
-        "GUID:d89cb064a6d60b243b67336a6540d7a7",
-        "GUID:e07e6ccd9241474dbca4e70862df2bc2"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "GamePlay.Projectiles.Definition",
+  "rootNamespace": "",
+  "references": [
+    "GUID:861793575c7c4a2d82251cc54eeb8bf5",
+    "GUID:1a1ac4ee6eff4433a04199a96da530a2",
+    "GUID:d89cb064a6d60b243b67336a6540d7a7",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

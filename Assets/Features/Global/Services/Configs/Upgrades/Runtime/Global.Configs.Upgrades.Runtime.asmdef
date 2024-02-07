@@ -1,4 +1,10 @@
 ﻿{
   "name": "Global.Configs.Upgrades.Runtime",
-  "references":[ "GUID:5d6211c0382e4ffc855e332aed04465b", "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:f51ebe6a0ceec4240a699833d6309b23", "GUID:b5d66016965c4f8c8e260e3f1678b8f7" ]
+  "references": [
+    "GUID:5d6211c0382e4ffc855e332aed04465b",
+    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:b5d66016965c4f8c8e260e3f1678b8f7"
+  ]
 }

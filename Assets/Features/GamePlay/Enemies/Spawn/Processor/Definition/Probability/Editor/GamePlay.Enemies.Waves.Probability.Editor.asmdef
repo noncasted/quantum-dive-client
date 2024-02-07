@@ -1,24 +1,24 @@
 {
-    "name": "GamePlay.Enemies.Waves.Probability.Editor",
-    "rootNamespace": "",
-    "references": [
-        "GUID:176371d9ecf14a348fc4fc86548c5b17",
-        "GUID:94e5ca42c58876942a8ffdd1c63b952f",
-        "GUID:a8f6b895322c45408ed64cb258c91d51",
-        "GUID:f38aae42bdf8425ca292c68947a20558",
-        "GUID:bc3ad523d30c4d20b3e49ad14a5cbdfd",
-        "GUID:75f29b67883912c4683d10d111aca113",
-        "GUID:09eeed04a09c422b9c62d681c78d80ec"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "GamePlay.Enemies.Waves.Probability.Editor",
+  "rootNamespace": "",
+  "references": [
+    "GUID:176371d9ecf14a348fc4fc86548c5b17",
+    "GUID:94e5ca42c58876942a8ffdd1c63b952f",
+    "GUID:a8f6b895322c45408ed64cb258c91d51",
+    "GUID:f38aae42bdf8425ca292c68947a20558",
+    "GUID:bc3ad523d30c4d20b3e49ad14a5cbdfd",
+    "GUID:75f29b67883912c4683d10d111aca113",
+    "GUID:09eeed04a09c422b9c62d681c78d80ec"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

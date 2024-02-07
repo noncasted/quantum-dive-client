@@ -23,7 +23,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Slots.Binder
 
         private EquipmentSlotView CreateView(SlotDefinition definition)
         {
-            var slot = new GameObject()
+            var slot = new GameObject
             {
                 name = definition.Name,
                 transform = { parent = transform, localPosition = Vector3.zero }

@@ -1,4 +1,6 @@
 ﻿{
   "name": "GamePlay.Player.Weapons.Bow.Scope",
-  "references":[ "GUID:b0214a6008ed146ff8f122a6a9c2f6cc" ]
+  "references": [
+    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+  ]
 }

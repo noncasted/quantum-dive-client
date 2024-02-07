@@ -1,4 +1,6 @@
 ﻿{
   "name": "Global.Configs.Upgrades.Abstract",
-  "references":[ "GUID:3b2ea7622084434a927c413b7fc2fd3a" ]
+  "references": [
+    "GUID:3b2ea7622084434a927c413b7fc2fd3a"
+  ]
 }

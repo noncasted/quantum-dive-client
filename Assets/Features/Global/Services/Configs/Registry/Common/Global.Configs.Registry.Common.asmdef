@@ -1,4 +1,7 @@
 ﻿{
   "name": "Global.Configs.Registry.Common",
-  "references":[ "GUID:ab14ae7a0c3843c6be8d0c6f059b02f7", "GUID:5f85ab5dc178ff54c81b21f197b82d14" ]
+  "references": [
+    "GUID:ab14ae7a0c3843c6be8d0c6f059b02f7",
+    "GUID:5f85ab5dc178ff54c81b21f197b82d14"
+  ]
 }

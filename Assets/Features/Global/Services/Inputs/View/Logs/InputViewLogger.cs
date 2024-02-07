@@ -116,7 +116,7 @@ namespace Global.Inputs.View.Logs
             if (_settings.IsAvailable(InputViewLogType.RollPressed) == false)
                 return;
 
-            _logger.Log($"Roll: is pressed", _settings.LogParameters);
+            _logger.Log("Roll: is pressed", _settings.LogParameters);
         }
 
         public void OnRollCanceled()

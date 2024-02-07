@@ -1,4 +1,6 @@
 ﻿{
   "name": "GamePlay.Player.Weapons.Bow.Factory.Common",
-  "references":[ "GUID:b6431b7d3eb44c7fb19b3735d729087f" ]
+  "references": [
+    "GUID:b6431b7d3eb44c7fb19b3735d729087f"
+  ]
 }

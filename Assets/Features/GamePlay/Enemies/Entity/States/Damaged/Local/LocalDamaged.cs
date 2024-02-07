@@ -68,7 +68,7 @@ namespace GamePlay.Enemies.Entity.States.Damaged.Local
         {
             var angle = damageDirection.ToAngle();
             
-            var payload = new DamagedPayload()
+            var payload = new DamagedPayload
             {
                 Angle = angle
             };

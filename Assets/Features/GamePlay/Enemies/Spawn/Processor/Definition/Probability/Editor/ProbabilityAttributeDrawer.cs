@@ -19,7 +19,7 @@ namespace GamePlay.Enemies.Spawn.Processor.Definition.Probability.Editor
         private readonly Dictionary<IEnemyDefinition, Texture> _icons = new();
         private readonly Dictionary<int, IEnemyDefinition> _indexMap = new();
 
-        private bool _isDragged = false;
+        private bool _isDragged;
         private int _selectedId;
         private EnemyDefinitionsRegistryFactory _registry;
 

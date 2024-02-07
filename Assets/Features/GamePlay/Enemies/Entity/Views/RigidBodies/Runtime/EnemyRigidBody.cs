@@ -38,7 +38,7 @@ namespace GamePlay.Enemies.Entity.Views.RigidBodies.Runtime
         private readonly Queue<Vector2> _teleports = new();
 
         private bool _isMovedByVelocity;
-        private bool _isActive = false;
+        private bool _isActive;
 
         private Vector2 _currentPosition;
 

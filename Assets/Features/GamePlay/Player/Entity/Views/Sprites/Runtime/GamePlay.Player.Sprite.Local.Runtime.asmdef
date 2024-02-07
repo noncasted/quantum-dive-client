@@ -1,22 +1,22 @@
 {
-    "name": "GamePlay.Player.Sprite.Local.Runtime",
-    "rootNamespace": "",
-    "references": [
-        "GUID:fe4adae493555af4788e53948d7966ca",
-        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-        "GUID:55654731a9c12944782248a80630ea28",
-        "GUID:f625955ae4f64d9b8121b9d9465af505",
-        "GUID:a6bee730cad343c7ac8840da91376019",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "GamePlay.Player.Sprite.Local.Runtime",
+  "rootNamespace": "",
+  "references": [
+    "GUID:fe4adae493555af4788e53948d7966ca",
+    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:55654731a9c12944782248a80630ea28",
+    "GUID:f625955ae4f64d9b8121b9d9465af505",
+    "GUID:a6bee730cad343c7ac8840da91376019",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

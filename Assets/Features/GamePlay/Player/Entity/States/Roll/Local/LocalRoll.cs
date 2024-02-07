@@ -94,7 +94,7 @@ namespace GamePlay.Player.Entity.States.Roll.Local
 
         private async UniTask Begin()
         {
-            var payload = new RollPayload()
+            var payload = new RollPayload
             {
                 Direction = _input.Direction
             };

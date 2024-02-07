@@ -12,5 +12,8 @@
   "defineConstraints": [],
   "versionDefines": [],
   "noEngineReferences": false,
-  "references":[ "GUID:d945054fb520ae0408f2ec087ffa5163", "GUID:fa9915635b0341e4ab6e73abc00d46f0" ]
+  "references": [
+    "GUID:d945054fb520ae0408f2ec087ffa5163",
+    "GUID:fa9915635b0341e4ab6e73abc00d46f0"
+  ]
 }

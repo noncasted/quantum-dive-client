@@ -1,4 +1,6 @@
 ﻿{
   "name": "GamePlay.Player.Weapons.Sword.Config.Common",
-  "references":[ "GUID:c075eee8fbb245bf9a56dfe2f04f736d" ]
+  "references": [
+    "GUID:c075eee8fbb245bf9a56dfe2f04f736d"
+  ]
 }

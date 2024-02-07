@@ -45,7 +45,7 @@ namespace GamePlay.Enemies.Entity.Views.Hitbox.Remote
 
         public void ReceiveDamage(Damage damage)
         {
-            var payload = new EnemyDamageReceivedEvent()
+            var payload = new EnemyDamageReceivedEvent
             {
                 Damage = damage
             };

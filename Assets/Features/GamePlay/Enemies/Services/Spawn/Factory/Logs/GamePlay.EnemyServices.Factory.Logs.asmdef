@@ -1,4 +1,8 @@
 ﻿{
   "name": "GamePlay.EnemyServices.Factory.Logs",
-  "references":[ "GUID:fe4adae493555af4788e53948d7966ca", "GUID:94e5ca42c58876942a8ffdd1c63b952f", "GUID:3a3690729c7a4e2ca4224f87380e3405" ]
+  "references": [
+    "GUID:fe4adae493555af4788e53948d7966ca",
+    "GUID:94e5ca42c58876942a8ffdd1c63b952f",
+    "GUID:3a3690729c7a4e2ca4224f87380e3405"
+  ]
 }

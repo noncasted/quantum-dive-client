@@ -1,4 +1,6 @@
 ﻿{
   "name": "GamePlay.EnemyServices.StatesRegistry.Common",
-  "references":[ "GUID:31b8de396caf49beac82429c452ab29b" ]
+  "references": [
+    "GUID:31b8de396caf49beac82429c452ab29b"
+  ]
 }

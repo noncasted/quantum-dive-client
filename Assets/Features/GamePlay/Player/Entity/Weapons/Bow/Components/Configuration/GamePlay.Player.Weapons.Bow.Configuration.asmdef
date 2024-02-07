@@ -1,4 +1,12 @@
 ﻿{
   "name": "GamePlay.Player.Weapons.Bow.Configuration",
-  "references":[ "GUID:23c3827423cb4fb380b69f0d9a190eca", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:3b2ea7622084434a927c413b7fc2fd3a", "GUID:b5d66016965c4f8c8e260e3f1678b8f7", "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9", "GUID:b6431b7d3eb44c7fb19b3735d729087f", "GUID:9f12b849425b4eee835913da917e6c20" ]
+  "references": [
+    "GUID:23c3827423cb4fb380b69f0d9a190eca",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:3b2ea7622084434a927c413b7fc2fd3a",
+    "GUID:b5d66016965c4f8c8e260e3f1678b8f7",
+    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
+    "GUID:b6431b7d3eb44c7fb19b3735d729087f",
+    "GUID:9f12b849425b4eee835913da917e6c20"
+  ]
 }

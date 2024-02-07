@@ -1,23 +1,23 @@
 {
-    "name": "GamePlay.Enemy.Network.EntityHandler.Runtime",
-    "rootNamespace": "",
-    "references": [
-        "GUID:3944dd557e8f416c84ad000a528839e7",
-        "GUID:c50bcf42e5334355b142951d2473d15a",
-        "GUID:3b2ea7622084434a927c413b7fc2fd3a",
-        "GUID:5be6262f59e0487f8f55e7b4b6358c57",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:d7f8e82b99194b18932e26c3e78dca3f",
-        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-        "GUID:a6bee730cad343c7ac8840da91376019"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "GamePlay.Enemy.Network.EntityHandler.Runtime",
+  "rootNamespace": "",
+  "references": [
+    "GUID:3944dd557e8f416c84ad000a528839e7",
+    "GUID:c50bcf42e5334355b142951d2473d15a",
+    "GUID:3b2ea7622084434a927c413b7fc2fd3a",
+    "GUID:5be6262f59e0487f8f55e7b4b6358c57",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:d7f8e82b99194b18932e26c3e78dca3f",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:a6bee730cad343c7ac8840da91376019"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }
