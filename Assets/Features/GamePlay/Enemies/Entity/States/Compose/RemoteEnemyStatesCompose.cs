@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Enemies.Entity.States.Common;
+using GamePlay.Enemies.Entity.States.Common;
 using GamePlay.Enemies.Entity.States.Damaged.Remote;
 using GamePlay.Enemies.Entity.States.Death.Remote;
 using GamePlay.Enemies.Entity.States.Following.Remote;
@@ -9,7 +9,7 @@ using GamePlay.Enemies.Entity.States.Respawn.Remote;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Features.GamePlay.Enemies.Entity.States.Compose
+namespace GamePlay.Enemies.Entity.States.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

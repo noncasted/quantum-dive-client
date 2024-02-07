@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
-using Features.GamePlay.Enemies.Entity.States.Common;
+using GamePlay.Enemies.Entity.States.Common;
 using GamePlay.Enemies.Entity.States.Damaged.Local;
 using GamePlay.Enemies.Entity.States.Death.Local;
 using GamePlay.Enemies.Entity.States.Following.Local;
@@ -10,7 +10,7 @@ using GamePlay.Enemies.Entity.States.SubStates.Pushes.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Features.GamePlay.Enemies.Entity.States.Compose
+namespace GamePlay.Enemies.Entity.States.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

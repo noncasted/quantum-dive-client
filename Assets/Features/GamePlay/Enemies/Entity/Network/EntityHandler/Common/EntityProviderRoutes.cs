@@ -1,4 +1,4 @@
-﻿using Features.GamePlay.Enemies.Entity.Network.Common;
+﻿using GamePlay.Enemies.Entity.Network.Common;
 using GamePlay.Enemies.Entity.Setup.Paths;
 
 namespace GamePlay.Enemies.Entity.Network.EntityHandler.Common

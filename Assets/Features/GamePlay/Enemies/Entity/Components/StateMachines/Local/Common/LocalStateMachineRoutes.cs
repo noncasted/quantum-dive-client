@@ -1,4 +1,4 @@
-﻿using Features.GamePlay.Enemies.Entity.Components.Common;
+﻿using GamePlay.Enemies.Entity.Components.Common;
 using GamePlay.Enemies.Entity.Setup.Paths;
 
 namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Common

@@ -1,6 +1,6 @@
 ﻿using GamePlay.Enemies.Entity.Setup.Paths;
 
-namespace Features.GamePlay.Enemies.Entity.Network.Common
+namespace GamePlay.Enemies.Entity.Network.Common
 {
     public class EnemyNetworkRoutes
     {
