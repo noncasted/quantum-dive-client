@@ -1,8 +1,6 @@
 {
   "name": "GamePlay.Player.Weapons.Bow.Strafe.Remote",
   "references": [
-    
-    
     "GUID:04243451437dcfe48b583ab43ef0a8fa",
     "GUID:51ad2d5d390b45bea4a3881475db024d",
     "GUID:239f9a8379f7b964b8f8c879fed530fb",
@@ -19,7 +17,6 @@
     "GUID:699865ac82ed4bfc98e47c9342127ab0",
     "GUID:eedb8e7302e941e19735cd090c3960c3",
     "GUID:f625955ae4f64d9b8121b9d9465af505",
-    
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:9cd20ff68fe34293a478ea6f96510ff9",
     "GUID:47083761e726d344ebda60ec45a5396c",

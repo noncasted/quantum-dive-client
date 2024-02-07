@@ -6,7 +6,6 @@ using GamePlay.Environment.Common;
 using Internal.Services.Scenes.Data;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace GamePlay.Environment.Bootstrap
 {

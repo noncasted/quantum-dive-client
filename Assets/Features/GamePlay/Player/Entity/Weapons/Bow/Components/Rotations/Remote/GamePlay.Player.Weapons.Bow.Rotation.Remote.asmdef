@@ -1,14 +1,12 @@
 {
   "name": "GamePlay.Player.Weapons.Bow.Rotation.Remote",
   "references": [
-    
     "GUID:04243451437dcfe48b583ab43ef0a8fa",
     "GUID:cccef2e047ca63e41923842cb1749709",
     "GUID:c713b254602614c43a1d94a2a13ba844",
     "GUID:75e035439eeffa94790277b218d6398a",
     "GUID:5a6ca98db01d77741890b42e259b7291",
     "GUID:8f9012bdd1b116c48ab480004500c8f3",
-    
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:16458d00134c49e984d156e9e37c97c7",
     "GUID:b408d0bab4b94df2bd34926899e5e3e1",

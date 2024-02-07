@@ -1,9 +1,7 @@
 {
   "name": "GamePlay.Player.Weapons.Bow.Arrow.Runtime",
   "references": [
-    
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-    
     "GUID:75e035439eeffa94790277b218d6398a",
     "GUID:a6bee730cad343c7ac8840da91376019",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",

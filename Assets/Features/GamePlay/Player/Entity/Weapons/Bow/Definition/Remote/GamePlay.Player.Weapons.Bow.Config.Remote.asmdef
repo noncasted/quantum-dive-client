@@ -2,8 +2,6 @@
   "name": "GamePlay.Player.Weapons.Bow.Config.Remote",
   "references": [
     "GUID:b05b159862734a98954de233c33ae0c5",
-    
-    
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:cba6ac8ac64c48208b19a46ce9ddf862",
     "GUID:ed3143b9b3134f1ab6ad76169c5ebf96",

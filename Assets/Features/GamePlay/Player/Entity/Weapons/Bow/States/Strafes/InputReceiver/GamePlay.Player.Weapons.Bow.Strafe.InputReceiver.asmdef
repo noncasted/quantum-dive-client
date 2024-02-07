@@ -1,9 +1,7 @@
 {
   "name": "GamePlay.Player.Weapons.Bow.Strafe.InputReceiver",
   "references": [
-    
     "GUID:c713b254602614c43a1d94a2a13ba844",
-    
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:9cd20ff68fe34293a478ea6f96510ff9",
     "GUID:a5626e114e4b424c99c4238550459e80",

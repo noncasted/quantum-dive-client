@@ -2,7 +2,6 @@
   "name": "GamePlay.Player.List.Runtime",
   "references": [
     "GUID:582d70e07d0d48d195daeab83b72aa33",
-    
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:7adcf9a0f9eb4aa39b12636ab3acc20f",
     "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",

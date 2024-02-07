@@ -1,4 +1,6 @@
 ﻿{
   "name": "GamePlay.Enemy.Spawn.Common",
-  "references":[ "GUID:73b1dbf9f932442fb40445b9ad42f150" ]
+  "references": [
+    "GUID:73b1dbf9f932442fb40445b9ad42f150"
+  ]
 }
