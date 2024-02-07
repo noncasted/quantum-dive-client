@@ -1,6 +1,5 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Cysharp.Threading.Tasks;
-using GamePlay.Common.SceneBootstrappers.Runtime;
 using GamePlay.Enemy.Spawn.Zones.SpawnPoints;
 using GamePlay.Enemy.Spawn.Zones.Trigger;
 using UnityEngine;
@@ -11,12 +10,12 @@ namespace GamePlay.Enemy.Spawn.Zones.Setup.Bootstrap
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(EnemyZoneScope))]
-    public class EnemyZoneBootstrapper : SceneComponentBuilder
+    public class EnemyZoneBootstrapper : MonoBehaviour
     {
         [SerializeField] private EnemyZoneTrigger _zoneTrigger;
         [SerializeField] private EnemySpawnPoints _spawnPoints;
-        
-        public override async UniTask Build(LifetimeScope parent, ICallbackRegistry callbacks)
+
+        public async UniTask Build(LifetimeScope parent, ICallbackRegistry callbacks)
         {
             var scope = GetComponent<EnemyZoneScope>();
 
@@ -27,12 +26,12 @@ namespace GamePlay.Enemy.Spawn.Zones.Setup.Bootstrap
                     await UniTask.Create(async () => scope.Build());
                 }
             }
-            
+
             void Register(IContainerBuilder container)
             {
                 container.RegisterComponent(_zoneTrigger)
                     .As<IEnemyZoneTrigger>();
-            
+
                 container.RegisterComponent(_spawnPoints)
                     .As<IEnemySpawnPoints>();
             }

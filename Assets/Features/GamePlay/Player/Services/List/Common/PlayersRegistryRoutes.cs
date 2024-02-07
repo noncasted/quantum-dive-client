@@ -1,6 +1,6 @@
-﻿using GamePlay.Player.Common;
+﻿using GamePlay.Player.Services.Common;
 
-namespace GamePlay.Player.List.Common
+namespace GamePlay.Player.Services.List.Common
 {
     public class PlayersRegistryRoutes
     {

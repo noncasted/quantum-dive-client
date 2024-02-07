@@ -15,7 +15,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
     public class EnemyPool : IEnemyPool
     {
         public EnemyPool(
-            LevelScope scope,
+            GamePlayScope scope,
             Scene targetScene,
             IScopedEntityFactory entityFactory,
             IDynamicEntityFactory dynamicEntityFactory,
@@ -28,7 +28,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
             _definitionMapper = definitionMapper;
         }
 
-        private readonly LevelScope _scope;
+        private readonly GamePlayScope _scope;
         private readonly Scene _targetScene;
         private readonly IScopedEntityFactory _entityFactory;
         private readonly IDynamicEntityFactory _dynamicEntityFactory;

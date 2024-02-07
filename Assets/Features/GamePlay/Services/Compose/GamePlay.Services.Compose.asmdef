@@ -1,0 +1,14 @@
+﻿{
+  "name": "GamePlay.Services.Compose",
+  "references": [
+    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
+    "GUID:5dc5106e9fb4470395fa42c55389c4a2",
+    "GUID:461abe90bf984b7e862668f0a08ec9a5",
+    "GUID:f520645b2a2d2c644a61f2291ab95220",
+    "GUID:434d91867a7bc234a98f0bdb56055faf",
+    "GUID:55fab4e504ed452ea9cd506c946d573b",
+    "GUID:9cfd74e03b544251808825a0d52ed401",
+    "GUID:3645d3881bb043458b3711f767e534ae",
+    "GUID:023cf439d76f82743a21c05af54cdbd9"
+  ]
+}

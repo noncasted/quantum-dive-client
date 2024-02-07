@@ -1,0 +1,6 @@
+﻿{
+  "name": "GamePlay.Network.Common",
+  "references": [
+    "GUID:5dc5106e9fb4470395fa42c55389c4a2"
+  ]
+}

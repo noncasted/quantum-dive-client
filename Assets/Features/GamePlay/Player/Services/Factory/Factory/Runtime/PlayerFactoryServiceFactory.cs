@@ -4,12 +4,12 @@ using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Types.Local;
 using GamePlay.Player.Entity.Types.Remote;
-using GamePlay.Player.Factory.Factory.Common;
-using GamePlay.Player.Factory.Factory.Logs;
+using GamePlay.Player.Services.Factory.Factory.Common;
+using GamePlay.Player.Services.Factory.Factory.Logs;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Player.Factory.Factory.Runtime
+namespace GamePlay.Player.Services.Factory.Factory.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = PlayerFactoryRoutes.ServiceName,

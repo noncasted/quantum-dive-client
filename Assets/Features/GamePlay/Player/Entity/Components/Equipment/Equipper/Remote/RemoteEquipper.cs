@@ -5,7 +5,7 @@ using GamePlay.Player.Entity.Components.Equipment.Equipper.Factory;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Binder;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Runtime;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Player.Mappers.Equipment.Runtime;
+using GamePlay.Player.Services.Mappers.Equipment.Runtime;
 using Ragon.Client;
 using Ragon.Protocol;
 using VContainer.Unity;
@@ -18,7 +18,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Remote
             IEquipmentSlotsStorage storage,
             IEquipmentSlotBinder binder,
             IEquipmentFactory factory,
-            IEquipmentMapper registry,
+            IPlayerEquipmentMapper registry,
             IEntityProvider entityProvider) : base(0, false)
         {
             _storage = storage;
@@ -32,7 +32,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Remote
         private readonly IEquipmentSlotBinder _binder;
         private readonly IEquipmentFactory _factory;
         private readonly LifetimeScope _rootScope;
-        private readonly IEquipmentMapper _registry;
+        private readonly IPlayerEquipmentMapper _registry;
         private readonly IEntityProvider _entityProvider;
 
         private readonly List<int> _buffer = new();

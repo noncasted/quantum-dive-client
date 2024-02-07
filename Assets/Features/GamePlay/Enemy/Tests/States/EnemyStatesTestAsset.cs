@@ -17,7 +17,7 @@ using GamePlay.Network.Objects.Factories.Runtime;
 using GamePlay.Network.Room.Entities.Factory;
 using GamePlay.Network.Room.Lifecycle.Runtime;
 using GamePlay.Network.Room.SceneCollectors.Runtime;
-using GamePlay.Player.List.Runtime;
+using GamePlay.Player.Services.List.Runtime;
 using GamePlay.Projectiles.Bootstrap;
 using GamePlay.Targets.Registry.Runtime;
 using GamePlay.VfxPools.Runtime;
@@ -66,8 +66,8 @@ namespace GamePlay.Enemy.Tests.States
         [FoldoutGroup("Network")] [SerializeField]
         private DynamicEntityFactoryServiceFactory _dynamicEntityFactory;
 
-        [FoldoutGroup("Network")] [SerializeField]
-        private PlayersRegistryFactory _playersRegistry;
+        [FormerlySerializedAs("_playersRegistry")] [FoldoutGroup("Network")] [SerializeField]
+        private PlayerListFactory _playerList;
 
         [FormerlySerializedAs("_enemiesRegistry")] [FoldoutGroup("Enemy")] [SerializeField]
         private EnemyListFactory _enemyList;
@@ -87,7 +87,7 @@ namespace GamePlay.Enemy.Tests.States
         [FoldoutGroup("Enemy")] [SerializeField]
         private EnemyUpdaterFactory _enemyUpdater;
 
-        [SerializeField] private LevelScope _scopePrefab;
+        [SerializeField] private GamePlayScope _scopePrefab;
         [SerializeField] private SceneData _servicesScene;
 
         public LifetimeScope ScopePrefab => _scopePrefab;
@@ -107,7 +107,7 @@ namespace GamePlay.Enemy.Tests.States
             _sceneEntityFactory,
             _sceneCollector,
             _dynamicEntityFactory,
-            _playersRegistry,
+            _playerList,
             _enemyList,
             _enemyFactory,
             _enemyDefinitionMapper,

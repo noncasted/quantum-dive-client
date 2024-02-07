@@ -1,5 +1,4 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Common.SceneBootstrappers.Runtime;
 using GamePlay.Enemy.Entity.Definition.Asset;
 using GamePlay.Enemy.Spawn.Factory.Runtime;
 using Sirenix.OdinInspector;
@@ -9,7 +8,7 @@ using VContainer;
 namespace GamePlay.Enemy.Spawn.Debug
 {
     [DisallowMultipleComponent]
-    public class EnemySpawnDebug : SceneComponentRegister
+    public class EnemySpawnDebug : MonoBehaviour
     {
         [SerializeField] private Transform _point;
         [SerializeField] private EnemyDefinition _range;
@@ -22,7 +21,7 @@ namespace GamePlay.Enemy.Spawn.Debug
             _factory = factory;
         }
         
-        public override void Register(IServiceCollection services)
+        public void Register(IServiceCollection services)
         {
             services.Inject(this);
         }

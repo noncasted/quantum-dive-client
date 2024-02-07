@@ -8,15 +8,15 @@ using GamePlay.Network.Objects.Factories.Runtime;
 using GamePlay.Player.Entity.Definition;
 using GamePlay.Player.Entity.Types.Local;
 using GamePlay.Player.Entity.Types.Remote;
-using GamePlay.Player.Factory.Factory.Logs;
-using GamePlay.Player.Factory.SpawnPoints;
-using GamePlay.Player.List.Runtime;
+using GamePlay.Player.Services.Factory.Factory.Logs;
+using GamePlay.Player.Services.Factory.SpawnPoints;
+using GamePlay.Player.Services.List.Runtime;
 using Global.Network.Objects.Factories.Abstract;
 using Ragon.Client;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace GamePlay.Player.Factory.Factory.Runtime
+namespace GamePlay.Player.Services.Factory.Factory.Runtime
 {
     public class PlayerFactory : IPlayerFactory, IEntityFactory, IScopeLifetimeListener
     {
@@ -24,7 +24,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
             IDynamicEntityFactory dynamicEntityFactory,
             INetworkFactoriesRegistry factoriesRegistry,
             IScopedEntityFactory factory,
-            IPlayersList playersList,
+            IPlayerList playerList,
             LocalPlayerConfig localConfig,
             RemotePlayerConfig remoteConfig,
             LifetimeScope parentScope,
@@ -34,7 +34,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
             _dynamicEntityFactory = dynamicEntityFactory;
             _factoriesRegistry = factoriesRegistry;
             _factory = factory;
-            _playersList = playersList;
+            _playerList = playerList;
             _localConfig = localConfig;
             _remoteConfig = remoteConfig;
             _parentScope = parentScope;
@@ -45,14 +45,14 @@ namespace GamePlay.Player.Factory.Factory.Runtime
         private readonly IDynamicEntityFactory _dynamicEntityFactory;
         private readonly INetworkFactoriesRegistry _factoriesRegistry;
         private readonly IScopedEntityFactory _factory;
-        private readonly IPlayersList _playersList;
+        private readonly IPlayerList _playerList;
         private readonly LocalPlayerConfig _localConfig;
         private readonly RemotePlayerConfig _remoteConfig;
         private readonly LifetimeScope _parentScope;
         private readonly DefaultEquipmentConfig _equipment;
 
         private readonly PlayerFactoryLogger _logger;
-        private readonly LevelScope _scope;
+        private readonly GamePlayScope _scope;
         private readonly ISpawnPoints _spawnPoints;
 
         private readonly ObjectIdGenerator _typeGenerator = new();
@@ -81,7 +81,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
             await _dynamicEntityFactory.Send(entity, payload);
 
             var player = new PlayerEntity(entity, root);
-            _playersList.Add(entity.Owner, player);
+            _playerList.Add(entity.Owner, player);
 
             foreach (var equipment in _equipment.Equipment)
                 root.Equipper.Equip(equipment);
@@ -103,7 +103,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
                 new[] { entityComponentFactory });
 
             var player = new PlayerEntity(entity, root);
-            _playersList.Add(entity.Owner, player);
+            _playerList.Add(entity.Owner, player);
 
             await root.Callbacks.RunConstruct();
             await root.Enable();

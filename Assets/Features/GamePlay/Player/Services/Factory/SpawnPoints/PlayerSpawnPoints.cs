@@ -1,10 +1,9 @@
 ﻿using Common.Architecture.Container.Abstract;
-using GamePlay.Common.SceneBootstrappers.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Player.Factory.SpawnPoints
+namespace GamePlay.Player.Services.Factory.SpawnPoints
 {
-    public class PlayerSpawnPoints : SceneComponentRegister, ISpawnPoints
+    public class PlayerSpawnPoints : MonoBehaviour, ISpawnPoints
     {
         [SerializeField] private Transform _spawnPoint;
 
@@ -13,7 +12,7 @@ namespace GamePlay.Player.Factory.SpawnPoints
             return _spawnPoint.position;
         }
 
-        public override void Register(IServiceCollection services)
+        public void Register(IServiceCollection services)
         {
             services.RegisterComponent(this)
                 .As<ISpawnPoints>();

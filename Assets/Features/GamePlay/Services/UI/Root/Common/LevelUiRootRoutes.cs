@@ -1,12 +1,10 @@
-﻿using GamePlay.Common.Paths;
+﻿using GamePlay.Common.Routes;
 
 namespace GamePlay.UI.Root.Common
 {
     public static class LevelUiRootRoutes
     {
-        private const string _paths = GamePlayAssetsPaths.Root + "LevelUiRoot/";
-
-        public const string ServicePath = _paths + "Service";
-        public const string ServiceName = GamePlayAssetsPrefixes.Service + "LevelUiRoot";
+        public const string ServicePath = GamePlayServicesRoutes.Root + "UIRoot/Service";
+        public const string ServiceName = GamePlayServicesPrefixes.Service + "UIRoot";
     }
 }

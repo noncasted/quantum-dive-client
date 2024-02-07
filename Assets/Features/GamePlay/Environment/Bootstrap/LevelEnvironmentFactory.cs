@@ -2,7 +2,6 @@
 using Common.Architecture.Scopes.Runtime.Utils;
 using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Cysharp.Threading.Tasks;
-using GamePlay.Common.SceneBootstrappers.Runtime;
 using GamePlay.Environment.Common;
 using Internal.Services.Scenes.Data;
 using Sirenix.OdinInspector;
@@ -20,13 +19,13 @@ namespace GamePlay.Environment.Bootstrap
 
         public override async UniTask Create(IServiceCollection services, IScopeUtils utils)
         {
-            var result = await utils.SceneLoader.LoadTyped<SceneBootstrapper>(_scene);
-
-            SceneManager.SetActiveScene(result.Scene);
-
-            var bootstrapper = result.Searched;
-
-            bootstrapper.Build(services, utils.Callbacks);
+            // var result = await utils.SceneLoader.LoadTyped<SceneBootstrapper>(_scene);
+            //
+            // SceneManager.SetActiveScene(result.Scene);
+            //
+            // var bootstrapper = result.Searched;
+            //
+            // bootstrapper.Build(services, utils.Callbacks);
         }
     }
 }

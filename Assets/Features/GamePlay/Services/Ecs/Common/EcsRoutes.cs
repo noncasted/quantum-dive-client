@@ -1,12 +1,10 @@
-﻿using GamePlay.Common.Paths;
+﻿using GamePlay.Common.Routes;
 
 namespace GamePlay.Ecs.Common
 {
     public static class EcsRoutes
     {
-        private const string _paths = GamePlayAssetsPaths.Root + "Ecs/";
-
-        public const string ServicePath = _paths + "Service";
-        public const string ServiceName = GamePlayAssetsPrefixes.Service + "Ecs";
+        public const string ServicePath = GamePlayServicesRoutes.Root + "ECS/Service";
+        public const string ServiceName = GamePlayServicesPrefixes.Service + "Ecs";
     }
 }

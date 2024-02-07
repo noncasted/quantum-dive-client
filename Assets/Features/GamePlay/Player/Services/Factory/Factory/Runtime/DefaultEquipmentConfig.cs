@@ -4,7 +4,7 @@ using GamePlay.Player.Entity.Components.Equipment.Definition;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Player.Factory.Factory.Runtime
+namespace GamePlay.Player.Services.Factory.Factory.Runtime
 {
     [Serializable]
     public class DefaultEquipmentConfig

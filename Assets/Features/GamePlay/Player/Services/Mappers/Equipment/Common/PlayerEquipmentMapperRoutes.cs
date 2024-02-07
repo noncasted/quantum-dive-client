@@ -1,6 +1,6 @@
-﻿using GamePlay.Player.Common;
+﻿using GamePlay.Player.Services.Common;
 
-namespace GamePlay.Player.Mappers.Equipment.Common
+namespace GamePlay.Player.Services.Mappers.Equipment.Common
 {
     public class PlayerEquipmentMapperRoutes
     {

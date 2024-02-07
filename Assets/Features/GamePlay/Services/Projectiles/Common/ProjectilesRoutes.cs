@@ -1,27 +1,27 @@
-﻿using GamePlay.Common.Paths;
+﻿using GamePlay.Common.Routes;
 
 namespace GamePlay.Projectiles.Common
 {
     public static class ProjectilesRoutes
     {
-        private const string _paths = GamePlayAssetsPaths.Root + "Projectiles/";
+        private const string Root = GamePlayServicesRoutes.Root + "Projectiles/";
 
-        public const string ServicePath = _paths + "Service";
-        public const string ServiceName = GamePlayAssetsPrefixes.Service + "Projectiles";
+        public const string ServicePath = Root + "Service";
+        public const string ServiceName = GamePlayServicesPrefixes.Service + "Projectiles";
 
-        public const string CollisionConfigPath = _paths + "CollisionDetectionConfig";
+        public const string CollisionConfigPath = Root + "CollisionDetectionConfig";
         public const string CollisionConfigName = "CollisionDetectionConfig";
         
-        public const string SortingConfigPath = _paths + "SortingConfig";
+        public const string SortingConfigPath = Root + "SortingConfig";
         public const string SortingConfigName = "ProjectileSortingConfig";
 
-        public const string LogsPath = _paths + "Logs";
-        public const string LogsName = GamePlayAssetsPrefixes.Logs + "Projectiles";
+        public const string LogsPath = Root + "Logs";
+        public const string LogsName = GamePlayServicesPrefixes.Logs + "Projectiles";
         
-        public const string DefinitionPath = _paths + "Definition";
+        public const string DefinitionPath = Root + "Definition";
         public const string DefinitionName = "Projectile_";
         
-        public const string DefinitionsRegistryPath = _paths + "DefinitionsRegistry";
+        public const string DefinitionsRegistryPath = Root + "DefinitionsRegistry";
         public const string DefinitionsRegistryName = "ProjectilesDefinitionsRegistry";
     }
 }

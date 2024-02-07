@@ -1,7 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using GamePlay.Common.SceneBootstrappers.Runtime;
 using GamePlay.Environment.Common;
 using UnityEngine;
 
@@ -13,8 +12,8 @@ namespace GamePlay.Environment.Bootstrap
     {
         public override async UniTask Create(IServiceCollection services, IScopeUtils utils)
         {
-            var bootstrapper = FindFirstObjectByType<SceneBootstrapper>();
-            bootstrapper.Build(services, utils.Callbacks);
+            // var bootstrapper = FindFirstObjectByType<SceneBootstrapper>();
+            // bootstrapper.Build(services, utils.Callbacks);
         }
     }
 }

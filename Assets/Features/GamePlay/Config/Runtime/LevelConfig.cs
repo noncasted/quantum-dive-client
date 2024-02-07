@@ -1,160 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Common.Architecture.Scopes.Runtime.Services;
-using GamePlay.Common.Paths;
+using GamePlay.Common.Routes;
 using GamePlay.Common.Scope;
-using GamePlay.Ecs.Runtime.Bootstrap;
-using GamePlay.Enemy.List.Runtime;
-using GamePlay.Enemy.Mappers.Definitions.Runtime;
-using GamePlay.Enemy.Mappers.States.Runtime;
-using GamePlay.Enemy.Spawn.Factory.Runtime;
-using GamePlay.Enemy.Spawn.Pool.Runtime;
-using GamePlay.Enemy.Updater.Runtime;
+using GamePlay.Compose;
+using GamePlay.Enemy.Services.Compose;
 using GamePlay.Environment.Bootstrap;
-using GamePlay.Hitboxes.Runtime;
-using GamePlay.LevelCameras.Runtime;
-using GamePlay.Loop.Runtime;
-using GamePlay.Network.Objects.Destroyer.Runtime;
-using GamePlay.Network.Objects.Factories.Registry;
-using GamePlay.Network.Objects.Factories.Runtime;
-using GamePlay.Network.Room.Entities.Factory;
-using GamePlay.Network.Room.Lifecycle.Runtime;
-using GamePlay.Network.Room.SceneCollectors.Runtime;
-using GamePlay.Player.Factory.Factory.Runtime;
-using GamePlay.Player.List.Runtime;
-using GamePlay.Player.Mappers.Equipment.Runtime;
-using GamePlay.Player.Mappers.States.Runtime;
-using GamePlay.Player.UI.Overlay.Runtime.Bootstrap;
-using GamePlay.Projectiles.Bootstrap;
-using GamePlay.Targets.Registry.Runtime;
-using GamePlay.VfxPools.Runtime;
+using GamePlay.Network.Compose;
+using GamePlay.Player.Services.Compose;
 using Internal.Services.Scenes.Data;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 using VContainer.Unity;
 
 namespace GamePlay.Config.Runtime
 {
     [InlineEditor]
-    [CreateAssetMenu(fileName = "Level", menuName = GamePlayAssetsPaths.Root + "Scene")]
+    [CreateAssetMenu(fileName = "Level", menuName = GamePlayRoutes.Root + "Scene")]
     public class LevelConfig : ScriptableObject, IScopeConfig
     {
-        [FoldoutGroup("System")] [SerializeField]
-        private EcsFactory _ecs;
+        [SerializeField] private GamePlayServicesCompose _services;
+        [SerializeField] private LevelEnvironmentBaseFactory _environment;
+        [SerializeField] private LevelNetworkCompose _network;
+        [SerializeField] private PlayerServicesCompose _player;
+        [SerializeField] private EnemyServicesCompose _enemy;
 
-        [FoldoutGroup("System")] [SerializeField]
-        private LevelLoopFactory _levelLoop;
-
-        [FoldoutGroup("System")] [SerializeField]
-        private ProjectilesServiceFactory _projectiles;
-
-        [FoldoutGroup("System")] [SerializeField]
-        private VfxPoolFactory _vfxPool;
-
-        [FoldoutGroup("System")] [SerializeField]
-        private HitboxRegistryFactory _hitboxRegistry;
-
-        [FoldoutGroup("System")] [SerializeField]
-        private TargetRegistryFactory _targetRegistry;
-
-        [FoldoutGroup("Level")] [SerializeField]
-        private LevelEnvironmentBaseFactory _environment;
-
-        [FoldoutGroup("Level")] [SerializeField]
-        private LevelCameraFactory _levelCamera;
-
-        [FoldoutGroup("Player")] [SerializeField]
-        private PlayerFactoryServiceFactory _playerFactory;
-
-        [FormerlySerializedAs("_equipmentRegistry")] [FoldoutGroup("Player")] [SerializeField]
-        private EquipmentMapperFactory _equipmentMapper;
-
-        [FormerlySerializedAs("_statesRegistry")] [FoldoutGroup("Player")] [SerializeField]
-        private PlayerStateMapperFactory _playerStatesRegistry;
-
-        [FoldoutGroup("Player")] [SerializeField]
-        private PlayerOverlayFactory _playerOverlay;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private RoomStarterBaseFactory _roomStarter;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private NetworkEntityDestroyerFactory _entityDestroyer;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private NetworkFactoriesRegistryFactory _factoriesRegistry;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private SceneEntityFactoryServiceFactory _sceneEntityFactory;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private NetworkSceneCollectorFactory _sceneCollector;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private DynamicEntityFactoryServiceFactory _dynamicEntityFactory;
-
-        [FoldoutGroup("Network")] [SerializeField]
-        private PlayersRegistryFactory _playersRegistry;
-
-        [FormerlySerializedAs("_enemiesRegistry")] [FoldoutGroup("Enemy")] [SerializeField]
-        private EnemyListFactory _enemyList;
-
-        [FoldoutGroup("Enemy")] [SerializeField]
-        private EnemyFactoryServiceFactory _enemyFactory;
-
-        [FoldoutGroup("Enemy")] [SerializeField]
-        private EnemyPoolFactory _enemyPool;
-
-        [FormerlySerializedAs("_enemyDefinitionsRegistry")] [FoldoutGroup("Enemy")] [SerializeField]
-        private EnemyDefinitionMapperFactory _enemyDefinitionMapper;
-
-        [FormerlySerializedAs("_enemyStateDefinitionsRegistry")] [FoldoutGroup("Enemy")] [SerializeField]
-        private EnemyStateMapperFactory _enemyStateMapper;
-
-        [FoldoutGroup("Enemy")] [SerializeField]
-        private EnemyUpdaterFactory _enemyUpdater;
-
-        [SerializeField] private LevelScope _scopePrefab;
+        [SerializeField] private GamePlayScope _scopePrefab;
         [SerializeField] private SceneData _servicesScene;
-
 
         public LifetimeScope ScopePrefab => _scopePrefab;
         public ISceneAsset ServicesScene => _servicesScene;
 
-
         public IReadOnlyList<IServiceFactory> Services => new IServiceFactory[]
         {
-            _levelCamera,
-            _levelLoop,
-            _ecs,
-            _hitboxRegistry,
-            _playerFactory,
-            _equipmentMapper,
-            _playerStatesRegistry,
-            _targetRegistry,
-
-            _roomStarter,
-            _entityDestroyer,
-            _factoriesRegistry,
-            _sceneEntityFactory,
-            _sceneCollector,
-            _dynamicEntityFactory,
-            _playersRegistry,
-
-            _enemyList,
-            _enemyFactory,
-            _enemyDefinitionMapper,
-            _enemyStateMapper,
-            _enemyUpdater,
-            _projectiles,
-            _vfxPool,
             _environment,
-            _playerOverlay,
-
-            _enemyPool
         };
 
-        public IReadOnlyList<IServicesCompose> Composes => Array.Empty<IServicesCompose>();
+        public IReadOnlyList<IServicesCompose> Composes => new IServicesCompose[]
+        {
+            _services,
+            _network,
+            _player,
+            _enemy,
+        };
     }
 }

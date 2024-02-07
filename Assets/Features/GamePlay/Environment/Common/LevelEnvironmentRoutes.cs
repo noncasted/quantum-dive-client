@@ -1,15 +1,15 @@
-﻿using GamePlay.Common.Paths;
+﻿using GamePlay.Common.Routes;
 
 namespace GamePlay.Environment.Common
 {
     public static class LevelEnvironmentRoutes
     {
-        private const string _paths = GamePlayAssetsPaths.Root + "Environment/";
+        private const string _paths = GamePlayRoutes.Root + "Environment/";
 
         public const string ServicePath = _paths + "Service";
-        public const string ServiceName = GamePlayAssetsPrefixes.Service + "Environment";
+        public const string ServiceName = GamePlayPrefixes.Service + "Environment";
 
         public const string MockPath = _paths + "Mock";
-        public const string MockName = GamePlayAssetsPrefixes.Service + "EnvironmentMock";
+        public const string MockName = GamePlayPrefixes.Service + "EnvironmentMock";
     }
 }
