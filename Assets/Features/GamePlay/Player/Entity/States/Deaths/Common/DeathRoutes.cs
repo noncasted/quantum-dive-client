@@ -8,10 +8,10 @@ namespace GamePlay.Player.Entity.States.Deaths.Common
         private const string Root = PlayerStatesRoutes.Root + Name;
         private const string Name = "Death";
 
-        public const string StateName = PlayerAssetsPrefixes.Component + Name;
+        public const string StateName = PlayerEntityPrefixes.Component + Name;
         public const string StatePath = Root + "/State";
 
-        public const string DefinitionName = PlayerAssetsPrefixes.Definition + Name;
+        public const string DefinitionName = PlayerEntityPrefixes.Definition + Name;
         public const string DefinitionPath = Root + "/Definition";
         
         public const string AnimationTriggerName = "AnimationTrigger_Death";

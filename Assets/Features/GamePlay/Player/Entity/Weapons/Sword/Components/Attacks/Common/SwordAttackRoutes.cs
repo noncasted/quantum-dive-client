@@ -14,7 +14,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Common
         public const string RemoteName = SwordAssetsPrefixes.Component + _name + "_Remote";
         public const string RemotePath = _root + "Remote";
         
-        public const string DefinitionName = PlayerAssetsPrefixes.Definition + "SwordAttack";
+        public const string DefinitionName = PlayerEntityPrefixes.Definition + "SwordAttack";
         public const string DefinitionPath = _root + "Definition";
         
         public const string AttackAnimationName = "Animation_SwordAttack";

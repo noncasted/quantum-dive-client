@@ -8,7 +8,7 @@ namespace GamePlay.Player.Entity.Components.Combo.Common
         private const string Root = PlayerComponentsRoutes.Root + Name;
         private const string Name = "ComboStateMachine";
 
-        public const string ComponentName = PlayerAssetsPrefixes.Component + Name;
+        public const string ComponentName = PlayerEntityPrefixes.Component + Name;
         public const string ComponentPath = Root + "/Component";
     }
 }

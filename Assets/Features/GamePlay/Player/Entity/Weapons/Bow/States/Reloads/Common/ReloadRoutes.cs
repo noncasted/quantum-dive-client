@@ -14,7 +14,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Common
         public const string RemoteName = BowAssetsPrefixes.Component + _name + "_Remote";
         public const string RemotePath = _root + "/Remote";
         
-        public const string DefinitionName = PlayerAssetsPrefixes.Definition + "_Bow_Reload";
+        public const string DefinitionName = PlayerEntityPrefixes.Definition + "_Bow_Reload";
         public const string DefinitionPath = _root + "/Definition";
         
         public const string BowAnimationName = "Animation_Bow_Reload";

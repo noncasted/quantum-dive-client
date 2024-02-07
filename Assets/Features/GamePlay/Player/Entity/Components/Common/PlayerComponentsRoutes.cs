@@ -4,6 +4,6 @@ namespace GamePlay.Player.Entity.Components.Common
 {
     public class PlayerComponentsRoutes
     {
-        public const string Root = PlayerAssetsPaths.Root + "Components/";
+        public const string Root = PlayerEntityRoutes.Root + "Components/";
     }
 }

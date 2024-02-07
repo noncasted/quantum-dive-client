@@ -67,11 +67,11 @@ namespace GamePlay.Config.Runtime
         [FoldoutGroup("Player")] [SerializeField]
         private PlayerFactoryServiceFactory _playerFactory;
 
-        [FoldoutGroup("Player")] [SerializeField]
-        private EquipmentRegistryFactory _equipmentRegistry;
+        [FormerlySerializedAs("_equipmentRegistry")] [FoldoutGroup("Player")] [SerializeField]
+        private EquipmentMapperFactory _equipmentMapper;
 
-        [FoldoutGroup("Player")] [SerializeField]
-        private StateDefinitionsRegistryFactory _statesRegistry;
+        [FormerlySerializedAs("_statesRegistry")] [FoldoutGroup("Player")] [SerializeField]
+        private PlayerStateMapperFactory _playerStatesRegistry;
 
         [FoldoutGroup("Player")] [SerializeField]
         private PlayerOverlayFactory _playerOverlay;
@@ -130,8 +130,8 @@ namespace GamePlay.Config.Runtime
             _ecs,
             _hitboxRegistry,
             _playerFactory,
-            _equipmentRegistry,
-            _statesRegistry,
+            _equipmentMapper,
+            _playerStatesRegistry,
             _targetRegistry,
 
             _roomStarter,

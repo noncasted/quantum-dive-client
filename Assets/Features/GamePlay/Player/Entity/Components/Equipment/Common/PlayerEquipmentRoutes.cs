@@ -4,6 +4,6 @@ namespace GamePlay.Player.Entity.Components.Equipment.Common
 {
     public class PlayerEquipmentRoutes
     {
-        public const string Root = PlayerAssetsPaths.Root + "Equipment/";
+        public const string Root = PlayerEntityRoutes.Root + "Equipment/";
     }
 }

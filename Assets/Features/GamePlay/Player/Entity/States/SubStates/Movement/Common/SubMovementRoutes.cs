@@ -8,7 +8,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Movement.Common
         private const string Root = PlayerStatesRoutes.Root + Name;
         private const string Name = "SubMovement";
 
-        public const string StateName = PlayerAssetsPrefixes.Component + Name;
+        public const string StateName = PlayerEntityPrefixes.Component + Name;
         public const string StatePath = Root + "/State";
     }
 }

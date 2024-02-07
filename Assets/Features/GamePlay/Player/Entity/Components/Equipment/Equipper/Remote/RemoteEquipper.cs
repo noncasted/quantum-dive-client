@@ -18,7 +18,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Remote
             IEquipmentSlotsStorage storage,
             IEquipmentSlotBinder binder,
             IEquipmentFactory factory,
-            IEquipmentRegistry registry,
+            IEquipmentMapper registry,
             IEntityProvider entityProvider) : base(0, false)
         {
             _storage = storage;
@@ -32,7 +32,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Remote
         private readonly IEquipmentSlotBinder _binder;
         private readonly IEquipmentFactory _factory;
         private readonly LifetimeScope _rootScope;
-        private readonly IEquipmentRegistry _registry;
+        private readonly IEquipmentMapper _registry;
         private readonly IEntityProvider _entityProvider;
 
         private readonly List<int> _buffer = new();

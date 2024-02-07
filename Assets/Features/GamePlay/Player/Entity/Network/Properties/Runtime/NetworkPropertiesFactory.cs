@@ -12,14 +12,10 @@ namespace GamePlay.Player.Entity.Network.Properties.Runtime
         menuName = NetworkPropertiesRoutes.ServicePath)]
     public class NetworkPropertiesFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] private TransformSyncFactory _transform;
-
         public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<NetworkPropertiesInjector>()
                 .AsCallbackListener();
-
-            _transform.Create(services, utils);
         }
     }
 }

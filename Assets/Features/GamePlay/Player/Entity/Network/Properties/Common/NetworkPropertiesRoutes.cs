@@ -5,7 +5,7 @@ namespace GamePlay.Player.Entity.Network.Properties.Common
 {
     public class NetworkPropertiesRoutes
     {
-        public const string ServiceName = PlayerAssetsPrefixes.Component + "Properties";
+        public const string ServiceName = PlayerEntityPrefixes.Component + "Properties";
         public const string ServicePath = PlayerNetworkRoutes.Root + "Properties";
     }
 }

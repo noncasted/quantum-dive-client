@@ -1,0 +1,16 @@
+{
+    "name": "GamePlay.Player.Mappers.Equipment.Common",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5f9e49065beb4477b935cc833a087c32"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

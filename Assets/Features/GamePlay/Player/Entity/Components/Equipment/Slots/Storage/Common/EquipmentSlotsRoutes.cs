@@ -8,7 +8,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Common
         private const string Root = PlayerEquipmentRoutes.Root + Name;
         private const string Name = "EquipmentSlots";
 
-        public const string ComponentName = PlayerAssetsPrefixes.Component + Name;
+        public const string ComponentName = PlayerEntityPrefixes.Component + Name;
         public const string ComponentPath = Root + "/Component";
     }
 }

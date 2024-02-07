@@ -14,11 +14,11 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
     public class RemoteStateMachine : RagonProperty, IStateMachineSync, IRemoteStateMachine
     {
         protected RemoteStateMachine(
-            IStateDefinitionsRegistry definitionsRegistry,
+            IPlayerStateMapper mapper,
             IEntityProvider entityProvider,
             RemoteStateMachineLogger logger) : base(0, false)
         {
-            _definitionsRegistry = definitionsRegistry;
+            _mapper = mapper;
             _entityProvider = entityProvider;
             _logger = logger;
             _states = new Dictionary<PlayerStateDefinition, IPlayerRemoteState>();
@@ -30,7 +30,7 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
 
         private readonly IntCompressor _compressor;
 
-        private readonly IStateDefinitionsRegistry _definitionsRegistry;
+        private readonly IPlayerStateMapper _mapper;
         private readonly IEntityProvider _entityProvider;
         private readonly RemoteStateMachineLogger _logger;
         private readonly Dictionary<PlayerStateDefinition, IPlayerRemoteState> _states;
@@ -43,7 +43,7 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
 
         public void SetState(PlayerStateDefinition definition, IPlayerRemoteStatePayload payload = null)
         {
-            _state = _definitionsRegistry.GetId(definition);
+            _state = _mapper.GetId(definition);
             _payload = payload;
 
             MarkAsChanged();
@@ -57,13 +57,13 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
         {
             _states.Add(definition, state);
 
-            _logger.OnStateRegistered(_definitionsRegistry.GetId(definition), definition.name);
+            _logger.OnStateRegistered(_mapper.GetId(definition), definition.name);
 
             lifetime.ListenTerminate(() =>
             {
                 _states.Remove(definition);
 
-                _logger.OnStateUnregistered(_definitionsRegistry.GetId(definition), definition.name);
+                _logger.OnStateUnregistered(_mapper.GetId(definition), definition.name);
             });
         }
 
@@ -79,7 +79,7 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
 
         public override void Serialize(RagonBuffer buffer)
         {
-            _logger.OnSerialize(_state, _definitionsRegistry.GetDefinition(_state).name);
+            _logger.OnSerialize(_state, _mapper.GetDefinition(_state).name);
 
             var compressed = _compressor.Compress(_state);
 
@@ -100,7 +100,7 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
         {
             var compressed = buffer.Read(_compressor.RequiredBits);
             var havePayload = buffer.ReadBool();
-            var definition = _definitionsRegistry.GetDefinition(_state);
+            var definition = _mapper.GetDefinition(_state);
 
             if (_entityProvider.IsMine == true)
             {

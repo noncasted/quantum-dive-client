@@ -1,12 +1,11 @@
 ﻿using GamePlay.Player.Entity.Setup.Path;
+using GamePlay.Player.Entity.Views.Common;
 
 namespace GamePlay.Player.Entity.Views.Sprites.Common
 {
     public class SpriteViewRoutes
     {
-        private const string _name = "Sprite";
-
-        public const string LogsName = PlayerAssetsPrefixes.Logs + _name;
-        public const string LogsPath = PlayerAssetsPaths.Views + "Sprite/Local/" + "Logs";
+        public const string LogsName = PlayerEntityPrefixes.Logs + "Sprite";
+        public const string LogsPath = PlayerViewsRoutes.Root + "Sprite/Logs";
     }
 }

@@ -17,7 +17,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common
         public const string InputName = BowAssetsPrefixes.Component + _name + "_Input";
         public const string InputPath = _root + "Input";
         
-        public const string DefinitionName = PlayerAssetsPrefixes.Definition + "_Bow_Strafe";
+        public const string DefinitionName = PlayerEntityPrefixes.Definition + "_Bow_Strafe";
         public const string DefinitionPath = _root + "Definition";
         
         public const string PlayerAnimationName = "Animation_Player_Strafe";

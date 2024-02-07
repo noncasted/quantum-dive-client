@@ -1,0 +1,20 @@
+{
+  "name": "GamePlay.Player.TransformSync.Logs",
+  "rootNamespace": "",
+  "references": [
+    "GUID:fe4adae493555af4788e53948d7966ca",
+    "GUID:94e5ca42c58876942a8ffdd1c63b952f",
+    "GUID:8492757f688a491e88274975cd7f76d7",
+    "GUID:475e7352b7684936814b6c47a79525dc",
+    "GUID:72ee10059c044befb9afe61cb72eaf8d"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

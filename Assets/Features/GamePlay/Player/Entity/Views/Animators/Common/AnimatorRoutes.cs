@@ -1,13 +1,14 @@
 ﻿using GamePlay.Player.Entity.Setup.Path;
+using GamePlay.Player.Entity.Views.Common;
 
 namespace GamePlay.Player.Entity.Views.Animators.Common
 {
     public class AnimatorRoutes
     {
-        private const string _root = PlayerAssetsPaths.Views + _name + "/";
-        private const string _name = "Animator";
+        private const string Root = PlayerViewsRoutes.Root + Name;
+        private const string Name = "Animator";
 
-        public const string LogsName = PlayerAssetsPrefixes.Logs + _name;
-        public const string LogsPath = _root + "Logs";
+        public const string LogsName = PlayerEntityPrefixes.Logs + Name;
+        public const string LogsPath = Root + "/Logs";
     }
 }

@@ -1,6 +1,7 @@
 ﻿{
   "name": "GamePlay.Player.Hitbox.Common",
   "references": [
-    "GUID:8f9012bdd1b116c48ab480004500c8f3"
+    "GUID:8f9012bdd1b116c48ab480004500c8f3",
+    "GUID:cc66fc856eb5405badce77d51f842134"
   ]
 }

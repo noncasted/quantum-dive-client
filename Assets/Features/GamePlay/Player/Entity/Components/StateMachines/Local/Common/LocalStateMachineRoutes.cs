@@ -8,10 +8,10 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Local.Common
         private const string Root = PlayerComponentsRoutes.Root + Name;
         private const string Name = "StateMachine";
 
-        public const string ComponentName = PlayerAssetsPrefixes.Component + "StateMachine_Local";
+        public const string ComponentName = PlayerEntityPrefixes.Component + "StateMachine_Local";
         public const string ComponentPath = Root + "/Local/Component";
 
-        public const string LogsName = PlayerAssetsPrefixes.Logs + Name;
+        public const string LogsName = PlayerEntityPrefixes.Logs + Name;
         public const string LogsPath = Root + "/Local/Logs";
     }
 }

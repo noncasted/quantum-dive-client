@@ -1,16 +1,17 @@
 ﻿using GamePlay.Player.Entity.Setup.Path;
+using GamePlay.Player.Entity.Views.Common;
 
 namespace GamePlay.Player.Entity.Views.Hitboxes.Common
 {
     public class HitboxRoutes
     {
-        private const string _root = PlayerAssetsPaths.Views + _name;
-        private const string _name = "Hitbox";
+        private const string Root = PlayerViewsRoutes.Root + Name;
+        private const string Name = "Hitbox";
 
-        public const string ConfigName = PlayerAssetsPrefixes.Config + _name;
-        public const string ConfigPath = _root + "/Config";
+        public const string ConfigName = PlayerEntityPrefixes.Config + Name;
+        public const string ConfigPath = Root + "/Config";
 
-        public const string GizmosConfigName = PlayerAssetsPrefixes.Config + "Hitbox_Gizmos";
-        public const string GizmosConfigPath = _root + "/GizmosConfig";
+        public const string GizmosConfigName = PlayerEntityPrefixes.Config + "Hitbox_Gizmos";
+        public const string GizmosConfigPath = Root + "/GizmosConfig";
     }
 }

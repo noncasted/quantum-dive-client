@@ -8,13 +8,13 @@ namespace GamePlay.Player.Entity.States.None.Common
         private const string Root = PlayerStatesRoutes.Root + Name;
         private const string Name = "None";
 
-        public const string StateName = PlayerAssetsPrefixes.Component + Name;
+        public const string StateName = PlayerEntityPrefixes.Component + Name;
         public const string StatePath = Root + "/State";
 
-        public const string LogsName = PlayerAssetsPrefixes.Logs + Name;
+        public const string LogsName = PlayerEntityPrefixes.Logs + Name;
         public const string LogsPath = Root + "/Logs";
         
-        public const string DefinitionName = PlayerAssetsPrefixes.Definition + Name;
+        public const string DefinitionName = PlayerEntityPrefixes.Definition + Name;
         public const string DefinitionPath = Root + "/Definition";
     }
 }

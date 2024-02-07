@@ -14,7 +14,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common
         public const string RemoteName = BowAssetsPrefixes.Component + _name + "_Remote";
         public const string RemotePath = _root + "/Remote";
         
-        public const string DefinitionName = PlayerAssetsPrefixes.Definition + "_Bow_Aim";
+        public const string DefinitionName = PlayerEntityPrefixes.Definition + "_Bow_Aim";
         public const string DefinitionPath = _root + "/Definition";
         
         public const string PlayerAnimationName = "Animation_Player_Aim";

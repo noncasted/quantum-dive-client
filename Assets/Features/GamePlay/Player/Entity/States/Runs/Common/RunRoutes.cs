@@ -8,19 +8,19 @@ namespace GamePlay.Player.Entity.States.Runs.Common
         private const string Root = PlayerStatesRoutes.Root + Name;
         private const string Name = "Run";
 
-        public const string LocalName = PlayerAssetsPrefixes.Component + Name;
+        public const string LocalName = PlayerEntityPrefixes.Component + Name;
         public const string LocalPath = Root + "/Local";
 
-        public const string RemoteName = PlayerAssetsPrefixes.Component + Name;
+        public const string RemoteName = PlayerEntityPrefixes.Component + Name;
         public const string RemotePath = Root + "/Remote";
         
-        public const string ConfigName = PlayerAssetsPrefixes.Config + Name;
+        public const string ConfigName = PlayerEntityPrefixes.Config + Name;
         public const string ConfigPath = Root + "/Config";
 
-        public const string LogsName = PlayerAssetsPrefixes.Logs + Name;
+        public const string LogsName = PlayerEntityPrefixes.Logs + Name;
         public const string LogsPath = Root + "/Logs";
         
-        public const string DefinitionName = PlayerAssetsPrefixes.Definition + Name;
+        public const string DefinitionName = PlayerEntityPrefixes.Definition + Name;
         public const string DefinitionPath = Root + "/Definition";
         
         public const string RunAnimationName = "Animation_Run";

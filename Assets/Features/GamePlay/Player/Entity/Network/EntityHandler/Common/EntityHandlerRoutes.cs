@@ -8,6 +8,6 @@ namespace GamePlay.Player.Entity.Network.EntityHandler.Common
         private const string Paths = PlayerNetworkRoutes.Root + "Entity";
 
         public const string ServicePath = Paths + "Service";
-        public const string ServiceName = PlayerAssetsPrefixes.Component + "EntityHandler";
+        public const string ServiceName = PlayerEntityPrefixes.Component + "EntityHandler";
     }
 }

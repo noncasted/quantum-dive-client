@@ -5,10 +5,10 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Common
 {
     public class RemoteStateMachineRoutes
     {
-        public const string ServiceName = PlayerAssetsPrefixes.Component + "StateMachine_Remote";
-        public const string ServicePath = PlayerComponentsRoutes.Root + "/Remote/Component";
+        public const string ServiceName = PlayerEntityPrefixes.Component + "StateMachine_Remote";
+        public const string ServicePath = PlayerComponentsRoutes.Root + "StateMachine/Remote/Component";
         
-        public const string LogsName = PlayerAssetsPrefixes.Logs + "StateMachine_Remote";
-        public const string LogsPath = PlayerComponentsRoutes.Root + "/Remote/Logs";
+        public const string LogsName = PlayerEntityPrefixes.Logs + "StateMachine_Remote";
+        public const string LogsPath = PlayerComponentsRoutes.Root + "StateMachine/Remote/Logs";
     }
 }
