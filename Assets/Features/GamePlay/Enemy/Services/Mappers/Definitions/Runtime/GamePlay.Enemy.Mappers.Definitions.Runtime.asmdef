@@ -1,7 +1,7 @@
-﻿{
+{
   "name": "GamePlay.Enemy.Mappers.Definitions.Runtime",
   "references": [
-    "GUID:e587f8c64e1c420f93fbe3833ccb6def",
+    
     "GUID:2db6c666024044068c61cd2156a1289a",
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
