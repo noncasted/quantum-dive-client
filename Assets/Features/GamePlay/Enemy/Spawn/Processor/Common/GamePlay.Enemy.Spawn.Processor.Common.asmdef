@@ -1,0 +1,6 @@
+﻿{
+  "name": "GamePlay.Enemy.Spawn.Processor.Common",
+  "references": [
+    "GUID:10d7d8ac4a36426789d2f4c296a61d7b"
+  ]
+}
