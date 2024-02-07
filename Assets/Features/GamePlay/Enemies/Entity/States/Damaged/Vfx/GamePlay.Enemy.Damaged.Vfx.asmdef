@@ -1,8 +1,17 @@
-﻿{
-  "name": "GamePlay.Enemy.Damaged.Vfx",
-  "references": [
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-    "GUID:a85336a0fb8c444cba97e3b4f07734ca",
-    "GUID:a6bee730cad343c7ac8840da91376019"
-  ]
+{
+    "name": "GamePlay.Enemy.Damaged.Vfx",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+        "GUID:a6bee730cad343c7ac8840da91376019"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

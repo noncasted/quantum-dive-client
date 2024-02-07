@@ -2,7 +2,6 @@
   "name": "GamePlay.Enemy.Hitbox.Common",
   "references": [
     "GUID:d97d9c764948444d98c823fdaa970d62",
-    "GUID:4cb33ddb764f4a22986b78f754fe0bc5",
     "GUID:6f32726480644b1bb3ae01704a4f353d",
     "GUID:04243451437dcfe48b583ab43ef0a8fa",
     "GUID:2435b9189672c5848ae4cc81c2cf0e13",

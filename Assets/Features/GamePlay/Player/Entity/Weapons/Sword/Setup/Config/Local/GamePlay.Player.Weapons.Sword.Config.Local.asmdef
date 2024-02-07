@@ -1,4 +1,17 @@
 ﻿{
   "name": "GamePlay.Player.Weapons.Sword.Config.Local",
-  "references":[ "GUID:c075eee8fbb245bf9a56dfe2f04f736d", "GUID:65c3fcbb851ff9441a22dd049195dc8f", "GUID:696b1380a28e4c77bcc51c28fe10023d", "GUID:4f280fba04434de19dd0af3ddbe7c3ef", "GUID:17ecc56f155a4996b9a4b2b42fda2d29", "GUID:e07e6ccd9241474dbca4e70862df2bc2", "GUID:5e7079ca8f6615a47866f25ec94bae65", "GUID:fa0e265ba965494c9ed8bed74f0d918e", "GUID:a6bee730cad343c7ac8840da91376019", "GUID:66415be395f24ef296248b13e0120996", "GUID:5be6262f59e0487f8f55e7b4b6358c57", "GUID:4ff0aa6a0b234785b07cdc06c6a2fba9", "GUID:5f68b44ce2aa4327bbdbdd04a5e29202", "GUID:d9aeffadfa824685894c5bb390a9e42c" ]
+  "references": [
+    "GUID:c075eee8fbb245bf9a56dfe2f04f736d",
+    "GUID:696b1380a28e4c77bcc51c28fe10023d",
+    "GUID:4f280fba04434de19dd0af3ddbe7c3ef",
+    "GUID:17ecc56f155a4996b9a4b2b42fda2d29",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:fa0e265ba965494c9ed8bed74f0d918e",
+    "GUID:a6bee730cad343c7ac8840da91376019",
+    "GUID:66415be395f24ef296248b13e0120996",
+    "GUID:5be6262f59e0487f8f55e7b4b6358c57",
+    "GUID:4ff0aa6a0b234785b07cdc06c6a2fba9",
+    "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
+    "GUID:d9aeffadfa824685894c5bb390a9e42c"
+  ]
 }
