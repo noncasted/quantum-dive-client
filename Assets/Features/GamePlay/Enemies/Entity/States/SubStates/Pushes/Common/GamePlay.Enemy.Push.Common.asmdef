@@ -1,6 +1,7 @@
 ﻿{
   "name": "GamePlay.Enemy.Push.Common",
   "references": [
-    "GUID:d97d9c764948444d98c823fdaa970d62"
+    "GUID:d97d9c764948444d98c823fdaa970d62",
+    "GUID:72041e54c124471db15c17d033547c18"
   ]
 }

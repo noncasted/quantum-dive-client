@@ -7,6 +7,5 @@ namespace GamePlay.Enemies.Types.Melee.Views
     public class EnemyMeleeViews : MonoBehaviour
     {
         [SerializeField] private MeleeDamageDealerFactory _damageDealer;
-
     }
 }

@@ -1,6 +1,7 @@
 ﻿{
   "name": "GamePlay.Enemy.Summoner.StateSelector.Common",
   "references": [
-    "GUID:d97d9c764948444d98c823fdaa970d62"
+    "GUID:d97d9c764948444d98c823fdaa970d62",
+    "GUID:fba27e85e93541be9443befbb7880187"
   ]
 }

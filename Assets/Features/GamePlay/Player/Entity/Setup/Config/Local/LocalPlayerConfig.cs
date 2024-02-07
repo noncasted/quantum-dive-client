@@ -25,7 +25,7 @@ namespace GamePlay.Player.Entity.Setup.Config.Local
         [SerializeField] private LocalPlayerStatesCompose _states;
         [SerializeField] private PlayerNetworkCompose _network;
         
-        [SerializeField] private LocalPlayerViewFactoryFactory _prefab;
+        [SerializeField] private LocalPlayerViewFactory _prefab;
 
         public ScopedEntityViewFactory Prefab => _prefab;
 

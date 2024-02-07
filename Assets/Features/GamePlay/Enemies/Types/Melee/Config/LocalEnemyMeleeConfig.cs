@@ -1,20 +1,9 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Components.DamageProcessors.Runtime;
-using GamePlay.Enemies.Entity.Components.Health.Runtime;
-using GamePlay.Enemies.Entity.Components.Sorting.Runtime;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime;
+using Features.GamePlay.Enemies.Entity.Components.Compose;
+using Features.GamePlay.Enemies.Entity.Network.Compose;
+using Features.GamePlay.Enemies.Entity.States.Compose;
 using GamePlay.Enemies.Entity.Definition.Config;
-using GamePlay.Enemies.Entity.Network.Properties.Runtime;
-using GamePlay.Enemies.Entity.States.Damaged.Local;
-using GamePlay.Enemies.Entity.States.Death.Local;
-using GamePlay.Enemies.Entity.States.Following.Local;
-using GamePlay.Enemies.Entity.States.Idle.Local;
-using GamePlay.Enemies.Entity.States.Respawn.Local;
-using GamePlay.Enemies.Entity.States.SubStates.Pushes.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Remote.Runtime;
 using GamePlay.Enemies.Types.Melee.States.Attack.Local;
 using GamePlay.Enemies.Types.Melee.States.StateSelector.Runtime;
 using Sirenix.OdinInspector;
@@ -27,69 +16,28 @@ namespace GamePlay.Enemies.Types.Melee.Config
         menuName = EnemyMeleeConfigRoutes.LocalPath)]
     public class LocalEnemyMeleeConfig : ScriptableObject, ILocalEnemyConfig
     {
-        [FoldoutGroup("Components")] [SerializeField]
-        private LocalStateMachineFactory _localStateMachine;
-        [FoldoutGroup("Components")] [SerializeField]
-        private MeleeStateSelectorFactory _stateSelector;
-        [FoldoutGroup("Components")] [SerializeField]
-        private TargetSearcherFactory _targetSearcher;
-        [FoldoutGroup("Components")] [SerializeField]
-        private HealthFactory _health;
-        [FoldoutGroup("Components")] [SerializeField]
-        private DamageProcessorFactory _damageProcessor;
-        [FoldoutGroup("Components")] [SerializeField]
-        private SpriteSortingFactory _spriteSorting;
+        [SerializeField] private LocalEnemyComponentsCompose _components;
+        [SerializeField] private LocalEnemyStatesCompose _states;
+        [SerializeField] private EnemyNetworkCompose _network;
 
-        [FoldoutGroup("States")] [SerializeField] 
-        private LocalIdleFactory _idle;
-        [FoldoutGroup("States")] [SerializeField]
-        private LocalRespawnFactory _respawn;
-        [FoldoutGroup("States")] [SerializeField]
-        private LocalFollowingFactory _following;
-        [FoldoutGroup("States")] [SerializeField]
-        private LocalDamagedFactory _damaged;
-        [FoldoutGroup("States")] [SerializeField]
-        private LocalDeathFactory _death;
-        [FoldoutGroup("States")] [SerializeField]
-        private LocalMeleeAttackFactory _localMeleeAttack;
+        [SerializeField] private LocalMeleeAttackFactory _localMeleeAttack;
+        [SerializeField] private MeleeStateSelectorFactory _stateSelector;
+        
+        [SerializeField] private LocalEnemyMeleeViewFactory _prefab;
+        
+        public ScopedEntityViewFactory Prefab => _prefab;
 
-        [FoldoutGroup("SubStates")] [SerializeField]
-        private SubPushFactory _push;
-
-        [FoldoutGroup("Remote")] [SerializeField]
-        private RemoteStateMachineFactory _remoteStateMachine;
-        [FoldoutGroup("Remote")] [SerializeField]
-        private NetworkPropertiesFactory _networkPropertiesInjector;
-        [FoldoutGroup("Remote")] [SerializeField]
-        private TransformSyncFactory _transformSync;
-
-        public IComponentFactory[] GetAssets()
+        public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
         {
-            return new IComponentFactory[]
-            {
-                _localStateMachine,
-                _targetSearcher,
-                _stateSelector,
-                _health,
-                _damageProcessor,
-                _spriteSorting,
+            _localMeleeAttack,
+            _stateSelector
+        };
 
-                _idle,
-                _respawn,
-                _following,
-                _damaged,
-                _push,
-                _death,
-                _localMeleeAttack,
-
-                _remoteStateMachine,
-                _networkPropertiesInjector,
-                _transformSync
-            };
-        }
-
-        public ScopedEntityViewFactory Prefab { get; }
-        public IReadOnlyList<IComponentFactory> Components { get; }
-        public IReadOnlyList<IComponentsCompose> Composes { get; }
+        public IReadOnlyList<IComponentsCompose> Composes => new IComponentsCompose[]
+        {
+            _components,
+            _states,
+            _network
+        };
     }
-} 
+}

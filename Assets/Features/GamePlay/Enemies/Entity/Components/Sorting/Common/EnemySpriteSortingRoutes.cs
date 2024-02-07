@@ -1,10 +1,11 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
+﻿using Features.GamePlay.Enemies.Entity.Components.Common;
+using GamePlay.Enemies.Entity.Setup.Paths;
 
 namespace GamePlay.Enemies.Entity.Components.Sorting.Common
 {
     public class EnemySpriteSortingRoutes
     {
-        private const string _root = EnemyAssetsPaths.System + _name + "/";
+        private const string _root = EnemyComponentsRoutes.Root + _name + "/";
         private const string _name = "Sorting";
 
         public const string ComponentName = EnemyAssetsPrefixes.Component + _name;

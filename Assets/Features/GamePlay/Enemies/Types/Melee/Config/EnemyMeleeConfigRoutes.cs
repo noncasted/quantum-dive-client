@@ -1,13 +1,13 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
+﻿using Features.GamePlay.Enemies.Types.Melee.Common;
 
 namespace GamePlay.Enemies.Types.Melee.Config
 {
     public class EnemyMeleeConfigRoutes
     {
         public const string LocalName = "EnemyConfig_Melee_Local";
-        public const string LocalPath = EnemyAssetsPaths.Root + "Melee/Config/Local";
+        public const string LocalPath = EnemyMeleeRoutes.Root + "Config/Local";
         
         public const string RemoteName = "EnemyConfig_Melee_Remote";
-        public const string RemotePath = EnemyAssetsPaths.Root + "Melee/Config/Remote";
+        public const string RemotePath = EnemyMeleeRoutes.Root + "Config/Remote";
     }
 }
