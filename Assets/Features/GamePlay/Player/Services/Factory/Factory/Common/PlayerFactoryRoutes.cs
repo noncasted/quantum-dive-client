@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Paths;
 
-namespace GamePlay.Player.Services.Factory.Factory.Common
+namespace GamePlay.Player.Factory.Factory.Common
 {
     public class PlayerFactoryRoutes
     {

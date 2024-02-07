@@ -1,5 +1,6 @@
-﻿using GamePlay.Enemies.Services.Updater.Runtime;
-using GamePlay.Enemies.Services.Updater.Runtime.Updatables;
+﻿using Common.Architecture.Lifetimes;
+using GamePlay.Enemies.Updater.Runtime;
+using GamePlay.Enemies.Updater.Runtime.Updatables;
 using GamePlay.Targets.Registry.Runtime;
 using Pathfinding;
 using UnityEngine;
@@ -20,12 +21,15 @@ namespace GamePlay.Enemies.Entity.Views.AIPaths
         private readonly IEnemyUpdater _updater;
 
         private ISearchableTarget _target;
+        private ILifetime _lifetime;
         
         public Vector2 NextPoint => _ai.steeringTarget;
         
         public void Follow(ISearchableTarget target)
         {
-            _updater.Add(this);
+            _lifetime?.Terminate();
+            _lifetime = new Lifetime();
+            _updater.Add(_lifetime, this);
             
             _target = target;
 
@@ -37,7 +41,8 @@ namespace GamePlay.Enemies.Entity.Views.AIPaths
 
         public void Stop()
         {
-            _updater.Remove(this);
+            _lifetime.Terminate();
+            _lifetime = null;
             _ai.canMove = false;
         }
 

@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Common.Architecture.Lifetimes;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs;
 using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Services.Network.DataBridges.States.Runtime;
+using GamePlay.Enemies.Mappers.States.Runtime;
 using Ragon.Client;
 using Ragon.Client.Compressor;
 using Ragon.Protocol;
@@ -12,11 +13,11 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime
     public class RemoteStateMachine : RagonProperty, IStateMachineSync, IRemoteStateMachine
     {
         protected RemoteStateMachine(
-            IEnemyStateDefinitionsRegistry definitionsRegistry,
+            IEnemyStateMapper mapper,
             IEntityProvider entityProvider,
             RemoteStateMachineLogger logger) : base(0, false)
         {
-            _definitionsRegistry = definitionsRegistry;
+            _mapper = mapper;
             _entityProvider = entityProvider;
             _logger = logger;
             _states = new Dictionary<EnemyStateDefinition, IEnemyRemoteState>();
@@ -26,7 +27,7 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime
 
         private readonly IntCompressor _stateCompressor;
 
-        private readonly IEnemyStateDefinitionsRegistry _definitionsRegistry;
+        private readonly IEnemyStateMapper _mapper;
         private readonly IEntityProvider _entityProvider;
 
         private readonly RemoteStateMachineLogger _logger;
@@ -41,7 +42,7 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime
 
         public void SetState(EnemyStateDefinition definition)
         {
-            _state = _definitionsRegistry.GetId(definition);
+            _state = _mapper.GetId(definition);
             _hasPayload = false;
             _payload = null;
 
@@ -50,40 +51,38 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime
 
         public void SetState(EnemyStateDefinition definition, IRemoteStatePayload payload)
         {
-            _state = _definitionsRegistry.GetId(definition);
+            _state = _mapper.GetId(definition);
             _hasPayload = true;
             _payload = payload;
 
             MarkAsChanged();
         }
 
-        public void RegisterState(EnemyStateDefinition definition, IEnemyRemoteState state)
+        public void RegisterState(ILifetime lifetime, EnemyStateDefinition definition, IEnemyRemoteState state)
         {
             _states.Add(definition, state);
-
-            _logger.OnStateRegistered(_definitionsRegistry.GetId(definition), definition.name);
+            _logger.OnStateRegistered(_mapper.GetId(definition), definition.name);
+            
+            lifetime.ListenTerminate(() =>
+            {
+                _states.Remove(definition);
+                _logger.OnStateUnregistered(_mapper.GetId(definition), definition.name);
+            });
         }
 
-        public void UnregisterState(EnemyStateDefinition definition)
-        {
-            _states.Remove(definition);
-
-            _logger.OnStateUnregistered(_definitionsRegistry.GetId(definition), definition.name);
-        }
-
-        public void RegisterFlush(EnemyStateDefinition definition, IRemoteStatePayloadFlush flush)
+        public void RegisterFlush(ILifetime lifetime, EnemyStateDefinition definition, IRemoteStatePayloadFlush flush)
         {
             _flushes.Add(definition, flush);
-        }
 
-        public void UnregisterFlush(EnemyStateDefinition definition)
-        {
-            _flushes.Remove(definition);
+            lifetime.ListenTerminate(() =>
+            {
+                _flushes.Remove(definition);
+            });
         }
 
         public override void Serialize(RagonBuffer buffer)
         {
-            _logger.OnSerialize(_state, _definitionsRegistry.GetDefinition(_state).name);
+            _logger.OnSerialize(_state, _mapper.GetDefinition(_state).name);
 
             var compressed = _stateCompressor.Compress(_state);
 
@@ -106,7 +105,7 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime
             var hasPayload = buffer.ReadBool();
 
             _state = _stateCompressor.Decompress(compressed);
-            var definition = _definitionsRegistry.GetDefinition(_state);
+            var definition = _mapper.GetDefinition(_state);
 
             if (_entityProvider.IsMine == true)
             {

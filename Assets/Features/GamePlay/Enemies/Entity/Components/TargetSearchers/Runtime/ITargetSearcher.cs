@@ -6,7 +6,5 @@ namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
 {
     public interface ITargetSearcher
     {
-        UniTask<ISearchableTarget> SearchAsync(CancellationToken cancellation);
-        bool IsTargetInSearchRange(ISearchableTarget target);
     }
 }

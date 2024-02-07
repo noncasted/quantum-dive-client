@@ -4,12 +4,12 @@ using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Common;
-using GamePlay.Player.Services.Registries.States.Common;
+using GamePlay.Player.Registries.States.Common;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 
-namespace GamePlay.Player.Services.Registries.States.Runtime
+namespace GamePlay.Player.Registries.States.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = StatesRegistryRoutes.ServiceName,

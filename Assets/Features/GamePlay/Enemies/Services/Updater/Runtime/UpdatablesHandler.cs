@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GamePlay.Enemies.Services.Updater.Runtime
+namespace GamePlay.Enemies.Updater.Runtime
 {
     public class UpdatablesHandler<T>
     {

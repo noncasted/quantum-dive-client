@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Services.Paths;
+﻿using GamePlay.Enemies.Paths;
 
-namespace GamePlay.Enemies.Services.Updater.Common
+namespace GamePlay.Enemies.Updater.Common
 {
     public class EnemyUpdaterRoutes
     {

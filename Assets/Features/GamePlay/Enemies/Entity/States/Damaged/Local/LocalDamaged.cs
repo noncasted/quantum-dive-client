@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Common.DataTypes.Structs;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
@@ -14,7 +15,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.States.Damaged.Local
 {
-    public class LocalDamaged : IEntitySwitchListener, IDamaged, IEnemyLocalState
+    public class LocalDamaged : IEntitySwitchLifetimeListener, IDamaged, IEnemyLocalState
     {
         public LocalDamaged(
             ILocalStateMachine localStateMachine,
@@ -42,7 +43,7 @@ namespace GamePlay.Enemies.Entity.States.Damaged.Local
         private readonly IRemoteStateMachine _remoteStateMachine;
         private readonly IEnemyAnimator _animator;
         private readonly IEnemyRigidBody _rigidBody;
-        
+
         private readonly IPushConfig _pushConfig;
         private readonly ISubPush _subPush;
         private readonly IDamagedVfx _vfx;
@@ -51,35 +52,31 @@ namespace GamePlay.Enemies.Entity.States.Damaged.Local
         private readonly DamagedDefinition _definition;
 
         private CancellationTokenSource _cancellation;
-        
+
         public EnemyStateDefinition Definition => _definition;
 
-        public void OnEnabled()
-        {
-            _remoteStateMachine.RegisterFlush(_definition, new PayloadFlush());
-        }
 
-        public void OnDisabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _remoteStateMachine.UnregisterFlush(_definition);
+            _remoteStateMachine.RegisterFlush(lifetime, _definition, new PayloadFlush());
         }
 
         public async UniTask Enter(Vector2 damageDirection, float pushForce)
         {
             var angle = damageDirection.ToAngle();
-            
+
             var payload = new DamagedPayload
             {
                 Angle = angle
             };
-            
+
             _localStateMachine.Enter(this, payload);
 
             _rigidBody.Enable();
             _cancellation = new CancellationTokenSource();
 
             _vfx.Play(angle);
-            
+
             var animationTask = _animator.PlayAsync(_animation, _cancellation.Token);
 
             var distance = _pushConfig.BaseDistance * pushForce;
@@ -90,11 +87,11 @@ namespace GamePlay.Enemies.Entity.States.Damaged.Local
 
             _localStateMachine.Exit(this);
         }
-        
+
         public void Break()
         {
             _rigidBody.Disable();
-            
+
             _cancellation?.Cancel();
             _cancellation?.Dispose();
             _cancellation = null;

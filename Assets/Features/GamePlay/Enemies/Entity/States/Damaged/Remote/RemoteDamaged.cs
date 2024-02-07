@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemies.Entity.States.Abstract;
@@ -10,7 +11,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Entity.States.Damaged.Remote
 {
-    public class RemoteDamaged : IEnemyRemoteState, IEntitySwitchListener
+    public class RemoteDamaged : IEnemyRemoteState, IEntitySwitchLifetimeListener
     {
         public RemoteDamaged(
             IRemoteStateMachine stateMachine,
@@ -35,14 +36,9 @@ namespace GamePlay.Enemies.Entity.States.Damaged.Remote
 
         private CancellationTokenSource _cancellation;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.RegisterState(_definition, this);
-        }
-
-        public void OnDisabled()
-        {
-            _stateMachine.UnregisterState(_definition);
+            _stateMachine.RegisterState(lifetime, _definition, this);
         }
 
         public void Enter(RagonBuffer buffer)

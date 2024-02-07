@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Damages;
 using GamePlay.Enemies.Entity.Components.Health.Runtime;
@@ -8,7 +9,7 @@ using GamePlay.Enemies.Entity.Views.Hitbox.Local;
 
 namespace GamePlay.Enemies.Entity.Components.DamageProcessors.Runtime
 {
-    public class DamageProcessor : IEntitySwitchListener
+    public class DamageProcessor : IEntitySwitchLifetimeListener
     {
         public DamageProcessor(
             IHitbox hitbox,
@@ -27,14 +28,9 @@ namespace GamePlay.Enemies.Entity.Components.DamageProcessors.Runtime
         private readonly IDamaged _damaged;
         private readonly IDeath _death;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _hitbox.DamageReceived += ProcessDamage;
-        }
-
-        public void OnDisabled()
-        {
-            _hitbox.DamageReceived -= ProcessDamage;
+            _hitbox.DamageReceived.Listen(lifetime, ProcessDamage);   
         }
         
         private void ProcessDamage(Damage damage)

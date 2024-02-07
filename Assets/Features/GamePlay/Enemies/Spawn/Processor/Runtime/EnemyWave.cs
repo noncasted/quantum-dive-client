@@ -15,7 +15,7 @@ namespace GamePlay.Enemies.Spawn.Processor.Runtime
     public class EnemyWave : ScriptableObject
     {
         [SerializeField] [EnemyToggle] private EnemyTypesDictionary _switches = new();
-        [SerializeField] [EnemyProbability] private ProbabilityDictionary _values = new();
+        [SerializeField] [EnemyProbability] private EnemyProbabilityDictionary _values = new();
         
         [SerializeField] [Min(1)] private int _amount;
         

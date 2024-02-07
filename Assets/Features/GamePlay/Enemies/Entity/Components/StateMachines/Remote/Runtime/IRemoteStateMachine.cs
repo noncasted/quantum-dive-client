@@ -1,13 +1,12 @@
-﻿using GamePlay.Enemies.Entity.States.Abstract;
+﻿using Common.Architecture.Lifetimes;
+using GamePlay.Enemies.Entity.States.Abstract;
 
 namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime
 {
     public interface IRemoteStateMachine
     {
-        void RegisterState(EnemyStateDefinition definition, IEnemyRemoteState state);
-        void UnregisterState(EnemyStateDefinition definition);
+        void RegisterState(ILifetime lifetime, EnemyStateDefinition definition, IEnemyRemoteState state);
 
-        void RegisterFlush(EnemyStateDefinition definition, IRemoteStatePayloadFlush flush);
-        void UnregisterFlush(EnemyStateDefinition definition);
+        void RegisterFlush(ILifetime lifetime, EnemyStateDefinition definition, IRemoteStatePayloadFlush flush);
     }
 }

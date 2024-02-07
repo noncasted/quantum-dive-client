@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Collections.ReadOnlyDictionaries.Editor;
-using GamePlay.Player.Services.Factory.Factory.Logs;
+using GamePlay.Player.Factory.Factory.Logs;
 using UnityEditor;
 
-namespace GamePlay.Player.Services.Factory.Factory.Editor
+namespace GamePlay.Player.Factory.Factory.Editor
 {
     [ReadOnlyDictionaryPriority]
     [CustomPropertyDrawer(typeof(PlayerFactoryLogs))]

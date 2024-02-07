@@ -1,16 +1,12 @@
-﻿using GamePlay.Enemies.Services.Updater.Runtime.Updatables;
+﻿using Common.Architecture.Lifetimes;
+using GamePlay.Enemies.Updater.Runtime.Updatables;
 
-namespace GamePlay.Enemies.Services.Updater.Runtime
+namespace GamePlay.Enemies.Updater.Runtime
 {
     public interface IEnemyUpdater
     {
-        void Add(IEnemyPathRecalculateUpdatable updatable);
-        void Remove(IEnemyPathRecalculateUpdatable updatable);
-
-        void Add(IEnemyTargetSearchUpdatable updatable);
-        void Remove(IEnemyTargetSearchUpdatable updatable);
-        
-        void Add(IEnemyStateSelectionUpdatable updatable);
-        void Remove(IEnemyStateSelectionUpdatable updatable);
+        void Add(ILifetime lifetime, IEnemyPathRecalculateUpdatable updatable);
+        void Add(ILifetime lifetime, IEnemyTargetSearchUpdatable updatable);
+        void Add(ILifetime lifetime, IEnemyStateSelectionUpdatable updatable);
     }
 }

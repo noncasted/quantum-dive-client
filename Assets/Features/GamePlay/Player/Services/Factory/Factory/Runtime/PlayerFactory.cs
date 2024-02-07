@@ -9,16 +9,16 @@ using GamePlay.Player.Entity.Setup.Config.Local;
 using GamePlay.Player.Entity.Setup.Config.Remote;
 using GamePlay.Player.Entity.Setup.Root.Common;
 using GamePlay.Player.Entity.Setup.Root.Local;
-using GamePlay.Player.Services.Factory.Factory.Logs;
-using GamePlay.Player.Services.Factory.SpawnPoints;
-using GamePlay.Player.Services.List.Definition;
-using GamePlay.Player.Services.List.Runtime;
+using GamePlay.Player.Factory.Factory.Logs;
+using GamePlay.Player.Factory.SpawnPoints;
+using GamePlay.Player.List.Definition;
+using GamePlay.Player.List.Runtime;
 using Global.Network.Objects.Factories.Abstract;
 using Ragon.Client;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace GamePlay.Player.Services.Factory.Factory.Runtime
+namespace GamePlay.Player.Factory.Factory.Runtime
 {
     public class PlayerFactory : IPlayerFactory, IEntityFactory, IScopeLifetimeListener
     {

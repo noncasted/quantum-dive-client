@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Services.List.Runtime
+﻿namespace GamePlay.Enemies.List.Runtime
 {
     public class EnemyList : IEnemyList
     {

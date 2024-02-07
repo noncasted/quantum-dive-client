@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Services.Paths
+﻿namespace GamePlay.Enemies.Paths
 {
     public class EnemyServicesAssetsPrefixes
     {

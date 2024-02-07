@@ -2,7 +2,7 @@
 using GamePlay.Common.SceneBootstrappers.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Player.Services.Factory.SpawnPoints
+namespace GamePlay.Player.Factory.SpawnPoints
 {
     public class PlayerSpawnPoints : SceneComponentRegister, ISpawnPoints
     {

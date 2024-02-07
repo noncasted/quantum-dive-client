@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemies.Entity.States.Abstract;
 using GamePlay.Enemies.Entity.States.Idle.Common;
@@ -7,7 +8,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Entity.States.Idle.Remote
 {
-    public class RemoteIdle : IEnemyRemoteState, IEntitySwitchListener
+    public class RemoteIdle : IEnemyRemoteState, IEntitySwitchLifetimeListener
     {
         public RemoteIdle(
             IRemoteStateMachine stateMachine,
@@ -20,20 +21,15 @@ namespace GamePlay.Enemies.Entity.States.Idle.Remote
             _animation = animation;
             _definition = definition;
         }
-        
+
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IEnemyAnimator _animator;
         private readonly IdleAnimation _animation;
         private readonly IdleDefinition _definition;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.RegisterState(_definition, this);
-        }
-
-        public void OnDisabled()
-        {
-            _stateMachine.UnregisterState(_definition);
+            _stateMachine.RegisterState(lifetime, _definition, this);
         }
 
         public void Enter(RagonBuffer buffer)
@@ -43,7 +39,6 @@ namespace GamePlay.Enemies.Entity.States.Idle.Remote
 
         public void Break()
         {
-            
         }
     }
 }

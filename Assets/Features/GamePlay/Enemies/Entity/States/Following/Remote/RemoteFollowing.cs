@@ -1,4 +1,5 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemies.Entity.States.Abstract;
 using GamePlay.Enemies.Entity.States.Following.Common;
@@ -7,7 +8,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Entity.States.Following.Remote
 {
-    public class RemoteFollowing : IEnemyRemoteState, IEntitySwitchListener
+    public class RemoteFollowing : IEnemyRemoteState, IEntitySwitchLifetimeListener
     {
         public RemoteFollowing(
             IRemoteStateMachine stateMachine,
@@ -27,14 +28,9 @@ namespace GamePlay.Enemies.Entity.States.Following.Remote
         private readonly FollowingAnimation _animation;
         private readonly FollowingDefinition _definition;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.RegisterState(_definition, this);
-        }
-
-        public void OnDisabled()
-        {
-            _stateMachine.UnregisterState(_definition);
+            _stateMachine.RegisterState(lifetime, _definition, this);
         }
 
         public void Enter(RagonBuffer buffer)

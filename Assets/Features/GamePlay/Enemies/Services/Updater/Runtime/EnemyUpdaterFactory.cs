@@ -2,11 +2,11 @@
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Services.Updater.Common;
+using GamePlay.Enemies.Updater.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Services.Updater.Runtime
+namespace GamePlay.Enemies.Updater.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyUpdaterRoutes.ServiceName,

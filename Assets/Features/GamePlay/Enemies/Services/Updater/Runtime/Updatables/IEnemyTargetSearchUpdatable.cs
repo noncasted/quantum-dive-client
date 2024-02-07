@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Services.Updater.Runtime.Updatables
+﻿namespace GamePlay.Enemies.Updater.Runtime.Updatables
 {
     public interface IEnemyTargetSearchUpdatable
     {

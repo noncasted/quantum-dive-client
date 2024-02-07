@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Enemies.Entity.Components.Health.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Enemies.Entity.Views.HealthBars.Runtime
 {
-    public class HealthBar : IEntitySwitchListener
+    public class HealthBar : IEntitySwitchLifetimeListener
     {
         public HealthBar(IHealth health, Transform cellsRoot, HealthBarCell cellPrefab)
         {
@@ -22,14 +23,9 @@ namespace GamePlay.Enemies.Entity.Views.HealthBars.Runtime
 
         private readonly List<HealthBarCell> _all = new();
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _health.HealthChanged += OnChanged;
-        }
-
-        public void OnDisabled()
-        {
-            _health.HealthChanged -= OnChanged;
+            _health.HealthChanged.Listen(lifetime, OnChanged);
         }
 
         private void OnChanged(int current, int max)

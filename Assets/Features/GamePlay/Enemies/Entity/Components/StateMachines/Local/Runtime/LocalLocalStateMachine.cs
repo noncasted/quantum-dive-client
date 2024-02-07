@@ -1,4 +1,5 @@
 ﻿using System;
+using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Enemies.Entity.Components.StateMachines.Local.Logs;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemies.Entity.States.Abstract;
@@ -18,8 +19,8 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime
 
         private IEnemyLocalState _current;
 
-        public event Action<EnemyStateDefinition> Entered;
-        public event Action<EnemyStateDefinition> Exited;
+        public IViewableDelegate<EnemyStateDefinition> Entered { get; } = new ViewableDelegate<EnemyStateDefinition>();
+        public IViewableDelegate<EnemyStateDefinition> Exited { get; } = new ViewableDelegate<EnemyStateDefinition>();
 
         public bool IsAvailable(EnemyStateDefinition definition)
         {
@@ -40,11 +41,11 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime
             else
                 _logger.OnEnteredFrom(_current.Definition, enemyLocalState.Definition);
 
-            _current?.Break();
+            _current.Break();
 
             _current = enemyLocalState;
             _sync.SetState(enemyLocalState.Definition);
-            
+
             Entered?.Invoke(_current.Definition);
         }
 
@@ -55,7 +56,7 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime
             else
                 _logger.OnEnteredFrom(_current.Definition, enemyLocalState.Definition);
 
-            _current?.Break();
+            _current.Break();
 
             _current = enemyLocalState;
             _sync.SetState(enemyLocalState.Definition, payload);
@@ -68,7 +69,7 @@ namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime
                 _logger.OnExitMiss(playerLocalState.Definition);
                 return;
             }
-            
+
             _logger.OnExited(_current.Definition);
             _current.Break();
             Exited?.Invoke(_current.Definition);

@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Paths;
 
-namespace GamePlay.Player.Services.Registries.Equipment.Common
+namespace GamePlay.Player.Registries.Equipment.Common
 {
     public class EquipmentRegistryRoutes
     {

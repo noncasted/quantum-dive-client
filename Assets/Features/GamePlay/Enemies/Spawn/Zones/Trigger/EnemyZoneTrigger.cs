@@ -1,5 +1,5 @@
 ﻿using System;
-using GamePlay.Player.Entity.Views.Facade;
+using GamePlay.Player.Entity.Views.View;
 using UnityEngine;
 
 namespace GamePlay.Enemies.Spawn.Zones.Trigger
@@ -12,7 +12,7 @@ namespace GamePlay.Enemies.Spawn.Zones.Trigger
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.TryGetComponent(out IPlayerFacade facade) == false)
+            if (other.TryGetComponent(out IPlayerView facade) == false)
             {
                 Debug.LogError($"Wrong player trigger with: {other.name}");
                 return;

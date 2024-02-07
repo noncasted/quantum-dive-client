@@ -1,24 +1,24 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Enemies.Entity.Components.StateSelectors;
 using GamePlay.Enemies.Entity.States.Abstract;
 using GamePlay.Enemies.Entity.States.Following.Local;
 using GamePlay.Enemies.Entity.States.Idle.Local;
 using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Local;
-using GamePlay.Enemies.Services.Updater.Runtime;
-using GamePlay.Enemies.Services.Updater.Runtime.Updatables;
+using GamePlay.Enemies.Updater.Runtime;
+using GamePlay.Enemies.Updater.Runtime.Updatables;
 
 namespace GamePlay.Enemies.Entity.Types.Melee.States.StateSelector.Runtime
 {
     public class MeleeStateSelector :
         IStateSelector,
-        IEntitySwitchListener,
+        IEntitySwitchLifetimeListener,
         IEnemyStateSelectionUpdatable
     {
         public MeleeStateSelector(
             ILocalStateMachine stateMachine,
             IEnemyUpdater updater,
-
             IIdleTransition idleTransition,
             IFollowingTransition followingTransition,
             IMeleeAttackTransition meleeAttackTransition)
@@ -39,29 +39,27 @@ namespace GamePlay.Enemies.Entity.Types.Melee.States.StateSelector.Runtime
         private readonly IStateTransition[] _transitions;
 
         private bool _isStateEntered;
+        private EnemyStateDefinition _current;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.Entered += OnStateEntered;
-            _stateMachine.Exited += OnStateExited;
-        }
+            _stateMachine.Entered.Listen(lifetime, OnStateEntered);
+            _stateMachine.Exited.Listen(lifetime, OnStateExited);
 
-        public void OnDisabled()
-        {
-            _stateMachine.Entered -= OnStateEntered;
-            _stateMachine.Exited -= OnStateExited;
+            _updater.Add(lifetime, this);
         }
 
         public void Start()
         {
-            _updater.Add(this);
-
             OnStateSelect();
         }
 
         public void OnStateSelect()
         {
             if (_isStateEntered == true)
+                return;
+
+            if (_current == null || _current.IsBackground == true)
                 return;
 
             foreach (var transition in _transitions)
@@ -76,17 +74,12 @@ namespace GamePlay.Enemies.Entity.Types.Melee.States.StateSelector.Runtime
 
         private void OnStateExited(EnemyStateDefinition definition)
         {
-            if (definition.IsBackground == false)
-                _updater.Add(this);
-
+            _current = definition;
             _isStateEntered = false;
         }
 
         private void OnStateEntered(EnemyStateDefinition definition)
         {
-            if (definition.IsBackground == false)
-                _updater.Remove(this);
-
             _isStateEntered = true;
         }
     }

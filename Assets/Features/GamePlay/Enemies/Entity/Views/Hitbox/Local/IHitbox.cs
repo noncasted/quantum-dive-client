@@ -1,4 +1,5 @@
 ﻿using System;
+using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Common.Damages;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ namespace GamePlay.Enemies.Entity.Views.Hitbox.Local
     {
         Vector2 Position { get; }
 
-        event Action<Damage> DamageReceived;
+        IViewableDelegate<Damage> DamageReceived { get; }
 
         void Enable();
         void Disable();

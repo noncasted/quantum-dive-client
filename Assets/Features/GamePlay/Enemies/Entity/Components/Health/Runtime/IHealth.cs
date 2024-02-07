@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 
 namespace GamePlay.Enemies.Entity.Components.Health.Runtime
 {
     public interface IHealth
     {
-        event Action<int, int> HealthChanged;
+        IViewableDelegate<int, int> HealthChanged { get; }
 
         int Amount { get; }
         bool IsAlive { get; }

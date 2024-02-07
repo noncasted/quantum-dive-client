@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Player.Services.Factory.SpawnPoints
+namespace GamePlay.Player.Factory.SpawnPoints
 {
     public interface ISpawnPoints
     {

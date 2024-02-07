@@ -1,4 +1,4 @@
-﻿using GamePlay.Enemies.Services.Paths;
+﻿using GamePlay.Enemies.Paths;
 
 namespace GamePlay.Enemies.Spawn.Processor.Common
 {

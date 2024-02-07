@@ -1,7 +1,7 @@
 ﻿using GamePlay.Player.Entity.Setup.Root.Common;
 using Ragon.Client;
 
-namespace GamePlay.Player.Services.List.Definition
+namespace GamePlay.Player.List.Definition
 {
     public class NetworkPlayer : INetworkPlayer
     {

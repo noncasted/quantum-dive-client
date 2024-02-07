@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using ILogger = Internal.Services.Loggers.Runtime.ILogger;
 
-namespace GamePlay.Player.Services.Factory.Factory.Logs
+namespace GamePlay.Player.Factory.Factory.Logs
 {
     public class PlayerFactoryLogger
     {

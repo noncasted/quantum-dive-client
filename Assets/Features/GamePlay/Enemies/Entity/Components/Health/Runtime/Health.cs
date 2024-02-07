@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
 using Ragon.Client;
 using Ragon.Protocol;
@@ -19,8 +19,7 @@ namespace GamePlay.Enemies.Entity.Components.Health.Runtime
         private int _current;
         private int _max;
 
-        public event Action<int, int> HealthChanged;
-
+        public IViewableDelegate<int, int> HealthChanged { get; } = new ViewableDelegate<int, int>();
         public int Amount => _current;
         public bool IsAlive => _current > 0;
 
@@ -31,7 +30,7 @@ namespace GamePlay.Enemies.Entity.Components.Health.Runtime
             if (_current < 0)
                 _current = 0;
 
-            HealthChanged?.Invoke(_current, _max);
+            HealthChanged.Invoke(_current, _max);
             MarkAsChanged();
         }
 
@@ -39,7 +38,7 @@ namespace GamePlay.Enemies.Entity.Components.Health.Runtime
         {
             _current = _config.Max;
             _max = _config.Max;
-            HealthChanged?.Invoke(_current, _max);
+            HealthChanged.Invoke(_current, _max);
             MarkAsChanged();
         }
 

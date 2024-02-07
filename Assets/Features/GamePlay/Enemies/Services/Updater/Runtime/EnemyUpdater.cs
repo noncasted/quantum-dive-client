@@ -1,10 +1,11 @@
-﻿using Common.Architecture.Scopes.Runtime.Callbacks;
-using GamePlay.Enemies.Services.Updater.Runtime.Updatables;
+﻿using Common.Architecture.Lifetimes;
+using Common.Architecture.Scopes.Runtime.Callbacks;
+using GamePlay.Enemies.Updater.Runtime.Updatables;
 using Global.System.Updaters.Runtime.Abstract;
 
-namespace GamePlay.Enemies.Services.Updater.Runtime
+namespace GamePlay.Enemies.Updater.Runtime
 {
-    public class EnemyUpdater : IEnemyUpdater, IPreFixedUpdatable, IScopeSwitchListener
+    public class EnemyUpdater : IEnemyUpdater, IPreFixedUpdatable, IScopeLifetimeListener
     {
         public EnemyUpdater(IUpdater updater, IRatesConfig ratesConfig)
         {
@@ -24,15 +25,28 @@ namespace GamePlay.Enemies.Services.Updater.Runtime
         private readonly UpdaterTimer _pathRecalculationTimer;
         private readonly UpdaterTimer _targetSearchTimer;
         private readonly UpdaterTimer _stateSelectionTimer;
-        
-        public void OnEnabled()
+
+        public void Add(ILifetime lifetime, IEnemyPathRecalculateUpdatable updatable)
         {
-            _updater.Add(this);
+            _pathRecalculations.Add(updatable);
+            lifetime.ListenTerminate(() => _pathRecalculations.Remove(updatable));
         }
-        
-        public void OnDisabled()
+
+        public void Add(ILifetime lifetime, IEnemyTargetSearchUpdatable updatable)
         {
-            _updater.Remove(this);
+            _targetSearchers.Add(updatable);
+            lifetime.ListenTerminate(() => _targetSearchers.Remove(updatable));
+        }
+
+        public void Add(ILifetime lifetime, IEnemyStateSelectionUpdatable updatable)
+        {
+            _stateSelectors.Add(updatable);
+            lifetime.ListenTerminate(() => _stateSelectors.Remove(updatable));
+        }
+
+        public void OnLifetimeCreated(ILifetime lifetime)
+        {
+            _updater.Add(lifetime, this);
         }
 
         public void OnPreFixedUpdate(float delta)
@@ -46,48 +60,18 @@ namespace GamePlay.Enemies.Services.Updater.Runtime
                 foreach (var updatable in _pathRecalculations.List)
                     updatable.OnPathRecalculation();
             }
-            
+
             if (_targetSearchTimer.IsAvailable(delta) == true)
             {
                 foreach (var updatable in _targetSearchers.List)
                     updatable.OnTargetSearch();
             }
-            
+
             if (_stateSelectionTimer.IsAvailable(delta) == true)
             {
                 foreach (var updatable in _stateSelectors.List)
                     updatable.OnStateSelect();
             }
-        }
-        
-        public void Add(IEnemyPathRecalculateUpdatable updatable)
-        {
-            _pathRecalculations.Add(updatable);
-        }
-
-        public void Add(IEnemyTargetSearchUpdatable updatable)
-        {
-            _targetSearchers.Add(updatable);
-        }
-
-        public void Remove(IEnemyPathRecalculateUpdatable updatable)
-        {
-            _pathRecalculations.Remove(updatable);
-        }
-
-        public void Remove(IEnemyTargetSearchUpdatable updatable)
-        {
-            _targetSearchers.Remove(updatable);
-        }
-
-        public void Add(IEnemyStateSelectionUpdatable updatable)
-        {
-            _stateSelectors.Add(updatable);
-        }
-
-        public void Remove(IEnemyStateSelectionUpdatable updatable)
-        {
-            _stateSelectors.Remove(updatable);
         }
     }
 }

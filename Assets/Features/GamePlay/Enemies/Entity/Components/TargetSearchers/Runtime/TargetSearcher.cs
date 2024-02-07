@@ -1,11 +1,9 @@
-﻿using System;
-using System.Threading;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Cysharp.Threading.Tasks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using GamePlay.Enemies.Entity.Components.TargetSearchers.Debug.Gizmos;
 using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
-using GamePlay.Enemies.Services.Updater.Runtime;
-using GamePlay.Enemies.Services.Updater.Runtime.Updatables;
+using GamePlay.Enemies.Updater.Runtime;
+using GamePlay.Enemies.Updater.Runtime.Updatables;
 using GamePlay.Targets.Registry.Runtime;
 using UnityEngine;
 
@@ -15,7 +13,7 @@ namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
         ITargetSearcher,
         IEnemyTargetSearchUpdatable,
         ITargetProvider,
-        IEntitySwitchListener
+        IEntitySwitchLifetimeListener
     {
         public TargetSearcher(
             ITargetPlayerRegistry targetRegistry,
@@ -29,8 +27,6 @@ namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
             _position = position;
             _config = config;
             _gizmos = gizmos;
-
-            _cancel = OnCanceled;
         }
 
         private readonly ITargetPlayerRegistry _targetRegistry;
@@ -39,14 +35,16 @@ namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
         private readonly ISearchConfig _config;
         private readonly ISearchGizmos _gizmos;
 
-        private readonly Action _cancel;
-
-        private UniTaskCompletionSource<ISearchableTarget> _completion;
         private ISearchableTarget _current;
         
         public ISearchableTarget Current => _current;
         public bool IsTargetReached => CheckTargetReached();
 
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
+        {
+            _updater.Add(lifetime, this);
+        }
+        
         private bool CheckTargetReached()
         {
             if (_current == null)
@@ -59,38 +57,7 @@ namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
 
             return true;
         }
-
-        public void OnEnabled()
-        {
-            _updater.Add(this);
-        }
-
-        public void OnDisabled()
-        {
-            _updater.Remove(this);
-        }
         
-        public async UniTask<ISearchableTarget> SearchAsync(CancellationToken cancellation)
-        {
-            cancellation.Register(_cancel);
-
-            _completion = new UniTaskCompletionSource<ISearchableTarget>();
-
-            var nearest = await _completion.Task;
-
-            return nearest;
-        }
-
-        public bool IsTargetInSearchRange(ISearchableTarget target)
-        {
-            var distance = Vector2.Distance(_position.Position, target.Position);
-
-            if (distance > _config.Radius)
-                return false;
-
-            return true;
-        }
-
         public void OnTargetSearch()
         {
             var origin = _position.Position;
@@ -114,13 +81,7 @@ namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
             _gizmos.DrawSuccessArea(origin, _config.Radius);
             _gizmos.DrawSuccessLine(origin, nearest.Position);
             
-            _completion?.TrySetResult(nearest);
             _current = nearest;
-        }
-
-        private void OnCanceled()
-        {
-            _updater.Remove(this);
         }
     }
 }

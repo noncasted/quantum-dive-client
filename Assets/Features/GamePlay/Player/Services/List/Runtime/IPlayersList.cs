@@ -1,7 +1,7 @@
-﻿using GamePlay.Player.Services.List.Definition;
+﻿using GamePlay.Player.List.Definition;
 using Ragon.Client;
 
-namespace GamePlay.Player.Services.List.Runtime
+namespace GamePlay.Player.List.Runtime
 {
     public interface IPlayersList
     {

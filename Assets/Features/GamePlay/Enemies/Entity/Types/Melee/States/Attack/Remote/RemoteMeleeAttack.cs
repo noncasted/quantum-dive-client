@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemies.Entity.States.Abstract;
@@ -11,7 +12,7 @@ using Ragon.Protocol;
 
 namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Remote
 {
-    public class RemoteMeleeAttack : IEnemyRemoteState, IEntitySwitchListener
+    public class RemoteMeleeAttack : IEnemyRemoteState, IEntitySwitchLifetimeListener
     {
         public RemoteMeleeAttack(
             IRemoteStateMachine stateMachine,
@@ -35,14 +36,9 @@ namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Remote
 
         private CancellationTokenSource _cancellation;
 
-        public void OnEnabled()
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _stateMachine.RegisterState(_definition, this);
-        }
-
-        public void OnDisabled()
-        {
-            _stateMachine.UnregisterState(_definition);
+            _stateMachine.RegisterState(lifetime, _definition, this);
         }
 
         public void Enter(RagonBuffer buffer)

@@ -4,12 +4,12 @@ using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
-using GamePlay.Player.Services.Registries.Equipment.Common;
+using GamePlay.Player.Registries.Equipment.Common;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 
-namespace GamePlay.Player.Services.Registries.Equipment.Runtime
+namespace GamePlay.Player.Registries.Equipment.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EquipmentRegistryRoutes.ServiceName,

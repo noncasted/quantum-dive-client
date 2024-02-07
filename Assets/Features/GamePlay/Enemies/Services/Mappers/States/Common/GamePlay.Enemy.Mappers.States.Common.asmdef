@@ -1,0 +1,6 @@
+﻿{
+  "name": "GamePlay.Enemy.Mappers.States.Common",
+  "references": [
+    "GUID:31b8de396caf49beac82429c452ab29b"
+  ]
+}
