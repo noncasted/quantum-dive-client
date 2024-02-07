@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.States.Idle.Common;
+using GamePlay.Enemy.Entity.States.Idle.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Idle.Local
+namespace GamePlay.Enemy.Entity.States.Idle.Local
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyIdleRoutes.LocalName,

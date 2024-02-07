@@ -1,4 +1,4 @@
-﻿using GamePlay.Player.Entity.Setup.Path;
+﻿using GamePlay.Player.Entity.Common.Routes;
 using GamePlay.Player.Entity.States.Common;
 
 namespace GamePlay.Player.Entity.States.SubStates.Damaged.Common

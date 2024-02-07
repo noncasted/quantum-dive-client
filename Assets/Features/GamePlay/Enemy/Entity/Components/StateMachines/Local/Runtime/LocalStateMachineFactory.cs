@@ -1,11 +1,11 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Common;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Logs;
+using GamePlay.Enemy.Entity.Components.StateMachines.Local.Common;
+using GamePlay.Enemy.Entity.Components.StateMachines.Local.Logs;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = LocalStateMachineRoutes.ComponentName,

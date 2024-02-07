@@ -4,13 +4,13 @@ using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Common.DataTypes.Collections.ScriptableRegistries;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Definition.Asset;
-using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
-using GamePlay.Enemies.Mappers.Definitions.Common;
+using GamePlay.Enemy.Entity.Definition.Asset;
+using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemy.Mappers.Definitions.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Mappers.Definitions.Runtime
+namespace GamePlay.Enemy.Mappers.Definitions.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyDefinitionMapperRoutes.ServiceName,

@@ -1,10 +1,10 @@
 ﻿using System;
 using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Views.RigidBodies.Logs;
+using GamePlay.Enemy.Entity.Views.RigidBodies.Logs;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.RigidBodies.Runtime
+namespace GamePlay.Enemy.Entity.Views.RigidBodies.Runtime
 {
     [Serializable]
     public class EnemyRigidBodyFactory : IComponentFactory

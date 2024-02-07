@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Factory.Logs
+namespace GamePlay.Enemy.Spawn.Factory.Logs
 {
     public class EnemyFactoryLogger
     {

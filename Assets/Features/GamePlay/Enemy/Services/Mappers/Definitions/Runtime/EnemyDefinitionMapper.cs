@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Common.DataTypes.Collections.Common;
-using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
 
-namespace GamePlay.Enemies.Mappers.Definitions.Runtime
+namespace GamePlay.Enemy.Mappers.Definitions.Runtime
 {
     public class EnemyDefinitionMapper : IEnemyDefinitionMapper
     {

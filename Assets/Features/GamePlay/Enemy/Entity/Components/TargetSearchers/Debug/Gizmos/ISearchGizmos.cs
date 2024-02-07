@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Debug.Gizmos
+namespace GamePlay.Enemy.Entity.Components.TargetSearchers.Debug.Gizmos
 {
     public interface ISearchGizmos
     {

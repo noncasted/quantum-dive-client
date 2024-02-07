@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Collections.ReadOnlyDictionaries.Editor;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs;
 using UnityEditor;
 
-namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Editor
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Editor
 {
     [ReadOnlyDictionaryPriority]
     [CustomPropertyDrawer(typeof(RemoteStateMachineLogs))]

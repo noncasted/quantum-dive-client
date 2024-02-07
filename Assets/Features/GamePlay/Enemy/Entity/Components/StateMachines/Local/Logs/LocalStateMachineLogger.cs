@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.States.Abstract;
+﻿using GamePlay.Enemy.Entity.States.Abstract;
 using Internal.Services.Loggers.Runtime;
 
-namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Logs
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Local.Logs
 {
     public class LocalStateMachineLogger
     {

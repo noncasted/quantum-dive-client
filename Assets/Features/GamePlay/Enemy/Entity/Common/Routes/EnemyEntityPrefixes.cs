@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Setup.Paths
+﻿namespace GamePlay.Enemy.Entity.Common.Routes
 {
     public class EnemyEntityPrefixes
     {

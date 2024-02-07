@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Components.StateSelectors;
+﻿using GamePlay.Enemy.Entity.Components.StateSelectors;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Local
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
 {
     public interface IMeleeAttackTransition : IStateTransition
     {

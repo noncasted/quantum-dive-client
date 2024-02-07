@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
-using GamePlay.Enemies.Entity.States.Common;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
+using GamePlay.Enemy.Entity.States.Common;
 
-namespace GamePlay.Enemies.Entity.States.Damaged.Common
+namespace GamePlay.Enemy.Entity.States.Damaged.Common
 {
     public class EnemyDamagedRoutes
     {

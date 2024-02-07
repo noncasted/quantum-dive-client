@@ -1,4 +1,4 @@
-﻿namespace Features.GamePlay.Player.Services.Common
+﻿namespace GamePlay.Player.Common
 {
     public class PlayerServicesPrefixes
     {

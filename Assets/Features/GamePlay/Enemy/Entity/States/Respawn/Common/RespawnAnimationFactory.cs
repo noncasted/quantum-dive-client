@@ -2,7 +2,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Respawn.Common
+namespace GamePlay.Enemy.Entity.States.Respawn.Common
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyRespawnRoutes.AnimationName,

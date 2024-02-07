@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
-using GamePlay.Enemies.Entity.Types.Range.Common;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
+using GamePlay.Enemy.Entity.Types.Range.Common;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.Shoot.Common
+namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common
 {
     public class EnemyShootRoutes
     {

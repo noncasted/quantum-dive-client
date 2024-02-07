@@ -1,7 +1,6 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.Network.Properties.Common;
-using GamePlay.Player.Entity.Views.Transforms.Remote.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

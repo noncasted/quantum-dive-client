@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.States.Abstract
+﻿namespace GamePlay.Enemy.Entity.States.Abstract
 {
     public interface IEnemyLocalState
     {

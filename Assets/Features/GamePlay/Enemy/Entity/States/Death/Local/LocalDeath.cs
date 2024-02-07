@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.States.Death.Common;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
-using GamePlay.Enemies.Entity.Views.Hitbox.Local;
-using GamePlay.Enemies.Entity.Views.Sprites.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.States.Death.Common;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Views.Hitbox.Local;
+using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
 
-namespace GamePlay.Enemies.Entity.States.Death.Local
+namespace GamePlay.Enemy.Entity.States.Death.Local
 {
     public class LocalDeath : IDeath, IEnemyLocalState
     {

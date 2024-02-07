@@ -1,6 +1,6 @@
 ﻿using GamePlay.Enemy.Spawn.Common;
 
-namespace GamePlay.Enemies.Spawn.Processor.Common
+namespace GamePlay.Enemy.Spawn.Processor.Common
 {
     public class WaveProcessorRoutes
     {

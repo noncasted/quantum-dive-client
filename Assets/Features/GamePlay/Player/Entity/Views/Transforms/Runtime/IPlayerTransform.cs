@@ -1,7 +1,7 @@
 ﻿using Common.DataTypes.Structs;
 using UnityEngine;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Local.Runtime
+namespace GamePlay.Player.Entity.Views.Transforms.Runtime
 {
     public interface IPlayerTransform
     {

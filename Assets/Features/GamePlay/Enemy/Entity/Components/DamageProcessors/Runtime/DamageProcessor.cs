@@ -2,12 +2,12 @@
 using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Damages;
-using GamePlay.Enemies.Entity.Components.Health.Runtime;
-using GamePlay.Enemies.Entity.States.Damaged.Local;
-using GamePlay.Enemies.Entity.States.Death.Local;
-using GamePlay.Enemies.Entity.Views.Hitbox.Local;
+using GamePlay.Enemy.Entity.Components.Health.Runtime;
+using GamePlay.Enemy.Entity.States.Damaged.Local;
+using GamePlay.Enemy.Entity.States.Death.Local;
+using GamePlay.Enemy.Entity.Views.Hitbox.Local;
 
-namespace GamePlay.Enemies.Entity.Components.DamageProcessors.Runtime
+namespace GamePlay.Enemy.Entity.Components.DamageProcessors.Runtime
 {
     public class DamageProcessor : IEntitySwitchLifetimeListener
     {

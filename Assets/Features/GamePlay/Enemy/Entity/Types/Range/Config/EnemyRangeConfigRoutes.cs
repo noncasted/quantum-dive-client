@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Types.Range.Common;
+﻿using GamePlay.Enemy.Entity.Types.Range.Common;
 
-namespace GamePlay.Enemies.Entity.Types.Range.Config
+namespace GamePlay.Enemy.Entity.Types.Range.Config
 {
     public class EnemyRangeConfigRoutes
     {

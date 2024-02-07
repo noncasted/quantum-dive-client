@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Lifetimes;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs;
-using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Mappers.States.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs;
+using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Mappers.States.Runtime;
 using Ragon.Client;
 using Ragon.Client.Compressor;
 using Ragon.Protocol;
 
-namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime
 {
     public class RemoteStateMachine : RagonProperty, IStateMachineSync, IRemoteStateMachine
     {

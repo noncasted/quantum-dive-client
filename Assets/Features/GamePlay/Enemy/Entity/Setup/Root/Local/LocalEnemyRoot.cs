@@ -1,16 +1,16 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Components.StateSelectors;
-using GamePlay.Enemies.Entity.Definition.Root;
-using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Enemies.Entity.States.Respawn.Local;
-using GamePlay.Enemies.Entity.Views.GameObjects;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Enemy.Entity.Components.StateSelectors;
+using GamePlay.Enemy.Entity.Definition.Root;
+using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.States.Respawn.Local;
+using GamePlay.Enemy.Entity.Views.GameObjects;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using Ragon.Client;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Setup.Root.Local
+namespace GamePlay.Enemy.Entity.Setup.Root.Local
 {
     public class LocalEnemyRoot : ILocalEnemyRoot
     {

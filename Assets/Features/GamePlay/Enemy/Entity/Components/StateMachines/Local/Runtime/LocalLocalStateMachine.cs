@@ -1,10 +1,9 @@
-﻿using System;
-using Common.Architecture.Lifetimes.Viewables;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Logs;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
+﻿using Common.Architecture.Lifetimes.Viewables;
+using GamePlay.Enemy.Entity.Components.StateMachines.Local.Logs;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
 
-namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime
 {
     public class LocalLocalStateMachine : ILocalStateMachine
     {

@@ -3,17 +3,17 @@ using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
 using Common.DataTypes.Structs;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.States.Damaged.Common;
-using GamePlay.Enemies.Entity.States.Damaged.Vfx;
-using GamePlay.Enemies.Entity.States.SubStates.Pushes.Runtime;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
-using GamePlay.Enemies.Entity.Views.RigidBodies.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.States.Damaged.Common;
+using GamePlay.Enemy.Entity.States.Damaged.Vfx;
+using GamePlay.Enemy.Entity.States.SubStates.Pushes.Runtime;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Views.RigidBodies.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Damaged.Local
+namespace GamePlay.Enemy.Entity.States.Damaged.Local
 {
     public class LocalDamaged : IEntitySwitchLifetimeListener, IDamaged, IEnemyLocalState
     {

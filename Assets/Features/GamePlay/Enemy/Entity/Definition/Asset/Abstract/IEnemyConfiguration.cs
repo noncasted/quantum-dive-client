@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Definition.Config;
+﻿using GamePlay.Enemy.Entity.Definition.Config;
 
-namespace GamePlay.Enemies.Entity.Definition.Asset.Abstract
+namespace GamePlay.Enemy.Entity.Definition.Asset.Abstract
 {
     public interface IEnemyConfiguration
     {

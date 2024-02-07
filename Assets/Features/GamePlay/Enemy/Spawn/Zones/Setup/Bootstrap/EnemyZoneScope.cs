@@ -1,6 +1,6 @@
 ﻿using VContainer.Unity;
 
-namespace GamePlay.Enemies.Spawn.Zones.Setup.Bootstrap
+namespace GamePlay.Enemy.Spawn.Zones.Setup.Bootstrap
 {
     public class EnemyZoneScope : LifetimeScope
     {

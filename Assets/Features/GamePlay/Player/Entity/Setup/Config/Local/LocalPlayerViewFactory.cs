@@ -8,7 +8,7 @@ using GamePlay.Player.Entity.Views.Hitboxes.Local;
 using GamePlay.Player.Entity.Views.RigidBodies.Runtime;
 using GamePlay.Player.Entity.Views.RotationPoint.Runtime;
 using GamePlay.Player.Entity.Views.Sprites.Runtime;
-using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Player.Entity.Views.Transforms.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Setup.Config.Local

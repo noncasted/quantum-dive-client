@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Hitbox.Common
+namespace GamePlay.Enemy.Entity.Views.Hitbox.Common
 {
     [Serializable]
     public class GizmosConfig : IGizmosConfig

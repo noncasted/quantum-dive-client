@@ -5,7 +5,7 @@ using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Views.GameObjects.Runtime;
 using GamePlay.Player.Entity.Views.Hitboxes.Remote;
 using GamePlay.Player.Entity.Views.Sprites.Runtime;
-using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Player.Entity.Views.Transforms.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Setup.Config.Remote

@@ -1,9 +1,9 @@
-﻿using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Common;
+﻿using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Common;
 using Internal.Services.Loggers.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = RemoteStateMachineRoutes.LogsName, menuName = RemoteStateMachineRoutes.LogsPath)]

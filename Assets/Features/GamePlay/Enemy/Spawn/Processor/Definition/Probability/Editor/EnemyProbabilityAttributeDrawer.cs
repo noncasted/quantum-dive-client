@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using GamePlay.Enemies.Entity.Definition.Asset;
-using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
-using GamePlay.Enemies.Mappers.Definitions.Runtime;
-using GamePlay.Enemies.Spawn.Processor.Definition.Probability.Runtime;
-using GamePlay.Enemies.Spawn.Processor.Definition.ToggleButtons.Runtime;
+using GamePlay.Enemy.Entity.Definition.Asset;
+using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemy.Mappers.Definitions.Runtime;
+using GamePlay.Enemy.Spawn.Processor.Definition.Probability.Runtime;
+using GamePlay.Enemy.Spawn.Processor.Definition.ToggleButtons.Runtime;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.OdinInspector.Editor.ValueResolvers;
 using Sirenix.Utilities;
@@ -12,7 +12,7 @@ using Sirenix.Utilities.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Processor.Definition.Probability.Editor
+namespace GamePlay.Enemy.Spawn.Processor.Definition.Probability.Editor
 {
     public class EnemyProbabilityAttributeDrawer : OdinAttributeDrawer<EnemyProbabilityAttribute>
     {

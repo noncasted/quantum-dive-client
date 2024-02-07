@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Local.Common
+namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Common
 {
     public class TransformRoutes
     {

@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Structs;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Logs;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Logs;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime
+namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime
 {
     public class EnemyTransform :
         IEnemyTransform,

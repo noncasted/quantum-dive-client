@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using ILogger = Internal.Services.Loggers.Runtime.ILogger;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Local.Logs
+namespace GamePlay.Player.Entity.Views.Transforms.Logs
 {
     public class TransformLogger
     {

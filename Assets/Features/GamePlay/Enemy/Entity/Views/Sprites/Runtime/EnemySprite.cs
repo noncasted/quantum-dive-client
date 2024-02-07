@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using GamePlay.Enemies.Entity.Views.Sprites.Logs;
+using GamePlay.Enemy.Entity.Views.Sprites.Logs;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace GamePlay.Enemies.Entity.Views.Sprites.Runtime
+namespace GamePlay.Enemy.Entity.Views.Sprites.Runtime
 {
     public class EnemySprite :
         IEnemySpriteSwitcher,

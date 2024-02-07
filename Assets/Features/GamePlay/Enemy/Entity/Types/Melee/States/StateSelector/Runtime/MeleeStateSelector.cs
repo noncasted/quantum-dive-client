@@ -1,15 +1,15 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.Components.StateSelectors;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.States.Following.Local;
-using GamePlay.Enemies.Entity.States.Idle.Local;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Local;
-using GamePlay.Enemies.Updater.Runtime;
-using GamePlay.Enemies.Updater.Runtime.Updatables;
+using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.Components.StateSelectors;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.States.Following.Local;
+using GamePlay.Enemy.Entity.States.Idle.Local;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local;
+using GamePlay.Enemy.Updater.Runtime;
+using GamePlay.Enemy.Updater.Runtime.Updatables;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.StateSelector.Runtime
+namespace GamePlay.Enemy.Entity.Types.Melee.States.StateSelector.Runtime
 {
     public class MeleeStateSelector :
         IStateSelector,

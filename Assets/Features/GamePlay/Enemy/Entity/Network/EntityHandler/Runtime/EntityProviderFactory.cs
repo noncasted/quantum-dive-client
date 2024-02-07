@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Network.EntityHandler.Common;
+using GamePlay.Enemy.Entity.Network.EntityHandler.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Network.EntityHandler.Runtime
+namespace GamePlay.Enemy.Entity.Network.EntityHandler.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EntityProviderRoutes.ComponentName, menuName = EntityProviderRoutes.ComponentPath)]

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GamePlay.Enemies.Spawn.Zones.Trigger
+namespace GamePlay.Enemy.Spawn.Zones.Trigger
 {
     public interface IEnemyZoneTrigger
     {

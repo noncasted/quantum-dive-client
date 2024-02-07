@@ -1,10 +1,10 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
-using GamePlay.Enemies.Entity.Definition.Root;
+using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemy.Entity.Definition.Root;
 using Ragon.Client;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Pool.Runtime
+namespace GamePlay.Enemy.Spawn.Pool.Runtime
 {
     public interface IEnemyPool
     {

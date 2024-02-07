@@ -2,14 +2,14 @@
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.States.Respawn.Common;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
-using GamePlay.Enemies.Entity.Views.Sprites.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.States.Respawn.Common;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
 using Ragon.Protocol;
 
-namespace GamePlay.Enemies.Entity.States.Respawn.Remote
+namespace GamePlay.Enemy.Entity.States.Respawn.Remote
 {
     public class RemoteRespawn : IEnemyRemoteState, IEntitySwitchLifetimeListener
     {

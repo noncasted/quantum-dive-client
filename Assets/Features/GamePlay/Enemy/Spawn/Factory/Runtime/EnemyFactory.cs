@@ -1,17 +1,17 @@
 ﻿using Common.Architecture.Lifetimes;
 using Common.Architecture.Scopes.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
-using GamePlay.Enemies.Mappers.Definitions.Runtime;
-using GamePlay.Enemies.Spawn.Factory.Logs;
-using GamePlay.Enemies.Spawn.Pool.Runtime;
+using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemy.Mappers.Definitions.Runtime;
+using GamePlay.Enemy.Spawn.Factory.Logs;
+using GamePlay.Enemy.Spawn.Pool.Runtime;
 using GamePlay.Network.Objects.Factories.Registry;
 using GamePlay.Network.Objects.Factories.Runtime;
 using Global.Network.Objects.Factories.Abstract;
 using Ragon.Client;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Factory.Runtime
+namespace GamePlay.Enemy.Spawn.Factory.Runtime
 {
     public class EnemyFactory : IEnemyFactory, IEntityFactory, IScopeLifetimeListener
     {

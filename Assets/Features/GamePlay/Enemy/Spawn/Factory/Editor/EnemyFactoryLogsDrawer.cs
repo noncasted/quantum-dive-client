@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Collections.ReadOnlyDictionaries.Editor;
-using GamePlay.Enemies.Spawn.Factory.Logs;
+using GamePlay.Enemy.Spawn.Factory.Logs;
 using UnityEditor;
 
-namespace GamePlay.Enemies.Spawn.Factory.Editor
+namespace GamePlay.Enemy.Spawn.Factory.Editor
 {
     [ReadOnlyDictionaryPriority]
     [CustomPropertyDrawer(typeof(EnemyFactoryLogs))]

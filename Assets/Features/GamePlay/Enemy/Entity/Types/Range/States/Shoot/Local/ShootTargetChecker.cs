@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
+﻿using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Targets.Registry.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.Shoot.Local
+namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 {
     public class ShootTargetChecker : IShootTargetChecker
     {

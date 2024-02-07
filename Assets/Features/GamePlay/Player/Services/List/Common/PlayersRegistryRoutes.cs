@@ -1,4 +1,4 @@
-﻿using Features.GamePlay.Player.Services.Common;
+﻿using GamePlay.Player.Common;
 
 namespace GamePlay.Player.List.Common
 {

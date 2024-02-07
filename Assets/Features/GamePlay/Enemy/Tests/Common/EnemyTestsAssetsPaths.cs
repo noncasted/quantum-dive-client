@@ -1,6 +1,6 @@
 ﻿using GamePlay.Enemy.Common.Routes;
 
-namespace GamePlay.Enemies.Tests.Common
+namespace GamePlay.Enemy.Tests.Common
 {
     public class EnemyTestsAssetsPaths
     {

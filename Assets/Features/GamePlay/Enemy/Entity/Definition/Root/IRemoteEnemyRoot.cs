@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Definition.Root
+﻿namespace GamePlay.Enemy.Entity.Definition.Root
 {
     public interface IRemoteEnemyRoot : IEnemyRoot
     {

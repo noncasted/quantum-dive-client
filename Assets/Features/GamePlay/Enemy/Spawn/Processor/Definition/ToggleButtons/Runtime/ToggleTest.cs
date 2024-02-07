@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Processor.Definition.ToggleButtons.Runtime
+namespace GamePlay.Enemy.Spawn.Processor.Definition.ToggleButtons.Runtime
 {
     public class ToggleTest : MonoBehaviour
     {

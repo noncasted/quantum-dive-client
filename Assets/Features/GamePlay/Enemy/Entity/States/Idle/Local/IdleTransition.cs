@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime;
-using GamePlay.Enemies.Entity.States.Idle.Common;
+﻿using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.Components.TargetSearchers.Runtime;
+using GamePlay.Enemy.Entity.States.Idle.Common;
 
-namespace GamePlay.Enemies.Entity.States.Idle.Local
+namespace GamePlay.Enemy.Entity.States.Idle.Local
 {
     public class IdleTransition : IIdleTransition
     {

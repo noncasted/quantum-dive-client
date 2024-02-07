@@ -1,4 +1,4 @@
-﻿using GamePlay.Player.Entity.Setup.Path;
+﻿using GamePlay.Player.Entity.Common.Routes;
 using GamePlay.Player.Entity.Views.Common;
 
 namespace GamePlay.Player.Entity.Views.Animators.Common

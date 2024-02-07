@@ -1,5 +1,5 @@
-﻿using Features.GamePlay.Player.Services.Common;
-using GamePlay.Common.Paths;
+﻿using GamePlay.Common.Paths;
+using GamePlay.Player.Common;
 
 namespace GamePlay.Player.Factory.Factory.Common
 {

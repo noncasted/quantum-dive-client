@@ -3,7 +3,7 @@ using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Damaged.Vfx
+namespace GamePlay.Enemy.Entity.States.Damaged.Vfx
 {
     [Serializable]
     public class DamagedVfxFactory : IComponentFactory

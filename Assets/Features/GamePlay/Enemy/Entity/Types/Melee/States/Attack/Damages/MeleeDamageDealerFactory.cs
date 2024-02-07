@@ -2,7 +2,7 @@
 using Common.Architecture.Entities.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Damages
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages
 {
     public class MeleeDamageDealerFactory : MonoBehaviour, IComponentFactory
     {

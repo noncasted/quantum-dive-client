@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Components.Common;
-using GamePlay.Enemies.Entity.Setup.Paths;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
+using GamePlay.Enemy.Entity.Components.Common;
 
-namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Common
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Local.Common
 {
     public class LocalStateMachineRoutes
     {

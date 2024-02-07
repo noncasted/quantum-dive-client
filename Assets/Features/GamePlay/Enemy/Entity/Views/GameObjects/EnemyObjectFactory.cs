@@ -3,7 +3,7 @@ using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.GameObjects
+namespace GamePlay.Enemy.Entity.Views.GameObjects
 {
     [Serializable]
     public class EnemyObjectFactory : IComponentFactory

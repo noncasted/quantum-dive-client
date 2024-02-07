@@ -2,7 +2,7 @@
 using GamePlay.Network.Room.Lifecycle.Runtime;
 using Ragon.Client;
 
-namespace GamePlay.Enemies.Spawn.Factory.Runtime
+namespace GamePlay.Enemy.Spawn.Factory.Runtime
 {
     public class LocalAttachAwaiter
     {

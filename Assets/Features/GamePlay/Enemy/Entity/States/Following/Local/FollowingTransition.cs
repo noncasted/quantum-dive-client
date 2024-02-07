@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime;
-using GamePlay.Enemies.Entity.States.Following.Common;
+﻿using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.Components.TargetSearchers.Runtime;
+using GamePlay.Enemy.Entity.States.Following.Common;
 
-namespace GamePlay.Enemies.Entity.States.Following.Local
+namespace GamePlay.Enemy.Entity.States.Following.Local
 {
     public class FollowingTransition : IFollowingTransition
     {

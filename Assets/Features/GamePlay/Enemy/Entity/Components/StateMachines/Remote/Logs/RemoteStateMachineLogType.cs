@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs
+﻿namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs
 {
     public enum RemoteStateMachineLogType
     {

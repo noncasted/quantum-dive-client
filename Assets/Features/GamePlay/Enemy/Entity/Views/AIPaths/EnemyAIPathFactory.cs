@@ -4,7 +4,7 @@ using Common.Architecture.Entities.Runtime;
 using Pathfinding;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.AIPaths
+namespace GamePlay.Enemy.Entity.Views.AIPaths
 {
     [Serializable]
     public class EnemyAIPathFactory : IComponentFactory

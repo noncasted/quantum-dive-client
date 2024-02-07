@@ -1,11 +1,11 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using GamePlay.Enemies.Entity.Components.Health.Runtime;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Enemies.Entity.Views.Hitbox.Common;
-using GamePlay.Enemies.Entity.Views.Transforms.Remote.Runtime;
+using GamePlay.Enemy.Entity.Components.Health.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
+using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.Views.Hitbox.Common;
+using GamePlay.Enemy.Entity.Views.Transforms.Remote.Runtime;
 
-namespace GamePlay.Enemies.Entity.Network.Properties.Runtime
+namespace GamePlay.Enemy.Entity.Network.Properties.Runtime
 {
     public class NetworkPropertiesBinder : IEntityEnableListener
     {

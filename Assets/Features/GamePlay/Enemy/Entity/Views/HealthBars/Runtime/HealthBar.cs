@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
-using GamePlay.Enemies.Entity.Components.Health.Runtime;
+using GamePlay.Enemy.Entity.Components.Health.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.HealthBars.Runtime
+namespace GamePlay.Enemy.Entity.Views.HealthBars.Runtime
 {
     public class HealthBar : IEntitySwitchLifetimeListener
     {

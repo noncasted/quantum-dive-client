@@ -1,8 +1,8 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Factory.Runtime
+namespace GamePlay.Enemy.Spawn.Factory.Runtime
 {
     public interface IEnemyFactory
     {

@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Damages;
+﻿using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.Views
+namespace GamePlay.Enemy.Entity.Types.Melee.Views
 {
     [DisallowMultipleComponent]
     public class EnemyMeleeViews : MonoBehaviour

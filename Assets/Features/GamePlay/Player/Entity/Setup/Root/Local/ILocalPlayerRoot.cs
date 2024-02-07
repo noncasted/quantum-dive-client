@@ -1,7 +1,7 @@
 ﻿using GamePlay.Player.Entity.Components.Equipment.Equipper.Local;
 using GamePlay.Player.Entity.Components.Healths.Runtime;
 using GamePlay.Player.Entity.Setup.Root.Common;
-using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Player.Entity.Views.Transforms.Runtime;
 
 namespace GamePlay.Player.Entity.Setup.Root.Local
 {

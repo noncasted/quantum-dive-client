@@ -1,9 +1,9 @@
-﻿using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Enemies.Entity.Views.GameObjects;
+﻿using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.Views.GameObjects;
 using UnityEngine;
 using ILogger = Internal.Services.Loggers.Runtime.ILogger;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Remote.Logs
+namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs
 {
     public class TransformSyncLogger
     {

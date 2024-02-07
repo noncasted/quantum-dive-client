@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Enemies.Entity.Views.GameObjects;
+﻿using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.Views.GameObjects;
 using Internal.Services.Loggers.Runtime;
 
-namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs
 {
     public class RemoteStateMachineLogger
     {

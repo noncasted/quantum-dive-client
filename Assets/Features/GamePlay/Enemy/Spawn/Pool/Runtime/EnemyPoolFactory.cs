@@ -2,13 +2,13 @@
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Spawn.Pool.Common;
+using GamePlay.Enemy.Spawn.Pool.Common;
 using Internal.Services.Scenes.Data;
 using NaughtyAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Pool.Runtime
+namespace GamePlay.Enemy.Spawn.Pool.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyPoolRoutes.PoolName,

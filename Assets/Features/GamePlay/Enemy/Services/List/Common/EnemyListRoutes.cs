@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Paths;
+﻿using GamePlay.Enemy.Common;
 
-namespace GamePlay.Enemies.List.Common
+namespace GamePlay.Enemy.List.Common
 {
     public class EnemyListRoutes
     {

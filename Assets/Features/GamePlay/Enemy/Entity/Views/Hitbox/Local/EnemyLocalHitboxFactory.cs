@@ -1,10 +1,10 @@
 ﻿using System;
 using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Views.Hitbox.Common;
+using GamePlay.Enemy.Entity.Views.Hitbox.Common;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Hitbox.Local
+namespace GamePlay.Enemy.Entity.Views.Hitbox.Local
 {
     [Serializable]
     public class EnemyLocalHitboxFactory : IComponentFactory

@@ -1,13 +1,13 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Animation;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Config;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Debug;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Debug;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Local
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyMeleeAttackRoutes.LocalName,

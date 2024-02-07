@@ -1,8 +1,8 @@
-﻿using GamePlay.Player.Entity.Views.Transforms.Local.Common;
+﻿using GamePlay.Player.Entity.Views.Transforms.Common;
 using Internal.Services.Loggers.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Local.Logs
+namespace GamePlay.Player.Entity.Views.Transforms.Logs
 {
     [CreateAssetMenu(fileName = TransformRoutes.LogsName,
         menuName = TransformRoutes.LogsPath)]

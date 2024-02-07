@@ -4,7 +4,7 @@ using Common.Tools.UniversalAnimators.Animations.Abstract;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
 using Cysharp.Threading.Tasks;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.Shoot.Common
+namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common
 {
     public class ShootAnimation : AsyncAnimation
     {

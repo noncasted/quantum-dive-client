@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Network.Common;
-using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Enemies.Entity.Network.Properties.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Remote.Runtime;
+using GamePlay.Enemy.Entity.Network.Common;
+using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.Network.Properties.Runtime;
+using GamePlay.Enemy.Entity.Views.Transforms.Remote.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Network.Compose
+namespace GamePlay.Enemy.Entity.Network.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

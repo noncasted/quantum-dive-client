@@ -1,9 +1,9 @@
-﻿using GamePlay.Enemies.Entity.States.Damaged.Common;
+﻿using GamePlay.Enemy.Entity.States.Damaged.Common;
 using NaughtyAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Damaged.Local
+namespace GamePlay.Enemy.Entity.States.Damaged.Local
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyDamagedRoutes.ConfigName,

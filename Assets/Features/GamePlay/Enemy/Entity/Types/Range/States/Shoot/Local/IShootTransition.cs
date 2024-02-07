@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Components.StateSelectors;
+﻿using GamePlay.Enemy.Entity.Components.StateSelectors;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.Shoot.Local
+namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 {
     public interface IShootTransition : IStateTransition
     {

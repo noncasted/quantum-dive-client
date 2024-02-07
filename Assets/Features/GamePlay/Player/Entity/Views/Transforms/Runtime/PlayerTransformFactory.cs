@@ -1,9 +1,9 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Player.Entity.Views.Transforms.Local.Logs;
+using GamePlay.Player.Entity.Views.Transforms.Logs;
 using UnityEngine;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Local.Runtime
+namespace GamePlay.Player.Entity.Views.Transforms.Runtime
 {
     [DisallowMultipleComponent]
     public class PlayerTransformFactory : MonoBehaviour, IComponentFactory

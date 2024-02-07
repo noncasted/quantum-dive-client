@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using GamePlay.Enemies.Entity.Views.Sprites.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.Sorting.Runtime
+namespace GamePlay.Enemy.Entity.Components.Sorting.Runtime
 {
     public class SpriteSorting : IEntitySwitchListener, IPostFixedUpdatable
     {

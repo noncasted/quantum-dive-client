@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemies.Entity.Components.TargetSearchers.Common;
+﻿using GamePlay.Enemy.Entity.Components.TargetSearchers.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Debug.Gizmos
+namespace GamePlay.Enemy.Entity.Components.TargetSearchers.Debug.Gizmos
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = TargetSearcherRoutes.GizmosConfigName,

@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Types.Melee.Common;
+﻿using GamePlay.Enemy.Entity.Types.Melee.Common;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.Config
+namespace GamePlay.Enemy.Entity.Types.Melee.Config
 {
     public class EnemyMeleeConfigRoutes
     {

@@ -1,7 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Abstract
+namespace GamePlay.Enemy.Entity.States.Abstract
 {
     public abstract class EnemyStateDefinition : ScriptableObject
     {

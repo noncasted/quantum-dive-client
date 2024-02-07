@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.RotationPoint.Runtime
+namespace GamePlay.Enemy.Entity.Views.RotationPoint.Runtime
 {
     public interface IEnemyRotationPoint
     {

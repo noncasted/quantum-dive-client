@@ -1,13 +1,13 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.DataTypes.Network;
-using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Remote.Logs;
+using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs;
 using Global.System.Updaters.Runtime.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Remote.Runtime
+namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Runtime
 {
     public class TransformSync : RagonProperty, IEntitySwitchListener, IFixedUpdatable
     {

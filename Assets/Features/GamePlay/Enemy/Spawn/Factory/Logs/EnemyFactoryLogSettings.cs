@@ -1,9 +1,9 @@
-﻿using GamePlay.Enemies.Spawn.Factory.Common;
+﻿using GamePlay.Enemy.Spawn.Factory.Common;
 using Internal.Services.Loggers.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Factory.Logs
+namespace GamePlay.Enemy.Spawn.Factory.Logs
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyFactoryRoutes.LogsName, menuName = EnemyFactoryRoutes.LogsPath)]

@@ -2,7 +2,7 @@
 using GamePlay.Common.Damages;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Hitbox.Common
+namespace GamePlay.Enemy.Entity.Views.Hitbox.Common
 {
     [DisallowMultipleComponent]
     public class EnemyHitboxTrigger : MonoBehaviour, IHitboxTrigger, IDamageReceiver

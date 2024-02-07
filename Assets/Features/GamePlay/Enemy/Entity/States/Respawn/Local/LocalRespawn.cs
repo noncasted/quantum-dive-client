@@ -1,15 +1,15 @@
 ﻿using System.Threading;
 using Common.Architecture.Scopes.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Components.Health.Runtime;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.States.Respawn.Common;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
-using GamePlay.Enemies.Entity.Views.Hitbox.Local;
-using GamePlay.Enemies.Entity.Views.Sprites.Runtime;
+using GamePlay.Enemy.Entity.Components.Health.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.States.Respawn.Common;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Views.Hitbox.Local;
+using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
 
-namespace GamePlay.Enemies.Entity.States.Respawn.Local
+namespace GamePlay.Enemy.Entity.States.Respawn.Local
 {
     public class LocalRespawn : IRespawn, IEnemyLocalState, IScopeSwitchListener
     {

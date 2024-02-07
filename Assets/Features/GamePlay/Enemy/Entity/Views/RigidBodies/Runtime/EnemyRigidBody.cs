@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
-using GamePlay.Enemies.Entity.Views.RigidBodies.Logs;
+using GamePlay.Enemy.Entity.Views.RigidBodies.Logs;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.RigidBodies.Runtime
+namespace GamePlay.Enemy.Entity.Views.RigidBodies.Runtime
 {
     public class EnemyRigidBody : 
         IEnemyRigidBody,

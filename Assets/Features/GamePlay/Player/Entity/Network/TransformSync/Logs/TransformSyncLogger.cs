@@ -3,7 +3,7 @@ using GamePlay.Player.Entity.Views.GameObjects.Runtime;
 using UnityEngine;
 using ILogger = Internal.Services.Loggers.Runtime.ILogger;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Remote.Logs
+namespace GamePlay.Player.Entity.Network.TransformSync.Logs
 {
     public class TransformSyncLogger
     {

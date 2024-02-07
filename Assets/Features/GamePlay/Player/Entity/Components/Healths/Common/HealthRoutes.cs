@@ -1,5 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.Common;
-using GamePlay.Player.Entity.Setup.Path;
+﻿using GamePlay.Player.Entity.Common.Routes;
+using GamePlay.Player.Entity.Components.Common;
 
 namespace GamePlay.Player.Entity.Components.Healths.Common
 {

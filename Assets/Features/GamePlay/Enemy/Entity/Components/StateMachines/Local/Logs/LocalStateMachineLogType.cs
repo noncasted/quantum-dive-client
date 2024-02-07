@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Components.StateMachines.Local.Logs
+﻿namespace GamePlay.Enemy.Entity.Components.StateMachines.Local.Logs
 {
     public enum LocalStateMachineLogType
     {

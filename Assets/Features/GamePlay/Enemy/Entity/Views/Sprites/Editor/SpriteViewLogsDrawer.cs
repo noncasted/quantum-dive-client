@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Collections.ReadOnlyDictionaries.Editor;
-using GamePlay.Enemies.Entity.Views.Sprites.Logs;
+using GamePlay.Enemy.Entity.Views.Sprites.Logs;
 using UnityEditor;
 
-namespace GamePlay.Enemies.Entity.Views.Sprites.Editor
+namespace GamePlay.Enemy.Entity.Views.Sprites.Editor
 {
     [ReadOnlyDictionaryPriority]
     [CustomPropertyDrawer(typeof(SpriteLogs))]

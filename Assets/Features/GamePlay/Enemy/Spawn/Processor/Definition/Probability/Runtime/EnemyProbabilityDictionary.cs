@@ -1,8 +1,8 @@
 ﻿using System;
 using Common.DataTypes.Collections.SerializableDictionaries;
-using GamePlay.Enemies.Entity.Definition.Asset;
+using GamePlay.Enemy.Entity.Definition.Asset;
 
-namespace GamePlay.Enemies.Spawn.Processor.Definition.Probability.Runtime
+namespace GamePlay.Enemy.Spawn.Processor.Definition.Probability.Runtime
 {
     [Serializable]
     public class EnemyProbabilityDictionary : SerializableDictionary<EnemyDefinition, float>

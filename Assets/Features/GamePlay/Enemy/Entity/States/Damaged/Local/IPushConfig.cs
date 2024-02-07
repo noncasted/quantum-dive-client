@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Damaged.Local
+namespace GamePlay.Enemy.Entity.States.Damaged.Local
 {
     public interface IPushConfig
     {

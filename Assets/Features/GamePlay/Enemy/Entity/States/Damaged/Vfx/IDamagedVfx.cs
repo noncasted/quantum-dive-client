@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.States.Damaged.Vfx
+﻿namespace GamePlay.Enemy.Entity.States.Damaged.Vfx
 {
     public interface IDamagedVfx
     {

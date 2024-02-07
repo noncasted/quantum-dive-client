@@ -1,6 +1,6 @@
 ﻿using GamePlay.Enemy.Spawn.Common;
 
-namespace GamePlay.Enemies.Spawn.Factory.Common
+namespace GamePlay.Enemy.Spawn.Factory.Common
 {
     public class EnemyFactoryRoutes
     {

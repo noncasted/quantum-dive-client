@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Lifetimes;
-using GamePlay.Enemies.Updater.Runtime.Updatables;
+using GamePlay.Enemy.Updater.Runtime.Updatables;
 
-namespace GamePlay.Enemies.Updater.Runtime
+namespace GamePlay.Enemy.Updater.Runtime
 {
     public interface IEnemyUpdater
     {

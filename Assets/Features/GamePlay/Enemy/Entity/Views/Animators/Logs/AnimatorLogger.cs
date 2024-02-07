@@ -1,6 +1,6 @@
 ﻿using Internal.Services.Loggers.Runtime;
 
-namespace GamePlay.Enemies.Entity.Views.Animators.Logs
+namespace GamePlay.Enemy.Entity.Views.Animators.Logs
 {
     public class AnimatorLogger
     {

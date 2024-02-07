@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Updater.Runtime.Updatables
+﻿namespace GamePlay.Enemy.Updater.Runtime.Updatables
 {
     public interface IEnemyStateSelectionUpdatable
     {

@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Debug
+﻿namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Debug
 {
     public interface IMeleeAttackGizmosDrawer
     {

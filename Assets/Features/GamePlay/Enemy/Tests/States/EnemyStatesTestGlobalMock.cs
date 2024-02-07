@@ -6,7 +6,7 @@ using Global.Network.Session.Runtime.Join;
 using UnityEngine;
 using VContainer;
 
-namespace GamePlay.Enemies.Tests.States
+namespace GamePlay.Enemy.Tests.States
 {
     [DisallowMultipleComponent]
     public class EnemyStatesTestGlobalMock : MockBase

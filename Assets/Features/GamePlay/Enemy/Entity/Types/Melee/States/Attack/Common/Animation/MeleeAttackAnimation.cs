@@ -5,7 +5,7 @@ using Common.Tools.UniversalAnimators.Animations.FrameProviders.Forward;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
 using Cysharp.Threading.Tasks;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Animation
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation
 {
     public class MeleeAttackAnimation : AsyncAnimation
     {

@@ -2,15 +2,15 @@
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Animation;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Damages;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using Ragon.Protocol;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Remote
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Remote
 {
     public class RemoteMeleeAttack : IEnemyRemoteState, IEntitySwitchLifetimeListener
     {

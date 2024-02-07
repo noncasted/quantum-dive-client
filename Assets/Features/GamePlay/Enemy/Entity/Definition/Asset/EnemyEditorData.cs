@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
+﻿using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Definition.Asset
+namespace GamePlay.Enemy.Entity.Definition.Asset
 {
     [InlineEditor]
     public class EnemyEditorData : ScriptableObject, IEnemyEditorData

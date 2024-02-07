@@ -2,12 +2,12 @@
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Spawn.Factory.Common;
-using GamePlay.Enemies.Spawn.Factory.Logs;
+using GamePlay.Enemy.Spawn.Factory.Common;
+using GamePlay.Enemy.Spawn.Factory.Logs;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Factory.Runtime
+namespace GamePlay.Enemy.Spawn.Factory.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyFactoryRoutes.ServiceName,

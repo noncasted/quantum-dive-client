@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
 using Common.Architecture.Lifetimes.Viewables;
-using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Player.Entity.Views.Transforms.Runtime;
 using Global.Inputs.Utils.Runtime.Projection;
 using Global.Inputs.View.Implementations.Movement;
 using UnityEngine;

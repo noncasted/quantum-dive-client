@@ -1,11 +1,11 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using GamePlay.Common.Damages;
-using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Enemies.Entity.Views.Hitbox.Common;
+using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.Views.Hitbox.Common;
 using GamePlay.Hitboxes.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Hitbox.Remote
+namespace GamePlay.Enemy.Entity.Views.Hitbox.Remote
 {
     public class RemoteHitbox : IEntitySwitchListener, IDamageReceiver
     {

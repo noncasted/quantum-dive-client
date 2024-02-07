@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.States.Idle.Local
+﻿namespace GamePlay.Enemy.Entity.States.Idle.Local
 {
     public interface IIdle
     {

@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Definition.Asset;
+﻿using GamePlay.Enemy.Entity.Definition.Asset;
 
-namespace GamePlay.Enemies.Spawn.Processor.Runtime
+namespace GamePlay.Enemy.Spawn.Processor.Runtime
 {
     public readonly struct EnemyEntry
     {

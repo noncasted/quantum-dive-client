@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Views.Transforms.Local.Logs
+﻿namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Logs
 {
     public enum TransformLogType
     {

@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Paths;
+﻿using GamePlay.Enemy.Common;
 
-namespace GamePlay.Enemies.Mappers.Definitions.Common
+namespace GamePlay.Enemy.Mappers.Definitions.Common
 {
     public class EnemyDefinitionMapperRoutes
     {

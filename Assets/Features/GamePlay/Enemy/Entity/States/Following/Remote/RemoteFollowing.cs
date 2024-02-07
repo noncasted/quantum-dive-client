@@ -1,12 +1,12 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.States.Following.Common;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.States.Following.Common;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using Ragon.Protocol;
 
-namespace GamePlay.Enemies.Entity.States.Following.Remote
+namespace GamePlay.Enemy.Entity.States.Following.Remote
 {
     public class RemoteFollowing : IEnemyRemoteState, IEntitySwitchLifetimeListener
     {

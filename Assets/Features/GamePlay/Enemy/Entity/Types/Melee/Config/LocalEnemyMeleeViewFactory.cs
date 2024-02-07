@@ -1,19 +1,19 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.States.Damaged.Vfx;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Damages;
-using GamePlay.Enemies.Entity.Views.AIPaths;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
-using GamePlay.Enemies.Entity.Views.GameObjects;
-using GamePlay.Enemies.Entity.Views.HealthBars.Runtime;
-using GamePlay.Enemies.Entity.Views.Hitbox.Local;
-using GamePlay.Enemies.Entity.Views.RigidBodies.Runtime;
-using GamePlay.Enemies.Entity.Views.RotationPoint.Runtime;
-using GamePlay.Enemies.Entity.Views.Sprites.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Enemy.Entity.States.Damaged.Vfx;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages;
+using GamePlay.Enemy.Entity.Views.AIPaths;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Views.GameObjects;
+using GamePlay.Enemy.Entity.Views.HealthBars.Runtime;
+using GamePlay.Enemy.Entity.Views.Hitbox.Local;
+using GamePlay.Enemy.Entity.Views.RigidBodies.Runtime;
+using GamePlay.Enemy.Entity.Views.RotationPoint.Runtime;
+using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.Config
+namespace GamePlay.Enemy.Entity.Types.Melee.Config
 {
     public class LocalEnemyMeleeViewFactory : ScopedEntityViewFactory, IEntityViewFactory
     {

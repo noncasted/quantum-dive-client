@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs
 {
     [Serializable]
     public class RemoteStateMachineDebugFlag

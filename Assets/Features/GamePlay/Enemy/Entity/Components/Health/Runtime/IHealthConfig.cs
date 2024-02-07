@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Components.Health.Runtime
+﻿namespace GamePlay.Enemy.Entity.Components.Health.Runtime
 {
     public interface IHealthConfig
     {

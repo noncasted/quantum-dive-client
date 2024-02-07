@@ -1,14 +1,14 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs;
-using GamePlay.Enemies.Entity.Views.Animators.Logs;
-using GamePlay.Enemies.Entity.Views.RigidBodies.Logs;
-using GamePlay.Enemies.Entity.Views.Sprites.Logs;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Logs;
-using GamePlay.Enemies.Entity.Views.Transforms.Remote.Logs;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs;
+using GamePlay.Enemy.Entity.Views.Animators.Logs;
+using GamePlay.Enemy.Entity.Views.RigidBodies.Logs;
+using GamePlay.Enemy.Entity.Views.Sprites.Logs;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Logs;
+using GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Debugs.Flags
+namespace GamePlay.Enemy.Entity.Debugs.Flags
 {
     public class EnemyDebugFlags : MonoBehaviour, IComponentFactory
     {

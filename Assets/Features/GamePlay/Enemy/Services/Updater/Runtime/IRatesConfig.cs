@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Updater.Runtime
+﻿namespace GamePlay.Enemy.Updater.Runtime
 {
     public interface IRatesConfig
     {

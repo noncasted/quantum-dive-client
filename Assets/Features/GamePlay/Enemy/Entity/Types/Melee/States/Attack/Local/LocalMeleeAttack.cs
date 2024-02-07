@@ -1,18 +1,18 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.States.SubStates.Pushes.Runtime;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Animation;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Config;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Damages;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Debug;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.States.SubStates.Pushes.Runtime;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Debug;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Targets.Registry.Runtime;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Local
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
 {
     public class LocalMeleeAttack : IEnemyLocalState, IMeleeAttack
     {

@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
-using GamePlay.Enemies.Entity.States.Common;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
+using GamePlay.Enemy.Entity.States.Common;
 
-namespace GamePlay.Enemies.Entity.States.Following.Common
+namespace GamePlay.Enemy.Entity.States.Following.Common
 {
     public class EnemyFollowingRoutes
     {

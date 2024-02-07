@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Types.Range.Views.ShootPoint;
+﻿using GamePlay.Enemy.Entity.Types.Range.Views.ShootPoint;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Range.Views
+namespace GamePlay.Enemy.Entity.Types.Range.Views
 {
     public class EnemyRangeViews : MonoBehaviour
     {

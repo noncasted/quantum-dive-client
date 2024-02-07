@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Collections.ReadOnlyDictionaries.Editor;
-using GamePlay.Enemies.Entity.Views.Animators.Logs;
+using GamePlay.Enemy.Entity.Views.Animators.Logs;
 using UnityEditor;
 
-namespace GamePlay.Enemies.Entity.Views.Animators.Editor
+namespace GamePlay.Enemy.Entity.Views.Animators.Editor
 {
     [ReadOnlyDictionaryPriority]
     [CustomPropertyDrawer(typeof(AnimatorLogs))]

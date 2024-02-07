@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
 
-namespace GamePlay.Enemies.Entity.Views.Animators.Common
+namespace GamePlay.Enemy.Entity.Views.Animators.Common
 {
     public class AnimatorRoutes
     {

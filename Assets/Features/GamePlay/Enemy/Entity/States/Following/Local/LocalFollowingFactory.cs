@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.States.Following.Common;
+using GamePlay.Enemy.Entity.States.Following.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Following.Local
+namespace GamePlay.Enemy.Entity.States.Following.Local
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyFollowingRoutes.LocalName,

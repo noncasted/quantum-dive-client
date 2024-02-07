@@ -1,14 +1,14 @@
-﻿using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.States.Following.Common;
-using GamePlay.Enemies.Entity.Views.AIPaths;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
-using GamePlay.Enemies.Entity.Views.Sprites.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
+﻿using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.States.Following.Common;
+using GamePlay.Enemy.Entity.Views.AIPaths;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Targets.Registry.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 
-namespace GamePlay.Enemies.Entity.States.Following.Local
+namespace GamePlay.Enemy.Entity.States.Following.Local
 {
     public class LocalFollowing : IEnemyLocalState, IFollowing, IUpdatable
     {

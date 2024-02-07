@@ -1,7 +1,7 @@
 ﻿using GamePlay.Targets.Registry.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.AIPaths
+namespace GamePlay.Enemy.Entity.Views.AIPaths
 {
     public interface IEnemyAiFollower
     {

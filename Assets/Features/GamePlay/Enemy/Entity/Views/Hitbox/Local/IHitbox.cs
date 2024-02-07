@@ -1,9 +1,8 @@
-﻿using System;
-using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.Architecture.Lifetimes.Viewables;
 using GamePlay.Common.Damages;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Hitbox.Local
+namespace GamePlay.Enemy.Entity.Views.Hitbox.Local
 {
     public interface IHitbox
     {

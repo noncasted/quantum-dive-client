@@ -1,6 +1,6 @@
 ﻿using GamePlay.Targets.Registry.Runtime;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.Shoot.Local
+namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 {
     public interface IShootTargetChecker
     {

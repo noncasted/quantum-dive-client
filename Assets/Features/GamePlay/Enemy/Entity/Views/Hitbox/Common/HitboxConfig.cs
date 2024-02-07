@@ -1,7 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Hitbox.Common
+namespace GamePlay.Enemy.Entity.Views.Hitbox.Common
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyHitboxRoutes.ConfigName,

@@ -1,11 +1,11 @@
 ﻿using System;
 using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Views.Sprites.Logs;
+using GamePlay.Enemy.Entity.Views.Sprites.Logs;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace GamePlay.Enemies.Entity.Views.Sprites.Runtime
+namespace GamePlay.Enemy.Entity.Views.Sprites.Runtime
 {
     [Serializable]
     public class EnemySpriteFactory : IComponentFactory

@@ -1,9 +1,9 @@
-﻿using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.States.Idle.Common;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
+﻿using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.States.Idle.Common;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 
-namespace GamePlay.Enemies.Entity.States.Idle.Local
+namespace GamePlay.Enemy.Entity.States.Idle.Local
 {
     public class LocalIdle : IIdle, IEnemyLocalState
     {

@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Components.Compose;
-using GamePlay.Enemies.Entity.Definition.Config;
-using GamePlay.Enemies.Entity.Network.Compose;
-using GamePlay.Enemies.Entity.States.Compose;
-using GamePlay.Enemies.Entity.Types.Range.States.Shoot.Remote;
+using GamePlay.Enemy.Entity.Components.Compose;
+using GamePlay.Enemy.Entity.Definition.Config;
+using GamePlay.Enemy.Entity.Network.Compose;
+using GamePlay.Enemy.Entity.States.Compose;
+using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Remote;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Range.Config
+namespace GamePlay.Enemy.Entity.Types.Range.Config
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyRangeConfigRoutes.RemoteName,

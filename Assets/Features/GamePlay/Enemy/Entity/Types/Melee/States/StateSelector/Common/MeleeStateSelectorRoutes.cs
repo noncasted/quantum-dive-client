@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
-using GamePlay.Enemies.Entity.Types.Melee.Common;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
+using GamePlay.Enemy.Entity.Types.Melee.Common;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.StateSelector.Common
+namespace GamePlay.Enemy.Entity.Types.Melee.States.StateSelector.Common
 {
     public class MeleeStateSelectorRoutes
     {

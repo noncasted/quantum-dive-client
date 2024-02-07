@@ -1,7 +1,7 @@
 ﻿using Common.DataTypes.Structs;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime
+namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime
 {
     public interface IEnemyTransform
     {

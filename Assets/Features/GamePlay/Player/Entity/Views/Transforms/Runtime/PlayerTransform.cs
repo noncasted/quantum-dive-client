@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Structs;
-using GamePlay.Player.Entity.Views.Transforms.Local.Logs;
+using GamePlay.Player.Entity.Views.Transforms.Logs;
 using UnityEngine;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Local.Runtime
+namespace GamePlay.Player.Entity.Views.Transforms.Runtime
 {
     public class PlayerTransform :
         IPlayerTransform,

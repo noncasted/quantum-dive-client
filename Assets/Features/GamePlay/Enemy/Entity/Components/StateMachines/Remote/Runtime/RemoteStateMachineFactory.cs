@@ -1,11 +1,11 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Common;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Logs;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Common;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = RemoteStateMachineRoutes.ComponentName,

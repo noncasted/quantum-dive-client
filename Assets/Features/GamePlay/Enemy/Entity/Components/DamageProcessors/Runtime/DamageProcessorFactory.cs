@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Components.DamageProcessors.Common;
+using GamePlay.Enemy.Entity.Components.DamageProcessors.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.DamageProcessors.Runtime
+namespace GamePlay.Enemy.Entity.Components.DamageProcessors.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyDamageProcessorRoutes.ComponentName,

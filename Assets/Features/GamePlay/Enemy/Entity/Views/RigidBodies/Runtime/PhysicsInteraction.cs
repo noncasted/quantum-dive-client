@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Views.RigidBodies.Runtime
+﻿namespace GamePlay.Enemy.Entity.Views.RigidBodies.Runtime
 {
     public enum PhysicsInteraction
     {

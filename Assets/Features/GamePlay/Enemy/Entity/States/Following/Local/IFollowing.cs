@@ -1,6 +1,6 @@
 ﻿using GamePlay.Targets.Registry.Runtime;
 
-namespace GamePlay.Enemies.Entity.States.Following.Local
+namespace GamePlay.Enemy.Entity.States.Following.Local
 {
     public interface IFollowing
     {

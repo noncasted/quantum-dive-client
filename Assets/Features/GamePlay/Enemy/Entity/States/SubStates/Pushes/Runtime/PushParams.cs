@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.SubStates.Pushes.Runtime
+namespace GamePlay.Enemy.Entity.States.SubStates.Pushes.Runtime
 {
     public readonly struct PushParams
     {

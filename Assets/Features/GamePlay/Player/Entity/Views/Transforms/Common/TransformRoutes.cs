@@ -1,7 +1,7 @@
-﻿using GamePlay.Player.Entity.Setup.Path;
+﻿using GamePlay.Player.Entity.Common.Routes;
 using GamePlay.Player.Entity.Views.Common;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Local.Common
+namespace GamePlay.Player.Entity.Views.Transforms.Common
 {
     public class TransformRoutes
     {

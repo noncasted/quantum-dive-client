@@ -1,4 +1,4 @@
-﻿using GamePlay.Player.Entity.Setup.Path;
+﻿using GamePlay.Player.Entity.Common.Routes;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Common.Paths;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Common

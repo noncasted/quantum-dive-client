@@ -1,4 +1,4 @@
-﻿using GamePlay.Player.Entity.Setup.Path;
+﻿using GamePlay.Player.Entity.Common.Routes;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Common.Paths;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common

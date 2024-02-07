@@ -1,11 +1,11 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Components.TargetSearchers.Common;
-using GamePlay.Enemies.Entity.Components.TargetSearchers.Debug.Gizmos;
+using GamePlay.Enemy.Entity.Components.TargetSearchers.Common;
+using GamePlay.Enemy.Entity.Components.TargetSearchers.Debug.Gizmos;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
+namespace GamePlay.Enemy.Entity.Components.TargetSearchers.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = TargetSearcherRoutes.ComponentName,

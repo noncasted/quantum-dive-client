@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using ILogger = Internal.Services.Loggers.Runtime.ILogger;
 
-namespace GamePlay.Enemies.Entity.Views.RigidBodies.Logs
+namespace GamePlay.Enemy.Entity.Views.RigidBodies.Logs
 {
     public class RigidBodyLogger
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Remote.Logs
+namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs
 {
     [Serializable]
     public class RemoteTransformDebugFlag

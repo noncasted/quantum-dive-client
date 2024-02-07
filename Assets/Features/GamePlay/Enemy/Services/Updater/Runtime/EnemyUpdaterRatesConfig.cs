@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemies.Updater.Common;
+﻿using GamePlay.Enemy.Updater.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Updater.Runtime
+namespace GamePlay.Enemy.Updater.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyUpdaterRoutes.ConfigName,

@@ -1,7 +1,7 @@
 ﻿using System;
 using GamePlay.Common.Damages;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Damages
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages
 {
     public interface IDamageTrigger
     {

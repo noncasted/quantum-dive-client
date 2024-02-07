@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.HealthBars.Runtime
+namespace GamePlay.Enemy.Entity.Views.HealthBars.Runtime
 {
     [DisallowMultipleComponent]
     public class HealthBarCell : MonoBehaviour

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GamePlay.Enemies.Entity.Views.Hitbox.Common
+namespace GamePlay.Enemy.Entity.Views.Hitbox.Common
 {
     public interface IHitboxStateSync
     {

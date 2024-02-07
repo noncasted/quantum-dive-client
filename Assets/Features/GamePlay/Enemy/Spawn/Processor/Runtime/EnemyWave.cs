@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using GamePlay.Enemies.Entity.Definition.Asset;
-using GamePlay.Enemies.Spawn.Processor.Common;
-using GamePlay.Enemies.Spawn.Processor.Definition.Probability.Runtime;
-using GamePlay.Enemies.Spawn.Processor.Definition.ToggleButtons.Runtime;
+using GamePlay.Enemy.Entity.Definition.Asset;
+using GamePlay.Enemy.Spawn.Processor.Common;
+using GamePlay.Enemy.Spawn.Processor.Definition.Probability.Runtime;
+using GamePlay.Enemy.Spawn.Processor.Definition.ToggleButtons.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Processor.Runtime
+namespace GamePlay.Enemy.Spawn.Processor.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = WaveProcessorRoutes.WaveName,

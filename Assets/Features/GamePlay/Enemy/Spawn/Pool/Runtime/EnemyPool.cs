@@ -2,15 +2,15 @@
 using Common.Architecture.Entities.Runtime;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
-using GamePlay.Enemies.Entity.Definition.Asset.Abstract;
-using GamePlay.Enemies.Entity.Definition.Root;
-using GamePlay.Enemies.Mappers.Definitions.Runtime;
+using GamePlay.Enemy.Entity.Definition.Asset.Abstract;
+using GamePlay.Enemy.Entity.Definition.Root;
+using GamePlay.Enemy.Mappers.Definitions.Runtime;
 using GamePlay.Network.Objects.Factories.Runtime;
 using Ragon.Client;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace GamePlay.Enemies.Spawn.Pool.Runtime
+namespace GamePlay.Enemy.Spawn.Pool.Runtime
 {
     public class EnemyPool : IEnemyPool
     {

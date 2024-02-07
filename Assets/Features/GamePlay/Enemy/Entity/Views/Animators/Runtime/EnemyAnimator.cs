@@ -5,10 +5,10 @@ using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
 using Common.Tools.UniversalAnimators.Animators.Runtime;
 using Common.Tools.UniversalAnimators.Updaters.Runtime;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Views.Animators.Logs;
+using GamePlay.Enemy.Entity.Views.Animators.Logs;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Animators.Runtime
+namespace GamePlay.Enemy.Entity.Views.Animators.Runtime
 {
     public class EnemyAnimator : IEnemyAnimator, IEntitySwitchListener
     {

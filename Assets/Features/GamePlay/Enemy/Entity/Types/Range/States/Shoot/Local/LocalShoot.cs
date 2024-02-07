@@ -1,14 +1,14 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.Types.Range.States.Shoot.Common;
-using GamePlay.Enemies.Entity.Types.Range.Views.ShootPoint;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
+using GamePlay.Enemy.Entity.Types.Range.Views.ShootPoint;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using GamePlay.Projectiles.Factory;
 using GamePlay.Targets.Registry.Runtime;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.Shoot.Local
+namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 {
     public class LocalShoot : IShoot, IEnemyLocalState
     {

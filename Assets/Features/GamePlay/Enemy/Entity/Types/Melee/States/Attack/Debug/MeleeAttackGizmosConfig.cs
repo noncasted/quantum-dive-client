@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common;
+﻿using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Debug
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Debug
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyMeleeAttackRoutes.GizmosConfigName,

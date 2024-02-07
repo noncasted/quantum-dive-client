@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Components.Common;
-using GamePlay.Enemies.Entity.Components.Health.Runtime;
-using GamePlay.Enemies.Entity.Components.Sorting.Runtime;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
+using GamePlay.Enemy.Entity.Components.Common;
+using GamePlay.Enemy.Entity.Components.Health.Runtime;
+using GamePlay.Enemy.Entity.Components.Sorting.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.Compose
+namespace GamePlay.Enemy.Entity.Components.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

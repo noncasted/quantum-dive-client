@@ -3,7 +3,7 @@ using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.HealthBars.Runtime
+namespace GamePlay.Enemy.Entity.Views.HealthBars.Runtime
 {
     [Serializable]
     public class HealthBarFactory : IComponentFactory

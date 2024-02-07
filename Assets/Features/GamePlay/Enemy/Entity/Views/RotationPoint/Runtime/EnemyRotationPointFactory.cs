@@ -3,7 +3,7 @@ using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.RotationPoint.Runtime
+namespace GamePlay.Enemy.Entity.Views.RotationPoint.Runtime
 {
     [Serializable]
     public class EnemyRotationPointFactory : IComponentFactory

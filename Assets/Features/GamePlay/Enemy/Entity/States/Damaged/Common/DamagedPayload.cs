@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.States.Abstract;
+﻿using GamePlay.Enemy.Entity.States.Abstract;
 using Ragon.Protocol;
 
-namespace GamePlay.Enemies.Entity.States.Damaged.Common
+namespace GamePlay.Enemy.Entity.States.Damaged.Common
 {
     public class DamagedPayload : IRemoteStatePayload
     {

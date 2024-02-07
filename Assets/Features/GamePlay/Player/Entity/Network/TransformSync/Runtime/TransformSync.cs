@@ -2,13 +2,13 @@
 using Common.Architecture.Lifetimes;
 using Common.DataTypes.Network;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
-using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
-using GamePlay.Player.Entity.Views.Transforms.Remote.Logs;
+using GamePlay.Player.Entity.Network.TransformSync.Logs;
+using GamePlay.Player.Entity.Views.Transforms.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Remote.Runtime
+namespace GamePlay.Player.Entity.Network.TransformSync.Runtime
 {
     public class TransformSync : RagonProperty, IEntitySwitchLifetimeListener, IFixedUpdatable
     {

@@ -1,12 +1,12 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Definition.Asset;
-using GamePlay.Enemies.Spawn.Factory.Runtime;
+using GamePlay.Enemy.Entity.Definition.Asset;
+using GamePlay.Enemy.Spawn.Factory.Runtime;
 using GamePlay.Targets.Registry.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using VContainer;
 
-namespace GamePlay.Enemies.Tests.States
+namespace GamePlay.Enemy.Tests.States
 {
     [DisallowMultipleComponent]
     public class EnemyStatesTestRunner : MonoBehaviour

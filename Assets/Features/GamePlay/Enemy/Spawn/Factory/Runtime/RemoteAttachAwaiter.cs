@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using Ragon.Client;
 
-namespace GamePlay.Enemies.Spawn.Factory.Runtime
+namespace GamePlay.Enemy.Spawn.Factory.Runtime
 {
     public class RemoteAttachAwaiter
     {

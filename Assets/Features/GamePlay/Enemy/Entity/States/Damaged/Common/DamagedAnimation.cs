@@ -1,7 +1,7 @@
 ﻿using Common.Tools.UniversalAnimators.Animations.Abstract;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
 
-namespace GamePlay.Enemies.Entity.States.Damaged.Common
+namespace GamePlay.Enemy.Entity.States.Damaged.Common
 {
     public class DamagedAnimation : AsyncAnimation
     {

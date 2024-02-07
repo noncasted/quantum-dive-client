@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Definition.Asset.Abstract
+namespace GamePlay.Enemy.Entity.Definition.Asset.Abstract
 {
     public interface IEnemyEditorData
     {

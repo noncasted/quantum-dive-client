@@ -2,7 +2,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Animation
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyMeleeAttackRoutes.AnimationName,

@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemies.Entity.States.Abstract;
+﻿using GamePlay.Enemy.Entity.States.Abstract;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.Shoot.Common
+namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyShootRoutes.DefinitionName,

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GamePlay.Enemies.Entity.States.Death.Local
+namespace GamePlay.Enemy.Entity.States.Death.Local
 {
     public interface IDeath
     {

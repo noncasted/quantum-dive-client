@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Enemies.Spawn.Processor.Common;
+using GamePlay.Enemy.Spawn.Processor.Common;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Processor.Runtime
+namespace GamePlay.Enemy.Spawn.Processor.Runtime
 {
     [CreateAssetMenu(fileName = WaveProcessorRoutes.StorageName,
         menuName = WaveProcessorRoutes.StoragePath)]

@@ -1,9 +1,9 @@
 ﻿using Common.Architecture.Lifetimes.Viewables;
-using GamePlay.Enemies.Entity.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.Network.EntityHandler.Runtime;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.Enemies.Entity.Components.Health.Runtime
+namespace GamePlay.Enemy.Entity.Components.Health.Runtime
 {
     public class Health : RagonProperty, IHealth
     {

@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
-using GamePlay.Enemies.Entity.Types.Melee.Common;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
+using GamePlay.Enemy.Entity.Types.Melee.Common;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common
 {
     public class EnemyMeleeAttackRoutes
     {

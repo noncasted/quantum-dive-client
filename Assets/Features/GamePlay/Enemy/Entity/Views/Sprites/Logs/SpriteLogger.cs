@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using ILogger = Internal.Services.Loggers.Runtime.ILogger;
 
-namespace GamePlay.Enemies.Entity.Views.Sprites.Logs
+namespace GamePlay.Enemy.Entity.Views.Sprites.Logs
 {
     public class SpriteLogger
     {

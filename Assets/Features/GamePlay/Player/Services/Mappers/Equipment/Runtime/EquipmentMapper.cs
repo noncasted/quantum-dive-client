@@ -2,7 +2,7 @@
 using Common.DataTypes.Collections.Common;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 
-namespace GamePlay.Player.Registries.Equipment.Runtime
+namespace GamePlay.Player.Mappers.Equipment.Runtime
 {
     public class EquipmentMapper : IEquipmentMapper
     {

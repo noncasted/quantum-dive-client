@@ -1,12 +1,12 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
-using GamePlay.Enemies.Entity.Components.StateMachines.Remote.Runtime;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Entity.States.Idle.Common;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Entity.States.Idle.Common;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using Ragon.Protocol;
 
-namespace GamePlay.Enemies.Entity.States.Idle.Remote
+namespace GamePlay.Enemy.Entity.States.Idle.Remote
 {
     public class RemoteIdle : IEnemyRemoteState, IEntitySwitchLifetimeListener
     {

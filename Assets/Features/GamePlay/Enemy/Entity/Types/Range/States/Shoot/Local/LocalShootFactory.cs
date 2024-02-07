@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Types.Range.States.Shoot.Common;
+using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.Shoot.Local
+namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyShootRoutes.LocalName,

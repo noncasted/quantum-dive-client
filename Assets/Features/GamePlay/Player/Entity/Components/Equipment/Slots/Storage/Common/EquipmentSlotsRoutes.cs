@@ -1,5 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.Equipment.Common;
-using GamePlay.Player.Entity.Setup.Path;
+﻿using GamePlay.Player.Entity.Common.Routes;
+using GamePlay.Player.Entity.Components.Equipment.Common;
 
 namespace GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Common
 {

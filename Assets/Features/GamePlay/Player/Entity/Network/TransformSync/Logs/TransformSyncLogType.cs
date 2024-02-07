@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.Views.Transforms.Remote.Logs
+﻿namespace GamePlay.Player.Entity.Network.TransformSync.Logs
 {
     public enum TransformSyncLogType
     {

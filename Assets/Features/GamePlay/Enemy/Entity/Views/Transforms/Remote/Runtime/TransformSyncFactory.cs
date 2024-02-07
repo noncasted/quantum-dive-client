@@ -1,11 +1,11 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Remote.Common;
-using GamePlay.Enemies.Entity.Views.Transforms.Remote.Logs;
+using GamePlay.Enemy.Entity.Views.Transforms.Remote.Common;
+using GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Remote.Runtime
+namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = TransformSyncRoutes.ServiceName,

@@ -1,10 +1,10 @@
 ﻿using System;
 using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Logs;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Logs;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime
+namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime
 {
     [Serializable]
     public class EnemyTransformFactory : IComponentFactory

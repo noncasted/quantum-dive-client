@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Components.Health.Common;
+using GamePlay.Enemy.Entity.Components.Health.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.Health.Runtime
+namespace GamePlay.Enemy.Entity.Components.Health.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyHealthRoutes.ComponentName,

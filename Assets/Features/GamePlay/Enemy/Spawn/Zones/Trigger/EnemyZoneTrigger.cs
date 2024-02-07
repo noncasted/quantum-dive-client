@@ -2,7 +2,7 @@
 using GamePlay.Player.Entity.Views.View;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Zones.Trigger
+namespace GamePlay.Enemy.Spawn.Zones.Trigger
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Collider2D))]

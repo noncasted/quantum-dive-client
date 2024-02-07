@@ -2,7 +2,7 @@
 using GamePlay.Common.Damages;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Damages
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Collider2D))]

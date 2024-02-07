@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Components.StateSelectors;
+﻿using GamePlay.Enemy.Entity.Components.StateSelectors;
 
-namespace GamePlay.Enemies.Entity.Types.Summoner.States.StateSelector.Runtime
+namespace GamePlay.Enemy.Entity.Types.Summoner.States.StateSelector.Runtime
 {
     public class SummonerStateSelector : IStateSelector
     {

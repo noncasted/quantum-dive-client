@@ -1,6 +1,6 @@
 ﻿using GamePlay.Enemy.Spawn.Common;
 
-namespace GamePlay.Enemies.Spawn.Pool.Common
+namespace GamePlay.Enemy.Spawn.Pool.Common
 {
     public class EnemyPoolRoutes
     {

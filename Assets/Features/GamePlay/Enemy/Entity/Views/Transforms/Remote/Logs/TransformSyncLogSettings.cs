@@ -1,9 +1,9 @@
-﻿using GamePlay.Enemies.Entity.Views.Transforms.Remote.Common;
+﻿using GamePlay.Enemy.Entity.Views.Transforms.Remote.Common;
 using Internal.Services.Loggers.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Remote.Logs
+namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = TransformSyncRoutes.LogsName, menuName = TransformSyncRoutes.LogsPath)]

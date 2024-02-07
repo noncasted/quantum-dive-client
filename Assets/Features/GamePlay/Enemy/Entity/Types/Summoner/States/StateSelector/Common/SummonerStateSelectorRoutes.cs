@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
-using GamePlay.Enemies.Entity.Types.Summoner.Common;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
+using GamePlay.Enemy.Entity.Types.Summoner.Common;
 
-namespace GamePlay.Enemies.Entity.Types.Summoner.States.StateSelector.Common
+namespace GamePlay.Enemy.Entity.Types.Summoner.States.StateSelector.Common
 {
     public class SummonerStateSelectorRoutes
     {

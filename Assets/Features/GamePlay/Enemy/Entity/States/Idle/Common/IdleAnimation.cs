@@ -1,7 +1,7 @@
 ﻿using Common.Tools.UniversalAnimators.Animations.Abstract;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
 
-namespace GamePlay.Enemies.Entity.States.Idle.Common
+namespace GamePlay.Enemy.Entity.States.Idle.Common
 {
     public class IdleAnimation : LoopedAnimation
     {

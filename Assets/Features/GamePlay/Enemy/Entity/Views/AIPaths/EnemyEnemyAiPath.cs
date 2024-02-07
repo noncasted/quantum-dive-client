@@ -1,11 +1,11 @@
 ﻿using Common.Architecture.Lifetimes;
-using GamePlay.Enemies.Updater.Runtime;
-using GamePlay.Enemies.Updater.Runtime.Updatables;
+using GamePlay.Enemy.Updater.Runtime;
+using GamePlay.Enemy.Updater.Runtime.Updatables;
 using GamePlay.Targets.Registry.Runtime;
 using Pathfinding;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.AIPaths
+namespace GamePlay.Enemy.Entity.Views.AIPaths
 {
     public class EnemyEnemyAiPath : IEnemyAiFollower, IEnemyPathRecalculateUpdatable
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.GameObjects
+namespace GamePlay.Enemy.Entity.Views.GameObjects
 {
     public class EnemyGameObject : IEnemyGameObject
     {

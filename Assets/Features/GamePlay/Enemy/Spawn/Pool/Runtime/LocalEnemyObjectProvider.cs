@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Definition.Config;
-using GamePlay.Enemies.Entity.Definition.Root;
+using GamePlay.Enemy.Entity.Definition.Config;
+using GamePlay.Enemy.Entity.Definition.Root;
 using GamePlay.Network.Objects.Factories.Runtime;
 using Ragon.Client;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace GamePlay.Enemies.Spawn.Pool.Runtime
+namespace GamePlay.Enemy.Spawn.Pool.Runtime
 {
     public class LocalEnemyObjectProvider
     {

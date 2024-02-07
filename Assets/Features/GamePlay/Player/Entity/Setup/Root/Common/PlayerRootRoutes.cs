@@ -1,4 +1,4 @@
-﻿using GamePlay.Player.Entity.Setup.Path;
+﻿using GamePlay.Player.Entity.Common.Routes;
 
 namespace GamePlay.Player.Entity.Setup.Root.Common
 {

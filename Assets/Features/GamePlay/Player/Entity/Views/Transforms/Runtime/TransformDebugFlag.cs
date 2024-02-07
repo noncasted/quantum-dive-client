@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Local.Runtime
+namespace GamePlay.Player.Entity.Views.Transforms.Runtime
 {
     [Serializable]
     public class TransformDebugFlag

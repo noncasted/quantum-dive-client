@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.States.Abstract;
+﻿using GamePlay.Enemy.Entity.States.Abstract;
 
-namespace GamePlay.Enemies.Mappers.States.Runtime
+namespace GamePlay.Enemy.Mappers.States.Runtime
 {
     public interface IEnemyStateMapper
     {

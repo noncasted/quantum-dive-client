@@ -1,10 +1,10 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Views.RigidBodies.Runtime;
+using GamePlay.Enemy.Entity.Views.RigidBodies.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.SubStates.Pushes.Runtime
+namespace GamePlay.Enemy.Entity.States.SubStates.Pushes.Runtime
 {
     public class SubPush : ISubPush
     {

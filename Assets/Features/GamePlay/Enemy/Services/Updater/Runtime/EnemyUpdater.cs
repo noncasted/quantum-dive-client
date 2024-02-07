@@ -1,9 +1,9 @@
 ﻿using Common.Architecture.Lifetimes;
 using Common.Architecture.Scopes.Runtime.Callbacks;
-using GamePlay.Enemies.Updater.Runtime.Updatables;
+using GamePlay.Enemy.Updater.Runtime.Updatables;
 using Global.System.Updaters.Runtime.Abstract;
 
-namespace GamePlay.Enemies.Updater.Runtime
+namespace GamePlay.Enemy.Updater.Runtime
 {
     public class EnemyUpdater : IEnemyUpdater, IPreFixedUpdatable, IScopeLifetimeListener
     {

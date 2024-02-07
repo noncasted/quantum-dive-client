@@ -1,15 +1,15 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.States.Damaged.Vfx;
-using GamePlay.Enemies.Entity.Views.Animators.Runtime;
-using GamePlay.Enemies.Entity.Views.GameObjects;
-using GamePlay.Enemies.Entity.Views.HealthBars.Runtime;
-using GamePlay.Enemies.Entity.Views.Hitbox.Remote;
-using GamePlay.Enemies.Entity.Views.Sprites.Runtime;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Enemy.Entity.States.Damaged.Vfx;
+using GamePlay.Enemy.Entity.Views.Animators.Runtime;
+using GamePlay.Enemy.Entity.Views.GameObjects;
+using GamePlay.Enemy.Entity.Views.HealthBars.Runtime;
+using GamePlay.Enemy.Entity.Views.Hitbox.Remote;
+using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Summoner.Config
+namespace GamePlay.Enemy.Entity.Types.Summoner.Config
 {
     public class RemoteEnemySummonerViewFactory : ScopedEntityViewFactory, IEntityViewFactory
     {

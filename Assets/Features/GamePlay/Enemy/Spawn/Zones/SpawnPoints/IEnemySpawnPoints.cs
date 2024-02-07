@@ -1,6 +1,6 @@
 ﻿    using UnityEngine;
 
-    namespace GamePlay.Enemies.Spawn.Zones.SpawnPoints
+    namespace GamePlay.Enemy.Spawn.Zones.SpawnPoints
     {
         public interface IEnemySpawnPoints
         {

@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.States.Damaged.Common;
+using GamePlay.Enemy.Entity.States.Damaged.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Damaged.Local
+namespace GamePlay.Enemy.Entity.States.Damaged.Local
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyDamagedRoutes.LocalName,

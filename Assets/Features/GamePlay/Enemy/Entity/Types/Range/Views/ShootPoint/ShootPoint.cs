@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Range.Views.ShootPoint
+namespace GamePlay.Enemy.Entity.Types.Range.Views.ShootPoint
 {
     public class ShootPoint : IShootPoint
     {

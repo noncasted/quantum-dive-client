@@ -1,9 +1,9 @@
-﻿using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Config;
-using GamePlay.Enemies.Entity.Views.Hitbox.Local;
+﻿using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
+using GamePlay.Enemy.Entity.Views.Hitbox.Local;
 using Global.Debugs.Drawing.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Debug
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Debug
 {
     public class GizmosDrawer : IMeleeAttackGizmosDrawer, IGizmosUpdatable
     {

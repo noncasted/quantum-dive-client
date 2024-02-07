@@ -3,12 +3,12 @@ using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Common.DataTypes.Collections.ScriptableRegistries;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.States.Abstract;
-using GamePlay.Enemies.Mappers.States.Common;
+using GamePlay.Enemy.Entity.States.Abstract;
+using GamePlay.Enemy.Mappers.States.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Mappers.States.Runtime
+namespace GamePlay.Enemy.Mappers.States.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyStateMapperRoutes.ServiceName,

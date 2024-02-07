@@ -1,13 +1,13 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.SceneBootstrappers.Runtime;
-using GamePlay.Enemies.Spawn.Zones.SpawnPoints;
-using GamePlay.Enemies.Spawn.Zones.Trigger;
+using GamePlay.Enemy.Spawn.Zones.SpawnPoints;
+using GamePlay.Enemy.Spawn.Zones.Trigger;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace GamePlay.Enemies.Spawn.Zones.Setup.Bootstrap
+namespace GamePlay.Enemy.Spawn.Zones.Setup.Bootstrap
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(EnemyZoneScope))]

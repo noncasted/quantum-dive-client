@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime
+﻿namespace GamePlay.Enemy.Entity.Components.TargetSearchers.Runtime
 {
     public interface ISearchConfig
     {

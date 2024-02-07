@@ -1,9 +1,9 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Views.Animators.Logs;
+using GamePlay.Enemy.Entity.Views.Animators.Logs;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Animators.Runtime
+namespace GamePlay.Enemy.Entity.Views.Animators.Runtime
 {
     public class EnemyAnimatorFactory : MonoBehaviour, IComponentFactory
     {

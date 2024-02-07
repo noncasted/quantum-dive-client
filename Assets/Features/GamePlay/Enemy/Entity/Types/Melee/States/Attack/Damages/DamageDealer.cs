@@ -1,9 +1,9 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using GamePlay.Common.Damages;
-using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Config;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Damages
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages
 {
     public class DamageDealer : IEntitySwitchListener
     {

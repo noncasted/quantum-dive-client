@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
-using GamePlay.Enemies.Entity.Types.Range.Common;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
+using GamePlay.Enemy.Entity.Types.Range.Common;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.StateSelector.Common
+namespace GamePlay.Enemy.Entity.Types.Range.States.StateSelector.Common
 {
     public class RangeStateSelectorRoutes
     {

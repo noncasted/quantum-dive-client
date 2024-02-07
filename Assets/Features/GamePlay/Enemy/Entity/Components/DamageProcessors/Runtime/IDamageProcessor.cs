@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Damages;
 
-namespace GamePlay.Enemies.Entity.Components.DamageProcessors.Runtime
+namespace GamePlay.Enemy.Entity.Components.DamageProcessors.Runtime
 {
     public interface IDamageProcessor
     {

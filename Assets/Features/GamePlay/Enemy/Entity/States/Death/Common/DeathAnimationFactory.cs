@@ -2,7 +2,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Death.Common
+namespace GamePlay.Enemy.Entity.States.Death.Common
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyDeathRoutes.AnimationName,

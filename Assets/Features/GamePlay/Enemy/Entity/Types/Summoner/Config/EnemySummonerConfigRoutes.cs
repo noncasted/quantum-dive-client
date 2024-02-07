@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Types.Summoner.Common;
+﻿using GamePlay.Enemy.Entity.Types.Summoner.Common;
 
-namespace GamePlay.Enemies.Entity.Types.Summoner.Config
+namespace GamePlay.Enemy.Entity.Types.Summoner.Config
 {
     public class EnemySummonerConfigRoutes
     {

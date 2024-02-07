@@ -2,7 +2,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Idle.Common
+namespace GamePlay.Enemy.Entity.States.Idle.Common
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyIdleRoutes.AnimationName,

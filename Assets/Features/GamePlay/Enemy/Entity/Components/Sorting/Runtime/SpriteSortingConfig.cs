@@ -1,9 +1,9 @@
-﻿using GamePlay.Enemies.Entity.Components.Sorting.Common;
+﻿using GamePlay.Enemy.Entity.Components.Sorting.Common;
 using NaughtyAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Components.Sorting.Runtime
+namespace GamePlay.Enemy.Entity.Components.Sorting.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemySpriteSortingRoutes.ConfigName,

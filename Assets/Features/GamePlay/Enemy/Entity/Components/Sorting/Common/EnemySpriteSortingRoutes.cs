@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Components.Common;
-using GamePlay.Enemies.Entity.Setup.Paths;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
+using GamePlay.Enemy.Entity.Components.Common;
 
-namespace GamePlay.Enemies.Entity.Components.Sorting.Common
+namespace GamePlay.Enemy.Entity.Components.Sorting.Common
 {
     public class EnemySpriteSortingRoutes
     {

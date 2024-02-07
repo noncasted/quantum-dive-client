@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemies.Entity.Views.Animators.Common;
+﻿using GamePlay.Enemy.Entity.Views.Animators.Common;
 using Internal.Services.Loggers.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Animators.Logs
+namespace GamePlay.Enemy.Entity.Views.Animators.Logs
 {
     [CreateAssetMenu(fileName = AnimatorRoutes.LogsName,
         menuName = AnimatorRoutes.LogsPath)]

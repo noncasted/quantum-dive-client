@@ -3,7 +3,7 @@ using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.Network.Common;
 using GamePlay.Player.Entity.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.Network.Properties.Runtime;
-using GamePlay.Player.Entity.Views.Transforms.Remote.Runtime;
+using GamePlay.Player.Entity.Network.TransformSync.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

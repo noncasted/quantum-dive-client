@@ -1,7 +1,7 @@
-﻿using GamePlay.Player.Entity.Network.Common;
-using GamePlay.Player.Entity.Setup.Path;
+﻿using GamePlay.Player.Entity.Common.Routes;
+using GamePlay.Player.Entity.Network.Common;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Remote.Common
+namespace GamePlay.Player.Entity.Network.TransformSync.Common
 {
     public class TransformSyncRoutes
     {

@@ -1,6 +1,6 @@
 ﻿using Common.Architecture.Scopes.Runtime.Callbacks;
 
-namespace GamePlay.Enemies.Spawn.Processor.Runtime
+namespace GamePlay.Enemy.Spawn.Processor.Runtime
 {
     public class WaveProcessor : IScopeSwitchListener
     {

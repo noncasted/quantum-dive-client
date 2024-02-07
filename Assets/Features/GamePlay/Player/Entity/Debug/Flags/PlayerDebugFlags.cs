@@ -2,8 +2,8 @@
 using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Logs;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Logs;
-using GamePlay.Player.Entity.Views.Transforms.Local.Runtime;
-using GamePlay.Player.Entity.Views.Transforms.Remote.Logs;
+using GamePlay.Player.Entity.Network.TransformSync.Logs;
+using GamePlay.Player.Entity.Views.Transforms.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Debug.Flags

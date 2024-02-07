@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.Network.Properties.Common;
+using GamePlay.Enemy.Entity.Network.Properties.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Network.Properties.Runtime
+namespace GamePlay.Enemy.Entity.Network.Properties.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = NetworkPropertiesRoutes.ServiceName,

@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Collections.ReadOnlyDictionaries.Editor;
-using GamePlay.Enemies.Entity.Views.RigidBodies.Logs;
+using GamePlay.Enemy.Entity.Views.RigidBodies.Logs;
 using UnityEditor;
 
-namespace GamePlay.Enemies.Entity.Views.RigidBodies.Editor
+namespace GamePlay.Enemy.Entity.Views.RigidBodies.Editor
 {
     [ReadOnlyDictionaryPriority]
     [CustomPropertyDrawer(typeof(RigidBodyLogs))]

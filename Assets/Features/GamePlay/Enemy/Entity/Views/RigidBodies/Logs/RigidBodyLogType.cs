@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Views.RigidBodies.Logs
+﻿namespace GamePlay.Enemy.Entity.Views.RigidBodies.Logs
 {
     public enum RigidBodyLogType
     {

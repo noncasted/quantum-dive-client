@@ -4,11 +4,11 @@ using Common.Architecture.Scopes.Runtime.Utils;
 using Common.DataTypes.Collections.ScriptableRegistries;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Common;
-using GamePlay.Player.Registries.States.Common;
+using GamePlay.Player.Mappers.States.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Player.Registries.States.Runtime
+namespace GamePlay.Player.Mappers.States.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = PlayerStateMapperRoutes.ServiceName,

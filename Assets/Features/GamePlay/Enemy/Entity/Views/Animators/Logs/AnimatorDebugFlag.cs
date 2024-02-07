@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Animators.Logs
+namespace GamePlay.Enemy.Entity.Views.Animators.Logs
 {
     [Serializable]
     public class AnimatorDebugFlag

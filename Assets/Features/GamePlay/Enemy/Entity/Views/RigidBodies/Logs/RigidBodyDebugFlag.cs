@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.RigidBodies.Logs
+namespace GamePlay.Enemy.Entity.Views.RigidBodies.Logs
 {
     [Serializable]
     public class RigidBodyDebugFlag

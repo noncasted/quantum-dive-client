@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Collections.ReadOnlyDictionaries.Editor;
-using GamePlay.Enemies.Entity.Views.Transforms.Remote.Logs;
+using GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs;
 using UnityEditor;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Remote.Editor
+namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Editor
 {
     [ReadOnlyDictionaryPriority]
     [CustomPropertyDrawer(typeof(TransformSyncLogs))]

@@ -4,11 +4,11 @@ using Common.Architecture.Scopes.Runtime.Utils;
 using Common.DataTypes.Collections.ScriptableRegistries;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
-using GamePlay.Player.Registries.Equipment.Common;
+using GamePlay.Player.Mappers.Equipment.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Player.Registries.Equipment.Runtime
+namespace GamePlay.Player.Mappers.Equipment.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = PlayerEquipmentMapperRoutes.ServiceName,

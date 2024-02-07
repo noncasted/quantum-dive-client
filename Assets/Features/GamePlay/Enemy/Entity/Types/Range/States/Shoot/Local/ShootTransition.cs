@@ -1,9 +1,9 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Enemies.Entity.Components.StateMachines.Local.Runtime;
-using GamePlay.Enemies.Entity.Components.TargetSearchers.Runtime;
-using GamePlay.Enemies.Entity.Types.Range.States.Shoot.Common;
+using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Enemy.Entity.Components.TargetSearchers.Runtime;
+using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.Shoot.Local
+namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 {
     public class ShootTransition : IShootTransition
     {

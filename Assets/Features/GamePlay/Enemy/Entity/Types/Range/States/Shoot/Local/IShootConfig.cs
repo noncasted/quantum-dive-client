@@ -1,7 +1,7 @@
 ﻿using GamePlay.Projectiles.Factory;
 using GamePlay.Projectiles.Registry.Definition;
 
-namespace GamePlay.Enemies.Entity.Types.Range.States.Shoot.Local
+namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 {
     public interface IShootConfig
     {

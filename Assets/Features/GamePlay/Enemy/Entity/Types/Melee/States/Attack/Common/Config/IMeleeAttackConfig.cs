@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Config
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config
 {
     public interface IMeleeAttackConfig
     {

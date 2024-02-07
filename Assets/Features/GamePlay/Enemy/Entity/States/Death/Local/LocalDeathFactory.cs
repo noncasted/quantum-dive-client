@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.States.Death.Common;
+using GamePlay.Enemy.Entity.States.Death.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Death.Local
+namespace GamePlay.Enemy.Entity.States.Death.Local
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyDeathRoutes.LocalName,

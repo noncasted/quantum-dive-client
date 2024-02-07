@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.States.Common;
-using GamePlay.Enemies.Entity.States.Damaged.Local;
-using GamePlay.Enemies.Entity.States.Death.Local;
-using GamePlay.Enemies.Entity.States.Following.Local;
-using GamePlay.Enemies.Entity.States.Idle.Local;
-using GamePlay.Enemies.Entity.States.Respawn.Local;
-using GamePlay.Enemies.Entity.States.SubStates.Pushes.Runtime;
+using GamePlay.Enemy.Entity.States.Common;
+using GamePlay.Enemy.Entity.States.Damaged.Local;
+using GamePlay.Enemy.Entity.States.Death.Local;
+using GamePlay.Enemy.Entity.States.Following.Local;
+using GamePlay.Enemy.Entity.States.Idle.Local;
+using GamePlay.Enemy.Entity.States.Respawn.Local;
+using GamePlay.Enemy.Entity.States.SubStates.Pushes.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Compose
+namespace GamePlay.Enemy.Entity.States.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

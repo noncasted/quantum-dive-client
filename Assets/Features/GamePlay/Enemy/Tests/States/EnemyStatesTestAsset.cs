@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using Common.Architecture.Scopes.Runtime.Services;
 using GamePlay.Common.Scope;
 using GamePlay.Ecs.Runtime.Bootstrap;
-using GamePlay.Enemies.List.Runtime;
-using GamePlay.Enemies.Mappers.Definitions.Runtime;
-using GamePlay.Enemies.Mappers.States.Runtime;
-using GamePlay.Enemies.Spawn.Factory.Runtime;
-using GamePlay.Enemies.Spawn.Pool.Runtime;
-using GamePlay.Enemies.Tests.Common;
-using GamePlay.Enemies.Updater.Runtime;
+using GamePlay.Enemy.List.Runtime;
+using GamePlay.Enemy.Mappers.Definitions.Runtime;
+using GamePlay.Enemy.Mappers.States.Runtime;
+using GamePlay.Enemy.Spawn.Factory.Runtime;
+using GamePlay.Enemy.Spawn.Pool.Runtime;
+using GamePlay.Enemy.Tests.Common;
+using GamePlay.Enemy.Updater.Runtime;
 using GamePlay.Hitboxes.Runtime;
 using GamePlay.Network.Objects.Destroyer.Runtime;
 using GamePlay.Network.Objects.Factories.Registry;
@@ -27,7 +27,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using VContainer.Unity;
 
-namespace GamePlay.Enemies.Tests.States
+namespace GamePlay.Enemy.Tests.States
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = "StatesTestSceneAsset", menuName = EnemyTestsAssetsPaths.Root + "StatesScene")]

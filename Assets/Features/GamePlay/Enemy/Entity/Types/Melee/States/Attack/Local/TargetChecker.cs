@@ -1,9 +1,9 @@
-﻿using GamePlay.Enemies.Entity.Types.Melee.States.Attack.Common.Config;
-using GamePlay.Enemies.Entity.Views.Transforms.Local.Runtime;
+﻿using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Targets.Registry.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Local
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
 {
     public class TargetChecker : ITargetChecker
     {

@@ -3,7 +3,7 @@ using Global.Debugs.Drawing.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Hitbox.Common
+namespace GamePlay.Enemy.Entity.Views.Hitbox.Common
 {
     public class GizmosDrawer : IEntitySwitchListener, IGizmosUpdatable
     {

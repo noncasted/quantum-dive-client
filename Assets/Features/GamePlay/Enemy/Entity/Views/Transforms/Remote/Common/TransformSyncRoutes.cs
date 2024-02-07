@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Remote.Common
+namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Common
 {
     public class TransformSyncRoutes
     {

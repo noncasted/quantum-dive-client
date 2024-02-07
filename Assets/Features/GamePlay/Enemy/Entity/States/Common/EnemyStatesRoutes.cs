@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Setup.Paths;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
 
-namespace GamePlay.Enemies.Entity.States.Common
+namespace GamePlay.Enemy.Entity.States.Common
 {
     public class EnemyStatesRoutes
     {

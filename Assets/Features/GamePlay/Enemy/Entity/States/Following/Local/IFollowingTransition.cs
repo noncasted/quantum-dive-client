@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Components.StateSelectors;
+﻿using GamePlay.Enemy.Entity.Components.StateSelectors;
 
-namespace GamePlay.Enemies.Entity.States.Following.Local
+namespace GamePlay.Enemy.Entity.States.Following.Local
 {
     public interface IFollowingTransition : IStateTransition
     {

@@ -1,6 +1,6 @@
-﻿using GamePlay.Enemies.Entity.Components.StateSelectors;
+﻿using GamePlay.Enemy.Entity.Components.StateSelectors;
 
-namespace GamePlay.Enemies.Entity.States.Idle.Local
+namespace GamePlay.Enemy.Entity.States.Idle.Local
 {
     public interface IIdleTransition : IStateTransition
     {

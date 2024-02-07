@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Player.Entity.Views.Transforms.Local.Runtime
+namespace GamePlay.Player.Entity.Views.Transforms.Runtime
 {
     public interface IPlayerPosition
     {

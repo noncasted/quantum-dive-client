@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Sprites.Logs
+namespace GamePlay.Enemy.Entity.Views.Sprites.Logs
 {
     [Serializable]
     public class SpriteDebugFlag

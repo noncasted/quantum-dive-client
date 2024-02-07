@@ -1,7 +1,7 @@
-﻿using GamePlay.Enemies.Entity.Network.Common;
-using GamePlay.Enemies.Entity.Setup.Paths;
+﻿using GamePlay.Enemy.Entity.Common.Routes;
+using GamePlay.Enemy.Entity.Network.Common;
 
-namespace GamePlay.Enemies.Entity.Network.Properties.Common
+namespace GamePlay.Enemy.Entity.Network.Properties.Common
 {
     public class NetworkPropertiesRoutes
     {

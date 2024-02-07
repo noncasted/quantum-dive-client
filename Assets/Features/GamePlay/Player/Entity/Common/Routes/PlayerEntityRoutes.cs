@@ -1,7 +1,6 @@
-﻿using GamePlay.Common.Paths;
-using GamePlay.Player.Common.Routes;
+﻿using GamePlay.Player.Common.Routes;
 
-namespace GamePlay.Player.Entity.Setup.Path
+namespace GamePlay.Player.Entity.Common.Routes
 {
     public class PlayerEntityRoutes
     {

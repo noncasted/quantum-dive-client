@@ -1,12 +1,12 @@
 ﻿using Common.Architecture.Container.Abstract;
 using GamePlay.Common.SceneBootstrappers.Runtime;
-using GamePlay.Enemies.Entity.Definition.Asset;
-using GamePlay.Enemies.Spawn.Factory.Runtime;
+using GamePlay.Enemy.Entity.Definition.Asset;
+using GamePlay.Enemy.Spawn.Factory.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using VContainer;
 
-namespace GamePlay.Enemies.Spawn.Debug
+namespace GamePlay.Enemy.Spawn.Debug
 {
     [DisallowMultipleComponent]
     public class EnemySpawnDebug : SceneComponentRegister

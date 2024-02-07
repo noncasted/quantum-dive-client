@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemies.Entity.Components.StateSelectors
+﻿namespace GamePlay.Enemy.Entity.Components.StateSelectors
 {
     public interface IStateSelector
     {

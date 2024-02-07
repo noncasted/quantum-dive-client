@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Damaged.Vfx
+namespace GamePlay.Enemy.Entity.States.Damaged.Vfx
 {
     [DisallowMultipleComponent]
     public class DamagedVfx : MonoBehaviour, IDamagedVfx

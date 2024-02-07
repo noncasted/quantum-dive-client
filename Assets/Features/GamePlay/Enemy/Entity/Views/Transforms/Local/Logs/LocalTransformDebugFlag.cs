@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.Views.Transforms.Local.Logs
+namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Logs
 {
     [Serializable]
     public class LocalTransformDebugFlag

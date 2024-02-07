@@ -1,6 +1,6 @@
 ﻿using GamePlay.Targets.Registry.Runtime;
 
-namespace GamePlay.Enemies.Entity.Types.Melee.States.Attack.Local
+namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
 {
     public interface ITargetChecker
     {

@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemies.Entity.States.Respawn.Common;
+using GamePlay.Enemy.Entity.States.Respawn.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Entity.States.Respawn.Local
+namespace GamePlay.Enemy.Entity.States.Respawn.Local
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EnemyRespawnRoutes.LocalName,

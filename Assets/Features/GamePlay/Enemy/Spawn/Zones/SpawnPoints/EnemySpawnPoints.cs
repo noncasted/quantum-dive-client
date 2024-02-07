@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace GamePlay.Enemies.Spawn.Zones.SpawnPoints
+namespace GamePlay.Enemy.Spawn.Zones.SpawnPoints
 {
     public class EnemySpawnPoints : MonoBehaviour, IEnemySpawnPoints
     {
