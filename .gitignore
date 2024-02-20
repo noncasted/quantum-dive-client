@@ -73,10 +73,5 @@ crashlytics-build.properties
 
 *.DotSettings
 
-/[Aa]ssets/Plugins/ALINE/
-/[Aa]ssets/Plugins/AstarPathfindingProject/
-/[Aa]ssets/Plugins/BuildReport/
-/[Aa]ssets/Plugins/ForceFour/
-/[Aa]ssets/Plugins/Nova/
-/[Aa]ssets/Plugins/Sirenix/
-/[Aa]ssets/Plugins/Shapes/
+/[Aa]ssets/Plugins/Paid/
+/[Aa]ssets/Plugins/Artwork/
