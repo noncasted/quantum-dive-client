@@ -12,14 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255a58f135094a30ac74bbbb0179a725, type: 3}
   m_Name: PlayerConfig_Remote
   m_EditorClassIdentifier: 
-  _spriteSorting: {fileID: 11400000, guid: 6e2eae41be748e945bc273ea2a6383de, type: 2}
-  _equipmentSlotsStorage: {fileID: 11400000, guid: f5b45f0ce3755924ba99239d66f95bcc, type: 2}
-  _equipper: {fileID: 11400000, guid: de61473a6e8261f49a6d3d1a7906de06, type: 2}
-  _networkProperties: {fileID: 11400000, guid: 4eb54ad9bbc070141a952bfb4248308b, type: 2}
-  _rotationSync: {fileID: 11400000, guid: 6f887b7ce6c52b3468c1b0e60da73380, type: 2}
-  _remoteStateMachine: {fileID: 11400000, guid: 1faedbe54ee26654eb2f60c61114a79d, type: 2}
-  _remoteIdle: {fileID: 11400000, guid: e02de05437649a145ad515a7c2bee4e2, type: 2}
-  _remoteRun: {fileID: 11400000, guid: 9ab694a72b13edb428957658def0c344, type: 2}
-  _remoteRespawn: {fileID: 11400000, guid: e76ac109ba03abb4389d2937fc33dbe0, type: 2}
-  _remoteDamaged: {fileID: 11400000, guid: 1ba245b3258e8294ea917fe894bc2b17, type: 2}
-  _remoteRoll: {fileID: 11400000, guid: 78ca266ad160a8e459e70d8e2c8a027c, type: 2}
+  _components: {fileID: 11400000, guid: 1c1b439ffe5c9b4408f3b5e59e20730a, type: 2}
+  _equipment: {fileID: 11400000, guid: b17e1687573b3c545bc4ac4e3041d035, type: 2}
+  _states: {fileID: 11400000, guid: a714b9d98522477479e2367dc37d6f52, type: 2}
+  _network: {fileID: 11400000, guid: 0eab3596391dab6409ca911a2fb6c150, type: 2}
+  _prefab: {fileID: 7767275915283392358, guid: 4d11e28bc2b4c1647a3add08ecc1c200, type: 3}

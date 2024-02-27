@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Player.Entity.Views.RigidBodies.Runtime;
+using GamePlay.Player.Entity.Views.Physics.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
 
@@ -10,13 +10,13 @@ namespace GamePlay.Player.Entity.States.SubStates.Pushes.Runtime
     {
         public PushHandler(
             IUpdater updater,
-            IPlayerRigidBody rigidBody,
+            IPlayerPhysics physics,
             Vector2 direction,
             PushParams parameters,
             CancellationToken cancellation)
         {
             _updater = updater;
-            _rigidBody = rigidBody;
+            _physics = physics;
             _direction = direction;
             _params = parameters;
             _cancellation = cancellation;
@@ -27,7 +27,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Pushes.Runtime
         }
         
         private readonly IUpdater _updater;
-        private readonly IPlayerRigidBody _rigidBody;
+        private readonly IPlayerPhysics _physics;
 
         private readonly Vector2 _direction;
         private readonly PushParams _params;
@@ -61,7 +61,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Pushes.Runtime
             var difference = evaluation - _previousEvaluation;
             var distance = difference * _params.Distance;
             
-            _rigidBody.Move(_direction, distance);
+            _physics.Move(_direction, distance);
 
             _time += delta;
             _previousEvaluation = evaluation;

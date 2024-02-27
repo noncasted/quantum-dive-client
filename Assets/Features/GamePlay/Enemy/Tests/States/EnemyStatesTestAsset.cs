@@ -89,9 +89,11 @@ namespace GamePlay.Enemy.Tests.States
 
         [SerializeField] private GamePlayScope _scopePrefab;
         [SerializeField] private SceneData _servicesScene;
+        [SerializeField] private bool _isMock;
 
         public LifetimeScope ScopePrefab => _scopePrefab;
         public ISceneAsset ServicesScene => _servicesScene;
+        public bool IsMock => _isMock;
 
         public IReadOnlyList<IServiceFactory> Services => new IServiceFactory[]
         {

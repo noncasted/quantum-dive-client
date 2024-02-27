@@ -4,13 +4,13 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Logs
 {
     public class LocalRotationLogger
     {
-        public LocalRotationLogger(ILogger logger, LocalRotationLogSettings settings)
+        public LocalRotationLogger(IGlobalLogger logger, LocalRotationLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly LocalRotationLogSettings _settings;
 
         public void OnRotationUsed(float angle)

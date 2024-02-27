@@ -1,4 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
+﻿using System.Collections.Generic;
+using Common.Architecture.Container.Abstract;
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
 using Common.DataTypes.Collections.ScriptableRegistries;
@@ -19,7 +20,7 @@ namespace GamePlay.Player.Services.Mappers.States.Runtime
         {
             services.Register<PlayerStateMapper>()
                 .As<IPlayerStateMapper>()
-                .WithParameter(Objects);
+                .WithParameter<IReadOnlyList<PlayerStateDefinition>>(Objects);
         }
     }
 }

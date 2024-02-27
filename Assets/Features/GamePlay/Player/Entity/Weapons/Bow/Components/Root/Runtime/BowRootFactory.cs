@@ -10,6 +10,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Root.Runtime
     [CreateAssetMenu(fileName = BowRootRoutes.LocalName, menuName = BowRootRoutes.LocalPath)]
     public class BowRootFactory : ScriptableObject, IComponentFactory
     {
+        
+        
         public void Create(IServiceCollection services, IEntityUtils utils)
         {
             services.Register<BowRoot>()

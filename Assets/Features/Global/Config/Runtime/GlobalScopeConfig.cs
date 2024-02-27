@@ -6,6 +6,7 @@ using Global.Audio.Compose;
 using Global.Backend.Runtime;
 using Global.Cameras.Compose;
 using Global.Configs.Compose;
+using Global.Debugs.Drawing.Runtime;
 using Global.GameLoops.Runtime;
 using Global.Inputs.Compose;
 using Global.Network.Compose;
@@ -35,12 +36,15 @@ namespace Global.Config.Runtime
         [SerializeField] private DefaultCallbacksServiceFactory _defaultCallbacks;
         [SerializeField] private ScopeDestroyHandlerFactory _scopeDestroyHandler;
         [SerializeField] private ConfigsCompose _configs;
-        
+        [SerializeField] private DrawingFactory _drawing;
+
         [SerializeField] private GlobalScope _scope;
         [SerializeField] private SceneData _servicesScene;
-
+        [SerializeField] private bool _isMock;
+        
         public LifetimeScope ScopePrefab => _scope;
         public ISceneAsset ServicesScene => _servicesScene;
+        public bool IsMock => _isMock;
         public IReadOnlyList<IServiceFactory> Services => GetFactories();
 
         public IReadOnlyList<IServicesCompose> Composes => new IServicesCompose[]
@@ -54,18 +58,14 @@ namespace Global.Config.Runtime
             _configs
         };
 
-        private IServiceFactory[] GetFactories()
+        private IServiceFactory[] GetFactories() => new IServiceFactory[]
         {
-            var services = new List<IServiceFactory>
-            {
-                _publisherSdk,
-                _gameLoop,
-                _backend,
-                _defaultCallbacks,
-                _scopeDestroyHandler
-            };
-
-            return services.ToArray();
-        }
+            _publisherSdk,
+            _gameLoop,
+            _backend,
+            _defaultCallbacks,
+            _scopeDestroyHandler,
+            _drawing
+        };
     }
 }

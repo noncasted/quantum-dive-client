@@ -13,12 +13,9 @@ MonoBehaviour:
   m_Name: LocalService_PlayerFactory
   m_EditorClassIdentifier: 
   _logSettings: {fileID: 11400000, guid: a4c7fb374fcee024d8cdfb2cd08a89d9, type: 2}
-  _prefabs:
-    _local: {fileID: 3834022361475402687, guid: 4aa2dce30cfdde641a3ca89e71aef353, type: 3}
-    _remote: {fileID: 3834022361475402687, guid: 4d11e28bc2b4c1647a3add08ecc1c200, type: 3}
   _equipment:
     _equipment:
-    - {fileID: 11400000, guid: 23b794dbcfa98394ebe1bbe1748f61bc, type: 2}
-    - {fileID: 11400000, guid: 88e60c62abd21204697c43b7dcf09250, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
   _localConfig: {fileID: 11400000, guid: 630db9d45e408084fb0188fe67b1dd24, type: 2}
-  _remotePlayerConfig: {fileID: 11400000, guid: 5f4ad740dbff2b44795a123b29213108, type: 2}
+  _remoteConfig: {fileID: 11400000, guid: 5f4ad740dbff2b44795a123b29213108, type: 2}

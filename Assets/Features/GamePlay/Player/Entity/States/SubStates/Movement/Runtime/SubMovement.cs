@@ -5,7 +5,7 @@ using GamePlay.Player.Entity.States.Idles.Common;
 using GamePlay.Player.Entity.States.Runs.Common;
 using GamePlay.Player.Entity.States.Runs.Local;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.RigidBodies.Runtime;
+using GamePlay.Player.Entity.Views.Physics.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime
     public class SubMovement : ISubMovement, IPreFixedUpdatable
     {
         public SubMovement(
-            IPlayerRigidBody playerRigidBody,
+            IPlayerPhysics playerPhysics,
             IUpdater updater,
             IPlayerAnimator animator,
             IRunInput input,
@@ -22,7 +22,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime
             WalkAnimation walkAnimation,
             IdleAnimation idleAnimation)
         {
-            _playerRigidBody = playerRigidBody;
+            _playerPhysics = playerPhysics;
             _updater = updater;
 
             _animator = animator;
@@ -34,7 +34,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime
         }
 
         private readonly IPlayerAnimator _animator;
-        private readonly IPlayerRigidBody _playerRigidBody;
+        private readonly IPlayerPhysics _playerPhysics;
         private readonly IRunInput _input;
         private readonly IUpdater _updater;
         
@@ -101,7 +101,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime
             }
 
             _state = MovementState.Idle;
-            _playerRigidBody.ResetVelocity();
+            _playerPhysics.ResetVelocity();
         }
 
         private void Run(float delta)
@@ -125,7 +125,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime
             }
 
             _state = MovementState.Run;
-            _playerRigidBody.Move(_input.Direction, _speed * delta);
+            _playerPhysics.Move(_input.Direction, _speed * delta);
         }
     }
 }

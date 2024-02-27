@@ -18,6 +18,7 @@ MonoBehaviour:
   _reference:
     m_AssetGUID: fa9902c71b5f7cd4f98e1a5c19e15def
     m_SubObjectName: 
+    m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
 --- !u!114 &11400000
@@ -41,8 +42,9 @@ MonoBehaviour:
   _gameLoop: {fileID: 11400000, guid: 960cf754496699e448303f2d40ba452d, type: 2}
   _publisherSdk: {fileID: 11400000, guid: a7a6608e698f54249907145b756aff63, type: 2}
   _backend: {fileID: 11400000, guid: e78942d14aeb14b4e93daa5d02828353, type: 2}
-  _settings: {fileID: 11400000, guid: f619e9043e5db8e4485bd99397fc6c79, type: 2}
   _defaultCallbacks: {fileID: 11400000, guid: 52a269503aa4bb54d9967845c5229de3, type: 2}
   _scopeDestroyHandler: {fileID: 11400000, guid: 02e2e7d47289c7246bfdc5d97a5e0b5a, type: 2}
+  _configs: {fileID: 11400000, guid: ce394c6a43a77d043908cdf1713ae8f4, type: 2}
+  _drawing: {fileID: 11400000, guid: f47b17c3a8a440d4d86e9c5e992e6ca2, type: 2}
   _scope: {fileID: 4425232438733536047, guid: 6dff990b64ff40b4980ef90789bf70a4, type: 3}
   _servicesScene: {fileID: -101793589594642012}

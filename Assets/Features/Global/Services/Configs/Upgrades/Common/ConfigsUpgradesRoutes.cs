@@ -5,7 +5,7 @@ namespace Global.Configs.Upgrades.Common
 {
     public class ConfigsUpgradesRoutes
     {
-        public const string ServicePath = ConfigsRoutes.Root + "Registry";
-        public const string ServiceName = GamePlayPrefixes.Service + "ConfigsRegistry";
+        public const string ServicePath = ConfigsRoutes.Root + "Upgrades";
+        public const string ServiceName = GamePlayPrefixes.Service + "Upgrades";
     }
 }

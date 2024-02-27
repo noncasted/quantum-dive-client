@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Player.Entity.Views.RigidBodies.Runtime;
+using GamePlay.Player.Entity.Views.Physics.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
 
@@ -8,14 +8,14 @@ namespace GamePlay.Player.Entity.States.SubStates.Pushes.Runtime
 {
     public class SubPush : ISubPush
     {
-        public SubPush(IUpdater updater, IPlayerRigidBody rigidBody)
+        public SubPush(IUpdater updater, IPlayerPhysics physics)
         {
             _updater = updater;
-            _rigidBody = rigidBody;
+            _physics = physics;
         }
         
         private readonly IUpdater _updater;
-        private readonly IPlayerRigidBody _rigidBody;
+        private readonly IPlayerPhysics _physics;
         
         public async UniTask PushAsync(
             Vector2 direction,
@@ -24,7 +24,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Pushes.Runtime
         {
             var handler = new PushHandler(
                 _updater,
-                _rigidBody,
+                _physics,
                 direction,
                 parameters,
                 cancellation);

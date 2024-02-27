@@ -4,13 +4,13 @@ namespace Global.GameLoops.Logs
 {
     public class GameLoopLogger
     {
-        public GameLoopLogger(ILogger logger, GameLoopLogSettings settings)
+        public GameLoopLogger(IGlobalLogger logger, GameLoopLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly GameLoopLogSettings _settings;
 
         public void OnBegin()

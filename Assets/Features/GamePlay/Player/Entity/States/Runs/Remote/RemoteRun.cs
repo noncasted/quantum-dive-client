@@ -4,7 +4,6 @@ using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Runs.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using Ragon.Protocol;
 
@@ -16,7 +15,6 @@ namespace GamePlay.Player.Entity.States.Runs.Remote
             IUpdater updater,
             IRemoteStateMachine stateMachine,
             IPlayerAnimator animator,
-            IPlayerSpriteFlip spriteFlip,
             IRunInputSync inputSync,
             RunAnimation animation,
             RunDefinition definition)
@@ -24,7 +22,6 @@ namespace GamePlay.Player.Entity.States.Runs.Remote
             _updater = updater;
             _stateMachine = stateMachine;
             _animator = animator;
-            _spriteFlip = spriteFlip;
             _inputSync = inputSync;
             _animation = animation;
             _definition = definition;
@@ -33,7 +30,6 @@ namespace GamePlay.Player.Entity.States.Runs.Remote
         private readonly IUpdater _updater;
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IPlayerAnimator _animator;
-        private readonly IPlayerSpriteFlip _spriteFlip;
         private readonly IRunInputSync _inputSync;
         private readonly RunAnimation _animation;
         private readonly RunDefinition _definition;
@@ -57,7 +53,6 @@ namespace GamePlay.Player.Entity.States.Runs.Remote
         public void OnUpdate(float delta)
         {
             _animation.SetOrientation(_inputSync.Orientation);
-            _spriteFlip.FlipAlong(_inputSync.Angle);
         }
     }
 }

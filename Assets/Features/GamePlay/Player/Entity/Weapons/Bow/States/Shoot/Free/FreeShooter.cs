@@ -9,7 +9,6 @@ using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Runtime;
 using GamePlay.Player.Entity.States.SubStates.Movement.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Configuration;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
@@ -37,7 +36,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
             IProjectileStarterConfig projectileConfig,
             IBowGameObject gameObject,
             IRotation playerRotation,
-            IPlayerSpriteFlip playerSpriteFlip,
             ISubMovement subMovement,
             ILocalStateMachine stateMachine,
             IBowShootInputReceiver inputReceiver,
@@ -54,7 +52,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
             _projectileConfig = projectileConfig;
             _gameObject = gameObject;
             _playerRotation = playerRotation;
-            _playerSpriteFlip = playerSpriteFlip;
             _subMovement = subMovement;
             _stateMachine = stateMachine;
             _inputReceiver = inputReceiver;
@@ -72,7 +69,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
         private readonly IProjectileStarterConfig _projectileConfig;
         private readonly IBowGameObject _gameObject;
         private readonly IRotation _playerRotation;
-        private readonly IPlayerSpriteFlip _playerSpriteFlip;
         private readonly ISubMovement _subMovement;
         private readonly ILocalStateMachine _stateMachine;
         private readonly IBowShootInputReceiver _inputReceiver;
@@ -116,14 +112,12 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
         }
 
         public void OnUpdate(float delta)
-
         {
             if (_isProcessing == true)
             {
                 var orientation = _playerRotation.Orientation;
 
                 _subMovement.SetAnimationRotation(orientation);
-                _playerSpriteFlip.FlipAlong(_playerRotation.Angle);
             }
 
             if (IsTransitionFromFloatingAvailable() == false

@@ -13,5 +13,8 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Common
         
         public const string RemoteName = PlayerEntityPrefixes.Component + Name + "_Remote";
         public const string RemotePath = Root + "Remote";
+        
+        public const string FactoryName = PlayerEntityPrefixes.Component + Name + "_Factory";
+        public const string FactoryPath = Root + "Factory";
     }
 }

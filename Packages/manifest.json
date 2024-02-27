@@ -6,13 +6,21 @@
       "scopes": [
         "com.arongranberg.astar"
       ]
+    },
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com/",
+      "scopes": [
+        "com.needle.compilation-visualizer"
+      ]
     }
   ],
   "dependencies": {
+    "com.needle.compilation-visualizer": "1.8.4",
     "com.unity.2d.animation": "10.1.0",
     "com.unity.2d.spriteshape": "10.0.2",
     "com.unity.2d.tilemap.extras": "4.0.2",
-    "com.unity.addressables": "2.0.6",
+    "com.unity.addressables": "2.0.8",
     "com.unity.ai.navigation": "2.0.0",
     "com.unity.burst": "1.8.12",
     "com.unity.cinemachine": "2.9.7",
@@ -29,7 +37,7 @@
     "com.unity.postprocessing": "3.4.0",
     "com.unity.recorder": "5.1.0-pre.1",
     "com.unity.render-pipelines.universal": "17.0.2",
-    "com.unity.scriptablebuildpipeline": "2.1.0",
+    "com.unity.scriptablebuildpipeline": "2.1.2",
     "com.unity.searcher": "4.9.2",
     "com.unity.splines": "2.5.2",
     "com.unity.terrain-tools": "5.1.1",

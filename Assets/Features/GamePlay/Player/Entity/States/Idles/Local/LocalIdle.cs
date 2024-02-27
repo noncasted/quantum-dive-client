@@ -5,7 +5,6 @@ using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Idles.Common;
 using GamePlay.Player.Entity.States.Idles.Logs;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.States.Idles.Local
@@ -15,7 +14,6 @@ namespace GamePlay.Player.Entity.States.Idles.Local
         public LocalIdle(
             ILocalStateMachine stateMachine,
             IPlayerAnimator animator,
-            IPlayerSpriteFlip sprite,
             IRotation rotation,
             IUpdater updater,
             IdleDefinition definition,
@@ -24,7 +22,6 @@ namespace GamePlay.Player.Entity.States.Idles.Local
         {
             _stateMachine = stateMachine;
             _animator = animator;
-            _sprite = sprite;
             _rotation = rotation;
             _updater = updater;
             Definition = definition;
@@ -37,7 +34,6 @@ namespace GamePlay.Player.Entity.States.Idles.Local
         private readonly IUpdater _updater;
 
         private readonly IPlayerAnimator _animator;
-        private readonly IPlayerSpriteFlip _sprite;
 
         private readonly IdleAnimation _animation;
         private readonly IdleLogger _logger;
@@ -63,7 +59,6 @@ namespace GamePlay.Player.Entity.States.Idles.Local
         public void OnUpdate(float delta)
         {
             _animation.SetOrientation(_rotation.Orientation);
-            _sprite.FlipAlong(_rotation.Angle);
         }
     }
 }

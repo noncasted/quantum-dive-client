@@ -8,7 +8,6 @@ using GamePlay.Player.Entity.States.Respawns.Common;
 using GamePlay.Player.Entity.States.Respawns.Logs;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Views.Hitboxes.Local;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 
 namespace GamePlay.Player.Entity.States.Respawns.Local
 {
@@ -17,7 +16,6 @@ namespace GamePlay.Player.Entity.States.Respawns.Local
         public LocalRespawn(
             ILocalStateMachine stateMachine,
             IPlayerAnimator playerAnimator,
-            IPlayerSpriteMaterial playerSpriteMaterial,
             IEquipmentLocker locker,
             IHitbox hitbox,
             RespawnAnimation animation,
@@ -26,7 +24,6 @@ namespace GamePlay.Player.Entity.States.Respawns.Local
         {
             _stateMachine = stateMachine;
             _playerAnimator = playerAnimator;
-            _playerSpriteMaterial = playerSpriteMaterial;
             _locker = locker;
             _hitbox = hitbox;
             _animation = animation;
@@ -35,7 +32,6 @@ namespace GamePlay.Player.Entity.States.Respawns.Local
         }
 
         private readonly IPlayerAnimator _playerAnimator;
-        private readonly IPlayerSpriteMaterial _playerSpriteMaterial;
 
         private readonly IEquipmentLocker _locker;
         private readonly IHitbox _hitbox;

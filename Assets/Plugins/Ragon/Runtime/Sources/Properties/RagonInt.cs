@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Eduard Kargin <kargin.eduard@gmail.com>
+ * Copyright 2023-2024 Eduard Kargin <kargin.eduard@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,6 +31,13 @@ namespace Ragon.Client.Unity
       get => _value;
       set
       {
+#if UNITY_EDITOR
+        if (!Entity.HasAuthority)
+        {
+          Debug.LogWarning("You can't assign value for property of entity, because you not owner");
+        }
+#endif
+        
         _value = value;
         
         if (_value < _min)
@@ -47,18 +54,7 @@ namespace Ragon.Client.Unity
     private IntCompressor _compressor;
     
     public RagonInt(
-      bool invokeLocal = true,
-      int priority = 0
-    ) : base(priority, invokeLocal)
-    {
-      _min = -1000;
-      _max = 1000;
-      _compressor = new IntCompressor(_min, _max);
-
-      SetFixedSize(_compressor.RequiredBits);
-    }
-
-    public RagonInt(
+      int value,
       int min = -1000,
       int max = 1000,
       bool invokeLocal = true,

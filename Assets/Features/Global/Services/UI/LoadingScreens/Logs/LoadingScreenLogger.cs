@@ -4,13 +4,13 @@ namespace Global.UI.LoadingScreens.Logs
 {
     public class LoadingScreenLogger
     {
-        public LoadingScreenLogger(ILogger logger, LoadingScreenLogSettings settings)
+        public LoadingScreenLogger(IGlobalLogger logger, LoadingScreenLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly LoadingScreenLogSettings _settings;
 
         public void OnShown()

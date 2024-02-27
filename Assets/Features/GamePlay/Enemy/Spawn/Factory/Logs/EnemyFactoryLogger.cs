@@ -1,16 +1,17 @@
-﻿using UnityEngine;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace GamePlay.Enemy.Spawn.Factory.Logs
 {
     public class EnemyFactoryLogger
     {
-        public EnemyFactoryLogger(ILogger logger, EnemyFactoryLogSettings settings)
+        public EnemyFactoryLogger(IGlobalLogger logger, EnemyFactoryLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly EnemyFactoryLogSettings _settings;
 
         public void OnLocal(string name, Vector2 position)

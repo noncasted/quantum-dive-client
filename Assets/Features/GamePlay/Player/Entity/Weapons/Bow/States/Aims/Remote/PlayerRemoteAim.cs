@@ -6,7 +6,6 @@ using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common.Animations;
@@ -24,7 +23,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Remote
             IRemoteStateMachine stateMachine,
             IRemoteRotation remoteRotation,
             IPlayerAnimator playerAnimator,
-            IPlayerSpriteFlip spriteFlip,
             IBowAnimator bowAnimator,
             IBowGameObject bowGameObject,
             IBowArrow arrow,
@@ -37,7 +35,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Remote
             _stateMachine = stateMachine;
             _remoteRotation = remoteRotation;
             _playerAnimator = playerAnimator;
-            _spriteFlip = spriteFlip;
             _bowAnimator = bowAnimator;
             _bowGameObject = bowGameObject;
             _arrow = arrow;
@@ -51,7 +48,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Remote
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IRemoteRotation _remoteRotation;
         private readonly IPlayerAnimator _playerAnimator;
-        private readonly IPlayerSpriteFlip _spriteFlip;
         private readonly IBowAnimator _bowAnimator;
         private readonly IBowGameObject _bowGameObject;
         private readonly IBowArrow _arrow;
@@ -93,7 +89,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Remote
         public void OnUpdate(float delta)
         {
             _playerAnimation.SetOrientation(_remoteRotation.Orientation);
-            _spriteFlip.FlipAlong(_remoteRotation.Angle);
         }
         
         private async UniTaskVoid Process()

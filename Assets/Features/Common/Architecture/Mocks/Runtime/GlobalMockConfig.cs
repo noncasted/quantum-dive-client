@@ -1,9 +1,11 @@
 ﻿using Global.Config.Runtime;
 using Internal.Scope;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Common.Architecture.Mocks.Runtime
 {
+    [InlineEditor]
     [CreateAssetMenu(fileName = "GlobalMockConfig", menuName = "Common/GlobalMockConfig")]
     public class GlobalMockConfig : ScriptableObject
     {

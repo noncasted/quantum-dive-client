@@ -1,17 +1,17 @@
-﻿using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace GamePlay.Visuals.Cameras.Logs
 {
     public class LevelCameraLogger
     {
-        public LevelCameraLogger(ILogger logger, LevelCameraLogSettings settings)
+        public LevelCameraLogger(IGlobalLogger logger, LevelCameraLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly LevelCameraLogSettings _settings;
 
         public void OnStartFollow(string targetName)

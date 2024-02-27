@@ -1,17 +1,17 @@
-﻿using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Transforms.Logs
 {
     public class TransformLogger
     {
-        public TransformLogger(ILogger logger, TransformLogSettings settings)
+        public TransformLogger(IGlobalLogger logger, TransformLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly TransformLogSettings _settings;
 
         public void OnPositionUsed(Vector2 position)

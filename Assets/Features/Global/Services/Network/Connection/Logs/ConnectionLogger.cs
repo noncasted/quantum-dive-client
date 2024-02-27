@@ -4,13 +4,13 @@ namespace Global.Network.Connection.Logs
 {
     public class ConnectionLogger
     {
-        public ConnectionLogger(ILogger logger, ConnectionLogSettings settings)
+        public ConnectionLogger(IGlobalLogger logger, ConnectionLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly ConnectionLogSettings _settings;
 
         public void OnConnectionAttempt(string address, string protocol, ushort port)

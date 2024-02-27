@@ -8,7 +8,6 @@ using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Common;
@@ -29,7 +28,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
             IBowGameObject gameObject,
             IPlayerAnimator playerAnimator,
             IBowAnimator bowAnimator,
-            IPlayerSpriteFlip spriteFlip,
             IRotation rotation,
             IBowArrow arrow,
             IProjectileStarterConfig config,
@@ -48,7 +46,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
             _gameObject = gameObject;
             _playerAnimator = playerAnimator;
             _bowAnimator = bowAnimator;
-            _spriteFlip = spriteFlip;
             _rotation = rotation;
             _arrow = arrow;
             _config = config;
@@ -66,7 +63,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
 
         private readonly IPlayerAnimator _playerAnimator;
         private readonly IBowAnimator _bowAnimator;
-        private readonly IPlayerSpriteFlip _spriteFlip;
         private readonly IRotation _rotation;
         private readonly IBowArrow _arrow;
         private readonly IProjectileStarterConfig _config;
@@ -113,7 +109,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
         public void OnUpdate(float delta)
         {
             _playerAnimation.SetOrientation(_rotation.Orientation);
-            _spriteFlip.FlipAlong(_rotation.Angle);
         }
 
         private async UniTask Process()

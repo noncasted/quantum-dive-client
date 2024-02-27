@@ -1,12 +1,12 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
+using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Common.Tools.ObjectsPools.Runtime;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
 using Cysharp.Threading.Tasks;
 using GamePlay.Visuals.VfxPools.Common;
 using Internal.Services.Scenes.Data;
-using NaughtyAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ namespace GamePlay.Visuals.VfxPools.Runtime
     [CreateAssetMenu(fileName = VfxPoolRoutes.ServiceName, menuName = VfxPoolRoutes.ServicePath)]
     public class VfxPoolFactory : ScriptableObject, IServiceFactory
     {
-        [SerializeField] [Scene] [Indent] private SceneData _scene;
+        [SerializeField] [NestedScriptableObjectField] [Indent] private SceneData _scene;
 
         public async UniTask Create(IServiceCollection services, IScopeUtils utils)
         {

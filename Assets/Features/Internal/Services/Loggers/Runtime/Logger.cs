@@ -2,7 +2,7 @@
 
 namespace Internal.Services.Loggers.Runtime
 {
-    public class Logger : ILogger
+    public class Logger : IGlobalLogger
     {
         private readonly MessageBuilder _messageBuilder = new();
 

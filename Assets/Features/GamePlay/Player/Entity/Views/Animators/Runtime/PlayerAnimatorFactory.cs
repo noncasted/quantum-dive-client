@@ -9,7 +9,7 @@ namespace GamePlay.Player.Entity.Views.Animators.Runtime
     public class PlayerAnimatorFactory : MonoBehaviour, IComponentFactory
     {
         [SerializeField] private AnimatorLogSettings _logSettings;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Animator _animator;
         
         public void Create(IServiceCollection services, IEntityUtils utils)
         {
@@ -18,7 +18,7 @@ namespace GamePlay.Player.Entity.Views.Animators.Runtime
             
             services.Register<PlayerAnimator>()
                 .As<IPlayerAnimator>()
-                .WithParameter(_spriteRenderer)
+                .WithParameter(_animator)
                 .AsCallbackListener();
         }
     }

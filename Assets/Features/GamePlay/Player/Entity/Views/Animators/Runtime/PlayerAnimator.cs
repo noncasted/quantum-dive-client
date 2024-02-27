@@ -1,8 +1,7 @@
 ﻿using System.Threading;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
+using Common.Tools.UniversalAnimators.Animators.Native;
 using Common.Tools.UniversalAnimators.Animators.Runtime;
 using Common.Tools.UniversalAnimators.Updaters.Runtime;
 using Cysharp.Threading.Tasks;
@@ -11,26 +10,21 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Animators.Runtime
 {
-    public class PlayerAnimator : IPlayerAnimator, IEntitySwitchLifetimeListener
+    public class PlayerAnimator : IPlayerAnimator
     {
         public PlayerAnimator(
             IAnimatorsUpdater animatorsUpdater,
-            SpriteRenderer spriteRenderer,
+            Animator animator,
             AnimatorLogger logger)
         {
-            _animator = new UniversalAnimator(spriteRenderer);
+            _animator = new NativeAnimator(animator);
             _animatorsUpdater = animatorsUpdater;
             _logger = logger;
         }
 
         private readonly IAnimatorsUpdater _animatorsUpdater;
-        private readonly UniversalAnimator _animator;
+        private readonly IUniversalAnimator _animator;
         private readonly AnimatorLogger _logger;
-        
-        public void OnSwitchLifetimeCreated(ILifetime lifetime)
-        {
-            _animatorsUpdater.Register(lifetime, _animator);
-        }
         
         public void PlayLooped(ILoopedAnimation animation)
         {

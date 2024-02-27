@@ -4,13 +4,13 @@ namespace Global.Cameras.Persistent.Logs
 {
     public class GlobalCameraLogger
     {
-        public GlobalCameraLogger(ILogger logger, GlobalCameraLogSettings settings)
+        public GlobalCameraLogger(IGlobalLogger logger, GlobalCameraLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly GlobalCameraLogSettings _settings;
 
         public void OnEnabled()

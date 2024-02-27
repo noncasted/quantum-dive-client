@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Eduard Kargin <kargin.eduard@gmail.com>
+ * Copyright 2023-2024 Eduard Kargin <kargin.eduard@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -166,14 +166,14 @@ namespace Ragon.Client.Unity
     public static void Disconnect()
     {
       var client = _instance._networkClient;
-      client.Disconnect();
+      client?.Disconnect();
     }
 
     public static GameObject Create(GameObject prefab, IRagonPayload spawnPayload = null)
     {
       if (_instance._networkClient.Status != RagonStatus.ROOM)
       {
-        RagonLog.Warn("You are not in room!");
+        RagonLog.Error("You should be in room for this create entities");
         return null;
       }
 

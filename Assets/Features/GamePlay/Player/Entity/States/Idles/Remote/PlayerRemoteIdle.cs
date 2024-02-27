@@ -5,7 +5,6 @@ using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Idles.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using Ragon.Protocol;
 
@@ -15,7 +14,6 @@ namespace GamePlay.Player.Entity.States.Idles.Remote
     {
         public PlayerRemoteIdle(
             IRemoteRotation rotation,
-            IPlayerSpriteFlip spriteFlip,
             IUpdater updater,
             IRemoteStateMachine stateMachine,
             IPlayerAnimator animator,
@@ -23,7 +21,6 @@ namespace GamePlay.Player.Entity.States.Idles.Remote
             IdleDefinition definition)
         {
             _rotation = rotation;
-            _spriteFlip = spriteFlip;
             _updater = updater;
             _stateMachine = stateMachine;
             _animator = animator;
@@ -32,7 +29,6 @@ namespace GamePlay.Player.Entity.States.Idles.Remote
         }
         
         private readonly IRemoteRotation _rotation;
-        private readonly IPlayerSpriteFlip _spriteFlip;
         private readonly IUpdater _updater;
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IPlayerAnimator _animator;
@@ -58,7 +54,6 @@ namespace GamePlay.Player.Entity.States.Idles.Remote
         public void OnUpdate(float delta)
         {
             _animation.SetOrientation(_rotation.Orientation);
-            _spriteFlip.FlipAlong(_rotation.Angle);
         }
     }
 }

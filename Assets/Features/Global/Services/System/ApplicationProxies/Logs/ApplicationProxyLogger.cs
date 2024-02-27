@@ -4,13 +4,13 @@ namespace Global.System.ApplicationProxies.Logs
 {
     public class ApplicationProxyLogger
     {
-        public ApplicationProxyLogger(ILogger logger, ApplicationProxyLogSettings settings)
+        public ApplicationProxyLogger(IGlobalLogger logger, ApplicationProxyLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly ApplicationProxyLogSettings _settings;
 
         public void OnQuit()

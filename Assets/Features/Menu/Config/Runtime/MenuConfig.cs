@@ -50,10 +50,11 @@ namespace Menu.Config.Runtime
 
         [SerializeField] private MenuScope _scope;
         [SerializeField] private SceneData _servicesScene;
-
+        [SerializeField] private bool _isMock;
 
         public LifetimeScope ScopePrefab => _scope;
         public ISceneAsset ServicesScene => _servicesScene;
+        public bool IsMock => _isMock;
 
         public IReadOnlyList<IServiceFactory> Services => new IServiceFactory[]
         {

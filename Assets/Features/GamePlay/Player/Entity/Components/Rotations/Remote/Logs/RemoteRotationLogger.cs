@@ -10,7 +10,7 @@ namespace GamePlay.Player.Entity.Components.Rotations.Remote.Logs
             IPlayerGameObject gameObject,
             IEntityProvider entityProvider,
             RotationSyncDebugFlag debugFlag,
-            ILogger logger,
+            IGlobalLogger logger,
             RemoteRotationLogSettings settings)
         {
             _gameObject = gameObject;
@@ -23,7 +23,7 @@ namespace GamePlay.Player.Entity.Components.Rotations.Remote.Logs
         private readonly IPlayerGameObject _gameObject;
         private readonly IEntityProvider _entityProvider;
         private readonly RotationSyncDebugFlag _debugFlag;
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly RemoteRotationLogSettings _settings;
 
         public void OnSerialize(float value)

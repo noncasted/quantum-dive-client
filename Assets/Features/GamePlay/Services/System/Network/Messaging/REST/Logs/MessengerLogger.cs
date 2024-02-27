@@ -8,13 +8,13 @@ namespace GamePlay.System.Network.Messaging.REST.Logs
 {
     public class MessengerLogger
     {
-        public MessengerLogger(ILogger logger, MessengerLogSettings settings)
+        public MessengerLogger(IGlobalLogger logger, MessengerLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly MessengerLogSettings _settings;
 
         public void OnDirectRequestSent<TRequest>(RagonPlayer player)

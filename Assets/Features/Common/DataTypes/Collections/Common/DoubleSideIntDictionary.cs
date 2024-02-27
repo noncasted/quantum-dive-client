@@ -15,7 +15,7 @@ namespace Common.DataTypes.Collections.Common
             var values = new Dictionary<int, TValue>();
             var keys = new Dictionary<TValue, int>();
             
-            for (var i = 0; i < values.Count; i++)
+            for (var i = 0; i < source.Count; i++)
             {
                 var value = source[i];
 

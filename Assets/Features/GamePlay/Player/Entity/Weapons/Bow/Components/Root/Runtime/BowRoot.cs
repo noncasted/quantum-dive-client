@@ -1,7 +1,7 @@
 ﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Entities.Runtime.Callbacks;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
-using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
+using GamePlay.Player.Entity.Components.Equipment.Slots.Definitions.Abstract;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Transforms.Runtime;
 using UnityEngine;
@@ -12,7 +12,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Root.Runtime
     {
         public BowRoot(
             IEntityCallbacksRegistry callbacksRegistry,
-            BowSlotDefinition definition,
+            SlotDefinition definition,
             IBowGameObject gameObject,
             IBowTransform transform)
         {
@@ -20,10 +20,11 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Root.Runtime
             _definition = definition;
             _gameObject = gameObject;
             _transform = transform;
+            
         }
 
         private readonly IEntityCallbacksRegistry _callbacksRegistry;
-        private readonly BowSlotDefinition _definition;
+        private readonly SlotDefinition _definition;
         private readonly IBowGameObject _gameObject;
         private readonly IBowTransform _transform;
 

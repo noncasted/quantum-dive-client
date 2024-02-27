@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c429c465794adc88cf84d2eed56930, type: 3}
   m_Name: LocalService_StatesRegistry
   m_EditorClassIdentifier: 
-  _definitions:
+  _objects:
   - {fileID: 11400000, guid: 447d472a836910f4da1b41b2742d806b, type: 2}
   - {fileID: 11400000, guid: ffbaa38cd855c8a48ae221de10820249, type: 2}
   - {fileID: 11400000, guid: 140d38ca0abf76f4899a6edd91e14e60, type: 2}

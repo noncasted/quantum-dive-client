@@ -17,10 +17,6 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Remote
             services.Register<RemoteEquipper>()
                 .As<IEquipperSync>()
                 .AsSelf();
-            
-            services.Register<EquipmentFactory>()
-                .WithParameter(utils.Scope)
-                .As<IEquipmentFactory>();
         }
     }
 }

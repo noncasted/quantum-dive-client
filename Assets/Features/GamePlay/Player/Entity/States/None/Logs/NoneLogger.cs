@@ -4,13 +4,13 @@ namespace GamePlay.Player.Entity.States.None.Logs
 {
     public class NoneLogger
     {
-        public NoneLogger(ILogger logger, NoneLogSettings settings)
+        public NoneLogger(IGlobalLogger logger, NoneLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly NoneLogSettings _settings;
 
         public void OnEntered()

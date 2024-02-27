@@ -9,7 +9,7 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Logs
         public RemoteStateMachineLogger(
             IEntityProvider entityProvider,
             IPlayerGameObject gameObject,
-            ILogger logger,
+            IGlobalLogger logger,
             RemoteStateMachineDebugFlag debugFlag,
             RemoteStateMachineLogSettings settings)
         {
@@ -22,7 +22,7 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Logs
 
         private readonly IEntityProvider _entityProvider;
         private readonly IPlayerGameObject _gameObject;
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly RemoteStateMachineDebugFlag _debugFlag;
         private readonly RemoteStateMachineLogSettings _settings;
 

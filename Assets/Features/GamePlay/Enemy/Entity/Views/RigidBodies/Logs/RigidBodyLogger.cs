@@ -1,18 +1,18 @@
-﻿using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.RigidBodies.Logs
 {
     public class RigidBodyLogger
     {
-        public RigidBodyLogger(ILogger logger, RigidBodyLogSettings settings, RigidBodyDebugFlag flag)
+        public RigidBodyLogger(IGlobalLogger logger, RigidBodyLogSettings settings, RigidBodyDebugFlag flag)
         {
             _logger = logger;
             _settings = settings;
             _flag = flag;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly RigidBodyLogSettings _settings;
         private readonly RigidBodyDebugFlag _flag;
 

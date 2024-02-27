@@ -1,17 +1,17 @@
-﻿using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace Global.UI.Nova.InputManagers.Logs
 {
     public class InputManagerLogger
     {
-        public InputManagerLogger(ILogger logger, InputManagerLogSettings settings)
+        public InputManagerLogger(IGlobalLogger logger, InputManagerLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly InputManagerLogSettings _settings;
 
         public void OnMouseScroll(Vector2 scroll)

@@ -1,18 +1,18 @@
-﻿using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Logs
 {
     public class TransformLogger
     {
-        public TransformLogger(ILogger logger, TransformLogSettings settings, LocalTransformDebugFlag flag)
+        public TransformLogger(IGlobalLogger logger, TransformLogSettings settings, LocalTransformDebugFlag flag)
         {
             _logger = logger;
             _settings = settings;
             _flag = flag;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly TransformLogSettings _settings;
         private readonly LocalTransformDebugFlag _flag;
 

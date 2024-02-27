@@ -25,6 +25,7 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
             INetworkFactoriesRegistry factoriesRegistry,
             IScopedEntityFactory factory,
             IPlayerList playerList,
+            ISpawnPoints spawnPoints,
             LocalPlayerConfig localConfig,
             RemotePlayerConfig remoteConfig,
             LifetimeScope parentScope,
@@ -35,6 +36,7 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
             _factoriesRegistry = factoriesRegistry;
             _factory = factory;
             _playerList = playerList;
+            _spawnPoints = spawnPoints;
             _localConfig = localConfig;
             _remoteConfig = remoteConfig;
             _parentScope = parentScope;

@@ -1,17 +1,17 @@
-﻿using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace Global.Cameras.CurrentProvider.Logs
 {
     public class CurrentCameraLogger
     {
-        public CurrentCameraLogger(ILogger logger, CurrentCameraLogSettings settings)
+        public CurrentCameraLogger(IGlobalLogger logger, CurrentCameraLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly CurrentCameraLogSettings _settings;
 
         public void OnSetted(Camera camera)

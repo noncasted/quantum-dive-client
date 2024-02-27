@@ -6,7 +6,6 @@ using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
@@ -22,7 +21,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
             IRemoteStateMachine stateMachine,
             IRemoteRotation remoteRotation,
             IPlayerAnimator playerAnimator,
-            IPlayerSpriteFlip spriteFlip,
             IBowAnimator bowAnimator,
             IBowGameObject bowGameObject,
             IUpdater updater,
@@ -34,7 +32,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
             _stateMachine = stateMachine;
             _remoteRotation = remoteRotation;
             _playerAnimator = playerAnimator;
-            _spriteFlip = spriteFlip;
             _bowAnimator = bowAnimator;
             _bowGameObject = bowGameObject;
             _updater = updater;
@@ -47,7 +44,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IRemoteRotation _remoteRotation;
         private readonly IPlayerAnimator _playerAnimator;
-        private readonly IPlayerSpriteFlip _spriteFlip;
         private readonly IBowAnimator _bowAnimator;
         private readonly IBowGameObject _bowGameObject;
         private readonly IUpdater _updater;
@@ -87,7 +83,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
         public void OnUpdate(float delta)
         {
             _playerAnimation.SetOrientation(_remoteRotation.Orientation);
-            _spriteFlip.FlipAlong(_remoteRotation.Angle);
         }
         
         private async UniTaskVoid Process()

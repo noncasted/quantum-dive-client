@@ -24,15 +24,19 @@ namespace Common.Architecture.Scopes.Runtime.Callbacks
 
         public void AddScopeCallback<T>(Action<T> invoker, CallbackStage stage, int order)
         {
+            if (_callbacks.ContainsKey(stage) == false)
+                _callbacks.Add(stage, new CallbacksHandler());
+
             var entity = new CallbackEntity<T>(invoker, order);
-            _callbacks.TryAdd(stage, new CallbacksHandler());
             _callbacks[stage].Add(entity);
         }
 
         public void AddScopeAsyncCallback<T>(Func<T, UniTask> invoker, CallbackStage stage, int order)
         {
+            if (_callbacks.ContainsKey(stage) == false)
+                _callbacks.Add(stage, new CallbacksHandler());
+            
             var entity = new AsyncCallbackEntity<T>(invoker, order);
-            _callbacks.TryAdd(stage, new CallbacksHandler());
             _callbacks[stage].Add(entity);
         }
 

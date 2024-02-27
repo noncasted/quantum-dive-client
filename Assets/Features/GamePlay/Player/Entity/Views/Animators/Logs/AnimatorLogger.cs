@@ -4,13 +4,13 @@ namespace GamePlay.Player.Entity.Views.Animators.Logs
 {
     public class AnimatorLogger
     {
-        public AnimatorLogger(ILogger logger, AnimatorLogSettings settings)
+        public AnimatorLogger(IGlobalLogger logger, AnimatorLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly AnimatorLogSettings _settings;
 
         public void OnLooped(string name)

@@ -4,13 +4,13 @@ namespace GamePlay.Player.Entity.States.Floating.Logs
 {
     public class FloatingStateLogger
     {
-        public FloatingStateLogger(ILogger logger, FloatingStateLogSettings settings)
+        public FloatingStateLogger(IGlobalLogger logger, FloatingStateLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly FloatingStateLogSettings _settings;
 
         public void OnEntered()

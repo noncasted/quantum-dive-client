@@ -1,17 +1,17 @@
-﻿using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace Global.Cameras.Utils.Logs
 {
     public class CameraUtilsLogger
     {
-        public CameraUtilsLogger(ILogger logger, CameraUtilsLogSettings settings)
+        public CameraUtilsLogger(IGlobalLogger logger, CameraUtilsLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly CameraUtilsLogSettings _settings;
 
         public void OnScreenToWorld(Vector2 screen, Vector2 world)

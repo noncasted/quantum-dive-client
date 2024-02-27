@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 using Common.Architecture.Container.Abstract;
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
@@ -23,7 +24,7 @@ namespace GamePlay.Enemy.Mappers.Definitions.Runtime
         {
             services.Register<EnemyDefinitionMapper>()
                 .As<IEnemyDefinitionMapper>()
-                .WithParameter(Definitions);
+                .WithParameter(new List<EnemyDefinition>());
         }
     }
 }

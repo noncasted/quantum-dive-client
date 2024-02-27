@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
+using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Spawn.Pool.Common;
 using Internal.Services.Scenes.Data;
-using NaughtyAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
         menuName = EnemyPoolRoutes.PoolPath)]
     public class EnemyPoolFactory : ScriptableObject, IServiceFactory
     {
-        [SerializeField] [Indent] [Scene] private SceneData _poolScene;
+        [SerializeField] [Indent] [NestedScriptableObjectField] private SceneData _poolScene;
 
         public async UniTask Create(IServiceCollection services, IScopeUtils utils)
         {

@@ -6,8 +6,8 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Root.Common
     {
         private const string Paths = SwordAssetsPaths.Root;
         
-        public const string LocalPath = Paths + "Local";
-        public const string LocalName = SwordAssetsPrefixes.Component + "Root_Local";
+        public const string LocalPath = Paths + "Root";
+        public const string LocalName = SwordAssetsPrefixes.Component + "Root_Root";
 
         public const string DefinitionName = "SlotDefinition_Sword";
         public const string DefinitionPath = Paths + "Definition";

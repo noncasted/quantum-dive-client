@@ -4,13 +4,13 @@ namespace Global.UI.UiStateMachines.Logs
 {
     public class UiStateMachineLogger
     {
-        public UiStateMachineLogger(ILogger logger, UiStateMachineLogSettings settings)
+        public UiStateMachineLogger(IGlobalLogger logger, UiStateMachineLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly UiStateMachineLogSettings _settings;
 
         public void OnEnteredSingle(string name)

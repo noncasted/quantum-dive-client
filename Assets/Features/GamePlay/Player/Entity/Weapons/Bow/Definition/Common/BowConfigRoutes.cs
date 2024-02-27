@@ -9,5 +9,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Definition.Common
         
         public const string RemoteName = BowAssetsPrefixes.Config + "Remote";
         public const string RemotePath = BowAssetsPaths.Root + "Config/Remote";
+        
+        public const string ConfigName = BowAssetsPrefixes.Config + "Remote";
+        public const string ConfigPath = BowAssetsPaths.Root + "Config/Remote";
     }
 }

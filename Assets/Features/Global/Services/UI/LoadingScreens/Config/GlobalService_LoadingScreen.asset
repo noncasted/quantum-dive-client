@@ -18,6 +18,7 @@ MonoBehaviour:
   _reference:
     m_AssetGUID: 81db3772e20060e4fa843bd53ffd6f6b
     m_SubObjectName: 
+    m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
 --- !u!114 &11400000

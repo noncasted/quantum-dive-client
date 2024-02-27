@@ -5,13 +5,13 @@ namespace Internal.Services.Scenes.Logs
 {
     public class ScenesFlowLogger
     {
-        public ScenesFlowLogger(ILogger logger, ScenesFlowLogSettings settings)
+        public ScenesFlowLogger(IGlobalLogger logger, ScenesFlowLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly ScenesFlowLogSettings _settings;
 
         public void OnSceneLoad(Scene scene)

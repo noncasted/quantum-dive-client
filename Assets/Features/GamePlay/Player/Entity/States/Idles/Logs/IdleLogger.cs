@@ -4,13 +4,13 @@ namespace GamePlay.Player.Entity.States.Idles.Logs
 {
     public class IdleLogger
     {
-        public IdleLogger(ILogger logger, IdleLogSettings settings)
+        public IdleLogger(IGlobalLogger logger, IdleLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly IdleLogSettings _settings;
 
         public void OnEntered()

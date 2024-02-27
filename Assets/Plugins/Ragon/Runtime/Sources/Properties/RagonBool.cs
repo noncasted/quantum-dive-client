@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Eduard Kargin <kargin.eduard@gmail.com>
+ * Copyright 2023-2024 Eduard Kargin <kargin.eduard@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,22 +24,33 @@ namespace Ragon.Client.Unity
   public class RagonBool : RagonProperty
   {
     [SerializeField] private bool _value;
+    
     public bool Value
     {
       get => _value;
       set
       {
+#if UNITY_EDITOR
+        if (!Entity.HasAuthority)
+        {
+          Debug.LogWarning("You can't assign value for property of entity, because you not owner");
+        } 
+#endif
+          
         _value = value;
         
         MarkAsChanged();
       }
     }
-
+    
     public RagonBool(
+      bool value,
       bool invokeLocal = true,
       int priority = 0
     ) : base(priority, invokeLocal)
     {
+      _value = value;
+      
       SetFixedSize(1);
     }
 

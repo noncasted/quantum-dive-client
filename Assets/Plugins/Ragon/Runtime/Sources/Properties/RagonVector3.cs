@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Eduard Kargin <kargin.eduard@gmail.com>
+ * Copyright 2023-2024 Eduard Kargin <kargin.eduard@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,8 +43,15 @@ namespace Ragon.Client.Unity
       get => _value;
       set
       {
-        _value = value;
+#if UNITY_EDITOR
+        if (!Entity.HasAuthority)
+        {
+          Debug.LogWarning("You can't assign value for property of entity, because you not owner");
+        }
+#endif
         
+        _value = value;
+
         MarkAsChanged();
       }
     }
@@ -54,60 +61,19 @@ namespace Ragon.Client.Unity
     private FloatCompressor _compressorY;
     private FloatCompressor _compressorZ;
 
-
     public RagonVector3(
-      RagonAxis axis = RagonAxis.XYZ,
-      bool invokeLocal = true,
-      int priority = 0
-    ) : base(priority, invokeLocal)
-    {
-      _axis = axis;
-
-      var defaultCompressor = new FloatCompressor(-1024.0f, 1024f, 0.01f);
-
-      _compressorX = defaultCompressor;
-      _compressorY = defaultCompressor;
-      _compressorZ = defaultCompressor;
-
-      switch (_axis)
-      {
-        case RagonAxis.XYZ:
-          SetFixedSize(_compressorX.RequiredBits + _compressorY.RequiredBits + _compressorZ.RequiredBits);
-          break;
-        case RagonAxis.XY:
-          SetFixedSize(_compressorX.RequiredBits + _compressorY.RequiredBits);
-          break;
-        case RagonAxis.XZ:
-          SetFixedSize(_compressorX.RequiredBits + _compressorZ.RequiredBits);
-          break;
-        case RagonAxis.YZ:
-          SetFixedSize(_compressorY.RequiredBits + _compressorZ.RequiredBits);
-          break;
-        case RagonAxis.X:
-          SetFixedSize(_compressorX.RequiredBits);
-          break;
-        case RagonAxis.Y:
-          SetFixedSize(_compressorY.RequiredBits);
-          break;
-        case RagonAxis.Z:
-          SetFixedSize(_compressorZ.RequiredBits);
-          break;
-      }
-    }
-
-    public RagonVector3(
-      Vector3 initialValue,
+      Vector3 value,
       RagonAxis axis = RagonAxis.XYZ,
       float min = -1024.0f,
       float max = 1024.0f,
-      float precision = 0.1f,
+      float precision = 0.01f,
       bool invokeLocal = true,
       int priority = 0
     ) : base(priority, invokeLocal)
     {
-      _value = initialValue;
+      _value = value;
       _axis = axis;
-      
+
       var defaultCompressor = new FloatCompressor(min, max, precision);
 
       _compressorX = defaultCompressor;
@@ -245,14 +211,14 @@ namespace Ragon.Client.Unity
         case RagonAxis.Y:
         {
           var compressedY = _compressorY.Compress(_value.y);
-          
+
           buffer.Write(compressedY, _compressorY.RequiredBits);
           break;
         }
         case RagonAxis.Z:
         {
           var compressedZ = _compressorZ.Compress(_value.z);
-          
+
           buffer.Write(compressedZ, _compressorZ.RequiredBits);
           break;
         }

@@ -11,5 +11,6 @@ namespace Common.Architecture.Scopes.Runtime.Utils
         IScopeBinder Binder { get; }
         IScopeData Data { get; }
         IScopeCallbacks Callbacks { get; }
+        bool IsMock { get; }
     }
 }

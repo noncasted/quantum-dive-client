@@ -4,13 +4,13 @@ namespace GamePlay.Combat.Projectiles.Logs
 {
     public class ProjectilesLogger
     {
-        public ProjectilesLogger(ILogger logger, ProjectilesLogSettings settings)
+        public ProjectilesLogger(IGlobalLogger logger, ProjectilesLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly ProjectilesLogSettings _settings;
 
         public void OnAdd(int count)

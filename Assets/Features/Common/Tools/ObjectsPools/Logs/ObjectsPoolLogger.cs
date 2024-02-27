@@ -4,13 +4,13 @@ namespace Common.Tools.ObjectsPools.Logs
 {
     public class ObjectsPoolLogger
     {
-        public ObjectsPoolLogger(ILogger logger, ObjectsPoolLogSettings settings)
+        public ObjectsPoolLogger(IGlobalLogger logger, ObjectsPoolLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly ObjectsPoolLogSettings _settings;
 
         public void OnPoolCreated(string objectName)

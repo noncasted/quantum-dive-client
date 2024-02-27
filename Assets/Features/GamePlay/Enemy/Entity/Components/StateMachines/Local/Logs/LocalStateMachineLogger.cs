@@ -5,13 +5,13 @@ namespace GamePlay.Enemy.Entity.Components.StateMachines.Local.Logs
 {
     public class LocalStateMachineLogger
     {
-        public LocalStateMachineLogger(ILogger logger, LocalStateMachineLogSettings settings)
+        public LocalStateMachineLogger(IGlobalLogger logger, LocalStateMachineLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly LocalStateMachineLogSettings _settings;
 
         public void OnAvailabilityChecked(EnemyStateDefinition from, EnemyStateDefinition to, bool result)

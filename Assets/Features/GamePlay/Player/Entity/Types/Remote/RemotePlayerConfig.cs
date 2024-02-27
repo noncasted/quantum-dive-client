@@ -21,7 +21,7 @@ namespace GamePlay.Player.Entity.Types.Remote
         [SerializeField] private RemotePlayerStatesCompose _states;
         [SerializeField] private PlayerNetworkCompose _network;
         
-        [SerializeField] private RemotePlayerViewFactoryFactory _prefab;
+        [SerializeField] private RemotePlayerViewFactory _prefab;
 
         public ScopedEntityViewFactory Prefab => _prefab;
 

@@ -1,18 +1,18 @@
 ﻿using Global.Inputs.Constranits.Definition;
+using Internal.Services.Loggers.Runtime;
 using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
 
 namespace Global.Inputs.View.Logs
 {
     public class InputViewLogger
     {
-        public InputViewLogger(ILogger logger, InputViewLogSettings settings)
+        public InputViewLogger(IGlobalLogger logger, InputViewLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly InputViewLogSettings _settings;
 
         public void OnLeftMouseButtonDown()

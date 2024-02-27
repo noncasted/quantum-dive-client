@@ -4,7 +4,7 @@ namespace Global.System.ResourcesCleaners.Logs
 {
     public class ResourcesCleanerLogger
     {
-        public ResourcesCleanerLogger(ILogger logger, ResourcesCleanerLogSettings settings)
+        public ResourcesCleanerLogger(IGlobalLogger logger, ResourcesCleanerLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
@@ -12,7 +12,7 @@ namespace Global.System.ResourcesCleaners.Logs
 
         private const string _header = "ScenesFlow";
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly ResourcesCleanerLogSettings _settings;
 
         public void OnCleaned()

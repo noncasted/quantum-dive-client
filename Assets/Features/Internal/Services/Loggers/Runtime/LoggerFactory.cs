@@ -15,7 +15,7 @@ namespace Internal.Services.Loggers.Runtime
         public void Create(IOptions options, IContainerBuilder services)
         {
             services.Register<Logger>(Lifetime.Singleton)
-                .As<ILogger>();
+                .As<IGlobalLogger>();
         }
     }
 }

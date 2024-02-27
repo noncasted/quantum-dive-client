@@ -61,7 +61,7 @@ namespace Common.Architecture.Scopes.Runtime
             var scopeData = new ScopeData(scope, lifetime);
             var callbacks = new ScopeCallbacks();
 
-            var utils = new ScopeUtils(_options, sceneLoader, binder, scopeData, callbacks);
+            var utils = new ScopeUtils(_options, sceneLoader, binder, scopeData, callbacks, _config.IsMock);
 
             return utils;
         }

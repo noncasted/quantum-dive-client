@@ -3384,7 +3384,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037718002}
-  - component: {fileID: 1037718003}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -3407,19 +3406,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1466168880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1037718003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037718001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 480ba30dbc44466fbb0827d99b4b3c04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objects: []
 --- !u!1 &1217873524
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,7 +4183,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1466168880}
-  - component: {fileID: 1466168881}
   m_Layer: 0
   m_Name: LevelLoop
   m_TagString: Untagged
@@ -4223,23 +4208,6 @@ Transform:
   - {fileID: 887429134}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1466168881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466168878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7108c89a22542eda8a32477bc4f88a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _registers:
-  - {fileID: 212819547}
-  - {fileID: 887429133}
-  - {fileID: 1037718003}
-  _builders: []
 --- !u!1 &1662807061
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Eduard Kargin <kargin.eduard@gmail.com>
+ * Copyright 2023-2024 Eduard Kargin <kargin.eduard@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,19 +25,26 @@ namespace Ragon.Client.Unity
   public class RagonFloat : RagonProperty
   {
     [SerializeField] private float _value;
-    
+
     public float Value
     {
       get => _value;
       set
       {
+#if UNITY_EDITOR
+        if (!Entity.HasAuthority)
+        {
+          Debug.LogWarning("You can't assign value for property of entity, because you not owner");
+        }
+#endif
+
         _value = value;
 
         if (_value < _min)
           _value = _min;
         else if (_value > _max)
           _value = _max;
-        
+
         MarkAsChanged();
       }
     }
@@ -45,20 +52,9 @@ namespace Ragon.Client.Unity
     private FloatCompressor _compressor;
     private float _min;
     private float _max;
-    
-    public RagonFloat(
-      bool invokeLocal = true,
-      int priority = 0
-    ) : base(priority, invokeLocal)
-    {
-      _min = -1024.0f;
-      _max = 1024.0f;
-      _compressor = new FloatCompressor(_min, _max, 0.1f);
-      
-      SetFixedSize(_compressor.RequiredBits);
-    }
 
     public RagonFloat(
+      float value,
       float min = -1024.0f,
       float max = 1024.0f,
       float precision = 0.01f,
@@ -66,10 +62,11 @@ namespace Ragon.Client.Unity
       int priority = 0
     ) : base(priority, invokeLocal)
     {
+      _value = value;
       _min = min;
       _max = max;
       _compressor = new FloatCompressor(_min, _max, precision);
-      
+
       SetFixedSize(_compressor.RequiredBits);
     }
 
@@ -83,7 +80,7 @@ namespace Ragon.Client.Unity
     {
       var compressedValue = buffer.Read(_compressor.RequiredBits);
       _value = _compressor.Decompress(compressedValue);
-      
+
       InvokeChanged();
     }
   }

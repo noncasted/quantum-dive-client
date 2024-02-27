@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92743f066b74df49e03f916c802b862, type: 3}
+  m_Name: RemotePlayer_ComponentsCompose
+  m_EditorClassIdentifier: 
+  _damageProcessor: {fileID: 11400000, guid: 9e389a317fc67dc4c8fe4d153c994b8a, type: 2}
+  _remoteRotation: {fileID: 11400000, guid: 6f887b7ce6c52b3468c1b0e60da73380, type: 2}
+  _stateMachine: {fileID: 11400000, guid: 1faedbe54ee26654eb2f60c61114a79d, type: 2}
+  _root: {fileID: 11400000, guid: e1de2ed8d3d3fe6479094960ad3bbf59, type: 2}
+  _defaultCallbacks: {fileID: 11400000, guid: 5d0520d060c8a3f41a91f33e17684e74, type: 2}

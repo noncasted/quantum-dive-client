@@ -33,7 +33,7 @@ namespace GamePlay.System.Network.Objects.Factories.Registry
         public ushort Register(IEntityFactory factory, ILifetime lifetime)
         {
             _counter++;
-            _factories.Add(factory.Id, factory);
+            _factories.Add(_counter, factory);
             
             lifetime.ListenTerminate(() => _factories.Remove(factory.Id));
             

@@ -8,7 +8,6 @@ using GamePlay.Player.Entity.Components.Healths.Runtime;
 using GamePlay.Player.Entity.Components.Root.Local;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
-using GamePlay.Player.Entity.Components.Sorting.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using Sirenix.OdinInspector;
@@ -27,7 +26,6 @@ namespace GamePlay.Player.Entity.Components.Compose
         [SerializeField] private ComboStateMachineFactory _comboStateMachine;
         [SerializeField] private HealthFactory _health;
         [SerializeField] private LocalRotationFactory _rotation;
-        [SerializeField] private SpriteSortingFactory _spriteSorting;
         [SerializeField] private LocalStateMachineFactory _stateMachine;
         [SerializeField] private LocalPlayerRootFactory _root;
 
@@ -41,7 +39,6 @@ namespace GamePlay.Player.Entity.Components.Compose
             _comboStateMachine,
             _health,
             _rotation,
-            _spriteSorting,
             _stateMachine,
             _root,
             _remoteStateMachine,

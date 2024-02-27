@@ -2,6 +2,7 @@
 using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.States.Runs.Common;
 using GamePlay.Player.Entity.States.Runs.Logs;
+using GamePlay.Player.Entity.States.Runs.Remote;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -19,6 +20,10 @@ namespace GamePlay.Player.Entity.States.Runs.Local
 
         public void Create(IServiceCollection services, IEntityUtils utils)
         {
+            services.Register<RunInputSync>()
+                .As<IRunInputSync>()
+                .AsSelf();
+            
             services.Register<RunLogger>()
                 .WithParameter(_logSettings);
 

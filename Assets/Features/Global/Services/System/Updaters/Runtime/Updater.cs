@@ -22,11 +22,11 @@ namespace Global.System.Updaters.Runtime
 
         private readonly UpdatablesHandler<IPreUpdatable> _preUpdatables = new();
         private readonly UpdatablesHandler<IUpdatable> _updatables = new();
-        
+
         private readonly UpdatablesHandler<IUpdateSpeedModifiable> _speedModifiables = new();
-        
+
         private readonly UpdatablesHandler<IGizmosUpdatable> _gizmosUpdatables = new();
-        
+
         private bool _isBootstrapped;
 
         private UpdaterLogger _logger;
@@ -37,13 +37,13 @@ namespace Global.System.Updaters.Runtime
         {
             if (_isBootstrapped == false)
                 return;
-            
+
             var delta = Time.unscaledDeltaTime * Speed;
-            
+
             _preUpdatables.Fetch();
             _updatables.Fetch();
             _gizmosUpdatables.Fetch();
-            
+
             foreach (var updatable in _preUpdatables.List)
                 updatable.OnPreUpdate(delta);
 
@@ -53,7 +53,7 @@ namespace Global.System.Updaters.Runtime
                 updatable.OnUpdate(delta);
 
             _logger.OnUpdateCalled(_updatables.Count);
-            
+
             foreach (var updatable in _gizmosUpdatables.List)
                 updatable.OnGizmosUpdate();
 
@@ -90,9 +90,8 @@ namespace Global.System.Updaters.Runtime
         public void OnAwake()
         {
             _isBootstrapped = true;
-
         }
-        
+
         public void Add(IPreUpdatable updatable)
         {
             _preUpdatables.Add(updatable);
@@ -102,7 +101,10 @@ namespace Global.System.Updaters.Runtime
 
         public void Add(ILifetime lifetime, IPreUpdatable updatable)
         {
-            throw new NotImplementedException();
+            _preUpdatables.Add(updatable);
+            lifetime.ListenTerminate(() => _preUpdatables.Remove(updatable));
+
+            _logger.OnPreUpdatableAdded(_preUpdatables.Count);
         }
 
         public void Remove(IPreUpdatable updatable)
@@ -181,7 +183,7 @@ namespace Global.System.Updaters.Runtime
         public void Add(IGizmosUpdatable updatable)
         {
             _gizmosUpdatables.Add(updatable);
-            
+
             _logger.OnGizmosUpdatableAdded(_postFixedUpdatables.Count);
         }
 
@@ -196,7 +198,7 @@ namespace Global.System.Updaters.Runtime
         public void Remove(IGizmosUpdatable updatable)
         {
             _gizmosUpdatables.Add(updatable);
-            
+
             _logger.OnGizmosUpdatableRemoved(_postFixedUpdatables.Count);
         }
 

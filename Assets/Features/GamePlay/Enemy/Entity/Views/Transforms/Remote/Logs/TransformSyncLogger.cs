@@ -1,7 +1,7 @@
 ﻿using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.Views.GameObjects;
+using Internal.Services.Loggers.Runtime;
 using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
 
 namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs
 {
@@ -11,7 +11,7 @@ namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs
             IEnemyGameObject gameObject,
             IEntityProvider entityProvider,
             RemoteTransformDebugFlag debugFlag,
-            ILogger logger,
+            IGlobalLogger logger,
             TransformSyncLogSettings settings)
         {
             _gameObject = gameObject;
@@ -24,7 +24,7 @@ namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs
         private readonly IEnemyGameObject _gameObject;
         private readonly IEntityProvider _entityProvider;
         private readonly RemoteTransformDebugFlag _debugFlag;
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly TransformSyncLogSettings _settings;
 
         public void OnSerialize(Vector2 position)

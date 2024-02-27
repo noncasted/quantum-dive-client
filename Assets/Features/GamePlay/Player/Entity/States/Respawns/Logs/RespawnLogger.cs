@@ -4,13 +4,13 @@ namespace GamePlay.Player.Entity.States.Respawns.Logs
 {
     public class RespawnLogger
     {
-        public RespawnLogger(ILogger logger, RespawnLogSettings settings)
+        public RespawnLogger(IGlobalLogger logger, RespawnLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly RespawnLogSettings _settings;
 
         public void OnEntered()

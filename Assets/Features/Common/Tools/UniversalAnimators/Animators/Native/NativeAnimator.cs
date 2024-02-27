@@ -24,9 +24,11 @@ namespace Common.Tools.UniversalAnimators.Animators.Native
         public async UniTask PlayAsync(IAsyncAnimation animation, CancellationToken cancellationToken)
         {
             _animator.Play(animation.Data.Name);
-            
+
             await UniTask.WaitUntil(IsStarted, PlayerLoopTiming.LastUpdate, cancellationToken);
             await UniTask.WaitUntil(IsEnded, PlayerLoopTiming.LastUpdate, cancellationToken);
+
+            return;
 
             bool IsStarted()
             {
@@ -36,7 +38,7 @@ namespace Common.Tools.UniversalAnimators.Animators.Native
 
                 return true;
             }
-            
+
             bool IsEnded()
             {
                 var stateInfo = _animator.GetCurrentAnimatorStateInfo(0);

@@ -7,7 +7,6 @@ using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Roll.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.States.Roll.Remote
@@ -17,20 +16,17 @@ namespace GamePlay.Player.Entity.States.Roll.Remote
         public RemoteRoll(
             IRemoteStateMachine stateMachine,
             IPlayerAnimator animator,
-            IPlayerSpriteFlip spriteFlip,
             RollAnimation animation,
             RollDefinition definition)
         {
             _stateMachine = stateMachine;
             _animator = animator;
-            _spriteFlip = spriteFlip;
             _animation = animation;
             _definition = definition;
         }
         
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IPlayerAnimator _animator;
-        private readonly IPlayerSpriteFlip _spriteFlip;
         private readonly RollAnimation _animation;
         private readonly RollDefinition _definition;
 
@@ -43,9 +39,6 @@ namespace GamePlay.Player.Entity.States.Roll.Remote
         
         public void Enter(RagonBuffer buffer)
         {
-            var direction = buffer.ReadDirection();
-            
-            _spriteFlip.FlipAlong(direction, true);
             _animator.PlayAsync(_animation, _cancellation.Token).Forget();
         }
 

@@ -12,13 +12,11 @@ namespace Global.Configs.Registry.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = ConfigsRegistryRoutes.ServiceName, menuName = ConfigsRegistryRoutes.ServicePath)]
-    public class ConfigsRegistryFactory : ScriptableObject, IServiceFactory
+    public class ConfigsRegistryFactory : ScriptableRegistry<ConfigSource>, IServiceFactory
     {
-        [SerializeField] private ScriptableRegistry<ConfigSource> _sources;
-
         public async UniTask Create(IServiceCollection services, IScopeUtils utils)
         {
-            foreach (var source in _sources.Objects)
+            foreach (var source in Objects)
                 source.CreateInstance(services);
             
             services.Register<ConfigsRegistry>()

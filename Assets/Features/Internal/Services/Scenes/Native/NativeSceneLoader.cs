@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using Internal.Services.Scenes.Abstract;
 using Internal.Services.Scenes.Data;
 using Internal.Services.Scenes.Logs;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Internal.Services.Scenes.Native
@@ -50,6 +51,7 @@ namespace Internal.Services.Scenes.Native
 
             SceneManager.sceneLoaded += OnSceneLoaded;
 
+            Debug.Log($"Load scene: {sceneAsset.Name}");
             void OnSceneLoaded(Scene loadedScene, LoadSceneMode mode)
             {
                 if (loadedScene.name != sceneAsset.Name)

@@ -4,13 +4,13 @@ namespace Global.System.ScopeDisposer.Logs
 {
     public class ScopeDisposerLogger
     {
-        public ScopeDisposerLogger(ILogger logger, ScopeDisposerLogSettings settings)
+        public ScopeDisposerLogger(IGlobalLogger logger, ScopeDisposerLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly ScopeDisposerLogSettings _settings;
 
 

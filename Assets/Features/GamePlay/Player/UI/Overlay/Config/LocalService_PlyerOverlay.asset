@@ -12,4 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9591eae68d5b4df097cc87888f4b38c7, type: 3}
   m_Name: LocalService_PlyerOverlay
   m_EditorClassIdentifier: 
-  _scene: UI_Player_Overlay
+  _scene: {fileID: 5739119543371052755}
+--- !u!114 &5739119543371052755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420b4814d8868c443ae796e180394d9b, type: 3}
+  m_Name: LocalService_PlyerOverlay_SceneData_Scene
+  m_EditorClassIdentifier: 
+  _name:
+    m_SceneAsset: {fileID: 102900000, guid: cd30bde93590a2d4b95fa00e17cea19c, type: 3}
+    m_SceneName: UI_Player_Overlay
+  _reference:
+    m_AssetGUID: cd30bde93590a2d4b95fa00e17cea19c
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

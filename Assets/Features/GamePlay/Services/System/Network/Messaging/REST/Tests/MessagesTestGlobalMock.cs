@@ -27,6 +27,7 @@ namespace GamePlay.System.Network.Messaging.REST.Tests
 
         public LifetimeScope ScopePrefab => _scopePrefab;
         public ISceneAsset ServicesScene => _servicesScene;
+        public bool IsMock => false;
 
         public IReadOnlyList<IServiceFactory> Services => new IServiceFactory[]
         {

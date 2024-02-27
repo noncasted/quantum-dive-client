@@ -4,13 +4,13 @@ namespace Global.System.MessageBrokers.Logs
 {
     public class MessageBrokerLogger
     {
-        public MessageBrokerLogger(ILogger logger, MessageBrokerLogSettings settings)
+        public MessageBrokerLogger(IGlobalLogger logger, MessageBrokerLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly MessageBrokerLogSettings _settings;
 
         public void OnListen<T>()

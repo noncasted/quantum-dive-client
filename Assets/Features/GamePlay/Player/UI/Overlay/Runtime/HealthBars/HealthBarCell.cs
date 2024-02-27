@@ -15,7 +15,7 @@ namespace GamePlay.Player.UI.Overlay.Runtime.HealthBars
 
         private void Awake()
         {
-            _fill.fillAmount = 0f;
+//            _fill.fillAmount = 0f;
         }
 
         private void OnDisable()
@@ -50,20 +50,20 @@ namespace GamePlay.Player.UI.Overlay.Runtime.HealthBars
 
         private async UniTaskVoid Animate(CancellationToken cancellation, float target)
         {
-            var start = _fill.fillAmount;
-            var time = 0f;
-            var progress = 0f;
-
-            while (progress < 1f)
-            {
-                progress = time / _fillTime;
-                var value = Mathf.Lerp(start, target, progress);
-                _fill.fillAmount = value;
-
-                time += Time.deltaTime;
-
-                await UniTask.Yield(cancellation);
-            }
+            // var start = _fill.fillAmount;
+            // var time = 0f;
+            // var progress = 0f;
+            //
+            // while (progress < 1f)
+            // {
+            //     progress = time / _fillTime;
+            //     var value = Mathf.Lerp(start, target, progress);
+            //     _fill.fillAmount = value;
+            //
+            //     time += Time.deltaTime;
+            //
+            //     await UniTask.Yield(cancellation);
+            // }
         }
     }
 }

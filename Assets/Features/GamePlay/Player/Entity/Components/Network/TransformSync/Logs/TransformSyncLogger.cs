@@ -1,7 +1,7 @@
 ﻿using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.Views.GameObjects.Runtime;
+using Internal.Services.Loggers.Runtime;
 using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
 
 namespace GamePlay.Player.Entity.Components.Network.TransformSync.Logs
 {
@@ -11,7 +11,7 @@ namespace GamePlay.Player.Entity.Components.Network.TransformSync.Logs
             IPlayerGameObject gameObject,
             IEntityProvider entityProvider,
             TransformSyncDebugFlag debugFlag,
-            ILogger logger,
+            IGlobalLogger logger,
             TransformSyncLogSettings settings)
         {
             _gameObject = gameObject;
@@ -24,7 +24,7 @@ namespace GamePlay.Player.Entity.Components.Network.TransformSync.Logs
         private readonly IPlayerGameObject _gameObject;
         private readonly IEntityProvider _entityProvider;
         private readonly TransformSyncDebugFlag _debugFlag;
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly TransformSyncLogSettings _settings;
 
         public void OnSerialize(Vector2 position)

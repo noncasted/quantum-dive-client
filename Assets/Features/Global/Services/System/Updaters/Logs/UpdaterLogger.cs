@@ -4,13 +4,13 @@ namespace Global.System.Updaters.Logs
 {
     public class UpdaterLogger
     {
-        public UpdaterLogger(ILogger logger, UpdaterLogSettings settings)
+        public UpdaterLogger(IGlobalLogger logger, UpdaterLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly UpdaterLogSettings _settings;
 
         public void OnPreUpdatableAdded(int count)

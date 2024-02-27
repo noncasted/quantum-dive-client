@@ -12,7 +12,7 @@ namespace Common.Tools.EditorTools
     public class AsmdefFile
     {
         public string name;
-        public List<string> references = new(); // Assuming references could be GUIDs or direct assembly names
+        public List<string> references = new();
     }
 
     public class InvalidAssemblyReferencesRemover

@@ -9,8 +9,7 @@ using GamePlay.Player.Entity.States.Floating.Runtime;
 using GamePlay.Player.Entity.States.Runs.Common;
 using GamePlay.Player.Entity.States.Runs.Logs;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.RigidBodies.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
+using GamePlay.Player.Entity.Views.Physics.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
 
@@ -20,11 +19,10 @@ namespace GamePlay.Player.Entity.States.Runs.Local
     {
         public LocalRun(
             ILocalStateMachine stateMachine,
-            IPlayerRigidBody playerRigidBody,
+            IPlayerPhysics playerPhysics,
             IUpdater updater,
             IRunConfig runConfig,
             IPlayerAnimator playerAnimator,
-            IPlayerSpriteFlip spriteFlip,
             IRunInput input,
             IFloatingTransitionsRegistry floatingTransitionsRegistry,
             RunAnimation animation,
@@ -32,12 +30,11 @@ namespace GamePlay.Player.Entity.States.Runs.Local
             RunLogger logger)
         {
             _stateMachine = stateMachine;
-            _playerRigidBody = playerRigidBody;
+            _playerPhysics = playerPhysics;
             _updater = updater;
             _runConfig = runConfig;
 
             _playerAnimator = playerAnimator;
-            _spriteFlip = spriteFlip;
             _animation = animation;
             _input = input;
             _floatingTransitionsRegistry = floatingTransitionsRegistry;
@@ -48,10 +45,9 @@ namespace GamePlay.Player.Entity.States.Runs.Local
 
         private readonly RunAnimation _animation;
         private readonly IPlayerAnimator _playerAnimator;
-        private readonly IPlayerSpriteFlip _spriteFlip;
 
         private readonly RunLogger _logger;
-        private readonly IPlayerRigidBody _playerRigidBody;
+        private readonly IPlayerPhysics _playerPhysics;
         private readonly IRunConfig _runConfig;
 
         private readonly IRunInput _input;
@@ -143,9 +139,8 @@ namespace GamePlay.Player.Entity.States.Runs.Local
             var angle = _input.Direction.ToAngle();
 
             _animation.SetOrientation(angle.ToOrientation());
-            _spriteFlip.FlipAlong(angle);
 
-            _playerRigidBody.Move(_input.Direction, _runConfig.Speed * delta);
+            _playerPhysics.Move(_input.Direction, _runConfig.Speed * delta);
         }
     }
 }

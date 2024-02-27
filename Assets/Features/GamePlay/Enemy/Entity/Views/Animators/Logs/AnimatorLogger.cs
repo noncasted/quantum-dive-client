@@ -4,14 +4,14 @@ namespace GamePlay.Enemy.Entity.Views.Animators.Logs
 {
     public class AnimatorLogger
     {
-        public AnimatorLogger(ILogger logger, AnimatorLogSettings settings, AnimatorDebugFlag flag)
+        public AnimatorLogger(IGlobalLogger logger, AnimatorLogSettings settings, AnimatorDebugFlag flag)
         {
             _logger = logger;
             _settings = settings;
             _flag = flag;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly AnimatorLogSettings _settings;
         private readonly AnimatorDebugFlag _flag;
 

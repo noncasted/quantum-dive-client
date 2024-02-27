@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff29c363e02437abd114e8ebab25426, type: 3}
   m_Name: BowConfig_Local
   m_EditorClassIdentifier: 
+  _defaultCallbacks: {fileID: 11400000, guid: 5d0520d060c8a3f41a91f33e17684e74, type: 2}
+  _root: {fileID: 11400000, guid: b3103101965c2024ab1dedd3d218ecc6, type: 2}
   _input: {fileID: 11400000, guid: 685284b57fd0de149a6a557ee5703186, type: 2}
   _projectileStarter: {fileID: 11400000, guid: 734b5736097cc44479d64b30f87a7742, type: 2}
   _rotation: {fileID: 11400000, guid: 9c114cd62cb5db9489abfb06f09fe7ba, type: 2}
-  _projectilesAmountData: {fileID: 11400000, guid: 65266ce63e1e2ac48a5caffc76a71ada, type: 2}
-  _shotDelayData: {fileID: 11400000, guid: 44ee9b130340a244d96e76cdb38d5461, type: 2}
-  _spreadingData: {fileID: 11400000, guid: afe1aa66d67019542bb1aa2b9f96ddc6, type: 2}
   _aim: {fileID: 11400000, guid: 7e92e17220b182c48a613a76f4f92d92, type: 2}
   _reload: {fileID: 11400000, guid: 18855c46c464658468714f14333c918a, type: 2}
   _shoot: {fileID: 11400000, guid: d8715e80ff056c44d865a4ce580dcad1, type: 2}
   _strafes: {fileID: 11400000, guid: 51907589704cd3d4ab7acde72fc8b0cf, type: 2}
   _strafesInput: {fileID: 11400000, guid: c21a808e4cab14f4185e47fea5c11d1f, type: 2}
+  _prefab: {fileID: 4229076214119996758, guid: dc97a0e4beba93a47adb4d2e72ab392c, type: 3}

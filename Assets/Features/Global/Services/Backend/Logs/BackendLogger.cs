@@ -1,18 +1,18 @@
 ﻿using System.Collections.Generic;
 using Global.Backend.Abstract;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+using Internal.Services.Loggers.Runtime;
 
 namespace Global.Backend.Logs
 {
     public class BackendLogger
     {
-        public BackendLogger(ILogger logger, BackendLogSettings settings)
+        public BackendLogger(IGlobalLogger logger, BackendLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly BackendLogSettings _settings;
 
         public void OnGetRequest(IGetRequest request)

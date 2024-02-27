@@ -1,6 +1,7 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
+using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Combat.Projectiles.Common;
 using GamePlay.Combat.Projectiles.Factory;
@@ -13,7 +14,6 @@ using GamePlay.Combat.Projectiles.Systems.HitDetection;
 using GamePlay.Combat.Projectiles.Systems.Movement;
 using GamePlay.Combat.Projectiles.Systems.Sorting;
 using Internal.Services.Scenes.Data;
-using NaughtyAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -24,7 +24,7 @@ namespace GamePlay.Combat.Projectiles.Bootstrap
         menuName = ProjectilesRoutes.ServicePath)]
     public class ProjectilesServiceFactory : ScriptableObject, IServiceFactory
     {
-        [SerializeField] [Indent] [Scene] private SceneData _poolScene;
+        [SerializeField] [NestedScriptableObjectField] private SceneData _poolScene;
 
         [SerializeField] [Indent] private ProjectilesLogSettings _logSettings;
         [SerializeField] [Indent] private ProjectilesCollisionDetectionConfigAsset _collisionDetectionConfig;

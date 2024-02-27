@@ -1,10 +1,10 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Scopes.Runtime.Services;
 using Common.Architecture.Scopes.Runtime.Utils;
+using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.UI.Overlay.Common;
 using Internal.Services.Scenes.Data;
-using NaughtyAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ namespace GamePlay.Player.UI.Overlay.Runtime.Bootstrap
         menuName = PlayerOverlayRoutes.ServicePath)]
     public class PlayerOverlayFactory : ScriptableObject, IServiceFactory
     {
-        [SerializeField] [Scene] private SceneData _scene;
+        [SerializeField] [NestedScriptableObjectField] private SceneData _scene;
 
         public async UniTask Create(IServiceCollection services, IScopeUtils utils)
         {

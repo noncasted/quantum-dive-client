@@ -7,7 +7,6 @@ using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common.Animations;
@@ -28,7 +27,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
             ILocalStateMachine stateMachine,
             IComboStateMachine comboStateMachine,
             IUpdater updater,
-            IPlayerSpriteFlip spriteFlip,
             IPlayerAnimator playerAnimator,
             IRotation rotation,
             IBowArrow arrow,
@@ -47,7 +45,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
             _comboStateMachine = comboStateMachine;
             _updater = updater;
 
-            _spriteFlip = spriteFlip;
             _playerAnimator = playerAnimator;
             _rotation = rotation;
 
@@ -71,7 +68,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
         private readonly IComboStateMachine _comboStateMachine;
         private readonly IUpdater _updater;
 
-        private readonly IPlayerSpriteFlip _spriteFlip;
         private readonly IPlayerAnimator _playerAnimator;
         private readonly IRotation _rotation;
 
@@ -118,7 +114,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
         public void OnUpdate(float delta)
         {
             _playerAnimation.SetOrientation(_rotation.Orientation);
-            _spriteFlip.FlipAlong(_rotation.Angle);
         }
 
         private async UniTask Process()

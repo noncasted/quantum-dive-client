@@ -8,8 +8,5 @@ namespace GamePlay.Environment.Common
 
         public const string ServicePath = _paths + "Service";
         public const string ServiceName = GamePlayPrefixes.Service + "Environment";
-
-        public const string MockPath = _paths + "Mock";
-        public const string MockName = GamePlayPrefixes.Service + "EnvironmentMock";
     }
 }

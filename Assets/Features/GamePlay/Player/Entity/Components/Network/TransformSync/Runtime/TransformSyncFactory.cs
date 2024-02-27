@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace GamePlay.Player.Entity.Components.Network.TransformSync.Runtime
 {
-    [Indent]
+    [InlineEditor]
     [CreateAssetMenu(fileName = TransformSyncRoutes.ServiceName,
         menuName = TransformSyncRoutes.ServicePath)]
     public class TransformSyncFactory : ScriptableObject, IComponentFactory

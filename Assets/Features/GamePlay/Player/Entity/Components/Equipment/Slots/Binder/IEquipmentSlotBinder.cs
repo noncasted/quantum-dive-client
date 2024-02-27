@@ -1,4 +1,4 @@
-﻿using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
+﻿using GamePlay.Player.Entity.Components.Equipment.Slots.Definitions.Abstract;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Components.Equipment.Slots.Binder

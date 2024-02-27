@@ -16,10 +16,6 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Local
         {
             services.Register<LocalEquipper>()
                 .As<IEquipper>();
-
-            services.Register<EquipmentFactory>()
-                .WithParameter(utils.Scope)
-                .As<IEquipmentFactory>();
         }
     }
 }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c577acc3b746e99590b548c4f2123c, type: 3}
+  m_Name: EnemyServicesCompose
+  m_EditorClassIdentifier: 
+  _list: {fileID: 11400000, guid: 4bd86458825de2446b40c9dcfe4d6788, type: 2}
+  _factory: {fileID: 11400000, guid: 2ac95e5ac96877b4280a3a3c4428b4e8, type: 2}
+  _pool: {fileID: 11400000, guid: ccf062ee3878f6248af66dbf83462d06, type: 2}
+  _definitionMapper: {fileID: 11400000, guid: b9f3d332fd5e4be48a215559b6adb7d9, type: 2}
+  _stateMapper: {fileID: 11400000, guid: 93712cd1869d0eb45a58173acfc74538, type: 2}
+  _updater: {fileID: 11400000, guid: 521f972ea58592242832ba03f3788163, type: 2}

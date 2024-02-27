@@ -5,7 +5,6 @@ using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Common;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Local;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using Ragon.Client;
 using UnityEngine;
 
@@ -14,16 +13,13 @@ namespace GamePlay.Player.Entity.States.SubStates.Damaged.Remote
     public class RemoteDamaged : IEntitySwitchLifetimeListener, IEntityDisableListener
     {
         public RemoteDamaged(
-            IPlayerSpriteMaterial spriteMaterial,
             IEntityEvents events,
             IDamagedConfig config)
         {
-            _spriteMaterial = spriteMaterial;
             _events = events;
             _config = config;
         }
 
-        private readonly IPlayerSpriteMaterial _spriteMaterial;
         private readonly IEntityEvents _events;
         private readonly IDamagedConfig _config;
 
@@ -55,29 +51,29 @@ namespace GamePlay.Player.Entity.States.SubStates.Damaged.Remote
             var count = 0;
             var delay = Mathf.CeilToInt(_config.Time * 1000 / _config.FlickAmount);
             var isFlicked = false;
-
-            var defaultMaterial = _spriteMaterial.Material;
-            _spriteMaterial.SetMaterial(_config.Material);
-
-            cancellation.Register(() =>
-            {
-                _spriteMaterial.SetMaterial(defaultMaterial);
-            });
-
-            while (count < _config.FlickAmount)
-            {
-                isFlicked = !isFlicked;
-
-                if (isFlicked == true)
-                    _spriteMaterial.Material.SetFloat(FlickProgressProperty, 1f);
-                else
-                    _spriteMaterial.Material.SetFloat(FlickProgressProperty, 0f);
-
-                count++;
-                await UniTask.Delay(delay, cancellation);
-            }
-
-            _spriteMaterial.SetMaterial(defaultMaterial);
+            //
+            // var defaultMaterial = _spriteMaterial.Material;
+            // _spriteMaterial.SetMaterial(_config.Material);
+            //
+            // cancellation.Register(() =>
+            // {
+            //     _spriteMaterial.SetMaterial(defaultMaterial);
+            // });
+            //
+            // while (count < _config.FlickAmount)
+            // {
+            //     isFlicked = !isFlicked;
+            //
+            //     if (isFlicked == true)
+            //         _spriteMaterial.Material.SetFloat(FlickProgressProperty, 1f);
+            //     else
+            //         _spriteMaterial.Material.SetFloat(FlickProgressProperty, 0f);
+            //
+            //     count++;
+            //     await UniTask.Delay(delay, cancellation);
+            // }
+            //
+            // _spriteMaterial.SetMaterial(defaultMaterial);
         }
     }
 }

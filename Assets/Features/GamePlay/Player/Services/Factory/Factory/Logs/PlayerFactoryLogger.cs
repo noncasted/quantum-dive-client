@@ -1,17 +1,17 @@
-﻿using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace GamePlay.Player.Services.Factory.Factory.Logs
 {
     public class PlayerFactoryLogger
     {
-        public PlayerFactoryLogger(ILogger logger, PlayerFactoryLogSettings settings)
+        public PlayerFactoryLogger(IGlobalLogger logger, PlayerFactoryLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly PlayerFactoryLogSettings _settings;
 
         public void OnLocalInstantiated(Vector2 position)

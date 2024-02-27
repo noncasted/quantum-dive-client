@@ -1,17 +1,17 @@
-﻿using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Runs.Logs
 {
     public class RunLogger
     {
-        public RunLogger(ILogger logger, RunLogSettings settings)
+        public RunLogger(IGlobalLogger logger, RunLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly RunLogSettings _settings;
 
         public void OnInput(Vector2 direction)

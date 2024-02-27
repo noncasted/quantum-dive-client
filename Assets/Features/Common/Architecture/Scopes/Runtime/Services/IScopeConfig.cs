@@ -8,6 +8,7 @@ namespace Common.Architecture.Scopes.Runtime.Services
     {
         LifetimeScope ScopePrefab { get; }
         ISceneAsset ServicesScene { get; }
+        bool IsMock { get; }
 
         IReadOnlyList<IServiceFactory> Services { get; }
         IReadOnlyList<IServicesCompose> Composes { get; }

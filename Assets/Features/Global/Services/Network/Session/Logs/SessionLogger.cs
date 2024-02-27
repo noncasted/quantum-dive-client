@@ -4,13 +4,13 @@ namespace Global.Network.Session.Logs
 {
     public class SessionLogger
     {
-        public SessionLogger(ILogger logger, SessionLogSettings settings)
+        public SessionLogger(IGlobalLogger logger, SessionLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly SessionLogSettings _settings;
 
         public void OnCreateAttempt(string id)

@@ -4,13 +4,13 @@ namespace GamePlay.Loop.Logs
 {
     public class LevelLoopLogger
     {
-        public LevelLoopLogger(ILogger logger, LevelLoopLogSettings settings)
+        public LevelLoopLogger(IGlobalLogger logger, LevelLoopLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly LevelLoopLogSettings _settings;
 
         public void OnLoaded()

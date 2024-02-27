@@ -12,7 +12,6 @@ using GamePlay.Player.Entity.States.Roll.Common;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Views.Hitboxes.Local;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Roll.Local
@@ -24,7 +23,6 @@ namespace GamePlay.Player.Entity.States.Roll.Local
             ISubPush push,
             IRollConfig config,
             IPlayerAnimator playerAnimator,
-            IPlayerSpriteFlip spriteFlip,
             IRollInput input,
             IFloatingTransitionsRegistry floatingTransitionsRegistry,
             IHitbox hitbox,
@@ -35,7 +33,6 @@ namespace GamePlay.Player.Entity.States.Roll.Local
             _push = push;
             _config = config;
             _playerAnimator = playerAnimator;
-            _spriteFlip = spriteFlip;
             _input = input;
             _floatingTransitionsRegistry = floatingTransitionsRegistry;
             _hitbox = hitbox;
@@ -47,7 +44,6 @@ namespace GamePlay.Player.Entity.States.Roll.Local
         private readonly ISubPush _push;
         private readonly IRollConfig _config;
         private readonly IPlayerAnimator _playerAnimator;
-        private readonly IPlayerSpriteFlip _spriteFlip;
         private readonly IRollInput _input;
         private readonly IFloatingTransitionsRegistry _floatingTransitionsRegistry;
         private readonly IHitbox _hitbox;
@@ -104,7 +100,6 @@ namespace GamePlay.Player.Entity.States.Roll.Local
             _cancellation = new CancellationTokenSource();
 
             _hitbox.Disable();
-            _spriteFlip.FlipAlong(_input.Direction, true);
 
             var orientation = _input.Direction.ToAngle().ToOrientation();
             _animation.SetOrientation(orientation);

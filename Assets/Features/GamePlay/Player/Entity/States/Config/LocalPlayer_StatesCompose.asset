@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2bda8d215d49d69e18a8d9566dad4c, type: 3}
+  m_Name: LocalPlayer_StatesCompose
+  m_EditorClassIdentifier: 
+  _death: {fileID: 11400000, guid: 65f55f66300a2b44c9d8ea1a93aa0eb6, type: 2}
+  _floating: {fileID: 11400000, guid: 32638f2dddc8a84429619782e6a95ce7, type: 2}
+  _idle: {fileID: 11400000, guid: 5259be97fd0c23649819d17dc7f7e289, type: 2}
+  _none: {fileID: 11400000, guid: 5f113c4191f7d004cafda425f9522742, type: 2}
+  _respawn: {fileID: 11400000, guid: 3b8e4c518bf56e143aad2088af2953f1, type: 2}
+  _roll: {fileID: 11400000, guid: d83c6ed7f22259c44b492df3cdebfbdf, type: 2}
+  _run: {fileID: 11400000, guid: 4b6c419912f56d84fa45d748f61128fd, type: 2}
+  _damaged: {fileID: 11400000, guid: 938870b9545d7a14e8e45d1b776c4461, type: 2}
+  _push: {fileID: 11400000, guid: 1fc7c57b0d23f2645b6ec7f9952ce73c, type: 2}
+  _remoteRun: {fileID: 11400000, guid: 9ab694a72b13edb428957658def0c344, type: 2}

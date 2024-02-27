@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Eduard Kargin <kargin.eduard@gmail.com>
+ * Copyright 2023-2024 Eduard Kargin <kargin.eduard@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -71,7 +71,6 @@ namespace Ragon.Client.Unity
       address.Port = port;
 
       _peer = _host.Connect(address, 2, protocol);
-      _peer.Timeout(32, 5000, 5000);
     }
 
     public void Update()
@@ -95,7 +94,6 @@ namespace Ragon.Client.Unity
             Statistics = new NetworkStatistics();
             Reliable = new ENetReliableChannel(_netEvent.Peer, 0);
             Unreliable = new ENetUnreliableChannel(_netEvent.Peer, 1);
-            
             OnConnected?.Invoke();
             break;
           case EventType.Disconnect:

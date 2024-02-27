@@ -4,13 +4,13 @@ namespace GamePlay.System.Network.Messaging.Events.Logs
 {
     public class NetworkEventsLogger
     {
-        public NetworkEventsLogger(ILogger logger, NetworkEventsLogSettings settings)
+        public NetworkEventsLogger(IGlobalLogger logger, NetworkEventsLogSettings settings)
         {
             _logger = logger;
             _settings = settings;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly NetworkEventsLogSettings _settings;
 
         public void OnRouteAdded<TEvent>()

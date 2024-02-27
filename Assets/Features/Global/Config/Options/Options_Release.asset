@@ -43,7 +43,7 @@ MonoBehaviour:
   _ip: 
   _udpProtocol: 
   _port: 5000
-  _url: server.post-radio.io
+  _url: server.noncasted.dev
   _webSocketProtocol: 1
   _rate: 30
 --- !u!114 &-2732554017885328425

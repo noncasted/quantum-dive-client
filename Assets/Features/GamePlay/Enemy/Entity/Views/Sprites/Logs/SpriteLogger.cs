@@ -1,18 +1,18 @@
-﻿using UnityEngine;
-using ILogger = Internal.Services.Loggers.Runtime.ILogger;
+﻿using Internal.Services.Loggers.Runtime;
+using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.Sprites.Logs
 {
     public class SpriteLogger
     {
-        public SpriteLogger(ILogger logger, SpriteLogSettings settings, SpriteDebugFlag flag)
+        public SpriteLogger(IGlobalLogger logger, SpriteLogSettings settings, SpriteDebugFlag flag)
         {
             _logger = logger;
             _settings = settings;
             _flag = flag;
         }
 
-        private readonly ILogger _logger;
+        private readonly IGlobalLogger _logger;
         private readonly SpriteLogSettings _settings;
         private readonly SpriteDebugFlag _flag;
 

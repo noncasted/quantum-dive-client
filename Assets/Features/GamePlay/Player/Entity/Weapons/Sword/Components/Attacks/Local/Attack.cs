@@ -12,7 +12,6 @@ using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Runtime;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
-using GamePlay.Player.Entity.Views.Sprites.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Common;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime;
@@ -36,7 +35,6 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
             IRotation rotation,
             IAttackArea attackArea,
             ILocalStateMachine stateMachine,
-            IPlayerSpriteFlip playerSpriteFlip,
             ISubPush subPush,
             ISwordAttackConfig config,
             IPlayerPosition position,
@@ -50,13 +48,12 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
             _animator = animator;
             _updater = updater;
             _rotation = rotation;
-            _attackArea = attackArea;
             _stateMachine = stateMachine;
-            _playerSpriteFlip = playerSpriteFlip;
-            _subPush = subPush;
             _config = config;
             _position = position;
             _pushParams = pushParams;
+
+            
 
             Definition = definition;
         }
@@ -68,8 +65,6 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
         private readonly IRotation _rotation;
         private readonly IAttackArea _attackArea;
         private readonly ILocalStateMachine _stateMachine;
-        private readonly IPlayerSpriteFlip _playerSpriteFlip;
-        private readonly ISubPush _subPush;
         private readonly ISwordAttackConfig _config;
         private readonly IPlayerPosition _position;
         private readonly PushParams _pushParams;
@@ -127,15 +122,12 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
             _isEntered = true;
             
             _orientation = _rotation.Orientation;
-            _playerSpriteFlip.FlipAlong(_rotation.Angle);
             
             _animation.Attack += OnAttackFrame;
 
             var animationTask = _animator.PlayAsync(_animation, _cancellation.Token);
-            var direction = _rotation.Angle.ToDirection();
-            var pushTask = _subPush.PushAsync(direction, _pushParams, _cancellation.Token);
 
-            await UniTask.WhenAll(animationTask, pushTask);
+            await UniTask.WhenAll(animationTask);
 
             _animation.Attack -= OnAttackFrame;
 
