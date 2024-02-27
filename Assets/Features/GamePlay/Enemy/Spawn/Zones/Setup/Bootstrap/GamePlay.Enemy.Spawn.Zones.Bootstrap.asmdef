@@ -1,11 +1,11 @@
-﻿{
+{
   "name": "GamePlay.Enemy.Spawn.Zones.Bootstrap",
   "references": [
-    "GUID:e4924bae8b7f4512af86f641579b370f",
+    
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:d4edb98aca1e44aa802b8d024a2280bc",
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:17574602f5ff95941bc7eb946c3b4637",
+    
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:a75f9980cdc6467c98daf0b86585e58f"
   ]

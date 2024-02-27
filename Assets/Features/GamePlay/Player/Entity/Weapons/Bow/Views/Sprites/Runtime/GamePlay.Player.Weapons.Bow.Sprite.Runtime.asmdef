@@ -2,7 +2,7 @@
   "name": "GamePlay.Player.Weapons.Bow.Sprite.Runtime",
   "references": [
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:9a286a02eeeb6bc45a393a0ca6c650f9",
+    
     "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:a6bee730cad343c7ac8840da91376019",
     "GUID:3b2ea7622084434a927c413b7fc2fd3a"

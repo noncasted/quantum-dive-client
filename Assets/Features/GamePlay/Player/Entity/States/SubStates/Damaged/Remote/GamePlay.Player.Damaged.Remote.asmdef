@@ -1,7 +1,7 @@
-﻿{
+{
   "name": "GamePlay.Player.Damaged.Remote",
   "references": [
-    "GUID:9a286a02eeeb6bc45a393a0ca6c650f9",
+    
     "GUID:72ee10059c044befb9afe61cb72eaf8d",
     "GUID:e17a2c557ad84d3e84a1b94c4b9bdf6b",
     "GUID:9bd5d026afe0406cab16f1fe227640d6",

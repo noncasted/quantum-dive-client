@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "GamePlay.Player.Roll.Local",
   "references": [
     "GUID:c713b254602614c43a1d94a2a13ba844",
@@ -8,7 +8,7 @@
     "GUID:2ff8f8fa94b546b097dc673bf486b1e2",
     "GUID:04243451437dcfe48b583ab43ef0a8fa",
     "GUID:239f9a8379f7b964b8f8c879fed530fb",
-    "GUID:9a286a02eeeb6bc45a393a0ca6c650f9",
+    
     "GUID:23cf091f4c6d7994ea810080cd2b498f",
     "GUID:47083761e726d344ebda60ec45a5396c",
     "GUID:1df29afa6177f8e4fa19b25367556ac2",
