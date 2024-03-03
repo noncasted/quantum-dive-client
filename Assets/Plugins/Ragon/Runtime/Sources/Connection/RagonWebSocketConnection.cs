@@ -36,7 +36,8 @@ namespace Ragon.Client.Unity
 
         public async void Disconnect()
         {
-            await _webSocket.Close();
+            if (_webSocket != null)
+                await _webSocket.Close();
         }
 
         public void Update()

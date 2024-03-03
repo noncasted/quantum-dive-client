@@ -1,0 +1,97 @@
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
+using Common.DataTypes.Structs;
+using GamePlay.Player.Entity.Views.Physics.Logs;
+using Global.System.Updaters.Runtime.Abstract;
+using UnityEngine;
+
+namespace GamePlay.Player.Entity.Views.Physics.Runtime
+{
+    public class PlayerPhysics : IPlayerPhysics, IPreFixedUpdatable, IEntitySwitchLifetimeListener
+    {
+        public PlayerPhysics(
+            IUpdater updater,
+            PlayerPhysicsView view,
+            PlayerPhysicsConfig config,
+            PhysicsLogger logger)
+        {
+            _updater = updater;
+            _view = view;
+            _config = config;
+            _logger = logger;
+        }
+
+        private readonly PhysicsLogSettings _logSettings;
+        private readonly IUpdater _updater;
+        private readonly PlayerPhysicsView _view;
+        private readonly PlayerPhysicsConfig _config;
+        private readonly PhysicsLogger _logger;
+
+        private Quaternion _targetDirection;
+
+        public Vector3 Position => _view.position;
+
+        public void OnSwitchLifetimeCreated(ILifetime lifetime)
+        {
+            _updater.Add(lifetime, this);
+        }
+
+        public void SetPosition(Vector3 position)
+        {
+            _view.SetPosition(position);
+            UnityEngine.Debug.Log($"Set position: {position}");
+
+        }
+
+        public void Move(Vector2 direction, float distance)
+        {
+            var convertedDirection = new Vector3(direction.normalized.x, 0f, direction.normalized.y);
+            var position = _view.position + convertedDirection * distance;
+
+            _view.SetPosition(position);
+
+            _logger.OnMoveEnqueued(direction, distance);
+            UnityEngine.Debug.Log($"Move: {position}");
+        }
+
+        public void SetVelocity(Vector2 direction, float force)
+        {
+            var convertedDirection = new Vector3(direction.normalized.x, 0f, direction.normalized.y);
+            var velocity = convertedDirection * force;
+
+            _view.SetVelocity(velocity);
+        }
+
+        public void SetForwardVelocity(float force)
+        {
+            var direction = _view.transform.forward;
+            var position = _view.position + direction * force;
+
+            _view.SetPosition(position);
+            _logger.OnMoveEnqueued(direction, force);
+        }
+
+        public void LockCurrentRotation()
+        {
+            _targetDirection = _view.rotation;
+        }
+
+        public void Rotate(Vector2 direction)
+        {
+            _targetDirection = Quaternion.Euler(0f, direction.ToAngle(), 0f);
+        }
+
+        public void ResetVelocity()
+        {
+            _view.SetVelocity(Vector3.zero);
+        }
+
+        public void OnPreFixedUpdate(float delta)
+        {
+            var rotationSpeed = _config.RotationSpeed;
+            var resultRotation = Quaternion.Lerp(_view.rotation, _targetDirection, delta * rotationSpeed);
+
+            _view.SetRotation(resultRotation);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "GamePlay.Player.Animator.Runtime",
+  "rootNamespace": "",
+  "references": [
+    "GUID:fe4adae493555af4788e53948d7966ca",
+    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+    "GUID:e3790eea46cac0b4ba62561fda2794e4",
+    "GUID:8f9012bdd1b116c48ab480004500c8f3",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:579bb2a9aeb44d8ea7c6d683ab596a58",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:a6bee730cad343c7ac8840da91376019",
+    "GUID:5be6262f59e0487f8f55e7b4b6358c57",
+    "GUID:3b2ea7622084434a927c413b7fc2fd3a",
+    "GUID:26a8b20b9fb2463a9dbbc5901c0508aa",
+    "GUID:206616f3cddb4dd3bec52b821dc19a39",
+    "GUID:4c25c05f410a3a447a75c3b0909152ef"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

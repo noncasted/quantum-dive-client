@@ -1,0 +1,6 @@
+﻿{
+  "name": "GamePlay.Player.CameraFollow.Abstract",
+  "references": [
+    "GUID:14eecf01b6eb4ff2b3dfe46bcae92d25"
+  ]
+}

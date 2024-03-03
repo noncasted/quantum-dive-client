@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 3
+  serializedVersion: 2
   tags: []
   layers:
   - Default
@@ -11,17 +11,17 @@ TagManager:
   - 
   - Water
   - UI
-  - Collision_Level
-  - Collision_Player_Local
-  - Collision_Player_Remote
-  - Collision_Projectile
-  - Collision_Enemy
   - 
-  - Hitbox_Player
-  - Hitbox_Ally
-  - Hibox_Enemy
   - 
-  - Damage_Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -41,27 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
-    uniqueID: 3734285785
-    locked: 0
-  - name: Player_Behind
-    uniqueID: 2849864635
-    locked: 0
-  - name: Wall
-    uniqueID: 280144955
-    locked: 0
-  - name: Player_Front
-    uniqueID: 3130667863
-    locked: 0
-  - name: Wall_Above
-    uniqueID: 1504768681
-    locked: 0
-  m_RenderingLayers:
-  - Default
-  - Light Layer 1
-  - Light Layer 2
-  - Light Layer 3
-  - Light Layer 4
-  - Light Layer 5
-  - Light Layer 6
-  - Light Layer 7

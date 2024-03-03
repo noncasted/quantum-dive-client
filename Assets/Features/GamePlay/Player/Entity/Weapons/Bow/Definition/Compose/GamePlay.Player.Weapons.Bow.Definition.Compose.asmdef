@@ -1,9 +1,0 @@
-﻿{
-  "name": "GamePlay.Player.Weapons.Bow.Definition.Compose",
-  "references": [
-    "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
-    "GUID:a6a753291bc24d5382cc6acf7de3f5f1",
-    "GUID:cb562317e41c4b5cacd1d52e43494202",
-    "GUID:a3ba05afa7224d5984741c33fd8521f9"
-  ]
-}

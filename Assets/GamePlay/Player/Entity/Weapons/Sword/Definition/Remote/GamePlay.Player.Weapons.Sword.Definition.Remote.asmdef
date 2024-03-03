@@ -1,0 +1,14 @@
+﻿{
+  "name": "GamePlay.Player.Weapons.Sword.Definition.Remote",
+  "references": [
+    "GUID:fa0e265ba965494c9ed8bed74f0d918e",
+    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:25a5d5e910674662a31aca5c98fe58a1",
+    "GUID:a6bee730cad343c7ac8840da91376019",
+    "GUID:66415be395f24ef296248b13e0120996",
+    "GUID:5be6262f59e0487f8f55e7b4b6358c57",
+    "GUID:4ff0aa6a0b234785b07cdc06c6a2fba9",
+    "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
+    "GUID:d9aeffadfa824685894c5bb390a9e42c"
+  ]
+}

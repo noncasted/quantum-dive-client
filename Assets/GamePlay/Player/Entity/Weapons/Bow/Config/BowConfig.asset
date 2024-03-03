@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3376188693621403470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348072be810b4de095192c27191dfedb, type: 3}
+  m_Name: BowConfig_ShootDelayUpgradeDefinition_ShootDelayDefinition
+  m_EditorClassIdentifier: 
+  _key: bow_shot_delay
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e651181ad24e4b903695785cab0ea4, type: 3}
+  m_Name: BowConfig
+  m_EditorClassIdentifier: 
+  _shootDelayDefinition: {fileID: -3376188693621403470}
+  _arrowSpeedDefinition: {fileID: 400138032957988964}
+  _damageDefinition: {fileID: 237218319092512598}
+  _pushForceDefinition: {fileID: 3399922903653208427}
+  _shootDelay:
+  - 1
+  _arrowSpeed:
+  - 5
+  _damage: 01000000
+  _pushForce:
+  - 1
+--- !u!114 &237218319092512598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff205214e6e42b384b3556725bb8a32, type: 3}
+  m_Name: BowConfig_DamageUpgradeDefinition_DamageDefinition
+  m_EditorClassIdentifier: 
+  _key: bow_shot_damage
+--- !u!114 &400138032957988964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a4762b38a44f1c99bf8b0bc5a61ab7, type: 3}
+  m_Name: BowConfig_ArrowSpeedUpgradeDefinition_ArrowSpeedDefinition
+  m_EditorClassIdentifier: 
+  _key: bow_shot_arrow_speed
+--- !u!114 &3399922903653208427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfbb3df22b4a4a808de2270ba749b04b, type: 3}
+  m_Name: BowConfig_PushForceUpgradeDefinition_PushForceDefinition
+  m_EditorClassIdentifier: 
+  _key: bow_shot_push_force
