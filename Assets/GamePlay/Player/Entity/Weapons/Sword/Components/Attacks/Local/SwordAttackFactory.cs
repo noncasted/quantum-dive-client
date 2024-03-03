@@ -11,17 +11,13 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
     [CreateAssetMenu(fileName = SwordAttackRoutes.LocalName, menuName = SwordAttackRoutes.LocalPath)]
     public class SwordAttackFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] [Indent] private SwordAttackAnimationFactory _animation;
         [SerializeField] [Indent] private SwordAttackDefinition _definition;
         [SerializeField] [Indent] private SwordAttackConfig _config;
         [SerializeField] [Indent] private PushParams _pushParams;
 
         public void Create(IServiceCollection services, IEntityUtils utils)
         {
-            var animation = _animation.Create();
-
             services.Register<Attack>()
-                .WithParameter(animation)
                 .WithParameter(_definition)
                 .WithParameter(_pushParams)
                 .WithParameter<ISwordAttackConfig>(_config)

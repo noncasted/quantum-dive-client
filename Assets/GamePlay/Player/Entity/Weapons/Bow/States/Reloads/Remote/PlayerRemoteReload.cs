@@ -9,7 +9,6 @@ using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Common;
-using GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
@@ -18,20 +17,20 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Remote
 {
-    public class PlayerRemoteReload : IEntitySwitchLifetimeListener, IPlayerRemoteState, IUpdatable
+    public class PlayerRemoteReload : IEntitySwitchLifetimeListener, IPlayerRemoteState
     {
         public PlayerRemoteReload(
             IRemoteStateMachine stateMachine,
             IRemoteRotation remoteRotation,
-            IEnhancedAnimator playerAnimator,
+            IPlayerAnimator playerAnimator,
             IBowAnimator bowAnimator,
             IBowGameObject bowGameObject,
             IBowArrow arrow,
             IProjectileStarterConfig config,
             IUpdater updater,
             
-            PlayerReloadAnimation playerAnimation,
-            BowReloadAnimation bowAnimation,
+            IAnimation playerAnimation,
+            IAnimation bowAnimation,
             BowReloadDefinition definition)
         {
             _stateMachine = stateMachine;
@@ -57,8 +56,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Remote
         private readonly IProjectileStarterConfig _config;
         private readonly IUpdater _updater;
         
-        private readonly PlayerReloadAnimation _playerAnimation;
-        private readonly BowReloadAnimation _bowAnimation;
+        private readonly IAnimation _playerAnimation;
+        private readonly IAnimation _bowAnimation;
         private readonly BowReloadDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -72,7 +71,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Remote
         public void Enter(RagonBuffer buffer)
         {
             _cancellation = new CancellationTokenSource();
-            _updater.Add(this);
             _bowGameObject.Enable();
             _arrow.Show(_config.Data.Preview);
 
@@ -85,16 +83,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Remote
             _cancellation?.Dispose();
             _cancellation = null;
             
-            _updater.Remove(this);
-            _bowGameObject.Disable();
             _arrow.Hide();
         }
 
-        
-        public void OnUpdate(float delta)
-        {
-            _playerAnimation.SetOrientation(_remoteRotation.Orientation);
-        }
         
         private async UniTaskVoid Process()
         {

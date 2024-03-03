@@ -7,8 +7,8 @@ namespace GamePlay.Combat.Projectiles.Factory
     {
         public ProjectileRequest(
             IProjectileDefinition definition,
-            Vector2 position, 
-            Vector2 direction, 
+            Vector3 position, 
+            Vector3 direction, 
             ShootParams parameters)
         {
             Definition = definition;
@@ -18,8 +18,8 @@ namespace GamePlay.Combat.Projectiles.Factory
         }
         
         public readonly IProjectileDefinition Definition;
-        public readonly Vector2 Position;
-        public readonly Vector2 Direction;
+        public readonly Vector3 Position;
+        public readonly Vector3 Direction;
         public readonly ShootParams Parameters;
     }
 }

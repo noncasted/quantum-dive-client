@@ -13,10 +13,10 @@ namespace GamePlay.Player.Entity.States.SubStates.Pushes.Runtime
             _updater = updater;
             _physics = physics;
         }
-        
+
         private readonly IUpdater _updater;
         private readonly IPlayerPhysics _physics;
-        
+
         public async UniTask PushAsync(
             Vector2 direction,
             PushParams parameters,
@@ -25,7 +25,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Pushes.Runtime
             var handler = new PushHandler(
                 _updater,
                 _physics,
-                direction,
+                new Vector2(direction.y, direction.x * -1f),
                 parameters,
                 cancellation);
 

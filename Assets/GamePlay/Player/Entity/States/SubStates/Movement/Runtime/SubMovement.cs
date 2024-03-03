@@ -1,9 +1,6 @@
 ﻿using System;
 using Common.Tools.UniversalAnimators.Abstract;
-using GamePlay.Player.Entity.Components.Rotations.Animation;
-using GamePlay.Player.Entity.Components.Rotations.Orientation;
 using GamePlay.Player.Entity.States.Runs.Local;
-using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Views.Physics.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 using UnityEngine;
@@ -46,7 +43,6 @@ namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime
         private float _speed;
         private MovementState _state;
         private MoveType _moveType;
-        private IRotatableFrameProvider _currentFrameProvider;
 
         public void Enter(bool playAnimations, float speed, MoveType moveType)
         {
@@ -76,11 +72,6 @@ namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime
 
             _isEntered = false;
             _updater.Remove(this);
-        }
-
-        public void SetAnimationRotation(PlayerOrientation orientation)
-        {
-            _currentFrameProvider?.SetOrientation(orientation);
         }
 
         public void OnPreFixedUpdate(float delta)

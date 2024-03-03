@@ -1,5 +1,4 @@
-﻿using Animancer;
-using Sirenix.OdinInspector;
+﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Common.Tools.UniversalAnimators.Abstract
@@ -20,8 +19,7 @@ namespace Common.Tools.UniversalAnimators.Abstract
 
         public IAnimation CreateAnimation()
         {
-            var data = new AnimationData(_clip, _fadeDuration, _time, _layer.Value);
-            var animation = new BaseAnimation(data);
+            var animation = new BaseAnimation(this);
             return animation;
         }
     }

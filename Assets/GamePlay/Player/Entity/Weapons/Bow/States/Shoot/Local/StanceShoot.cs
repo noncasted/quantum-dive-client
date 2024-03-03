@@ -14,14 +14,13 @@ using GamePlay.Player.Entity.Weapons.Bow.Components.Configuration;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Starter;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
-using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
 {
-    public class StanceShoot : IPlayerLocalState, IUpdatable, IComboState, IEntitySwitchLifetimeListener
+    public class StanceShoot : IPlayerLocalState, IComboState, IEntitySwitchLifetimeListener
     {
         public StanceShoot(
             ILocalStateMachine stateMachine,
@@ -30,20 +29,19 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
             IProjectileStarter projectileStarter,
             IProjectileStarterConfig projectileConfig,
             
-            IEnhancedAnimator playerAnimator,
+            IAnimation playerAnimation,
+            IPlayerAnimator playerAnimator,
             IRotation rotation,
             
             IBowAnimator bowAnimator,
             IBowGameObject bowGameObject,
 
             IUpdater updater,
-            
-            BowShootAnimation bowAnimation,
-            PlayerShootAnimation playerAnimation,
             PlayerStateDefinition[] transitions,
             BowShootDefinition definition)
         {
             _projectileConfig = projectileConfig;
+            _playerAnimation = playerAnimation;
             _playerAnimator = playerAnimator;
             _bowAnimator = bowAnimator;
             _updater = updater;
@@ -53,14 +51,13 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
             _rotation = rotation;
             _bowGameObject = bowGameObject;
             _projectileStarter = projectileStarter;
-            _bowAnimation = bowAnimation;
-            _playerAnimation = playerAnimation;
 
             Definition = definition;
             Transitions = transitions;
         }
 
         private readonly IProjectileStarterConfig _projectileConfig;
+        private readonly IAnimation _playerAnimation;
         private readonly IEnhancedAnimator _playerAnimator;
         private readonly IBowAnimator _bowAnimator;
         private readonly IUpdater _updater;
@@ -70,9 +67,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
         private readonly IRotation _rotation;
         private readonly IBowGameObject _bowGameObject;
         private readonly IProjectileStarter _projectileStarter;
-
-        private readonly BowShootAnimation _bowAnimation;
-        private readonly PlayerShootAnimation _playerAnimation;
 
         private CancellationTokenSource _cancellation;
 
@@ -93,29 +87,13 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
         {
             _stateMachine.Enter(this);
 
-            _updater.Add(this);
-            _bowGameObject.Enable();
+            Cancel();
 
             Process().Forget();
         }
 
-        public void Break()
-        {
-            _updater.Remove(this);
-            _bowGameObject.Disable();
-
-            Cancel();
-        }
-
-        public void OnUpdate(float delta)
-        {
-            _playerAnimation.SetOrientation(_rotation.Orientation);
-        }
-
         private async UniTask Process()
         {
-            Cancel();
-
             _cancellation = new CancellationTokenSource();
 
             var shootParams = new ShootParams(
@@ -124,15 +102,16 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
                 _config.ArrowSpeed.Value,
                 _projectileConfig.Scale,
                 _projectileConfig.Radius);
+
+            await _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
             
             _projectileStarter.Shoot(_rotation.Angle, _projectileConfig.Data.Definition, shootParams);
-
-            // var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
-            // var bowAnimationTask = _bowAnimator.PlayAsync(_bowAnimation, _cancellation.Token);
-            //
-            // await UniTask.WhenAll(tasks: new[] { playerAnimationTask, bowAnimationTask });
-
             _comboStateMachine.TryTransitCombo(this, Transitions);
+        }
+
+        public void Break()
+        {
+            Cancel();
         }
 
         private void Cancel()

@@ -1,29 +1,16 @@
-﻿using System;
-using Common.DataTypes.Structs;
-using GamePlay.Player.Entity.Components.Rotations.Orientation;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.ShootPoint.Runtime
 {
     public class BowShootPoint : IBowShootPoint
     {
-        public BowShootPoint(ShootPointProvider shootPoints)
+        public BowShootPoint(ShootPointProvider provider)
         {
-            _shootPoints = shootPoints;
+            _provider = provider;
         }
 
-        private readonly ShootPointProvider _shootPoints;
+        private readonly ShootPointProvider _provider;
 
-        public Vector2 GetShootPoint(PlayerOrientation orientation, Horizontal side)
-        {
-            var points = _shootPoints.Points[orientation];
-
-            return side switch
-            {
-                Horizontal.Right => points.Right.position,
-                Horizontal.Left => points.Left.position,
-                _ => throw new ArgumentOutOfRangeException(nameof(side), side, null)
-            };
-        }
+        public Transform Point => _provider.Point;
     }
 }

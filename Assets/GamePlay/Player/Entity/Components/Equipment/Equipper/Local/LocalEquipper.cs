@@ -32,7 +32,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Local
         {
             var equipment = await _factory.Create(config.Local, config.Slot);
             _binder.Bind(config.Slot, equipment.Transform);
-            _storage.Equip(equipment);
+            await _storage.Equip(equipment);
 
             _sync.OnEquipped(config);
         }

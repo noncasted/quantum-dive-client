@@ -31,6 +31,8 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Factory
                 config,
                 new[] { slotRegistration });
 
+            await equipment.Construct();
+
             return equipment;
         }
     }

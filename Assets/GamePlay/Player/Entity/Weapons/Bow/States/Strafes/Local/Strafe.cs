@@ -10,7 +10,6 @@ using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common;
-using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.InputReceiver;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
@@ -21,14 +20,13 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
 {
     public class Strafe :
         IPlayerLocalState,
-        IStrafe,
-        IUpdatable
+        IStrafe
     {
         public Strafe(
             ILocalStateMachine stateMachine,
             IComboStateMachine comboStateMachine,
             IUpdater updater,
-            IEnhancedAnimator playerAnimator,
+            IPlayerAnimator playerAnimator,
             IRotation rotation,
             IBowArrow arrow,
             IBowAnimator bowAnimator,
@@ -37,8 +35,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
             IStrafeInputReceiver input,
             ISubPush subPush,
             PushParams pushParams,
-            PlayerStrafeAnimation playerAnimation,
-            BowStrafeAnimation bowAnimation,
+            IAnimation playerAnimation,
+            IAnimation bowAnimation,
             StrafeDefinition definition,
             PlayerStateDefinition[] transitions)
         {
@@ -81,8 +79,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
         private readonly ISubPush _subPush;
         private readonly PushParams _pushParams;
 
-        private readonly PlayerStrafeAnimation _playerAnimation;
-        private readonly BowStrafeAnimation _bowAnimation;
+        private readonly IAnimation _playerAnimation;
+        private readonly IAnimation _bowAnimation;
 
         private readonly StrafeDefinition _definition;
         private readonly PlayerStateDefinition[] _transitions;
@@ -93,8 +91,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
 
         public void Break()
         {
-            _updater.Remove(this);
-            _bowGameObject.Disable();
             _arrow.Hide();
 
             Cancel();
@@ -103,7 +99,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
         public void Enter()
         {
             _stateMachine.Enter(this);
-            _updater.Add(this);
             _cancellation = new CancellationTokenSource();
 
             _bowGameObject.Enable();
@@ -112,18 +107,14 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
             Process().Forget();
         }
 
-        public void OnUpdate(float delta)
-        {
-            _playerAnimation.SetOrientation(_rotation.Orientation);
-        }
-
         private async UniTask Process()
         {
-            // var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
+            var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
+            var pushTask = _subPush.PushAsync(_input.Direction, _pushParams, _cancellation.Token);
+            await UniTask.WhenAll(tasks: new[] { playerAnimationTask, pushTask });
+
             // var bowAnimationTask = _bowAnimator.PlayAsync(_bowAnimation, _cancellation.Token);
-            // var pushTask = _subPush.PushAsync(_input.Direction, _pushParams, _cancellation.Token);
             //
-            // await UniTask.WhenAll(tasks: new[] { playerAnimationTask, bowAnimationTask, pushTask });
 
             _comboStateMachine.TryTransitCombo(this, _transitions);
         }

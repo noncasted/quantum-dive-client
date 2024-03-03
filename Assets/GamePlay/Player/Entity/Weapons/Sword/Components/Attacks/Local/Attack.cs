@@ -1,18 +1,15 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
-using Common.DataTypes.Structs;
 using Common.Tools.UniversalAnimators.Abstract;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Damages;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
-using GamePlay.Player.Entity.Components.Rotations.Orientation;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Runtime;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
-using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Common;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime;
@@ -40,10 +37,8 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
             ISwordAttackConfig config,
             IPlayerPosition position,
             PushParams pushParams,
-            SwordAttackAnimation animation,
             SwordAttackDefinition definition)
         {
-            _animation = animation;
             _inputReceiver = inputReceiver;
             _targetsSearcher = targetsSearcher;
             _animator = animator;
@@ -69,10 +64,8 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
         private readonly ISwordAttackConfig _config;
         private readonly IPlayerPosition _position;
         private readonly PushParams _pushParams;
-        private readonly SwordAttackAnimation _animation;
 
         private bool _isEntered;
-        private PlayerOrientation _orientation;
         private CancellationTokenSource _cancellation;
 
         public PlayerStateDefinition Definition { get; }
@@ -112,8 +105,6 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
 
             if (_isEntered == false)
                 return;
-
-            _animation.SetOrientation(_orientation);
         }
 
         private async UniTask Process()
@@ -122,15 +113,10 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
             _cancellation = new CancellationTokenSource();
             _isEntered = true;
             
-            _orientation = _rotation.Orientation;
-            
-            _animation.Attack += OnAttackFrame;
             //
             // var animationTask = _animator.PlayAsync(_animation, _cancellation.Token);
             //
             // await UniTask.WhenAll(animationTask);
-
-            _animation.Attack -= OnAttackFrame;
 
             _isEntered = false;
             _stateMachine.Exit(this);

@@ -15,7 +15,7 @@ MonoBehaviour:
   _isEnabled: 1
   _logs:
     _keys: 00000000010000000200000003000000
-    _values: 01010101
+    _values: 00010101
   _logParameters:
     _isMessageColored: 0
     _color: {r: 0, g: 0, b: 0, a: 0}

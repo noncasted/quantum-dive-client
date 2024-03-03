@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
+using Common.Tools.UniversalAnimators.Abstract;
 using Cysharp.Threading.Tasks;
 using GamePlay.Combat.Projectiles.Factory;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
@@ -9,11 +10,11 @@ using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Runtime;
 using GamePlay.Player.Entity.States.SubStates.Movement.Runtime;
+using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Configuration;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Starter;
-using GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Local;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
@@ -28,11 +29,12 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
         public FreeShooter(
             IFloatingTransitionsRegistry floatingTransitionsRegistry,
             IProjectileStarter projectileStarter,
-            IBowRotation rotation,
             IBowConfig config,
             IUpdater updater,
             IBowAnimator animator,
             IBowArrow arrow,
+            IPlayerAnimator playerAnimator,
+            IAnimation playerAnimation,
             IProjectileStarterConfig projectileConfig,
             IBowGameObject gameObject,
             IRotation playerRotation,
@@ -44,11 +46,12 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
         {
             _floatingTransitionsRegistry = floatingTransitionsRegistry;
             _projectileStarter = projectileStarter;
-            _rotation = rotation;
             _config = config;
             _updater = updater;
             _animator = animator;
             _arrow = arrow;
+            _playerAnimator = playerAnimator;
+            _playerAnimation = playerAnimation;
             _projectileConfig = projectileConfig;
             _gameObject = gameObject;
             _playerRotation = playerRotation;
@@ -59,13 +62,14 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
             Definition = definition;
         }
 
-        private readonly IBowRotation _rotation;
         private readonly IBowConfig _config;
         private readonly IFloatingTransitionsRegistry _floatingTransitionsRegistry;
         private readonly IProjectileStarter _projectileStarter;
         private readonly IUpdater _updater;
         private readonly IBowAnimator _animator;
         private readonly IBowArrow _arrow;
+        private readonly IPlayerAnimator _playerAnimator;
+        private readonly IAnimation _playerAnimation;
         private readonly IProjectileStarterConfig _projectileConfig;
         private readonly IBowGameObject _gameObject;
         private readonly IRotation _playerRotation;
@@ -99,7 +103,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
         public void Break()
         {
             Cancel();
-            _gameObject.Disable();
             _isProcessing = false;
 
             _subMovement.Exit();
@@ -115,9 +118,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
         {
             if (_isProcessing == true)
             {
-                var orientation = _playerRotation.Orientation;
-
-                _subMovement.SetAnimationRotation(orientation);
             }
 
             if (IsTransitionFromFloatingAvailable() == false
@@ -141,7 +141,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
             _subMovement.Enter(true, _moveConfig.Speed, MoveType.Walk);
             _gameObject.Enable();
 
-            //await _animator.PlayAimAsync(_cancellation.Token);
+            await _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
 
             var shootParams = new ShootParams(
                 _config.Damage.Value,
@@ -150,7 +150,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
                 _projectileConfig.Scale,
                 _projectileConfig.Radius);
 
-            _projectileStarter.Shoot(_rotation.Angle, _projectileConfig.Data.Definition, shootParams);
+            _projectileStarter.Shoot(0f, _projectileConfig.Data.Definition, shootParams);
 
             //await _animator.PlayShootAsync(_cancellation.Token);
 

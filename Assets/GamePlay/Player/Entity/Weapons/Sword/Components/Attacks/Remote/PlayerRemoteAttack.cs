@@ -13,21 +13,19 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Remote
 {
-    public class PlayerRemoteAttack : IPlayerRemoteState, IUpdatable, IEntitySwitchLifetimeListener
+    public class PlayerRemoteAttack : IPlayerRemoteState, IEntitySwitchLifetimeListener
     {
         public PlayerRemoteAttack(
             IRemoteRotation rotation,
             IUpdater updater,
             IRemoteStateMachine stateMachine,
             IEnhancedAnimator animator,
-            SwordAttackAnimation animation,
             SwordAttackDefinition definition)
         {
             _rotation = rotation;
             _updater = updater;
             _stateMachine = stateMachine;
             _animator = animator;
-            _animation = animation;
             _definition = definition;
         }
 
@@ -35,7 +33,6 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Remote
         private readonly IUpdater _updater;
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IEnhancedAnimator _animator;
-        private readonly SwordAttackAnimation _animation;
         private readonly SwordAttackDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -57,13 +54,6 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Remote
             _cancellation?.Cancel();
             _cancellation?.Dispose();
             _cancellation = null;
-
-            _updater.Remove(this);
-        }
-
-        public void OnUpdate(float delta)
-        {
-            _animation.SetOrientation(_rotation.Orientation);
         }
     }
 }

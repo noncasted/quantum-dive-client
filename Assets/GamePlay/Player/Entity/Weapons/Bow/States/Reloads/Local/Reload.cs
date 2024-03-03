@@ -12,11 +12,11 @@ using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Common;
-using GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
+using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
 {
@@ -27,14 +27,14 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
             ILocalStateMachine stateMachine,
             IComboStateMachine comboStateMachine,
             IBowGameObject gameObject,
-            IEnhancedAnimator playerAnimator,
+            IPlayerAnimator playerAnimator,
             IBowAnimator bowAnimator,
             IRotation rotation,
             IBowArrow arrow,
             IProjectileStarterConfig config,
 
-            BowReloadAnimation bowAnimation,
-            PlayerReloadAnimation playerAnimation,
+            IAnimation bowAnimation,
+            IAnimation playerAnimation,
 
             IUpdater updater,
             
@@ -68,8 +68,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
         private readonly IBowArrow _arrow;
         private readonly IProjectileStarterConfig _config;
         private readonly IUpdater _updater;
-        private readonly BowReloadAnimation _bowAnimation;
-        private readonly PlayerReloadAnimation _playerAnimation;
+        private readonly IAnimation _bowAnimation;
+        private readonly IAnimation _playerAnimation;
 
         private CancellationTokenSource _cancellation;
         
@@ -102,28 +102,26 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
         public void Break()
         {
             _updater.Remove(this);
-            _gameObject.Disable();
-
+            Debug.Log("Break reload");
             Cancel();
         }
 
         public void OnUpdate(float delta)
         {
-            _playerAnimation.SetOrientation(_rotation.Orientation);
+           // _playerAnimation.SetOrientation(_rotation.Orientation);
         }
 
         private async UniTask Process()
         {
-            Cancel();
-
             _cancellation = new CancellationTokenSource();
 
-            // var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
-            // var bowAnimationTask = _bowAnimator.PlayAsync(_bowAnimation, _cancellation.Token);
-            //
-            // _arrow.Show(_config.Data.Preview);
-            //
-            // await UniTask.WhenAll(tasks: new[] { playerAnimationTask, bowAnimationTask });
+            Debug.Log($"Start reload: {_playerAnimation.Data.Clip.name}");
+            await _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
+            Debug.Log($"End reload: {_playerAnimation.Data.Clip.name}");
+            
+            //var bowAnimationTask = _bowAnimator.PlayAsync(_bowAnimation, _cancellation.Token);
+            //_arrow.Show(_config.Data.Preview);
+            //await UniTask.WhenAll(tasks: new[] { playerAnimationTask, bowAnimationTask });
 
             _arrow.Hide();
 
@@ -132,6 +130,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
 
         private void Cancel()
         {
+            Debug.Log($"Cancel reload");
             _cancellation?.Cancel();
             _cancellation?.Dispose();
             _cancellation = null;

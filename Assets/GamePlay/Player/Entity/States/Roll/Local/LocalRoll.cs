@@ -4,7 +4,6 @@ using Common.Architecture.Lifetimes;
 using Common.DataTypes.Structs;
 using Common.Tools.UniversalAnimators.Abstract;
 using Cysharp.Threading.Tasks;
-using GamePlay.Player.Entity.Components.Rotations.Orientation;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
@@ -101,9 +100,6 @@ namespace GamePlay.Player.Entity.States.Roll.Local
             _cancellation = new CancellationTokenSource();
 
             _hitbox.Disable();
-
-            var orientation = _input.Direction.ToAngle().ToOrientation();
-            //_animation.SetOrientation(orientation);
 
             var animationTask = _playerAnimator.PlayAsync(_animation, _cancellation.Token);
             var pushTask = _push.PushAsync(_input.Direction, _config.Params, _cancellation.Token);

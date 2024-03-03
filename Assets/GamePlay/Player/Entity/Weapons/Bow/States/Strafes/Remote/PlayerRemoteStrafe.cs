@@ -9,7 +9,6 @@ using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common;
-using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
@@ -18,19 +17,19 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
 {
-    public class PlayerRemoteStrafe : IEntitySwitchLifetimeListener, IPlayerRemoteState, IUpdatable
+    public class PlayerRemoteStrafe : IEntitySwitchLifetimeListener, IPlayerRemoteState
     {
         public PlayerRemoteStrafe(
             IRemoteStateMachine stateMachine,
             IRemoteRotation remoteRotation,
-            IEnhancedAnimator playerAnimator,
+            IPlayerAnimator playerAnimator,
             IBowAnimator bowAnimator,
             IBowGameObject bowGameObject,
             IBowArrow arrow,
             IProjectileStarterConfig config,
             IUpdater updater,
-            PlayerStrafeAnimation playerAnimation,
-            BowStrafeAnimation bowAnimation,
+            IAnimation playerAnimation,
+            IAnimation bowAnimation,
             StrafeDefinition definition)
         {
             _stateMachine = stateMachine;
@@ -56,8 +55,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
         private readonly IProjectileStarterConfig _config;
         private readonly IUpdater _updater;
 
-        private readonly PlayerStrafeAnimation _playerAnimation;
-        private readonly BowStrafeAnimation _bowAnimation;
+        private readonly IAnimation _playerAnimation;
+        private readonly IAnimation _bowAnimation;
         private readonly StrafeDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -70,7 +69,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
         public void Enter(RagonBuffer buffer)
         {
             _cancellation = new CancellationTokenSource();
-            _updater.Add(this);
             _bowGameObject.Enable();
             _arrow.Show(_config.Data.Preview);
 
@@ -83,19 +81,13 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
             _cancellation?.Dispose();
             _cancellation = null;
 
-            _updater.Remove(this);
-            _bowGameObject.Disable();
             _arrow.Hide();
-        }
-
-        public void OnUpdate(float delta)
-        {
-            _playerAnimation.SetOrientation(_remoteRotation.Orientation);
         }
 
         private async UniTaskVoid Process()
         {
-            // var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
+            var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
+            await playerAnimationTask;
             // var bowAnimationTask = _bowAnimator.PlayAsync(_bowAnimation, _cancellation.Token);
             //
             // await UniTask.WhenAll(tasks: new[] { playerAnimationTask, bowAnimationTask });

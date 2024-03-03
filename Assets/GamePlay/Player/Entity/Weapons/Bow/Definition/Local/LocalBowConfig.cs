@@ -6,7 +6,6 @@ using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Root.Runtime;
-using GamePlay.Player.Entity.Weapons.Bow.Components.Rotations.Local;
 using GamePlay.Player.Entity.Weapons.Bow.Definition.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local;
 using GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local;
@@ -31,9 +30,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Definition.Local
 
         [FoldoutGroup("Common")] [SerializeField] [Indent]
         private ProjectileStarterFactory _projectileStarter;
-
-        [FoldoutGroup("Common")] [SerializeField] [Indent]
-        private RotationFactory _rotation;
 
         [FoldoutGroup("Combat")] [SerializeField] [Indent]
         private AimFactory _aim;
@@ -61,7 +57,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Definition.Local
             
             _input,
             _projectileStarter,
-            _rotation,
             _shoot,
 
             _aim,

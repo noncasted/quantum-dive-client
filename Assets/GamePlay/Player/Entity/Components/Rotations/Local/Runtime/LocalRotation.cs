@@ -3,7 +3,6 @@ using Common.Architecture.Lifetimes;
 using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Components.Rotations.Local.Logs;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
-using GamePlay.Player.Entity.Components.Rotations.Orientation;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Views.RotationPoint.Runtime;
 using Global.Inputs.Utils.Runtime.Projection;
@@ -34,8 +33,6 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
         private readonly IUpdater _updater;
 
         private float _angle;
-        private Horizontal _side;
-        private PlayerOrientation _orientation;
 
         public float Angle
         {
@@ -47,9 +44,6 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
             }
         }
 
-        public Horizontal Side => _side;
-        public PlayerOrientation Orientation => _orientation;
-
         public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
             _updater.Add(lifetime, this);
@@ -58,8 +52,6 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
         public void OnPreUpdate(float delta = 0f)
         {
             _angle = _inputProjection.GetAngleFrom(_point.Position);
-            _side = _angle.ToHorizontal();
-            _orientation = _angle.ToOrientation();
 
             _logger.OnRotationSet(_angle);
 

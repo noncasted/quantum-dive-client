@@ -68,8 +68,8 @@ namespace GamePlay.Combat.Projectiles.Factory
             
             var projectileObject = _pool.Get(request.Definition, position);
 
-            var angle = direction.ToAngle();
-            projectileObject.Transform.SetRotation(angle);
+            var angle = direction;
+            //projectileObject.Transform.SetRotation(angle);
 
             var entity = _entityCreator.CreateEntity();
 

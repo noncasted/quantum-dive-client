@@ -51,7 +51,6 @@ namespace GamePlay.Player.Entity.Views.Physics.Runtime
             _view.SetPosition(position);
 
             _logger.OnMoveEnqueued(direction, distance);
-            UnityEngine.Debug.Log($"Move: {position}");
         }
 
         public void SetVelocity(Vector2 direction, float force)

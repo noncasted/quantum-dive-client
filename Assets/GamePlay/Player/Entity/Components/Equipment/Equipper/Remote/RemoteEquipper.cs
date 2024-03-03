@@ -27,7 +27,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Remote
             _registry = registry;
             _entityProvider = entityProvider;
         }
-        
+
         private readonly IEquipmentSlotsStorage _storage;
         private readonly IEquipmentSlotBinder _binder;
         private readonly IEquipmentFactory _factory;
@@ -59,7 +59,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Remote
         public override void Deserialize(RagonBuffer buffer)
         {
             var count = buffer.ReadInt(0, 256);
-            
+
             _buffer.Clear();
 
             for (var i = 0; i < count; i++)
@@ -74,9 +74,9 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Remote
                     continue;
 
                 _equipped.Add(id);
-                
+
                 var factory = _registry.GetFactory(id);
-                
+
                 Equip(factory).Forget();
             }
 
@@ -84,16 +84,16 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Remote
             {
                 if (_buffer.Contains(id) == true)
                     continue;
-                
+
                 //TODO: Remote equipment
             }
         }
-        
+
         private async UniTask Equip(IEquipmentConfig config)
         {
             var equipment = await _factory.Create(config.Local, config.Slot);
             _binder.Bind(config.Slot, equipment.Transform);
-            _storage.Equip(equipment);
+            await _storage.Equip(equipment);
         }
     }
 }

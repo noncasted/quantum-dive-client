@@ -9,7 +9,6 @@ using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common;
-using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
@@ -17,25 +16,20 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
 {
-    public class Aim : IPlayerLocalState, IAim, IUpdatable
+    public class Aim : IPlayerLocalState
     {
         public Aim(
             ILocalStateMachine stateMachine,
             IComboStateMachine comboStateMachine,
-
-            IEnhancedAnimator playerAnimator,
-            
+            IPlayerAnimator playerAnimator,
             IBowAnimator bowAnimator,
-            IBowGameObject bowGameObject,            
+            IBowGameObject bowGameObject,
             IBowArrow arrow,
             IProjectileStarterConfig config,
-
             IUpdater updater,
             IRotation rotation,
-
-            PlayerAimAnimation playerAnimation,
-            BowAimAnimation bowAnimation,
-            
+            IAnimation playerAnimation,
+            //BowAimAnimation bowAnimation,
             AimDefinition definition,
             PlayerStateDefinition[] transitions)
         {
@@ -49,12 +43,12 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
             _updater = updater;
             _rotation = rotation;
             _playerAnimation = playerAnimation;
-            _bowAnimation = bowAnimation;
+            //_bowAnimation = bowAnimation;
             _transitions = transitions;
 
             Definition = definition;
         }
-        
+
         private readonly ILocalStateMachine _stateMachine;
         private readonly IComboStateMachine _comboStateMachine;
         private readonly IEnhancedAnimator _playerAnimator;
@@ -65,13 +59,14 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
         private readonly IBowArrow _arrow;
         private readonly IProjectileStarterConfig _config;
 
-        private readonly PlayerAimAnimation _playerAnimation;
-        private readonly BowAimAnimation _bowAnimation;
+        private readonly IAnimation _playerAnimation;
+
+        //private readonly BowAimAnimation _bowAnimation;
         private readonly PlayerStateDefinition[] _transitions;
 
         private bool _isEntered;
         private CancellationTokenSource _cancellation;
-        
+
         public PlayerStateDefinition Definition { get; }
         public bool IsEntered => _isEntered;
 
@@ -80,7 +75,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
             _stateMachine.Enter(this);
 
             _isEntered = true;
-            _updater.Add(this);
             _bowGameObject.Enable();
             _arrow.Show(_config.Data.Preview);
 
@@ -90,26 +84,17 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
         public void Break()
         {
             _isEntered = false;
-            _updater.Remove(this);
-            _bowGameObject.Disable();
             _arrow.Hide();
 
             Cancel();
         }
 
-        public void OnUpdate(float delta)
-        {
-            _playerAnimation.SetOrientation(_rotation.Orientation);
-        }
-        
         private async UniTask Process()
         {
             _cancellation = new CancellationTokenSource();
-            
-            // var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
-            // var bowAnimationTask = _bowAnimator.PlayAsync(_bowAnimation, _cancellation.Token);
-            //
-            // await UniTask.WhenAll(tasks: new[] { playerAnimationTask, bowAnimationTask });
+
+            var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
+            await playerAnimationTask;
 
             _comboStateMachine.TryTransitCombo(this, _transitions);
         }

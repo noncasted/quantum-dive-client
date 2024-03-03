@@ -2,13 +2,11 @@
 using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Architecture.Lifetimes;
 using Common.Tools.UniversalAnimators.Abstract;
-using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
-using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
@@ -16,18 +14,16 @@ using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
 {
-    public class PlayerRemoteShoot : IEntitySwitchLifetimeListener, IPlayerRemoteState, IUpdatable
+    public class PlayerRemoteShoot : IEntitySwitchLifetimeListener, IPlayerRemoteState
     {
         public PlayerRemoteShoot(
             IRemoteStateMachine stateMachine,
             IRemoteRotation remoteRotation,
-            IEnhancedAnimator playerAnimator,
+            IPlayerAnimator playerAnimator,
             IBowAnimator bowAnimator,
             IBowGameObject bowGameObject,
             IUpdater updater,
             
-            PlayerShootAnimation playerAnimation,
-            BowShootAnimation bowAnimation,
             BowShootDefinition definition)
         {
             _stateMachine = stateMachine;
@@ -37,8 +33,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
             _bowGameObject = bowGameObject;
             _updater = updater;
             
-            _playerAnimation = playerAnimation;
-            _bowAnimation = bowAnimation;
             _definition = definition;
         }
         
@@ -49,8 +43,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
         private readonly IBowGameObject _bowGameObject;
         private readonly IUpdater _updater;
         
-        private readonly PlayerShootAnimation _playerAnimation;
-        private readonly BowShootAnimation _bowAnimation;
         private readonly BowShootDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -64,10 +56,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
         public void Enter(RagonBuffer buffer)
         {
             _cancellation = new CancellationTokenSource();
-            _updater.Add(this);
             _bowGameObject.Enable();
-
-            Process().Forget();
         }
 
         public void Break()
@@ -76,22 +65,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote
             _cancellation?.Dispose();
             _cancellation = null;
             
-            _updater.Remove(this);
-            _bowGameObject.Disable();
-        }
-
-        
-        public void OnUpdate(float delta)
-        {
-            _playerAnimation.SetOrientation(_remoteRotation.Orientation);
-        }
-        
-        private async UniTaskVoid Process()
-        {
-            // var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
-            // var bowAnimationTask = _bowAnimator.PlayAsync(_bowAnimation, _cancellation.Token);
-            //
-            // await UniTask.WhenAll(tasks: new[] { playerAnimationTask, bowAnimationTask });
         }
     }
 }

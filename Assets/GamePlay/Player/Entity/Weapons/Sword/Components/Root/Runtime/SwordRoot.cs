@@ -1,4 +1,6 @@
-﻿using Common.Architecture.Entities.Runtime.Callbacks;
+﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
+using Common.Architecture.Lifetimes;
+using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Definitions.Abstract;
 using GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
@@ -10,46 +12,58 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Root.Runtime
     {
         public SwordRoot(
             ISwordTransform transform,
-            IEntityCallbacksRegistry callbacksRegistry,
+            IEntityCallbacks callbacks,
             SlotDefinition definition)
         {
             _transform = transform;
-            _callbacksRegistry = callbacksRegistry;
+            _callbacks = callbacks;
             _definition = definition;
         }
 
         private readonly ISwordTransform _transform;
-        private readonly IEntityCallbacksRegistry _callbacksRegistry;
+        private readonly IEntityCallbacks _callbacks;
         private readonly SlotDefinition _definition;
 
         private bool _isActive;
+        private ILifetime _lifetime;
 
         public SlotDefinition Slot => _definition;
         public Transform Transform => _transform.Transform;
 
-        public void Select()
+        public UniTask Construct()
+        {
+            return _callbacks.RunConstruct();
+        }
+
+        public async UniTask Select()
         {
             if (_isActive == true)
             {
-                Debug.LogError("Bow can't be enabled twice");
+                Debug.LogError("Sword can't be enabled twice");
                 return;
             }
 
             _isActive = true;
 
-            _callbacksRegistry.Handlers[CallbackStage.Enable].Run();
+            if (_lifetime != null)
+                await _lifetime.Terminate();
+
+            _lifetime = new Lifetime();
+            await _callbacks.RunEnable(_lifetime);
         }
 
-        public void Deselect()
+        public async UniTask Deselect()
         {
             if (_isActive == false)
             {
-                Debug.LogError("Bow can't be disabled twice");
+                Debug.LogError("Sword can't be disabled twice");
                 return;
             }
 
             _isActive = false;
-            _callbacksRegistry.Handlers[CallbackStage.Disable].Run();
+
+            await _lifetime.Terminate();
+            await _callbacks.RunDisable();
         }
     }
 }

@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &413876188219868496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3522275065486680004}
+  - component: {fileID: 5789834435284366625}
+  m_Layer: 0
+  m_Name: BowSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3522275065486680004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413876188219868496}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8396872517529453332}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5789834435284366625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413876188219868496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f164c75e6ff04d438fe1d658b6de4985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2779254940798784781
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,8 +671,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slots:
-    _keys: []
-    _values: []
+    _keys:
+    - {fileID: 11400000, guid: ce9fec2a215a7494cb72669ff68f57e3, type: 2}
+    _values:
+    - {fileID: 5789834435284366625}
 --- !u!1 &5875971240214143175
 GameObject:
   m_ObjectHideFlags: 0
@@ -5891,7 +5937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3329601828205363682, guid: 791ab37bbf465924ea7572d98f756fc7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3522275065486680004}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1624758465558247250, guid: 791ab37bbf465924ea7572d98f756fc7,
         type: 3}
@@ -5951,6 +6001,12 @@ Transform:
 --- !u!4 &7062468030142539256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4084867567914297102, guid: 791ab37bbf465924ea7572d98f756fc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6535479695821587190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8396872517529453332 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3329601828205363682, guid: 791ab37bbf465924ea7572d98f756fc7,
     type: 3}
   m_PrefabInstance: {fileID: 6535479695821587190}
   m_PrefabAsset: {fileID: 0}

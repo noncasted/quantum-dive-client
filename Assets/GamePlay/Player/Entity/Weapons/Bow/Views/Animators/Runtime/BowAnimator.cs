@@ -1,39 +1,28 @@
 ﻿using System.Threading;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
-using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
-using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
-using Common.Tools.UniversalAnimators.Animators.Runtime;
-using Common.Tools.UniversalAnimators.Updaters.Runtime;
+using Animancer;
+using Common.Tools.UniversalAnimators.Abstract;
+using Common.Tools.UniversalAnimators.Runtime;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime
 {
-    public class BowAnimator : IBowAnimator, IEntitySwitchLifetimeListener
+    public class BowAnimator : IBowAnimator
     {
-        public BowAnimator(SpriteRenderer spriteRenderer, IAnimatorsUpdater updater)
+        public BowAnimator(AnimancerComponent animator)
         {
-            _updater = updater;
-            _animator = new UniversalAnimator(spriteRenderer);
+            _animator = new EnhancedAnimator(animator);
         }
 
-        private readonly IAnimatorsUpdater _updater;
-        private readonly UniversalAnimator _animator;
+        private readonly IEnhancedAnimator _animator;
 
-        public void OnSwitchLifetimeCreated(ILifetime lifetime)
-        {
-            _updater.Register(lifetime, _animator);
-        }
-        
-        public void PlayLooped(ILoopedAnimation animation)
+        public void PlayLooped(IAnimation animation)
         {
             _animator.PlayLooped(animation);
         }
 
-        public async UniTask PlayAsync(IAsyncAnimation animation, CancellationToken cancellationToken)
+        public UniTask PlayAsync(IAnimation animation, CancellationToken cancellationToken)
         {
-            await _animator.PlayAsync(animation, cancellationToken);
+            return _animator.PlayAsync(animation, cancellationToken);
         }
     }
 }

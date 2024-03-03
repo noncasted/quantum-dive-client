@@ -1,8 +1,8 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
+using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
-using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -14,19 +14,20 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
         menuName = ShootRoutes.LocalPath)]
     public class StanceShootFactory : ShooterFactory
     {
-        [SerializeField] [Indent] private BowShootAnimationFactory _bowAnimation;
-        [SerializeField] [Indent] private PlayerShootAnimationFactory _playerAnimation;
+        [SerializeField] private BaseAnimationData _playerAnimation;
+        [SerializeField] private BaseAnimationData _bowAnimation;
+        
         [SerializeField] [Indent] private BowShootDefinition _definition;
         [SerializeField] [Indent] private PlayerStateDefinition[] _transitions;
         
         public override void Create(IServiceCollection services, IEntityUtils utils)
         {
-            var bowAnimation = _bowAnimation.Create();
-            var playerAnimation = _playerAnimation.Create();
-
+            var playerAnimation = _playerAnimation.CreateAnimation();
+            var bowAnimation = _bowAnimation.CreateAnimation();
+            
             services.Register<StanceShoot>()
-                .WithParameter(bowAnimation)
-                .WithParameter(playerAnimation)
+                .WithParameter(playerAnimation, "playerAnimation")
+                .WithParameter(bowAnimation, "bowAnimation")
                 .WithParameter(_definition)
                 .WithParameter(_transitions)
                 .AsCallbackListener();

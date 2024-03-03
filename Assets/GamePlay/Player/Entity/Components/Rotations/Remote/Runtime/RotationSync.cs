@@ -1,6 +1,5 @@
 ﻿using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
-using GamePlay.Player.Entity.Components.Rotations.Orientation;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Logs;
 using Ragon.Client;
 using Ragon.Client.Compressor;
@@ -26,13 +25,8 @@ namespace GamePlay.Player.Entity.Components.Rotations.Remote.Runtime
         private readonly FloatCompressor _compressor;
 
         private float _angle;
-        private Horizontal _side;
-        private PlayerOrientation _orientation;
 
         public float Angle => _angle;
-
-        public Horizontal Side => _side;
-        public PlayerOrientation Orientation => _orientation;
 
         public void SetRotation(float value)
         {
@@ -57,8 +51,6 @@ namespace GamePlay.Player.Entity.Components.Rotations.Remote.Runtime
                 return;
 
             _angle = _compressor.Decompress(compressedAngle);
-            _side = _angle.ToHorizontal();
-            _orientation = _angle.ToOrientation();
 
             _logger.OnDeserialize(_angle);
         }

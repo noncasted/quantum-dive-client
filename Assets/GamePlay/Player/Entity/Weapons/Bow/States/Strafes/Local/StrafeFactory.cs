@@ -1,9 +1,9 @@
 ﻿using Common.Architecture.Container.Abstract;
 using Common.Architecture.Entities.Runtime;
+using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common;
-using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Common.Animations;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -14,15 +14,15 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
     public class StrafeFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] [Indent] private PushParams _pushParams;
-        [SerializeField] [Indent] private PlayerStrafeAnimationFactory _playerAnimation;
-        [SerializeField] [Indent] private BowStrafeAnimationFactory _bowAnimation;
+        [SerializeField] [Indent] private BaseAnimationData _playerAnimation;
+        [SerializeField] [Indent] private BaseAnimationData _bowAnimation;
         [SerializeField] [Indent] private StrafeDefinition _definition;
         [SerializeField] [Indent] private PlayerStateDefinition[] _transitions;
 
         public void Create(IServiceCollection services, IEntityUtils utils)
         {
-            var playerAnimation = _playerAnimation.Create();
-            var bowAnimation = _bowAnimation.Create();
+            var playerAnimation = _playerAnimation.CreateAnimation();
+            var bowAnimation = _bowAnimation.CreateAnimation();
 
             services.Register<StrafeEntry>()
                 .WithParameter(_transitions)
@@ -32,8 +32,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
                 .WithParameter(_definition)
                 .WithParameter(_pushParams)
                 .WithParameter(_transitions)
-                .WithParameter(playerAnimation)
-                .WithParameter(bowAnimation)
+                .WithParameter(playerAnimation, "playerAnimation")
+                .WithParameter(bowAnimation, "bowAnimation")
                 .AsCallbackListener()
                 .As<IStrafe>();
         }

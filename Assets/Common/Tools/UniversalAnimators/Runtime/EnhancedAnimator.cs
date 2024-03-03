@@ -26,13 +26,13 @@ namespace Common.Tools.UniversalAnimators.Runtime
             var data = animation.Data;
             var state = _animator.Play(data.Clip, data.FadeDuration);
             var completion = new UniTaskCompletionSource();
-
+            
             state.Events.OnEnd += OnEnd;
 
             cancellationToken.Register(OnCancelled);
 
             await completion.Task;
-
+            
             state.Events.OnEnd -= OnEnd;
 
             return;

@@ -9,7 +9,6 @@ using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common;
-using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common.Animations;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
@@ -23,14 +22,14 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Remote
         public PlayerRemoteAim(
             IRemoteStateMachine stateMachine,
             IRemoteRotation remoteRotation,
-            IEnhancedAnimator playerAnimator,
+            IPlayerAnimator playerAnimator,
             IBowAnimator bowAnimator,
             IBowGameObject bowGameObject,
             IBowArrow arrow,
             IProjectileStarterConfig config,
             IUpdater updater,
-            PlayerAimAnimation playerAnimation,
-            BowAimAnimation bowAnimation,
+            IAnimation playerAnimation,
+            IAnimation bowAnimation,
             AimDefinition definition)
         {
             _stateMachine = stateMachine;
@@ -54,8 +53,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Remote
         private readonly IBowArrow _arrow;
         private readonly IProjectileStarterConfig _config;
         private readonly IUpdater _updater;
-        private readonly PlayerAimAnimation _playerAnimation;
-        private readonly BowAimAnimation _bowAnimation;
+        private readonly IAnimation _playerAnimation;
+        private readonly IAnimation _bowAnimation;
         private readonly AimDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -82,14 +81,12 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Remote
             _cancellation = null;
             
             _updater.Remove(this);
-            _bowGameObject.Disable();
             _arrow.Hide();
         }
 
         
         public void OnUpdate(float delta)
         {
-            _playerAnimation.SetOrientation(_remoteRotation.Orientation);
         }
         
         private async UniTaskVoid Process()

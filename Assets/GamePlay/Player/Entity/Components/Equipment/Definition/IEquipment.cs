@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.Equipment.Slots.Definitions.Abstract;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Player.Entity.Components.Equipment.Slots.Definitions.Abstract;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Components.Equipment.Definition
@@ -7,7 +8,8 @@ namespace GamePlay.Player.Entity.Components.Equipment.Definition
     {
         SlotDefinition Slot { get; }
         Transform Transform { get; }
-        void Select();
-        void Deselect();
+        UniTask Construct();
+        UniTask Select();
+        UniTask Deselect();
     }
 }

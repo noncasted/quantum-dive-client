@@ -27,10 +27,10 @@ namespace GamePlay.Player.Entity.Views.Animators.Runtime
             _animator.PlayLooped(animation);
         }
 
-        public UniTask PlayAsync(IAnimation animation, CancellationToken cancellationToken)
+        public async UniTask PlayAsync(IAnimation animation, CancellationToken cancellationToken)
         {
             _logger.OnAsync(animation.Data.Clip.name);
-            return _animator.PlayAsync(animation, cancellationToken);
+            await _animator.PlayAsync(animation, cancellationToken);
         }
     }
 }
