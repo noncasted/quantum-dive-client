@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Common.Architecture.Scopes.Runtime.Utils
+namespace Internal.Scopes.Abstract.Instances.Services
 {
     public interface IServiceScopeBinder
     {

@@ -1,11 +1,11 @@
 ﻿using System;
-using Common.Architecture.Scopes.Runtime.Utils;
 using Cysharp.Threading.Tasks;
 using Internal.Scopes.Abstract.Callbacks;
+using Internal.Scopes.Abstract.Instances.Services;
 
-namespace Internal.Scopes.Runtime.Instances.Services
+namespace Internal.Scopes.Common.Services
 {
-    public class ServiceDefaultCallbacksFactory
+    public class ServiceDefaultCallbacksRegister
     {
         public void AddCallbacks(ICallbacksRegistry callbacks, IServiceScopeData data)
         {

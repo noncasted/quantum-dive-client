@@ -1,7 +1,7 @@
 ﻿using Internal.Scopes.Abstract.Lifetimes;
 using VContainer.Unity;
 
-namespace Common.Architecture.Scopes.Runtime.Utils
+namespace Internal.Scopes.Abstract.Instances.Services
 {
     public interface IServiceScopeData
     {

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Instances.Services;
 
-namespace Common.Architecture.Scopes.Runtime.Services
+namespace Internal.Scopes.Abstract.Instances.Services
 {
     public interface IServicesCompose
     {

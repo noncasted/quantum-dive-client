@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Internal.Options.Common;
+using Internal.Scopes.Abstract.Options;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

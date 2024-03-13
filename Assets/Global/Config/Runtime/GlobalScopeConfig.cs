@@ -33,7 +33,7 @@ namespace Global.Config.Runtime
         [SerializeField] private GameLoopFactory _gameLoop;
         [SerializeField] private PublisherSdkFactory _publisherSdk;
         [SerializeField] private BackendFactory _backend;
-        [SerializeField] private DefaultCallbacksServiceFactory _defaultCallbacks;
+        [SerializeField] private DefaultCallbacksServiceFactory _serviceDefaultCallbacks;
         [SerializeField] private ScopeDestroyHandlerFactory _scopeDestroyHandler;
         [SerializeField] private ConfigsCompose _configs;
         [SerializeField] private DrawingFactory _drawing;
@@ -63,7 +63,7 @@ namespace Global.Config.Runtime
             _publisherSdk,
             _gameLoop,
             _backend,
-            _defaultCallbacks,
+            _serviceDefaultCallbacks,
             _scopeDestroyHandler,
             _drawing
         };

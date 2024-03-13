@@ -1,8 +1,8 @@
-﻿using Common.Architecture.Mocks.Runtime;
+﻿using Internal.Scopes.Mocks.Runtime;
 using UnityEditor;
 using UnityEngine;
 
-namespace Common.Architecture.Mocks.Editor
+namespace Internal.Scopes.Mocks.Editor
 {
     [InitializeOnLoad]
     public static class MockSwitcher

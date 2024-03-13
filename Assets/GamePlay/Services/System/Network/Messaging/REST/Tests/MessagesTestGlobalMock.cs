@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Mocks.Runtime;
 using Common.Architecture.Scopes.Common.DefaultCallbacks;
 using Common.Architecture.Scopes.Factory;
 using Common.Architecture.Scopes.Runtime.Services;
@@ -10,6 +9,7 @@ using Global.Network.Connection.Runtime;
 using Global.Network.Session.Runtime.Create;
 using Global.Network.Session.Runtime.Join;
 using Internal.Scenes.Data;
+using Internal.Scopes.Mocks.Runtime;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -23,7 +23,7 @@ namespace GamePlay.System.Network.Messaging.REST.Tests
 
         [SerializeField] private GamePlayScope _scopePrefab;
         [SerializeField] private SceneData _servicesScene;
-        [SerializeField] private DefaultCallbacksServiceFactory _defaultCallbacks;
+        [SerializeField] private DefaultCallbacksServiceFactory _serviceDefaultCallbacks;
 
         public LifetimeScope ScopePrefab => _scopePrefab;
         public ISceneAsset ServicesScene => _servicesScene;
@@ -31,7 +31,7 @@ namespace GamePlay.System.Network.Messaging.REST.Tests
 
         public IReadOnlyList<IServiceFactory> Services => new IServiceFactory[]
         {
-            _defaultCallbacks
+            _serviceDefaultCallbacks
         };
 
         public IReadOnlyList<IServicesCompose> Composes => new IServicesCompose[]

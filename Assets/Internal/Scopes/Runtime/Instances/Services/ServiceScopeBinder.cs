@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

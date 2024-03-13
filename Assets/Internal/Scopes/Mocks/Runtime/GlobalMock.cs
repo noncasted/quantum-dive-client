@@ -7,7 +7,7 @@ using Internal.Scope;
 using UnityEngine;
 using VContainer;
 
-namespace Common.Architecture.Mocks.Runtime
+namespace Internal.Scopes.Mocks.Runtime
 {
     [Serializable]
     public class GlobalMock

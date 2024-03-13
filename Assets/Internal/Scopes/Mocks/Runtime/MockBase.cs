@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Common.Architecture.Mocks.Runtime
+namespace Internal.Scopes.Mocks.Runtime
 {
     [DisallowMultipleComponent]
     public abstract class MockBase : MonoBehaviour

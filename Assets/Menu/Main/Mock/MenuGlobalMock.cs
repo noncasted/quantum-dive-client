@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Mocks.Runtime;
-using Common.Architecture.Scopes.Factory;
+﻿using Common.Architecture.Scopes.Factory;
 using Cysharp.Threading.Tasks;
+using Internal.Scopes.Mocks.Runtime;
 using Menu.Config.Runtime;
 using UnityEngine;
 using VContainer;

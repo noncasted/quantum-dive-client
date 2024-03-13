@@ -2,7 +2,7 @@
 using Internal.Scopes.Abstract.Options;
 using Internal.Scopes.Abstract.Scenes;
 
-namespace Common.Architecture.Scopes.Runtime.Utils
+namespace Internal.Scopes.Abstract.Instances.Services
 {
     public interface IServiceScopeUtils
     {

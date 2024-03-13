@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 using VContainer;
 using VContainer.Unity;
 
-namespace Common.Architecture.Mocks.Runtime
+namespace Internal.Scopes.Mocks.Runtime
 {
     public class MockBootstrapResult
     {

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Internal.Options.Common;
+using Internal.Scopes.Abstract.Options;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

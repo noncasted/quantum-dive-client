@@ -24,7 +24,7 @@ namespace GamePlay.Common.Config.Runtime
         [SerializeField] private LevelNetworkCompose _network;
         [SerializeField] private PlayerServicesCompose _player;
         [SerializeField] private EnemyServicesCompose _enemy;
-        [SerializeField] private DefaultCallbacksServiceFactory _defaultCallbacks;
+        [SerializeField] private DefaultCallbacksServiceFactory _serviceDefaultCallbacks;
 
         [SerializeField] private GamePlayScope _scopePrefab;
         [SerializeField] private SceneData _servicesScene;
@@ -37,7 +37,7 @@ namespace GamePlay.Common.Config.Runtime
         public IReadOnlyList<IServiceFactory> Services => new IServiceFactory[]
         {
             _environment,
-            _defaultCallbacks
+            _serviceDefaultCallbacks
         };
 
         public IReadOnlyList<IServicesCompose> Composes => new IServicesCompose[]

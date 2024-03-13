@@ -2,7 +2,7 @@
 using Internal.Scopes.Abstract.Lifetimes;
 using VContainer.Unity;
 
-namespace Internal.Scopes.Runtime.Instances.Services
+namespace Internal.Scopes.Abstract.Instances.Services
 {
     public interface IScopeAwakeListener
     {
