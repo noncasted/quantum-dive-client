@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _clip: {fileID: 0}
   _time: 1
-  _fadeDuration: 0.3
+  _fadeDuration: 0.5
   _layer: {fileID: 11400000, guid: 80a7dac515849de4b94106a39f5eff4e, type: 2}
