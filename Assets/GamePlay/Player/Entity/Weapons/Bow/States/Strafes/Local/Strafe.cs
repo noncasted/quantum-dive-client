@@ -33,6 +33,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
             IBowGameObject bowGameObject,
             IProjectileStarterConfig projectileStarterConfig,
             IStrafeInputReceiver input,
+            IAngleSteering steering,
             ISubPush subPush,
             PushParams pushParams,
             IAnimation playerAnimation,
@@ -53,6 +54,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
             _projectileStarterConfig = projectileStarterConfig;
 
             _input = input;
+            _steering = steering;
             _subPush = subPush;
 
             _pushParams = pushParams;
@@ -76,6 +78,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
         private readonly IProjectileStarterConfig _projectileStarterConfig;
 
         private readonly IStrafeInputReceiver _input;
+        private readonly IAngleSteering _steering;
         private readonly ISubPush _subPush;
         private readonly PushParams _pushParams;
 
@@ -111,10 +114,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
         {
             var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
             var pushTask = _subPush.PushAsync(_input.Direction, _pushParams, _cancellation.Token);
+            _steering.Start(_playerAnimation.Data.Clip.length  / 2f);
             await UniTask.WhenAll(tasks: new[] { playerAnimationTask, pushTask });
-
-            // var bowAnimationTask = _bowAnimator.PlayAsync(_bowAnimation, _cancellation.Token);
-            //
+            _steering.Stop();
 
             _comboStateMachine.TryTransitCombo(this, _transitions);
         }

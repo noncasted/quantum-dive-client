@@ -10,15 +10,12 @@ namespace GamePlay.Combat.Projectiles.Systems.HitDetection
         public ProjectilePools(EcsWorld world)
         {
             _actionsPool = world.GetPool<ProjectileActionsComponent>();
-            _colliderPool = world.GetPool<ProjectileColliderComponent>();
             _damagePool = world.GetPool<ProjectileDamageComponent>();
             _transformPool = world.GetPool<ProjectileTransformComponent>();
             _hitboxPool = world.GetPool<HitboxComponent>();
-            _moveHistoryPool = world.GetPool<ProjectileMoveHistoryComponent>();
 
             LocalPlayerProjectiles = world
                 .Filter<ProjectileActionsComponent>()
-                .Inc<ProjectileColliderComponent>()
                 .Inc<ProjectileDamageComponent>()
                 .Inc<ProjectileTransformComponent>()
                 .Inc<PlayerFlag>()
@@ -27,7 +24,6 @@ namespace GamePlay.Combat.Projectiles.Systems.HitDetection
 
             RemotePlayerProjectiles = world
                 .Filter<ProjectileActionsComponent>()
-                .Inc<ProjectileColliderComponent>()
                 .Inc<ProjectileDamageComponent>()
                 .Inc<ProjectileTransformComponent>()
                 .Inc<PlayerFlag>()
@@ -36,7 +32,6 @@ namespace GamePlay.Combat.Projectiles.Systems.HitDetection
 
             EnemyProjectiles = world
                 .Filter<ProjectileActionsComponent>()
-                .Inc<ProjectileColliderComponent>()
                 .Inc<ProjectileDamageComponent>()
                 .Inc<ProjectileTransformComponent>()
                 .Inc<EnemyFlag>()
@@ -61,10 +56,8 @@ namespace GamePlay.Combat.Projectiles.Systems.HitDetection
         }
 
         private readonly EcsPool<ProjectileActionsComponent> _actionsPool;
-        private readonly EcsPool<ProjectileColliderComponent> _colliderPool;
         private readonly EcsPool<ProjectileDamageComponent> _damagePool;
         private readonly EcsPool<ProjectileTransformComponent> _transformPool;
-        private readonly EcsPool<ProjectileMoveHistoryComponent> _moveHistoryPool;
 
         private readonly EcsPool<HitboxComponent> _hitboxPool;
 
@@ -80,11 +73,6 @@ namespace GamePlay.Combat.Projectiles.Systems.HitDetection
             return ref _actionsPool.Get(entity);
         }
 
-        public ref ProjectileColliderComponent GetCollider(int entity)
-        {
-            return ref _colliderPool.Get(entity);
-        }
-
         public ref ProjectileDamageComponent GetDamage(int entity)
         {
             return ref _damagePool.Get(entity);
@@ -98,11 +86,6 @@ namespace GamePlay.Combat.Projectiles.Systems.HitDetection
         public ref HitboxComponent GetHitbox(int entity)
         {
             return ref _hitboxPool.Get(entity);
-        }
-
-        public ref ProjectileMoveHistoryComponent GetMoveHistory(int entity)
-        {
-            return ref _moveHistoryPool.Get(entity);
         }
     }
 }

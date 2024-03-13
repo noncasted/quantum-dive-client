@@ -11,6 +11,6 @@ namespace GamePlay.Player.Entity.Views.RotationPoint.Runtime
         
         private readonly Transform _transform;
 
-        public Vector2 Position => _transform.position;
+        public Vector3 Position => _transform.position;
     }
 }

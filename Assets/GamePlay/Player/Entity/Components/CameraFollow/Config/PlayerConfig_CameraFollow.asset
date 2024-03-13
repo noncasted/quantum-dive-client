@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 10
   _rotationSpeed: 10
-  _distance: 20
+  _distance: 8
   _xAngle: 225
-  _yAngle: 90
+  _yAngle: -90

@@ -24,7 +24,7 @@ namespace Common.Tools.ObjectsPools.Runtime
         private readonly ObjectsRegistry<T> _registry = new();
         private readonly int _startupInstances;
 
-        public T Get(Vector2 position)
+        public T Get(Vector3 position)
         {
             T poolObject;
 
@@ -34,7 +34,7 @@ namespace Common.Tools.ObjectsPools.Runtime
             }
             else
             {
-                poolObject = _factory.Create(Vector2.zero);
+                poolObject = _factory.Create(Vector3.zero);
                 poolObject.Construct(Return);
                 MoveToParent(poolObject);
                 _registry.OnActiveCreated(poolObject);
@@ -62,7 +62,7 @@ namespace Common.Tools.ObjectsPools.Runtime
         {
             for (var i = 0; i < _startupInstances; i++)
             {
-                var poolObject = _factory.Create(Vector2.zero);
+                var poolObject = _factory.Create(Vector3.zero);
 
                 poolObject.Construct(Return);
                 MoveToParent(poolObject);

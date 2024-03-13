@@ -29,5 +29,15 @@ namespace Common.DataTypes.Structs
 
             return direction;
         }
+        
+        public static Vector3 ToPlainDirection(this float angle)
+        {
+            var radians = angle * Mathf.Deg2Rad;
+            var x = Mathf.Sin(radians);
+            var z = Mathf.Cos(radians);
+            var direction = new Vector3(x, 0f, z);
+
+            return direction;
+        }
     }
 }

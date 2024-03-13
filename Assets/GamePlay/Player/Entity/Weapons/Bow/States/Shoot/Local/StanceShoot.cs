@@ -17,6 +17,7 @@ using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
+using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
 {
@@ -101,10 +102,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
                 _config.PushForce.Value,
                 _config.ArrowSpeed.Value,
                 _projectileConfig.Scale,
-                _projectileConfig.Radius);
+                _projectileConfig.Radius); 
 
-            await _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
-            
             _projectileStarter.Shoot(_rotation.Angle, _projectileConfig.Data.Definition, shootParams);
             _comboStateMachine.TryTransitCombo(this, Transitions);
         }

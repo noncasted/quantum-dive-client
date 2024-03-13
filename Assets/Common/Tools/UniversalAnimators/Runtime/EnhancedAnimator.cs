@@ -24,7 +24,8 @@ namespace Common.Tools.UniversalAnimators.Runtime
         public async UniTask PlayAsync(IAnimation animation, CancellationToken cancellationToken)
         {
             var data = animation.Data;
-            var state = _animator.Play(data.Clip, data.FadeDuration);
+            var state = _animator.Play(data.Clip, data.FadeDuration, FadeMode.FromStart);
+            
             var completion = new UniTaskCompletionSource();
             
             state.Events.OnEnd += OnEnd;

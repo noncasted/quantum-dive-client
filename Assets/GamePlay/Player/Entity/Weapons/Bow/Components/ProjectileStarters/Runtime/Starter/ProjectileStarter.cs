@@ -20,10 +20,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runti
 
         public void Shoot(float angle, IProjectileDefinition definition, ShootParams parameters)
         {
-            var side = AngleUtils.ToHorizontal(angle);
             var shootPosition = _bowShootPoint.Point;
-            var direction = angle.ToDirection();
-
+            var direction = angle.ToPlainDirection();
+            
             var request = new ProjectileRequest(
                 definition,
                 shootPosition.position,

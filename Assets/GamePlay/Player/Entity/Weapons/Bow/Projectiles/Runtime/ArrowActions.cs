@@ -39,6 +39,10 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Projectiles.Runtime
             _returnToPool?.Invoke();
         }
 
+        public void OnCollision(Vector3 targetNormal)
+        {
+        }
+
         public void OnCollision(Vector2 targetNormal)
         {
             DropVfx();

@@ -10,7 +10,6 @@ namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
         private Collider2D _collider;
         private readonly IViewableDelegate<Damage> _triggered = new ViewableDelegate<Damage>();
 
-        public float Radius { get; }
         public Vector3 Position => transform.position;
 
         public IViewableDelegate<Damage> Triggered => _triggered;

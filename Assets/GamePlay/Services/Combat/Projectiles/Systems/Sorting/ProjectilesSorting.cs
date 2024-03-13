@@ -27,19 +27,12 @@ namespace GamePlay.Combat.Projectiles.Systems.Sorting
                 .End();
 
             var transformPool = world.GetPool<ProjectileTransformComponent>();
-            var spritePool = world.GetPool<ProjectileSpriteComponent>();
 
             foreach (var entity in filter)
             {
                 ref var transform = ref transformPool.Get(entity);
-                ref var sprite = ref spritePool.Get(entity);
                 
                 var isHit = IsHit(Vector2.up, transform.View.Position);
-
-                if (isHit == true)
-                    sprite.View.SetLayer(_config.FrontWall);
-                else
-                    sprite.View.SetLayer(_config.BehindWall);
             }
         }
 

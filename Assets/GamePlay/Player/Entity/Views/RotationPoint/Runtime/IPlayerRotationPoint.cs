@@ -4,6 +4,6 @@ namespace GamePlay.Player.Entity.Views.RotationPoint.Runtime
 {
     public interface IPlayerRotationPoint
     {
-        Vector2 Position { get; }
+        Vector3 Position { get; }
     }
 }

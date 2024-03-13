@@ -18,12 +18,12 @@ namespace GamePlay.Player.Entity.Views.Physics.Debug.Gizmos
 
         public void DrawCast(Vector2 origin, Vector2 direction, float distance, float radius)
         {
-            _shapeDrawer.DrawCircle(
-                0.1f,
-                origin,
-                radius,
-                _gizmosConfig.Width,
-                _gizmosConfig.Color);
+            // _shapeDrawer.DrawCircle(
+            //     0.1f,
+            //     origin,
+            //     radius,
+            //     _gizmosConfig.Width,
+            //     _gizmosConfig.Color);
         }
 
         public void DrawHit(Vector2 origin, Vector2 normal)

@@ -7,6 +7,7 @@ using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
+using GamePlay.Player.Entity.Views.Physics.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
@@ -16,7 +17,7 @@ using Global.System.Updaters.Runtime.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
 {
-    public class Aim : IPlayerLocalState
+    public class Aim : IPlayerLocalState, IAim
     {
         public Aim(
             ILocalStateMachine stateMachine,
@@ -29,6 +30,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
             IUpdater updater,
             IRotation rotation,
             IAnimation playerAnimation,
+            IPlayerPhysics physics,
+            IAngleSteering steering,
             //BowAimAnimation bowAnimation,
             AimDefinition definition,
             PlayerStateDefinition[] transitions)
@@ -43,6 +46,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
             _updater = updater;
             _rotation = rotation;
             _playerAnimation = playerAnimation;
+            _physics = physics;
+            _steering = steering;
             //_bowAnimation = bowAnimation;
             _transitions = transitions;
 
@@ -60,6 +65,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
         private readonly IProjectileStarterConfig _config;
 
         private readonly IAnimation _playerAnimation;
+        private readonly IPlayerPhysics _physics;
+        private readonly IAngleSteering _steering;
 
         //private readonly BowAimAnimation _bowAnimation;
         private readonly PlayerStateDefinition[] _transitions;
@@ -93,9 +100,10 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Local
         {
             _cancellation = new CancellationTokenSource();
 
-            var playerAnimationTask = _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
-            await playerAnimationTask;
-
+            _steering.Start(_playerAnimation.Data.Clip.length / 2f);
+            await _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
+            _steering.Stop();
+            
             _comboStateMachine.TryTransitCombo(this, _transitions);
         }
 

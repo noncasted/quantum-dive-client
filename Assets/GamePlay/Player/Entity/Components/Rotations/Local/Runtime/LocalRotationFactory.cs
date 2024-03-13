@@ -20,6 +20,9 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
             services.Register<LocalRotationLogger>()
                 .WithParameter(_logSettings);
 
+            services.Register<AngleSteering>()
+                .As<IAngleSteering>();
+            
             services.Register<LocalRotation>()
                 .As<IRotation>()
                 .AsCallbackListener();

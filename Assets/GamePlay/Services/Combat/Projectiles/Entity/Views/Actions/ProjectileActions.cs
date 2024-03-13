@@ -24,7 +24,7 @@ namespace GamePlay.Combat.Projectiles.Entity.Views.Actions
             _returnToPool?.Invoke();
         }
 
-        public void OnCollision(Vector2 targetNormal)
+        public void OnCollision(Vector3 targetNormal)
         {
         }
 

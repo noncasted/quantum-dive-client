@@ -35,11 +35,6 @@ namespace GamePlay.Combat.Projectiles.Network
             _entity.OnEvent<EnemyProjectileRequestEvent>(OnRemoteEnemyProjectileCreated);
         }
         
-        public async UniTask SetupAsync()
-        {
-
-        }
-        
         public void OnEnabled()
         {
             _factory.PlayerProjectileCreated += OnLocalPlayerProjectileCreated;

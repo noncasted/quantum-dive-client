@@ -37,11 +37,11 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Debug
 
         public void OnGizmosUpdate()
         {
-            _shapeDrawer.DrawCircle(
-                _point.position,
-                _hitboxConfig.Radius,
-                _gizmosConfig.Width,
-                _gizmosConfig.Color);
+            // _shapeDrawer.DrawCircle(
+            //     _point.position,
+            //     _hitboxConfig.Radius,
+            //     _gizmosConfig.Width,
+            //     _gizmosConfig.Color);
         }
     }
 }

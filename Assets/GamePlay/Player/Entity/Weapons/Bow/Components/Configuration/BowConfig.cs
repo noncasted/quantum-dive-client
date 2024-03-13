@@ -18,6 +18,11 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Configuration
             _arrowSpeed = arrowSpeed;
             _damage = damage;
             _pushForce = pushForce;
+            
+            _shotDelay.SetLevel(0);
+            _arrowSpeed.SetLevel(0);
+            _damage.SetLevel(0);
+            _pushForce.SetLevel(0);
         }
 
         private readonly IUpgrades _upgrades;

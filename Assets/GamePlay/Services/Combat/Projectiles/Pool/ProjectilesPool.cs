@@ -40,7 +40,7 @@ namespace GamePlay.Combat.Projectiles.Pool
             }
         }
 
-        public IProjectileView Get(IProjectileDefinition definition, Vector2 position)
+        public IProjectileView Get(IProjectileDefinition definition, Vector3 position)
         {
             return _providers[definition].Get(position);
         }

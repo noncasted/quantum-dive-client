@@ -10,7 +10,7 @@ namespace GamePlay.Combat.Projectiles.Entity.Views.Actions
         public void Construct(Action returnToPool);
         void OnTaken();
         void OnCollision();
-        void OnCollision(Vector2 targetNormal);
+        void OnCollision(Vector3 targetNormal);
         void OnHit();
         void OnDestroyed();
     }

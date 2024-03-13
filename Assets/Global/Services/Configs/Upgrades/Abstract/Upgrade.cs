@@ -11,7 +11,7 @@ namespace Global.Configs.Upgrades.Abstract
         }
 
         private readonly IUpgradeDefinition _definition;
-        private readonly ViewableProperty<T> _value = new ViewableProperty<T>();
+        private readonly ViewableProperty<T> _value = new();
         private readonly T[] _levels;
 
         private int _currentLevel;

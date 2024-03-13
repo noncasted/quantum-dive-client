@@ -6,22 +6,22 @@ namespace GamePlay.Combat.Projectiles.Entity.Views.Transforms
     public class ProjectileTransform : MonoBehaviour, IProjectileTransform
     {
         private Transform _transform;
+        
+        public Vector3 Position => _transform.position;
 
         private void Awake()
         {
             _transform = transform;
         }
 
-        public Vector2 Position => _transform.position;
-
-        public void SetPosition(Vector2 position)
+        public void SetPosition(Vector3 position)
         {
             _transform.position = position;
         }
 
         public void SetRotation(float angle)
         {
-            _transform.rotation = Quaternion.Euler(0f, 0f, angle);
+            _transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }
 
         public void SetScale(float scale)

@@ -137,7 +137,7 @@ namespace GamePlay.Player.Entity.States.Runs.Local
                 Debug.LogError("Not started");
 
             _playerPhysics.SetForwardVelocity(_runConfig.Speed * delta);
-            _playerPhysics.Rotate(new Vector2(_input.Direction.x * -1f, _input.Direction.y));
+            _playerPhysics.Rotate(new Vector2(_input.Direction.x, _input.Direction.y * -1));
         }
     }
 }

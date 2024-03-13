@@ -1,9 +1,9 @@
 ﻿using System;
-using Common.DataTypes.Structs;
 using GamePlay.Combat.Hitboxes.Flags;
 using GamePlay.Combat.Projectiles.Entity.Components;
 using GamePlay.Combat.Projectiles.Pool;
 using GamePlay.System.Ecs.Runtime.Abstract;
+using UnityEngine;
 
 namespace GamePlay.Combat.Projectiles.Factory
 {
@@ -68,25 +68,19 @@ namespace GamePlay.Combat.Projectiles.Factory
             
             var projectileObject = _pool.Get(request.Definition, position);
 
-            var angle = direction;
-            //projectileObject.Transform.SetRotation(angle);
+            var angle = MathF.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            projectileObject.Transform.SetRotation(angle);
 
             var entity = _entityCreator.CreateEntity();
 
             ref var damageComponent = ref _componentSetter.Add<ProjectileDamageComponent>(entity);
             ref var transformComponent = ref _componentSetter.Add<ProjectileTransformComponent>(entity);
-            ref var spriteComponent = ref _componentSetter.Add<ProjectileSpriteComponent>(entity);
-            ref var colliderComponent = ref _componentSetter.Add<ProjectileColliderComponent>(entity);
             ref var moveComponent = ref _componentSetter.Add<ProjectileMoveComponent>(entity);
-            ref var moveHistoryComponent = ref _componentSetter.Add<ProjectileMoveHistoryComponent>(entity);
             ref var poolObjectComponent = ref _componentSetter.Add<ProjectileActionsComponent>(entity);
             
             damageComponent.Construct(parameters.Damage, parameters.PushForce);
             transformComponent.Construct(projectileObject.Transform);
-            spriteComponent.Construct(projectileObject.Sprite);
-            colliderComponent.Construct(parameters.Radius);
             moveComponent.Construct(direction, parameters.Speed);
-            moveHistoryComponent.Construct(position);
             poolObjectComponent.Construct(projectileObject.Actions);
 
             projectileObject.Actions.OnTaken();

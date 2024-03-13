@@ -1,4 +1,5 @@
 ﻿using Global.Cameras.Utils.Runtime;
+using Global.Debugs.Drawing.Runtime;
 using Global.Inputs.Utils.Runtime.Conversion;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,26 +8,27 @@ namespace Global.Inputs.Utils.Runtime.Projection
 {
     public class InputProjection : IInputProjection
     {
-        public InputProjection(ICameraUtils cameraUtils)
+        public InputProjection(ICameraUtils cameraUtils, IShapeDrawer shapeDrawer)
         {
             _cameraUtils = cameraUtils;
+            _shapeDrawer = shapeDrawer;
         }
 
         private readonly ICameraUtils _cameraUtils;
-        
-        public float GetAngleFrom(Vector2 from)
+        private readonly IShapeDrawer _shapeDrawer;
+
+        public float GetAngleFrom(Vector3 from)
         {
             var direction = GetDirectionFrom(from);
-
-            var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            var angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
 
             if (angle < 0f)
                 angle += 360f;
-
+            
             return angle;
         }
 
-        public Vector2 GetDirectionFrom(Vector2 from)
+        public Vector3 GetDirectionFrom(Vector3 from)
         {
             var screenPosition = Mouse.current.position.ReadValue();
             var worldPosition = _cameraUtils.ScreenToWorld(screenPosition);
@@ -37,17 +39,5 @@ namespace Global.Inputs.Utils.Runtime.Projection
             return direction;
         }
 
-        public LineResult GetLineFrom(Vector2 from)
-        {
-            var screenPosition = Mouse.current.position.ReadValue();
-            var worldPosition = _cameraUtils.ScreenToWorld(screenPosition);
-
-            var direction = worldPosition - from;
-            direction.Normalize();
-
-            var length = Vector2.Distance(from, worldPosition);
-
-            return new LineResult(direction, length);
-        }
     }
 }

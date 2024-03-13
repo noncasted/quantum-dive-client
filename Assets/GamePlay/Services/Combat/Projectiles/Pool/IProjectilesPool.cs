@@ -6,6 +6,6 @@ namespace GamePlay.Combat.Projectiles.Pool
 {
     public interface IProjectilesPool
     {
-        IProjectileView Get(IProjectileDefinition definition, Vector2 position);
+        IProjectileView Get(IProjectileDefinition definition, Vector3 position);
     }
 }

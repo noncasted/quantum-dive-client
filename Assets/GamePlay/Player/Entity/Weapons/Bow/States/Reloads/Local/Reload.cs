@@ -35,7 +35,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
 
             IAnimation bowAnimation,
             IAnimation playerAnimation,
-
+            IAngleSteering steering,
             IUpdater updater,
             
             BowReloadDefinition definition,
@@ -53,6 +53,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
             _updater = updater;
             _bowAnimation = bowAnimation;
             _playerAnimation = playerAnimation;
+            _steering = steering;
             Transitions = transitions;
             Definition = definition;
         }
@@ -70,6 +71,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
         private readonly IUpdater _updater;
         private readonly IAnimation _bowAnimation;
         private readonly IAnimation _playerAnimation;
+        private readonly IAngleSteering _steering;
 
         private CancellationTokenSource _cancellation;
         
@@ -102,26 +104,20 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
         public void Break()
         {
             _updater.Remove(this);
-            Debug.Log("Break reload");
             Cancel();
         }
 
         public void OnUpdate(float delta)
         {
-           // _playerAnimation.SetOrientation(_rotation.Orientation);
         }
 
         private async UniTask Process()
         {
             _cancellation = new CancellationTokenSource();
 
-            Debug.Log($"Start reload: {_playerAnimation.Data.Clip.name}");
+            _steering.Start(_playerAnimation.Data.Clip.length  / 2f);
             await _playerAnimator.PlayAsync(_playerAnimation, _cancellation.Token);
-            Debug.Log($"End reload: {_playerAnimation.Data.Clip.name}");
-            
-            //var bowAnimationTask = _bowAnimator.PlayAsync(_bowAnimation, _cancellation.Token);
-            //_arrow.Show(_config.Data.Preview);
-            //await UniTask.WhenAll(tasks: new[] { playerAnimationTask, bowAnimationTask });
+            _steering.Stop();
 
             _arrow.Hide();
 
@@ -130,7 +126,6 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local
 
         private void Cancel()
         {
-            Debug.Log($"Cancel reload");
             _cancellation?.Cancel();
             _cancellation?.Dispose();
             _cancellation = null;

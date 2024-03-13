@@ -30,6 +30,7 @@ namespace GamePlay.Player.Entity.Views.Physics.Runtime
         private Quaternion _targetDirection;
 
         public Vector3 Position => _view.position;
+        public Vector3 Rotation => _view.rotation.eulerAngles;
 
         public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
@@ -39,7 +40,6 @@ namespace GamePlay.Player.Entity.Views.Physics.Runtime
         public void SetPosition(Vector3 position)
         {
             _view.SetPosition(position);
-            UnityEngine.Debug.Log($"Set position: {position}");
 
         }
 
@@ -78,6 +78,11 @@ namespace GamePlay.Player.Entity.Views.Physics.Runtime
         public void Rotate(Vector2 direction)
         {
             _targetDirection = Quaternion.Euler(0f, direction.ToAngle(), 0f);
+        }
+
+        public void Rotate(float angle)
+        {
+            _targetDirection = Quaternion.Euler(0f, angle, 0f);
         }
 
         public void ResetVelocity()

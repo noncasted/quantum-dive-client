@@ -5,8 +5,7 @@ namespace Global.Inputs.Utils.Runtime.Projection
 {
     public interface IInputProjection
     {
-        float GetAngleFrom(Vector2 from);
-        Vector2 GetDirectionFrom(Vector2 from);
-        LineResult GetLineFrom(Vector2 from);
+        float GetAngleFrom(Vector3 from);
+        Vector3 GetDirectionFrom(Vector3 from);
     }
 }
