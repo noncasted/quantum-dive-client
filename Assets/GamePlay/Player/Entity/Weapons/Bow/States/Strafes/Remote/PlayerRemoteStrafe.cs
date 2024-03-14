@@ -1,6 +1,6 @@
 ﻿using System.Threading;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+
+using Internal.Scopes.Abstract.Lifetimes;
 using Common.Tools.UniversalAnimators.Abstract;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
@@ -13,6 +13,7 @@ using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote

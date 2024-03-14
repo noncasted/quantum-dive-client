@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Entities.Runtime;
+
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Root.Runtime;
@@ -10,6 +10,7 @@ using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Remote;
 using GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Remote;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Remote;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote;
+using Internal.Scopes.Common.Entity;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -20,7 +21,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Definition.Remote
         menuName = BowConfigRoutes.RemotePath)]
     public class RemoteBowConfig : ScriptableObject, IEquipmentInstanceConfig
     {
-        [SerializeField] private DefaultCallbacksComponentFactory _defaultCallbacks;
+        [SerializeField] private EntityDefaultCallbacksFactory _defaultCallbacks;
         [SerializeField] private BowRootFactory _root;
 
         [FoldoutGroup("Combat")] [SerializeField] [Indent]
@@ -40,7 +41,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Definition.Remote
 
         [SerializeField] private RemoteBowViewFactoryFactory _prefab;
 
-        public ScopedEntityViewFactory Prefab => _prefab;
+        public EquipmentViewFactory Prefab => _prefab;
 
         public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
         {

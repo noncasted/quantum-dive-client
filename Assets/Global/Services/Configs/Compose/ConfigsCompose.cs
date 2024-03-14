@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using Global.Configs.Common;
 using Global.Configs.Registry.Runtime;
 using Global.Configs.Upgrades.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

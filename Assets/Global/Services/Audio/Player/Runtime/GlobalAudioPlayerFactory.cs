@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.Audio.Player.Common;
 using Sirenix.OdinInspector;
@@ -15,7 +15,7 @@ namespace Global.Audio.Player.Runtime
     {
         [SerializeField] private GlobalAudioPlayer _prefab;
 
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             var player = Instantiate(_prefab);
             player.name = "AudioPlayer";

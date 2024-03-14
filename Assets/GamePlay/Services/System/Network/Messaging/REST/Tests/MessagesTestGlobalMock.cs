@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Common.DefaultCallbacks;
-using Common.Architecture.Scopes.Factory;
-using Common.Architecture.Scopes.Runtime.Services;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
 using GamePlay.System.Network.Compose;
 using Global.Network.Connection.Runtime;
 using Global.Network.Session.Runtime.Create;
 using Global.Network.Session.Runtime.Join;
-using Internal.Scenes.Data;
+using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Scenes;
+using Internal.Scopes.Common.Services;
 using Internal.Scopes.Mocks.Runtime;
 using UnityEngine;
 using VContainer;
@@ -16,17 +15,17 @@ using VContainer.Unity;
 
 namespace GamePlay.System.Network.Messaging.REST.Tests
 {
-    public class MessagesTestGlobalMock : MockBase, IScopeConfig
+    public class MessagesTestGlobalMock : MockBase, IServiceScopeConfig
     {
         [SerializeField] private GlobalMock _global;
         [SerializeField] private LevelNetworkCompose _network;
 
         [SerializeField] private GamePlayScope _scopePrefab;
         [SerializeField] private SceneData _servicesScene;
-        [SerializeField] private DefaultCallbacksServiceFactory _serviceDefaultCallbacks;
+        [SerializeField] private ServiceDefaultCallbacksFactory _serviceDefaultCallbacks;
 
         public LifetimeScope ScopePrefab => _scopePrefab;
-        public ISceneAsset ServicesScene => _servicesScene;
+        public SceneData ServicesScene => _servicesScene;
         public bool IsMock => false;
 
         public IReadOnlyList<IServiceFactory> Services => new IServiceFactory[]
@@ -58,9 +57,8 @@ namespace GamePlay.System.Network.Messaging.REST.Tests
                 await sessionCreate.Create("room");
             }
 
-            var scopeLoaderFactory = resolver.Resolve<IScopeLoaderFactory>();
-            var scopeLoader = scopeLoaderFactory.Create(this, result.Parent);
-            var scope = await scopeLoader.Load();
+            var scopeLoaderFactory = resolver.Resolve<IServiceScopeLoader>();
+            var scope = await scopeLoaderFactory.Load(result.Parent, this);
 
             await result.RegisterLoadedScene(scope);
         }

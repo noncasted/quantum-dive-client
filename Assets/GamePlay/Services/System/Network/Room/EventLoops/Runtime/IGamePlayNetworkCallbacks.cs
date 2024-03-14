@@ -1,10 +1,10 @@
-﻿using Common.Architecture.Container.Abstract;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Internal.Scopes.Abstract.Callbacks;
 using Ragon.Client;
 
 namespace GamePlay.System.Network.Room.EventLoops.Runtime
 {
-    public interface IGamePlayNetworkCallbacks : ICallbackRegistry
+    public interface IGamePlayNetworkCallbacks : ICallbacksRegistry
     {
         UniTask InvokeRegisterCallbacks(RagonEventCache events);
         UniTask InvokeSceneEntityCreation();

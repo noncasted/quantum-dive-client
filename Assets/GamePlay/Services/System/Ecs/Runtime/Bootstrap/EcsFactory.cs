@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using GamePlay.System.Ecs.Common;
 using GamePlay.System.Ecs.Runtime.Abstract;
@@ -18,7 +18,7 @@ namespace GamePlay.System.Ecs.Runtime.Bootstrap
     {
         [SerializeField] private EcsHandler _prefab;
 
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             var world = new EcsWorld();
 

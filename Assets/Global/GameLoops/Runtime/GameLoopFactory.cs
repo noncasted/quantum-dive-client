@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Config.Runtime;
 using Global.GameLoops.Common;
@@ -18,7 +18,7 @@ namespace Global.GameLoops.Runtime
         [SerializeField] private MenuConfig _menuScope;
         [SerializeField] private LevelConfig _levelScope;
 
-        public virtual async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public virtual async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<GameLoop>()
                 .WithParameter(_levelScope)

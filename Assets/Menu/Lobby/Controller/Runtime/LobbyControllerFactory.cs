@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Menu.Lobby.Controller.Common;
 using Menu.Lobby.Controller.Runtime.Timer;
@@ -14,7 +14,7 @@ namespace Menu.Lobby.Controller.Runtime
         menuName = LobbyControllerRoutes.ServicePath)]
     public class LobbyControllerFactory : ScriptableObject, IServiceFactory
     {
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<LobbyController>()
                 .As<ILobbyController>()

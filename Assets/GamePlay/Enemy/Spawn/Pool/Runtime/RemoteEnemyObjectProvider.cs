@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Common.Definition.Config;
 using GamePlay.Enemy.Entity.Common.Definition.Root;
@@ -14,7 +14,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
         public RemoteEnemyObjectProvider(
             Transform parent,
             IRemoteEnemyConfig config,
-            IScopedEntityFactory entityFactory,
+            IEntityScopeLoader entityFactory,
             LifetimeScope parentScope)
         {
             _parent = parent;
@@ -25,7 +25,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
 
         private readonly Transform _parent;
         private readonly IRemoteEnemyConfig _config;
-        private readonly IScopedEntityFactory _entityFactory;
+        private readonly IEntityScopeLoader _entityFactory;
         private readonly LifetimeScope _parentScope;
 
         private readonly List<IRemoteEnemyRoot> _pooled = new();
@@ -44,7 +44,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
             }
 
             var view = Object.Instantiate(_config.Prefab, Vector2.zero, Quaternion.identity, _parent);
-            var root = await _entityFactory.Create<IRemoteEnemyRoot>(_parentScope, view, _config);
+            var root = await _entityFactory.Load<IRemoteEnemyRoot>(_parentScope, view, _config);
 
             await root.Callbacks.RunConstruct();
             await root.Enable(entity, payload.Position);

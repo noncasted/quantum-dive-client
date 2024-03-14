@@ -1,11 +1,12 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿
+using Internal.Scopes.Abstract.Lifetimes;
 using GamePlay.Player.Entity.Components.Rotations.Local.Logs;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Views.RotationPoint.Runtime;
 using Global.Inputs.Utils.Runtime.Projection;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Entities;
 
 namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
 {

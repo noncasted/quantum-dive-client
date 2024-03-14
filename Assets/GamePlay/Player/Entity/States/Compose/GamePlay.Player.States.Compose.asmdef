@@ -1,7 +1,7 @@
 ﻿{
   "name": "GamePlay.Player.States.Compose",
   "references": [
-    "GUID:a6bee730cad343c7ac8840da91376019",
+    
     "GUID:1df29afa6177f8e4fa19b25367556ac2",
     "GUID:c4f71e0b631016a4db9b73be47757b2a",
     "GUID:23cf091f4c6d7994ea810080cd2b498f",
@@ -16,6 +16,7 @@
     "GUID:175aaf1a16714fb899e23574b650467f",
     "GUID:0724d08ce2c54f1bbd05f93aad406ddb",
     "GUID:9f36796216254d2db3c81da0be225e76",
-    "GUID:f811916503814d8b8ded37276cbeff8d"
+    "GUID:f811916503814d8b8ded37276cbeff8d",
+    "GUID:1429db28f9474a389cb34ec712b3c8b3"
   ]
 }

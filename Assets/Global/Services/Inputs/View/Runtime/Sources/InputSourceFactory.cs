@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Container.Abstract;
+﻿using Internal.Scopes.Abstract.Containers;
 using UnityEngine;
 
 namespace Global.Inputs.View.Runtime.Sources

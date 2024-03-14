@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Views.Transforms.Remote.Common;
 using GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs;
 using Sirenix.OdinInspector;
@@ -14,7 +14,7 @@ namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Runtime
     {
         [SerializeField] private TransformSyncLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<TransformSyncLogger>()
                 .WithParameter(_logSettings);

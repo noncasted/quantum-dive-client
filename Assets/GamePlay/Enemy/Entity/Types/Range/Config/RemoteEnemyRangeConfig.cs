@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Common.Definition.Config;
 using GamePlay.Enemy.Entity.Components.Compose;
 using GamePlay.Enemy.Entity.Components.Network.Compose;
@@ -23,7 +23,7 @@ namespace GamePlay.Enemy.Entity.Types.Range.Config
         
         [SerializeField] private RemoteEnemyRangeViewFactory _prefab;
         
-        public ScopedEntityViewFactory Prefab => _prefab;
+        public EnemyViewFactory Prefab => _prefab;
 
         public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
         {

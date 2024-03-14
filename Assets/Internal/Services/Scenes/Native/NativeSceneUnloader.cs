@@ -2,6 +2,7 @@
 using Cysharp.Threading.Tasks;
 using Internal.Scenes.Abstract;
 using Internal.Scenes.Logs;
+using Internal.Scopes.Abstract.Scenes;
 using UnityEngine.SceneManagement;
 
 namespace Internal.Scenes.Native

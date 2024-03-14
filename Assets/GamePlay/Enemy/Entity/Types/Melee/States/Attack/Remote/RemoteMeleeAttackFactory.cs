@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
@@ -17,7 +17,7 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Remote
         [SerializeField] private MeleeAttackDefinition _definition;
         [SerializeField] private MeleeAttackConfig _config;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             var animation = _animation.Create();
 

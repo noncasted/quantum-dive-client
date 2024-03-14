@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using Global.Network.Handlers.ClientHandler.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Menu.Network.Entity.Runtime;
 using Ragon.Client;
 using UnityEngine;

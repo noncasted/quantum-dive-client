@@ -1,7 +1,7 @@
-﻿using Common.Architecture.Scopes.Factory;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using Global.Network.Connection.Runtime;
 using Global.Network.Session.Runtime.Join;
+using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Mocks.Runtime;
 using UnityEngine;
 using VContainer;
@@ -33,9 +33,8 @@ namespace GamePlay.Enemy.Tests.States
             var sessionJoin = resolver.Resolve<ISessionJoin>();
             var joinResult =  await sessionJoin.JoinRandom();
             
-            var scopeLoaderFactory = resolver.Resolve<IScopeLoaderFactory>();
-            var scopeLoader = scopeLoaderFactory.Create(_level, result.Parent);
-            var scope = await scopeLoader.Load();
+            var scopeLoaderFactory = resolver.Resolve<IServiceScopeLoader>();
+            var scope = await scopeLoaderFactory.Load(result.Parent, _level);
             scope.Scope.Container.Inject(_testRunner);
 
 

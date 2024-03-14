@@ -1,9 +1,9 @@
 ﻿using System;
-using Common.Architecture.Scopes.Factory;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using Global.UI.LoadingScreens.Runtime;
 using Internal.Scope;
+using Internal.Scopes.Abstract.Callbacks;
+using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 using VContainer;
 
@@ -18,13 +18,8 @@ namespace Internal.Scopes.Mocks.Runtime
         {
             var internalScopeLoader = new InternalScopeLoader(_config.Internal);
             var internalScope = await internalScopeLoader.Load();
-            var scopeLoaderFactory = internalScope.Container.Resolve<IScopeLoaderFactory>();
-            var scopeLoader = scopeLoaderFactory.Create(_config.Global, internalScope);
-
-            var scopeLoadResult = await scopeLoader.Load();
-            
-            await scopeLoadResult.Callbacks[CallbackStage.Construct].Run();
-            await scopeLoadResult.Callbacks[CallbackStage.SetupComplete].Run();
+            var scopeLoaderFactory = internalScope.Container.Resolve<IServiceScopeLoader>();
+            var scopeLoadResult = await scopeLoaderFactory.Load(internalScope, _config.Global);
 
             scopeLoadResult.Scope.Container.Resolve<ILoadingScreen>().HideGameLoading();
 

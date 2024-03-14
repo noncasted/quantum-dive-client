@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.States.Damaged.Common;
+using Internal.Scopes.Abstract.Containers;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ namespace GamePlay.Enemy.Entity.States.Damaged.Local
         [SerializeField] private DamagedAnimationFactory _animation;
         [SerializeField] private DamagedDefinition _definition;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             var animation = _animation.Create();
             

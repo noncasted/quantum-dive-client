@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Common.DataTypes.Collections.ScriptableRegistries;
 using Cysharp.Threading.Tasks;
 using Global.Configs.Abstract;
@@ -14,7 +14,7 @@ namespace Global.Configs.Registry.Runtime
     [CreateAssetMenu(fileName = ConfigsRegistryRoutes.ServiceName, menuName = ConfigsRegistryRoutes.ServicePath)]
     public class ConfigsRegistryFactory : ScriptableRegistry<ConfigSource>, IServiceFactory
     {
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             foreach (var source in Objects)
                 source.CreateInstance(services);

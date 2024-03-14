@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using Global.Inputs.Common;
 using Global.Inputs.Constranits.Runtime;
 using Global.Inputs.Utils.Runtime;
 using Global.Inputs.View.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

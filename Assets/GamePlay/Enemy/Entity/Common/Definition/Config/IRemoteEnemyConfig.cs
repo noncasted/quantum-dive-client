@@ -2,6 +2,6 @@
 {
     public interface IRemoteEnemyConfig : IEnemyConfig
     {
-        
+        EnemyViewFactory Prefab { get; }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System.Threading;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Components.Health.Runtime;
 using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
@@ -8,6 +7,7 @@ using GamePlay.Enemy.Entity.States.Respawn.Common;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using GamePlay.Enemy.Entity.Views.Hitbox.Local;
 using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 
 namespace GamePlay.Enemy.Entity.States.Respawn.Local
 {

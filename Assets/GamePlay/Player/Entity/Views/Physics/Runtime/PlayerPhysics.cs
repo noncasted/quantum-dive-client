@@ -1,8 +1,9 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿
+using Internal.Scopes.Abstract.Lifetimes;
 using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Views.Physics.Logs;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Physics.Runtime

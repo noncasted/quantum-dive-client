@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Container.Abstract;
+﻿using Internal.Scopes.Abstract.Containers;
 using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Global.Configs.Abstract;
 using Sirenix.OdinInspector;

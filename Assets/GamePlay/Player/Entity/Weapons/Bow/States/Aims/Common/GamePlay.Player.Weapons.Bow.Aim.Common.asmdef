@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "GamePlay.Player.Weapons.Bow.Aim.Common",
   "references": [
     "GUID:b6431b7d3eb44c7fb19b3735d729087f",
@@ -7,7 +7,6 @@
     "GUID:b0275d8a7d994d97ae1652be17935f0f",
     "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
     "GUID:92c45879a0f342a29c0e271981946ba1",
-    "GUID:6fe3e5bc5e27400aa7e27dded3e1e008",
-    "GUID:eedb8e7302e941e19735cd090c3960c3"
+    "GUID:6fe3e5bc5e27400aa7e27dded3e1e008"
   ]
 }

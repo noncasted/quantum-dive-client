@@ -1,6 +1,4 @@
-﻿using Common.Architecture.Entities.Runtime;
-using Common.Architecture.Lifetimes;
-using Common.Architecture.Scopes.Runtime.Callbacks;
+﻿using Internal.Scopes.Abstract.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
 using GamePlay.Player.Entity.Common.Definition;
@@ -12,6 +10,8 @@ using GamePlay.Player.List.Runtime;
 using GamePlay.System.Network.Objects.Factories.Registry;
 using GamePlay.System.Network.Objects.Factories.Runtime;
 using Global.Network.Objects.Factories.Abstract;
+using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 using UnityEngine;
 using VContainer.Unity;
@@ -23,7 +23,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
         public PlayerFactory(
             IDynamicEntityFactory dynamicEntityFactory,
             INetworkFactoriesRegistry factoriesRegistry,
-            IScopedEntityFactory factory,
+            IEntityScopeLoader loader,
             IPlayerList playerList,
             ISpawnPoints spawnPoints,
             LocalPlayerConfig localConfig,
@@ -34,7 +34,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
         {
             _dynamicEntityFactory = dynamicEntityFactory;
             _factoriesRegistry = factoriesRegistry;
-            _factory = factory;
+            _loader = loader;
             _playerList = playerList;
             _spawnPoints = spawnPoints;
             _localConfig = localConfig;
@@ -46,7 +46,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
 
         private readonly IDynamicEntityFactory _dynamicEntityFactory;
         private readonly INetworkFactoriesRegistry _factoriesRegistry;
-        private readonly IScopedEntityFactory _factory;
+        private readonly IEntityScopeLoader _loader;
         private readonly IPlayerList _playerList;
         private readonly LocalPlayerConfig _localConfig;
         private readonly RemotePlayerConfig _remoteConfig;
@@ -76,7 +76,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
 
             var view = Object.Instantiate(_localConfig.Prefab, spawnPosition, Quaternion.identity);
             var entityComponentFactory = new EntityComponentFactory(entity);
-            var root = await _factory.Create<ILocalPlayerRoot>(_parentScope, view, _localConfig,
+            var root = await _loader.Load<ILocalPlayerRoot>(_parentScope, view, _localConfig,
                 new[] { entityComponentFactory });
 
             var payload = new PlayerSpawnPayload(spawnPosition);
@@ -101,12 +101,12 @@ namespace GamePlay.Player.Factory.Factory.Runtime
             var spawnPosition = entity.GetAttachPayload<PlayerSpawnPayload>().Position;
             var view = Object.Instantiate(_remoteConfig.Prefab, spawnPosition, Quaternion.identity);
             var entityComponentFactory = new EntityComponentFactory(entity);
-            var root = await _factory.Create<IPlayerRoot>(_parentScope, view, _remoteConfig,
+            var root = await _loader.Load<IPlayerRoot>(_parentScope, view, _remoteConfig,
                 new[] { entityComponentFactory });
 
             var player = new PlayerEntity(entity, root);
             _playerList.Add(entity.Owner, player);
-
+ 
             await root.Callbacks.RunConstruct();
             await root.Enable();
 

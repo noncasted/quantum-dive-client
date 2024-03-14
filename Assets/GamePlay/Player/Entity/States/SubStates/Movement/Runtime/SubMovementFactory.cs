@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.States.Idles.Common;
 using GamePlay.Player.Entity.States.Runs.Common;
@@ -17,7 +17,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime
         [SerializeField] [Indent] private BaseAnimationData _walkAnimation;
         [SerializeField] [Indent] private BaseAnimationData _idleAnimation;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             var runAnimation = _runAnimation.CreateAnimation();
             var walkAnimation = _walkAnimation.CreateAnimation();

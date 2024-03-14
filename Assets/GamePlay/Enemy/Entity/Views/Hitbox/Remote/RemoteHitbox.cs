@@ -1,8 +1,8 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using GamePlay.Combat.Hitboxes.Runtime;
+﻿using GamePlay.Combat.Hitboxes.Runtime;
 using GamePlay.Common.Damages;
 using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.Views.Hitbox.Common;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.Hitbox.Remote

@@ -1,4 +1,5 @@
 ﻿using Internal.Scenes.Abstract;
+using Internal.Scopes.Abstract.Scenes;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 

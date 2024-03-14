@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Instances.Entities;
 
 namespace GamePlay.Enemy.Entity.Common.Definition.Config
 {

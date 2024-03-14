@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.System.Updaters.Common;
 using Global.System.Updaters.Delays;
@@ -20,7 +20,7 @@ namespace Global.System.Updaters.Setup
         [SerializeField] [Indent] private UpdaterLogSettings _logSettings;
         [SerializeField] [Indent] private Updater _prefab;
 
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             var updater = Instantiate(_prefab);
             updater.name = "Updater";

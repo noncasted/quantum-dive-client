@@ -1,9 +1,9 @@
 ﻿using System.Threading;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Common;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.SubStates.Damaged.Local

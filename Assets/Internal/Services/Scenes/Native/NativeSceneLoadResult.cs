@@ -1,4 +1,4 @@
-﻿using Internal.Scenes.Abstract;
+﻿using Internal.Scopes.Abstract.Scenes;
 using UnityEngine.SceneManagement;
 
 namespace Internal.Scenes.Native

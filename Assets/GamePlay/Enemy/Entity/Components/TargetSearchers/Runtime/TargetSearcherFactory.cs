@@ -1,7 +1,7 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemy.Entity.Components.TargetSearchers.Common;
+﻿using GamePlay.Enemy.Entity.Components.TargetSearchers.Common;
 using GamePlay.Enemy.Entity.Components.TargetSearchers.Debug.Gizmos;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ namespace GamePlay.Enemy.Entity.Components.TargetSearchers.Runtime
         [SerializeField] [Indent] private TargetSearchConfig _config;
         [SerializeField] [Indent] private TargetSearchGizmosConfig _gizmosConfig;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<SearchGizmos>()
                 .WithParameter<ISearchGizmosConfig>(_gizmosConfig)

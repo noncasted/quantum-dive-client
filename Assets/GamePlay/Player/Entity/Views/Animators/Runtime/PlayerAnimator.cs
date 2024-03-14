@@ -4,7 +4,6 @@ using Common.Tools.UniversalAnimators.Abstract;
 using Common.Tools.UniversalAnimators.Runtime;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Views.Animators.Logs;
-using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Animators.Runtime
 {

@@ -1,7 +1,7 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
+﻿using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Components.Sorting.Runtime

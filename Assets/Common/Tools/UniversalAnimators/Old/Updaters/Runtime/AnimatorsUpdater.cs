@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Lifetimes;
-using Common.Architecture.Scopes.Runtime.Callbacks;
-using Global.System.Updaters.Runtime.Abstract;
+﻿using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace Common.Tools.UniversalAnimators.Updaters.Runtime
 {

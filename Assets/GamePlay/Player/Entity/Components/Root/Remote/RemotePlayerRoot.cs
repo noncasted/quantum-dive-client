@@ -1,9 +1,11 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿
+using Internal.Scopes.Abstract.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Common.Definition;
 using GamePlay.Player.Entity.Components.Healths.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Runtime;
+using Internal.Scopes.Common.Entity;
+using Internal.Scopes.Runtime.Lifetimes;
 
 namespace GamePlay.Player.Entity.Components.Root.Remote
 {

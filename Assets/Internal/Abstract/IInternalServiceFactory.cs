@@ -1,4 +1,4 @@
-﻿using Internal.Options.Runtime;
+﻿using Internal.Scopes.Abstract.Options;
 using VContainer;
 
 namespace Internal.Abstract

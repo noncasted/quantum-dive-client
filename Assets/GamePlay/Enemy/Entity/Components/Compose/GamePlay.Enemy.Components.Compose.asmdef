@@ -1,7 +1,6 @@
 ﻿{
   "name": "GamePlay.Enemy.Components.Compose",
   "references": [
-    "GUID:a6bee730cad343c7ac8840da91376019",
     "GUID:4395a0108c83426c99fe9ed9004eef08",
     "GUID:95e7484c3e764ade9a89daab6736b100",
     "GUID:c2cdc9528dfe4a4db832cf36688e85e3",
@@ -9,6 +8,7 @@
     "GUID:8265c01205983f8408e9dbff4433b2ff",
     "GUID:7e2f66033f9a634418d0fce71635d73f",
     "GUID:cc57a3ad1b7f41d58b9d8177398bbb5e",
-    "GUID:5be6262f59e0487f8f55e7b4b6358c57"
+    "GUID:1429db28f9474a389cb34ec712b3c8b3",
+    "GUID:36b63739de284ea9aded3ca311c0ede1"
   ]
 }

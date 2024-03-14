@@ -2,9 +2,9 @@
   "name": "GamePlay.Enemy.Sprite.Local.Runtime",
   "rootNamespace": "",
   "references": [
-    "GUID:a6bee730cad343c7ac8840da91376019",
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
-    "GUID:3b2ea7622084434a927c413b7fc2fd3a",
+    
+    "GUID:1429db28f9474a389cb34ec712b3c8b3",
+    
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:aef86adbcc15c3241bf0a3f1a49addef"
   ],

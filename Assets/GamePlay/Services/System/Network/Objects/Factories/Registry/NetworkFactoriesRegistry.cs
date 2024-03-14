@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.Architecture.Lifetimes;
-using Common.Architecture.Scopes.Runtime.Callbacks;
+using Internal.Scopes.Abstract.Lifetimes;
 using Global.Network.Objects.EntityListeners.Runtime;
 using Global.Network.Objects.Factories.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 
 namespace GamePlay.System.Network.Objects.Factories.Registry

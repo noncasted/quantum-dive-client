@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
 using GamePlay.Player.Entity.Views.Hitboxes.Debug;
 using GamePlay.Player.Entity.Views.Hitboxes.Network;
@@ -15,7 +15,7 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Remote
         [SerializeField] [Indent] private HitboxGizmosConfig _gizmosConfig;
         [SerializeField] [Indent] private Transform _point;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<RemoteHitbox>()
                 .WithParameter<IHitboxConfig>(_hitboxConfig)

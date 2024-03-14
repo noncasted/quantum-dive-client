@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.Cameras.Persistent.Common;
 using Global.Cameras.Persistent.Logs;
@@ -17,7 +17,7 @@ namespace Global.Cameras.Persistent.Runtime
         [SerializeField] [Indent] private GlobalCameraLogSettings _logSettings;
         [SerializeField] [Indent] private GlobalCamera _prefab;
 
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             var globalCamera = Instantiate(_prefab, new Vector3(0f, 0f, -10f), Quaternion.identity);
             globalCamera.name = "Camera_Global";

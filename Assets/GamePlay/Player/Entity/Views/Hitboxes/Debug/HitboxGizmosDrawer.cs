@@ -1,8 +1,8 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿using Internal.Scopes.Abstract.Lifetimes;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
 using Global.Debugs.Drawing.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Hitboxes.Debug

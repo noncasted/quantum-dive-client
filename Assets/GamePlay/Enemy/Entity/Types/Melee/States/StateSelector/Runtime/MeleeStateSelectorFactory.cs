@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Components.StateSelectors;
 using GamePlay.Enemy.Entity.Types.Melee.States.StateSelector.Common;
 using Sirenix.OdinInspector;
@@ -12,7 +12,7 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.StateSelector.Runtime
         menuName = MeleeStateSelectorRoutes.ComponentPath)]
     public class MeleeStateSelectorFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<MeleeStateSelector>()
                 .As<IStateSelector>();

@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.Cameras.Utils.Common;
 using Global.Cameras.Utils.Logs;
@@ -16,7 +16,7 @@ namespace Global.Cameras.Utils.Runtime
     {
         [SerializeField] [Indent] private CameraUtilsLogSettings _logSettings;
 
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<CameraUtilsLogger>()
                 .WithParameter(_logSettings);

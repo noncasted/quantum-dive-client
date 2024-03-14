@@ -41,8 +41,8 @@ namespace Internal.Scopes.Runtime.Instances.Entities
             CreateServices(builder, utils, config, viewFactory, runtimeFactories);
             await BuildContainer(builder, utils, parent);
 
-            await utils.InternalCallbacks.RunConstruct();
-
+            utils.InternalCallbacks.AssignListenersFromTargets();
+            
             return viewFactory.Scope.Container.Resolve<T>();
         }
 

@@ -1,10 +1,11 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿using Internal.Scopes.Abstract.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Common.Definition.Root;
 using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.Views.GameObjects;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
+using Internal.Scopes.Common.Entity;
+using Internal.Scopes.Runtime.Lifetimes;
 using Ragon.Client;
 using UnityEngine;
 

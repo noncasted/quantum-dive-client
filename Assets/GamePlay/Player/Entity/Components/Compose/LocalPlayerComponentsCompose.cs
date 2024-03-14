@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.CameraFollow.Runtime;
 using GamePlay.Player.Entity.Components.Combo.Runtime;
 using GamePlay.Player.Entity.Components.Common;
@@ -11,6 +10,7 @@ using GamePlay.Player.Entity.Components.Rotations.Local.Runtime;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
+using Internal.Scopes.Common.Entity;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -22,7 +22,7 @@ namespace GamePlay.Player.Entity.Components.Compose
         menuName = PlayerComponentsRoutes.Root + "Compose/Local")]
     public class LocalPlayerComponentsCompose : ScriptableObject, IComponentsCompose
     {
-        [SerializeField] private DefaultCallbacksComponentFactory _defaultCallbacks;
+        [SerializeField] private EntityDefaultCallbacksFactory _defaultCallbacks;
         [SerializeField] private DamageProcessorFactory _damageProcessor;
         [SerializeField] private ComboStateMachineFactory _comboStateMachine;
         [SerializeField] private HealthFactory _health;

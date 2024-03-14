@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Scopes.Factory;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Mocks.Runtime;
 using Menu.Config.Runtime;
 using UnityEngine;
@@ -23,11 +23,10 @@ namespace Menu.Main.Mock
         {
             var resolver = result.Resolver;
             
-            var scopeLoaderFactory = resolver.Resolve<IScopeLoaderFactory>();
-            var scopeLoader = scopeLoaderFactory.Create(_menu, result.Parent);
-            var scope = await scopeLoader.Load();
+            var scopeLoaderFactory = resolver.Resolve<IServiceScopeLoader>();
+            var scopeLoader = await scopeLoaderFactory.Load(result.Parent, _menu);
 
-            await result.RegisterLoadedScene(scope);
+            await result.RegisterLoadedScene(scopeLoader);
         }
     }
 }

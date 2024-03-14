@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Common;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Local;
 using Sirenix.OdinInspector;
@@ -14,7 +14,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Damaged.Remote
     {
         [SerializeField] private DamagedConfig _config;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<RemoteDamaged>()
                 .WithParameter<IDamagedConfig>(_config)

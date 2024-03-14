@@ -1,11 +1,11 @@
 ﻿using System.Threading;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
 using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
 using Common.Tools.UniversalAnimators.Animators.Runtime;
 using Common.Tools.UniversalAnimators.Updaters.Runtime;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Views.Animators.Logs;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.Animators.Runtime

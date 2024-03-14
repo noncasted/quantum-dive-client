@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Factory;
-using Common.Architecture.Scopes.Runtime.Services;
 using Common.Tools.UniversalAnimators.Updaters.Runtime;
 using Global.Common;
 using Global.System.ApplicationProxies.Runtime;
@@ -8,6 +6,7 @@ using Global.System.MessageBrokers.Runtime;
 using Global.System.ResourcesCleaners.Runtime;
 using Global.System.ScopeDisposer.Runtime;
 using Global.System.Updaters.Setup;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -23,7 +22,6 @@ namespace Global.System.Compose
         [SerializeField] private ResourcesCleanerFactory _resourcesCleaner;
         [SerializeField] private UpdaterFactory _updater;
         [SerializeField] private AnimatorsUpdaterFactory _animatorsUpdater;
-        [SerializeField] private EntityCreatorFactory _entityCreator;
 
         public IReadOnlyList<IServiceFactory> Factories => new IServiceFactory[]
         {
@@ -32,8 +30,7 @@ namespace Global.System.Compose
             _messageBroker,
             _resourcesCleaner,
             _updater,
-            _animatorsUpdater,
-            _entityCreator
+            _animatorsUpdater
         };
     }
 }

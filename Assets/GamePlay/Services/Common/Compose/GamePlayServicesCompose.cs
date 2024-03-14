@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using GamePlay.Combat.Hitboxes.Runtime;
 using GamePlay.Combat.Projectiles.Bootstrap;
 using GamePlay.Combat.Targets.Registry.Runtime;
@@ -8,6 +7,7 @@ using GamePlay.Loop.Runtime;
 using GamePlay.System.Ecs.Runtime.Bootstrap;
 using GamePlay.Visuals.Cameras.Runtime;
 using GamePlay.Visuals.VfxPools.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

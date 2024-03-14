@@ -1,9 +1,9 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.DataTypes.Reactive;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Logs;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
+using Internal.Scopes.Abstract.Instances.Entities;
 
 namespace GamePlay.Player.Entity.Components.StateMachines.Local.Runtime
 {

@@ -1,9 +1,8 @@
-﻿using Common.Architecture.Scopes.Runtime.Callbacks;
-using GamePlay.Visuals.Cameras.Abstract;
+﻿using GamePlay.Visuals.Cameras.Abstract;
 using GamePlay.Visuals.Cameras.Logs;
 using Global.Cameras.CurrentProvider.Runtime;
-using Global.Inputs.Utils.Runtime.Projection;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 
 namespace GamePlay.Visuals.Cameras.Runtime

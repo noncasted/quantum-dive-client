@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -11,7 +11,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Runtime
         menuName = EquipmentSlotsRoutes.ComponentPath)]
     public class EquipmentSlotsStorageFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<EquipmentSlotsStorage>()
                 .As<IEquipmentSlotsStorage>();

@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Lifetimes;
+﻿using Internal.Scopes.Abstract.Lifetimes;
 
 namespace Common.Tools.UniversalAnimators.Updaters.Runtime
 {

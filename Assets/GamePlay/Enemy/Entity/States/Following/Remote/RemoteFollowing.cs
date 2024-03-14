@@ -1,9 +1,10 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿
+using Internal.Scopes.Abstract.Lifetimes;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.States.Following.Common;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Ragon.Protocol;
 
 namespace GamePlay.Enemy.Entity.States.Following.Remote

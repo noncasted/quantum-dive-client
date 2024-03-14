@@ -1,10 +1,9 @@
-﻿using Common.Architecture.Lifetimes;
-using Common.Architecture.Scopes.Runtime.Callbacks;
+﻿using Internal.Scopes.Abstract.Lifetimes;
 using Global.System.Updaters.Logs;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 using VContainer;
-using NotImplementedException = System.NotImplementedException;
 
 namespace Global.System.Updaters.Runtime
 {

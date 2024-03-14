@@ -1,11 +1,10 @@
-﻿{
+{
   "name": "GamePlay.Projectiles.Sorting",
   "references": [
     "GUID:e59bf9fc7d5a44b18a819a92edd46163",
     "GUID:acafe45b72c24a5e889f7c87f4833aea",
     "GUID:861793575c7c4a2d82251cc54eeb8bf5",
     "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
-    "GUID:2f38b8ba30fb4de9af0587598cd52891",
-    "GUID:2be5587ff86f459d98739aded80786ff"
+    "GUID:2f38b8ba30fb4de9af0587598cd52891"
   ]
 }

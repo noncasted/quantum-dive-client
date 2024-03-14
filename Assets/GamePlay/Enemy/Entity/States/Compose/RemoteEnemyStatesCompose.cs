@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.States.Common;
 using GamePlay.Enemy.Entity.States.Damaged.Remote;
 using GamePlay.Enemy.Entity.States.Death.Remote;

@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿
+using Internal.Scopes.Abstract.Lifetimes;
 using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Enemy.Entity.Components.StateSelectors;
 using GamePlay.Enemy.Entity.States.Abstract;
@@ -8,6 +8,7 @@ using GamePlay.Enemy.Entity.States.Idle.Local;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local;
 using GamePlay.Enemy.Updater.Runtime;
 using GamePlay.Enemy.Updater.Runtime.Updatables;
+using Internal.Scopes.Abstract.Instances.Entities;
 
 namespace GamePlay.Enemy.Entity.Types.Melee.States.StateSelector.Runtime
 {

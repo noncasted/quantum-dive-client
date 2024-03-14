@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs;
 using GamePlay.Enemy.Entity.Views.Animators.Logs;
 using GamePlay.Enemy.Entity.Views.RigidBodies.Logs;
@@ -19,7 +19,7 @@ namespace GamePlay.Enemy.Entity.Components.Debugs.Flags
         [SerializeField] private RigidBodyDebugFlag _rigidBody;
         [SerializeField] private RemoteStateMachineDebugFlag _remoteStateMachine;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.RegisterInstance(_localTransform);
             services.RegisterInstance(_remoteTransform);

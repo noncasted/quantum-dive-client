@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.DamageProcessors.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -13,7 +13,7 @@ namespace GamePlay.Player.Entity.Components.DamageProcessors.Runtime
     {
         [SerializeField] [Indent] private DamageProcessorConfigAsset _config;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<DamageProcessor>()
                 .WithParameter(_config)

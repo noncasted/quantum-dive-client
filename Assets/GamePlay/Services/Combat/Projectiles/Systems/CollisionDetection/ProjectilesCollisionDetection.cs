@@ -1,5 +1,4 @@
-﻿using GamePlay.Combat.Projectiles.Entity.Components;
-using GamePlay.System.Ecs.Runtime.Abstract;
+﻿using GamePlay.System.Ecs.Runtime.Abstract;
 using Leopotam.EcsLite;
 using UnityEngine;
 

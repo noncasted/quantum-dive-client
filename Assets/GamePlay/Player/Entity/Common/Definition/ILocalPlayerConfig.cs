@@ -2,6 +2,6 @@
 {
     public interface ILocalPlayerConfig : IPlayerConfig
     {
-        
+        PlayerViewFactory Prefab { get; }
     }
 }

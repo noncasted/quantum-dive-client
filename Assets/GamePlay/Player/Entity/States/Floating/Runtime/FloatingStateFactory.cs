@@ -1,8 +1,8 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
-using GamePlay.Player.Entity.States.Common;
+﻿using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Common;
 using GamePlay.Player.Entity.States.Floating.Logs;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ namespace GamePlay.Player.Entity.States.Floating.Runtime
         [SerializeField] private PlayerStateDefinition[] _statesPriority;
         [SerializeField] private FloatingStateLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<FloatingStateLogger>()
                 .WithParameter(_logSettings);

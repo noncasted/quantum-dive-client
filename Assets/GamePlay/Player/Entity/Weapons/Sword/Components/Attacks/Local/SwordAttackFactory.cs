@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Common;
 using Sirenix.OdinInspector;
@@ -15,7 +15,7 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
         [SerializeField] [Indent] private SwordAttackConfig _config;
         [SerializeField] [Indent] private PushParams _pushParams;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<Attack>()
                 .WithParameter(_definition)

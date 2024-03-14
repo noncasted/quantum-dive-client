@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using Global.Common;
 using Global.UI.EventSystems.Runtime;
 using Global.UI.LoadingScreens.Runtime;
@@ -7,6 +6,7 @@ using Global.UI.Localizations.Runtime;
 using Global.UI.Nova.Compose;
 using Global.UI.Overlays.Runtime;
 using Global.UI.UiStateMachines.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

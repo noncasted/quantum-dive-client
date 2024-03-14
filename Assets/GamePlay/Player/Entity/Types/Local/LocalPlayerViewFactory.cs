@@ -1,5 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using GamePlay.Player.Entity.Common.Definition;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Debug.Flags;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Binder;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
@@ -14,7 +15,7 @@ using UnityEngine;
 namespace GamePlay.Player.Entity.Types.Local
 {
     [DisallowMultipleComponent]
-    public class LocalPlayerViewFactory : ScopedEntityViewFactory, IEntityViewFactory
+    public class LocalPlayerViewFactory : PlayerViewFactory
     {
         [SerializeField] private PlayerAnimatorFactory _animator;
         [SerializeField] private PlayerTransformFactory _transform;
@@ -26,7 +27,7 @@ namespace GamePlay.Player.Entity.Types.Local
         [SerializeField] private PlayerDamageReceiverFactory _damageReceiver;
         [SerializeField] private PlayerDebugFlags _debugFlags;
 
-        public override void CreateViews(IServiceCollection services, IEntityUtils utils)
+        public override void CreateViews(IServiceCollection services, IScopedEntityUtils utils)
         {
             _animator.Create(services, utils);
             _transform.Create(services, utils);

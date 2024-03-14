@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Common;
 using GamePlay.Player.Entity.Components.DamageProcessors.Runtime;
 using GamePlay.Player.Entity.Components.Root.Remote;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
+using Internal.Scopes.Common.Entity;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -21,7 +21,7 @@ namespace GamePlay.Player.Entity.Components.Compose
         [SerializeField] private RemoteRotationFactory _remoteRotation;
         [SerializeField] private RemoteStateMachineFactory _stateMachine;
         [SerializeField] private RemotePlayerRootFactory _root;
-        [SerializeField] private DefaultCallbacksComponentFactory _defaultCallbacks;
+        [SerializeField] private EntityDefaultCallbacksFactory _defaultCallbacks;
 
         public IReadOnlyList<IComponentFactory> Factories => new IComponentFactory[]
         {

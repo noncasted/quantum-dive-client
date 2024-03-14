@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Lifetimes;
-using GamePlay.Player.Entity.States.Common;
+﻿using GamePlay.Player.Entity.States.Common;
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace GamePlay.Player.Entity.States.Floating.Runtime
 {

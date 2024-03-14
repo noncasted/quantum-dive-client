@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using GamePlay.Combat.Hitboxes.Common;
 using Sirenix.OdinInspector;
@@ -13,7 +13,7 @@ namespace GamePlay.Combat.Hitboxes.Runtime
         menuName = HitboxRegistryRoutes.ServicePath)]
     public class HitboxRegistryFactory : ScriptableObject, IServiceFactory
     {
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<HitboxRegistry>()
                 .As<IHitboxRegistry>();

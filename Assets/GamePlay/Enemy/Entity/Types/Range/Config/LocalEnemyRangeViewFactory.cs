@@ -1,5 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using GamePlay.Enemy.Entity.Common.Definition.Config;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.States.Damaged.Vfx;
 using GamePlay.Enemy.Entity.Types.Range.Views.ShootPoint;
 using GamePlay.Enemy.Entity.Views.AIPaths;
@@ -15,7 +16,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Types.Range.Config
 {
-    public class LocalEnemyRangeViewFactory : ScopedEntityViewFactory, IEntityViewFactory
+    public class LocalEnemyRangeViewFactory : EnemyViewFactory
     {
         [SerializeField] private EnemyAnimatorFactory _animator;
         [SerializeField] private EnemyRotationPointFactory _rotationPoint;
@@ -29,7 +30,7 @@ namespace GamePlay.Enemy.Entity.Types.Range.Config
         [SerializeField] private HealthBarFactory _healthBar;
         [SerializeField] private ShootPointFactory _shootPoint;
 
-        public override void CreateViews(IServiceCollection services, IEntityUtils utils)
+        public override void CreateViews(IServiceCollection services, IScopedEntityUtils utils)
         {
             _animator.Create(services, utils);
             _rotationPoint.Create(services, utils);

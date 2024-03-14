@@ -1,9 +1,9 @@
 ﻿using System;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using Global.Publisher.Abstract.DataStorages;
 using Global.Publisher.Abstract.Languages;
 using Global.UI.Localizations.Definition;
+using Internal.Scopes.Abstract.Instances.Services;
 
 namespace Global.UI.Localizations.Runtime
 {

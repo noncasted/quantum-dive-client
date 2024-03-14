@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Idles.Remote;
 using GamePlay.Player.Entity.States.Respawns.Remote;
 using GamePlay.Player.Entity.States.Roll.Remote;
 using GamePlay.Player.Entity.States.Runs.Remote;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Remote;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

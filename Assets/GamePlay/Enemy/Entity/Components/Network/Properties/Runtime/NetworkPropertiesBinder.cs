@@ -1,8 +1,8 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
+﻿using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemy.Entity.Views.Hitbox.Common;
 using GamePlay.Enemy.Entity.Views.Transforms.Remote.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 
 namespace GamePlay.Enemy.Entity.Components.Network.Properties.Runtime
 {

@@ -1,7 +1,8 @@
-﻿using Common.Architecture.Container.Abstract;
+﻿using Internal.Scopes.Abstract.Containers;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Spawn.Zones.SpawnPoints;
 using GamePlay.Enemy.Spawn.Zones.Trigger;
+using Internal.Scopes.Abstract.Callbacks;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -15,7 +16,7 @@ namespace GamePlay.Enemy.Spawn.Zones.Setup.Bootstrap
         [SerializeField] private EnemyZoneTrigger _zoneTrigger;
         [SerializeField] private EnemySpawnPoints _spawnPoints;
 
-        public async UniTask Build(LifetimeScope parent, ICallbackRegistry callbacks)
+        public async UniTask Build(LifetimeScope parent, ICallbacksRegistry callbacks)
         {
             var scope = GetComponent<EnemyZoneScope>();
 

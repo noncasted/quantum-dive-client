@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
 using GamePlay.Combat.Projectiles.Entity.Views.Facade;
+using Internal.Scopes.Abstract.Containers;
 using GamePlay.Combat.Projectiles.Registry.Definition;
+using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

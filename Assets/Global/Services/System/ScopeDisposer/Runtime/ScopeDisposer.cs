@@ -1,8 +1,8 @@
-﻿using Common.Architecture.Scopes.Runtime;
-using Common.Architecture.Scopes.Runtime.Callbacks;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using Global.System.ScopeDisposer.Logs;
 using Internal.Scenes.Abstract;
+using Internal.Scopes.Abstract.Callbacks;
+using Internal.Scopes.Abstract.Instances.Services;
 
 namespace Global.System.ScopeDisposer.Runtime
 {
@@ -20,12 +20,12 @@ namespace Global.System.ScopeDisposer.Runtime
 
         private readonly ISceneUnloader _sceneUnload;
 
-        public async UniTask Unload(IScopeLoadResult scopeLoadResult)
+        public async UniTask Unload(IServiceScopeLoadResult scopeLoadResult)
         {
             _logger.OnUnload(scopeLoadResult.Scenes.Count);
 
             await scopeLoadResult.Lifetime.Terminate();
-            await scopeLoadResult.Callbacks[CallbackStage.Dispose].Run();
+            await scopeLoadResult.Callbacks.RunDispose();
             await _sceneUnload.Unload(scopeLoadResult.Scenes);
 
             _logger.OnUnloadingFinalized();

@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Internal.Scopes.Common.Entity;
 using Ragon.Client;
 using UnityEngine;
 

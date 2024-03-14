@@ -1,8 +1,8 @@
-﻿using Common.Architecture.Scopes.Factory;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using GamePlay.Common.Config.Runtime;
 using Global.Network.Connection.Runtime;
 using Global.Network.Session.Runtime.Join;
+using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Mocks.Runtime;
 using UnityEngine;
 using VContainer;
@@ -33,11 +33,11 @@ namespace GamePlay.Common.GlobalBootstrapMocks
             var sessionJoin = resolver.Resolve<ISessionJoin>();
             var joinResult =  await sessionJoin.JoinRandom();
             
-            var scopeLoaderFactory = resolver.Resolve<IScopeLoaderFactory>();
-            var scopeLoader = scopeLoaderFactory.Create(_levelScope, result.Parent);
-            var scope = await scopeLoader.Load();
-
-            await result.RegisterLoadedScene(scope);
+            // var scopeLoaderFactory = resolver.Resolve<IServiceScopeLoader>();
+            // var scopeLoader = scopeLoaderFactory.Create(_levelScope, result.Parent);
+            // var scope = await scopeLoader.Load();
+            //
+            // await result.RegisterLoadedScene(scope);
         }
     }
 }

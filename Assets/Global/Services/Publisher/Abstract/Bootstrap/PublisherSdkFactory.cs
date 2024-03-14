@@ -1,13 +1,12 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 
 namespace Global.Publisher.Abstract.Bootstrap
 {
     public abstract class PublisherSdkFactory : ScriptableObject, IServiceFactory
     {
-        public abstract UniTask Create(IServiceCollection builder, IScopeUtils utils);
+        public abstract UniTask Create(IServiceCollection builder, IServiceScopeUtils utils);
     }
 }

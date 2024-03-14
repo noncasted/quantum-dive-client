@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Common.DataTypes.Collections.ScriptableRegistries;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Common;
@@ -16,7 +16,7 @@ namespace GamePlay.Player.Mappers.States.Runtime
         menuName = PlayerStateMapperRoutes.ServicePath)]
     public class PlayerStateMapperFactory : ScriptableRegistry<PlayerStateDefinition>, IServiceFactory
     {
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<PlayerStateMapper>()
                 .As<IPlayerStateMapper>()

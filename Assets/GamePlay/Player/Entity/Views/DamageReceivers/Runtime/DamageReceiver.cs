@@ -1,7 +1,7 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
-using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.DataTypes.Reactive;
+using Internal.Scopes.Abstract.Lifetimes;
 using GamePlay.Common.Damages;
+using Internal.Scopes.Abstract.Instances.Entities;
 
 namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
 {

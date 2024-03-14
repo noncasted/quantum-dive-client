@@ -2,12 +2,9 @@
   "name": "GamePlay.Player.Network.EntityHandler.Runtime",
   "rootNamespace": "",
   "references": [
-    "GUID:5be6262f59e0487f8f55e7b4b6358c57",
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
     "GUID:d4c72429e3c94444bfafdc637920e799",
-    "GUID:a6bee730cad343c7ac8840da91376019",
-    "GUID:3b2ea7622084434a927c413b7fc2fd3a",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:1429db28f9474a389cb34ec712b3c8b3"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Container.Abstract;
+﻿using Internal.Scopes.Abstract.Containers;
 using Common.Tools.ObjectsPools.Runtime;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
 using GamePlay.Visuals.VfxPools.Common;

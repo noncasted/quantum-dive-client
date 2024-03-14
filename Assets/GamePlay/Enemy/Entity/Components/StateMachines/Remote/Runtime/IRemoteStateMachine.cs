@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Lifetimes;
-using GamePlay.Enemy.Entity.States.Abstract;
+﻿using GamePlay.Enemy.Entity.States.Abstract;
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime
 {

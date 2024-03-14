@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Lifetimes;
+using Internal.Scopes.Abstract.Lifetimes;
 using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Logs;
 using GamePlay.Player.Entity.States.Abstract;

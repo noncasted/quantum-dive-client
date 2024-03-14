@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
-using Internal.Scenes.Data;
+using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Scenes;
 using Menu.Cameras.Runtime;
 using Menu.Lobby.Controller.Runtime;
 using Menu.Lobby.UI.Runtime.View;
@@ -19,7 +19,7 @@ namespace Menu.Config.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = "MenuConfig", menuName = MenuAssetsPaths.Root + "Config")]
-    public class MenuConfig : ScriptableObject, IScopeConfig
+    public class MenuConfig : ScriptableObject, IServiceScopeConfig
     {
         [FoldoutGroup("Common")] [SerializeField]
         private BaseMenuLoopFactory _menuLoop;
@@ -53,7 +53,7 @@ namespace Menu.Config.Runtime
         [SerializeField] private bool _isMock;
 
         public LifetimeScope ScopePrefab => _scope;
-        public ISceneAsset ServicesScene => _servicesScene;
+        public SceneData ServicesScene => _servicesScene;
         public bool IsMock => _isMock;
 
         public IReadOnlyList<IServiceFactory> Services => new IServiceFactory[]

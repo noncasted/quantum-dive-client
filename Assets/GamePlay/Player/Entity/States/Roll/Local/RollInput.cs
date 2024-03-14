@@ -1,9 +1,10 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
-using Common.Architecture.Lifetimes.Viewables;
+﻿
+using Internal.Scopes.Abstract.Lifetimes;
+using Common.DataTypes.Reactive;
 using GamePlay.Player.Entity.Views.Transforms.Runtime;
 using Global.Inputs.Utils.Runtime.Projection;
 using Global.Inputs.View.Implementations.Movement;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Roll.Local

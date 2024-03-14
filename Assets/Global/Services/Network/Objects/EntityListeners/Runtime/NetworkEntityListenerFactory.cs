@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.Network.Objects.EntityListeners.Common;
 using Sirenix.OdinInspector;
@@ -12,7 +12,7 @@ namespace Global.Network.Objects.EntityListeners.Runtime
     [CreateAssetMenu(fileName = EntityListenerRoutes.ServiceName, menuName = EntityListenerRoutes.ServicePath)]
     public class NetworkEntityListenerFactory : ScriptableObject, IServiceFactory
     {
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<EntityListener>()
                 .As<IEntityListener>();

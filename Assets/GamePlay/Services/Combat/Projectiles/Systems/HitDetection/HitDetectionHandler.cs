@@ -1,5 +1,4 @@
-﻿using GamePlay.Common.Damages;
-using GamePlay.System.Ecs.Runtime.Abstract;
+﻿using GamePlay.System.Ecs.Runtime.Abstract;
 using Global.Debugs.Drawing.Runtime;
 using Leopotam.EcsLite;
 using UnityEngine;

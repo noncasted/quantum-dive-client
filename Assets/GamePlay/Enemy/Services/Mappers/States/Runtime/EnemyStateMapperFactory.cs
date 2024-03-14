@@ -1,10 +1,9 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
-using Common.DataTypes.Collections.ScriptableRegistries;
+﻿using Common.DataTypes.Collections.ScriptableRegistries;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Mappers.States.Common;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -15,7 +14,7 @@ namespace GamePlay.Enemy.Mappers.States.Runtime
         menuName = EnemyStateMapperRoutes.ServicePath)]
     public class EnemyStateMapperFactory : ScriptableRegistry<EnemyStateDefinition>, IServiceFactory
     {
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<EnemyStateMapper>()
                 .As<IEnemyStateMapper>()

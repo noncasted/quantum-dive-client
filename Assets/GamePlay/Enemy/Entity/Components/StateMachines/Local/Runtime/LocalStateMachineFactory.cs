@@ -1,7 +1,7 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemy.Entity.Components.StateMachines.Local.Common;
+﻿using GamePlay.Enemy.Entity.Components.StateMachines.Local.Common;
 using GamePlay.Enemy.Entity.Components.StateMachines.Local.Logs;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ namespace GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime
     {
         [SerializeField] [Indent] private LocalStateMachineLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<LocalStateMachineLogger>()
                 .WithParameter(_logSettings);

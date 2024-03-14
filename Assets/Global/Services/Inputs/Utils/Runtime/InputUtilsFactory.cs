@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.Inputs.Utils.Common;
 using Global.Inputs.Utils.Runtime.Conversion;
@@ -14,7 +14,7 @@ namespace Global.Inputs.Utils.Runtime
     [CreateAssetMenu(fileName = InputUtilsRoutes.ServiceName, menuName = InputUtilsRoutes.ServicePath)]
     public class InputUtilsFactory : ScriptableObject, IServiceFactory
     {
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<InputConversion>()
                 .As<IInputConversion>();

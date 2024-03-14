@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.DataTypes.Reactive;
 using GamePlay.Enemy.Entity.Components.StateMachines.Local.Logs;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;

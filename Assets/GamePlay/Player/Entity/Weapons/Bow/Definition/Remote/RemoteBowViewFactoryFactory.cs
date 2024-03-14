@@ -1,5 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using GamePlay.Player.Entity.Components.Equipment.Definition;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
@@ -10,7 +11,7 @@ using UnityEngine;
 namespace GamePlay.Player.Entity.Weapons.Bow.Definition.Remote
 {
     [DisallowMultipleComponent]
-    public class RemoteBowViewFactoryFactory : ScopedEntityViewFactory, IEntityViewFactory
+    public class RemoteBowViewFactoryFactory : EquipmentViewFactory
     {
         [SerializeField] private BowTransformFactory _transform;
         [SerializeField] private BowShootPointFactory _shootPoint;
@@ -18,7 +19,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Definition.Remote
         [SerializeField] private BowAnimatorFactory _animator;
         [SerializeField] private BowArrowFactory _arrow;
 
-        public override void CreateViews(IServiceCollection services, IEntityUtils utils)
+        public override void CreateViews(IServiceCollection services, IScopedEntityUtils utils)
         {
             _transform.Create(services, utils);
             _shootPoint.Create(services, utils);

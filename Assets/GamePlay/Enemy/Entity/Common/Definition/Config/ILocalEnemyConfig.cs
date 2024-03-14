@@ -2,6 +2,6 @@
 {
     public interface ILocalEnemyConfig : IEnemyConfig
     {
-        
+        EnemyViewFactory Prefab { get; }
     }
 }

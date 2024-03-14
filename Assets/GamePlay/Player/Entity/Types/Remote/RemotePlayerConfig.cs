@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Common.Definition;
 using GamePlay.Player.Entity.Components.Compose;
 using GamePlay.Player.Entity.Components.Equipment.Compose;
@@ -23,7 +23,7 @@ namespace GamePlay.Player.Entity.Types.Remote
         
         [SerializeField] private RemotePlayerViewFactory _prefab;
 
-        public ScopedEntityViewFactory Prefab => _prefab;
+        public PlayerViewFactory Prefab => _prefab;
 
         public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
         {

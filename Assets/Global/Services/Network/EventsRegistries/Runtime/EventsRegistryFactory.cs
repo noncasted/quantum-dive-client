@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.Network.EventsRegistries.Common;
 using Sirenix.OdinInspector;
@@ -13,7 +13,7 @@ namespace Global.Network.EventsRegistries.Runtime
         menuName = EventsRegistryRoutes.ServicePath)]
     public class EventsRegistryFactory : ScriptableObject, IServiceFactory
     {
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<NetworkEventsRegistry>()
                 .AsCallbackListener();

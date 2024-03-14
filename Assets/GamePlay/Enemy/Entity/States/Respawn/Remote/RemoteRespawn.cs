@@ -1,12 +1,12 @@
 ﻿using System.Threading;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+using Internal.Scopes.Abstract.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.States.Respawn.Common;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Ragon.Protocol;
 
 namespace GamePlay.Enemy.Entity.States.Respawn.Remote
@@ -44,7 +44,7 @@ namespace GamePlay.Enemy.Entity.States.Respawn.Remote
         public void Enter(RagonBuffer buffer)
         {
             _cancellation = new CancellationTokenSource();
-            
+
             _spriteSwitcher.Enable();
 
             _animator.PlayAsync(_animation, _cancellation.Token).Forget();

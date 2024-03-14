@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Lifetimes;
-using GamePlay.Enemy.Updater.Runtime.Updatables;
+﻿using GamePlay.Enemy.Updater.Runtime.Updatables;
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace GamePlay.Enemy.Updater.Runtime
 {

@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.CameraFollow.Abstract;
 using GamePlay.Player.Entity.Components.CameraFollow.Common;
 using Sirenix.OdinInspector;
@@ -13,7 +13,7 @@ namespace GamePlay.Player.Entity.Components.CameraFollow.Runtime
     {
         [SerializeField] private FollowTargetConfig _config;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<FollowTarget>()
                 .WithParameter(_config)

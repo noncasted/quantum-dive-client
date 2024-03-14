@@ -2,7 +2,7 @@
   "name": "Menu.Main.Controller.Runtime",
   "rootNamespace": "",
   "references": [
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:8fccd1787a1d408a9cc7a9a6ea1abaf3",
     "GUID:9b51a48d04164033bd0ea196e24c1113",
     "GUID:012e98662fb143bb9d03fd8b694ccaa6",

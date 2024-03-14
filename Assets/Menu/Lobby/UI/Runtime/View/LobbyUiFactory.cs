@@ -1,7 +1,8 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+
 using Cysharp.Threading.Tasks;
-using Internal.Scenes.Data;
+using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Scenes;
 using Menu.Lobby.UI.Common;
 using NaughtyAttributes;
 using Sirenix.OdinInspector;
@@ -16,11 +17,9 @@ namespace Menu.Lobby.UI.Runtime.View
     {
         [SerializeField] [Scene] private SceneData _scene;
 
-        public async override UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async override UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
-            var scene = await utils.SceneLoader.LoadTyped<LobbyView>(_scene);
-
-            var view = scene.Searched;
+            var (_, view) = await utils.SceneLoader.LoadTyped<LobbyView>(_scene);
 
             services.RegisterComponent(view)
                 .As<ILobbyView>();

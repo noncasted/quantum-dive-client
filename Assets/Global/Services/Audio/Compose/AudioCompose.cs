@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using Global.Audio.Common;
 using Global.Audio.Listener.Runtime;
 using Global.Audio.Player.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

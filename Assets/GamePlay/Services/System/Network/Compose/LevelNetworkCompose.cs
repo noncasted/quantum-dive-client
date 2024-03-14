@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using GamePlay.System.Network.Common;
 using GamePlay.System.Network.Messaging.Events.Runtime;
 using GamePlay.System.Network.Messaging.REST.Runtime;
@@ -10,6 +9,7 @@ using GamePlay.System.Network.Room.Entities.Factory;
 using GamePlay.System.Network.Room.EventLoops.Runtime;
 using GamePlay.System.Network.Room.Lifecycle.Runtime;
 using GamePlay.System.Network.Room.SceneCollectors.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

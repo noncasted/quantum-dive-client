@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Runtime;
 using GamePlay.Player.Entity.Components.Equipment.Common;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Factory;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Local;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Remote;
 using GamePlay.Player.Entity.Components.Equipment.Locker.Runtime;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

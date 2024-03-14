@@ -1,7 +1,7 @@
-﻿using Common.Architecture.Scopes.Runtime.Callbacks;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using GamePlay.Player.Factory.Factory.Runtime;
 using GamePlay.Visuals.Cameras.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
 
 namespace GamePlay.Loop.Runtime
 {

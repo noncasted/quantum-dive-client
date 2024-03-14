@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.Network.Handlers.SceneCollectors.Common;
 using Sirenix.OdinInspector;
@@ -13,7 +13,7 @@ namespace Global.Network.Handlers.SceneCollectors.Runtime
         menuName = SceneCollectorBridgeRoutes.ServicePath)]
     public class SceneCollectorBridgeFactory : ScriptableObject, IServiceFactory
     {
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<SceneCollectorBridge>()
                 .As<ISceneCollectorBridge>();

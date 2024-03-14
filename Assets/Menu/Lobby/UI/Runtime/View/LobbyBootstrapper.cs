@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Container.Abstract;
+﻿using Internal.Scopes.Abstract.Containers;
 using Menu.Lobby.UI.Runtime.Players;
 using Menu.Lobby.UI.Runtime.Status.Timer;
 using UnityEngine;

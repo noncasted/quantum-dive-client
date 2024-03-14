@@ -1,13 +1,14 @@
-﻿using Common.Architecture.Callbacks;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using GamePlay.System.Network.Room.Entities.Factory;
 using Global.Network.Handlers.ClientHandler.Runtime;
+using Internal.Scopes.Abstract.Callbacks;
+using Internal.Scopes.Runtime.Callbacks;
 using Ragon.Client;
 using VContainer;
 
 namespace GamePlay.System.Network.Room.EventLoops.Runtime
 {
-    public class NetworkCallbacksFactory : IGamePlayNetworkCallbacks
+    public class NetworkCallbacksFactory : ICallbacksListener
     {
         [Inject]
         private void Construct(IClientProvider clientProvider, ISceneEntityFactory sceneEntityFactory)
@@ -28,10 +29,10 @@ namespace GamePlay.System.Network.Room.EventLoops.Runtime
                 new AsyncCallbackEntity<INetworkDestroyListener>(listener => listener.OnNetworkDestroy(), 0));
         }
 
-        private readonly ICallbacksHandler _awake = new CallbacksHandler();
-        private readonly ICallbacksHandler _callbacksRegistration = new CallbacksHandler();
-        private readonly ICallbacksHandler _sceneEntityCreation = new CallbacksHandler();
-        private readonly ICallbacksHandler _destroy = new CallbacksHandler();
+        private readonly ICallbacksStage _awake = new CallbacksHandler();
+        private readonly ICallbacksStage _callbacksRegistration = new CallbacksHandler();
+        private readonly ICallbacksStage _sceneEntityCreation = new CallbacksHandler();
+        private readonly ICallbacksStage _destroy = new CallbacksHandler();
 
         private IClientProvider _clientProvider;
         private ISceneEntityFactory _sceneEntityFactory;

@@ -1,5 +1,6 @@
-﻿using Common.Architecture.Lifetimes;
-using Global.Network.Objects.Factories.Abstract;
+﻿using Global.Network.Objects.Factories.Abstract;
+using Internal.Scopes.Abstract.Lifetimes;
+
 
 namespace GamePlay.System.Network.Objects.Factories.Registry
 {

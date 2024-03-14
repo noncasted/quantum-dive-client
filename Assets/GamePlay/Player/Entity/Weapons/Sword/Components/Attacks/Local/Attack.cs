@@ -1,6 +1,6 @@
 ﻿using System.Threading;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+
+using Internal.Scopes.Abstract.Lifetimes;
 using Common.Tools.UniversalAnimators.Abstract;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Damages;
@@ -16,6 +16,7 @@ using GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Entities;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Local
 {

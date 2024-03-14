@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Deaths.Local;
 using GamePlay.Player.Entity.States.Floating.Runtime;

@@ -1,7 +1,8 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿
+using Internal.Scopes.Abstract.Lifetimes;
 using Global.Inputs.View.Implementations.Combat;
 using Global.Inputs.View.Implementations.Movement;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.InputReceiver

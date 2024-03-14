@@ -1,10 +1,10 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.UI.Overlay.Common;
-using Internal.Scenes.Data;
+using Internal.Scopes.Abstract.Scenes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -17,11 +17,9 @@ namespace GamePlay.Player.UI.Overlay.Runtime.Bootstrap
     {
         [SerializeField] [NestedScriptableObjectField] private SceneData _scene;
 
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
-            var scene = await utils.SceneLoader.LoadTyped<PlayerOverlayBuilder>(_scene);
-
-            var view = scene.Searched;
+            var (_, view) = await utils.SceneLoader.LoadTyped<PlayerOverlayBuilder>(_scene);
 
             view.Build(services);
         }

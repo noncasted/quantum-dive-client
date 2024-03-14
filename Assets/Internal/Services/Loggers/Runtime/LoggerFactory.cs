@@ -1,6 +1,6 @@
 ﻿using Internal.Abstract;
 using Internal.Loggers.Common;
-using Internal.Options.Runtime;
+using Internal.Scopes.Abstract.Options;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using VContainer;

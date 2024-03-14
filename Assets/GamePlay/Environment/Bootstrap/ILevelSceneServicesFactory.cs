@@ -1,11 +1,11 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Utils;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
 
 namespace GamePlay.Environment.Bootstrap
 {
     public interface ILevelSceneServicesFactory
     {
-        UniTask Create(IServiceCollection services, IScopeUtils utils);
+        UniTask Create(IServiceCollection services, IServiceScopeUtils utils);
     }
 }

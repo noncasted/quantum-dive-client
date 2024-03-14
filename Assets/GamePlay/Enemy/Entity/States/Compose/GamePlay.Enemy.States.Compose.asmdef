@@ -1,7 +1,7 @@
 ﻿{
   "name": "GamePlay.Enemy.States.Compose",
   "references": [
-    "GUID:a6bee730cad343c7ac8840da91376019",
+    
     "GUID:72041e54c124471db15c17d033547c18",
     "GUID:cba95793f8404b33a54ac8f44e5ae4bf",
     "GUID:483c1c97199d48899ab2ef29bc389d0d",
@@ -13,6 +13,7 @@
     "GUID:78cdf7b8b45a42be84a6b9b9fc432f47",
     "GUID:2cd1058b8fb0415d9dba71fe9948a965",
     "GUID:9800b4e6b20b4edf93421401d0502288",
-    "GUID:0af0043b3e9f429c837f90d429af47fb"
+    "GUID:0af0043b3e9f429c837f90d429af47fb",
+    "GUID:1429db28f9474a389cb34ec712b3c8b3"
   ]
 }

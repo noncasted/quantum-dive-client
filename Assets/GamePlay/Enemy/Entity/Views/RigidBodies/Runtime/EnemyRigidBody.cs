@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
 using GamePlay.Enemy.Entity.Views.RigidBodies.Logs;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.RigidBodies.Runtime

@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Scopes.Runtime.Callbacks;
-using Global.Network.Handlers.ClientHandler.Runtime;
+﻿using Global.Network.Handlers.ClientHandler.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 
 namespace Global.Network.EventsRegistries.Runtime
 {

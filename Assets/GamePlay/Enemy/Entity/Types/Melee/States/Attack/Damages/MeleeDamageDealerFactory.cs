@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages
@@ -8,7 +8,7 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages
     {
         [SerializeField] private DamageTrigger _trigger;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.RegisterComponent(_trigger)
                 .As<IDamageTrigger>();

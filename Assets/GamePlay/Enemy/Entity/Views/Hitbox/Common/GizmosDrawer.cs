@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Global.Debugs.Drawing.Runtime;
+﻿using Global.Debugs.Drawing.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.Hitbox.Common

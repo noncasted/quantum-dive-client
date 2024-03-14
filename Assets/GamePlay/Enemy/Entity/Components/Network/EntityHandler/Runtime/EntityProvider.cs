@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Client;
 
 namespace GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime

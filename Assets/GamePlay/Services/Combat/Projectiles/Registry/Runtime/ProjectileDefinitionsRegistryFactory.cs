@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Container.Abstract;
+using Internal.Scopes.Abstract.Containers;
 using GamePlay.Combat.Projectiles.Common;
 using GamePlay.Combat.Projectiles.Registry.Definition;
 using Sirenix.OdinInspector;

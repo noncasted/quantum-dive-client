@@ -1,8 +1,7 @@
-﻿using Common.Architecture.Scopes.Factory;
-using Common.Architecture.Scopes.Runtime.Callbacks;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using Global.Config.Runtime;
 using Internal.Scope;
+using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 using VContainer;
 
@@ -24,13 +23,8 @@ namespace Internal.Setup
         {
             var internalScopeLoader = new InternalScopeLoader(_internal);
             var internalScope = await internalScopeLoader.Load();
-            var scopeLoaderFactory = internalScope.Container.Resolve<IScopeLoaderFactory>();
-            var scopeLoader = scopeLoaderFactory.Create(_global, internalScope);
-
-            var scopeLoadResult = await scopeLoader.Load();
-            
-            await scopeLoadResult.Callbacks[CallbackStage.Construct].Run();
-            await scopeLoadResult.Callbacks[CallbackStage.SetupComplete].Run();
+            var scopeLoaderFactory = internalScope.Container.Resolve<IServiceScopeLoader>();
+            var scopeLoadResult = await scopeLoaderFactory.Load(internalScope, _global);
 
             _loading.SetActive(false);
         }

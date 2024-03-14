@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using GamePlay.System.Network.Common;
 using Sirenix.OdinInspector;
@@ -12,10 +12,10 @@ namespace GamePlay.System.Network.Room.EventLoops.Runtime
     [CreateAssetMenu(fileName = "GamePlayNetworkEvents", menuName = GamePlayNetworkRoutes.Root + "Events")]
     public class NetworkEventsLoopFactory : ScriptableObject, IServiceFactory
     {
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             var callbacks = new NetworkCallbacksFactory();
-            utils.Callbacks.AddGenericCallbackRegister(callbacks);
+            utils.Callbacks.AddCustomListener(callbacks);
 
             services.RegisterInstance(callbacks)
                 .As<IGamePlayNetworkCallbacks>();

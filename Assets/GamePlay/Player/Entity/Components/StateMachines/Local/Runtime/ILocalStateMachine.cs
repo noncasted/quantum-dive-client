@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.DataTypes.Reactive;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 

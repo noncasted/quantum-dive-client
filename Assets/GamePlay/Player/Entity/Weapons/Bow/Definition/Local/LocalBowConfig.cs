@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime;
@@ -12,6 +11,7 @@ using GamePlay.Player.Entity.Weapons.Bow.States.Reloads.Local;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Runtime;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.InputReceiver;
 using GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local;
+using Internal.Scopes.Common.Entity;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -22,7 +22,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Definition.Local
         menuName = BowConfigRoutes.LocalPath)]
     public class LocalBowConfig : ScriptableObject, IEquipmentInstanceConfig
     {
-        [SerializeField] private DefaultCallbacksComponentFactory _defaultCallbacks;
+        [SerializeField] private EntityDefaultCallbacksFactory _defaultCallbacks;
         [SerializeField] private BowRootFactory _root;
         
         [FoldoutGroup("Common")] [SerializeField] [Indent]
@@ -46,9 +46,9 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Definition.Local
         [FoldoutGroup("Combat")] [SerializeField] [Indent]
         private StrafeInputFactory _strafesInput;
 
-        [SerializeField] private LocalBowViewFactoryFactory _prefab;
+        [SerializeField] private LocalBowViewFactory _prefab;
 
-        public ScopedEntityViewFactory Prefab => _prefab;
+        public EquipmentViewFactory Prefab => _prefab;
 
         public IReadOnlyList<IComponentFactory> Components => new IComponentFactory[]
         {

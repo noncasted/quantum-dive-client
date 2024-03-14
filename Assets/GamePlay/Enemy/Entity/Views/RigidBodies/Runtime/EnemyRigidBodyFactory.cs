@@ -1,6 +1,6 @@
 ﻿using System;
-using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Views.RigidBodies.Logs;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ namespace GamePlay.Enemy.Entity.Views.RigidBodies.Runtime
         [SerializeField] private LayerMask _layerMask;
         [SerializeField] private RigidBodyLogSettings _logSettings;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<RigidBodyLogger>()
                 .WithParameter(_logSettings);

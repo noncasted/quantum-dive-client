@@ -1,10 +1,10 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.UI.LoadingScreens.Common;
 using Global.UI.LoadingScreens.Logs;
-using Internal.Scenes.Data;
+using Internal.Scopes.Abstract.Scenes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -18,11 +18,9 @@ namespace Global.UI.LoadingScreens.Runtime
         [SerializeField] [Indent] private LoadingScreenLogSettings _logSettings;
         [SerializeField] [Indent] private SceneData _scene;
 
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
-            var result = await utils.SceneLoader.LoadTyped<LoadingScreen>(_scene);
-
-            var loadingScreen = result.Searched;
+            var (_, loadingScreen) = await utils.SceneLoader.LoadTyped<LoadingScreen>(_scene);
 
             services.Register<LoadingScreenLogger>()
                 .WithParameter(_logSettings);

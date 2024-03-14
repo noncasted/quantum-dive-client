@@ -1,16 +1,17 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using GamePlay.Player.Entity.Components.Equipment.Definition;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Definition.Remote
 {
     [DisallowMultipleComponent]
-    public class RemoteSwordViewFactoryFactory : ScopedEntityViewFactory, IEntityViewFactory
+    public class RemoteSwordViewFactoryFactory : EquipmentViewFactory
     {
         [SerializeField] private SwordTransformFactory _transform;
 
-        public override void CreateViews(IServiceCollection services, IEntityUtils utils)
+        public override void CreateViews(IServiceCollection services, IScopedEntityUtils utils)
         {
             _transform.Create(services, utils);
         }

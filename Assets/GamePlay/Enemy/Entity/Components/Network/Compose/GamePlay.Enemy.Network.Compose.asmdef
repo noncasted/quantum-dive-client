@@ -2,9 +2,10 @@
   "name": "GamePlay.Enemy.Network.Compose",
   "references": [
     "GUID:eacb6966b16f4ba5b94677448a26b3d6",
-    "GUID:a6bee730cad343c7ac8840da91376019",
+    
     "GUID:2bab53ca096531746a970188315676b8",
     "GUID:5a0b2aea9a2a4de78518f42301cb3375",
-    "GUID:1cd599a51b25f654caab6ee282e32afd"
+    "GUID:1cd599a51b25f654caab6ee282e32afd",
+    "GUID:1429db28f9474a389cb34ec712b3c8b3"
   ]
 }

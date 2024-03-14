@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.DataTypes.Reactive;
 using GamePlay.Combat.Hitboxes.Runtime;
 using GamePlay.Combat.Targets.Registry.Runtime;
 using GamePlay.Common.Damages;

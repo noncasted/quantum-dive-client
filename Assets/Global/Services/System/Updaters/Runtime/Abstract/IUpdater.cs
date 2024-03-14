@@ -1,4 +1,5 @@
-﻿using Common.Architecture.Lifetimes;
+﻿
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace Global.System.Updaters.Runtime.Abstract
 {

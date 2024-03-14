@@ -1,7 +1,8 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+
 using Cysharp.Threading.Tasks;
 using GamePlay.System.Network.Room.Lifecycle.Common;
+using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 
 namespace GamePlay.System.Network.Room.Lifecycle.Runtime
@@ -10,7 +11,7 @@ namespace GamePlay.System.Network.Room.Lifecycle.Runtime
         menuName = RoomStarterRoutes.MockPath)]
     public class MockRoomStarterFactory : RoomStarterBaseFactory
     {
-        public override async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public override async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<MockRoomStarter>()
                 .AsCallbackListener();

@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.DataTypes.Reactive;
 
 namespace GamePlay.Enemy.Entity.Components.Health.Runtime
 {

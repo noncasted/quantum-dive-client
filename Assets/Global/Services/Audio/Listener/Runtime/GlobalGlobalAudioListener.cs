@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Scopes.Runtime.Callbacks;
+﻿using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 
 namespace Global.Audio.Listener.Runtime

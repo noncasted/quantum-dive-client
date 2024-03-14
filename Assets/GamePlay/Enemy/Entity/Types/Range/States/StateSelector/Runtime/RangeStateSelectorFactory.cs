@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Components.StateSelectors;
 using GamePlay.Enemy.Entity.Types.Range.States.StateSelector.Common;
 using Sirenix.OdinInspector;
@@ -12,7 +12,7 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.StateSelector.Runtime
         menuName = RangeStateSelectorRoutes.ComponentPath)]
     public class RangeStateSelectorFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<RangeStateSelector>()
                 .As<IStateSelector>();

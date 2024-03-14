@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Callbacks;
+using Internal.Scopes.Abstract.Instances.Services;
 using Menu.Network.SceneCollectors.Runtime;
 using Ragon.Client;
 

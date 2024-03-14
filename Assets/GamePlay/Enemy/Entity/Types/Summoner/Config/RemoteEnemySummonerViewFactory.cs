@@ -1,5 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using GamePlay.Enemy.Entity.Common.Definition.Config;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.States.Damaged.Vfx;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using GamePlay.Enemy.Entity.Views.GameObjects;
@@ -11,7 +12,7 @@ using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Types.Summoner.Config
 {
-    public class RemoteEnemySummonerViewFactory : ScopedEntityViewFactory, IEntityViewFactory
+    public class RemoteEnemySummonerViewFactory : EnemyViewFactory
     {
         [SerializeField] private EnemyAnimatorFactory _animator;
         [SerializeField] private EnemySpriteFactory _sprite;
@@ -21,7 +22,7 @@ namespace GamePlay.Enemy.Entity.Types.Summoner.Config
         [SerializeField] private DamagedVfxFactory _damagedVfx;
         [SerializeField] private HealthBarFactory _healthBar;
 
-        public override void CreateViews(IServiceCollection services, IEntityUtils utils)
+        public override void CreateViews(IServiceCollection services, IScopedEntityUtils utils)
         {
             _animator.Create(services, utils);
             _sprite.Create(services, utils);

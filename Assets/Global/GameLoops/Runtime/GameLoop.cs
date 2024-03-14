@@ -1,8 +1,4 @@
 ﻿using System;
-using Common.Architecture.Scopes.Factory;
-using Common.Architecture.Scopes.Runtime;
-using Common.Architecture.Scopes.Runtime.Callbacks;
-using Common.Architecture.Scopes.Runtime.Services;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Config.Runtime;
 using Global.Cameras.CurrentProvider.Runtime;
@@ -13,8 +9,11 @@ using Global.System.MessageBrokers.Runtime;
 using Global.System.ScopeDisposer.Runtime;
 using Global.UI.LoadingScreens.Runtime;
 using Global.UI.Overlays.Runtime;
-using Internal.Options.Runtime;
 using Internal.Scenes.Abstract;
+using Internal.Scopes.Abstract.Callbacks;
+using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Options;
+using Internal.Scopes.Abstract.Scenes;
 using Menu.Config.Runtime;
 using VContainer.Unity;
 
@@ -24,7 +23,7 @@ namespace Global.GameLoops.Runtime
     {
         public GameLoop(
             LifetimeScope scope,
-            IScopeLoaderFactory scopeLoaderFactory,
+            IServiceScopeLoader scopeLoaderFactory,
             ILoadingScreen loadingScreen,
             IGlobalCamera globalCamera,
             IScopeDisposer scopeDisposer,
@@ -59,7 +58,7 @@ namespace Global.GameLoops.Runtime
         private readonly ILoadingScreen _loadingScreen;
 
         private readonly LifetimeScope _scope;
-        private readonly IScopeLoaderFactory _scopeLoaderFactory;
+        private readonly IServiceScopeLoader _scopeLoaderFactory;
 
         private readonly LevelConfig _levelScope;
         private readonly MenuConfig _menuScope;
@@ -67,7 +66,7 @@ namespace Global.GameLoops.Runtime
         private IDisposable _restartListener;
         private IDisposable _enterGameListener;
         private IDisposable _enterMenuListener;
-        private IScopeLoadResult _currentScope;
+        private IServiceScopeLoadResult _currentScope;
 
         public void OnEnabled()
         {
@@ -117,7 +116,7 @@ namespace Global.GameLoops.Runtime
             _loadingScreen.HideGameLoading();
         }
 
-        private async UniTask LoadScene(IScopeConfig config)
+        private async UniTask LoadScene(IServiceScopeConfig config)
         {
             _globalCamera.Enable();
             _currentCameraProvider.SetCamera(_globalCamera.Camera);
@@ -127,14 +126,10 @@ namespace Global.GameLoops.Runtime
             if (_currentScope != null)
                 unloadTask = _scopeDisposer.Unload(_currentScope);
 
-            var scopeLoader = _scopeLoaderFactory.Create(config, _scope);
-            var scopeLoadResult = await scopeLoader.Load();
-            _currentScope = scopeLoadResult;
-            await _currentScope.Callbacks[CallbackStage.Construct].Run();
+            var scopeLoader = await _scopeLoaderFactory.Load(_scope, config);
+            _currentScope = scopeLoader;
 
             await unloadTask;
-
-            await _currentScope.Callbacks[CallbackStage.SetupComplete].Run();
         }
     }
 }

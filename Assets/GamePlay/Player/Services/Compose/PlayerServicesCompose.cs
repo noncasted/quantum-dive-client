@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using GamePlay.Player.Common;
 using GamePlay.Player.Factory.Factory.Runtime;
 using GamePlay.Player.List.Runtime;
 using GamePlay.Player.Mappers.Equipment.Runtime;
 using GamePlay.Player.Mappers.States.Runtime;
 using GamePlay.Player.UI.Overlay.Runtime.Bootstrap;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

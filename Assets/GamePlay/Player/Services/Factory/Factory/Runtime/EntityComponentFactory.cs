@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Ragon.Client;
 
 namespace GamePlay.Player.Factory.Factory.Runtime
@@ -13,7 +13,7 @@ namespace GamePlay.Player.Factory.Factory.Runtime
 
         private readonly RagonEntity _entity;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.RegisterInstance(_entity);
         }

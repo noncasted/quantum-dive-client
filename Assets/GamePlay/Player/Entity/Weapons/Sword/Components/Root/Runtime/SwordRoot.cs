@@ -1,9 +1,11 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿
+using Internal.Scopes.Abstract.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Definitions.Abstract;
 using GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
+using Internal.Scopes.Common.Entity;
+using Internal.Scopes.Runtime.Lifetimes;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Components.Root.Runtime

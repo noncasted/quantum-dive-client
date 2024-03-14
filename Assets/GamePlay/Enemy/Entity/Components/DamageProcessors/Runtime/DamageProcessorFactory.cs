@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
-using GamePlay.Enemy.Entity.Components.DamageProcessors.Common;
+﻿using GamePlay.Enemy.Entity.Components.DamageProcessors.Common;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -11,7 +11,7 @@ namespace GamePlay.Enemy.Entity.Components.DamageProcessors.Runtime
         menuName = EnemyDamageProcessorRoutes.ComponentPath)]
     public class DamageProcessorFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<DamageProcessor>()
                 .AsCallbackListener();

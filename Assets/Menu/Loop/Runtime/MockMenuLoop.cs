@@ -1,6 +1,6 @@
 ﻿using System;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using Global.System.MessageBrokers.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Menu.Lobby.Controller.Runtime;
 using Menu.Lobby.UI.Runtime.View;
 using Menu.Main.Controller.Runtime;

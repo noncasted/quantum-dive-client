@@ -1,6 +1,6 @@
 ﻿using System.Threading;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+
+using Internal.Scopes.Abstract.Lifetimes;
 using Common.DataTypes.Structs;
 using Common.Tools.UniversalAnimators.Abstract;
 using Cysharp.Threading.Tasks;
@@ -12,6 +12,7 @@ using GamePlay.Player.Entity.States.Roll.Common;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Views.Hitboxes.Local;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Roll.Local

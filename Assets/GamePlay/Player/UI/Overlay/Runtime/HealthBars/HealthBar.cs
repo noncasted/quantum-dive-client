@@ -1,7 +1,7 @@
 ﻿using System;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using GamePlay.Player.Entity.Components.Healths.Runtime;
 using Global.System.MessageBrokers.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 
 namespace GamePlay.Player.UI.Overlay.Runtime.HealthBars
 {

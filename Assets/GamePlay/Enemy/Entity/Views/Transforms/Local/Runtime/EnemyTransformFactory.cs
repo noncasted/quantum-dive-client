@@ -1,6 +1,6 @@
 ﻿using System;
-using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Logs;
 using UnityEngine;
 
@@ -12,7 +12,7 @@ namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime
         [SerializeField] private Transform _transform;
         [SerializeField] private TransformLogSettings _logSettings;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<TransformLogger>()
                 .WithParameter(_logSettings);

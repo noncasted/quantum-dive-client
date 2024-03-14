@@ -1,7 +1,4 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Common.DefaultCallbacks;
-using Common.Architecture.Scopes.Common.DestroyHandler;
-using Common.Architecture.Scopes.Runtime.Services;
 using Global.Audio.Compose;
 using Global.Backend.Runtime;
 using Global.Cameras.Compose;
@@ -13,7 +10,9 @@ using Global.Network.Compose;
 using Global.Publisher.Abstract.Bootstrap;
 using Global.System.Compose;
 using Global.UI.Compose;
-using Internal.Scenes.Data;
+using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Scenes;
+using Internal.Scopes.Common.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using VContainer.Unity;
@@ -22,7 +21,7 @@ namespace Global.Config.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = "GlobalConfig", menuName = "Global/Config")]
-    public class GlobalScopeConfig : ScriptableObject, IScopeConfig
+    public class GlobalScopeConfig : ScriptableObject, IServiceScopeConfig
     {
         [SerializeField] private AudioCompose _audio;
         [SerializeField] private CameraCompose _camera;
@@ -33,8 +32,7 @@ namespace Global.Config.Runtime
         [SerializeField] private GameLoopFactory _gameLoop;
         [SerializeField] private PublisherSdkFactory _publisherSdk;
         [SerializeField] private BackendFactory _backend;
-        [SerializeField] private DefaultCallbacksServiceFactory _serviceDefaultCallbacks;
-        [SerializeField] private ScopeDestroyHandlerFactory _scopeDestroyHandler;
+        [SerializeField] private ServiceDefaultCallbacksFactory _serviceDefaultCallbacks;
         [SerializeField] private ConfigsCompose _configs;
         [SerializeField] private DrawingFactory _drawing;
 
@@ -43,7 +41,7 @@ namespace Global.Config.Runtime
         [SerializeField] private bool _isMock;
         
         public LifetimeScope ScopePrefab => _scope;
-        public ISceneAsset ServicesScene => _servicesScene;
+        public SceneData ServicesScene => _servicesScene;
         public bool IsMock => _isMock;
         public IReadOnlyList<IServiceFactory> Services => GetFactories();
 
@@ -64,7 +62,6 @@ namespace Global.Config.Runtime
             _gameLoop,
             _backend,
             _serviceDefaultCallbacks,
-            _scopeDestroyHandler,
             _drawing
         };
     }

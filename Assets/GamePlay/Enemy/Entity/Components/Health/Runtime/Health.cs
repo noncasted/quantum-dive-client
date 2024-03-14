@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.DataTypes.Reactive;
 using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using Ragon.Client;
 using Ragon.Protocol;

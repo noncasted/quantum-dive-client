@@ -1,7 +1,7 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using GamePlay.Common.Damages;
+﻿using GamePlay.Common.Damages;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 
 namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages
 {

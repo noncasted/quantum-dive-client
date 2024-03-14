@@ -1,10 +1,10 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
-using Common.DataTypes.Network;
+﻿using Common.DataTypes.Network;
 using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.Components.Network.TransformSync.Logs;
 using GamePlay.Player.Entity.Views.Transforms.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Client;
 using Ragon.Protocol;
 

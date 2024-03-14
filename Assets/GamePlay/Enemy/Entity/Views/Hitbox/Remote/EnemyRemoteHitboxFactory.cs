@@ -1,6 +1,6 @@
 ﻿using System;
-using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Views.Hitbox.Common;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ namespace GamePlay.Enemy.Entity.Views.Hitbox.Remote
         [SerializeField] private GizmosConfig _gizmosConfig;
         [SerializeField] private EnemyHitboxTrigger _trigger;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<RemoteHitbox>()
                 .WithParameter(_origin)

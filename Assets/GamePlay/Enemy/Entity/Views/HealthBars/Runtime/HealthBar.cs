@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+
+using Internal.Scopes.Abstract.Lifetimes;
 using GamePlay.Enemy.Entity.Components.Health.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.HealthBars.Runtime

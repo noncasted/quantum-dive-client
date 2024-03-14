@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using GamePlay.Enemy.Common;
 using GamePlay.Enemy.List.Runtime;
 using GamePlay.Enemy.Mappers.Definitions.Runtime;
@@ -7,6 +6,7 @@ using GamePlay.Enemy.Mappers.States.Runtime;
 using GamePlay.Enemy.Spawn.Factory.Runtime;
 using GamePlay.Enemy.Spawn.Pool.Runtime;
 using GamePlay.Enemy.Updater.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

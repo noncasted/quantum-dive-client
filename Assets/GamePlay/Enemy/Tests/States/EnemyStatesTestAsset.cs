@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using GamePlay.Combat.Hitboxes.Runtime;
 using GamePlay.Combat.Projectiles.Bootstrap;
 using GamePlay.Combat.Targets.Registry.Runtime;
@@ -21,7 +20,8 @@ using GamePlay.System.Network.Room.Entities.Factory;
 using GamePlay.System.Network.Room.Lifecycle.Runtime;
 using GamePlay.System.Network.Room.SceneCollectors.Runtime;
 using GamePlay.Visuals.VfxPools.Runtime;
-using Internal.Scenes.Data;
+using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Scenes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -31,7 +31,7 @@ namespace GamePlay.Enemy.Tests.States
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = "StatesTestSceneAsset", menuName = EnemyTestsAssetsPaths.Root + "StatesScene")]
-    public class EnemyStatesTestAsset : ScriptableObject, IScopeConfig
+    public class EnemyStatesTestAsset : ScriptableObject, IServiceScopeConfig
     {
         [FoldoutGroup("System")] [SerializeField]
         private EcsFactory _ecs;
@@ -92,7 +92,7 @@ namespace GamePlay.Enemy.Tests.States
         [SerializeField] private bool _isMock;
 
         public LifetimeScope ScopePrefab => _scopePrefab;
-        public ISceneAsset ServicesScene => _servicesScene;
+        public SceneData ServicesScene => _servicesScene;
         public bool IsMock => _isMock;
 
         public IReadOnlyList<IServiceFactory> Services => new IServiceFactory[]

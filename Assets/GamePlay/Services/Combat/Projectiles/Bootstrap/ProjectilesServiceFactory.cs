@@ -1,7 +1,4 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
-using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
+﻿using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Combat.Projectiles.Common;
 using GamePlay.Combat.Projectiles.Factory;
@@ -13,7 +10,9 @@ using GamePlay.Combat.Projectiles.Systems.CollisionDetection;
 using GamePlay.Combat.Projectiles.Systems.HitDetection;
 using GamePlay.Combat.Projectiles.Systems.Movement;
 using GamePlay.Combat.Projectiles.Systems.Sorting;
-using Internal.Scenes.Data;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Scenes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -32,7 +31,7 @@ namespace GamePlay.Combat.Projectiles.Bootstrap
 
         [SerializeField] [Indent] private ProjectileDefinitionsRegistryFactory _registry;
 
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<ProjectilesLogger>()
                 .WithParameter(_logSettings)

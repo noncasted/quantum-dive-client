@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.States.None.Common;
 using GamePlay.Player.Entity.States.None.Logs;
 using Sirenix.OdinInspector;
@@ -15,7 +15,7 @@ namespace GamePlay.Player.Entity.States.None.Runtime
         [SerializeField] [Indent] private NoneLogSettings _logSettings;
         [SerializeField] [Indent] private NoneDefinition _definition;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<NoneLogger>()
                 .WithParameter(_logSettings);

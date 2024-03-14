@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Container.Abstract;
+﻿using Internal.Scopes.Abstract.Containers;
 using GamePlay.Enemy.Entity.Common.Definition.Asset;
 using GamePlay.Enemy.Spawn.Factory.Runtime;
 using Sirenix.OdinInspector;

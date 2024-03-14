@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Lifetimes.Viewables;
-using Common.Architecture.Scopes.Runtime.Callbacks;
+﻿using Common.DataTypes.Reactive;
 using Global.Configs.Upgrades.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Configuration
 {
@@ -32,7 +32,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Configuration
         private readonly PushForceUpgrade _pushForce;
 
         public IViewableProperty<float> ShotDelay => _shotDelay.Value;
-        public IViewableProperty<float> ArrowSpeed => _arrowSpeed.Value;
+        public IViewableProperty<float> ArrowSpeed => _arrowSpeed.Value; 
         public IViewableProperty<int> Damage => _damage.Value;
         public IViewableProperty<float> PushForce => _pushForce.Value;
 

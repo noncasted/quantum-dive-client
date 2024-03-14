@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using Global.Cameras.Common;
 using Global.Cameras.CurrentProvider.Runtime;
 using Global.Cameras.Persistent.Runtime;
 using Global.Cameras.Utils.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

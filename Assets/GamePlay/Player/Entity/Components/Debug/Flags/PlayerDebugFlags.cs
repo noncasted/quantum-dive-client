@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Network.TransformSync.Logs;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Logs;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Logs;
@@ -16,7 +16,7 @@ namespace GamePlay.Player.Entity.Components.Debug.Flags
         [SerializeField] private RotationSyncDebugFlag _rotationSync;
         [SerializeField] private RemoteStateMachineDebugFlag _stateMachineSync;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.RegisterInstance(_transformSync);
             services.RegisterInstance(_transform);

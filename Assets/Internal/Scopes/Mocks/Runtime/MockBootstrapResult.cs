@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using Internal.Scenes.Abstract;
 using Internal.Scenes.Native;
+using Internal.Scopes.Abstract.Callbacks;
+using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Scenes;
 using UnityEngine.SceneManagement;
 using VContainer;
 using VContainer.Unity;
@@ -21,13 +22,10 @@ namespace Internal.Scopes.Mocks.Runtime
         public readonly IObjectResolver Resolver;
         public readonly LifetimeScope Parent;
 
-        public async UniTask RegisterLoadedScene(IScopeLoadResult loadResult)
+        public async UniTask RegisterLoadedScene(IServiceScopeLoadResult loadResult)
         {
             var scenes = new List<ISceneLoadResult>(loadResult.Scenes);
             scenes.Add(new NativeSceneLoadResult(SceneManager.GetActiveScene()));
-
-            await loadResult.Callbacks[CallbackStage.Construct].Run();
-            await loadResult.Callbacks[CallbackStage.SetupComplete].Run();
         }
     }
 }

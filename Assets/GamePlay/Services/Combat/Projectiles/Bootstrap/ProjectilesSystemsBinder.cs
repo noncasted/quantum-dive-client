@@ -1,11 +1,11 @@
 ﻿using System;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using GamePlay.Combat.Projectiles.Systems.CollisionDetection;
 using GamePlay.Combat.Projectiles.Systems.HitDetection;
 using GamePlay.Combat.Projectiles.Systems.Movement;
 using GamePlay.Combat.Projectiles.Systems.Sorting;
 using GamePlay.System.Ecs.Runtime.Bootstrap;
 using Global.System.MessageBrokers.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 
 namespace GamePlay.Combat.Projectiles.Bootstrap
 {

@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
@@ -19,7 +19,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Local
         [SerializeField] [Indent] private StrafeDefinition _definition;
         [SerializeField] [Indent] private PlayerStateDefinition[] _transitions;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             var playerAnimation = _playerAnimation.CreateAnimation();
             var bowAnimation = _bowAnimation.CreateAnimation();

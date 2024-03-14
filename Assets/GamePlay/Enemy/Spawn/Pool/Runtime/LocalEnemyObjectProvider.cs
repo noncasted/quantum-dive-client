@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Common.Definition.Config;
 using GamePlay.Enemy.Entity.Common.Definition.Root;
@@ -15,7 +15,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
         public LocalEnemyObjectProvider(
             Transform parent,
             ILocalEnemyConfig config,
-            IScopedEntityFactory entityFactory,
+            IEntityScopeLoader entityFactory,
             LifetimeScope parentScope)
         {
             _parent = parent;
@@ -26,7 +26,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
 
         private readonly Transform _parent;
         private readonly ILocalEnemyConfig _config;
-        private readonly IScopedEntityFactory _entityFactory;
+        private readonly IEntityScopeLoader _entityFactory;
         private readonly IDynamicEntityFactory _dynamicEntityFactory;
         private readonly LifetimeScope _parentScope;
 
@@ -43,7 +43,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
             }
 
             var view = Object.Instantiate(_config.Prefab, position, Quaternion.identity, _parent);
-            var root = await _entityFactory.Create<ILocalEnemyRoot>(_parentScope, view, _config);
+            var root = await _entityFactory.Load<ILocalEnemyRoot>(_parentScope, view, _config);
 
             await root.Callbacks.RunConstruct();
             await root.Enable(entity, position);

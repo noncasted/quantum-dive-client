@@ -15,32 +15,26 @@ namespace Internal.Scopes.Runtime.Instances.Services
 {
     public class ServiceScopeLoader : IServiceScopeLoader
     {
-        public ServiceScopeLoader(
-            ISceneLoader sceneLoader,
-            IOptions options,
-            LifetimeScope parent,
-            IServiceScopeConfig config)
+        public ServiceScopeLoader(ISceneLoader sceneLoader, IOptions options)
         {
             _sceneLoader = sceneLoader;
             _options = options;
-            _parent = parent;
-            _config = config;
         }
 
         private readonly ISceneLoader _sceneLoader;
         private readonly IOptions _options;
-        private readonly LifetimeScope _parent;
-        private readonly IServiceScopeConfig _config;
 
-        public async UniTask<IServiceScopeLoadResult> Load()
+        public async UniTask<IServiceScopeLoadResult> Load(LifetimeScope parent, IServiceScopeConfig config)
         {
-            var sceneLoader = new ServiceScopeSceneLoader(_sceneLoader);
-            var utils = await CreateUtils(sceneLoader);
+            var sceneLoader = new ServiceScopeSceneLoader( _sceneLoader);
+            var utils = await CreateUtils(sceneLoader, config);
             var builder = new ServiceCollection();
 
-            await CreateServices(builder, utils);
-            await BuildContainer(builder, utils);
+            await CreateServices(builder, utils, config);
+            await BuildContainer(builder, utils, parent);
 
+            utils.InternalCallbacks.AssignListenersFromTargets();
+            
             var loadResult = new ScopeLoadResult(
                 utils.Data.Scope,
                 utils.Data.Lifetime,
@@ -50,28 +44,33 @@ namespace Internal.Scopes.Runtime.Instances.Services
             return loadResult;
         }
 
-        private async UniTask<ServiceScopeUtils> CreateUtils(ISceneLoader sceneLoader)
+        private async UniTask<ServiceScopeUtils> CreateUtils(
+            ISceneLoader sceneLoader,
+            IServiceScopeConfig config)
         {
-            var servicesScene = await sceneLoader.Load(_config.ServicesScene);
+            var servicesScene = await sceneLoader.Load(config.ServicesScene);
             var binder = new ServiceScopeBinder(servicesScene.Scene);
-            var scope = Object.Instantiate(_config.ScopePrefab);
+            var scope = Object.Instantiate(config.ScopePrefab);
             binder.MoveToModules(scope.gameObject);
             var lifetime = new Lifetime();
             var scopeData = new ServiceScopeData(scope, lifetime);
             var callbacks = new ScopeCallbacks();
 
-            var utils = new ServiceScopeUtils(_options, sceneLoader, binder, scopeData, callbacks, _config.IsMock);
+            var utils = new ServiceScopeUtils(_options, sceneLoader, binder, scopeData, callbacks, config.IsMock);
 
             return utils;
         }
 
-        private async UniTask CreateServices(IServiceCollection builder, IServiceScopeUtils utils)
+        private async UniTask CreateServices(
+            IServiceCollection builder,
+            IServiceScopeUtils utils,
+            IServiceScopeConfig config)
         {
             var tasks = new List<UniTask>();
 
-            var services = new List<IServiceFactory>(_config.Services);
+            var services = new List<IServiceFactory>(config.Services);
 
-            foreach (var compose in _config.Composes)
+            foreach (var compose in config.Composes)
                 services.AddRange(compose.Factories);
 
             foreach (var factory in services)
@@ -80,9 +79,12 @@ namespace Internal.Scopes.Runtime.Instances.Services
             await UniTask.WhenAll(tasks);
         }
 
-        private async UniTask BuildContainer(ServiceCollection builder, IServiceScopeUtils utils)
+        private async UniTask BuildContainer(
+            ServiceCollection builder,
+            IServiceScopeUtils utils,
+            LifetimeScope parent)
         {
-            using (LifetimeScope.EnqueueParent(_parent))
+            using (LifetimeScope.EnqueueParent(parent))
             {
                 using (LifetimeScope.Enqueue(Register))
                 {

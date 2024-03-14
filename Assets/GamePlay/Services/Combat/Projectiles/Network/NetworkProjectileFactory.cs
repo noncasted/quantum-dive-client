@@ -1,9 +1,9 @@
-﻿using Common.Architecture.Scopes.Runtime.Callbacks;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using GamePlay.Combat.Projectiles.Factory;
 using GamePlay.Combat.Projectiles.Registry.Runtime;
 using GamePlay.System.Network.Room.Entities.Factory;
 using GamePlay.System.Network.Room.EventLoops.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 using Ragon.Protocol;
 

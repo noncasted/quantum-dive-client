@@ -1,7 +1,7 @@
 ﻿{
   "name": "Global.Updater.Setup",
   "references": [
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
     "GUID:1406c073900becd47a0fb72208b1070b",
     "GUID:04243451437dcfe48b583ab43ef0a8fa",

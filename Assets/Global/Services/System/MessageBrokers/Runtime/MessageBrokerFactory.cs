@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.System.MessageBrokers.Common;
 using Global.System.MessageBrokers.Logs;
@@ -17,7 +17,7 @@ namespace Global.System.MessageBrokers.Runtime
     {
         [SerializeField] [Indent] private MessageBrokerLogSettings _logSettings;
 
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             services.Register<MessageBrokerLogger>()
                 .WithParameter(_logSettings);

@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Container.Abstract;
+﻿using Internal.Scopes.Abstract.Containers;
 using Common.Tools.ObjectsPools.Runtime;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
 using GamePlay.Combat.Projectiles.Common;
@@ -11,8 +11,8 @@ namespace GamePlay.Combat.Projectiles.Registry.Definition
     public class ProjectileDefinition : ScriptableObject, IProjectileDefinition, IPoolEntry
     {
         [SerializeField] [Min(1)] private int _startupInstances;
-
         [SerializeField] private ProjectileView _prefab;
+
 
         public IPoolEntry PoolEntry => this;
 

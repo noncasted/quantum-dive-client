@@ -1,6 +1,7 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+
 using Cysharp.Threading.Tasks;
+using Internal.Scopes.Abstract.Instances.Services;
 using Menu.Main.UI.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace Menu.Main.UI.Runtime
         menuName = MenuUIRoutes.MockPath)]
     public class MockUiFactory : BaseMenuUiFactory
     {
-        public override async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public override async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             var ui = FindFirstObjectByType<MenuView>();
 

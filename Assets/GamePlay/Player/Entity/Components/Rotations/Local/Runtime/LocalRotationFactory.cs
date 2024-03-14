@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Rotations.Local.Common;
 using GamePlay.Player.Entity.Components.Rotations.Local.Logs;
 using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
@@ -15,7 +15,7 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
     {
         [SerializeField] [Indent] private LocalRotationLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<LocalRotationLogger>()
                 .WithParameter(_logSettings);

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
 using GamePlay.Enemy.Entity.Common.Definition.Asset.Abstract;
@@ -17,7 +17,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
         public EnemyPool(
             GamePlayScope scope,
             Scene targetScene,
-            IScopedEntityFactory entityFactory,
+            IEntityScopeLoader entityFactory,
             IDynamicEntityFactory dynamicEntityFactory,
             IEnemyDefinitionMapper definitionMapper)
         {
@@ -30,7 +30,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
 
         private readonly GamePlayScope _scope;
         private readonly Scene _targetScene;
-        private readonly IScopedEntityFactory _entityFactory;
+        private readonly IEntityScopeLoader _entityFactory;
         private readonly IDynamicEntityFactory _dynamicEntityFactory;
 
         private readonly IEnemyDefinitionMapper _definitionMapper;

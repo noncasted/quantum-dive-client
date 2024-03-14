@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Common;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Factory;
 using Sirenix.OdinInspector;
@@ -12,7 +12,7 @@ namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Remote
         menuName = EquipperRoutes.RemotePath)]
     public class RemoteEquipperFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<RemoteEquipper>()
                 .As<IEquipperSync>()

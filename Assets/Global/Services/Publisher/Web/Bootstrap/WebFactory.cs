@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+
 using Cysharp.Threading.Tasks;
 using Global.Audio.Player.Runtime;
 using Global.Publisher.Abstract.Bootstrap;
@@ -13,6 +13,7 @@ using Global.Publisher.Web.DataStorages;
 using Global.Publisher.Web.Languages;
 using Global.UI.Localizations.Runtime;
 using Internal.Options.Implementations;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -24,7 +25,7 @@ namespace Global.Publisher.Web.Bootstrap
     {
         [SerializeField] private WebCallbacks _callbacksPrefab;
 
-        public override async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public override async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             var options = utils.Options.GetOptions<PlatformOptions>();
 

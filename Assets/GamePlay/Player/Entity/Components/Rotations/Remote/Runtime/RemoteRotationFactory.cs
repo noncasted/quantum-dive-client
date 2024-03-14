@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Common;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Logs;
 using Sirenix.OdinInspector;
@@ -14,7 +14,7 @@ namespace GamePlay.Player.Entity.Components.Rotations.Remote.Runtime
     {
         [SerializeField] [Indent] private RemoteRotationLogSettings _logSettings;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<RemoteRotationLogger>()
                 .WithParameter(_logSettings);

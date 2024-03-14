@@ -1,5 +1,6 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿
+using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime

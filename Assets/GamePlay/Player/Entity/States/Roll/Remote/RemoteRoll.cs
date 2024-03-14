@@ -1,6 +1,6 @@
 ﻿using System.Threading;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+
+using Internal.Scopes.Abstract.Lifetimes;
 using Common.DataTypes.Network;
 using Common.Tools.UniversalAnimators.Abstract;
 using Cysharp.Threading.Tasks;
@@ -8,6 +8,7 @@ using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Roll.Common;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Ragon.Protocol;
 
 namespace GamePlay.Player.Entity.States.Roll.Remote

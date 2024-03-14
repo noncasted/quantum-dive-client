@@ -1,10 +1,10 @@
 ﻿using System;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using Cysharp.Threading.Tasks;
 using GamePlay.System.Network.Room.Entities.Factory;
 using GamePlay.System.Network.Room.EventLoops.Runtime;
 using Global.Network.Handlers.ClientHandler.Runtime;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 using Ragon.Protocol;
 

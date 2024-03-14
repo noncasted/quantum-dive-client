@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -14,7 +14,7 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Remote
         [SerializeField] private ShootAnimationFactory _animation;
         [SerializeField] private ShootDefinition _definition;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             var animation = _animation.Create();
             

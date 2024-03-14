@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Services;
 using Global.Network.Common;
 using Global.Network.Connection.Runtime;
 using Global.Network.EventsRegistries.Runtime;
@@ -7,6 +6,7 @@ using Global.Network.Handlers.ClientHandler.Runtime;
 using Global.Network.Handlers.SceneCollectors.Runtime;
 using Global.Network.Objects.EntityListeners.Runtime;
 using Global.Network.Session.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

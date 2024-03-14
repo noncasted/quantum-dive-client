@@ -1,5 +1,8 @@
-﻿using Common.Architecture.Scopes.Factory;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Runtime.Instances.Entities;
+using Internal.Scopes.Runtime.Instances.Services;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -32,8 +35,11 @@ namespace Internal.Scope
                     service.Create(_config.Options, services);
 
                 services.RegisterInstance(_config.Options);
-                services.Register<ScopeLoaderFactory>(Lifetime.Singleton)
-                    .As<IScopeLoaderFactory>();
+                services.Register<ServiceScopeLoader>(Lifetime.Singleton)
+                    .As<IServiceScopeLoader>();
+                services.Register<EntityScopeLoader>(Lifetime.Singleton)
+                    .As<IEntityScopeLoader>();
+
             }
 
             return scope;

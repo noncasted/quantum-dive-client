@@ -1,12 +1,11 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
 using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Common.Tools.ObjectsPools.Runtime;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
 using Cysharp.Threading.Tasks;
 using GamePlay.Visuals.VfxPools.Common;
-using Internal.Scenes.Data;
+using Internal.Scopes.Abstract.Scenes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -18,11 +17,9 @@ namespace GamePlay.Visuals.VfxPools.Runtime
     {
         [SerializeField] [NestedScriptableObjectField] [Indent] private SceneData _scene;
 
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
-            var loadResult = await utils.SceneLoader.LoadTyped<ObjectsPoolsHandler>(_scene);
-
-            var pool = loadResult.Searched;
+            var (loadResult, pool) = await utils.SceneLoader.LoadTyped<ObjectsPoolsHandler>(_scene);
 
             pool.CreatePools(services, loadResult.Scene);
 

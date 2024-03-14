@@ -2,7 +2,7 @@
   "name": "GamePlay.Player.Weapons.Sword.AttackArea.Runtime",
   "references": [
     "GUID:2435b9189672c5848ae4cc81c2cf0e13",
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:a6bee730cad343c7ac8840da91376019"
   ]
 }

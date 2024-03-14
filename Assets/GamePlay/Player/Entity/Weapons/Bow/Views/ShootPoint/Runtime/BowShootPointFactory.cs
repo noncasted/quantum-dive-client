@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.ShootPoint.Runtime
@@ -9,7 +9,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Views.ShootPoint.Runtime
     {
         [SerializeField] private ShootPointProvider _shootPoints;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<BowShootPoint>()
                 .As<IBowShootPoint>()

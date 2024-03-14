@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Container.Abstract;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
+using Internal.Scopes.Abstract.Containers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

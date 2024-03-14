@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Network.EntityHandler.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -10,10 +10,10 @@ namespace GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime
     [CreateAssetMenu(fileName = EntityHandlerRoutes.ServiceName, menuName = EntityHandlerRoutes.ServicePath)]
     public class EntityProviderFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             var callbacks = new PlayerEntityCallbackFactory();
-            utils.CallbacksRegistry.AddGenericCallbackRegistry(callbacks);
+            utils.Callbacks.AddCustomListener(callbacks);
             
             services.Register<EntityProvider>()
                 .As<IEntityProvider>()

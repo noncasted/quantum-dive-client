@@ -2,7 +2,6 @@
 using Internal.Abstract;
 using Internal.Common;
 using Internal.Loggers.Runtime;
-using Internal.Options.Runtime;
 using Internal.Scenes.Root;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -19,7 +18,7 @@ namespace Internal.Scope
         [SerializeField] private InternalScope _scope;
 
         public InternalScope Scope => _scope;
-        public IOptions Options => _options;
+        public Options.Runtime.Options Options => _options;
         public IReadOnlyList<IInternalServiceFactory> Services => GetServices();
 
         private IReadOnlyList<IInternalServiceFactory> GetServices()

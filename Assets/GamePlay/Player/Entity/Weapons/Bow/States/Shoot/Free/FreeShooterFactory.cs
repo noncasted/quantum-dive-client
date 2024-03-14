@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
 using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Runtime;
@@ -19,7 +19,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Free
         [SerializeField] private BowShootDefinition _definition;
         [SerializeField] private ShootMoveConfig _moveConfig;
 
-        public override void Create(IServiceCollection services, IEntityUtils utils)
+        public override void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             var playerAnimation = _playerAnimation.CreateAnimation();
             var bowAnimation = _bowAnimation.CreateAnimation();

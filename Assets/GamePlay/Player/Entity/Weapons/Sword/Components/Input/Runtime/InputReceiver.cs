@@ -1,6 +1,7 @@
-﻿using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Lifetimes;
+﻿
+using Internal.Scopes.Abstract.Lifetimes;
 using Global.Inputs.View.Implementations.Combat;
+using Internal.Scopes.Abstract.Instances.Entities;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime
 {

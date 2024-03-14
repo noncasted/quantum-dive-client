@@ -1,6 +1,7 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+
 using Cysharp.Threading.Tasks;
+using Internal.Scopes.Abstract.Instances.Services;
 using Menu.Lobby.UI.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace Menu.Lobby.UI.Runtime.View
         menuName = LobbyUiRoutes.MockPath)]
     public class MockLobbyUiFactory : BaseLobbyUiFactory
     {
-        public async override UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async override UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             var view = FindFirstObjectByType<LobbyView>();
 

@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Root.Common;
 using Sirenix.OdinInspector;
@@ -11,11 +11,10 @@ namespace GamePlay.Player.Entity.Weapons.Sword.Components.Root.Runtime
     [CreateAssetMenu(fileName = SwordRootRoutes.LocalName, menuName = SwordRootRoutes.LocalPath)]
     public class SwordRootFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<SwordRoot>()
                 .As<IEquipment>()
-                .WithParameter(utils.CallbacksRegistry)
                 .AsCallbackListener();
         }
     }

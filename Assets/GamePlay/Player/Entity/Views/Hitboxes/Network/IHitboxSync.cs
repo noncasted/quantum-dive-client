@@ -1,4 +1,4 @@
-﻿using Common.Architecture.Lifetimes.Viewables;
+﻿using Common.DataTypes.Reactive;
 
 namespace GamePlay.Player.Entity.Views.Hitboxes.Network
 {

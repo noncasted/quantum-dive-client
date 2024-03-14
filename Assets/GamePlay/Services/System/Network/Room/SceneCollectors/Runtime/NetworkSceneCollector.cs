@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using Global.Network.Handlers.SceneCollectors.Runtime;
+using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 
 namespace GamePlay.System.Network.Room.SceneCollectors.Runtime

@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -15,7 +15,7 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
         [SerializeField] private ShootDefinition _definition;
         [SerializeField] private ShootConfig _config;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<ShootTargetChecker>()
                 .WithParameter<IShootConfig>(_config)

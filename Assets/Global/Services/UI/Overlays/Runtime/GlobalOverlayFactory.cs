@@ -1,10 +1,10 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Scopes.Runtime.Services;
-using Common.Architecture.Scopes.Runtime.Utils;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
+
 using Cysharp.Threading.Tasks;
 using Global.UI.Localizations.Texts;
 using Global.UI.Overlays.Common;
-using Internal.Scenes.Data;
+using Internal.Scopes.Abstract.Scenes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -18,7 +18,7 @@ namespace Global.UI.Overlays.Runtime
         [SerializeField] private SceneData _scene;
         [SerializeField] private LanguageTextData _localization;
         
-        public async UniTask Create(IServiceCollection services, IScopeUtils utils)
+        public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
             // var result = await utils.SceneLoader.LoadTyped<GlobalOverlayView>(_scene);
             //

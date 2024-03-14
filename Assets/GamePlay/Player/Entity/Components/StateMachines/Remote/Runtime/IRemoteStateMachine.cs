@@ -1,6 +1,6 @@
-﻿using Common.Architecture.Lifetimes;
-using GamePlay.Player.Entity.States.Abstract;
+﻿using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
 {

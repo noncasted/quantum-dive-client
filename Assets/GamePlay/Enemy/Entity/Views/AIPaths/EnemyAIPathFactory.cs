@@ -1,6 +1,6 @@
 ﻿using System;
-using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Pathfinding;
 using UnityEngine;
 
@@ -11,7 +11,7 @@ namespace GamePlay.Enemy.Entity.Views.AIPaths
     {
         [SerializeField] private AIPath _ai;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             _ai.canMove = false;
             

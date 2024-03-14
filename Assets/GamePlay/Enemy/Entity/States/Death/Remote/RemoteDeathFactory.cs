@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.States.Death.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -14,7 +14,7 @@ namespace GamePlay.Enemy.Entity.States.Death.Remote
         [SerializeField] private DeathAnimationFactory _animation;
         [SerializeField] private DeathDefinition _definition;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             var animation = _animation.Create();
 

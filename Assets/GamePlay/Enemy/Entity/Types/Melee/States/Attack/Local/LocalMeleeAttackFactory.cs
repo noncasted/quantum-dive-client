@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
@@ -19,7 +19,7 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
         [SerializeField] private MeleeAttackConfig _config;
         [SerializeField] private MeleeAttackGizmosConfig _gizmosConfig;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.RegisterInstance(_config)
                 .As<IMeleeAttackConfig>();

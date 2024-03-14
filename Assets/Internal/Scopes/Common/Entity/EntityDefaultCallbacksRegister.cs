@@ -95,7 +95,12 @@ namespace Internal.Scopes.Common.Entity
                 _switchLifetimeListeners.Add(switchLifetimeListener);
         }
 
-        
+
+        public UniTask RunConstruct()
+        {
+            return _callbacksRegistry.RunConstruct();
+        }
+
         public UniTask RunEnable(ILifetime lifetime)
         {
             foreach (var listener in _switchLifetimeListeners)

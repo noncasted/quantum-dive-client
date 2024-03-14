@@ -2,7 +2,7 @@
   "name": "GamePlay.Player.Types.Remote",
   "references": [
     "GUID:628eed525fe14e23a98070b6664c84b7",
-    "GUID:e07e6ccd9241474dbca4e70862df2bc2",
+    "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:780b8f375cf44ae1986e3ea31d21c761",
     "GUID:915a5a2ef3dd4eb0868f357c78bbff86",
     "GUID:51ad2d5d390b45bea4a3881475db024d",
@@ -15,14 +15,14 @@
     
     "GUID:f811916503814d8b8ded37276cbeff8d",
     "GUID:0724d08ce2c54f1bbd05f93aad406ddb",
-    "GUID:a6bee730cad343c7ac8840da91376019",
+    
     "GUID:239f9a8379f7b964b8f8c879fed530fb",
     
     "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
     "GUID:475e7352b7684936814b6c47a79525dc",
     "GUID:44265e8886254d92835254b3bd1a2a7b",
     "GUID:f4ffe8db16254b12923bfcc86166aba5",
-    "GUID:5be6262f59e0487f8f55e7b4b6358c57",
+    
     "GUID:72ee10059c044befb9afe61cb72eaf8d",
     "GUID:7adcf9a0f9eb4aa39b12636ab3acc20f",
     "GUID:415a0c8c00934fe0915d7be7cccc8112",

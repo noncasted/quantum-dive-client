@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -10,7 +10,7 @@ namespace GamePlay.Player.Entity.States.SubStates.Pushes.Runtime
     [CreateAssetMenu(fileName = SubPushRoutes.StateName, menuName = SubPushRoutes.StatePath)]
     public class SubPushFactory : ScriptableObject, IComponentFactory
     {
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<SubPush>()
                 .As<ISubPush>();

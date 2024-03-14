@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.Weapons.Bow.States.Aims.Common;
 using Sirenix.OdinInspector;
@@ -16,7 +16,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Aims.Remote
         [SerializeField] [Indent] private BaseAnimationData _playerAnimation;
         [SerializeField] [Indent] private BaseAnimationData _bowAnimation;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             var playerAnimation = _playerAnimation.CreateAnimation();
             var bowAnimation = _bowAnimation.CreateAnimation();

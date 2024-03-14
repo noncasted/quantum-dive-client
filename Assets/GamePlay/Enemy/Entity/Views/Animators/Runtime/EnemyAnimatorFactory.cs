@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Views.Animators.Logs;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ namespace GamePlay.Enemy.Entity.Views.Animators.Runtime
         [SerializeField] private AnimatorLogSettings _logSettings;
         [SerializeField] private SpriteRenderer _spriteRenderer;
         
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<AnimatorLogger>()
                 .WithParameter(_logSettings);

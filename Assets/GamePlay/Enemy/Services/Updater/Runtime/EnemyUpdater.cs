@@ -1,7 +1,7 @@
-﻿using Common.Architecture.Lifetimes;
-using Common.Architecture.Scopes.Runtime.Callbacks;
+﻿using Internal.Scopes.Abstract.Lifetimes;
 using GamePlay.Enemy.Updater.Runtime.Updatables;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
 
 namespace GamePlay.Enemy.Updater.Runtime
 {

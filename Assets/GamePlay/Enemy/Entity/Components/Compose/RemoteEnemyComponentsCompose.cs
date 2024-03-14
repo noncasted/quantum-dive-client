@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Common.Architecture.Entities.Common.DefaultCallbacks;
-using Common.Architecture.Entities.Runtime;
 using GamePlay.Enemy.Entity.Components.Common;
 using GamePlay.Enemy.Entity.Components.Health.Runtime;
 using GamePlay.Enemy.Entity.Components.Sorting.Runtime;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Common.Entity;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ namespace GamePlay.Enemy.Entity.Components.Compose
         menuName = EnemyComponentsRoutes.Root + "Compose/Remote")]
     public class RemoteEnemyComponentsCompose : ScriptableObject, IComponentsCompose
     {
-        [SerializeField] private DefaultCallbacksComponentFactory _callbacks;
+        [SerializeField] private EntityDefaultCallbacksFactory _callbacks;
         [SerializeField] private HealthFactory _health;
         [SerializeField] private SpriteSortingFactory _spriteSorting;
         [SerializeField] private RemoteStateMachineFactory _remoteStateMachine;

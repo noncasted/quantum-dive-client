@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Common;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config;
 using GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Starter;
@@ -15,7 +15,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runti
     {
         [SerializeField] [Indent] private ProjectileStarterConfigAsset _config;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             services.Register<ProjectileStarterConfig>()
                 .WithParameter(_config)

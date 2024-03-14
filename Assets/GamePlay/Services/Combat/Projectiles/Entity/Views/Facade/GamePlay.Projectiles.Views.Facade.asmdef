@@ -1,9 +1,8 @@
-﻿{
+{
   "name": "GamePlay.Projectiles.Views.Facade",
   "references": [
     "GUID:2f38b8ba30fb4de9af0587598cd52891",
     "GUID:9e2f6fcfacb84504b029482d260a07d4",
-    "GUID:d89cb064a6d60b243b67336a6540d7a7",
-    "GUID:2be5587ff86f459d98739aded80786ff"
+    "GUID:d89cb064a6d60b243b67336a6540d7a7"
   ]
 }

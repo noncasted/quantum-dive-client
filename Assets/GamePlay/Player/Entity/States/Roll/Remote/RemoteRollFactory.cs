@@ -1,5 +1,5 @@
-﻿using Common.Architecture.Container.Abstract;
-using Common.Architecture.Entities.Runtime;
+﻿using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.States.Roll.Common;
 using Sirenix.OdinInspector;
@@ -15,7 +15,7 @@ namespace GamePlay.Player.Entity.States.Roll.Remote
         [SerializeField] private BaseAnimationData _animation;
         [SerializeField] private RollDefinition _definition;
 
-        public void Create(IServiceCollection services, IEntityUtils utils)
+        public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
             var animation = _animation.CreateAnimation();
 

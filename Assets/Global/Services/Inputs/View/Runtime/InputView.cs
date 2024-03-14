@@ -1,9 +1,9 @@
 ﻿using System;
-using Common.Architecture.Scopes.Runtime.Callbacks;
 using Global.Inputs.View.Logs;
 using Global.Inputs.View.Runtime.Actions;
 using Global.Inputs.View.Runtime.Sources;
 using Global.System.Updaters.Runtime.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine.InputSystem;
 
 namespace Global.Inputs.View.Runtime
