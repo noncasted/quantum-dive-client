@@ -1,0 +1,6 @@
+{
+ "name": "GamePlay.Player.Floating.Abstract",
+  "references": [
+ "GUID:1429db28f9474a389cb34ec712b3c8b3",
+ "GUID:1df29afa6177f8e4fa19b25367556ac2"]
+}

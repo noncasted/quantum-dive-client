@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Player.Animator.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:ad1d169e92bc34b47ba09a9628d8a672",
     "GUID:fe4adae493555af4788e53948d7966ca",
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
     "GUID:e3790eea46cac0b4ba62561fda2794e4",

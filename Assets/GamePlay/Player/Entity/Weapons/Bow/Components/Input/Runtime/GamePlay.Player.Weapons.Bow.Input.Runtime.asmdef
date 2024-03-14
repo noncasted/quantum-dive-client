@@ -1,6 +1,6 @@
 {
   "name": "GamePlay.Player.Weapons.Bow.Input.Runtime",
-  "references": [
+  "references": ["GUID:749d8273b7e94994ab7a19245f9230f2",
     "GUID:8f9012bdd1b116c48ab480004500c8f3",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:cdac6ad1d9774ee4b3395cc7b495ebad",

@@ -1,10 +1,10 @@
 {
   "name": "GamePlay.Enemy.Health.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:a7de0afdc601983459601b42c27a5c08",
     "GUID:9caf228e25af49249373fa6304c3f82f",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:2bab53ca096531746a970188315676b8",
+    "GUID:acd0f4b5b5b26474e8bba63a3fc50ee6",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:6d0def324f4849dc99881aa079c4c004"
   ],

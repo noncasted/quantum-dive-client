@@ -1,0 +1,7 @@
+{
+  "name": "GamePlay.Enemy.StateMachine.Remote.Abstract",
+  "references": [
+    "GUID:87c37c46dfd9454380a9559a46f1be34",
+    "GUID:1429db28f9474a389cb34ec712b3c8b3"
+  ]
+}

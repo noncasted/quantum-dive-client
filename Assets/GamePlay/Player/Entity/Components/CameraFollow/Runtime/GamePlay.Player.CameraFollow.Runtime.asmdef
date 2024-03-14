@@ -1,11 +1,11 @@
-﻿{
+{
   "name": "GamePlay.Player.CameraFollow.Runtime",
   "references": [
     "GUID:db9765d4d3f342b4947a72aa908b490b",
     
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:ad6f2f31f60a460cb3b159c0b03e6e4c",
-    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
+    "GUID:e26510743a1f8cc459abec906a60ed6c",
     "GUID:14eecf01b6eb4ff2b3dfe46bcae92d25"
   ]
 }

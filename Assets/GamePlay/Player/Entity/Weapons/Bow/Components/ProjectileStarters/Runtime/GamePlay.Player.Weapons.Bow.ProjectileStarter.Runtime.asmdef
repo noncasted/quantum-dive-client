@@ -1,13 +1,13 @@
 {
   "name": "GamePlay.Player.Weapons.Bow.ProjectileStarter.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:7fa2fb6a0ead92e4a898ec2400b82351",
     "GUID:8f9012bdd1b116c48ab480004500c8f3",
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
     "GUID:9e24947de15b9834991c9d8411ea37cf",
     "GUID:fdc2cf7c250a4094dae93475802ae81f",
     "GUID:d89cb064a6d60b243b67336a6540d7a7",
-    "GUID:c02240f49caa8f940b185955ba215804",
+    "GUID:faa71864943b5ad4289092553caeb4a5",
     "GUID:c713b254602614c43a1d94a2a13ba844",
     "GUID:5a6ca98db01d77741890b42e259b7291",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",

@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Enemy.Transform.Local.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:1fd487ce5158932458a4cfb3669996f1",
     
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     

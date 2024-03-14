@@ -1,6 +1,6 @@
-﻿{
+{
   "name": "GamePlay.Player.Equipment.Locker.Runtime",
-  "references": [
+  "references": ["GUID:2eb155572109eeb40b59f548f295ad7a",
     "GUID:8f9012bdd1b116c48ab480004500c8f3",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:6d61bb01e0c54b1b92bf164db3fe56f2",

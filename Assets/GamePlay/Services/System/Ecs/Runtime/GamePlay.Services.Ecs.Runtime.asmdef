@@ -1,6 +1,6 @@
-﻿{
+{
   "name": "GamePlay.Services.Ecs.Runtime",
-  "references": [
+  "references": ["GUID:21b46da5ea3f0994bb848bb5fabda0b7",
     "GUID:e59bf9fc7d5a44b18a819a92edd46163",
     "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
     "GUID:3b992c16a4c84e929d722c6b7d0ed004",

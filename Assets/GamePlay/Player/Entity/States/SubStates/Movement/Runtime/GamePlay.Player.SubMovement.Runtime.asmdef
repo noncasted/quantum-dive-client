@@ -1,11 +1,11 @@
 {
   "name": "GamePlay.Player.SubMovement.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:e5126a65b2fbce04f8c7545e5b7354f8",
     "GUID:736c4910aad47b541a8d2813ec862bcd",
-    "GUID:239f9a8379f7b964b8f8c879fed530fb",
+    "GUID:ad1d169e92bc34b47ba09a9628d8a672",
     "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    "GUID:653035ca38aa68b428118c9a452c37a0",
+    "GUID:b89f22dd42e718841bef8fbee27d3480",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:3986616e79a74956a08cbb3bfb3a4f93",
     "GUID:1c6116fdd8a4b1642a6ac9e51aa5a8d4",

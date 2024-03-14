@@ -1,8 +1,8 @@
-﻿{
+{
   "name": "GamePlay.Hitboxes.Runtime",
-  "references": [
+  "references": ["GUID:850f400d111e37a459d3500562852b80",
     "GUID:2435b9189672c5848ae4cc81c2cf0e13",
-    "GUID:461abe90bf984b7e862668f0a08ec9a5",
+    "GUID:21b46da5ea3f0994bb848bb5fabda0b7",
     "GUID:c9c8336c322d4f1a944539d18b445ed0",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:bb1d6a7e5fa5406197fdacb0c63f217e",

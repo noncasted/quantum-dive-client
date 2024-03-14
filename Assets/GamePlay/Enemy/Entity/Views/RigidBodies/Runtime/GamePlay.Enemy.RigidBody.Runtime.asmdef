@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Enemy.RigidBody.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:768a3e1c75c7b2541b17742bb2f16e03",
     
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     

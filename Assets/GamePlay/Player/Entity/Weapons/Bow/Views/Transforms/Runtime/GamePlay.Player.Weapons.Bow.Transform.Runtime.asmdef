@@ -1,6 +1,6 @@
 {
   "name": "GamePlay.Player.Weapons.Bow.Transform.Runtime",
-  "references": [
+  "references": ["GUID:1e6ba1af79266044595dda40540052b0",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:a6bee730cad343c7ac8840da91376019"
   ]

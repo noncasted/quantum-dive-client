@@ -1,13 +1,13 @@
-﻿{
+{
   "name": "GamePlay.Player.TransformSync.Runtime",
   "references": [
     "GUID:8492757f688a491e88274975cd7f76d7",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
+    "GUID:e26510743a1f8cc459abec906a60ed6c",
     "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
     "GUID:8d579440f4684bffaef914165466b523",
-    "GUID:475e7352b7684936814b6c47a79525dc",
-    "GUID:72ee10059c044befb9afe61cb72eaf8d",
+    "GUID:00fed99f45583494a89baa1001767c5c",
+    "GUID:bea1adb6c6974d047a8b08da390b27ab",
     "GUID:954bed7845ef3b94c8f2d8ca3cd76154",
     "GUID:f51ebe6a0ceec4240a699833d6309b23"
   ]

@@ -1,19 +1,19 @@
 {
   "name": "GamePlay.Player.Rotation.Local.Runtime",
-  "references": [
-    "GUID:239f9a8379f7b964b8f8c879fed530fb",
+  "references": ["GUID:a3929b3d40018e043872a2b3c6bd9eeb",
+    "GUID:ad1d169e92bc34b47ba09a9628d8a672",
     "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
-    "GUID:8358514cc19e4fa43acfb78a22566558",
+    "GUID:e26510743a1f8cc459abec906a60ed6c",
+    "GUID:6b290a32dbc21fa4095a9e478855f94d",
     "GUID:35a3df8edcd228d4fbb5c4ce25744929",
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
     "GUID:8f9012bdd1b116c48ab480004500c8f3",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:f5eabb3ea15e47a28ed3f698f57c6d6a",
     "GUID:5a6ca98db01d77741890b42e259b7291",
-    "GUID:915a5a2ef3dd4eb0868f357c78bbff86",
+    "GUID:dbd628ed558e8494e96714d170f044fb",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:653035ca38aa68b428118c9a452c37a0",
+    "GUID:b89f22dd42e718841bef8fbee27d3480",
     "GUID:790a3b5bc4214af3948063a02232f1bc"
   ]
 }

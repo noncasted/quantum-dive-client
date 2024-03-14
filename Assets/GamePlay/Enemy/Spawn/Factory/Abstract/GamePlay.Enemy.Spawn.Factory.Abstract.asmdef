@@ -1,0 +1,6 @@
+{
+ "name": "GamePlay.Enemy.Spawn.Factory.Abstract",
+  "references": [
+ "GUID:09eeed04a09c422b9c62d681c78d80ec",
+ "GUID:f51ebe6a0ceec4240a699833d6309b23"]
+}

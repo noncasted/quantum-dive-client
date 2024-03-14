@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Projectiles.Registry",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:b121a984c9cd3584c94f30d68a57e086",
     "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:861793575c7c4a2d82251cc54eeb8bf5",

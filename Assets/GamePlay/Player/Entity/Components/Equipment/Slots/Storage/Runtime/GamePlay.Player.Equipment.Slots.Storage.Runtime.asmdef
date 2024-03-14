@@ -1,6 +1,6 @@
-﻿{
+{
   "name": "GamePlay.Player.Equipment.Slots.Storage.Runtime",
-  "references": [
+  "references": ["GUID:7ed7124f2aea1f740a72e6e48ba9e672",
     "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:156031b3a2a7429cb58936a7d17d7219",

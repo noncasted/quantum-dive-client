@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Player.StateMachine.Local.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
     "GUID:47083761e726d344ebda60ec45a5396c",
     "GUID:1df29afa6177f8e4fa19b25367556ac2",
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
@@ -9,7 +9,7 @@
     "GUID:2ef41f62c8dc5cb4c82d9f5e988ed71c",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:52a54266fbfc4c92b0f7dbffe4af7f9f",
-    "GUID:51ad2d5d390b45bea4a3881475db024d",
+    "GUID:f0619dc86df636c4898928d3dcc95a57",
     
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
     

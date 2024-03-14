@@ -1,14 +1,16 @@
-﻿{
+{
   "name": "GamePlay.Player.Network.Properties.Runtime",
   "references": [
     "GUID:34c6958f5a99417a97e66a1c7e1c0a92",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:5c8fed9e223b429babc5110a334eb8e5",
-    "GUID:72ee10059c044befb9afe61cb72eaf8d",
-    "GUID:915a5a2ef3dd4eb0868f357c78bbff86",
-    "GUID:51ad2d5d390b45bea4a3881475db024d",
+    "GUID:bea1adb6c6974d047a8b08da390b27ab",
+    "GUID:dbd628ed558e8494e96714d170f044fb",
+    "GUID:f0619dc86df636c4898928d3dcc95a57",
     "GUID:bcbbef1e30074821b4f51918af96aebd",
     "GUID:9f36796216254d2db3c81da0be225e76",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:915a5a2ef3dd4eb0868f357c78bbff86",
+    "GUID:51ad2d5d390b45bea4a3881475db024d"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Enemy.Animator.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:e8da1ef8362eacc41bfa3671bdaadceb",
     
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     

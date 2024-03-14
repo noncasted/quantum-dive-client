@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Player.Mappers.States.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:280fef4f20e71f84a8658a53d53e9ff5",
     "GUID:1df29afa6177f8e4fa19b25367556ac2",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:535b9a9a1cf5438b8493c1bda004ac65",

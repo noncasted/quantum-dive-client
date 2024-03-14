@@ -1,0 +1,6 @@
+{
+ "name": "GamePlay.Player.DamageReceiver.Abstract",
+  "references": [
+ "GUID:2435b9189672c5848ae4cc81c2cf0e13",
+ "GUID:6d0def324f4849dc99881aa079c4c004"]
+}

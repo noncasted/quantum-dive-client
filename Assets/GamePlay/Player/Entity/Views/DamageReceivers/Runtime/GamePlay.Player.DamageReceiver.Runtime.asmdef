@@ -1,6 +1,6 @@
-﻿{
+{
   "name": "GamePlay.Player.DamageReceiver.Runtime",
-  "references": [
+  "references": ["GUID:1160fb20d0525a84799a07bbb2bfbeb1",
     "GUID:2435b9189672c5848ae4cc81c2cf0e13",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     

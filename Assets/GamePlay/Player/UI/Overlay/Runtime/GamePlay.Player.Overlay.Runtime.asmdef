@@ -1,9 +1,9 @@
-﻿{
+{
   "name": "GamePlay.Player.Overlay.Runtime",
-  "references": [
+  "references": ["GUID:7c6e8524cd7c8ab4d97ff4ba685a0c72",
     "GUID:3165858da54f4f7eb965695cee94ecc6",
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:abb0d563a5fe47c5a5060ef4b01c49e7",
+    "GUID:5b5cece014df959428bff97b621a74fd",
     "GUID:3b992c16a4c84e929d722c6b7d0ed004",
     "GUID:4ef0a34353414eaa826bf189dfe00046",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",

@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Player.Mappers.Equipment.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:c6515e2d30cb9ca41bde3eddc565a0bd",
     "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
     "GUID:fedc4140ebaf4ef6a78c67b850e47031",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",

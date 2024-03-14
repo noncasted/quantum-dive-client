@@ -10,7 +10,7 @@
   "defineConstraints": [],
   "versionDefines": [],
   "noEngineReferences": false,
-  "references": [
+  "references": ["GUID:14afd737ee2645048ad53183cd18ebdb",
     "GUID:87c37c46dfd9454380a9559a46f1be34",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:7a806c05a199b99499ba9519941a4e4d",

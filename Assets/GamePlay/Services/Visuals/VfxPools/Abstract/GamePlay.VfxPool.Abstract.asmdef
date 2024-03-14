@@ -1,0 +1,5 @@
+{
+ "name": "GamePlay.VfxPool.Abstract",
+  "references": [
+ "GUID:d89cb064a6d60b243b67336a6540d7a7"]
+}

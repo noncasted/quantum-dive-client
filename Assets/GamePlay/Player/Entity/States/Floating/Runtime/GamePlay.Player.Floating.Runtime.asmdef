@@ -1,11 +1,11 @@
 {
   "name": "GamePlay.Player.Floating.Runtime",
-  "references": [
+  "references": ["GUID:9f704c5e06c2b244a90cc9123ff964ab",
     "GUID:1c6116fdd8a4b1642a6ac9e51aa5a8d4",
     "GUID:22583da11203f534abc7cc47daed6544",
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
     "GUID:8f9012bdd1b116c48ab480004500c8f3",
-    "GUID:145d06f883cb2b94396d697c01e9bd09",
+    "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:306a011b817f48c2bd92ab29980a5c0a",
     "GUID:1df29afa6177f8e4fa19b25367556ac2",

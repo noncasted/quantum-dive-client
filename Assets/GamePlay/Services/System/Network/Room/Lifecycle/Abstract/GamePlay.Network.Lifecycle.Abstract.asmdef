@@ -1,0 +1,9 @@
+{
+ "name": "GamePlay.Network.Lifecycle.Abstract",
+ "references": [
+  "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+  "GUID:dec28d2fc9064a05abcbf9e3264fa16a",
+  "GUID:32468dfd76aeee64abd199b98b754eda",
+  "GUID:5043370538444f50a1522eabfd23c0d4"
+ ]
+}

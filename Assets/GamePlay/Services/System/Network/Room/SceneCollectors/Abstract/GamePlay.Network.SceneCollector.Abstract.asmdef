@@ -1,0 +1,5 @@
+{
+ "name": "GamePlay.Network.SceneCollector.Abstract",
+  "references": [
+ "GUID:e99eff0a39414de2ac2ea492817f7345"]
+}

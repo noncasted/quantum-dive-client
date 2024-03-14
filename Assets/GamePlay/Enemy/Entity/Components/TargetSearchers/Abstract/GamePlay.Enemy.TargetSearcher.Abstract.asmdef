@@ -1,0 +1,6 @@
+{
+  "name": "GamePlay.Enemy.TargetSearcher.Abstract",
+  "references": [
+    "GUID:4860de18e1e0c7241999f1c5b8e04f5f"
+  ]
+}

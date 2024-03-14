@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Enemy.RotationPoint.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:47e81931481f0d74f9014ff322323e4e",
     
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     

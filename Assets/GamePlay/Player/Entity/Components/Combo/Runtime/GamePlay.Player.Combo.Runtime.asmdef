@@ -1,10 +1,10 @@
 {
   "name": "GamePlay.Player.Combo.Runtime",
   "rootNamespace": "",
-  "references": [
+  "references": ["GUID:35641cfc64c0bc54987f24d4fe9b66b1",
     "GUID:1df29afa6177f8e4fa19b25367556ac2",
     "GUID:47083761e726d344ebda60ec45a5396c",
-    "GUID:145d06f883cb2b94396d697c01e9bd09",
+    "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
     "GUID:566565389f1a4e1e92bf3bdaaa9e079b",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     
