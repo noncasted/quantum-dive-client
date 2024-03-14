@@ -1,4 +1,5 @@
 ﻿using Common.DataTypes.Structs;
+using GamePlay.Player.Entity.Views.Transforms.Abstract;
 using GamePlay.Player.Entity.Views.Transforms.Logs;
 using UnityEngine;
 

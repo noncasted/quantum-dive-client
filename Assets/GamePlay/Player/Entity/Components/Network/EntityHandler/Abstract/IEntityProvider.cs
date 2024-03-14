@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime
+﻿namespace GamePlay.Player.Entity.Components.Network.EntityHandler.Abstract
 {
     public interface IEntityProvider
     {

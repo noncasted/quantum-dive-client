@@ -1,7 +1,7 @@
 ﻿using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 
-namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
+namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Abstract
 {
     public interface IStateMachineSync
     {

@@ -2,7 +2,7 @@
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Common.Definition.Config;
 using GamePlay.Enemy.Entity.Common.Definition.Root;
-using GamePlay.Network.Objects.Factories.Runtime;
+using GamePlay.Services.System.Network.Objects.Factories.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Ragon.Client;
 using UnityEngine;

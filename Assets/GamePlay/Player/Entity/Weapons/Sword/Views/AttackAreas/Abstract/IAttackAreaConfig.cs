@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Runtime
+namespace GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Abstract
 {
     public interface IAttackAreaConfig
     {

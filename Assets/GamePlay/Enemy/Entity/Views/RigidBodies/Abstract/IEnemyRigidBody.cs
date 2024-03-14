@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Enemy.Entity.Views.RigidBodies.Runtime
+namespace GamePlay.Enemy.Entity.Views.RigidBodies.Abstract
 {
     public interface IEnemyRigidBody
     {

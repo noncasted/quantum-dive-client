@@ -1,4 +1,5 @@
-﻿using GamePlay.Enemy.Updater.Common;
+﻿using GamePlay.Enemy.Services.Updater.Abstract;
+using GamePlay.Enemy.Updater.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

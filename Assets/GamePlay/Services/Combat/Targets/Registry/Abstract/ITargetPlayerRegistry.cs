@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace GamePlay.Targets.Registry.Runtime
+namespace GamePlay.Services.Combat.Targets.Registry.Abstract
 {
     public interface ITargetPlayerRegistry
     {

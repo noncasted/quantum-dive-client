@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.Healths.Common;
+﻿using GamePlay.Player.Entity.Components.Healths.Abstract;
+using GamePlay.Player.Entity.Components.Healths.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;

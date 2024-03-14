@@ -1,4 +1,5 @@
 ﻿using Common.Tools.UniversalAnimators.Abstract;
+using GamePlay.Player.Entity.States.SubStates.Movement.Abstract;
 using GamePlay.Player.Entity.States.SubStates.Movement.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;

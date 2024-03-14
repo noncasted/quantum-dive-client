@@ -1,5 +1,6 @@
 ﻿using Animancer;
 using Common.Tools.UniversalAnimators.Abstract;
+using GamePlay.Player.Entity.Views.Animators.Abstract;
 using GamePlay.Player.Entity.Views.Animators.Logs;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;

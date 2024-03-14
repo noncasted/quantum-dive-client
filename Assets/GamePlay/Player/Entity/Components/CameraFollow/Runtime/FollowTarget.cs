@@ -1,5 +1,5 @@
 ﻿using GamePlay.Player.Entity.Components.CameraFollow.Abstract;
-using GamePlay.Player.Entity.Views.Transforms.Runtime;
+using GamePlay.Player.Entity.Views.Transforms.Abstract;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Components.CameraFollow.Runtime

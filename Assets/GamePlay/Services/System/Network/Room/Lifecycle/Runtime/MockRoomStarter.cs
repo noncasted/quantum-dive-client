@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Network.Room.EventLoops.Runtime;
+using GamePlay.Services.System.Network.Room.EventLoops.Abstract;
+using GamePlay.Services.System.Network.Room.Lifecycle.Abstract;
 using Global.Network.Handlers.ClientHandler.Abstract;
 
 namespace GamePlay.Network.Room.Lifecycle.Runtime

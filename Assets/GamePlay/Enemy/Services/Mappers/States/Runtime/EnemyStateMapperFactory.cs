@@ -2,6 +2,7 @@
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Mappers.States.Common;
+using GamePlay.Enemy.Services.Mappers.States.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;

@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.States.Floating.Runtime
+﻿namespace GamePlay.Player.Entity.States.Floating.Abstract
 {
     public interface IFloatingTransition
     {

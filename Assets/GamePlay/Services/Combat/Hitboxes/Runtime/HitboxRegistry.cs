@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using GamePlay.Common.Damages;
-using GamePlay.Ecs.Runtime.Abstract;
 using GamePlay.Hitboxes.Flags;
+using GamePlay.Services.Combat.Hitboxes.Abstract;
+using GamePlay.Services.System.Ecs.Abstract;
 
 namespace GamePlay.Hitboxes.Runtime
 {

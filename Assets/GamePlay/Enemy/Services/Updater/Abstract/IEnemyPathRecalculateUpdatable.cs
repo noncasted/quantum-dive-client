@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemy.Updater.Runtime.Updatables
+﻿namespace GamePlay.Enemy.Services.Updater.Abstract
 {
     public interface IEnemyPathRecalculateUpdatable
     {

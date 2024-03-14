@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Runtime
+namespace GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Abstract
 {
     public interface IBowArrow
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using GamePlay.Enemy.Entity.Views.RotationPoint.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;

@@ -1,4 +1,5 @@
 ﻿using GamePlay.Player.Entity.States.Common;
+using GamePlay.Player.Entity.States.Floating.Abstract;
 using GamePlay.Player.Entity.States.Floating.Common;
 using GamePlay.Player.Entity.States.Floating.Logs;
 using Internal.Scopes.Abstract.Containers;

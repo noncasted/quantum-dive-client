@@ -1,6 +1,6 @@
 ﻿using GamePlay.Network.Objects.Definition;
 
-namespace GamePlay.Network.Objects.Destroyer.Runtime
+namespace GamePlay.Services.System.Network.Objects.Destroyer.Abstract
 {
     public interface INetworkEntityDestroyer
     {

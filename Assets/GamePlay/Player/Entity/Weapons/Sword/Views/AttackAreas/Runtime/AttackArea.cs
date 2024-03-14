@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using GamePlay.Common.Damages;
+using GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Abstract;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Runtime

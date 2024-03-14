@@ -1,4 +1,4 @@
-﻿using GamePlay.Enemy.Updater.Runtime.Updatables;
+﻿using GamePlay.Enemy.Services.Updater.Abstract;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Lifetimes;

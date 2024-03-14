@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using GamePlay.Enemy.Entity.Views.Sprites.Abstract;
 using GamePlay.Enemy.Entity.Views.Sprites.Logs;
 using UnityEngine;
 using UnityEngine.Rendering;

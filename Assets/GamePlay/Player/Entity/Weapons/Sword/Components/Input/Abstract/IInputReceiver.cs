@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime
+﻿namespace GamePlay.Player.Entity.Weapons.Sword.Components.Input.Abstract
 {
     public interface IInputReceiver
     {

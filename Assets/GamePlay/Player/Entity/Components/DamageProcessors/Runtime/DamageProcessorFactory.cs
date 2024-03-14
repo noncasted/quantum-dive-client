@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.DamageProcessors.Common;
+﻿using GamePlay.Player.Entity.Components.DamageProcessors.Abstract;
+using GamePlay.Player.Entity.Components.DamageProcessors.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;

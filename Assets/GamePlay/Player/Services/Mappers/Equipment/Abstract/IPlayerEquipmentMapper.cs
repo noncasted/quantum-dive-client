@@ -1,6 +1,6 @@
 ﻿using GamePlay.Player.Entity.Components.Equipment.Definition;
 
-namespace GamePlay.Player.Services.Mappers.Equipment.Runtime
+namespace GamePlay.Player.Services.Mappers.Equipment.Abstract
 {
     public interface IPlayerEquipmentMapper
     {

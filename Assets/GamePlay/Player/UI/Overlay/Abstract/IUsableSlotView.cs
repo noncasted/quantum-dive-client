@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.UI.Overlay.Runtime.Usables
+﻿namespace GamePlay.Player.UI.Overlay.Abstract
 {
     public interface IUsableSlotView
     {

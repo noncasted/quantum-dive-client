@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Common.DataTypes.Collections.Common;
 using GamePlay.Player.Entity.States.Common;
+using GamePlay.Player.Services.Mappers.States.Abstract;
 
 namespace GamePlay.Player.Services.Mappers.States.Runtime
 {

@@ -1,5 +1,5 @@
 ﻿
-namespace GamePlay.Player.Entity.Components.Healths.Runtime
+namespace GamePlay.Player.Entity.Components.Healths.Abstract
 {
     public interface IHealth
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Enemy.Entity.Views.Sprites.Runtime
+namespace GamePlay.Enemy.Entity.Views.Sprites.Abstract
 {
     public interface IEnemySpriteFlipper
     {

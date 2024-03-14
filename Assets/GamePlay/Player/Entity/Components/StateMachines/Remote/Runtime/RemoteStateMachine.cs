@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
+using GamePlay.Player.Entity.Components.Network.EntityHandler.Abstract;
+using GamePlay.Player.Entity.Components.StateMachines.Remote.Abstract;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Logs;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
-using GamePlay.Player.Services.Mappers.States.Runtime;
+using GamePlay.Player.Services.Mappers.States.Abstract;
 using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Client;
 using Ragon.Client.Compressor;

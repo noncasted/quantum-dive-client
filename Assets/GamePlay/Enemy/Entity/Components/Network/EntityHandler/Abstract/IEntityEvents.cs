@@ -2,7 +2,7 @@
 using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Client;
 
-namespace GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime
+namespace GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract
 {
     public interface IEntityEvents
     {

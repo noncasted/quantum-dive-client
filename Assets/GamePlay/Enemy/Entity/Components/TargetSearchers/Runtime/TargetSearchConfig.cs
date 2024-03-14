@@ -1,4 +1,5 @@
-﻿using GamePlay.Enemy.Entity.Components.TargetSearchers.Common;
+﻿using GamePlay.Enemy.Entity.Components.TargetSearchers.Abstract;
+using GamePlay.Enemy.Entity.Components.TargetSearchers.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

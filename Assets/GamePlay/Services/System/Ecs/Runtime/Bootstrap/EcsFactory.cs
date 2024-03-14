@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using GamePlay.Ecs.Common;
-using GamePlay.Ecs.Runtime.Abstract;
 using GamePlay.Ecs.Runtime.Entities;
+using GamePlay.Services.System.Ecs.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Leopotam.EcsLite;

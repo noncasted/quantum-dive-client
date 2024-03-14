@@ -1,4 +1,4 @@
-﻿using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
+﻿using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemy.Entity.Views.Hitbox.Common;
 using GamePlay.Enemy.Entity.Views.Transforms.Remote.Runtime;

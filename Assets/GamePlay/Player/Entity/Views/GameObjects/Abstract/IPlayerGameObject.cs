@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.Views.GameObjects.Runtime
+﻿namespace GamePlay.Player.Entity.Views.GameObjects.Abstract
 {
     public interface IPlayerGameObject
     {

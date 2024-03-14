@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.States.None.Runtime
+﻿namespace GamePlay.Player.Entity.States.None.Abstract
 {
     public interface INone
     {

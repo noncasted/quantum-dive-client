@@ -2,7 +2,7 @@
 using Cysharp.Threading.Tasks;
 using Ragon.Client;
 
-namespace GamePlay.Network.Messaging.REST.Runtime.Abstract
+namespace GamePlay.Services.System.Network.Messaging.REST.Abstract
 {
     public interface IMessagePipe<TRequest, TResponse>
         where TRequest : IRagonEvent, new()

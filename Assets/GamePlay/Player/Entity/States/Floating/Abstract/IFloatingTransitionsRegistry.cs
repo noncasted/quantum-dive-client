@@ -1,7 +1,7 @@
 ﻿using GamePlay.Player.Entity.States.Common;
 using Internal.Scopes.Abstract.Lifetimes;
 
-namespace GamePlay.Player.Entity.States.Floating.Runtime
+namespace GamePlay.Player.Entity.States.Floating.Abstract
 {
     public interface IFloatingTransitionsRegistry
     {

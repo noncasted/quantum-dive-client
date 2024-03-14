@@ -1,4 +1,5 @@
-﻿using Global.Inputs.View.Implementations.Combat.Abstract;
+﻿using GamePlay.Player.Entity.Weapons.Sword.Components.Input.Abstract;
+using Global.Inputs.View.Implementations.Combat.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;
 

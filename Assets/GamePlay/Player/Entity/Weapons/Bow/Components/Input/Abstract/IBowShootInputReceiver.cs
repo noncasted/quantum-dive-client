@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.Weapons.Bow.Components.Input.Runtime
+﻿namespace GamePlay.Player.Entity.Weapons.Bow.Components.Input.Abstract
 {
     public interface IBowShootInputReceiver
     {

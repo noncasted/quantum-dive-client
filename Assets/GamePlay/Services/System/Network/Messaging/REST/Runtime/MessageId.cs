@@ -1,5 +1,5 @@
 ﻿using System;
-using GamePlay.Network.Messaging.REST.Runtime.Abstract;
+using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 

@@ -1,8 +1,8 @@
-﻿using GamePlay.Enemy.Entity.Components.TargetSearchers.Debug.Gizmos;
-using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
-using GamePlay.Enemy.Updater.Runtime;
-using GamePlay.Enemy.Updater.Runtime.Updatables;
-using GamePlay.Targets.Registry.Runtime;
+﻿using GamePlay.Enemy.Entity.Components.TargetSearchers.Abstract;
+using GamePlay.Enemy.Entity.Components.TargetSearchers.Debug.Gizmos;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Abstract;
+using GamePlay.Enemy.Services.Updater.Abstract;
+using GamePlay.Services.Combat.Targets.Registry.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;

@@ -1,5 +1,6 @@
 ﻿//using GamePlay.Player.Services.Lists.Runtime;
 
+using GamePlay.Services.System.Network.Messaging.Events.Abstract;
 using Ragon.Client;
 
 namespace GamePlay.Network.Messaging.Events.Runtime

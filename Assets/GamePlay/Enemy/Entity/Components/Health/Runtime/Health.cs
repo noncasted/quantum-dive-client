@@ -1,5 +1,6 @@
 ﻿using Common.DataTypes.Reactive;
-using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
+using GamePlay.Enemy.Entity.Components.Health.Abstract;
+using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 

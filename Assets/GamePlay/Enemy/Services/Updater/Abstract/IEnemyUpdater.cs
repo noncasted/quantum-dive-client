@@ -1,7 +1,6 @@
-﻿using GamePlay.Enemy.Updater.Runtime.Updatables;
-using Internal.Scopes.Abstract.Lifetimes;
+﻿using Internal.Scopes.Abstract.Lifetimes;
 
-namespace GamePlay.Enemy.Updater.Runtime
+namespace GamePlay.Enemy.Services.Updater.Abstract
 {
     public interface IEnemyUpdater
     {

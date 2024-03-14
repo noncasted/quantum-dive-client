@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Ecs.Runtime.Abstract
+﻿namespace GamePlay.Services.System.Ecs.Abstract
 {
     public interface IEntityCreator
     {

@@ -2,7 +2,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace GamePlay.Player.Entity.States.SubStates.Pushes.Runtime
+namespace GamePlay.Player.Entity.States.SubStates.Pushes.Abstract
 {
     public interface ISubPush
     {

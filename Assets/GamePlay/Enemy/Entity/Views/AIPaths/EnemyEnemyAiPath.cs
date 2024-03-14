@@ -1,6 +1,5 @@
-﻿using GamePlay.Enemy.Updater.Runtime;
-using GamePlay.Enemy.Updater.Runtime.Updatables;
-using GamePlay.Targets.Registry.Runtime;
+﻿using GamePlay.Enemy.Services.Updater.Abstract;
+using GamePlay.Services.Combat.Targets.Registry.Abstract;
 using Internal.Scopes.Abstract.Lifetimes;
 using Internal.Scopes.Runtime.Lifetimes;
 using Pathfinding;

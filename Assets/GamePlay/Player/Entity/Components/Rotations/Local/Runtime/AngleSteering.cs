@@ -1,5 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
-using GamePlay.Player.Entity.Views.Physics.Runtime;
+﻿using GamePlay.Player.Entity.Components.Rotations.Local.Abstract;
+using GamePlay.Player.Entity.Views.Physics.Abstract;
 using Global.System.Updaters.Abstract;
 using UnityEngine;
 

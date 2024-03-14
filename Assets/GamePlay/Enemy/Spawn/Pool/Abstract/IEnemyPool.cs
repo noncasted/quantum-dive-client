@@ -4,7 +4,7 @@ using GamePlay.Enemy.Entity.Common.Definition.Root;
 using Ragon.Client;
 using UnityEngine;
 
-namespace GamePlay.Enemy.Spawn.Pool.Runtime
+namespace GamePlay.Enemy.Spawn.Pool.Abstract
 {
     public interface IEnemyPool
     {

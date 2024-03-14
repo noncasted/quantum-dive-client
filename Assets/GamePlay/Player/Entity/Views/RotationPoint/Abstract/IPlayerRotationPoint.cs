@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Player.Entity.Views.RotationPoint.Runtime
+namespace GamePlay.Player.Entity.Views.RotationPoint.Abstract
 {
     public interface IPlayerRotationPoint
     {

@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.Equipment.Locker.Common;
+﻿using GamePlay.Player.Entity.Components.Equipment.Locker.Abstract;
+using GamePlay.Player.Entity.Components.Equipment.Locker.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;

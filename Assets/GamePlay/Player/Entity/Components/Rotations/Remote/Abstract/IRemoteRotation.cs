@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.Components.Rotations.Remote.Runtime
+﻿namespace GamePlay.Player.Entity.Components.Rotations.Remote.Abstract
 {
     public interface IRemoteRotation
     {

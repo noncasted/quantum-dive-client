@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using GamePlay.Network.Messaging.REST.Common;
 using GamePlay.Network.Messaging.REST.Logs;
-using GamePlay.Network.Messaging.REST.Runtime.Abstract;
+using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;

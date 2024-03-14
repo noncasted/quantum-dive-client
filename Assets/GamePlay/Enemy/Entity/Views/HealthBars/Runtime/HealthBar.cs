@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Enemy.Entity.Components.Health.Runtime;
+using GamePlay.Enemy.Entity.Components.Health.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;

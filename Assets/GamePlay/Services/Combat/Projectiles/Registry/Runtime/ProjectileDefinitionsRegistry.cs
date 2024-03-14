@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using GamePlay.Projectiles.Registry.Definition;
+using GamePlay.Services.Combat.Projectiles.Registry.Abstract;
 
 namespace GamePlay.Projectiles.Registry.Runtime
 {

@@ -1,4 +1,5 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Abstract;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 

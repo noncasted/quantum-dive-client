@@ -1,8 +1,8 @@
 ﻿using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Definitions.Abstract;
-using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime;
-using GamePlay.Player.Entity.Weapons.Bow.Views.Transforms.Runtime;
+using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Abstract;
+using GamePlay.Player.Entity.Weapons.Bow.Views.Transforms.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;
 using Internal.Scopes.Common.Entity;

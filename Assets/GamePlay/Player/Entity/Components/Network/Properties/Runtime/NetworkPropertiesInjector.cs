@@ -1,5 +1,5 @@
 ﻿using GamePlay.Player.Entity.Components.Equipment.Equipper.Remote;
-using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
+using GamePlay.Player.Entity.Components.Network.EntityHandler.Abstract;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Player.Entity.States.Runs.Remote;

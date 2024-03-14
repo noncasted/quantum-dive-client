@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Player.Entity.Views.Physics.Runtime
+namespace GamePlay.Player.Entity.Views.Physics.Abstract
 {
     public interface IPlayerPhysics
     {

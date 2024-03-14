@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using GamePlay.Enemy.Entity.Views.RotationPoint.Abstract;
+using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.RotationPoint.Runtime
 {

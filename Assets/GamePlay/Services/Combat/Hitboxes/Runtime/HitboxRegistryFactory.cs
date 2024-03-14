@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using GamePlay.Hitboxes.Common;
+using GamePlay.Services.Combat.Hitboxes.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using GamePlay.Projectiles.Common;
 using GamePlay.Projectiles.Registry.Definition;
+using GamePlay.Services.Combat.Projectiles.Registry.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Sirenix.OdinInspector;
 #if UNITY_EDITOR

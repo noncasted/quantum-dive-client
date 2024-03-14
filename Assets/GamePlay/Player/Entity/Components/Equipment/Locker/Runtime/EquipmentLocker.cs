@@ -1,4 +1,6 @@
-﻿namespace GamePlay.Player.Entity.Components.Equipment.Locker.Runtime
+﻿using GamePlay.Player.Entity.Components.Equipment.Locker.Abstract;
+
+namespace GamePlay.Player.Entity.Components.Equipment.Locker.Runtime
 {
     public class EquipmentLocker : IEquipmentLocker
     {

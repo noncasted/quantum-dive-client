@@ -1,4 +1,6 @@
-﻿namespace GamePlay.Ecs.Runtime.Bootstrap
+﻿using GamePlay.Services.System.Ecs.Abstract;
+
+namespace GamePlay.Ecs.Runtime.Bootstrap
 {
     public readonly struct EcsBootstrapEvent
     {

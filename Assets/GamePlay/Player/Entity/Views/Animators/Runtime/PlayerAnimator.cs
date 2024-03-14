@@ -3,6 +3,7 @@ using Animancer;
 using Common.Tools.UniversalAnimators.Abstract;
 using Common.Tools.UniversalAnimators.Runtime;
 using Cysharp.Threading.Tasks;
+using GamePlay.Player.Entity.Views.Animators.Abstract;
 using GamePlay.Player.Entity.Views.Animators.Logs;
 
 namespace GamePlay.Player.Entity.Views.Animators.Runtime

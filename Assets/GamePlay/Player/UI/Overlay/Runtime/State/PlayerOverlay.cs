@@ -1,4 +1,5 @@
-﻿using Global.UI.UiStateMachines.Abstract;
+﻿using GamePlay.Player.UI.Overlay.Abstract;
+using Global.UI.UiStateMachines.Abstract;
 using Global.UI.UiStateMachines.Runtime;
 
 namespace GamePlay.Player.UI.Overlay.Runtime.State

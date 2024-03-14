@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Common.Definition.Asset;
 using GamePlay.Enemy.Entity.Common.Definition.Asset.Abstract;
 using GamePlay.Enemy.Mappers.Definitions.Common;
+using GamePlay.Enemy.Services.Mappers.Definitions.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;

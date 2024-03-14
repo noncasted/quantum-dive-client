@@ -1,4 +1,5 @@
-﻿using GamePlay.Targets.Registry.Common;
+﻿using GamePlay.Services.Combat.Targets.Registry.Abstract;
+using GamePlay.Targets.Registry.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

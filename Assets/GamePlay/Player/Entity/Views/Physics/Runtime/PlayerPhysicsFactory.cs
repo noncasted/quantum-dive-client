@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.Entity.Views.Physics.Logs;
+﻿using GamePlay.Player.Entity.Views.Physics.Abstract;
+using GamePlay.Player.Entity.Views.Physics.Logs;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;

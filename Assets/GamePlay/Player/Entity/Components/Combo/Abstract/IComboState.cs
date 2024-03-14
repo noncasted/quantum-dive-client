@@ -1,6 +1,6 @@
 ﻿using GamePlay.Player.Entity.States.Common;
 
-namespace GamePlay.Player.Entity.Components.Combo.Runtime
+namespace GamePlay.Player.Entity.Components.Combo.Abstract
 {   
     public interface IComboState
     {

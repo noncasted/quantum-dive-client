@@ -1,11 +1,10 @@
-﻿using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+﻿using GamePlay.Enemy.Entity.Components.StateMachines.Local.Abstract;
 using GamePlay.Enemy.Entity.Components.StateSelectors;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.States.Following.Local;
 using GamePlay.Enemy.Entity.States.Idle.Local;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local;
-using GamePlay.Enemy.Updater.Runtime;
-using GamePlay.Enemy.Updater.Runtime.Updatables;
+using GamePlay.Enemy.Services.Updater.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;
 

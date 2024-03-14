@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using GamePlay.Network.Messaging.REST.Logs;
-using GamePlay.Network.Messaging.REST.Runtime.Abstract;
+using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 

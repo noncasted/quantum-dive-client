@@ -1,4 +1,4 @@
-﻿using GamePlay.Ecs.Runtime.Abstract;
+﻿using GamePlay.Services.System.Ecs.Abstract;
 using Leopotam.EcsLite;
 
 namespace GamePlay.Ecs.Runtime.Entities

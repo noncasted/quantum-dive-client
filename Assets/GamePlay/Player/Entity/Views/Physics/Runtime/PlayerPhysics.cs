@@ -1,4 +1,5 @@
 ﻿using Common.DataTypes.Structs;
+using GamePlay.Player.Entity.Views.Physics.Abstract;
 using GamePlay.Player.Entity.Views.Physics.Logs;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;

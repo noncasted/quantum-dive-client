@@ -1,6 +1,6 @@
 ﻿using Common.DataTypes.Network;
-using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
-using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Abstract;
 using GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;

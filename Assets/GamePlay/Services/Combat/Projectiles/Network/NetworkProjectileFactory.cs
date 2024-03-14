@@ -3,6 +3,8 @@ using GamePlay.Network.Room.Entities.Factory;
 using GamePlay.Network.Room.EventLoops.Runtime;
 using GamePlay.Projectiles.Factory;
 using GamePlay.Projectiles.Registry.Runtime;
+using GamePlay.Services.Combat.Projectiles.Registry.Abstract;
+using GamePlay.Services.System.Network.Room.EventLoops.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 using Ragon.Protocol;

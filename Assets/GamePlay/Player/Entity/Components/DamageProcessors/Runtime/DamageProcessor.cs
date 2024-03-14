@@ -1,8 +1,9 @@
 ﻿using GamePlay.Common.Damages;
-using GamePlay.Player.Entity.Components.Healths.Runtime;
+using GamePlay.Player.Entity.Components.DamageProcessors.Abstract;
+using GamePlay.Player.Entity.Components.Healths.Abstract;
 using GamePlay.Player.Entity.States.Deaths.Local;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Local;
-using GamePlay.Player.Entity.Views.DamageReceivers.Runtime;
+using GamePlay.Player.Entity.Views.DamageReceivers.Abstract;
 using GamePlay.Player.Entity.Views.Hitboxes.Local;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;

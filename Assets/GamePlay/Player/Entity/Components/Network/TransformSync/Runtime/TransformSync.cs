@@ -1,7 +1,7 @@
 ﻿using Common.DataTypes.Network;
-using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
+using GamePlay.Player.Entity.Components.Network.EntityHandler.Abstract;
 using GamePlay.Player.Entity.Components.Network.TransformSync.Logs;
-using GamePlay.Player.Entity.Views.Transforms.Runtime;
+using GamePlay.Player.Entity.Views.Transforms.Abstract;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;

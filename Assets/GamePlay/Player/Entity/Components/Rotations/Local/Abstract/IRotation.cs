@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract
+﻿namespace GamePlay.Player.Entity.Components.Rotations.Local.Abstract
 {
     public interface IRotation
     {

@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.Components.Equipment.Locker.Runtime
+﻿namespace GamePlay.Player.Entity.Components.Equipment.Locker.Abstract
 {
     public interface IEquipmentLocker
     {

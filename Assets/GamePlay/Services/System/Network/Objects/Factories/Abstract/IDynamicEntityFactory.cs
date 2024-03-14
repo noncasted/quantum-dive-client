@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using Ragon.Client;
 
-namespace GamePlay.Network.Objects.Factories.Runtime
+namespace GamePlay.Services.System.Network.Objects.Factories.Abstract
 {
     public interface IDynamicEntityFactory
     {

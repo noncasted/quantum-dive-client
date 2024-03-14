@@ -11,28 +11,44 @@ namespace Common.Tools.EditorTools
     {
         private static string _sourcesFolder => Application.dataPath + "/GamePlay";
 
-        [MenuItem("Tools/Convert Runtime to Abstract")]
+        [MenuItem("Tools/Invalidate asmdef references")]
         private static void RemoveInvalidAssemblyReferences()
         {
             var assemblies = GetAllAssemblies();
             var namespaceToAssembly = GetNamespacesToAssembly(assemblies);
+            var ownedAssemblies = new HashSet<string>();
+
+            foreach (var ownedAssembly in namespaceToAssembly.Values)
+                ownedAssemblies.Add(ownedAssembly);
 
             foreach (var asmdef in assemblies)
             {
+                if (asmdef.FilePath.Contains("Plugins") == true)
+                    continue;
+                
                 var currentReferences = new Dictionary<string, string>();
 
                 foreach (var reference in asmdef.References)
-                    currentReferences.Add(reference.AssetPath, reference.Guid);
+                {
+                    if (ownedAssemblies.Contains(reference.AssetPath))
+                        currentReferences.Add(reference.AssetPath, reference.Guid);
+                }
 
-                foreach (var asmdefNamespace in asmdef.Namespaces)
-                    currentReferences.Remove(namespaceToAssembly[asmdefNamespace]);
+                foreach (var asmdefUsing in asmdef.Usings)
+                {
+                    if (namespaceToAssembly.TryGetValue(asmdefUsing, out var usingAssembly))
+                        currentReferences.Remove(usingAssembly);
+                }
 
                 var jsonContent = File.ReadAllText(asmdef.FilePath);
 
                 foreach (var (path, guid) in currentReferences)
-                    jsonContent = jsonContent.Replace($"{guid},", "").Replace($",\n{guid}", "");
+                    jsonContent = jsonContent
+                        .Replace($"\"GUID:{guid}\",", "")
+                        .Replace($",\r\n    \"GUID:{guid}\"", "");
 
-                File.WriteAllText(asmdef.FilePath, jsonContent);
+                if (currentReferences.Count != 0)
+                    File.WriteAllText(asmdef.FilePath, jsonContent);
             }
         }
 
@@ -43,7 +59,7 @@ namespace Common.Tools.EditorTools
             foreach (var assembly in asmdefs)
             {
                 foreach (var assemblyNamespace in assembly.Namespaces)
-                    namespaceToAssembly.TryAdd(assemblyNamespace, assembly.FilePath);
+                    namespaceToAssembly.TryAdd(assemblyNamespace, assembly.FilePath.Replace("P:/quantum-dive-client/", ""));
             }
 
             return namespaceToAssembly;
@@ -56,7 +72,8 @@ namespace Common.Tools.EditorTools
                 Application.dataPath + "/Common",
                 Application.dataPath + "/GamePlay",
                 Application.dataPath + "/Global",
-                Application.dataPath + "/Internal"
+                Application.dataPath + "/Internal",
+                Application.dataPath + "/Plugins",
             };
 
             var asmdefs = new List<Asmdef>();
@@ -79,6 +96,7 @@ namespace Common.Tools.EditorTools
 
             Asmdef GetAssembly(string asmdefPath)
             {
+                asmdefPath = ConvertToUnifiedPath(asmdefPath);
                 var directory = GetParentDirectory(asmdefPath);
                 var codeFiles = Directory.GetFiles(directory, "*.cs", SearchOption.AllDirectories);
 
@@ -87,14 +105,16 @@ namespace Common.Tools.EditorTools
 
                 foreach (var filePath in codeFiles)
                 {
-                    var fileNamespace = GetNameSpace(filePath);
-                    var fileUsings = GetUsings(filePath);
+                    var convertedFilePath = ConvertToUnifiedPath(filePath);
+                    var fileNamespace = GetNameSpace(convertedFilePath);
+                    var fileUsings = GetUsings(convertedFilePath);
                     usings.AddRange(fileUsings);
 
                     if (fileNamespace == string.Empty)
                         continue;
 
-                    namespaces.Add(fileNamespace);
+                    if (namespaces.Contains(fileNamespace) == false)
+                        namespaces.Add(fileNamespace);
                 }
 
                 return new Asmdef()
@@ -116,7 +136,7 @@ namespace Common.Tools.EditorTools
                     if (line.Contains("namespace") == false)
                         continue;
 
-                    var fileNamespace = line.Replace("namespace ", "");
+                    var fileNamespace = line.Replace("namespace ", "").Trim();
                     return fileNamespace;
                 }
 
@@ -133,7 +153,7 @@ namespace Common.Tools.EditorTools
                     if (line.Contains("using") == false)
                         return rawUsings.ToArray();
 
-                    var fileUsing = line.Replace("using ", "").Replace(";", "");
+                    var fileUsing = line.Replace("using ", "").Replace(";", "").Trim();
                     rawUsings.Add(fileUsing);
                 }
 
@@ -154,15 +174,15 @@ namespace Common.Tools.EditorTools
                 {
                     var reference = referenceGUID.Replace("GUID:", "");
 
-                    var assetPath = AssetDatabase.GUIDToAssetPath(reference);
+                    var assetPath = ConvertToUnifiedPath(AssetDatabase.GUIDToAssetPath(reference));
 
-                    if (assetPath != string.Empty)
+                    if (assetPath == string.Empty)
                         continue;
 
                     references.Add(new AsmdefReference()
                     {
-                        AssetPath = assetPath,
-                        Guid = referenceGUID
+                        AssetPath = assetPath.Trim(),
+                        Guid = reference
                     });
                 }
 

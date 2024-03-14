@@ -1,4 +1,4 @@
-﻿using GamePlay.Ecs.Runtime.Abstract;
+﻿using GamePlay.Services.System.Ecs.Abstract;
 using Global.Debugs.Drawing.Abstract;
 using Leopotam.EcsLite;
 

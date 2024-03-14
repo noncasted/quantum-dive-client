@@ -1,4 +1,6 @@
-﻿namespace GamePlay.Enemy.Spawn.Zones.Runtime
+﻿using GamePlay.Enemy.Spawn.Zones.Abstract;
+
+namespace GamePlay.Enemy.Spawn.Zones.Runtime
 {
     public readonly struct ZoneActivationRequest
     {

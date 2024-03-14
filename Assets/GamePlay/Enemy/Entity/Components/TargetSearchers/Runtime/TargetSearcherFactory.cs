@@ -1,4 +1,5 @@
-﻿using GamePlay.Enemy.Entity.Components.TargetSearchers.Common;
+﻿using GamePlay.Enemy.Entity.Components.TargetSearchers.Abstract;
+using GamePlay.Enemy.Entity.Components.TargetSearchers.Common;
 using GamePlay.Enemy.Entity.Components.TargetSearchers.Debug.Gizmos;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;

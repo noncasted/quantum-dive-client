@@ -1,5 +1,6 @@
 ﻿using System;
 using GamePlay.Player.Entity.Components.Healths.Runtime;
+using GamePlay.Player.UI.Overlay.Abstract;
 using Global.System.MessageBrokers.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 

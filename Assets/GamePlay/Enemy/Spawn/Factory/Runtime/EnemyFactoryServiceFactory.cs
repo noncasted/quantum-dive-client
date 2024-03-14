@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
+using GamePlay.Enemy.Spawn.Factory.Abstract;
 using GamePlay.Enemy.Spawn.Factory.Common;
 using GamePlay.Enemy.Spawn.Factory.Logs;
 using Internal.Scopes.Abstract.Containers;

@@ -1,7 +1,9 @@
 ﻿using System.Threading;
 using Common.Tools.UniversalAnimators.Abstract;
 using Cysharp.Threading.Tasks;
+using GamePlay.Player.Entity.Components.Equipment.Locker.Abstract;
 using GamePlay.Player.Entity.Components.Equipment.Locker.Runtime;
+using GamePlay.Player.Entity.Components.StateMachines.Local.Abstract;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;

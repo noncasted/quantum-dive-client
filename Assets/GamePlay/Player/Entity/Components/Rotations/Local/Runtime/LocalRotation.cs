@@ -1,7 +1,7 @@
-﻿using GamePlay.Player.Entity.Components.Rotations.Local.Logs;
-using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
-using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
-using GamePlay.Player.Entity.Views.RotationPoint.Runtime;
+﻿using GamePlay.Player.Entity.Components.Rotations.Local.Abstract;
+using GamePlay.Player.Entity.Components.Rotations.Local.Logs;
+using GamePlay.Player.Entity.Components.Rotations.Remote.Abstract;
+using GamePlay.Player.Entity.Views.RotationPoint.Abstract;
 using Global.Inputs.Utils.Abstract;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;

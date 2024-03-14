@@ -1,6 +1,6 @@
 ﻿using GamePlay.Enemy.Entity.States.Abstract;
 
-namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime
+namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Abstract
 {
     public interface IStateMachineSync
     {

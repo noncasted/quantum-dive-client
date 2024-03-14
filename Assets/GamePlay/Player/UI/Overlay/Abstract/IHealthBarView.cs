@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.UI.Overlay.Runtime.HealthBars
+﻿namespace GamePlay.Player.UI.Overlay.Abstract
 {
     public interface IHealthBarView
     {

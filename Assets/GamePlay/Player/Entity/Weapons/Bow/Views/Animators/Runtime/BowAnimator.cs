@@ -3,6 +3,7 @@ using Animancer;
 using Common.Tools.UniversalAnimators.Abstract;
 using Common.Tools.UniversalAnimators.Runtime;
 using Cysharp.Threading.Tasks;
+using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Runtime
 {

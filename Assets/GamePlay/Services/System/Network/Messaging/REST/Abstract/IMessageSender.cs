@@ -1,6 +1,6 @@
 ﻿using Ragon.Client;
 
-namespace GamePlay.Network.Messaging.REST.Runtime.Abstract
+namespace GamePlay.Services.System.Network.Messaging.REST.Abstract
 {
     public interface IMessageSender<TRequest, TResponse>
     {

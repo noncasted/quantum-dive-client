@@ -1,4 +1,5 @@
-﻿using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Common;
+﻿using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
+using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;

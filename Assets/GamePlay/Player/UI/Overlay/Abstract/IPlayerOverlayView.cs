@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Player.UI.Overlay.Runtime.State
+namespace GamePlay.Player.UI.Overlay.Abstract
 {
     public interface IPlayerOverlayView
     {

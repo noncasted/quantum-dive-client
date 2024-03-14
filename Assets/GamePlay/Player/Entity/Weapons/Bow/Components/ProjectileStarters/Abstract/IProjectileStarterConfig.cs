@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config
+﻿namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Abstract
 {
     public interface IProjectileStarterConfig
     {

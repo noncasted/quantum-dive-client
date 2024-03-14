@@ -1,7 +1,7 @@
 ﻿using Common.DataTypes.Reactive;
 using GamePlay.Common.Damages;
 
-namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
+namespace GamePlay.Player.Entity.Views.DamageReceivers.Abstract
 {
     public interface IDamageReceiverHandler
     {

@@ -1,4 +1,5 @@
 ﻿using Common.DataTypes.Structs;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Abstract;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Logs;
 using UnityEngine;
 

@@ -2,7 +2,7 @@
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace GamePlay.Player.Entity.States.SubStates.Pushes.Runtime
+namespace GamePlay.Player.Entity.States.SubStates.Pushes.Abstract
 {
     [Serializable]
     public class PushParams

@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 
-namespace GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Runtime
+namespace GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract
 {
     public interface IEquipmentSlotsStorage
     {

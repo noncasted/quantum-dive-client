@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Runtime
+﻿namespace GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Abstract
 {
     public interface IBowGameObject
     {

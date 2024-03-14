@@ -1,8 +1,8 @@
 ﻿using System;
-using GamePlay.Ecs.Runtime.Abstract;
 using GamePlay.Hitboxes.Flags;
 using GamePlay.Projectiles.Entity.Components;
 using GamePlay.Projectiles.Pool;
+using GamePlay.Services.System.Ecs.Abstract;
 using UnityEngine;
 
 namespace GamePlay.Projectiles.Factory

@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.Combo.Common;
+﻿using GamePlay.Player.Entity.Components.Combo.Abstract;
+using GamePlay.Player.Entity.Components.Combo.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;

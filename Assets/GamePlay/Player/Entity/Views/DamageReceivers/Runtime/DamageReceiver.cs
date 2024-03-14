@@ -1,5 +1,6 @@
 ﻿using Common.DataTypes.Reactive;
 using GamePlay.Common.Damages;
+using GamePlay.Player.Entity.Views.DamageReceivers.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;
 

@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Enemy.Spawn.Zones.Runtime
+﻿namespace GamePlay.Enemy.Spawn.Zones.Abstract
 {
     public interface IEnemyZone
     {

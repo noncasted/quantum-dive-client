@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Common;
+﻿using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
+using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;

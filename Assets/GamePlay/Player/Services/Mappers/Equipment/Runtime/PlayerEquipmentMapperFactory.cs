@@ -2,6 +2,7 @@
 using Common.DataTypes.Collections.ScriptableRegistries;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Services.Mappers.Equipment.Abstract;
 using GamePlay.Player.Services.Mappers.Equipment.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;

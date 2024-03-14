@@ -1,9 +1,11 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
+using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Abstract;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.States.Damaged.Common;
 using GamePlay.Enemy.Entity.States.Damaged.Vfx;
+using GamePlay.Enemy.Entity.Views.Animators.Abstract;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;

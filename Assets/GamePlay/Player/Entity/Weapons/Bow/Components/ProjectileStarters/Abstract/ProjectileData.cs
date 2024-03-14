@@ -2,7 +2,7 @@
 using GamePlay.Projectiles.Registry.Definition;
 using UnityEngine;
 
-namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config
+namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Abstract
 {
     [Serializable]
     public class ProjectileData

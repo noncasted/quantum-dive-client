@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using GamePlay.Common.Damages;
-using GamePlay.Player.Entity.Components.Rotations.Local.Runtime.Abstract;
-using GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Runtime;
+using GamePlay.Player.Entity.Components.Rotations.Local.Abstract;
+using GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Abstract;
+using GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Abstract;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Runtime
 {

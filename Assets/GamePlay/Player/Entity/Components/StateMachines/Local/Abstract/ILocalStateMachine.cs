@@ -2,7 +2,7 @@
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 
-namespace GamePlay.Player.Entity.Components.StateMachines.Local.Runtime
+namespace GamePlay.Player.Entity.Components.StateMachines.Local.Abstract
 {
     public interface ILocalStateMachine
     {

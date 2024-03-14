@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Player.Entity.Components.Combo.Abstract;
+using GamePlay.Player.Entity.Components.StateMachines.Local.Abstract;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using Internal.Scopes.Abstract.Lifetimes;

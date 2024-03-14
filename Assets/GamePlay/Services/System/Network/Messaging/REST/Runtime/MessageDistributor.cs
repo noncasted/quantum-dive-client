@@ -1,4 +1,4 @@
-﻿using GamePlay.Network.Messaging.REST.Runtime.Abstract;
+﻿using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 
 //using GamePlay.Player.Entity.Definition;
 //using GamePlay.Player.Services.Lists.Runtime;

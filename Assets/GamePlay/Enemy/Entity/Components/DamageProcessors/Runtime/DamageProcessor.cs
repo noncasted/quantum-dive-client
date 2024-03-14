@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using GamePlay.Common.Damages;
-using GamePlay.Enemy.Entity.Components.Health.Runtime;
+using GamePlay.Enemy.Entity.Components.Health.Abstract;
 using GamePlay.Enemy.Entity.States.Damaged.Local;
 using GamePlay.Enemy.Entity.States.Death.Local;
 using GamePlay.Enemy.Entity.Views.Hitbox.Local;

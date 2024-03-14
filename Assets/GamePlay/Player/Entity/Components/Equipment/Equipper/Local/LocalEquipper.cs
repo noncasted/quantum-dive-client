@@ -3,6 +3,7 @@ using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Factory;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Remote;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Binder;
+using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Abstract;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Storage.Runtime;
 using VContainer.Unity;
 

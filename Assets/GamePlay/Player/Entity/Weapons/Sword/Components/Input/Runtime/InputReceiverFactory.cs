@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.Entity.Weapons.Sword.Components.Input.Common;
+﻿using GamePlay.Player.Entity.Weapons.Sword.Components.Input.Abstract;
+using GamePlay.Player.Entity.Weapons.Sword.Components.Input.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;

@@ -1,6 +1,6 @@
 ﻿using Global.Network.Handlers.SceneCollectors.Abstract;
 
-namespace GamePlay.Network.Room.SceneCollectors.Runtime
+namespace GamePlay.Services.System.Network.Room.SceneCollectors.Abstract
 {
     public interface IGameSceneCollector : INetworkSceneCollector
     {

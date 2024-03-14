@@ -2,6 +2,7 @@
 using Common.DataTypes.Collections.ScriptableRegistries;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Common;
+using GamePlay.Player.Services.Mappers.States.Abstract;
 using GamePlay.Player.Services.Mappers.States.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;

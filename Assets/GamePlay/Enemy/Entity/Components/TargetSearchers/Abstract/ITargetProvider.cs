@@ -1,6 +1,6 @@
-﻿using GamePlay.Targets.Registry.Runtime;
+﻿using GamePlay.Services.Combat.Targets.Registry.Abstract;
 
-namespace GamePlay.Enemy.Entity.Components.TargetSearchers.Runtime
+namespace GamePlay.Enemy.Entity.Components.TargetSearchers.Abstract
 {
     public interface ITargetProvider
     {

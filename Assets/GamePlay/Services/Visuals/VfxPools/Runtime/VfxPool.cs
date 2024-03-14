@@ -1,4 +1,5 @@
 ﻿using Common.Tools.ObjectsPools.Runtime.Abstract;
+using GamePlay.Services.Visuals.VfxPools.Abstract;
 using UnityEngine;
 
 namespace GamePlay.VfxPools.Runtime

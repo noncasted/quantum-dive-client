@@ -1,4 +1,5 @@
 ﻿using Animancer;
+using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;

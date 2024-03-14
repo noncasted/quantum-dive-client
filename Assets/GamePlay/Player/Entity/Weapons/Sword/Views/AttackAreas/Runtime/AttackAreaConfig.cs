@@ -1,4 +1,5 @@
 ﻿using System;
+using GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Abstract;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Runtime

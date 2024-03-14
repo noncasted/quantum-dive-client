@@ -1,4 +1,5 @@
-﻿using GamePlay.Enemy.Entity.Components.Health.Common;
+﻿using GamePlay.Enemy.Entity.Components.Health.Abstract;
+using GamePlay.Enemy.Entity.Components.Health.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

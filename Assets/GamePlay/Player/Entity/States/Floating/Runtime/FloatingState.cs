@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
+using GamePlay.Player.Entity.Components.StateMachines.Local.Abstract;
 using GamePlay.Player.Entity.States.Common;
+using GamePlay.Player.Entity.States.Floating.Abstract;
 using GamePlay.Player.Entity.States.Floating.Logs;
 using GamePlay.Player.Entity.States.Idles.Local;
 using Internal.Scopes.Abstract.Instances.Entities;

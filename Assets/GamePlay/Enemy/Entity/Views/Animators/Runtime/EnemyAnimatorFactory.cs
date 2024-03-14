@@ -1,4 +1,5 @@
-﻿using GamePlay.Enemy.Entity.Views.Animators.Logs;
+﻿using GamePlay.Enemy.Entity.Views.Animators.Abstract;
+using GamePlay.Enemy.Entity.Views.Animators.Logs;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;

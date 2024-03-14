@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Common;
+﻿using GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Abstract;
+using GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;

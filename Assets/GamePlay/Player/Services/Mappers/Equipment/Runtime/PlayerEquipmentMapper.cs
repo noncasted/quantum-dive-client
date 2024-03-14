@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Common.DataTypes.Collections.Common;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Services.Mappers.Equipment.Abstract;
 
 namespace GamePlay.Player.Services.Mappers.Equipment.Runtime
 {

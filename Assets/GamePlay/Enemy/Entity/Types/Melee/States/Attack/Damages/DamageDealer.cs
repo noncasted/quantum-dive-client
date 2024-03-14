@@ -1,5 +1,6 @@
 ﻿using GamePlay.Common.Damages;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
+using GamePlay.Enemy.Entity.Views.Transforms.Local.Abstract;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using Internal.Scopes.Abstract.Instances.Entities;
 

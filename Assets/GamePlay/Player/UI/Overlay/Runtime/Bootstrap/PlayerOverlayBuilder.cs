@@ -1,4 +1,5 @@
-﻿using GamePlay.Player.UI.Overlay.Runtime.HealthBars;
+﻿using GamePlay.Player.UI.Overlay.Abstract;
+using GamePlay.Player.UI.Overlay.Runtime.HealthBars;
 using Internal.Scopes.Abstract.Containers;
 using UnityEngine;
 

@@ -2,7 +2,7 @@
 using GamePlay.Player.Entity.States.Common;
 using Internal.Scopes.Abstract.Lifetimes;
 
-namespace GamePlay.Player.Entity.Components.Combo.Runtime
+namespace GamePlay.Player.Entity.Components.Combo.Abstract
 {
     public interface IComboStateMachine
     {

@@ -1,6 +1,6 @@
 ﻿using GamePlay.Projectiles.Registry.Definition;
 
-namespace GamePlay.Projectiles.Registry.Runtime
+namespace GamePlay.Services.Combat.Projectiles.Registry.Abstract
 {
     public interface IProjectileDefinitionsRegistry
     {
