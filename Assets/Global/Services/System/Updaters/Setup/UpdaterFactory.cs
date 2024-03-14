@@ -1,6 +1,5 @@
 ﻿using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
 using Cysharp.Threading.Tasks;
 using Global.System.Updaters.Common;
 using Global.System.Updaters.Delays;

@@ -1,0 +1,7 @@
+﻿{
+  "name": "Global.Input.View.Abstract",
+  "references": [
+    "GUID:1429db28f9474a389cb34ec712b3c8b3",
+    "GUID:75469ad4d38634e559750d17036d5f7c"
+  ]
+}

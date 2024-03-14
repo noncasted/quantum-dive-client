@@ -3,6 +3,7 @@ using Internal.Scopes.Abstract.Instances.Services;
 
 using Cysharp.Threading.Tasks;
 using Global.Audio.Player.Common;
+using Global.Services.Audio.Player.Abstract;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

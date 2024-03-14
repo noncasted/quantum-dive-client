@@ -2,13 +2,12 @@
   "name": "GamePlay.Network.Entities.Factory",
   "rootNamespace": "",
   "references": [
-    "GUID:48069c8ab725461aa2292e6e15df5a63",
     "GUID:213e82e2dc114b00a73d41eb34b80fdc",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:129a2d34d9b24d59800010a0ce2f1e48",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
-    "GUID:3944dd557e8f416c84ad000a528839e7"
+    "GUID:e99eff0a39414de2ac2ea492817f7345",
+    "GUID:ae830b14052a4d1a88d79d9fbdd125ab",
+    "GUID:48069c8ab725461aa2292e6e15df5a63"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

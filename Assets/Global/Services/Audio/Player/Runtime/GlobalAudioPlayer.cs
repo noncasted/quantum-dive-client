@@ -1,6 +1,7 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using Global.Publisher.Abstract.DataStorages;
+using Global.Services.Audio.Player.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 using VContainer;

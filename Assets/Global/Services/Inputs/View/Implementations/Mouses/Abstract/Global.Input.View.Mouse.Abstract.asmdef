@@ -1,0 +1,4 @@
+﻿{
+  "name": "Global.Input.View.Mouse.Abstract",
+  "references":[ "GUID:5a6ca98db01d77741890b42e259b7291", "GUID:f51ebe6a0ceec4240a699833d6309b23" ]
+}

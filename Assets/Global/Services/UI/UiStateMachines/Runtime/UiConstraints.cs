@@ -8,7 +8,7 @@ namespace Global.UI.UiStateMachines.Runtime
 {
     [CreateAssetMenu(fileName = UiStateMachineRouter.ConstraintsPrefix,
         menuName = UiStateMachineRouter.ConstraintsPath)]
-    public class UiConstraints : ScriptableObject
+    public class UiConstraints : ScriptableObject, IUIConstraints
     {
         [SerializeField] private InputConstraintsDictionary _input;
 

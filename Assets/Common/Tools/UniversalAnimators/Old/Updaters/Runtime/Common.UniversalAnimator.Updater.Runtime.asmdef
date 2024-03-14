@@ -1,7 +1,7 @@
 ﻿{
   "name": "Common.UniversalAnimator.Updater.Runtime",
   "references": [
-    "GUID:04243451437dcfe48b583ab43ef0a8fa",
+    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
     "GUID:da1917f3a79694c539a148addd06d33b",
     "GUID:e215ba7e663f43d1ac3d0e3a19c29e42",
     "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",

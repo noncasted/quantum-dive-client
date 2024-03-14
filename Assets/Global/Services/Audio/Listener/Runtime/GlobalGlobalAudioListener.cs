@@ -1,4 +1,5 @@
-﻿using Internal.Scopes.Abstract.Instances.Services;
+﻿using Global.Audio.Listener.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 
 namespace Global.Audio.Listener.Runtime

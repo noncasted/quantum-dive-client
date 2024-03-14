@@ -2,11 +2,8 @@
   "name": "GamePlay.Player.Hitbox.Debug",
   "references": [
     "GUID:6dc79ecacad54fd8bf10905a5d77b08f",
-    "GUID:04243451437dcfe48b583ab43ef0a8fa",
-    "GUID:6f32726480644b1bb3ae01704a4f353d",
-    
-    "GUID:3b2ea7622084434a927c413b7fc2fd3a",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+    "GUID:1429db28f9474a389cb34ec712b3c8b3",
+    "GUID:ca913105e6424d24af37fc9ba8269837"
   ]
 }

@@ -1,7 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using Global.System.ScopeDisposer.Logs;
 using Internal.Scenes.Abstract;
-using Internal.Scopes.Abstract.Callbacks;
 using Internal.Scopes.Abstract.Instances.Services;
 
 namespace Global.System.ScopeDisposer.Runtime

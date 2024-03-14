@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Global.Network.Common;
 using Global.Network.Connection.Runtime;
-using Global.Network.EventsRegistries.Runtime;
 using Global.Network.Handlers.ClientHandler.Runtime;
 using Global.Network.Handlers.SceneCollectors.Runtime;
 using Global.Network.Objects.EntityListeners.Runtime;
@@ -21,7 +20,6 @@ namespace Global.Network.Compose
         [SerializeField] private SceneCollectorBridgeFactory _sceneCollector;
         [SerializeField] private NetworkEntityListenerFactory _entityListener;
         [SerializeField] private SessionFlowFactory _sessionFlow;
-        [SerializeField] private EventsRegistryFactory _eventsRegistry;
 
         public IReadOnlyList<IServiceFactory> Factories => new IServiceFactory[]
         {
@@ -29,8 +27,7 @@ namespace Global.Network.Compose
             _client,
             _sceneCollector,
             _entityListener,
-            _sessionFlow,
-            _eventsRegistry,
+            _sessionFlow
         };
     }
 }

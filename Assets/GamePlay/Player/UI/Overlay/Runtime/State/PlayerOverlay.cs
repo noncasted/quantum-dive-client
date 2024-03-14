@@ -17,7 +17,7 @@ namespace GamePlay.Player.UI.Overlay.Runtime.State
         private readonly IPlayerOverlayView _view;
         private readonly IUiStateMachine _stateMachine;
 
-        public UiConstraints Constraints { get; }
+        public IUIConstraints Constraints { get; }
         public string Name => "PlayerOverlay";
 
         public void Show()
