@@ -101,7 +101,7 @@ namespace Common.Tools.EditorTools
 
             foreach (var path in paths)
             {
-                var interfaces = Directory.GetFiles(path, "I*.cs");
+                var interfaces = Directory.GetFiles(path, "I*.cs", SearchOption.AllDirectories);
 
                 if (interfaces.Length == 0)
                     continue;
