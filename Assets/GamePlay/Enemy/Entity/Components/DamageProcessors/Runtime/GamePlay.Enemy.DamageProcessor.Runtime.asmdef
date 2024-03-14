@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Enemy.DamageProcessor.Runtime",
   "rootNamespace": "",
-  "references": ["GUID:5f9085b4a2f7f064382566bbacd674d9",
+  "references": [
     "GUID:2435b9189672c5848ae4cc81c2cf0e13",
     "GUID:c9c9c54e0cd34dcd8da49012b5cb9286",
     
@@ -14,7 +14,9 @@
     
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     
-    "GUID:6d0def324f4849dc99881aa079c4c004"
+    "GUID:6d0def324f4849dc99881aa079c4c004",
+    
+    "GUID:5f9085b4a2f7f064382566bbacd674d9"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

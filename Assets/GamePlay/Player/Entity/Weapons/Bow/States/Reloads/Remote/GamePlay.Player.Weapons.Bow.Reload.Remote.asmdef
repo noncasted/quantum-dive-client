@@ -2,14 +2,14 @@
   "name": "GamePlay.Player.Weapons.Bow.Reload.Remote",
   "references": [
     "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    "GUID:51ad2d5d390b45bea4a3881475db024d",
-    "GUID:239f9a8379f7b964b8f8c879fed530fb",
     
-    "GUID:e42c41fa7abb447c9943bfe9a2061827",
-    "GUID:2a31f6d63bbc49d189e7a3b966dec92a",
-    "GUID:e5f42ee8d28644b89bfd6c2d482fac7f",
-    "GUID:6c2db941bade13442848b216ff408243",
-    "GUID:915a5a2ef3dd4eb0868f357c78bbff86",
+    
+    
+    
+    
+    
+    
+    
     "GUID:1df29afa6177f8e4fa19b25367556ac2",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:b0275d8a7d994d97ae1652be17935f0f",
@@ -51,6 +51,10 @@
     
     
     
-    "GUID:7fa2fb6a0ead92e4a898ec2400b82351"
+    "GUID:7fa2fb6a0ead92e4a898ec2400b82351",
+    
+    
+    
+    "GUID:6c2db941bade13442848b216ff408243"
   ]
 }

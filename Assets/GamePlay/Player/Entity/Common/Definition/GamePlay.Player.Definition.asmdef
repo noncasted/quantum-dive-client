@@ -1,8 +1,8 @@
-﻿{
+{
   "name": "GamePlay.Player.Definition",
   "references": [
-    "GUID:abb0d563a5fe47c5a5060ef4b01c49e7",
-    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
+    
+    
     "GUID:ad91b1a77aeb44d782f5498f517b0657",
     
     "GUID:f51ebe6a0ceec4240a699833d6309b23",

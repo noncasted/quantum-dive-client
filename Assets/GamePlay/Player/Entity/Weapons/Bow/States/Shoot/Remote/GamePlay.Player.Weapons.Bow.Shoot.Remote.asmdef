@@ -1,13 +1,13 @@
 {
   "name": "GamePlay.Player.Weapons.Bow.Shoot.Remote",
   "references": [
-    "GUID:04243451437dcfe48b583ab43ef0a8fa",
-    "GUID:51ad2d5d390b45bea4a3881475db024d",
-    "GUID:239f9a8379f7b964b8f8c879fed530fb",
     
-    "GUID:e42c41fa7abb447c9943bfe9a2061827",
-    "GUID:2a31f6d63bbc49d189e7a3b966dec92a",
-    "GUID:915a5a2ef3dd4eb0868f357c78bbff86",
+    
+    
+    
+    
+    
+    
     "GUID:1df29afa6177f8e4fa19b25367556ac2",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:b0275d8a7d994d97ae1652be17935f0f",
@@ -45,6 +45,10 @@
     
     
     
-    "GUID:63bc19ae10888a140805b7ef9209eca7"
+    "GUID:63bc19ae10888a140805b7ef9209eca7",
+    
+    
+    
+    "GUID:04243451437dcfe48b583ab43ef0a8fa"
   ]
 }

@@ -2,14 +2,18 @@
   "name": "GamePlay.Network.REST.Runtime",
   "references": ["GUID:db7c57c7f1ba291409e3b01c3e0bf9c7",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:da1b7740f0c6d224e81d28faa4aa2abf",
+    
     "GUID:dec28d2fc9064a05abcbf9e3264fa16a",
     "GUID:426180f42ee547a7ad0d2ed7064606ce",
     "GUID:32468dfd76aeee64abd199b98b754eda",
-    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
+    
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:48689ccc8e6b4fc5ade6e611da299600",
-    "GUID:3944dd557e8f416c84ad000a528839e7",
-    "GUID:ae830b14052a4d1a88d79d9fbdd125ab"
+    
+    "GUID:ae830b14052a4d1a88d79d9fbdd125ab",
+    
+    
+    
+    "GUID:3944dd557e8f416c84ad000a528839e7"
   ]
 }

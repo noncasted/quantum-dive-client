@@ -1,8 +1,8 @@
-﻿{
+{
   "name": "Global.Configs.Registry.Runtime",
   "references": [
     "GUID:c52767737c7342e7a8b77fbb71cf0a79",
-    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
+    
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:75f29b67883912c4683d10d111aca113",

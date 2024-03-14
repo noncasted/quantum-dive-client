@@ -1,7 +1,9 @@
-﻿{
+{
   "name": "GamePlay.Enemy.Entity.Routes",
   "references": [
-    "GUID:5f85ab5dc178ff54c81b21f197b82d14",
-    "GUID:73b1dbf9f932442fb40445b9ad42f150"
+    
+    "GUID:73b1dbf9f932442fb40445b9ad42f150",
+    
+    "GUID:5f85ab5dc178ff54c81b21f197b82d14"
   ]
 }

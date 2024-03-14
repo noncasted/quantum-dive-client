@@ -2,13 +2,13 @@
   "name": "GamePlay.Player.Equipment.Equipper.Remote",
   "rootNamespace": "",
   "references": [
-    "GUID:4c2d53a1566442429885755e05430edf",
-    "GUID:9fcaad132baa463fb8555c14c7d6117a",
+    
+    
     "GUID:44265e8886254d92835254b3bd1a2a7b",
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:72ee10059c044befb9afe61cb72eaf8d",
-    "GUID:30439b97ca9f4e72a253c3fed65c07fd",
+    
+    
     "GUID:01cbcd01a3784da9b91f83eff4e7e13c",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     
@@ -21,7 +21,9 @@
     
     "GUID:c6515e2d30cb9ca41bde3eddc565a0bd",
     
-    "GUID:bea1adb6c6974d047a8b08da390b27ab"
+    "GUID:bea1adb6c6974d047a8b08da390b27ab",
+    
+    "GUID:9fcaad132baa463fb8555c14c7d6117a"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

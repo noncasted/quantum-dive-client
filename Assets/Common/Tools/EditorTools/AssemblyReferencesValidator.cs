@@ -9,6 +9,53 @@ namespace Common.Tools.EditorTools
 {
     public class AssemblyReferencesValidator
     {
+        private static readonly HashSet<string> _filter = new()
+        {
+            "System",
+            "System.IO",
+            "System.Threading",
+            "System.Collections",
+            "System.Collections.Generic",
+            "UnityEngine",
+            "UnityEngine.UI",
+            "UnityEditor",
+        };
+
+        private static readonly HashSet<string> _ignored = new()
+        {
+            "Common.UniversalAnimator.Animation.Abstract",
+            "Common.ScriptableRegistries",
+            "UniTask",
+            "Common.UniversalAnimator.FrameProviders.Forward",
+            "Common.UniversalAnimator.Animation.Abstract",
+            "VContainer",
+            "Global.Network.SceneCollector.Abstract",
+            "GamePlay.Camera.Abstract",
+            "GamePlay.Projectiles.Views.Facade",
+            "Leopotam.EcsLite",
+            "Common.ObjectsPool.Runtime",
+            "Common.ScriptableRegistries",
+            "GamePlay.Common.Damage",
+            "GamePlay.Projectiles.Views.Actions",
+            "GamePlay.Projectiles.Views.Transform",
+            "ReadOnlyDictionaries.Runtime",
+            "Common.ScriptableRegistries",
+            "GamePlay.Camera.Abstract",
+            "Common.UniversalAnimator.Animator.Runtime",
+            "Common.UniversalAnimator.Animation.Looped",
+            "Common.UniversalAnimator.Animation.Async",
+            "Common.UniversalAnimator.Animation.FrameSequence",
+            "Common.Collections.Reactive",
+            "GamePlay.Projectiles.Definition",
+            "Common.SerializableDictionaries",
+            "GamePlay.Player.States.Common",
+            "GamePlay.Player.Equipment.Slots.Definitions.Abstract",
+            "GamePlay.Services.Ecs.Abstract",
+            "Common.UniversalAnimator.Animations",
+            "Common.UniversalAnimator.Events",
+            "GamePlay.Targets.Registry.Abstract",
+        };
+        
         private static string _sourcesFolder => Application.dataPath + "/GamePlay";
 
         [MenuItem("Tools/Invalidate asmdef references")]
@@ -38,14 +85,25 @@ namespace Common.Tools.EditorTools
                 {
                     if (namespaceToAssembly.TryGetValue(asmdefUsing, out var usingAssembly))
                         currentReferences.Remove(usingAssembly);
+                    else if (_filter.Contains(asmdefUsing) == false)
+                    {
+                        Debug.Log($"Assembly not found: {asmdefUsing} in {asmdef.FilePath}");
+                    }
                 }
-
+                                                                            
                 var jsonContent = File.ReadAllText(asmdef.FilePath);
 
                 foreach (var (path, guid) in currentReferences)
+                {
+                    var asmdefName = path.Split("/")[^1].Replace(".asmdef", "");
+                    Debug.Log($"Asmdef name: {asmdefName} {_ignored.Contains(asmdefName)}");
+                    if (_ignored.Contains(asmdefName) == true)
+                        continue;
+                    
                     jsonContent = jsonContent
                         .Replace($"\"GUID:{guid}\",", "")
                         .Replace($",\r\n    \"GUID:{guid}\"", "");
+                }
 
                 if (currentReferences.Count != 0)
                     File.WriteAllText(asmdef.FilePath, jsonContent);
@@ -61,7 +119,7 @@ namespace Common.Tools.EditorTools
                 foreach (var assemblyNamespace in assembly.Namespaces)
                     namespaceToAssembly.TryAdd(assemblyNamespace, assembly.FilePath.Replace("P:/quantum-dive-client/", ""));
             }
-
+            
             return namespaceToAssembly;
         }
 
@@ -136,7 +194,7 @@ namespace Common.Tools.EditorTools
                     if (line.Contains("namespace") == false)
                         continue;
 
-                    var fileNamespace = line.Replace("namespace ", "").Trim();
+                    var fileNamespace = line.Replace("namespace ", "").Replace("{", "").Trim();
                     return fileNamespace;
                 }
 

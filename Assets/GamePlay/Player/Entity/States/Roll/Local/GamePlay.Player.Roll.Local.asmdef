@@ -2,13 +2,13 @@
   "name": "GamePlay.Player.Roll.Local",
   "references": [
     "GUID:cafac004f3b045a0ad2d577feb68faed",
-    "GUID:145d06f883cb2b94396d697c01e9bd09",
-    "GUID:653035ca38aa68b428118c9a452c37a0",
-    "GUID:2ff8f8fa94b546b097dc673bf486b1e2",
-    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    "GUID:239f9a8379f7b964b8f8c879fed530fb",
     
-    "GUID:23cf091f4c6d7994ea810080cd2b498f",
+    
+    
+    
+    
+    
+    
     "GUID:47083761e726d344ebda60ec45a5396c",
     "GUID:1df29afa6177f8e4fa19b25367556ac2",
     "GUID:aac41f60988d442497259de79205647b",
@@ -19,8 +19,8 @@
     
     "GUID:699865ac82ed4bfc98e47c9342127ab0",
     "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
-    "GUID:5a6ca98db01d77741890b42e259b7291",
+    
+    
     
     "GUID:d7f245ec195547edb9c81809078172dd",
     
@@ -54,6 +54,22 @@
     
     
     
-    "GUID:e26510743a1f8cc459abec906a60ed6c"
+    "GUID:e26510743a1f8cc459abec906a60ed6c",
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "GUID:5a6ca98db01d77741890b42e259b7291"
   ]
 }

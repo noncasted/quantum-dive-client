@@ -1,9 +1,9 @@
-﻿{
+{
   "name": "GamePlay.Player.Respawn.Remote",
   "references": [
-    "GUID:239f9a8379f7b964b8f8c879fed530fb",
+    
     "GUID:699865ac82ed4bfc98e47c9342127ab0",
-    "GUID:51ad2d5d390b45bea4a3881475db024d",
+    
     "GUID:77afcc2a31fe4e189b0b0b93bd782683",
     "GUID:1df29afa6177f8e4fa19b25367556ac2",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
@@ -18,6 +18,10 @@
     
     
     
-    "GUID:f0619dc86df636c4898928d3dcc95a57"
+    "GUID:f0619dc86df636c4898928d3dcc95a57",
+    
+    
+    
+    "GUID:239f9a8379f7b964b8f8c879fed530fb"
   ]
 }

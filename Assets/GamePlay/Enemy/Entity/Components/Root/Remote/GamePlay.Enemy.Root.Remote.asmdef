@@ -1,16 +1,16 @@
-﻿{
+{
   "name": "GamePlay.Enemy.Root.Remote",
   "references": [
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:2bab53ca096531746a970188315676b8",
+    
     "GUID:d89cb064a6d60b243b67336a6540d7a7",
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:5a0b2aea9a2a4de78518f42301cb3375",
+    
     "GUID:09eeed04a09c422b9c62d681c78d80ec",
-    "GUID:2df1bee7daecc7546bbfd10daa1cf6b3",
+    
     "GUID:de19aa2e50794ab8b485869d52ea5f5f",
     
-    "GUID:3b2ea7622084434a927c413b7fc2fd3a",
+    
     
     "GUID:36b63739de284ea9aded3ca311c0ede1",
     
@@ -20,6 +20,8 @@
     
     "GUID:acd0f4b5b5b26474e8bba63a3fc50ee6",
     
-    "GUID:1fd487ce5158932458a4cfb3669996f1"
+    "GUID:1fd487ce5158932458a4cfb3669996f1",
+    
+    "GUID:5a0b2aea9a2a4de78518f42301cb3375"
   ]
 }

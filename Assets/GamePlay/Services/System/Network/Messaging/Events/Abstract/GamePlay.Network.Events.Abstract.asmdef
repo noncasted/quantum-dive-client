@@ -1,10 +1,30 @@
 {
  "name": "GamePlay.Network.Events.Abstract",
  "references": [
-  "GUID:fa9fad3fe137409c8119ca2f9a55456f",
-  "GUID:4545870f497840d4b18d0e7102ece74c",
-  "GUID:dec28d2fc9064a05abcbf9e3264fa16a",
-  "GUID:32468dfd76aeee64abd199b98b754eda",
-  "GUID:f51ebe6a0ceec4240a699833d6309b23"
+  
+  
+  
+  
+  "GUID:f51ebe6a0ceec4240a699833d6309b23",
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  "GUID:32468dfd76aeee64abd199b98b754eda"
  ]
 }

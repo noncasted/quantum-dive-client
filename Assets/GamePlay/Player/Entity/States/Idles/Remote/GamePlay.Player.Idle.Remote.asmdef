@@ -2,17 +2,17 @@
   "name": "GamePlay.Player.Idle.Remote",
   "rootNamespace": "",
   "references": [
-    "GUID:915a5a2ef3dd4eb0868f357c78bbff86",
+    
     "GUID:f9ddee8031644d5eb1067bb67301c6b0",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     
     "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    "GUID:51ad2d5d390b45bea4a3881475db024d",
+    
     "GUID:1df29afa6177f8e4fa19b25367556ac2",
     "GUID:aac41f60988d442497259de79205647b",
     "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
     
-    "GUID:239f9a8379f7b964b8f8c879fed530fb",
+    
     "GUID:699865ac82ed4bfc98e47c9342127ab0",
     
     "GUID:47083761e726d344ebda60ec45a5396c",
@@ -26,7 +26,10 @@
     "GUID:dbd628ed558e8494e96714d170f044fb",
     
     
-    "GUID:f0619dc86df636c4898928d3dcc95a57"
+    "GUID:f0619dc86df636c4898928d3dcc95a57",
+    
+    
+    "GUID:239f9a8379f7b964b8f8c879fed530fb"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

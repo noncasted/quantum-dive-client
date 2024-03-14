@@ -1,7 +1,7 @@
-﻿{
+{
   "name": "GamePlay.Player.Weapons.Sword.Definition.Local",
   "references": [
-    "GUID:c075eee8fbb245bf9a56dfe2f04f736d",
+    
     "GUID:696b1380a28e4c77bcc51c28fe10023d",
     "GUID:4f280fba04434de19dd0af3ddbe7c3ef",
     "GUID:17ecc56f155a4996b9a4b2b42fda2d29",

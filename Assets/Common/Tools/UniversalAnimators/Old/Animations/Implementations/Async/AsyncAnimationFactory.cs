@@ -4,10 +4,10 @@ using Common.Tools.UniversalAnimators.Old.Animations.Abstract;
 using Common.Tools.UniversalAnimators.Old.Animations.FrameProviders.Forward;
 using Common.Tools.UniversalAnimators.Old.Animations.FrameSequence;
 using Sirenix.OdinInspector;
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-using UnityEngine;
 
 namespace Common.Tools.UniversalAnimators.Old.Animations.Implementations.Async
 {

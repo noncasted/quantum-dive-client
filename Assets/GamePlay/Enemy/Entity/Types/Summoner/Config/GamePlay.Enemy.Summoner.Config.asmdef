@@ -1,32 +1,32 @@
-﻿{
+{
   "name": "GamePlay.Enemy.Summoner.Config",
   "references": [
-    "GUID:d97d9c764948444d98c823fdaa970d62",
+    
     
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:df7d3528058e43ca8417048c811d9944",
+    
     "GUID:6d68342a725cef14aa63261e29df7944",
-    "GUID:ea8a3562e464425fb3442268f196d9e1",
-    "GUID:721b908a073a4a70891a75e33937496c",
-    "GUID:8265c01205983f8408e9dbff4433b2ff",
-    "GUID:7e2f66033f9a634418d0fce71635d73f",
-    "GUID:cc57a3ad1b7f41d58b9d8177398bbb5e",
-    "GUID:c2cdc9528dfe4a4db832cf36688e85e3",
-    "GUID:95e7484c3e764ade9a89daab6736b100",
-    "GUID:d1f687e54b5d45199e006815a82486f5",
-    "GUID:cba95793f8404b33a54ac8f44e5ae4bf",
-    "GUID:483c1c97199d48899ab2ef29bc389d0d",
-    "GUID:51c7d0d29544499a810b2c81f4571dbc",
-    "GUID:9800b4e6b20b4edf93421401d0502288",
-    "GUID:1cd599a51b25f654caab6ee282e32afd",
-    "GUID:0af0043b3e9f429c837f90d429af47fb",
-    "GUID:ffaa3406b1df48f8bdecb9c41bd2f783",
-    "GUID:78cdf7b8b45a42be84a6b9b9fc432f47",
-    "GUID:864fc1e5891349c19983abf32338d5aa",
-    "GUID:5a0b2aea9a2a4de78518f42301cb3375",
-    "GUID:2cd1058b8fb0415d9dba71fe9948a965",
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     "GUID:09eeed04a09c422b9c62d681c78d80ec",
     "GUID:fba27e85e93541be9443befbb7880187",
     "GUID:99a83d63e9324b558fbaa55f317a3e39",
@@ -42,6 +42,27 @@
     "GUID:d5ea2f23768c11149b671bcd47fd05ce",
     "GUID:ecb1e56e6f2c4d439215a54ed08a2141",
     "GUID:3f8ce053aee347da9a26f5a7b021a4b1",
-    "GUID:18e343b938ef4bafa60451700ee09bc4"
+    "GUID:18e343b938ef4bafa60451700ee09bc4",
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "GUID:2cd1058b8fb0415d9dba71fe9948a965"
   ]
 }

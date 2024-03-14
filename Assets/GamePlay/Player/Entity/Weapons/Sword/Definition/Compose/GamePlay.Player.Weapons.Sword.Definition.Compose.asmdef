@@ -1,11 +1,21 @@
-﻿{
-  "name": "GamePlay.Player.Weapons.Sword.Definition.Compose",
-  "references": [
-    "GUID:fa0e265ba965494c9ed8bed74f0d918e",
-    "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
-    "GUID:c931712e2535489c8cbbd9559027b2e7",
-    "GUID:5aff2df520a648c99271d630f9f99507",
-    "GUID:a6a753291bc24d5382cc6acf7de3f5f1",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3"
-  ]
+{
+    "name": "GamePlay.Player.Weapons.Sword.Definition.Compose",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fa0e265ba965494c9ed8bed74f0d918e",
+        "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
+        "GUID:c931712e2535489c8cbbd9559027b2e7",
+        "GUID:5aff2df520a648c99271d630f9f99507",
+        "GUID:a6a753291bc24d5382cc6acf7de3f5f1",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

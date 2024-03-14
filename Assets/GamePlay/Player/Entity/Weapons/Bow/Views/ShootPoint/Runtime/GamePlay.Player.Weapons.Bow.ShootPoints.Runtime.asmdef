@@ -2,11 +2,15 @@
   "name": "GamePlay.Player.Weapons.Bow.ShootPoints.Runtime",
   "references": ["GUID:faa71864943b5ad4289092553caeb4a5",
     "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:5a6ca98db01d77741890b42e259b7291",
-    "GUID:e26510743a1f8cc459abec906a60ed6c",
+    
+    
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:94e5ca42c58876942a8ffdd1c63b952f",
     
-    "GUID:a6bee730cad343c7ac8840da91376019"
+    
+    
+    
+    
+    "GUID:e26510743a1f8cc459abec906a60ed6c"
   ]
 }

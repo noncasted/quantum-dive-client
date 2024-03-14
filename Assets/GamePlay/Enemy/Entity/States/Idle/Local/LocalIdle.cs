@@ -1,9 +1,7 @@
 ﻿using GamePlay.Enemy.Entity.Components.StateMachines.Local.Abstract;
-using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.States.Idle.Common;
 using GamePlay.Enemy.Entity.Views.Animators.Abstract;
-using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 
 namespace GamePlay.Enemy.Entity.States.Idle.Local
 {

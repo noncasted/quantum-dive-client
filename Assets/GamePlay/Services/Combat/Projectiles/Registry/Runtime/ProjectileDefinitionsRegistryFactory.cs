@@ -4,10 +4,10 @@ using GamePlay.Projectiles.Registry.Definition;
 using GamePlay.Services.Combat.Projectiles.Registry.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Sirenix.OdinInspector;
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-using UnityEngine;
 
 namespace GamePlay.Projectiles.Registry.Runtime
 {

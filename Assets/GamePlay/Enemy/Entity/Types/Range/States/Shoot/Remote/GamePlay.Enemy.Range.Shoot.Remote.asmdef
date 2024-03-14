@@ -2,8 +2,8 @@
   "name": "GamePlay.Enemy.Range.Shoot.Remote",
   "rootNamespace": "",
   "references": [
-    "GUID:7e2f66033f9a634418d0fce71635d73f",
-    "GUID:10b508286ef3b1d498113145693b7dfb",
+    
+    
     "GUID:6bb6bd8e447145039cf363975b2cda16",
     "GUID:87c37c46dfd9454380a9559a46f1be34",
     "GUID:aac41f60988d442497259de79205647b",
@@ -14,7 +14,7 @@
     
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     
-    "GUID:5be6262f59e0487f8f55e7b4b6358c57",
+    
     
     "GUID:2d163ca28caf33344a0ce66f34d6262c",
     

@@ -1,11 +1,11 @@
-﻿{
+{
   "name": "Menu.Network.PlayersList.Runtime",
   "references": [
     "GUID:bcf05adc580c4c0ebffc56158d397048",
     "GUID:3944dd557e8f416c84ad000a528839e7",
     "GUID:1b3a8fd154ea4b88bf1b4ebcf6dc118c",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
+    
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:ae830b14052a4d1a88d79d9fbdd125ab"
   ]

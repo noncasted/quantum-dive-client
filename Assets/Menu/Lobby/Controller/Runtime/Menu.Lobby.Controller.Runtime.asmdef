@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "Menu.Lobby.Controller.Runtime",
   "references": [
     "GUID:62c1ace9f0de410e9461ed6eb84df35b",
@@ -8,7 +8,7 @@
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:ce20231345ac4bf78b1172f10bf74169",
     "GUID:3944dd557e8f416c84ad000a528839e7",
-    "GUID:ec5b6d8ef8dcd8e41ae147a872c1f8b9",
+    
     "GUID:c50bcf42e5334355b142951d2473d15a",
     "GUID:a6109e4dd6464f3ba58966083df6b5e8",
     "GUID:80380efd79ec5be499f83c97806fedb6"

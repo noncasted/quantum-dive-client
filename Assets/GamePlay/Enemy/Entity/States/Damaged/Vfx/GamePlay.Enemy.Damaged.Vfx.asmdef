@@ -1,9 +1,9 @@
-﻿{
+{
   "name": "GamePlay.Enemy.Damaged.Vfx",
   "rootNamespace": "",
   "references": [
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:a6bee730cad343c7ac8840da91376019"
+    "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

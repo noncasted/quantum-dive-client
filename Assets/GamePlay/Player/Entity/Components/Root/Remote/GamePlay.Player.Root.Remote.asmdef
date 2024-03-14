@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "GamePlay.Player.Root.Remote",
   "references": [
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
@@ -8,8 +8,8 @@
     
     
     "GUID:1b37573996994db99532a569dd6fba98",
-    "GUID:abb0d563a5fe47c5a5060ef4b01c49e7",
-    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
+    
+    
     "GUID:36b63739de284ea9aded3ca311c0ede1",
     "GUID:dccbaf0348504c30995193bc2d0a1498",
     "GUID:e26510743a1f8cc459abec906a60ed6c",

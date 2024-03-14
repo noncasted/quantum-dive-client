@@ -1,10 +1,10 @@
-﻿{
+{
   "name": "GamePlay.Enemy.Respawn.Common",
   "references": [
     "GUID:d97d9c764948444d98c823fdaa970d62",
     "GUID:aac41f60988d442497259de79205647b",
     "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:d3bedd8eef274f4c90fb28daf433ded3",
+    
     "GUID:92c45879a0f342a29c0e271981946ba1",
     "GUID:87c37c46dfd9454380a9559a46f1be34",
     "GUID:b0275d8a7d994d97ae1652be17935f0f",
