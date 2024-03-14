@@ -70,7 +70,7 @@ namespace Common.Tools.EditorTools
                 "}"
             });
 
-            directory.AbstractAsmdef = asmdefPath;
+            directory.AbstractAsmdef = ConvertToUnifiedPath(asmdefPath);
         }
 
         private static void MoveInterfacesToAbstract(string[] interfaces, string abstractDirectory)
@@ -84,14 +84,14 @@ namespace Common.Tools.EditorTools
 
         private static string GetAbstractDirectory(string path)
         {
-            var parentDirectory = path.Split("/")[^2];
+            var parentDirectory = GetParentDirectory(GetParentDirectory(path));
 
             var directories = Directory.GetDirectories(parentDirectory, "Abstract");
 
             if (directories.Length == 0)
-                return Directory.CreateDirectory(parentDirectory + "Abstract").FullName;
+                return Directory.CreateDirectory(ConvertToUnifiedPath(parentDirectory + "Abstract")).FullName;
 
-            return parentDirectory + "/Abstract";
+            return ConvertToUnifiedPath(parentDirectory + "/Abstract");
         }
 
         private static IReadOnlyList<ProjectDirectory> GetAllRuntimeDirectories()
@@ -110,13 +110,35 @@ namespace Common.Tools.EditorTools
 
                 directories.Add(new ProjectDirectory()
                 {
-                    Path = path,
-                    Interfaces = interfaces,
-                    RuntimeAsmdef = asmdef[0]
+                    Path = ConvertToUnifiedPath(path),
+                    Interfaces = ConvertToUnifiedPath(interfaces),
+                    RuntimeAsmdef = ConvertToUnifiedPath(asmdef[0])
                 });
             }
 
             return directories;
+        }
+
+        private static string GetParentDirectory(string source)
+        {
+            var remove = source.Split("/")[^1];
+            var length = remove.Length + 1;
+            return source.Remove(source.Length - length, length);
+        }
+
+        private static string[] ConvertToUnifiedPath(string[] sources)
+        {
+            var result = new string[sources.Length];
+
+            for (var i = 0; i < sources.Length; i++)
+                result[i] = ConvertToUnifiedPath(sources[i]);
+
+            return result;
+        }
+        
+        private static string ConvertToUnifiedPath(string source)
+        {
+            return source.Replace("\\", "/");
         }
 
         public class ProjectDirectory
