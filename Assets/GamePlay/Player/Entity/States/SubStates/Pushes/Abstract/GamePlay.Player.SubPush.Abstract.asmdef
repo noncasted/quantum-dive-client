@@ -1,6 +1,7 @@
 {
- "name": "GamePlay.Player.SubPush.Abstract",
+  "name": "GamePlay.Player.SubPush.Abstract",
   "references": [
- "GUID:2ff8f8fa94b546b097dc673bf486b1e2",
- "GUID:f51ebe6a0ceec4240a699833d6309b23"]
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:776d03a35f1b52c4a9aed9f56d7b4229"
+  ]
 }

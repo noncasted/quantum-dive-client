@@ -20,8 +20,8 @@ namespace GamePlay.Player.Entity.Weapons.Bow.States.Strafes.Remote
     public class PlayerRemoteStrafe : IEntitySwitchLifetimeListener, IPlayerRemoteState
     {
         public PlayerRemoteStrafe(
-            IRemoteStateMachine stateMachine,
             IRemoteRotation remoteRotation,
+            IRemoteStateMachine stateMachine,
             IPlayerAnimator playerAnimator,
             IBowAnimator bowAnimator,
             IBowGameObject bowGameObject,

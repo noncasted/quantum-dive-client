@@ -1,6 +1,6 @@
 {
- "name": "GamePlay.Enemy.Push.Abstract",
+  "name": "GamePlay.Enemy.Push.Abstract",
   "references": [
- "GUID:51c7d0d29544499a810b2c81f4571dbc",
- "GUID:f51ebe6a0ceec4240a699833d6309b23"]
+    "GUID:f51ebe6a0ceec4240a699833d6309b23"
+  ]
 }
