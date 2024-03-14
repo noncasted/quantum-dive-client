@@ -8,13 +8,6 @@ using UnityEngine;
 
 namespace Common.Tools.EditorTools
 {
-    [Serializable]
-    public class AsmdefFile
-    {
-        public string name;
-        public List<string> references = new();
-    }
-
     public class InvalidAssemblyReferencesRemover
     {
         private const string _sourcesFolder = "/";
@@ -41,7 +34,7 @@ namespace Common.Tools.EditorTools
                     var reference = referenceGUID.Replace("GUID:", "");
                     
                     var assetPath = AssetDatabase.GUIDToAssetPath(reference);
-
+                    
                     if (assetPath != string.Empty)
                         continue;
 
