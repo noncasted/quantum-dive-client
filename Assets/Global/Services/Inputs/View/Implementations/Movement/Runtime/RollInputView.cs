@@ -1,11 +1,12 @@
 ﻿using Common.DataTypes.Reactive;
+using Global.Inputs.Constranits.Abstract;
 using Global.Inputs.Constranits.Definition;
-using Global.Inputs.Constranits.Runtime;
+using Global.Inputs.View.Abstract;
+using Global.Inputs.View.Implementations.Movement.Abstract;
 using Global.Inputs.View.Logs;
-using Global.Inputs.View.Runtime.Sources;
 using UnityEngine.InputSystem;
 
-namespace Global.Inputs.View.Implementations.Movement
+namespace Global.Inputs.View.Implementations.Movement.Runtime
 {
     public class RollInputView : IRollInputView, IInputSource
     {

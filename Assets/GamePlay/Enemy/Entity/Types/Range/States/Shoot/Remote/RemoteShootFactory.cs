@@ -1,6 +1,6 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

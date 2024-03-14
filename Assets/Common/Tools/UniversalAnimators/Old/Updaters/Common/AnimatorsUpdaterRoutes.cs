@@ -1,6 +1,6 @@
 ﻿using Global.Common;
 
-namespace Common.Tools.UniversalAnimators.Updaters.Common
+namespace Common.Tools.UniversalAnimators.Old.Updaters.Common
 {
     public class AnimatorsUpdaterRoutes
     {

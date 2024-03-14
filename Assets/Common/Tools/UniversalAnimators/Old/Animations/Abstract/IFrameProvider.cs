@@ -1,6 +1,6 @@
-﻿using Common.Tools.UniversalAnimators.Animations.FrameSequence;
+﻿using Common.Tools.UniversalAnimators.Old.Animations.FrameSequence;
 
-namespace Common.Tools.UniversalAnimators.Animations.Abstract
+namespace Common.Tools.UniversalAnimators.Old.Animations.Abstract
 {
     public interface IFrameProvider
     {

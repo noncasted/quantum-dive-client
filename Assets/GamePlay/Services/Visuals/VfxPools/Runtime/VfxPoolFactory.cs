@@ -1,15 +1,15 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Services;
-using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
+﻿using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Common.Tools.ObjectsPools.Runtime;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
 using Cysharp.Threading.Tasks;
-using GamePlay.Visuals.VfxPools.Common;
+using GamePlay.VfxPools.Common;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Scenes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Visuals.VfxPools.Runtime
+namespace GamePlay.VfxPools.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = VfxPoolRoutes.ServiceName, menuName = VfxPoolRoutes.ServicePath)]

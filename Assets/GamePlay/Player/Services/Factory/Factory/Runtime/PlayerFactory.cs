@@ -1,22 +1,22 @@
-﻿using Internal.Scopes.Abstract.Lifetimes;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
+using GamePlay.Network.Objects.Factories.Registry;
+using GamePlay.Network.Objects.Factories.Runtime;
 using GamePlay.Player.Entity.Common.Definition;
 using GamePlay.Player.Entity.Types.Local;
 using GamePlay.Player.Entity.Types.Remote;
-using GamePlay.Player.Factory.Factory.Logs;
-using GamePlay.Player.Factory.SpawnPoints;
-using GamePlay.Player.List.Runtime;
-using GamePlay.System.Network.Objects.Factories.Registry;
-using GamePlay.System.Network.Objects.Factories.Runtime;
+using GamePlay.Player.Services.Factory.Factory.Logs;
+using GamePlay.Player.Services.Factory.SpawnPoints;
+using GamePlay.Player.Services.List.Runtime;
 using Global.Network.Objects.Factories.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Client;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace GamePlay.Player.Factory.Factory.Runtime
+namespace GamePlay.Player.Services.Factory.Factory.Runtime
 {
     public class PlayerFactory : IPlayerFactory, IEntityFactory, IScopeLifetimeListener
     {

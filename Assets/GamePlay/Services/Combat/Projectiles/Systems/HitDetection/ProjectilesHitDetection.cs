@@ -1,8 +1,8 @@
-﻿using GamePlay.System.Ecs.Runtime.Abstract;
-using Global.Debugs.Drawing.Runtime;
+﻿using GamePlay.Ecs.Runtime.Abstract;
+using Global.Debugs.Drawing.Abstract;
 using Leopotam.EcsLite;
 
-namespace GamePlay.Combat.Projectiles.Systems.HitDetection
+namespace GamePlay.Projectiles.Systems.HitDetection
 {
     public class ProjectilesHitDetection : IEcsRunSystem
     {

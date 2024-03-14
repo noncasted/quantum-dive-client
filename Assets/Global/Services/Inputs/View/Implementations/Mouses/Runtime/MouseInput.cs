@@ -2,16 +2,17 @@
 using System.Threading;
 using Common.DataTypes.Structs;
 using Cysharp.Threading.Tasks;
-using Global.Cameras.Utils.Runtime;
+using Global.Cameras.Utils.Abstract;
+using Global.Inputs.Constranits.Abstract;
 using Global.Inputs.Constranits.Definition;
-using Global.Inputs.Constranits.Runtime;
+using Global.Inputs.View.Abstract;
+using Global.Inputs.View.Implementations.Mouses.Abstract;
 using Global.Inputs.View.Logs;
-using Global.Inputs.View.Runtime.Sources;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Global.Inputs.View.Implementations.Mouses
+namespace Global.Inputs.View.Implementations.Mouses.Runtime
 {
     public class MouseInput : IInputSource, IUpdatable, IMouseInput
     {

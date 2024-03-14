@@ -7,7 +7,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace Internal.Scope
+namespace Internal.Runtime
 {
     public class InternalScopeLoader
     {

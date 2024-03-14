@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Routes;
 
-namespace GamePlay.System.Network.Common
+namespace GamePlay.Network.Common
 {
     public class GamePlayNetworkRoutes
     {

@@ -1,8 +1,8 @@
-﻿using GamePlay.Visuals.Cameras.Common;
-using Internal.Loggers.Runtime;
+﻿using GamePlay.Cameras.Common;
+using Internal.Services.Loggers.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Visuals.Cameras.Logs
+namespace GamePlay.Cameras.Logs
 {
     [CreateAssetMenu(fileName = LevelCameraRoutes.LogsName,
         menuName = LevelCameraRoutes.LogsPath)]

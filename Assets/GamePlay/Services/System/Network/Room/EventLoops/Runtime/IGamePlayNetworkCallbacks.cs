@@ -2,7 +2,7 @@
 using Internal.Scopes.Abstract.Callbacks;
 using Ragon.Client;
 
-namespace GamePlay.System.Network.Room.EventLoops.Runtime
+namespace GamePlay.Network.Room.EventLoops.Runtime
 {
     public interface IGamePlayNetworkCallbacks : ICallbacksRegistry
     {

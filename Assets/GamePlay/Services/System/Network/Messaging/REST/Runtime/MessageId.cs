@@ -1,9 +1,9 @@
 ﻿using System;
-using GamePlay.System.Network.Messaging.REST.Runtime.Abstract;
+using GamePlay.Network.Messaging.REST.Runtime.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.System.Network.Messaging.REST.Runtime
+namespace GamePlay.Network.Messaging.REST.Runtime
 {
     public class MessageId : IRagonEvent, IMessageId
     {

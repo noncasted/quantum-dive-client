@@ -1,6 +1,6 @@
 ﻿using Common.Tools.ObjectsPools.Runtime.Abstract;
 
-namespace GamePlay.Visuals.VfxPools.Runtime
+namespace GamePlay.VfxPools.Runtime
 {
     public interface IVfxPool : IPoolProvider
     {

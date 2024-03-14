@@ -1,6 +1,6 @@
 ﻿using Common.DataTypes.Reactive;
 
-namespace Global.Inputs.View.Implementations.Combat
+namespace Global.Inputs.View.Implementations.Combat.Abstract
 {
     public interface ICombatInput
     {

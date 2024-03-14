@@ -1,15 +1,14 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Ecs.Common;
+using GamePlay.Ecs.Runtime.Abstract;
+using GamePlay.Ecs.Runtime.Entities;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
-using GamePlay.System.Ecs.Common;
-using GamePlay.System.Ecs.Runtime.Abstract;
-using GamePlay.System.Ecs.Runtime.Entities;
 using Leopotam.EcsLite;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.System.Ecs.Runtime.Bootstrap
+namespace GamePlay.Ecs.Runtime.Bootstrap
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EcsRoutes.ServiceName,

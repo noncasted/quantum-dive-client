@@ -1,14 +1,13 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Cameras.Abstract;
+using GamePlay.Cameras.Common;
+using GamePlay.Cameras.Logs;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
-using GamePlay.Visuals.Cameras.Abstract;
-using GamePlay.Visuals.Cameras.Common;
-using GamePlay.Visuals.Cameras.Logs;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Visuals.Cameras.Runtime
+namespace GamePlay.Cameras.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = LevelCameraRoutes.ServiceName,

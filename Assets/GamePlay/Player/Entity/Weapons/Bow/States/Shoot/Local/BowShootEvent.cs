@@ -1,4 +1,4 @@
-﻿using Common.Tools.UniversalAnimators.Animations.Events;
+﻿using Common.Tools.UniversalAnimators.Old.Animations.Events;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Local
 {

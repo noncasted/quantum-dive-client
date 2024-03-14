@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Routes;
 
-namespace GamePlay.Combat.Projectiles.Common
+namespace GamePlay.Projectiles.Common
 {
     public static class ProjectilesRoutes
     {

@@ -3,7 +3,7 @@ using Common.Tools.ObjectsPools.Runtime.Abstract;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace GamePlay.Visuals.VfxPools.Runtime
+namespace GamePlay.VfxPools.Runtime
 {
     [DisallowMultipleComponent]
     public class VfxParticleObject : MonoBehaviour, IPoolObject

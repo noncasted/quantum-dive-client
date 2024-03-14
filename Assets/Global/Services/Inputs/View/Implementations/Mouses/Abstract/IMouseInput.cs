@@ -4,7 +4,7 @@ using Common.DataTypes.Structs;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Global.Inputs.View.Implementations.Mouses
+namespace Global.Inputs.View.Implementations.Mouses.Abstract
 {
     public interface IMouseInput
     {

@@ -1,11 +1,11 @@
-﻿using GamePlay.System.Ecs.Runtime.Abstract;
-using GamePlay.System.Ecs.Runtime.Bootstrap;
-using Global.System.MessageBrokers.Runtime;
-using Global.System.Updaters.Runtime.Abstract;
+﻿using GamePlay.Ecs.Runtime.Abstract;
+using GamePlay.Ecs.Runtime.Bootstrap;
+using Global.System.MessageBrokers.Abstract;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using Leopotam.EcsLite;
 
-namespace GamePlay.System.Ecs.Runtime
+namespace GamePlay.Ecs.Runtime
 {
     public class EcsHandler : IScopeLoadListener, IScopeDisableListener, IEcsWorldProvider
     {

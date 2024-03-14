@@ -1,6 +1,6 @@
-﻿using GamePlay.Player.Common;
+﻿using GamePlay.Player.Services.Common;
 
-namespace GamePlay.Player.Factory.Factory.Common
+namespace GamePlay.Player.Services.Factory.Factory.Common
 {
     public class PlayerFactoryRoutes
     {

@@ -1,5 +1,5 @@
-﻿using GamePlay.Combat.Projectiles.Factory;
-using GamePlay.Combat.Projectiles.Registry.Definition;
+﻿using GamePlay.Projectiles.Factory;
+using GamePlay.Projectiles.Registry.Definition;
 
 namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 {

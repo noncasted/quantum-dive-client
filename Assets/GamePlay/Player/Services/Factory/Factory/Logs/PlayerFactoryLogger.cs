@@ -1,7 +1,7 @@
-﻿using Internal.Loggers.Runtime;
+﻿using Internal.Services.Loggers.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Player.Factory.Factory.Logs
+namespace GamePlay.Player.Services.Factory.Factory.Logs
 {
     public class PlayerFactoryLogger
     {

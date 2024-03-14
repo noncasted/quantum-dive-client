@@ -1,8 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using GamePlay.Common.Config.Runtime;
-using Global.Network.Connection.Runtime;
-using Global.Network.Session.Runtime.Join;
-using Internal.Scopes.Abstract.Instances.Services;
+using Global.Network.Connection.Abstract;
+using Global.Network.Session.Abstract;
 using Internal.Scopes.Mocks.Runtime;
 using UnityEngine;
 using VContainer;

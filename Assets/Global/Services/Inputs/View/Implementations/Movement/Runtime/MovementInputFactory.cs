@@ -1,9 +1,10 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Global.Inputs.View.Abstract;
 using Global.Inputs.View.Common;
-using Global.Inputs.View.Runtime.Sources;
+using Global.Inputs.View.Implementations.Movement.Abstract;
+using Internal.Scopes.Abstract.Containers;
 using UnityEngine;
 
-namespace Global.Inputs.View.Implementations.Movement
+namespace Global.Inputs.View.Implementations.Movement.Runtime
 {
     [CreateAssetMenu(
         fileName = InputViewRoutes.InputSourcePrefix + "Movement",

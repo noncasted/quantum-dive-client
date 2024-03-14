@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Combat.Projectiles.Logs
+﻿namespace GamePlay.Projectiles.Logs
 {
     public enum ProjectilesLogType
     {

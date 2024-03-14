@@ -1,7 +1,7 @@
-﻿using GamePlay.System.Ecs.Runtime.Abstract;
+﻿using GamePlay.Ecs.Runtime.Abstract;
 using Leopotam.EcsLite;
 
-namespace GamePlay.System.Ecs.Runtime
+namespace GamePlay.Ecs.Runtime
 {
     public class EcsSystemsHandler : IEcsSystemsHandler
     {

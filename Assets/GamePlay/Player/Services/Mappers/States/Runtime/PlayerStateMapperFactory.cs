@@ -1,15 +1,14 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Services;
-
 using Common.DataTypes.Collections.ScriptableRegistries;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Common;
-using GamePlay.Player.Mappers.States.Common;
+using GamePlay.Player.Services.Mappers.States.Common;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Player.Mappers.States.Runtime
+namespace GamePlay.Player.Services.Mappers.States.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = PlayerStateMapperRoutes.ServiceName,

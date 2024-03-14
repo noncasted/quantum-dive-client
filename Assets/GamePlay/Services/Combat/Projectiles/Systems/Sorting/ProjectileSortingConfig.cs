@@ -1,8 +1,8 @@
-﻿using GamePlay.Combat.Projectiles.Common;
+﻿using GamePlay.Projectiles.Common;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Systems.Sorting
+namespace GamePlay.Projectiles.Systems.Sorting
 {
     [CreateAssetMenu(fileName = ProjectilesRoutes.SortingConfigName,
         menuName = ProjectilesRoutes.SortingConfigPath)]

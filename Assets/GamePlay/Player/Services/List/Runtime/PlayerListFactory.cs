@@ -1,12 +1,11 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Player.Services.List.Common;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
-using GamePlay.Player.List.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Player.List.Runtime
+namespace GamePlay.Player.Services.List.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = PlayersRegistryRoutes.ServiceName,

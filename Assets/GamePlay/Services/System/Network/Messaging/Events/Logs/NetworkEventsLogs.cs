@@ -1,7 +1,7 @@
 ﻿using System;
 using Common.DataTypes.Collections.ReadOnlyDictionaries.Runtime;
 
-namespace GamePlay.System.Network.Messaging.Events.Logs
+namespace GamePlay.Network.Messaging.Events.Logs
 {
     [Serializable]
     public class NetworkEventsLogs : ReadOnlyDictionary<NetworkEventsLogType, bool>

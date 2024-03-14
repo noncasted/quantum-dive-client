@@ -1,5 +1,5 @@
-﻿using Internal.Scopes.Abstract.Lifetimes;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Cameras.Abstract;
 using GamePlay.Player.Entity.Common.Definition;
 using GamePlay.Player.Entity.Components.CameraFollow.Abstract;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Local;
@@ -7,8 +7,8 @@ using GamePlay.Player.Entity.Components.Healths.Runtime;
 using GamePlay.Player.Entity.States.None.Runtime;
 using GamePlay.Player.Entity.States.Respawns.Local;
 using GamePlay.Player.Entity.Views.Transforms.Runtime;
-using GamePlay.Visuals.Cameras.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 using Internal.Scopes.Common.Entity;
 using Internal.Scopes.Runtime.Lifetimes;
 using UnityEngine;

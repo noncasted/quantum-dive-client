@@ -1,7 +1,4 @@
-﻿
-using Internal.Scopes.Abstract.Lifetimes;
-using Common.DataTypes.Structs;
-using Common.Tools.UniversalAnimators.Abstract;
+﻿using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
@@ -9,8 +6,9 @@ using GamePlay.Player.Entity.States.Floating.Runtime;
 using GamePlay.Player.Entity.States.Runs.Common;
 using GamePlay.Player.Entity.States.Runs.Logs;
 using GamePlay.Player.Entity.Views.Physics.Runtime;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Runs.Local

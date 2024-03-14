@@ -1,4 +1,4 @@
-﻿namespace Global.Network.Connection.Runtime
+﻿namespace Global.Network.Connection.Abstract
 {
     public enum ConnectionResultType
     {

@@ -1,6 +1,6 @@
 ﻿using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.Views.GameObjects;
-using Internal.Loggers.Runtime;
+using Internal.Services.Loggers.Runtime;
 
 namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs
 {

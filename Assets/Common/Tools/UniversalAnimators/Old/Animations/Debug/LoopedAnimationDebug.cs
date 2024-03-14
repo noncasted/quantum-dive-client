@@ -1,8 +1,8 @@
-﻿using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
+﻿using Common.Tools.UniversalAnimators.Old.Animations.Implementations.Looped;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Common.Tools.UniversalAnimators.Animations.Debug
+namespace Common.Tools.UniversalAnimators.Old.Animations.Debug
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(SpriteRenderer))]

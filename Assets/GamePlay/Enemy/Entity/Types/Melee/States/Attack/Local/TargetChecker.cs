@@ -1,6 +1,6 @@
-﻿using GamePlay.Combat.Targets.Registry.Runtime;
-using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
+﻿using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Targets.Registry.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.CameraFollow.Runtime;
 using GamePlay.Player.Entity.Components.Combo.Runtime;
 using GamePlay.Player.Entity.Components.Common;
@@ -10,6 +9,7 @@ using GamePlay.Player.Entity.Components.Rotations.Local.Runtime;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Common.Entity;
 using Sirenix.OdinInspector;
 using UnityEngine;

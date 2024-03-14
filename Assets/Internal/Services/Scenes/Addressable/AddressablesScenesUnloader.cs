@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using Internal.Scenes.Abstract;
-using Internal.Scenes.Logs;
 using Internal.Scopes.Abstract.Scenes;
+using Internal.Services.Scenes.Abstract;
+using Internal.Services.Scenes.Logs;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceProviders;
 
-namespace Internal.Scenes.Addressable
+namespace Internal.Services.Scenes.Addressable
 {
     public class AddressablesScenesUnloader : ISceneUnloader
     {

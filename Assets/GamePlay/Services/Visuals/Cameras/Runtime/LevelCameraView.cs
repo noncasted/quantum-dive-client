@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Visuals.Cameras.Runtime
+namespace GamePlay.Cameras.Runtime
 {
     [RequireComponent(typeof(Camera))]
     [DisallowMultipleComponent]

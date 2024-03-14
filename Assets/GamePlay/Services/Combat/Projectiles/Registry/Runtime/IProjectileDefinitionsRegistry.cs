@@ -1,6 +1,6 @@
-﻿using GamePlay.Combat.Projectiles.Registry.Definition;
+﻿using GamePlay.Projectiles.Registry.Definition;
 
-namespace GamePlay.Combat.Projectiles.Registry.Runtime
+namespace GamePlay.Projectiles.Registry.Runtime
 {
     public interface IProjectileDefinitionsRegistry
     {

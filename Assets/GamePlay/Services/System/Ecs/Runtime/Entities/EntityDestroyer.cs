@@ -1,7 +1,7 @@
-﻿using GamePlay.System.Ecs.Runtime.Abstract;
+﻿using GamePlay.Ecs.Runtime.Abstract;
 using Leopotam.EcsLite;
 
-namespace GamePlay.System.Ecs.Runtime.Entities
+namespace GamePlay.Ecs.Runtime.Entities
 {
     public class EntityDestroyer : IEntityDestroyer
     {

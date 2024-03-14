@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GamePlay.System.Network.Messaging.REST.Tests
+namespace GamePlay.Network.Messaging.REST.Tests
 {
     [DisallowMultipleComponent]
     public class MessagesTestClientView : MonoBehaviour

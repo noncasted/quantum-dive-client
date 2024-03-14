@@ -2,7 +2,7 @@
 using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
 using GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Ragon.Client;
 using Ragon.Protocol;

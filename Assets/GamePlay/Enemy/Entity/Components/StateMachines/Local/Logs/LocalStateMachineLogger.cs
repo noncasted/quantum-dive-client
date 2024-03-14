@@ -1,5 +1,5 @@
 ﻿using GamePlay.Enemy.Entity.States.Abstract;
-using Internal.Loggers.Runtime;
+using Internal.Services.Loggers.Runtime;
 
 namespace GamePlay.Enemy.Entity.Components.StateMachines.Local.Logs
 {

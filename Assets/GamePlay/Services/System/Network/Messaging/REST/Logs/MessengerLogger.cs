@@ -1,10 +1,10 @@
 ﻿using System;
-using Internal.Loggers.Runtime;
+using Internal.Services.Loggers.Runtime;
 using Ragon.Client;
 
 //using GamePlay.Player.Entity.Definition;
 
-namespace GamePlay.System.Network.Messaging.REST.Logs
+namespace GamePlay.Network.Messaging.REST.Logs
 {
     public class MessengerLogger
     {

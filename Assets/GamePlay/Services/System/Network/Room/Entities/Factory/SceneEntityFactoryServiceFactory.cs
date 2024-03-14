@@ -1,12 +1,11 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Network.Room.Entities.Common;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Room.Entities.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.System.Network.Room.Entities.Factory
+namespace GamePlay.Network.Room.Entities.Factory
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = SceneEntityFactoryRoutes.ServiceName,

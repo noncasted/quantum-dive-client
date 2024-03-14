@@ -1,4 +1,4 @@
-﻿using Internal.Loggers.Runtime;
+﻿using Internal.Services.Loggers.Runtime;
 using UnityEngine;
 
 namespace Global.UI.Nova.InputManagers.Logs

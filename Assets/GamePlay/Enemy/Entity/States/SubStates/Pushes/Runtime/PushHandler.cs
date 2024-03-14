@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Views.RigidBodies.Runtime;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.States.SubStates.Pushes.Runtime

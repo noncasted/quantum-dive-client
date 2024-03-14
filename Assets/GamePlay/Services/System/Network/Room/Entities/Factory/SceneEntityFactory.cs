@@ -1,10 +1,10 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Room.SceneCollectors.Runtime;
-using Global.Network.Handlers.ClientHandler.Runtime;
+using GamePlay.Network.Room.SceneCollectors.Runtime;
+using Global.Network.Handlers.ClientHandler.Abstract;
 using Ragon.Client;
 
-namespace GamePlay.System.Network.Room.Entities.Factory
+namespace GamePlay.Network.Room.Entities.Factory
 {
     public class SceneEntityFactory : ISceneEntityFactory
     {

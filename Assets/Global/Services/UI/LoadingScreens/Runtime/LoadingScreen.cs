@@ -1,4 +1,5 @@
-﻿using Global.UI.LoadingScreens.Logs;
+﻿using Global.UI.LoadingScreens.Abstract;
+using Global.UI.LoadingScreens.Logs;
 using UnityEngine;
 using VContainer;
 

@@ -1,6 +1,4 @@
 ﻿using GamePlay.Player.Entity.Common.Definition;
-using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Debug.Flags;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Binder;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
@@ -10,6 +8,8 @@ using GamePlay.Player.Entity.Views.Hitboxes.Local;
 using GamePlay.Player.Entity.Views.Physics.Runtime;
 using GamePlay.Player.Entity.Views.RotationPoint.Runtime;
 using GamePlay.Player.Entity.Views.Transforms.Runtime;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Types.Local

@@ -1,9 +1,9 @@
-﻿using GamePlay.System.Network.Messaging.Events.Common;
-using Internal.Loggers.Runtime;
+﻿using GamePlay.Network.Messaging.Events.Common;
+using Internal.Services.Loggers.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.System.Network.Messaging.Events.Logs
+namespace GamePlay.Network.Messaging.Events.Logs
 {
     [InlineEditor(InlineEditorObjectFieldModes.Boxed)]
     [CreateAssetMenu(fileName = NetworkEventsRoutes.LogsName,

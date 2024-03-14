@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Entity.Components
+namespace GamePlay.Projectiles.Entity.Components
 {
     public struct ProjectileMoveComponent
     {

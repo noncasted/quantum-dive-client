@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using Ragon.Client;
 
-namespace GamePlay.System.Network.Room.Entities.Factory
+namespace GamePlay.Network.Room.Entities.Factory
 {
     public readonly struct AttachAwaiter
     {

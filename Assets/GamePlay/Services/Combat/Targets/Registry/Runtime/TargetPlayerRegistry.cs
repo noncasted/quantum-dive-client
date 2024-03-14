@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Global.Debugs.Drawing.Runtime;
+using Global.Debugs.Drawing.Abstract;
 using UnityEngine;
 
-namespace GamePlay.Combat.Targets.Registry.Runtime
+namespace GamePlay.Targets.Registry.Runtime
 {
     public class TargetPlayerRegistry : ITargetPlayerRegistry
     {

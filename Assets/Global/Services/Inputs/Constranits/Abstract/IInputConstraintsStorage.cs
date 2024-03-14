@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Global.Inputs.Constranits.Definition;
 
-namespace Global.Inputs.Constranits.Runtime
+namespace Global.Inputs.Constranits.Abstract
 {
     public interface IInputConstraintsStorage
     {

@@ -1,6 +1,6 @@
 ﻿using Ragon.Client;
 
-namespace Global.Network.Handlers.ClientHandler.Runtime
+namespace Global.Network.Handlers.ClientHandler.Abstract
 {
     public interface IClientFactory
     {

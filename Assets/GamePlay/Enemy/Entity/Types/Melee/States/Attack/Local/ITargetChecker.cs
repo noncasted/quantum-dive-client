@@ -1,4 +1,4 @@
-﻿using GamePlay.Combat.Targets.Registry.Runtime;
+﻿using GamePlay.Targets.Registry.Runtime;
 
 namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
 {

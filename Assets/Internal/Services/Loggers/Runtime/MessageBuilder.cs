@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Internal.Loggers.Runtime
+namespace Internal.Services.Loggers.Runtime
 {
     public class MessageBuilder
     {

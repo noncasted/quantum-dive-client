@@ -1,11 +1,11 @@
-﻿using Internal.Scopes.Abstract.Lifetimes;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using GamePlay.Common.Damages;
 using GamePlay.Enemy.Entity.Components.Health.Runtime;
 using GamePlay.Enemy.Entity.States.Damaged.Local;
 using GamePlay.Enemy.Entity.States.Death.Local;
 using GamePlay.Enemy.Entity.Views.Hitbox.Local;
 using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace GamePlay.Enemy.Entity.Components.DamageProcessors.Runtime
 {

@@ -1,4 +1,5 @@
-﻿using Global.Cameras.CurrentProvider.Logs;
+﻿using Global.Cameras.CurrentProvider.Abstract;
+using Global.Cameras.CurrentProvider.Logs;
 using UnityEngine;
 
 namespace Global.Cameras.CurrentProvider.Runtime

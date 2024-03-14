@@ -1,7 +1,6 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
 using Menu.Lobby.Controller.Common;
 using Menu.Lobby.Controller.Runtime.Timer;
 using Sirenix.OdinInspector;

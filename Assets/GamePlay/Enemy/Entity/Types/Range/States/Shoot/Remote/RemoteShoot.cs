@@ -1,12 +1,11 @@
 ﻿using System.Threading;
-
-using Internal.Scopes.Abstract.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Protocol;
 
 namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Remote

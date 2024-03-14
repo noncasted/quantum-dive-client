@@ -1,6 +1,6 @@
 ﻿using Common.Tools.ObjectsPools.Runtime;
 
-namespace GamePlay.Combat.Projectiles.Registry.Definition
+namespace GamePlay.Projectiles.Registry.Definition
 {
     public interface IProjectileDefinition
     {

@@ -1,12 +1,12 @@
 ﻿using Common.DataTypes.Reactive;
+using Global.Inputs.Constranits.Abstract;
 using Global.Inputs.Constranits.Definition;
-using Global.Inputs.Constranits.Runtime;
+using Global.Inputs.View.Abstract;
+using Global.Inputs.View.Implementations.Combat.Abstract;
 using Global.Inputs.View.Logs;
-using Global.Inputs.View.Runtime.Actions;
-using Global.Inputs.View.Runtime.Sources;
 using UnityEngine.InputSystem;
 
-namespace Global.Inputs.View.Implementations.Combat
+namespace Global.Inputs.View.Implementations.Combat.Runtime
 {
     public class CombatInput : ICombatInput, IInputSource
     {

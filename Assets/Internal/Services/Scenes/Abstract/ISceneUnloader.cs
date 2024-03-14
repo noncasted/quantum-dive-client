@@ -2,7 +2,7 @@
 using Cysharp.Threading.Tasks;
 using Internal.Scopes.Abstract.Scenes;
 
-namespace Internal.Scenes.Abstract
+namespace Internal.Services.Scenes.Abstract
 {
     public interface ISceneUnloader
     {

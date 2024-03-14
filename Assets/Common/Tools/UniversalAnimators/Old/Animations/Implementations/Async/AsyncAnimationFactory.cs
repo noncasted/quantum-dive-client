@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
 using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
-using Common.Tools.UniversalAnimators.Animations.Abstract;
-using Common.Tools.UniversalAnimators.Animations.FrameProviders.Forward;
-using Common.Tools.UniversalAnimators.Animations.FrameSequence;
+using Common.Tools.UniversalAnimators.Old.Animations.Abstract;
+using Common.Tools.UniversalAnimators.Old.Animations.FrameProviders.Forward;
+using Common.Tools.UniversalAnimators.Old.Animations.FrameSequence;
 using Sirenix.OdinInspector;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
-namespace Common.Tools.UniversalAnimators.Animations.Implementations.Async
+namespace Common.Tools.UniversalAnimators.Old.Animations.Implementations.Async
 {
     public abstract class AsyncAnimationFactory : ScriptableObject
     {

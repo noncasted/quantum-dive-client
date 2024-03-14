@@ -1,4 +1,4 @@
-﻿namespace Global.Network.Session.Runtime.Leave
+﻿namespace Global.Network.Session.Abstract
 {
     public enum SessionLeaveResult
     {

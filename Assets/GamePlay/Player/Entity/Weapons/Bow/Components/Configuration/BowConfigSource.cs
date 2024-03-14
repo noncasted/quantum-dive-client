@@ -1,6 +1,6 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
+﻿using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Global.Configs.Abstract;
+using Internal.Scopes.Abstract.Containers;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

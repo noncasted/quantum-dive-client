@@ -1,4 +1,4 @@
-﻿    namespace Global.Network.Session.Runtime.Create
+﻿    namespace Global.Network.Session.Abstract
     {
         public class SessionCreateResult
         {

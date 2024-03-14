@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
+using GamePlay.Projectiles.Common;
+using GamePlay.Projectiles.Registry.Definition;
 using Internal.Scopes.Abstract.Containers;
-using GamePlay.Combat.Projectiles.Common;
-using GamePlay.Combat.Projectiles.Registry.Definition;
 using Sirenix.OdinInspector;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Registry.Runtime
+namespace GamePlay.Projectiles.Registry.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = ProjectilesRoutes.DefinitionsRegistryName,

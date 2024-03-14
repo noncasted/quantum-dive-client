@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 
 namespace Global.System.Updaters.Delays
 {

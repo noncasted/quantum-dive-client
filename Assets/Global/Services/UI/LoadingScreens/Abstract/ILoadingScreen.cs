@@ -1,4 +1,4 @@
-﻿namespace Global.UI.LoadingScreens.Runtime
+﻿namespace Global.UI.LoadingScreens.Abstract
 {
     public interface ILoadingScreen
     {

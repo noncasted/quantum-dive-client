@@ -1,7 +1,7 @@
 ﻿using Common.DataTypes.Reactive;
-using Internal.Scopes.Abstract.Lifetimes;
 using GamePlay.Common.Damages;
 using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
 {

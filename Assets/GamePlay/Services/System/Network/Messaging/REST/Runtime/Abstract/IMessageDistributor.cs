@@ -1,6 +1,6 @@
 ﻿//using GamePlay.Player.Entity.Definition;
 
-namespace GamePlay.System.Network.Messaging.REST.Runtime.Abstract
+namespace GamePlay.Network.Messaging.REST.Runtime.Abstract
 {
     public interface IMessageDistributor
     {

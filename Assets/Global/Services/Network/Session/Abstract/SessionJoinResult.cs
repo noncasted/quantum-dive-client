@@ -1,4 +1,4 @@
-﻿namespace Global.Network.Session.Runtime.Join
+﻿namespace Global.Network.Session.Abstract
 {
     public readonly struct SessionJoinResult
     {

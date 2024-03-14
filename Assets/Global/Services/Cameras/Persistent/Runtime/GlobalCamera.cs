@@ -1,4 +1,5 @@
-﻿using Global.Cameras.Persistent.Logs;
+﻿using Global.Cameras.Persistent.Abstract;
+using Global.Cameras.Persistent.Logs;
 using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 using VContainer;

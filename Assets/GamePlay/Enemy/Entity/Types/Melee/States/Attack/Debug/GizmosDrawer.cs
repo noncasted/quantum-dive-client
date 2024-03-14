@@ -1,7 +1,7 @@
 ﻿using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
 using GamePlay.Enemy.Entity.Views.Hitbox.Local;
-using Global.Debugs.Drawing.Runtime;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.Debugs.Drawing.Abstract;
+using Global.System.Updaters.Abstract;
 
 namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Debug
 {

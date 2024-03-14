@@ -1,5 +1,5 @@
 ﻿using Global.Config.Runtime;
-using Internal.Scope;
+using Internal.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

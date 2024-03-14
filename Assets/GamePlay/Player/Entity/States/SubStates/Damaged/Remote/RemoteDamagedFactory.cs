@@ -1,7 +1,7 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Player.Entity.States.SubStates.Damaged.Common;
+﻿using GamePlay.Player.Entity.States.SubStates.Damaged.Common;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Local;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

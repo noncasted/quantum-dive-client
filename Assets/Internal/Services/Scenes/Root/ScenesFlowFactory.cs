@@ -1,17 +1,17 @@
 ﻿using Internal.Abstract;
-using Internal.Options.Implementations;
-using Internal.Scenes.Abstract;
-using Internal.Scenes.Addressable;
-using Internal.Scenes.Common;
-using Internal.Scenes.Logs;
-using Internal.Scenes.Native;
 using Internal.Scopes.Abstract.Options;
 using Internal.Scopes.Abstract.Scenes;
+using Internal.Services.Options.Implementations;
+using Internal.Services.Scenes.Abstract;
+using Internal.Services.Scenes.Addressable;
+using Internal.Services.Scenes.Common;
+using Internal.Services.Scenes.Logs;
+using Internal.Services.Scenes.Native;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using VContainer;
 
-namespace Internal.Scenes.Root
+namespace Internal.Services.Scenes.Root
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = ScenesFlowRoutes.ServiceName,

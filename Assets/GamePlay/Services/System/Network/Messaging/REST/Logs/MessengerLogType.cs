@@ -1,4 +1,4 @@
-﻿namespace GamePlay.System.Network.Messaging.REST.Logs
+﻿namespace GamePlay.Network.Messaging.REST.Logs
 {
     public enum MessengerLogType
     {

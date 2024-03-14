@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Common.Tools.UniversalAnimators.Animations.Abstract;
-using Common.Tools.UniversalAnimators.Animations.FrameSequence;
+using Common.Tools.UniversalAnimators.Old.Animations.Abstract;
+using Common.Tools.UniversalAnimators.Old.Animations.FrameSequence;
 
-namespace Common.Tools.UniversalAnimators.Animations.FrameProviders.Forward
+namespace Common.Tools.UniversalAnimators.Old.Animations.FrameProviders.Forward
 {
     public class ForwardFrameProvider : IFrameProvider
     {

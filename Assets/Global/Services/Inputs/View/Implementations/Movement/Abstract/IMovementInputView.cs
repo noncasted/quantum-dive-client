@@ -1,7 +1,7 @@
 ﻿using Common.DataTypes.Reactive;
 using UnityEngine;
 
-namespace Global.Inputs.View.Implementations.Movement
+namespace Global.Inputs.View.Implementations.Movement.Abstract
 {
     public interface IMovementInputView
     {

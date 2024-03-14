@@ -2,7 +2,7 @@
 using Internal.Scopes.Abstract.Instances.Entities;
 using Ragon.Client;
 
-namespace GamePlay.Player.Factory.Factory.Runtime
+namespace GamePlay.Player.Services.Factory.Factory.Runtime
 {
     public class EntityComponentFactory : IComponentFactory
     {

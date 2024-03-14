@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Routes;
 
-namespace GamePlay.Visuals.Cameras.Common
+namespace GamePlay.Cameras.Common
 {
     public static class LevelCameraRoutes
     {

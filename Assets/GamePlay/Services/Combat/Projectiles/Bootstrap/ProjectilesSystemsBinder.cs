@@ -1,13 +1,13 @@
 ﻿using System;
-using GamePlay.Combat.Projectiles.Systems.CollisionDetection;
-using GamePlay.Combat.Projectiles.Systems.HitDetection;
-using GamePlay.Combat.Projectiles.Systems.Movement;
-using GamePlay.Combat.Projectiles.Systems.Sorting;
-using GamePlay.System.Ecs.Runtime.Bootstrap;
-using Global.System.MessageBrokers.Runtime;
+using GamePlay.Ecs.Runtime.Bootstrap;
+using GamePlay.Projectiles.Systems.CollisionDetection;
+using GamePlay.Projectiles.Systems.HitDetection;
+using GamePlay.Projectiles.Systems.Movement;
+using GamePlay.Projectiles.Systems.Sorting;
+using Global.System.MessageBrokers.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 
-namespace GamePlay.Combat.Projectiles.Bootstrap
+namespace GamePlay.Projectiles.Bootstrap
 {
     public class ProjectilesSystemsBinder : IScopeSwitchListener
     {

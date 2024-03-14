@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Attacks.Remote;
 using GamePlay.Player.Entity.Weapons.Sword.Components.Root.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Definition.Common;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Common.Entity;
 using Sirenix.OdinInspector;
 using UnityEngine;

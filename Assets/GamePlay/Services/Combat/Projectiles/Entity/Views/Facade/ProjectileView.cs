@@ -1,10 +1,10 @@
 ﻿using System;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
-using GamePlay.Combat.Projectiles.Entity.Views.Actions;
-using GamePlay.Combat.Projectiles.Entity.Views.Transforms;
+using GamePlay.Projectiles.Entity.Views.Actions;
+using GamePlay.Projectiles.Entity.Views.Transforms;
 using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Entity.Views.Facade
+namespace GamePlay.Projectiles.Entity.Views.Facade
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(ProjectileTransform))]

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Messaging.REST.Runtime.Abstract;
+using GamePlay.Network.Messaging.REST.Runtime.Abstract;
 using Ragon.Client;
 
-namespace GamePlay.System.Network.Messaging.REST.Runtime
+namespace GamePlay.Network.Messaging.REST.Runtime
 {
     public class RequestHandler<TRequest, TResponse> : IRequestHandler<TRequest, TResponse>
     {

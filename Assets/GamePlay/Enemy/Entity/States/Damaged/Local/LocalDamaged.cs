@@ -1,5 +1,4 @@
 ﻿using System.Threading;
-using Internal.Scopes.Abstract.Lifetimes;
 using Common.DataTypes.Structs;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
@@ -11,6 +10,7 @@ using GamePlay.Enemy.Entity.States.SubStates.Pushes.Runtime;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using GamePlay.Enemy.Entity.Views.RigidBodies.Runtime;
 using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.States.Damaged.Local

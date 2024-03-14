@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Routes;
 
-namespace GamePlay.Visuals.VfxPools.Common
+namespace GamePlay.VfxPools.Common
 {
     public static class VfxPoolRoutes
     {

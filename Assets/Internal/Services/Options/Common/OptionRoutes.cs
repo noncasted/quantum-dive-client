@@ -1,6 +1,6 @@
 ﻿using Internal.Common;
 
-namespace Internal.Options.Common
+namespace Internal.Services.Options.Common
 {
     public class OptionRoutes
     {

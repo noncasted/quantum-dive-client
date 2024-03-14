@@ -1,10 +1,10 @@
 ﻿using Common.DataTypes.Network;
-using GamePlay.Combat.Projectiles.Factory;
+using GamePlay.Projectiles.Factory;
 using Ragon.Client;
 using Ragon.Protocol;
 using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Network
+namespace GamePlay.Projectiles.Network
 {
     public class EnemyProjectileRequestEvent : IRagonEvent
     {

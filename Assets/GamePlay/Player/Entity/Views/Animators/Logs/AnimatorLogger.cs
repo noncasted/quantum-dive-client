@@ -1,4 +1,4 @@
-﻿using Internal.Loggers.Runtime;
+﻿using Internal.Services.Loggers.Runtime;
 
 namespace GamePlay.Player.Entity.Views.Animators.Logs
 {

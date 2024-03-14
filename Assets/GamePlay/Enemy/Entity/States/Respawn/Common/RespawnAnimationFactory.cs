@@ -1,4 +1,4 @@
-﻿using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
+﻿using Common.Tools.UniversalAnimators.Old.Animations.Implementations.Looped;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

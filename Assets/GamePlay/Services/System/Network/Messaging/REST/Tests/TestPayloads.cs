@@ -1,9 +1,9 @@
-﻿using GamePlay.System.Network.Messaging.REST.Runtime;
-using GamePlay.System.Network.Messaging.REST.Runtime.Abstract;
+﻿using GamePlay.Network.Messaging.REST.Runtime;
+using GamePlay.Network.Messaging.REST.Runtime.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.System.Network.Messaging.REST.Tests
+namespace GamePlay.Network.Messaging.REST.Tests
 {
     public class TestRequest : IRagonEvent, IMessage
     {

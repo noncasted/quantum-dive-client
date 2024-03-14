@@ -1,7 +1,7 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Player.Entity.Components.Equipment.Definition;
+﻿using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Entity.Weapons.Bow.Components.Root.Common;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

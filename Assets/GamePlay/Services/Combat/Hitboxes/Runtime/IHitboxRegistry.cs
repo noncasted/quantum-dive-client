@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Damages;
 
-namespace GamePlay.Combat.Hitboxes.Runtime
+namespace GamePlay.Hitboxes.Runtime
 {
     public interface IHitboxRegistry
     {

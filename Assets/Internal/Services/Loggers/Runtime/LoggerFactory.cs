@@ -1,11 +1,11 @@
 ﻿using Internal.Abstract;
-using Internal.Loggers.Common;
 using Internal.Scopes.Abstract.Options;
+using Internal.Services.Loggers.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using VContainer;
 
-namespace Internal.Loggers.Runtime
+namespace Internal.Services.Loggers.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = LoggerRoutes.ServiceName,

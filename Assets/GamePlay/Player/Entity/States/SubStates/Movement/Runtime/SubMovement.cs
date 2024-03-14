@@ -2,7 +2,7 @@
 using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.States.Runs.Local;
 using GamePlay.Player.Entity.Views.Physics.Runtime;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.SubStates.Movement.Runtime

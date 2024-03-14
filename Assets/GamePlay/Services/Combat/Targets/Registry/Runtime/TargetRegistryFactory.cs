@@ -1,12 +1,11 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Targets.Registry.Common;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
-using GamePlay.Combat.Targets.Registry.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Combat.Targets.Registry.Runtime
+namespace GamePlay.Targets.Registry.Runtime
 {
     [CreateAssetMenu(fileName = TargetsRegistryRoutes.ServiceName,
         menuName = TargetsRegistryRoutes.ServicePath)]

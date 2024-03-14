@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Routes;
 
-namespace GamePlay.Combat.Hitboxes.Common
+namespace GamePlay.Hitboxes.Common
 {
     public class HitboxRegistryRoutes
     {

@@ -1,6 +1,6 @@
-﻿using GamePlay.Combat.Projectiles.Entity.Views.Actions;
+﻿using GamePlay.Projectiles.Entity.Views.Actions;
 
-namespace GamePlay.Combat.Projectiles.Entity.Components
+namespace GamePlay.Projectiles.Entity.Components
 {
     public struct ProjectileActionsComponent
     {

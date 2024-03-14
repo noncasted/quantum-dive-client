@@ -1,7 +1,7 @@
 ﻿using Ragon.Client;
 using Ragon.Protocol;
 
-namespace Menu.Network.PlayersLists.Runtime
+namespace Menu.Services.Network.PlayersLists.Runtime
 {
     public class AddPlayerEvent : IRagonEvent
     {

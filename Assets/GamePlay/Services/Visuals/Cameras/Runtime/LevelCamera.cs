@@ -1,11 +1,11 @@
-﻿using GamePlay.Visuals.Cameras.Abstract;
-using GamePlay.Visuals.Cameras.Logs;
-using Global.Cameras.CurrentProvider.Runtime;
-using Global.System.Updaters.Runtime.Abstract;
+﻿using GamePlay.Cameras.Abstract;
+using GamePlay.Cameras.Logs;
+using Global.Cameras.CurrentProvider.Abstract;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 
-namespace GamePlay.Visuals.Cameras.Runtime
+namespace GamePlay.Cameras.Runtime
 {
     public class LevelCamera :
         ILevelCamera,

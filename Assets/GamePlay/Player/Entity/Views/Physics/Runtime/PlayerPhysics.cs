@@ -1,9 +1,8 @@
-﻿
-using Internal.Scopes.Abstract.Lifetimes;
-using Common.DataTypes.Structs;
+﻿using Common.DataTypes.Structs;
 using GamePlay.Player.Entity.Views.Physics.Logs;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Physics.Runtime

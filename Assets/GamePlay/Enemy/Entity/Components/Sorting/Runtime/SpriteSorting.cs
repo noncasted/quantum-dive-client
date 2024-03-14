@@ -1,6 +1,6 @@
 ﻿using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 

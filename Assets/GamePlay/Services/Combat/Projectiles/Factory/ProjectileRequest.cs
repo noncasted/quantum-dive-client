@@ -1,7 +1,7 @@
-﻿using GamePlay.Combat.Projectiles.Registry.Definition;
+﻿using GamePlay.Projectiles.Registry.Definition;
 using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Factory
+namespace GamePlay.Projectiles.Factory
 {
     public struct ProjectileRequest
     {

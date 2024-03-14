@@ -1,6 +1,6 @@
 ﻿using GamePlay.Player.Entity.States.Common;
 
-namespace GamePlay.Player.Mappers.States.Runtime
+namespace GamePlay.Player.Services.Mappers.States.Runtime
 {
     public interface IPlayerStateMapper
     {

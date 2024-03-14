@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Global.Cameras.Utils.Runtime
+namespace Global.Cameras.Utils.Abstract
 {
     public interface ICameraUtils
     {

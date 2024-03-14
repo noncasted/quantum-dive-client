@@ -1,5 +1,5 @@
-﻿using GamePlay.Player.Entity.Components.Equipment.Equipper.Local;
-using GamePlay.Visuals.Cameras.Abstract;
+﻿using GamePlay.Cameras.Abstract;
+using GamePlay.Player.Entity.Components.Equipment.Equipper.Local;
 
 namespace GamePlay.Player.Entity.Common.Definition
 {

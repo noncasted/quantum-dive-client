@@ -1,5 +1,4 @@
-﻿
-using Internal.Scopes.Abstract.Instances.Entities;
+﻿using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;
 

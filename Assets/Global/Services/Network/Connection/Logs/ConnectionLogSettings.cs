@@ -1,5 +1,5 @@
 ﻿using Global.Network.Connection.Common;
-using Internal.Loggers.Runtime;
+using Internal.Services.Loggers.Runtime;
 using UnityEngine;
 
 namespace Global.Network.Connection.Logs

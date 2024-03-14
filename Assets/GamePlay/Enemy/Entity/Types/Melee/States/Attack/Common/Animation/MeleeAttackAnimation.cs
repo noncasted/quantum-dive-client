@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading;
-using Common.Tools.UniversalAnimators.Animations.Abstract;
-using Common.Tools.UniversalAnimators.Animations.FrameProviders.Forward;
-using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
+using Common.Tools.UniversalAnimators.Old.Animations.Abstract;
+using Common.Tools.UniversalAnimators.Old.Animations.FrameProviders.Forward;
+using Common.Tools.UniversalAnimators.Old.Animations.Implementations.Async;
 using Cysharp.Threading.Tasks;
 
 namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation

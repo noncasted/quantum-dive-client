@@ -1,4 +1,4 @@
-﻿using Global.System.Updaters.Runtime.Abstract;
+﻿using Global.System.Updaters.Abstract;
 using Global.UI.Nova.InputManagers.Abstract;
 using Global.UI.Nova.InputManagers.Logs;
 using Internal.Scopes.Abstract.Instances.Services;

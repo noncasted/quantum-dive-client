@@ -1,7 +1,7 @@
-﻿using GamePlay.System.Ecs.Runtime.Abstract;
-using Global.System.Updaters.Runtime.Abstract;
+﻿using GamePlay.Ecs.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 
-namespace GamePlay.System.Ecs.Runtime
+namespace GamePlay.Ecs.Runtime
 {
     public class EcsUpdater : IUpdatable, IFixedUpdatable
     {

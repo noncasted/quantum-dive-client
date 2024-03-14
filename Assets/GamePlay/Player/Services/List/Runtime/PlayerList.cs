@@ -3,7 +3,7 @@ using GamePlay.Player.Entity.Common.Definition;
 using Ragon.Client;
 using UnityEngine;
 
-namespace GamePlay.Player.List.Runtime
+namespace GamePlay.Player.Services.List.Runtime
 {
     public class PlayerList : IPlayerList, IRagonPlayerLeftListener
     {

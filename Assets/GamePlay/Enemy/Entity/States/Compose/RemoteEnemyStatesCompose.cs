@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.States.Common;
 using GamePlay.Enemy.Entity.States.Damaged.Remote;
 using GamePlay.Enemy.Entity.States.Death.Remote;
 using GamePlay.Enemy.Entity.States.Following.Remote;
 using GamePlay.Enemy.Entity.States.Idle.Remote;
 using GamePlay.Enemy.Entity.States.Respawn.Remote;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

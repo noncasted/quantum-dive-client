@@ -1,5 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Room.Lifecycle.Runtime;
+using GamePlay.Network.Room.Lifecycle.Runtime;
 using Ragon.Client;
 
 namespace GamePlay.Enemy.Spawn.Factory.Runtime

@@ -1,7 +1,7 @@
 ﻿using System;
 using Ragon.Client;
 
-namespace GamePlay.System.Network.Room.Lifecycle.Runtime
+namespace GamePlay.Network.Room.Lifecycle.Runtime
 {
     public interface IRoomProvider
     {

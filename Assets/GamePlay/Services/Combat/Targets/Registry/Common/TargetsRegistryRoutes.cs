@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Routes;
 
-namespace GamePlay.Combat.Targets.Registry.Common
+namespace GamePlay.Targets.Registry.Common
 {
     public class TargetsRegistryRoutes
     {

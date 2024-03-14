@@ -1,13 +1,12 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Network.Messaging.Events.Common;
+using GamePlay.Network.Messaging.Events.Logs;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Messaging.Events.Common;
-using GamePlay.System.Network.Messaging.Events.Logs;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.System.Network.Messaging.Events.Runtime
+namespace GamePlay.Network.Messaging.Events.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = NetworkEventsRoutes.ServiceName, menuName = NetworkEventsRoutes.ServicePath)]

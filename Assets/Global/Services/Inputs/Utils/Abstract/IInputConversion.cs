@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Global.Inputs.Utils.Runtime.Conversion
+namespace Global.Inputs.Utils.Abstract
 {
     public interface IInputConversion
     {

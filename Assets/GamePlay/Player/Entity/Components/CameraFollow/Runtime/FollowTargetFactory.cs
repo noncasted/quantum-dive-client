@@ -1,7 +1,7 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Player.Entity.Components.CameraFollow.Abstract;
+﻿using GamePlay.Player.Entity.Components.CameraFollow.Abstract;
 using GamePlay.Player.Entity.Components.CameraFollow.Common;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

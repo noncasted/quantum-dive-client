@@ -1,11 +1,11 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Network.Objects.Destroyer.Common;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Objects.Destroyer.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.System.Network.Objects.Destroyer.Runtime
+namespace GamePlay.Network.Objects.Destroyer.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = EntityDestroyerRoutes.ServiceName,

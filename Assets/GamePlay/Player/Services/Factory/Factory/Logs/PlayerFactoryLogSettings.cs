@@ -1,9 +1,9 @@
-﻿using GamePlay.Player.Factory.Factory.Common;
-using Internal.Loggers.Runtime;
+﻿using GamePlay.Player.Services.Factory.Factory.Common;
+using Internal.Services.Loggers.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Player.Factory.Factory.Logs
+namespace GamePlay.Player.Services.Factory.Factory.Logs
 {
     [InlineEditor(InlineEditorObjectFieldModes.Boxed)]
     [CreateAssetMenu(fileName = PlayerFactoryRoutes.LogsName,

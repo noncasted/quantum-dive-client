@@ -1,11 +1,11 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs;
+﻿using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs;
 using GamePlay.Enemy.Entity.Views.Animators.Logs;
 using GamePlay.Enemy.Entity.Views.RigidBodies.Logs;
 using GamePlay.Enemy.Entity.Views.Sprites.Logs;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Logs;
 using GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Components.Debugs.Flags

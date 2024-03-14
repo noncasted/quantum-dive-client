@@ -1,8 +1,8 @@
-﻿using Internal.Loggers.Common;
+﻿using Internal.Services.Loggers.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Internal.Loggers.Runtime.Headers
+namespace Internal.Services.Loggers.Runtime.Headers
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = LoggerRoutes.HeaderName,

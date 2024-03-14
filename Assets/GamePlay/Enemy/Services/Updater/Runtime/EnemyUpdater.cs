@@ -1,7 +1,7 @@
-﻿using Internal.Scopes.Abstract.Lifetimes;
-using GamePlay.Enemy.Updater.Runtime.Updatables;
-using Global.System.Updaters.Runtime.Abstract;
+﻿using GamePlay.Enemy.Updater.Runtime.Updatables;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace GamePlay.Enemy.Updater.Runtime
 {

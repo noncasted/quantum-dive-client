@@ -3,7 +3,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Ragon.Client;
 
-namespace GamePlay.System.Network.Messaging.Events.Runtime
+namespace GamePlay.Network.Messaging.Events.Runtime
 {
     public class EventReceiver<TEvent>
     {

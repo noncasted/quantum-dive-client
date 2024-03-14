@@ -1,4 +1,4 @@
-﻿namespace Internal.Options.Runtime
+﻿namespace Internal.Services.Options.Runtime
 {
     public enum EnvironmentType
     {

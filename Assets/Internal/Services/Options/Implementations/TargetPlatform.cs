@@ -1,4 +1,4 @@
-﻿namespace Global.Publisher.Common
+﻿namespace Internal.Services.Options.Implementations
 {
     public enum TargetPlatform
     {

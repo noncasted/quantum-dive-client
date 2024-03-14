@@ -1,4 +1,4 @@
-﻿namespace Global.Inputs.View.Runtime.Sources
+﻿namespace Global.Inputs.View.Abstract
 {
     public interface IInputSource
     {

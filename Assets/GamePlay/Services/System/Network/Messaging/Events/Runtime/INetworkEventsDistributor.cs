@@ -1,6 +1,6 @@
 ﻿using Ragon.Client;
 
-namespace GamePlay.System.Network.Messaging.Events.Runtime
+namespace GamePlay.Network.Messaging.Events.Runtime
 {
     public interface INetworkEventsDistributor
     {

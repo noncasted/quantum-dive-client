@@ -1,7 +1,7 @@
 ﻿using Internal.Scopes.Abstract.Containers;
 using UnityEngine;
 
-namespace Global.Inputs.View.Runtime.Sources
+namespace Global.Inputs.View.Abstract
 {
     public abstract class InputSourceFactory : ScriptableObject
     {

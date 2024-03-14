@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Global.Inputs.Constranits.Abstract;
 using Global.Inputs.Constranits.Definition;
 using Global.Inputs.View.Logs;
 

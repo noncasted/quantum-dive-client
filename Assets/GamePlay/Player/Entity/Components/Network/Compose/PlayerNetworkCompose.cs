@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Components.Network.Common;
 using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.Components.Network.Properties.Runtime;
 using GamePlay.Player.Entity.Components.Network.TransformSync.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

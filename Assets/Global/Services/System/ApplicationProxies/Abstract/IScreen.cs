@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Global.System.ApplicationProxies.Runtime
+namespace Global.System.ApplicationProxies.Abstract
 {
     public interface IScreen
     {

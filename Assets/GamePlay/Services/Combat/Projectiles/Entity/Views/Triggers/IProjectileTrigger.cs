@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Damages;
 
-namespace GamePlay.Services.Combat.Projectiles.Entity.Views.Triggers
+namespace GamePlay.Projectiles.Entity.Views.Triggers
 {
     public interface IProjectileTrigger
     {

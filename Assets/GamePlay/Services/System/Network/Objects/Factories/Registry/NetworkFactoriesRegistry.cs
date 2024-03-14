@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Internal.Scopes.Abstract.Lifetimes;
-using Global.Network.Objects.EntityListeners.Runtime;
+using Global.Network.Objects.EntityListeners.Abstract;
 using Global.Network.Objects.Factories.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Client;
 
-namespace GamePlay.System.Network.Objects.Factories.Registry
+namespace GamePlay.Network.Objects.Factories.Registry
 {
     public class NetworkFactoriesRegistry : INetworkFactoriesRegistry, IScopeSwitchListener
     {

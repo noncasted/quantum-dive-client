@@ -1,7 +1,6 @@
-﻿
-using Internal.Scopes.Abstract.Lifetimes;
-using Global.Inputs.View.Implementations.Combat;
+﻿using Global.Inputs.View.Implementations.Combat.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Components.Input.Runtime
 {

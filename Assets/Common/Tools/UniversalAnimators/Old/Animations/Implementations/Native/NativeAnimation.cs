@@ -1,10 +1,10 @@
 ﻿using System.Threading;
-using Common.Tools.UniversalAnimators.Animations.Abstract;
-using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
+using Common.Tools.UniversalAnimators.Old.Animations.Abstract;
+using Common.Tools.UniversalAnimators.Old.Animations.Implementations.Async;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Common.Tools.UniversalAnimators.Animations.Implementations.Native
+namespace Common.Tools.UniversalAnimators.Old.Animations.Implementations.Native
 {
     public class NativeAnimation : IAsyncAnimation
     {

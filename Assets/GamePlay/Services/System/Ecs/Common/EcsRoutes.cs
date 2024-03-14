@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Routes;
 
-namespace GamePlay.System.Ecs.Common
+namespace GamePlay.Ecs.Common
 {
     public static class EcsRoutes
     {

@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using Global.Config.Runtime;
-using Internal.Scope;
+using Internal.Runtime;
 using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 using VContainer;

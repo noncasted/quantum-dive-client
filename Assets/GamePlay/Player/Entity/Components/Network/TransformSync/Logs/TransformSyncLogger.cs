@@ -1,6 +1,6 @@
 ﻿using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.Views.GameObjects.Runtime;
-using Internal.Loggers.Runtime;
+using Internal.Services.Loggers.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Components.Network.TransformSync.Logs

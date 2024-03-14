@@ -1,6 +1,6 @@
 ﻿using Internal.Scopes.Abstract.Lifetimes;
 
-namespace Common.Tools.UniversalAnimators.Updaters.Runtime
+namespace Common.Tools.UniversalAnimators.Old.Updaters.Runtime
 {
     public interface IAnimatorsUpdater
     {

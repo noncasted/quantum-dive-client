@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Common.Tools.UniversalAnimators.Animations.Events;
+using Common.Tools.UniversalAnimators.Old.Animations.Events;
 using UnityEngine;
 
-namespace Common.Tools.UniversalAnimators.Animations.FrameSequence
+namespace Common.Tools.UniversalAnimators.Old.Animations.FrameSequence
 {
     public interface IFrameData
     {

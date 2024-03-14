@@ -1,9 +1,8 @@
-﻿using Global.Publisher.Common;
-using Internal.Scopes.Abstract.Options;
+﻿using Internal.Scopes.Abstract.Options;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Internal.Options.Implementations
+namespace Internal.Services.Options.Implementations
 {
     [InlineEditor]
     public class PlatformOptions : OptionsEntry

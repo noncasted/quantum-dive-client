@@ -1,5 +1,5 @@
 ﻿using GamePlay.Enemy.Entity.Views.Transforms.Remote.Common;
-using Internal.Loggers.Runtime;
+using Internal.Services.Loggers.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

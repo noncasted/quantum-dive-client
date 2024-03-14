@@ -1,11 +1,11 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Common.Tools.ObjectsPools.Runtime;
+﻿using Common.Tools.ObjectsPools.Runtime;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
-using GamePlay.Combat.Projectiles.Common;
-using GamePlay.Combat.Projectiles.Entity.Views.Facade;
+using GamePlay.Projectiles.Common;
+using GamePlay.Projectiles.Entity.Views.Facade;
+using Internal.Scopes.Abstract.Containers;
 using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Registry.Definition
+namespace GamePlay.Projectiles.Registry.Definition
 {
     [CreateAssetMenu(fileName = ProjectilesRoutes.DefinitionName, menuName = ProjectilesRoutes.DefinitionPath)]
     public class ProjectileDefinition : ScriptableObject, IProjectileDefinition, IPoolEntry

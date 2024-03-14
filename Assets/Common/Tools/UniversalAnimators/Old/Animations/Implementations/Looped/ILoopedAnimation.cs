@@ -1,6 +1,6 @@
-﻿using Common.Tools.UniversalAnimators.Animations.Abstract;
+﻿using Common.Tools.UniversalAnimators.Old.Animations.Abstract;
 
-namespace Common.Tools.UniversalAnimators.Animations.Implementations.Looped
+namespace Common.Tools.UniversalAnimators.Old.Animations.Implementations.Looped
 {
     public interface ILoopedAnimation : IUpdatableAnimation
     {

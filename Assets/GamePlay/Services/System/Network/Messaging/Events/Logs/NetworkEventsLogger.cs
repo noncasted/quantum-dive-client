@@ -1,6 +1,6 @@
-﻿using Internal.Loggers.Runtime;
+﻿using Internal.Services.Loggers.Runtime;
 
-namespace GamePlay.System.Network.Messaging.Events.Logs
+namespace GamePlay.Network.Messaging.Events.Logs
 {
     public class NetworkEventsLogger
     {

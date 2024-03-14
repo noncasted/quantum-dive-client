@@ -1,11 +1,11 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Common.Tools.ObjectsPools.Runtime;
+﻿using Common.Tools.ObjectsPools.Runtime;
 using Common.Tools.ObjectsPools.Runtime.Abstract;
-using GamePlay.Visuals.VfxPools.Common;
+using GamePlay.VfxPools.Common;
+using Internal.Scopes.Abstract.Containers;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Visuals.VfxPools.Runtime
+namespace GamePlay.VfxPools.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = VfxPoolRoutes.ParticleName,

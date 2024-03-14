@@ -1,8 +1,8 @@
-﻿using Internal.Scopes.Abstract.Lifetimes;
-using GamePlay.Player.Entity.Views.Hitboxes.Common;
-using Global.Debugs.Drawing.Runtime;
-using Global.System.Updaters.Runtime.Abstract;
+﻿using GamePlay.Player.Entity.Views.Hitboxes.Common;
+using Global.Debugs.Drawing.Abstract;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Views.Hitboxes.Debug

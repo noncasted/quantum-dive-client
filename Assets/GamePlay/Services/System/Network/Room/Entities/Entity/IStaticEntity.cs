@@ -1,7 +1,7 @@
 ﻿using System;
 using Ragon.Client;
 
-namespace GamePlay.System.Network.Room.Entities.Entity
+namespace GamePlay.Network.Room.Entities.Entity
 {
     public interface IStaticEntity
     {

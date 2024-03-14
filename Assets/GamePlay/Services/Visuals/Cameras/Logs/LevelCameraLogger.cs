@@ -1,7 +1,7 @@
-﻿using Internal.Loggers.Runtime;
+﻿using Internal.Services.Loggers.Runtime;
 using UnityEngine;
 
-namespace GamePlay.Visuals.Cameras.Logs
+namespace GamePlay.Cameras.Logs
 {
     public class LevelCameraLogger
     {

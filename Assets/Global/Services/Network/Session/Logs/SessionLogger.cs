@@ -1,4 +1,4 @@
-﻿using Internal.Loggers.Runtime;
+﻿using Internal.Services.Loggers.Runtime;
 
 namespace Global.Network.Session.Logs
 {

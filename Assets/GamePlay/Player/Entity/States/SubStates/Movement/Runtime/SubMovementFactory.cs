@@ -1,9 +1,7 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
-using Common.Tools.UniversalAnimators.Abstract;
-using GamePlay.Player.Entity.States.Idles.Common;
-using GamePlay.Player.Entity.States.Runs.Common;
+﻿using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.States.SubStates.Movement.Common;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

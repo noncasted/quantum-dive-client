@@ -1,6 +1,6 @@
 ﻿using Internal.Common;
 
-namespace Internal.Scenes.Common
+namespace Internal.Services.Scenes.Common
 {
     public static class ScenesFlowRoutes
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Global.Backend.Abstract;
-using Internal.Loggers.Runtime;
+using Internal.Services.Loggers.Runtime;
 
 namespace Global.Backend.Logs
 {

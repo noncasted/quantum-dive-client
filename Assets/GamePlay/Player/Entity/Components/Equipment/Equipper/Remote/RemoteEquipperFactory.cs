@@ -1,7 +1,6 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using GamePlay.Player.Entity.Components.Equipment.Equipper.Common;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Player.Entity.Components.Equipment.Equipper.Common;
-using GamePlay.Player.Entity.Components.Equipment.Equipper.Factory;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

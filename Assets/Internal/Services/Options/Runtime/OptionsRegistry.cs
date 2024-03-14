@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
-using Internal.Options.Common;
 using Internal.Scopes.Abstract.Options;
+using Internal.Services.Options.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Internal.Options.Runtime
+namespace Internal.Services.Options.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = "OptionsRegistry", menuName = OptionRoutes.RegistryPath)]

@@ -1,7 +1,7 @@
 ﻿using Common.Tools.ObjectsPools.Runtime.Abstract;
 using UnityEngine;
 
-namespace GamePlay.Visuals.VfxPools.Runtime
+namespace GamePlay.VfxPools.Runtime
 {
     public class VfxPool : IVfxPool
     {

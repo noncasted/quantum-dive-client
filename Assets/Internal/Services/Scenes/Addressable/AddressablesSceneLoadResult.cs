@@ -1,9 +1,9 @@
-﻿using Internal.Scenes.Abstract;
-using Internal.Scopes.Abstract.Scenes;
+﻿using Internal.Scopes.Abstract.Scenes;
+using Internal.Services.Scenes.Abstract;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
-namespace Internal.Scenes.Addressable
+namespace Internal.Services.Scenes.Addressable
 {
     public class AddressablesSceneLoadResult : ISceneLoadResult, ISceneInstanceProvider
     {

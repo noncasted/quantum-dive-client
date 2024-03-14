@@ -2,7 +2,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Internal.Options.Implementations
+namespace Internal.Services.Options.Implementations
 {
     [InlineEditor]
     public class DebugOptions : OptionsEntry

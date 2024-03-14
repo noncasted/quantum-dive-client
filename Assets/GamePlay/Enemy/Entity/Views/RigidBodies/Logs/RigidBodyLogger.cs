@@ -1,4 +1,4 @@
-﻿using Internal.Loggers.Runtime;
+﻿using Internal.Services.Loggers.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.RigidBodies.Logs

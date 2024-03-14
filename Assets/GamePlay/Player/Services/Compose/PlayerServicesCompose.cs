@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Player.Common;
-using GamePlay.Player.Factory.Factory.Runtime;
-using GamePlay.Player.List.Runtime;
-using GamePlay.Player.Mappers.Equipment.Runtime;
-using GamePlay.Player.Mappers.States.Runtime;
+using GamePlay.Player.Services.Common;
+using GamePlay.Player.Services.Factory.Factory.Runtime;
+using GamePlay.Player.Services.List.Runtime;
+using GamePlay.Player.Services.Mappers.Equipment.Runtime;
+using GamePlay.Player.Services.Mappers.States.Runtime;
 using GamePlay.Player.UI.Overlay.Runtime.Bootstrap;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Player.Compose
+namespace GamePlay.Player.Services.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

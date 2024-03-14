@@ -1,12 +1,11 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Network.Objects.Factories.Common;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Objects.Factories.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.System.Network.Objects.Factories.Runtime
+namespace GamePlay.Network.Objects.Factories.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = NetworkObjectFactoryRoutes.DynamicFactoryName,

@@ -1,7 +1,7 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Enemy.Entity.Components.StateSelectors;
+﻿using GamePlay.Enemy.Entity.Components.StateSelectors;
 using GamePlay.Enemy.Entity.Types.Melee.States.StateSelector.Common;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

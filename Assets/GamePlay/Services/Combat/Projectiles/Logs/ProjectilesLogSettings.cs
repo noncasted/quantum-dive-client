@@ -1,9 +1,9 @@
-﻿using GamePlay.Combat.Projectiles.Common;
-using Internal.Loggers.Runtime;
+﻿using GamePlay.Projectiles.Common;
+using Internal.Services.Loggers.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Logs
+namespace GamePlay.Projectiles.Logs
 {
     [InlineEditor(InlineEditorObjectFieldModes.Boxed)]
     [CreateAssetMenu(fileName = ProjectilesRoutes.LogsName,

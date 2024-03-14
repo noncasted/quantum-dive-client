@@ -1,8 +1,7 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using Global.UI.LoadingScreens.Runtime;
-using Internal.Scope;
-using Internal.Scopes.Abstract.Callbacks;
+using Global.UI.LoadingScreens.Abstract;
+using Internal.Runtime;
 using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 using VContainer;

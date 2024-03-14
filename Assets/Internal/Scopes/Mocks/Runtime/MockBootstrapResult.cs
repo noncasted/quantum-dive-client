@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using Internal.Scenes.Abstract;
-using Internal.Scenes.Native;
-using Internal.Scopes.Abstract.Callbacks;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Scenes;
+using Internal.Services.Scenes.Native;
 using UnityEngine.SceneManagement;
 using VContainer;
 using VContainer.Unity;

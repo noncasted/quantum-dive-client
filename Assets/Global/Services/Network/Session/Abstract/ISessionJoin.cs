@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace Global.Network.Session.Runtime.Join
+namespace Global.Network.Session.Abstract
 {
     public interface ISessionJoin
     {

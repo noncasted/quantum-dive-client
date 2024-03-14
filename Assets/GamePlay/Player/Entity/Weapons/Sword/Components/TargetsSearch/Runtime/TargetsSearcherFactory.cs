@@ -1,6 +1,6 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Common;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Common;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Components.TargetsSearch.Runtime

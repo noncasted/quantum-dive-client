@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
-using Common.Tools.UniversalAnimators.Animations.Events;
+using Common.Tools.UniversalAnimators.Old.Animations.Events;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Common.Tools.UniversalAnimators.Animations.FrameSequence
+namespace Common.Tools.UniversalAnimators.Old.Animations.FrameSequence
 {
     [InlineEditor]
     [Serializable]

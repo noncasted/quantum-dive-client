@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Deaths.Local;
 using GamePlay.Player.Entity.States.Floating.Runtime;
@@ -11,6 +10,7 @@ using GamePlay.Player.Entity.States.Runs.Local;
 using GamePlay.Player.Entity.States.Runs.Remote;
 using GamePlay.Player.Entity.States.SubStates.Damaged.Local;
 using GamePlay.Player.Entity.States.SubStates.Pushes.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

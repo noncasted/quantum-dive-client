@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using Internal.Scopes.Abstract.Instances.Services;
-using Menu.Network.SceneCollectors.Runtime;
+using Menu.Services.Network.SceneCollectors.Runtime;
 using Ragon.Client;
 
-namespace Menu.Network.Entity.Runtime
+namespace Menu.Services.Network.Entity.Runtime
 {
     public class MenuEntity : IMenuEntity, IScopeSwitchListener
     {

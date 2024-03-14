@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Messaging.REST.Logs;
-using GamePlay.System.Network.Messaging.REST.Runtime.Abstract;
+using GamePlay.Network.Messaging.REST.Logs;
+using GamePlay.Network.Messaging.REST.Runtime.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.System.Network.Messaging.REST.Runtime
+namespace GamePlay.Network.Messaging.REST.Runtime
 {
     public class MessagePipe<TRequest, TResponse> : IMessagePipe<TRequest, TResponse>,
         IMessageSender<TRequest, TResponse>

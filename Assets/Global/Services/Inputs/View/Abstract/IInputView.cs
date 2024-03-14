@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Global.Inputs.View.Runtime
+namespace Global.Inputs.View.Abstract
 {
     public interface IInputView
     {

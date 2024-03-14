@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using Internal.Abstract;
 using Internal.Common;
-using Internal.Loggers.Runtime;
-using Internal.Scenes.Root;
+using Internal.Services.Loggers.Runtime;
+using Internal.Services.Options.Runtime;
+using Internal.Services.Scenes.Root;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Internal.Scope
+namespace Internal.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = InternalRoutes.ConfigName, menuName = InternalRoutes.ConfigPath)]
@@ -14,11 +15,11 @@ namespace Internal.Scope
     {
         [SerializeField] private ScenesFlowFactory _scenes;
         [SerializeField] private LoggerFactory _logger;
-        [SerializeField] private Options.Runtime.Options _options;
+        [SerializeField] private Options _options;
         [SerializeField] private InternalScope _scope;
 
         public InternalScope Scope => _scope;
-        public Options.Runtime.Options Options => _options;
+        public Options Options => _options;
         public IReadOnlyList<IInternalServiceFactory> Services => GetServices();
 
         private IReadOnlyList<IInternalServiceFactory> GetServices()

@@ -1,9 +1,9 @@
-﻿using Internal.Loggers.Runtime;
-using Internal.Scenes.Common;
+﻿using Internal.Services.Loggers.Runtime;
+using Internal.Services.Scenes.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Internal.Scenes.Logs
+namespace Internal.Services.Scenes.Logs
 {
     [InlineEditor(InlineEditorObjectFieldModes.Boxed)]
     [CreateAssetMenu(fileName = ScenesFlowRoutes.LogsName,

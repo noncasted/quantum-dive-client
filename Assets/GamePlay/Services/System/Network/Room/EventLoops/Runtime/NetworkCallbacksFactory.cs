@@ -1,12 +1,12 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Room.Entities.Factory;
-using Global.Network.Handlers.ClientHandler.Runtime;
+using GamePlay.Network.Room.Entities.Factory;
+using Global.Network.Handlers.ClientHandler.Abstract;
 using Internal.Scopes.Abstract.Callbacks;
 using Internal.Scopes.Runtime.Callbacks;
 using Ragon.Client;
 using VContainer;
 
-namespace GamePlay.System.Network.Room.EventLoops.Runtime
+namespace GamePlay.Network.Room.EventLoops.Runtime
 {
     public class NetworkCallbacksFactory : ICallbacksListener
     {

@@ -1,4 +1,4 @@
-﻿namespace Internal.Scenes.Extensions
+﻿namespace Internal.Services.Scenes.Extensions
 {
     public static class SceneOperationsExtensions
     {

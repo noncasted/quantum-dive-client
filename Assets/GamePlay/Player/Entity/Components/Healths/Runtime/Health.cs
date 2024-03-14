@@ -1,5 +1,5 @@
 ﻿
-using Global.System.MessageBrokers.Runtime;
+using Global.System.MessageBrokers.Abstract;
 
 namespace GamePlay.Player.Entity.Components.Healths.Runtime
 {

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Global.Network.Handlers.SceneCollectors.Runtime;
+using Global.Network.Handlers.SceneCollectors.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 
-namespace Menu.Network.SceneCollectors.Runtime
+namespace Menu.Services.Network.SceneCollectors.Runtime
 {
     public class MenuSceneCollector : IMenuSceneCollector, IScopeAwakeListener
     {

@@ -1,8 +1,8 @@
-﻿using Common.Tools.UniversalAnimators.Animations.Abstract;
+﻿using Common.Tools.UniversalAnimators.Old.Animations.Abstract;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Common.Tools.UniversalAnimators.Animations.Implementations.Native
+namespace Common.Tools.UniversalAnimators.Old.Animations.Implementations.Native
 {
     [InlineEditor]
     public abstract class NativeAnimationFactory : ScriptableObject

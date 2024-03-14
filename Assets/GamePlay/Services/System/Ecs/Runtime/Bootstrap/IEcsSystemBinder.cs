@@ -1,6 +1,6 @@
 ﻿using Leopotam.EcsLite;
 
-namespace GamePlay.System.Ecs.Runtime.Bootstrap
+namespace GamePlay.Ecs.Runtime.Bootstrap
 {
     public interface IEcsSystemBinder
     {

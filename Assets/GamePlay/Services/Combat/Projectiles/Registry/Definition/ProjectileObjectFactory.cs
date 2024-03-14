@@ -1,8 +1,8 @@
 ﻿using Common.Tools.ObjectsPools.Runtime.Abstract;
-using GamePlay.Combat.Projectiles.Entity.Views.Facade;
+using GamePlay.Projectiles.Entity.Views.Facade;
 using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Registry.Definition
+namespace GamePlay.Projectiles.Registry.Definition
 {
     public class ProjectileObjectFactory : IObjectFactory<ProjectileView>
     {

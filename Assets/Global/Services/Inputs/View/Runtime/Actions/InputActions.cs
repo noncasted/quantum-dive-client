@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.Inputs.View.Abstract;
+using Global.System.Updaters.Abstract;
 
 namespace Global.Inputs.View.Runtime.Actions
 {

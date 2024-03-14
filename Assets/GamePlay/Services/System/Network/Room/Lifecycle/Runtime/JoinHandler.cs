@@ -1,8 +1,8 @@
 ﻿using Cysharp.Threading.Tasks;
-using Global.Network.Handlers.ClientHandler.Runtime;
+using Global.Network.Handlers.ClientHandler.Abstract;
 using Ragon.Client;
 
-namespace GamePlay.System.Network.Room.Lifecycle.Runtime
+namespace GamePlay.Network.Room.Lifecycle.Runtime
 {
     public class JoinHandler : IRagonJoinListener
     {

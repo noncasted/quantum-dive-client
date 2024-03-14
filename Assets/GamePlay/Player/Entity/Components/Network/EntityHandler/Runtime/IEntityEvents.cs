@@ -2,7 +2,6 @@
 using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Client;
 
-
 namespace GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime
 {
     public interface IEntityEvents

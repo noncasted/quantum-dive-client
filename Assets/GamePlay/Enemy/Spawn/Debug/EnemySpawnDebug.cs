@@ -1,6 +1,6 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using GamePlay.Enemy.Entity.Common.Definition.Asset;
+﻿using GamePlay.Enemy.Entity.Common.Definition.Asset;
 using GamePlay.Enemy.Spawn.Factory.Runtime;
+using Internal.Scopes.Abstract.Containers;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using VContainer;

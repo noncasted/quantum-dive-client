@@ -1,8 +1,8 @@
 ﻿using System;
+using Global.Inputs.View.Abstract;
 using Global.Inputs.View.Logs;
 using Global.Inputs.View.Runtime.Actions;
-using Global.Inputs.View.Runtime.Sources;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine.InputSystem;
 

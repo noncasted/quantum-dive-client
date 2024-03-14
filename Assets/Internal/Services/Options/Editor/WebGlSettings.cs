@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace Internal.Options.Editor
+namespace Internal.Services.Options.Editor
 {
     public class WebGlSettings
     {

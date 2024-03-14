@@ -1,6 +1,6 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using GamePlay.Player.Entity.Components.Equipment.Slots.Definitions.Abstract;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Player.Entity.Components.Equipment.Slots.Definitions.Abstract;
 
 namespace GamePlay.Player.Entity.Components.Equipment.Equipper.Factory
 {

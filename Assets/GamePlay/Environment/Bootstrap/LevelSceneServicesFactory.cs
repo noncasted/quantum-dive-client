@@ -1,7 +1,6 @@
-﻿using Internal.Scopes.Abstract.Containers;
-
-using Cysharp.Threading.Tasks;
-using GamePlay.Player.Factory.SpawnPoints;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Player.Services.Factory.SpawnPoints;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 

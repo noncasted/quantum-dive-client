@@ -4,7 +4,7 @@ using Ragon.Client;
 using Ragon.Client.Compressor;
 using Ragon.Protocol;
 
-namespace Menu.Network.PlayersLists.Runtime
+namespace Menu.Services.Network.PlayersLists.Runtime
 {
     public class PlayersList : RagonProperty
     {

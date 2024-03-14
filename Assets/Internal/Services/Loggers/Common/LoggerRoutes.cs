@@ -1,6 +1,6 @@
 ﻿using Internal.Common;
 
-namespace Internal.Loggers.Common
+namespace Internal.Services.Loggers.Common
 {
     public static class LoggerRoutes
     {

@@ -1,7 +1,7 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
-using Common.Tools.UniversalAnimators.Abstract;
+﻿using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.States.Respawns.Common;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

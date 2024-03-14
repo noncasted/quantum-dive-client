@@ -1,8 +1,8 @@
-﻿using GamePlay.System.Ecs.Runtime.Abstract;
+﻿using GamePlay.Ecs.Runtime.Abstract;
 using Leopotam.EcsLite;
 using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Systems.CollisionDetection
+namespace GamePlay.Projectiles.Systems.CollisionDetection
 {
     public class ProjectilesCollisionDetection : IEcsRunSystem
     {

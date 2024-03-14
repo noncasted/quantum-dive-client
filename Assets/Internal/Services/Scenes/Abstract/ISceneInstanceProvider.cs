@@ -1,6 +1,6 @@
 ﻿using UnityEngine.ResourceManagement.ResourceProviders;
 
-namespace Internal.Scenes.Abstract
+namespace Internal.Services.Scenes.Abstract
 {
     public interface ISceneInstanceProvider
     {

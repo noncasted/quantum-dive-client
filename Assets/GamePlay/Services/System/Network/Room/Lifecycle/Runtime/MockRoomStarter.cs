@@ -1,8 +1,8 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Room.EventLoops.Runtime;
-using Global.Network.Handlers.ClientHandler.Runtime;
+using GamePlay.Network.Room.EventLoops.Runtime;
+using Global.Network.Handlers.ClientHandler.Abstract;
 
-namespace GamePlay.System.Network.Room.Lifecycle.Runtime
+namespace GamePlay.Network.Room.Lifecycle.Runtime
 {
     public class MockRoomStarter : INetworkDestroyListener
     {

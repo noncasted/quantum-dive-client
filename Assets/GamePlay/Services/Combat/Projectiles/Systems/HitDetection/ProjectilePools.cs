@@ -1,9 +1,9 @@
-﻿using GamePlay.Combat.Hitboxes.Flags;
-using GamePlay.Combat.Hitboxes.Runtime;
-using GamePlay.Combat.Projectiles.Entity.Components;
+﻿using GamePlay.Hitboxes.Flags;
+using GamePlay.Hitboxes.Runtime;
+using GamePlay.Projectiles.Entity.Components;
 using Leopotam.EcsLite;
 
-namespace GamePlay.Combat.Projectiles.Systems.HitDetection
+namespace GamePlay.Projectiles.Systems.HitDetection
 {
     public class ProjectilePools
     {

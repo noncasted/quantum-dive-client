@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Collections.ReadOnlyDictionaries.Editor;
-using GamePlay.System.Network.Messaging.REST.Logs;
+using GamePlay.Network.Messaging.REST.Logs;
 using UnityEditor;
 
-namespace GamePlay.System.Network.Messaging.REST.Editor
+namespace GamePlay.Network.Messaging.REST.Editor
 {
     [ReadOnlyDictionaryPriority]
     [CustomPropertyDrawer(typeof(MessengerLogs))]

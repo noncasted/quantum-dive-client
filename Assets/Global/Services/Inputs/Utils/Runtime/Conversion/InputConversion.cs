@@ -1,4 +1,5 @@
-﻿using Global.Cameras.Utils.Runtime;
+﻿using Global.Cameras.Utils.Abstract;
+using Global.Inputs.Utils.Abstract;
 using UnityEngine;
 
 namespace Global.Inputs.Utils.Runtime.Conversion

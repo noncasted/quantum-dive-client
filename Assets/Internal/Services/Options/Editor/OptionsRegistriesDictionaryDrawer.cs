@@ -1,8 +1,8 @@
 ﻿using Common.DataTypes.Collections.ReadOnlyDictionaries.Editor;
-using Internal.Options.Runtime;
+using Internal.Services.Options.Runtime;
 using UnityEditor;
 
-namespace Internal.Options.Editor
+namespace Internal.Services.Options.Editor
 {
     [ReadOnlyDictionaryPriority]
     [CustomPropertyDrawer(typeof(OptionsRegistriesDictionary))]

@@ -1,7 +1,6 @@
-﻿
-using Internal.Scopes.Abstract.Lifetimes;
+﻿using Internal.Scopes.Abstract.Lifetimes;
 
-namespace Global.System.Updaters.Runtime.Abstract
+namespace Global.System.Updaters.Abstract
 {
     public interface IUpdater
     {

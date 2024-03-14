@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.Common.Definition.Config;
 using GamePlay.Enemy.Entity.Components.Compose;
 using GamePlay.Enemy.Entity.Components.Network.Compose;
 using GamePlay.Enemy.Entity.States.Compose;
 using GamePlay.Enemy.Entity.Types.Summoner.States.StateSelector.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

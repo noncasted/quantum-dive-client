@@ -1,5 +1,5 @@
 ﻿using System;
-using GamePlay.Combat.Projectiles.Registry.Definition;
+using GamePlay.Projectiles.Registry.Definition;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.ProjectileStarters.Runtime.Config

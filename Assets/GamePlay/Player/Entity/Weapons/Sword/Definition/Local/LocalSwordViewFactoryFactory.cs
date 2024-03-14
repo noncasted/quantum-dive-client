@@ -1,8 +1,8 @@
 ﻿using GamePlay.Player.Entity.Components.Equipment.Definition;
-using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Weapons.Sword.Views.AttackAreas.Runtime;
 using GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Definition.Local

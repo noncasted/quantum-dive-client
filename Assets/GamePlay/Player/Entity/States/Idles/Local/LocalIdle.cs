@@ -5,7 +5,7 @@ using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Idles.Common;
 using GamePlay.Player.Entity.States.Idles.Logs;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 
 namespace GamePlay.Player.Entity.States.Idles.Local
 {

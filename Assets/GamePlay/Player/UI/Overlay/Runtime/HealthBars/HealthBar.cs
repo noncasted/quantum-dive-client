@@ -1,6 +1,6 @@
 ﻿using System;
 using GamePlay.Player.Entity.Components.Healths.Runtime;
-using Global.System.MessageBrokers.Runtime;
+using Global.System.MessageBrokers.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 
 namespace GamePlay.Player.UI.Overlay.Runtime.HealthBars

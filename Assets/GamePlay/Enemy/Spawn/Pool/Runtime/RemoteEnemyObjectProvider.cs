@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Instances.Entities;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Common.Definition.Config;
 using GamePlay.Enemy.Entity.Common.Definition.Root;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Ragon.Client;
 using UnityEngine;
 using VContainer.Unity;

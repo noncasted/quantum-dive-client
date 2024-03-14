@@ -1,12 +1,11 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using GamePlay.Hitboxes.Common;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
-using GamePlay.Combat.Hitboxes.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Combat.Hitboxes.Runtime
+namespace GamePlay.Hitboxes.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = HitboxRegistryRoutes.ServiceName,

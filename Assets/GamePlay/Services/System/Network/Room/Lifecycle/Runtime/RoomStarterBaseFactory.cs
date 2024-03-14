@@ -4,7 +4,7 @@ using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.System.Network.Room.Lifecycle.Runtime
+namespace GamePlay.Network.Room.Lifecycle.Runtime
 {
     [InlineEditor]
     public abstract class RoomStarterBaseFactory : ScriptableObject, IServiceFactory

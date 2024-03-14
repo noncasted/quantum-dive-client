@@ -1,4 +1,4 @@
-﻿namespace Menu.Network.Common
+﻿namespace Menu.Services.Network.Common
 {
     public class MenuNetworkAssetsPrefixes
     {

@@ -1,6 +1,6 @@
 ﻿using Global.UI.Localizations.Definition;
 
-namespace Global.UI.Localizations.Runtime
+namespace Global.UI.Localizations.Abstract
 {
     public interface ILocalization
     {

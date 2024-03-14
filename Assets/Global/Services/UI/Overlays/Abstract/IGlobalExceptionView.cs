@@ -1,4 +1,4 @@
-namespace Global.UI.Overlays.Runtime
+namespace Global.UI.Overlays.Abstract
 {
     public interface IGlobalExceptionView
     {

@@ -1,13 +1,13 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using Global.Network.Connection.Runtime;
-using Global.System.MessageBrokers.Runtime;
+using Global.Network.Connection.Abstract;
+using Global.System.MessageBrokers.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using Menu.Lobby.Controller.Runtime;
 using Menu.Lobby.UI.Runtime.View;
 using Menu.Main.Controller.Runtime;
 using Menu.Main.UI.Runtime;
-using Menu.Network.Entity.Runtime;
+using Menu.Services.Network.Entity.Runtime;
 using Ragon.Client;
 using UnityEngine;
 using Random = UnityEngine.Random;

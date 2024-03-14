@@ -1,6 +1,6 @@
-﻿using Menu.Network.Common;
+﻿using Menu.Services.Network.Common;
 
-namespace Menu.Network.PlayersLists.Common
+namespace Menu.Services.Network.PlayersLists.Common
 {
     public class PlayersListRoutes
     {

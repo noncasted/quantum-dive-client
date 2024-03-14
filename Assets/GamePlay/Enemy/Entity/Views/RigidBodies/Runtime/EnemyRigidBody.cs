@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using GamePlay.Enemy.Entity.Views.RigidBodies.Logs;
-using Global.System.Updaters.Runtime.Abstract;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Common.Tools.UniversalAnimators.Updaters.Runtime
+namespace Common.Tools.UniversalAnimators.Old.Updaters.Runtime
 {
     public class UpdatableAnimatorsList
     {

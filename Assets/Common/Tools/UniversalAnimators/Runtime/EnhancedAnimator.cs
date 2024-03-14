@@ -2,7 +2,6 @@
 using Animancer;
 using Common.Tools.UniversalAnimators.Abstract;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace Common.Tools.UniversalAnimators.Runtime
 {

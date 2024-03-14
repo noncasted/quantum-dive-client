@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Common.Tools.UniversalAnimators.Animations.Abstract
+namespace Common.Tools.UniversalAnimators.Old.Animations.Abstract
 {
     [Serializable]
     public class AnimationData

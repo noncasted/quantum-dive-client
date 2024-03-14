@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.Tools.UniversalAnimators.Animations.Abstract;
-using Common.Tools.UniversalAnimators.Animations.Events;
+using Common.Tools.UniversalAnimators.Old.Animations.Abstract;
+using Common.Tools.UniversalAnimators.Old.Animations.Events;
 using UnityEngine;
 
-namespace Common.Tools.UniversalAnimators.Animations.Implementations.Looped
+namespace Common.Tools.UniversalAnimators.Old.Animations.Implementations.Looped
 {
     public class LoopedAnimation : ILoopedAnimation
     {

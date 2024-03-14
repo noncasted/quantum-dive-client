@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Combat.Hitboxes.Flags;
 using GamePlay.Common.Damages;
-using GamePlay.System.Ecs.Runtime.Abstract;
+using GamePlay.Ecs.Runtime.Abstract;
+using GamePlay.Hitboxes.Flags;
 
-namespace GamePlay.Combat.Hitboxes.Runtime
+namespace GamePlay.Hitboxes.Runtime
 {
     public class HitboxRegistry : IHitboxRegistry
     {

@@ -1,6 +1,6 @@
-﻿using GamePlay.Player.Common;
+﻿using GamePlay.Player.Services.Common;
 
-namespace GamePlay.Player.Mappers.States.Common
+namespace GamePlay.Player.Services.Mappers.States.Common
 {
     public class PlayerStateMapperRoutes
     {

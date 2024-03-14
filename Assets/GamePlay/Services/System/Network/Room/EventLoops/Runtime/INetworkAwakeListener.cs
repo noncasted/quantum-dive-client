@@ -1,4 +1,4 @@
-﻿namespace GamePlay.System.Network.Room.EventLoops.Runtime
+﻿namespace GamePlay.Network.Room.EventLoops.Runtime
 {
     public interface INetworkAwakeListener
     {

@@ -1,9 +1,9 @@
-﻿using GamePlay.System.Network.Messaging.REST.Runtime.Abstract;
+﻿using GamePlay.Network.Messaging.REST.Runtime.Abstract;
 
 //using GamePlay.Player.Entity.Definition;
 //using GamePlay.Player.Services.Lists.Runtime;
 
-namespace GamePlay.System.Network.Messaging.REST.Runtime
+namespace GamePlay.Network.Messaging.REST.Runtime
 {
     public class MessageDistributor : IMessageDistributor
     {

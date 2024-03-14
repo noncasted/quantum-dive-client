@@ -1,13 +1,13 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Combat.Projectiles.Factory;
-using GamePlay.Combat.Projectiles.Registry.Runtime;
-using GamePlay.System.Network.Room.Entities.Factory;
-using GamePlay.System.Network.Room.EventLoops.Runtime;
+using GamePlay.Network.Room.Entities.Factory;
+using GamePlay.Network.Room.EventLoops.Runtime;
+using GamePlay.Projectiles.Factory;
+using GamePlay.Projectiles.Registry.Runtime;
 using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.Combat.Projectiles.Network
+namespace GamePlay.Projectiles.Network
 {
     public class NetworkProjectileFactory : INetworkSceneEntityCreationListener, IScopeSwitchListener
     {

@@ -1,6 +1,4 @@
 ﻿using GamePlay.Enemy.Entity.Common.Definition.Config;
-using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.States.Damaged.Vfx;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages;
 using GamePlay.Enemy.Entity.Views.AIPaths;
@@ -12,6 +10,8 @@ using GamePlay.Enemy.Entity.Views.RigidBodies.Runtime;
 using GamePlay.Enemy.Entity.Views.RotationPoint.Runtime;
 using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Types.Melee.Config

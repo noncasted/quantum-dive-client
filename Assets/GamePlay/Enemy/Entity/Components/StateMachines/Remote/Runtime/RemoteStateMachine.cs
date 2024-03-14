@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Lifetimes;
 using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Mappers.States.Runtime;
+using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Client;
 using Ragon.Client.Compressor;
 using Ragon.Protocol;

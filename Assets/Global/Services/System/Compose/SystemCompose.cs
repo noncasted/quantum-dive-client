@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.Tools.UniversalAnimators.Updaters.Runtime;
+using Common.Tools.UniversalAnimators.Old.Updaters.Runtime;
 using Global.Common;
 using Global.System.ApplicationProxies.Runtime;
 using Global.System.MessageBrokers.Runtime;

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-using Common.Tools.UniversalAnimators.Animations.Abstract;
-using Common.Tools.UniversalAnimators.Animations.Events;
+using Common.Tools.UniversalAnimators.Old.Animations.Abstract;
+using Common.Tools.UniversalAnimators.Old.Animations.Events;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Common.Tools.UniversalAnimators.Animations.Implementations.Async
+namespace Common.Tools.UniversalAnimators.Old.Animations.Implementations.Async
 {   
     public class AsyncAnimation : IAsyncAnimation
     {

@@ -1,7 +1,8 @@
 ﻿using System;
 using Global.Network.Connection.Configuration;
-using Global.Network.Handlers.SceneCollectors.Runtime;
-using Global.Network.Objects.EntityListeners.Runtime;
+using Global.Network.Handlers.ClientHandler.Abstract;
+using Global.Network.Handlers.SceneCollectors.Abstract;
+using Global.Network.Objects.EntityListeners.Abstract;
 using Ragon.Client;
 using Ragon.Client.Unity;
 using UnityEngine.Assertions;

@@ -1,4 +1,4 @@
-﻿namespace Global.System.Updaters.Runtime.Abstract
+﻿namespace Global.System.Updaters.Abstract
 {
     public interface IUpdateSpeedModifier
     {

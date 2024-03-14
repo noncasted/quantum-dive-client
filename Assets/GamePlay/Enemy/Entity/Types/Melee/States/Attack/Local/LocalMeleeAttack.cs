@@ -1,6 +1,5 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Combat.Targets.Registry.Runtime;
 using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.States.SubStates.Pushes.Runtime;
@@ -11,6 +10,7 @@ using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Debug;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
+using GamePlay.Targets.Registry.Runtime;
 
 namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
 {

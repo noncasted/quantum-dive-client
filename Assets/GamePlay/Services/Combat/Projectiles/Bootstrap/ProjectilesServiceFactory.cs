@@ -1,22 +1,22 @@
 ﻿using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Cysharp.Threading.Tasks;
-using GamePlay.Combat.Projectiles.Common;
-using GamePlay.Combat.Projectiles.Factory;
-using GamePlay.Combat.Projectiles.Logs;
-using GamePlay.Combat.Projectiles.Network;
-using GamePlay.Combat.Projectiles.Pool;
-using GamePlay.Combat.Projectiles.Registry.Runtime;
-using GamePlay.Combat.Projectiles.Systems.CollisionDetection;
-using GamePlay.Combat.Projectiles.Systems.HitDetection;
-using GamePlay.Combat.Projectiles.Systems.Movement;
-using GamePlay.Combat.Projectiles.Systems.Sorting;
+using GamePlay.Projectiles.Common;
+using GamePlay.Projectiles.Factory;
+using GamePlay.Projectiles.Logs;
+using GamePlay.Projectiles.Network;
+using GamePlay.Projectiles.Pool;
+using GamePlay.Projectiles.Registry.Runtime;
+using GamePlay.Projectiles.Systems.CollisionDetection;
+using GamePlay.Projectiles.Systems.HitDetection;
+using GamePlay.Projectiles.Systems.Movement;
+using GamePlay.Projectiles.Systems.Sorting;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Scenes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Combat.Projectiles.Bootstrap
+namespace GamePlay.Projectiles.Bootstrap
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = ProjectilesRoutes.ServiceName,

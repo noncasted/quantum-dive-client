@@ -1,4 +1,5 @@
-﻿using Global.System.ApplicationProxies.Logs;
+﻿using Global.System.ApplicationProxies.Abstract;
+using Global.System.ApplicationProxies.Logs;
 using UnityEngine;
 
 namespace Global.System.ApplicationProxies.Runtime

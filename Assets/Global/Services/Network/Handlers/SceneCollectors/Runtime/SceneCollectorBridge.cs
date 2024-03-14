@@ -1,4 +1,5 @@
 ﻿using System;
+using Global.Network.Handlers.SceneCollectors.Abstract;
 using Ragon.Client;
 
 namespace Global.Network.Handlers.SceneCollectors.Runtime

@@ -1,4 +1,4 @@
-﻿namespace Global.Inputs.View.Runtime
+﻿namespace Global.Inputs.View.Abstract
 {
     public interface IInputViewRebindCallbacks
     {

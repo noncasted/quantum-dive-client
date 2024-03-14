@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using VContainer.Unity;
 
-namespace Internal.Scope
+namespace Internal.Runtime
 {
     [DisallowMultipleComponent]
     public class InternalScope : LifetimeScope

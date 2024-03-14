@@ -1,5 +1,5 @@
 ﻿using System;
-using GamePlay.Combat.Projectiles.Entity.Views.Actions;
+using GamePlay.Projectiles.Entity.Views.Actions;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Projectiles.Runtime

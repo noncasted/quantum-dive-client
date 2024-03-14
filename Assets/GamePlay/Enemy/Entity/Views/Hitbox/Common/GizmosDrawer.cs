@@ -1,5 +1,5 @@
-﻿using Global.Debugs.Drawing.Runtime;
-using Global.System.Updaters.Runtime.Abstract;
+﻿using Global.Debugs.Drawing.Abstract;
+using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 

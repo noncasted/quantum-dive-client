@@ -1,4 +1,4 @@
-﻿namespace GamePlay.System.Ecs.Runtime.Abstract
+﻿namespace GamePlay.Ecs.Runtime.Abstract
 {
     public interface IEntityComponentSetter
     {

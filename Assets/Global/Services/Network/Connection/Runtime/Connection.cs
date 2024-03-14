@@ -1,8 +1,9 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
+using Global.Network.Connection.Abstract;
 using Global.Network.Connection.Configuration;
 using Global.Network.Connection.Logs;
-using Global.Network.Handlers.ClientHandler.Runtime;
+using Global.Network.Handlers.ClientHandler.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 

@@ -1,12 +1,11 @@
-﻿using Internal.Scopes.Abstract.Containers;
+﻿using Cysharp.Threading.Tasks;
+using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
-using Menu.Network.PlayersLists.Common;
+using Menu.Services.Network.PlayersLists.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Menu.Network.PlayersLists.Runtime
+namespace Menu.Services.Network.PlayersLists.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = PlayersListRoutes.ServiceName,

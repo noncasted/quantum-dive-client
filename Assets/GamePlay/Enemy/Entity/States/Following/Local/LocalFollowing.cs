@@ -1,12 +1,12 @@
-﻿using GamePlay.Combat.Targets.Registry.Runtime;
-using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
+﻿using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.States.Following.Common;
 using GamePlay.Enemy.Entity.Views.AIPaths;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime;
-using Global.System.Updaters.Runtime.Abstract;
+using GamePlay.Targets.Registry.Runtime;
+using Global.System.Updaters.Abstract;
 
 namespace GamePlay.Enemy.Entity.States.Following.Local
 {

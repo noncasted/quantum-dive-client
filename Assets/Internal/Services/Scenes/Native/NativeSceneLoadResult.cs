@@ -1,7 +1,7 @@
 ﻿using Internal.Scopes.Abstract.Scenes;
 using UnityEngine.SceneManagement;
 
-namespace Internal.Scenes.Native
+namespace Internal.Services.Scenes.Native
 {
     public class NativeSceneLoadResult : ISceneLoadResult
     {

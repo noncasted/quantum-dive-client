@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Player.Entity.Common.Definition;
 using GamePlay.Player.Entity.Components.Compose;
 using GamePlay.Player.Entity.Components.Equipment.Compose;
 using GamePlay.Player.Entity.Components.Network.Compose;
 using GamePlay.Player.Entity.States.Compose;
 using GamePlay.Player.Entity.Types.Common;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

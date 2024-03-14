@@ -1,7 +1,7 @@
 ﻿using GamePlay.Player.Entity.Components.Equipment.Definition;
+using GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Player.Entity.Weapons.Sword.Views.Transforms;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.Weapons.Sword.Definition.Remote

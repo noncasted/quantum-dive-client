@@ -1,7 +1,7 @@
 ﻿using Ragon.Client;
 using UnityEngine;
 
-namespace GamePlay.System.Network.Objects.Definition
+namespace GamePlay.Network.Objects.Definition
 {
     public interface INetworkObject
     {

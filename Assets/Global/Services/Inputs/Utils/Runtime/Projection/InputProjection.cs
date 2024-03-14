@@ -1,5 +1,6 @@
-﻿using Global.Cameras.Utils.Runtime;
-using Global.Debugs.Drawing.Runtime;
+﻿using Global.Cameras.Utils.Abstract;
+using Global.Debugs.Drawing.Abstract;
+using Global.Inputs.Utils.Abstract;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

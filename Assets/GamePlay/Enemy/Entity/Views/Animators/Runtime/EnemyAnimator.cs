@@ -1,8 +1,8 @@
 ﻿using System.Threading;
-using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
-using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
-using Common.Tools.UniversalAnimators.Animators.Runtime;
-using Common.Tools.UniversalAnimators.Updaters.Runtime;
+using Common.Tools.UniversalAnimators.Old.Animations.Implementations.Async;
+using Common.Tools.UniversalAnimators.Old.Animations.Implementations.Looped;
+using Common.Tools.UniversalAnimators.Old.Animators.Runtime;
+using Common.Tools.UniversalAnimators.Old.Updaters.Runtime;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Views.Animators.Logs;
 using Internal.Scopes.Abstract.Instances.Entities;

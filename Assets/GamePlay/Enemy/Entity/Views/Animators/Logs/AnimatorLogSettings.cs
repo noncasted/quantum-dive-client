@@ -1,5 +1,5 @@
 ﻿using GamePlay.Enemy.Entity.Views.Animators.Common;
-using Internal.Loggers.Runtime;
+using Internal.Services.Loggers.Runtime;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.Animators.Logs

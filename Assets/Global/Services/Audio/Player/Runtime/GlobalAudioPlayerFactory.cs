@@ -1,9 +1,8 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Services;
-
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Global.Audio.Player.Abstract;
 using Global.Audio.Player.Common;
-using Global.Services.Audio.Player.Abstract;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

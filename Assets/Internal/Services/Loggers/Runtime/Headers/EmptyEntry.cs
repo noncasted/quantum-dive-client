@@ -1,4 +1,4 @@
-﻿namespace Internal.Loggers.Runtime.Headers
+﻿namespace Internal.Services.Loggers.Runtime.Headers
 {
     public class EmptyEntry : LoggerHeader
     {

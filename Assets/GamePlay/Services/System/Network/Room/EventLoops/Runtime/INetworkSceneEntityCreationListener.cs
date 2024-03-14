@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Room.Entities.Factory;
+using GamePlay.Network.Room.Entities.Factory;
 
-namespace GamePlay.System.Network.Room.EventLoops.Runtime
+namespace GamePlay.Network.Room.EventLoops.Runtime
 {
     public interface INetworkSceneEntityCreationListener
     {

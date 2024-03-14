@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Global.Network.Handlers.SceneCollectors.Runtime;
+using Global.Network.Handlers.SceneCollectors.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 
-namespace GamePlay.System.Network.Room.SceneCollectors.Runtime
+namespace GamePlay.Network.Room.SceneCollectors.Runtime
 {
     public class NetworkSceneCollector : IGameSceneCollector, IScopeAwakeListener
     {

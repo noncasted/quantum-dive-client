@@ -1,4 +1,4 @@
-﻿namespace Internal.Loggers.Runtime
+﻿namespace Internal.Services.Loggers.Runtime
 {
     public interface IGlobalLogger
     {

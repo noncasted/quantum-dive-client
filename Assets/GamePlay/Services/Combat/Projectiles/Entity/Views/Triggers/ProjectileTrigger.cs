@@ -1,7 +1,7 @@
 ﻿using GamePlay.Common.Damages;
 using UnityEngine;
 
-namespace GamePlay.Services.Combat.Projectiles.Entity.Views.Triggers
+namespace GamePlay.Projectiles.Entity.Views.Triggers
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(BoxCollider))]

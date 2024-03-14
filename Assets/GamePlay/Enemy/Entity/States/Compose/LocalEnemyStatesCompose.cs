@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Internal.Scopes.Abstract.Instances.Entities;
 using GamePlay.Enemy.Entity.States.Common;
 using GamePlay.Enemy.Entity.States.Damaged.Local;
 using GamePlay.Enemy.Entity.States.Death.Local;
@@ -7,6 +6,7 @@ using GamePlay.Enemy.Entity.States.Following.Local;
 using GamePlay.Enemy.Entity.States.Idle.Local;
 using GamePlay.Enemy.Entity.States.Respawn.Local;
 using GamePlay.Enemy.Entity.States.SubStates.Pushes.Runtime;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

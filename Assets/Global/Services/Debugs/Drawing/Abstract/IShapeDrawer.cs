@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Global.Debugs.Drawing.Runtime
+namespace Global.Debugs.Drawing.Abstract
 {
     public interface IShapeDrawer
     {

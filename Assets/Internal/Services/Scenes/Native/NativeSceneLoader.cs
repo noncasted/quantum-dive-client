@@ -1,10 +1,8 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
-using Internal.Scenes.Logs;
+﻿using Cysharp.Threading.Tasks;
 using Internal.Scopes.Abstract.Scenes;
-using UnityEngine.SceneManagement;
+using Internal.Services.Scenes.Logs;
 
-namespace Internal.Scenes.Native
+namespace Internal.Services.Scenes.Native
 {
     public class NativeSceneLoader : ISceneLoader
     {

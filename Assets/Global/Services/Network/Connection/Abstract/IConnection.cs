@@ -1,7 +1,7 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 
-namespace Global.Network.Connection.Runtime
+namespace Global.Network.Connection.Abstract
 {
     public interface IConnection
     {

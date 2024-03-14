@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Visuals.Cameras.Abstract
+namespace GamePlay.Cameras.Abstract
 {
     public interface ILevelCamera
     {

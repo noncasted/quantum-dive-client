@@ -1,11 +1,11 @@
-﻿using Common.Tools.UniversalAnimators.Updaters.Common;
+﻿using Common.Tools.UniversalAnimators.Old.Updaters.Common;
 using Cysharp.Threading.Tasks;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Common.Tools.UniversalAnimators.Updaters.Runtime
+namespace Common.Tools.UniversalAnimators.Old.Updaters.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = AnimatorsUpdaterRoutes.ServiceName, menuName = AnimatorsUpdaterRoutes.ServicePath)]

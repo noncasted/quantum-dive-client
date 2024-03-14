@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Global.Network.Handlers.ClientHandler.Runtime;
+using Global.Network.Handlers.ClientHandler.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
-using Menu.Network.Entity.Runtime;
+using Menu.Services.Network.Entity.Runtime;
 using Ragon.Client;
 using UnityEngine;
 
-namespace Menu.Network.PlayersLists.Runtime
+namespace Menu.Services.Network.PlayersLists.Runtime
 {
     public class PlayersListHandler : 
         IPlayersList,

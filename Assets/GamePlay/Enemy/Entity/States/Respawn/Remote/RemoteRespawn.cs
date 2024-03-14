@@ -1,5 +1,4 @@
 ﻿using System.Threading;
-using Internal.Scopes.Abstract.Lifetimes;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemy.Entity.States.Abstract;
@@ -7,6 +6,7 @@ using GamePlay.Enemy.Entity.States.Respawn.Common;
 using GamePlay.Enemy.Entity.Views.Animators.Runtime;
 using GamePlay.Enemy.Entity.Views.Sprites.Runtime;
 using Internal.Scopes.Abstract.Instances.Entities;
+using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Protocol;
 
 namespace GamePlay.Enemy.Entity.States.Respawn.Remote

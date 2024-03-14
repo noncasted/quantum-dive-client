@@ -1,4 +1,4 @@
-﻿namespace GamePlay.System.Network.Messaging.Events.Logs
+﻿namespace GamePlay.Network.Messaging.Events.Logs
 {
     public enum NetworkEventsLogType
     {

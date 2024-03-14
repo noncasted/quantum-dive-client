@@ -1,9 +1,9 @@
 ﻿using System.Threading;
-using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
-using Common.Tools.UniversalAnimators.Animations.Implementations.Looped;
+using Common.Tools.UniversalAnimators.Old.Animations.Implementations.Async;
+using Common.Tools.UniversalAnimators.Old.Animations.Implementations.Looped;
 using Cysharp.Threading.Tasks;
 
-namespace Common.Tools.UniversalAnimators.Animators.Runtime
+namespace Common.Tools.UniversalAnimators.Old.Animators.Runtime
 {
     public interface IUniversalAnimator
     {

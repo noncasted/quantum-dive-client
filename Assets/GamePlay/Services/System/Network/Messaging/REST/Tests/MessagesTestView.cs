@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.System.Network.Messaging.REST.Runtime.Abstract;
-using GamePlay.System.Network.Room.EventLoops.Runtime;
-using Global.Network.Handlers.ClientHandler.Runtime;
+using GamePlay.Network.Messaging.REST.Runtime.Abstract;
+using GamePlay.Network.Room.EventLoops.Runtime;
+using Global.Network.Handlers.ClientHandler.Abstract;
 using Ragon.Client;
 using UnityEngine;
 using VContainer;
 
-namespace GamePlay.System.Network.Messaging.REST.Tests
+namespace GamePlay.Network.Messaging.REST.Tests
 {
     public class MessagesTestView : MonoBehaviour, INetworkAwakeListener
     {

@@ -1,7 +1,7 @@
-﻿using Internal.Scopes.Abstract.Containers;
-using Internal.Scopes.Abstract.Instances.Entities;
-using GamePlay.Player.Entity.Components.StateMachines.Remote.Common;
+﻿using GamePlay.Player.Entity.Components.StateMachines.Remote.Common;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Logs;
+using Internal.Scopes.Abstract.Containers;
+using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

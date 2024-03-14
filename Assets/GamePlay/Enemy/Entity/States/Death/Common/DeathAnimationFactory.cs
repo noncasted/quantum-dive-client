@@ -1,4 +1,4 @@
-﻿using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
+﻿using Common.Tools.UniversalAnimators.Old.Animations.Implementations.Async;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

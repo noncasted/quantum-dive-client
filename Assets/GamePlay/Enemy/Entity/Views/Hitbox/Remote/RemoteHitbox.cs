@@ -1,7 +1,7 @@
-﻿using GamePlay.Combat.Hitboxes.Runtime;
-using GamePlay.Common.Damages;
+﻿using GamePlay.Common.Damages;
 using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Enemy.Entity.Views.Hitbox.Common;
+using GamePlay.Hitboxes.Runtime;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
 

@@ -1,5 +1,5 @@
-﻿using Common.Tools.UniversalAnimators.Animations.Abstract;
-using Common.Tools.UniversalAnimators.Animations.Implementations.Async;
+﻿using Common.Tools.UniversalAnimators.Old.Animations.Abstract;
+using Common.Tools.UniversalAnimators.Old.Animations.Implementations.Async;
 
 namespace GamePlay.Enemy.Entity.States.Death.Common
 {

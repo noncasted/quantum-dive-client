@@ -1,11 +1,8 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
-using Internal.Scenes.Logs;
+﻿using Cysharp.Threading.Tasks;
 using Internal.Scopes.Abstract.Scenes;
-using UnityEngine.AddressableAssets;
-using UnityEngine.SceneManagement;
+using Internal.Services.Scenes.Logs;
 
-namespace Internal.Scenes.Addressable
+namespace Internal.Services.Scenes.Addressable
 {
     public class AddressablesSceneLoader : ISceneLoader
     {
