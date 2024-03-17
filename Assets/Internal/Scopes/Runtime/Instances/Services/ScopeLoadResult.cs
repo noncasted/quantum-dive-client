@@ -19,6 +19,7 @@ namespace Internal.Scopes.Runtime.Instances.Services
             Lifetime = lifetime;
             Callbacks = callbacks;
             SceneLoader = sceneLoader;
+            Scenes = sceneLoader.Results;
         }
 
         public LifetimeScope Scope { get; }

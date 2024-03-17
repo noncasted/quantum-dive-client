@@ -98,7 +98,7 @@ namespace Global.System.Updaters.Runtime
             _logger.OnPreUpdatableAdded(_preUpdatables.Count);
         }
 
-        public void Add(ILifetime lifetime, IPreUpdatable updatable)
+        public void Add(IReadOnlyLifetime lifetime, IPreUpdatable updatable)
         {
             _preUpdatables.Add(updatable);
             lifetime.ListenTerminate(() => _preUpdatables.Remove(updatable));
@@ -120,7 +120,7 @@ namespace Global.System.Updaters.Runtime
             _logger.OnUpdatableAdded(_updatables.Count);
         }
 
-        public void Add(ILifetime lifetime, IUpdatable updatable)
+        public void Add(IReadOnlyLifetime lifetime, IUpdatable updatable)
         {
             _updatables.Add(updatable);
             lifetime.ListenTerminate(() => _updatables.Remove(updatable));
@@ -142,7 +142,7 @@ namespace Global.System.Updaters.Runtime
             _logger.OnFixedUpdatableAdded(_fixedUpdatables.Count);
         }
 
-        public void Add(ILifetime lifetime, IFixedUpdatable updatable)
+        public void Add(IReadOnlyLifetime lifetime, IFixedUpdatable updatable)
         {
             _fixedUpdatables.Add(updatable);
             lifetime.ListenTerminate(() => _fixedUpdatables.Remove(updatable));
@@ -164,7 +164,7 @@ namespace Global.System.Updaters.Runtime
             _logger.OnPostFixedUpdatableAdded(_postFixedUpdatables.Count);
         }
 
-        public void Add(ILifetime lifetime, IPostFixedUpdatable updatable)
+        public void Add(IReadOnlyLifetime lifetime, IPostFixedUpdatable updatable)
         {
             _postFixedUpdatables.Add(updatable);
             lifetime.ListenTerminate(() => _postFixedUpdatables.Remove(updatable));
@@ -186,7 +186,7 @@ namespace Global.System.Updaters.Runtime
             _logger.OnGizmosUpdatableAdded(_postFixedUpdatables.Count);
         }
 
-        public void Add(ILifetime lifetime, IGizmosUpdatable updatable)
+        public void Add(IReadOnlyLifetime lifetime, IGizmosUpdatable updatable)
         {
             _gizmosUpdatables.Add(updatable);
             lifetime.ListenTerminate(() => _gizmosUpdatables.Remove(updatable));
@@ -208,7 +208,7 @@ namespace Global.System.Updaters.Runtime
             _logger.OnPreFixedUpdatableAdded(_preFixedUpdatables.Count);
         }
 
-        public void Add(ILifetime lifetime, IPreFixedUpdatable updatable)
+        public void Add(IReadOnlyLifetime lifetime, IPreFixedUpdatable updatable)
         {
             _preFixedUpdatables.Add(updatable);
             lifetime.ListenTerminate(() => _preFixedUpdatables.Remove(updatable));

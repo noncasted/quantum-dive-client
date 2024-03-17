@@ -1,0 +1,4 @@
+﻿{
+  "name": "AssemblyViewer.Domain.Runtime",
+  "references":[ "GUID:6546b03df0bc4494b62f13d0c65c64cd" ]
+}

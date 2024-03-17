@@ -4,16 +4,16 @@ using Global.Inputs.Constranits.Definition;
 using Global.Inputs.View.Abstract;
 using Global.Inputs.View.Implementations.Combat.Abstract;
 using Global.Inputs.View.Logs;
+using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine.InputSystem;
 
 namespace Global.Inputs.View.Implementations.Combat.Runtime
 {
-    public class CombatInput : ICombatInput, IInputSource
+    public class CombatInput : ICombatInput, IInputConstructListener
     {
         public CombatInput(
             IInputConstraintsStorage constraintsStorage,
             IInputActions actions,
-            IInputSourcesHandler listenersHandler,
             Controls.GamePlayActions gamePlay,
             InputViewLogger logger)
         {
@@ -21,44 +21,29 @@ namespace Global.Inputs.View.Implementations.Combat.Runtime
             _actions = actions;
             _gamePlay = gamePlay;
             _logger = logger;
-
-            listenersHandler.AddListener(this);
         }
-        
+
         private readonly IInputConstraintsStorage _constraintsStorage;
         private readonly IInputActions _actions;
         private readonly Controls.GamePlayActions _gamePlay;
         private readonly InputViewLogger _logger;
-        
-        
+
         private readonly IViewableDelegate _rangeAttackPerformed = new ViewableDelegate();
         private readonly IViewableDelegate _rangeAttackCanceled = new ViewableDelegate();
         private readonly IViewableDelegate _meleeAttackPerformed = new ViewableDelegate();
         private readonly IViewableDelegate _meleeAttackCanceled = new ViewableDelegate();
-        
+
         public IViewableDelegate RangeAttackPerformed => _rangeAttackPerformed;
         public IViewableDelegate RangeAttackCanceled => _rangeAttackCanceled;
         public IViewableDelegate MeleeAttackPerformed => _meleeAttackPerformed;
         public IViewableDelegate MeleeAttackCanceled => _meleeAttackCanceled;
-        
-        public void Listen()
+
+        public void OnInputConstructed(IReadOnlyLifetime lifetime)
         {
-            _gamePlay.RangeAttack.performed += OnRangeAttackPerformed;
-            _gamePlay.RangeAttack.canceled += OnRangeAttackCanceled;
-            
-            _gamePlay.MeleeAttack.performed += OnMeleeAttackPerformed;
-            _gamePlay.MeleeAttack.canceled += OnMeleeAttackCanceled;
+            _gamePlay.RangeAttack.Listen(lifetime, OnRangeAttackPerformed, OnRangeAttackCanceled);
+            _gamePlay.MeleeAttack.Listen(lifetime, OnMeleeAttackPerformed, OnMeleeAttackCanceled);
         }
 
-        public void Dispose()
-        {
-            _gamePlay.RangeAttack.performed -= OnRangeAttackPerformed;
-            _gamePlay.RangeAttack.canceled -= OnRangeAttackCanceled;
-            
-            _gamePlay.MeleeAttack.performed -= OnMeleeAttackPerformed;
-            _gamePlay.MeleeAttack.canceled -= OnMeleeAttackCanceled;
-        }
-        
         private void OnRangeAttackPerformed(InputAction.CallbackContext context)
         {
             if (_constraintsStorage[InputConstraints.AttackInput] == true)
@@ -68,7 +53,7 @@ namespace Global.Inputs.View.Implementations.Combat.Runtime
                 _logger.OnInputCanceledWithConstraint(InputConstraints.AttackInput);
                 return;
             }
-            
+
             _logger.OnRangeAttackPerformed();
 
             _actions.Add(InvokeRangePerformed);
@@ -91,12 +76,12 @@ namespace Global.Inputs.View.Implementations.Combat.Runtime
         {
             RangeAttackPerformed?.Invoke();
         }
-        
+
         private void InvokeRangeCanceled()
         {
             RangeAttackCanceled?.Invoke();
         }
-        
+
         private void OnMeleeAttackPerformed(InputAction.CallbackContext context)
         {
             if (_constraintsStorage[InputConstraints.MeleeInput] == true)
@@ -106,7 +91,7 @@ namespace Global.Inputs.View.Implementations.Combat.Runtime
                 _logger.OnInputCanceledWithConstraint(InputConstraints.MeleeInput);
                 return;
             }
-            
+
             _logger.OnMeleeAttackPerformed();
 
             _actions.Add(InvokeMeleePerformed);
@@ -129,7 +114,7 @@ namespace Global.Inputs.View.Implementations.Combat.Runtime
         {
             MeleeAttackPerformed?.Invoke();
         }
-        
+
         private void InvokeMeleeCanceled()
         {
             MeleeAttackCanceled?.Invoke();

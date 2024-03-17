@@ -22,6 +22,8 @@ namespace Internal.Scopes.Mocks.Runtime
 
             scopeLoadResult.Scope.Container.Resolve<ILoadingScreen>().HideGameLoading();
 
+            await scopeLoadResult.Callbacks.RunConstruct();
+
             return new MockBootstrapResult(scopeLoadResult.Scope);
         }
     }

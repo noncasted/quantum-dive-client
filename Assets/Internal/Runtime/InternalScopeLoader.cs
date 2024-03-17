@@ -1,6 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Instances.Services;
+using Internal.Scopes.Abstract.Options;
 using Internal.Scopes.Runtime.Instances.Entities;
 using Internal.Scopes.Runtime.Instances.Services;
 using UnityEngine;
@@ -34,9 +35,12 @@ namespace Internal.Runtime
                 foreach (var service in _config.Services)
                     service.Create(_config.Options, services);
 
-                services.RegisterInstance(_config.Options);
+                services.RegisterInstance(_config.Options)
+                    .As<IOptions>();
+                
                 services.Register<ServiceScopeLoader>(Lifetime.Singleton)
                     .As<IServiceScopeLoader>();
+                
                 services.Register<EntityScopeLoader>(Lifetime.Singleton)
                     .As<IEntityScopeLoader>();
 

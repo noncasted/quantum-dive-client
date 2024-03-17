@@ -9,16 +9,16 @@ using Global.Inputs.View.Abstract;
 using Global.Inputs.View.Implementations.Mouses.Abstract;
 using Global.Inputs.View.Logs;
 using Global.System.Updaters.Abstract;
+using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Global.Inputs.View.Implementations.Mouses.Runtime
 {
-    public class MouseInput : IInputSource, IUpdatable, IMouseInput
+    public class MouseInput : IInputConstructListener, IUpdatable, IMouseInput
     {
         public MouseInput(
             IInputConstraintsStorage constraintsStorage,
-            IInputSourcesHandler inputListenersHandler,
             IUpdater updater,
             ICameraUtils cameraUtils,
             Controls.GamePlayActions gamePlay,
@@ -29,8 +29,6 @@ namespace Global.Inputs.View.Implementations.Mouses.Runtime
             _cameraUtils = cameraUtils;
             _gamePlay = gamePlay;
             _logger = logger;
-
-            inputListenersHandler.AddListener(this);
         }
 
         private readonly IInputConstraintsStorage _constraintsStorage;
@@ -49,6 +47,45 @@ namespace Global.Inputs.View.Implementations.Mouses.Runtime
 
         public Vector2 Position { get; private set; }
         public bool IsWheelPressed => _isWheelPressed;
+
+        public void OnInputConstructed(IReadOnlyLifetime lifetime)
+        {
+            _gamePlay.LeftClick.Listen(lifetime, OnLeftMouseButtonDown, OnLeftMouseButtonUp);
+            _gamePlay.RightClick.Listen(lifetime, OnRightMouseButtonDown, OnRightMouseButtonUp);
+            _gamePlay.MouseWheel.Listen(lifetime, OnMouseWheelDown, OnMouseWheelUp);
+            _gamePlay.Scroll.Listen(lifetime, OnScrollPerformed, OnScrollCanceled);
+
+            _updater.Add(this);
+        }
+
+        public void Listen()
+        {
+            _gamePlay.LeftClick.performed += OnLeftMouseButtonDown;
+            _gamePlay.LeftClick.canceled += OnLeftMouseButtonUp;
+
+            _gamePlay.RightClick.performed += OnRightMouseButtonDown;
+            _gamePlay.RightClick.canceled += OnRightMouseButtonUp;
+
+            _gamePlay.MouseWheel.performed += OnMouseWheelDown;
+            _gamePlay.MouseWheel.canceled += OnMouseWheelUp;
+
+            _gamePlay.Scroll.performed += OnScrollPerformed;
+        }
+
+        public void Dispose()
+        {
+            _gamePlay.LeftClick.performed -= OnLeftMouseButtonDown;
+            _gamePlay.LeftClick.canceled -= OnLeftMouseButtonUp;
+            _gamePlay.RightClick.performed -= OnRightMouseButtonDown;
+            _gamePlay.RightClick.canceled -= OnRightMouseButtonUp;
+
+            _gamePlay.MouseWheel.performed += OnMouseWheelDown;
+            _gamePlay.MouseWheel.canceled += OnMouseWheelUp;
+
+            _gamePlay.Scroll.performed += OnScrollPerformed;
+
+            _updater.Remove(this);
+        }
 
         public async UniTask WaitLeftDownAsync(CancellationToken cancellation)
         {
@@ -74,36 +111,6 @@ namespace Global.Inputs.View.Implementations.Mouses.Runtime
         public Vector2 GetWorldPoint()
         {
             return _cameraUtils.ScreenToWorld(Position);
-        }
-
-        public void Listen()
-        {
-            _gamePlay.LeftClick.performed += OnLeftMouseButtonDown;
-            _gamePlay.LeftClick.canceled += OnLeftMouseButtonUp;
-            _gamePlay.RightClick.performed += OnRightMouseButtonDown;
-            _gamePlay.RightClick.canceled += OnRightMouseButtonUp;
-            
-            _gamePlay.MouseWheel.performed += OnMouseWheelDown;
-            _gamePlay.MouseWheel.canceled += OnMouseWheelUp;
-
-            _gamePlay.Scroll.performed += OnScroll;
-
-            _updater.Add(this);
-        }
-
-        public void Dispose()
-        {
-            _gamePlay.LeftClick.performed -= OnLeftMouseButtonDown;
-            _gamePlay.LeftClick.canceled -= OnLeftMouseButtonUp;
-            _gamePlay.RightClick.performed -= OnRightMouseButtonDown;
-            _gamePlay.RightClick.canceled -= OnRightMouseButtonUp;
-            
-            _gamePlay.MouseWheel.performed += OnMouseWheelDown;
-            _gamePlay.MouseWheel.canceled += OnMouseWheelUp;
-
-            _gamePlay.Scroll.performed += OnScroll;
-
-            _updater.Remove(this);
         }
 
         private void OnLeftMouseButtonDown(InputAction.CallbackContext context)
@@ -157,24 +164,27 @@ namespace Global.Inputs.View.Implementations.Mouses.Runtime
 
             RightUp?.Invoke();
         }
-        
-        
-        private void OnScroll(InputAction.CallbackContext context)
+
+
+        private void OnScrollPerformed(InputAction.CallbackContext context)
         {
             var scroll = context.ReadValue<float>();
-            
+
             if (scroll > 0f)
                 Scroll?.Invoke(Vertical.Up);
             else
                 Scroll?.Invoke(Vertical.Down);
         }
 
+        private void OnScrollCanceled(InputAction.CallbackContext context)
+        {
+        }
+
         private void OnMouseWheelDown(InputAction.CallbackContext context)
         {
             _isWheelPressed = true;
-
         }
-        
+
         private void OnMouseWheelUp(InputAction.CallbackContext context)
         {
             _isWheelPressed = false;
@@ -186,7 +196,7 @@ namespace Global.Inputs.View.Implementations.Mouses.Runtime
             {
                 var touches = Input.touches;
                 _isWheelPressed = false;
-                
+
                 if (touches.Length < 1)
                     return;
 

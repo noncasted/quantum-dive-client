@@ -1,7 +1,8 @@
 {
   "name": "GamePlay.Enemy.TargetSearcher.Runtime",
   "rootNamespace": "",
-  "references": ["GUID:42d99141f95b4ae41b2dc88b36641944",
+  "references": [
+    "GUID:42d99141f95b4ae41b2dc88b36641944",
     "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:0b1cf2365187701478ded818a9129ef7",

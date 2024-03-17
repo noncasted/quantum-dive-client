@@ -10,12 +10,11 @@ namespace Internal.Scopes.Abstract.Scenes
             var result = await loader.Load(data);
 
             var rootObjects = result.Scene.GetRootGameObjects();
+
             foreach (var rootObject in rootObjects)
             {
                 if (rootObject.TryGetComponent(out T searched) == true)
-                {
                     return (result, searched);
-                }
             }
 
             throw new NullReferenceException($"Searched {typeof(T)} is not found");

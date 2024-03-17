@@ -23,6 +23,7 @@ namespace Common.DataTypes.Reactive
         {
             _listeners.Add(listener);
 
+            listener.Invoke(_value);
             lifetime.ListenTerminate(RemoveListener);
             
             return;

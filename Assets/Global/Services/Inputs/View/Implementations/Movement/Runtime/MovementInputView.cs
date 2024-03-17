@@ -4,24 +4,22 @@ using Global.Inputs.Constranits.Definition;
 using Global.Inputs.View.Abstract;
 using Global.Inputs.View.Implementations.Movement.Abstract;
 using Global.Inputs.View.Logs;
+using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Global.Inputs.View.Implementations.Movement.Runtime
 {
-    public class MovementInputView : IMovementInputView, IInputSource
+    public class MovementInputView : IMovementInputView, IInputConstructListener
     {
         public MovementInputView(
             IInputConstraintsStorage constraintsStorage,
-            IInputSourcesHandler sourcesHandler,
             Controls.GamePlayActions gamePlay,
             InputViewLogger logger)
         {
             _constraintsStorage = constraintsStorage;
             _gamePlay = gamePlay;
             _logger = logger;
-            
-            sourcesHandler.AddListener(this);
         }
 
         private readonly IInputConstraintsStorage _constraintsStorage;
@@ -33,17 +31,10 @@ namespace Global.Inputs.View.Implementations.Movement.Runtime
 
         public IViewableDelegate<Vector2> Performed => _performed;
         public IViewableDelegate Canceled => _canceled;
-        
-        public void Listen()
-        {
-            _gamePlay.Movement.performed += OnMovementPerformed;
-            _gamePlay.Movement.canceled += OnMovementCanceled;
-        }
 
-        public void Dispose()
+        public void OnInputConstructed(IReadOnlyLifetime lifetime)
         {
-            _gamePlay.Movement.performed -= OnMovementPerformed;
-            _gamePlay.Movement.canceled -= OnMovementCanceled;
+            _gamePlay.Movement.Listen(lifetime, OnMovementPerformed, OnMovementCanceled);
         }
 
         private void OnMovementPerformed(InputAction.CallbackContext context)

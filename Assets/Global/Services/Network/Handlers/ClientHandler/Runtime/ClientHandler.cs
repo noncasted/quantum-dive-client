@@ -25,7 +25,8 @@ namespace Global.Network.Handlers.ClientHandler.Runtime
 
         public void OnUpdate(float delta)
         {
-            _client?.Update(delta);
+            if (_client != null)
+                _client?.Update(delta);
         }
 
         public void OnDisabled()

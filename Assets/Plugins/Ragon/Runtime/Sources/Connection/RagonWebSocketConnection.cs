@@ -43,14 +43,13 @@ namespace Ragon.Client.Unity
         public void Update()
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
-
-            _webSocket.DispatchMessageQueue();
+            if (_webSocket != null)
+                _webSocket.DispatchMessageQueue();
 #endif
         }
 
         public void Prepare()
         {
-            
         }
 
         public async void Connect(string server, ushort port, uint protocol)
@@ -75,7 +74,7 @@ namespace Ragon.Client.Unity
             {
                 Reliable = new RagonWebSocketReliableChannel(_webSocket, 0);
                 Unreliable = new RagonWebSocketReliableChannel(_webSocket, 1);
-                
+
                 OnConnected?.Invoke();
             }
             catch (Exception ex)

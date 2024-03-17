@@ -2,8 +2,11 @@
 
 namespace Internal.Scopes.Abstract.Scenes
 {
-    public abstract class SceneData : ScriptableObject
+    [CreateAssetMenu(fileName = "Scene_", menuName = "Internal/Scene")]
+    public class SceneData : ScriptableObject
     {
-        
+        [SerializeField] private SceneField _scene;
+
+        public SceneField Scene => _scene;
     }
 }

@@ -1,6 +1,8 @@
 ﻿using Cysharp.Threading.Tasks;
 using Internal.Scopes.Abstract.Scenes;
 using Internal.Services.Scenes.Logs;
+using UnityEngine.AddressableAssets;
+using UnityEngine.SceneManagement;
 
 namespace Internal.Services.Scenes.Addressable
 {
@@ -13,19 +15,13 @@ namespace Internal.Services.Scenes.Addressable
 
         private readonly ScenesFlowLogger _logger;
 
-        // public async UniTask<ISceneLoadResult> Load(ISceneAsset sceneAsset)
-        // {
-        //     var scene = await Addressables.LoadSceneAsync(sceneAsset.Reference, LoadSceneMode.Additive)
-        //         .ToUniTask();
-        //
-        //     _logger.OnSceneLoad(scene.Scene);
-        //
-        //     return new AddressablesSceneLoadResult(scene);
-        // }
-
-        public async UniTask<ISceneLoadResult> Load(SceneData data)
+        public async UniTask<ISceneLoadResult> Load(SceneData sceneAsset)
         {
-            return null;
+            var scene = await Addressables.LoadSceneAsync(sceneAsset.Scene.Key, LoadSceneMode.Additive).ToUniTask();
+
+            _logger.OnSceneLoad(scene.Scene);
+
+            return new AddressablesSceneLoadResult(scene);
         }
     }
 }

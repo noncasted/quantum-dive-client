@@ -6,6 +6,5 @@ namespace Internal.Runtime
     [DisallowMultipleComponent]
     public class InternalScope : LifetimeScope
     {
-        
     }
 }

@@ -1,4 +1,5 @@
-﻿using Drawing;
+﻿using System.Collections.Generic;
+using Drawing;
 using Global.Debugs.Drawing.Abstract;
 using Unity.Mathematics;
 using UnityEngine;
@@ -9,6 +10,14 @@ namespace Global.Debugs.Drawing.Runtime
     {
         private const float _defaultWidth = 10f;
         private readonly Color _defaultColor = Color.white;
+
+        public void DrawSpline(List<Vector3> points, Color color, float width)
+        {
+            using (Draw.ingame.WithLineWidth(width))
+            {
+                Draw.ingame.CatmullRom(points, color);
+            }
+        }
 
         public void DrawCircle(Vector3 position, float radius)
         {
@@ -28,7 +37,6 @@ namespace Global.Debugs.Drawing.Runtime
         public void DrawCircle(float duration, Vector3 position, float radius, float width)
         {
             DrawCircle(duration, position, radius, width, _defaultColor);
-
         }
 
         public void DrawCircle(Vector3 position, float radius, Color color)
@@ -120,7 +128,7 @@ namespace Global.Debugs.Drawing.Runtime
                 var convertedCenter = new float3(center.x, center.y, 0f);
                 var convertedSize = new float2(center.x, center.y);
                 var rotation = Quaternion.Euler(0f, 0f, angle);
-                
+
                 Draw.ingame.WireRectangle(convertedCenter, rotation, convertedSize, color);
             }
         }

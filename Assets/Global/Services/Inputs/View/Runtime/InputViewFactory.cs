@@ -1,10 +1,14 @@
-﻿using Common.DataTypes.Collections.ScriptableRegistries;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using Global.Inputs.View.Abstract;
 using Global.Inputs.View.Common;
+using Global.Inputs.View.Implementations.Combat.Abstract;
+using Global.Inputs.View.Implementations.Combat.Runtime;
+using Global.Inputs.View.Implementations.Mouses.Abstract;
+using Global.Inputs.View.Implementations.Mouses.Runtime;
+using Global.Inputs.View.Implementations.Movement.Abstract;
+using Global.Inputs.View.Implementations.Movement.Runtime;
 using Global.Inputs.View.Logs;
 using Global.Inputs.View.Runtime.Actions;
-using Global.Inputs.View.Runtime.Sources;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
@@ -15,7 +19,7 @@ namespace Global.Inputs.View.Runtime
     [InlineEditor]
     [CreateAssetMenu(fileName = InputViewRoutes.ServiceName,
         menuName = InputViewRoutes.ServicePath)]
-    public class InputViewFactory : ScriptableRegistry<InputSourceFactory>, IServiceFactory
+    public class InputViewFactory : ScriptableObject, IServiceFactory
     {
         [SerializeField] private InputViewLogSettings _logSettings;
 
@@ -23,14 +27,36 @@ namespace Global.Inputs.View.Runtime
         {
             var controls = new Controls();
 
-            foreach (var sourceFactory in Objects)
-                sourceFactory.Create(controls, services);
-            
+            services.RegisterInstance(controls);
+            services.RegisterInstance(controls.GamePlay);
+            services.RegisterInstance(controls.Debug);
+            services.RegisterInstance(controls.AssemblyGraph);
+
+            services.Register<MovementInputView>()
+                .As<IMovementInputView>()
+                .AsSelfResolvable();
+
+            services.Register<RollInputView>()
+                .As<IRollInputView>()
+                .AsSelfResolvable();
+
+            services.Register<MouseInput>()
+                .As<IMouseInput>()
+                .AsSelfResolvable();
+
+            services.Register<CombatInput>()
+                .As<ICombatInput>()
+                .AsSelfResolvable();
+
+            var callbacks = new InputCallbacks();
+            utils.Callbacks.AddCustomListener(callbacks);
+
             services.Register<InputViewLogger>()
                 .WithParameter(_logSettings);
 
             services.Register<InputView>()
                 .WithParameter(controls)
+                .WithParameter(callbacks)
                 .AsImplementedInterfaces()
                 .AsCallbackListener();
 
@@ -38,9 +64,6 @@ namespace Global.Inputs.View.Runtime
                 .As<IInputActions>()
                 .AsSelf()
                 .AsSelfResolvable();
-
-            services.Register<InputSourcesHandler>()
-                .As<IInputSourcesHandler>();
         }
     }
 }

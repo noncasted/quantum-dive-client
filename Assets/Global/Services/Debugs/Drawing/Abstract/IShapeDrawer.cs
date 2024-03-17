@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Global.Debugs.Drawing.Abstract
 {
     public interface IShapeDrawer
     {
+        void DrawSpline(List<Vector3> points, Color color, float width);
         void DrawCircle(Vector3 position, float radius);
         void DrawCircle(float duration, Vector3 position, float radius);
         void DrawCircle(Vector3 position, float radius, float width);

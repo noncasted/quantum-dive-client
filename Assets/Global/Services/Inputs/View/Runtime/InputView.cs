@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Common.DataTypes.Reactive;
 using Global.Inputs.View.Abstract;
 using Global.Inputs.View.Logs;
 using Global.Inputs.View.Runtime.Actions;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
-using UnityEngine.InputSystem;
+using Internal.Scopes.Abstract.Lifetimes;
+using Internal.Scopes.Runtime.Lifetimes;
 
 namespace Global.Inputs.View.Runtime
 {
@@ -14,13 +15,13 @@ namespace Global.Inputs.View.Runtime
         IScopeAwakeListener
     {
         public InputView(
-            IInputSourcesHandler inputSourcesHandler,
+            InputCallbacks callbacks,
             IUpdater updater,
             InputActions inputActions,
             Controls controls,
             InputViewLogger logger)
         {
-            _inputSourcesHandler = inputSourcesHandler;
+            _callbacks = callbacks;
             _updater = updater;
             _inputActions = inputActions;
             _controls = controls;
@@ -29,37 +30,33 @@ namespace Global.Inputs.View.Runtime
 
         private readonly InputViewLogger _logger;
 
-        private readonly IInputSourcesHandler _inputSourcesHandler;
+        private readonly InputCallbacks _callbacks;
         private readonly IUpdater _updater;
         private readonly InputActions _inputActions;
         private readonly Controls _controls;
-        
-        public event Action DebugConsolePreformed;
+
+        private readonly ViewableProperty<ILifetime> _lifetime = new();
+
+        public IViewableProperty<ILifetime> ListenLifetime => _lifetime;
 
         public void OnAwake()
         {
+            _lifetime.Set(new Lifetime());
             _controls.Enable();
-            _inputSourcesHandler.InvokeListen();
+            _callbacks.Invoke(_lifetime.Value);
             _updater.Add(_inputActions);
         }
 
         public void OnBeforeRebind()
         {
-            _inputSourcesHandler.Dispose();
-
+            _lifetime.Value.Terminate();
+            _lifetime.Set(new Lifetime());
             _logger.OnBeforeRebind();
         }
 
         public void OnAfterRebind()
         {
-            _inputSourcesHandler.InvokeListen();
-
             _logger.OnAfterRebind();
-        }
-
-        private void OnDebugConsolePreformed(InputAction.CallbackContext context)
-        {
-            DebugConsolePreformed?.Invoke();
         }
     }
 }

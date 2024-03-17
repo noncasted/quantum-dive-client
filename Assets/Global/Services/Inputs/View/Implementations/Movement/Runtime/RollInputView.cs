@@ -4,23 +4,21 @@ using Global.Inputs.Constranits.Definition;
 using Global.Inputs.View.Abstract;
 using Global.Inputs.View.Implementations.Movement.Abstract;
 using Global.Inputs.View.Logs;
+using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine.InputSystem;
 
 namespace Global.Inputs.View.Implementations.Movement.Runtime
 {
-    public class RollInputView : IRollInputView, IInputSource
+    public class RollInputView : IRollInputView, IInputConstructListener
     {
         public RollInputView(
             IInputConstraintsStorage constraintsStorage,
-            IInputSourcesHandler inputListenersHandler,
             Controls.GamePlayActions gamePlay,
             InputViewLogger logger)
         {
             _constraintsStorage = constraintsStorage;
             _gamePlay = gamePlay;
             _logger = logger;
-
-            inputListenersHandler.AddListener(this);
         }
 
         private readonly IInputConstraintsStorage _constraintsStorage;
@@ -33,16 +31,9 @@ namespace Global.Inputs.View.Implementations.Movement.Runtime
         public IViewableDelegate Performed => _performed;
         public IViewableDelegate Canceled => _canceled;
 
-        public void Listen()
+        public void OnInputConstructed(IReadOnlyLifetime lifetime)
         {
-            _gamePlay.Roll.performed += OnPerformed;
-            _gamePlay.Roll.canceled += OnCanceled;
-        }
-
-        public void Dispose()
-        {
-            _gamePlay.Roll.performed -= OnPerformed;
-            _gamePlay.Roll.canceled -= OnCanceled;
+            _gamePlay.Roll.Listen(lifetime, OnPerformed, OnCanceled);
         }
 
         private void OnPerformed(InputAction.CallbackContext context)
