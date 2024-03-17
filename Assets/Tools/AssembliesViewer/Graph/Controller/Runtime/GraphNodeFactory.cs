@@ -1,5 +1,6 @@
 ﻿using Tools.AssembliesViewer.Domain.Abstract;
 using Tools.AssembliesViewer.Graph.Connections.Abstract;
+using Tools.AssembliesViewer.Graph.Controller.Abstract;
 using Tools.AssembliesViewer.Graph.Nodes.Abstract;
 using Tools.AssembliesViewer.Graph.View.Abstract;
 using UnityEngine;
@@ -19,13 +20,13 @@ namespace Tools.AssembliesViewer.Graph.Controller.Runtime
         private readonly NodeFactoryConfig _config;
         private readonly GraphSave _save;
 
-        public IAssemblyNodeView CreateNode(IAssembly assembly)
+        public IAssemblyNodeView CreateNode(IAssembly assembly, IGraphControllerInterceptor interceptor)
         {
             var position = GetPosition(assembly);
             var view = Object.Instantiate(_config.Prefab, _rootView.Transform);
             view.Block.Position.Value = position;
 
-            view.Construct(assembly);
+            view.Construct(assembly, interceptor);
 
             return view;
         }
@@ -40,8 +41,8 @@ namespace Tools.AssembliesViewer.Graph.Controller.Runtime
 
         private Vector2 GetPosition(IAssembly assembly)
         {
-            if (_save.NodesSave.TryGetValue(assembly.Id, out var save) == true)
-                return save.Position;
+            if (_save.X.TryGetValue(assembly.Id, out var save) == true)
+                return new Vector2(_save.X[assembly.Id], _save.Y[assembly.Id]);
 
             var position = new Vector2(Random.Range(-3000, 3000), Random.Range(-3000, 3000));
 

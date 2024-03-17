@@ -1,3 +1,4 @@
 ﻿{
-  "name": "AssemblyViewer.Graph.Controller.Abstract"
+  "name": "AssemblyViewer.Graph.Controller.Abstract",
+  "references":[ "GUID:6546b03df0bc4494b62f13d0c65c64cd", "GUID:5524fc6a9e384c2c99ec0c029e19248c" ]
 }

@@ -7,12 +7,12 @@ using Tools.AssembliesViewer.Domain.Abstract;
 using Tools.AssembliesViewer.Graph.Connections.Abstract;
 using Tools.AssembliesViewer.Graph.Controller.Abstract;
 using Tools.AssembliesViewer.Graph.Nodes.Abstract;
+using Tools.AssembliesViewer.Graph.Tree;
 using Tools.AssembliesViewer.Services.DomainProvider.Abstract;
 
 namespace Tools.AssembliesViewer.Graph.Controller.Runtime
 {
     public class GraphController :
-        IScopeLoadListener,
         IGraphControllerInterceptor,
         IScopeLifetimeListener,
         IUpdatable
@@ -23,6 +23,7 @@ namespace Tools.AssembliesViewer.Graph.Controller.Runtime
             GraphMover mover,
             GraphNodeFactory nodeFactory,
             GraphSave save,
+            GraphTree tree,
             IAssemblyDomain domain)
         {
             _updater = updater;
@@ -30,6 +31,7 @@ namespace Tools.AssembliesViewer.Graph.Controller.Runtime
             _mover = mover;
             _nodeFactory = nodeFactory;
             _save = save;
+            _tree = tree;
             _domain = domain;
         }
 
@@ -38,19 +40,26 @@ namespace Tools.AssembliesViewer.Graph.Controller.Runtime
         private readonly GraphMover _mover;
         private readonly GraphNodeFactory _nodeFactory;
         private readonly GraphSave _save;
+        private readonly GraphTree _tree;
         private readonly IAssemblyDomain _domain;
 
         private readonly Dictionary<IAssembly, IAssemblyNodeView> _nodes = new();
         private readonly List<INodeConnection> _connections = new();
+        private readonly Dictionary<IAssembly, List<INodeConnection>> _fromConnections = new();
+        private readonly Dictionary<IAssembly, List<INodeConnection>> _toConnections = new();
+        private IAssemblyNodeView _selection;
 
-        public void OnLoaded()
+        public void OnLifetimeCreated(ILifetime lifetime)
         {
             _mover.Start();
 
             foreach (var assembly in _domain.Assemblies)
             {
-                var node = _nodeFactory.CreateNode(assembly);
+                var node = _nodeFactory.CreateNode(assembly, this);
                 _nodes.Add(assembly, node);
+
+                _fromConnections.Add(assembly, new List<INodeConnection>());
+                _toConnections.Add(assembly, new List<INodeConnection>());
             }
 
             foreach (var (assembly, view) in _nodes)
@@ -61,16 +70,19 @@ namespace Tools.AssembliesViewer.Graph.Controller.Runtime
                         continue;
 
                     var connection = _nodeFactory.CreateConnection(referencedNode, view);
+                    _fromConnections[assembly].Add(connection);
+                    _toConnections[referencedAssembly].Add(connection);
                     _connections.Add(connection);
                 }
             }
 
-            Redraw();
-        }
-
-        public void OnLifetimeCreated(ILifetime lifetime)
-        {
             _updater.Add(lifetime, this);
+            _tree.Construct(lifetime, _domain.Assemblies, this);
+
+            foreach (var connection in _connections)
+                connection.Initialize();
+
+            Redraw();
         }
 
         public void SavePositions()
@@ -79,10 +91,8 @@ namespace Tools.AssembliesViewer.Graph.Controller.Runtime
             {
                 var id = assembly.Id;
 
-                if (_save.NodesSave.ContainsKey(id) == false)
-                    _save.NodesSave.Add(id, new NodeSave());
-                
-                _save.NodesSave[id].SetPosition(node.Position);
+                _save.X[id] = node.Position.x;
+                _save.Y[id] = node.Position.y;
             }
         }
 
@@ -92,9 +102,44 @@ namespace Tools.AssembliesViewer.Graph.Controller.Runtime
                 connection.Draw(_drawer);
         }
 
+        public void EnableAssembly(IAssembly assembly)
+        {
+            _nodes[assembly].Enable();
+
+            foreach (var connection in _connections)
+                connection.Draw(_drawer);
+        }
+
+        public void Select(IAssemblyNodeView view)
+        {
+            if (_selection == view)
+                return;
+
+            _selection?.ResetSelection();
+
+            _selection = view;
+            _mover.OnSelected(view);
+            SavePositions();
+        }
+
+        public void DisableAssembly(IAssembly assembly)
+        {
+            _nodes[assembly].Disable();
+
+            foreach (var connection in _connections)
+                connection.Draw(_drawer);
+        }
+
         public void OnUpdate(float delta)
         {
-       
+            if (_selection != null && _selection.IsDirty)
+            {
+                foreach (var connection in _fromConnections[_selection.Assembly])
+                    connection.Draw(_drawer);
+                
+                foreach (var connection in _toConnections[_selection.Assembly])
+                    connection.Draw(_drawer);
+            }
         }
     }
 }

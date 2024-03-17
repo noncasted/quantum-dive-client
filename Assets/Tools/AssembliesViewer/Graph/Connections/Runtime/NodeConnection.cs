@@ -12,9 +12,11 @@ namespace Tools.AssembliesViewer.Graph.Connections.Runtime
     {
         [SerializeField] private NodeConnectionConfig _config;
         [SerializeField] private Polyline _line;
-        
+
         private IAssemblyNodeView _from;
         private IAssemblyNodeView _to;
+
+        private bool _isInitialized;
 
         public void Construct(IAssemblyNodeView from, IAssemblyNodeView to)
         {
@@ -22,8 +24,24 @@ namespace Tools.AssembliesViewer.Graph.Connections.Runtime
             _from = from;
         }
 
+        public void Initialize()
+        {
+            _isInitialized = true;
+        }
+
         public void Draw(IShapeDrawer drawer)
         {
+            if (_isInitialized == false)
+                return;
+            
+            if (_from.IsActive == false || _to.IsActive == false)
+            {
+                Disable();
+                return;
+            }
+
+            Enable();
+            
             _line.points.Clear();
             _line.transform.localPosition = Vector3.zero;
             _line.Thickness = _config.Width;
@@ -70,6 +88,16 @@ namespace Tools.AssembliesViewer.Graph.Connections.Runtime
             }
 
             _line.meshOutOfDate = true;
+        }
+
+        public void Enable()
+        {
+            gameObject.SetActive(true);
+        }
+
+        public void Disable()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

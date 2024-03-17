@@ -8,5 +8,6 @@ namespace Common.DataTypes.Reactive
         T Value { get; }
 
         void View(ILifetime lifetime, Action<T> listener);
+        void View(ILifetime lifetime, Action listener);
     }
 }

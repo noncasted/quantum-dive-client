@@ -29,7 +29,10 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                 var assemblyName = rawAssembly.FilePath.Split("/")[^1].Replace(".asmdef", "");
                 var id = AssetDatabase.AssetPathToGUID(rawAssembly.AssetPath);
                 var references = new List<Assembly>();
-                var assembly = new Assembly(assemblyName, id, references, details);
+                var fullPathName = rawAssembly.AssetPath
+                    .Replace("Assets/", "").Replace(".asmdef", "");
+                var fileName = assemblyName.Split(".")[^1];
+                var assembly = new Assembly(fileName, assemblyName, fullPathName, id, references, details);
                 assemblies.Add(assembly);
                 assemblyToReferences.Add(assembly, references);
                 idsToAssemblies.Add(id, assembly);
@@ -47,13 +50,20 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                     {
                         var pathToUnknown = AssetDatabase.GUIDToAssetPath(reference.Id);
                         var unknownName = pathToUnknown.Split("/")[^1].Replace(".asmdef", "");
+                        var fullPathName = reference.AssetPath
+                            .Replace("Assets/", "").Replace(".asmdef", "");
+
+                        var fileName = unknownName.Split(".")[^1];
+                        
                         var unknownDetails = new AssemblyDetails(
                             Array.Empty<string>(),
                             Array.Empty<string>(),
                             Array.Empty<string>());
 
                         referencedAssembly = new Assembly(
+                            fileName,
                             unknownName,
+                            fullPathName,
                             reference.Id,
                             Array.Empty<IAssembly>(),
                             unknownDetails);

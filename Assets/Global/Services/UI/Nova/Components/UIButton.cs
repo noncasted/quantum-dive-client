@@ -6,25 +6,27 @@ using UnityEngine;
 
 namespace Global.UI.Nova.Components
 {
-    [RequireComponent(typeof(UIBlock2D))]
     [DisallowMultipleComponent]
     public class UIButton : MonoBehaviour, IEventTarget, IEventTargetProvider
     {
         [SerializeField] private ElementColors _colors;
         [SerializeField] private UIButtonHandler[] _handlers;
 
-        private UIBlock2D _block;
+        private UIBlock _block;
         private bool _isLocked;
+        private bool _isPressed;
 
         public event Action Clicked;
 
         public Type BaseTargetableType => typeof(UIButton);
+        public bool IsPressed => _isPressed;
 
         private void Awake()
         {
-            _block = GetComponent<UIBlock2D>();
+            _block = GetComponent<UIBlock>();
 
-            _block.Color = _colors.Idle;
+            if (_colors != null)
+                _block.Color = _colors.Idle;
         }
 
         private void OnEnable()
@@ -66,7 +68,8 @@ namespace Global.UI.Nova.Components
 
         public void Clear()
         {
-            _block.Color = _colors.Idle;
+            if (_colors != null)
+                _block.Color = _colors.Idle;
         }
 
         private void OnHover(Gesture.OnHover data, UIButton visuals)
@@ -74,7 +77,8 @@ namespace Global.UI.Nova.Components
             if (_isLocked == true)
                 return;
 
-            _block.Color = _colors.Hovered;
+            if (_colors != null)
+                _block.Color = _colors.Hovered;
 
             foreach (var handler in _handlers)
                 handler.OnHover();
@@ -85,7 +89,8 @@ namespace Global.UI.Nova.Components
             if (_isLocked == true)
                 return;
 
-            _block.Color = _colors.Idle;
+            if (_colors != null)
+                _block.Color = _colors.Idle;
 
             foreach (var handler in _handlers)
                 handler.OnUnhover();
@@ -96,7 +101,10 @@ namespace Global.UI.Nova.Components
             if (_isLocked == true)
                 return;
 
-            _block.Color = _colors.Pressed;
+            if (_colors != null)
+                _block.Color = _colors.Pressed;
+
+            _isPressed = true;
 
             foreach (var handler in _handlers)
                 handler.OnPress();
@@ -107,8 +115,11 @@ namespace Global.UI.Nova.Components
             if (_isLocked == true)
                 return;
 
-            _block.Color = _colors.Hovered;
+            if (_colors != null)
+                _block.Color = _colors.Hovered;
 
+            _isPressed = false;
+            
             foreach (var handler in _handlers)
                 handler.OnRelease();
         }
@@ -118,7 +129,10 @@ namespace Global.UI.Nova.Components
             if (_isLocked == true)
                 return;
 
-            _block.Color = _colors.Idle;
+            if (_colors != null)
+                _block.Color = _colors.Idle;
+
+            _isPressed = false;
 
             foreach (var handler in _handlers)
                 handler.OnCancel();
@@ -128,7 +142,7 @@ namespace Global.UI.Nova.Components
         {
             if (_isLocked == true)
                 return;
-            
+
             Clicked?.Invoke();
         }
 

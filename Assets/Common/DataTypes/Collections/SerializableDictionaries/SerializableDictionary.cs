@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Common.DataTypes.Collections.SerializableDictionaries
 {
     [Serializable]
-    public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>,ISerializationCallbackReceiver
+    public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
     {
         [SerializeField] private TKey[] _keys = Array.Empty<TKey>();
 
@@ -14,10 +14,10 @@ namespace Common.DataTypes.Collections.SerializableDictionaries
         public void OnAfterDeserialize()
         {
             Clear();
-            
+
             if (_values == null || _keys == null)
                 return;
-            
+
             for (var i = 0; i < _keys.Length && i < _values.Length; i++)
                 this[_keys[i]] = _values[i];
         }

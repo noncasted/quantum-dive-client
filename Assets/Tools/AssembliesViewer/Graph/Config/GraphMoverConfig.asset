@@ -14,28 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scrollSensitivity: 0.1
   _scrollSpeed: 4
-  _moveSpeed: 250
+  _moveSpeed: 500
   _scaleBounds: {x: 0.05, y: 1.5}
+  _nodeMoveSpeed: 0.5
   _scrollFactor:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
-      inSlope: -0.08513362
-      outSlope: -0.08513362
+      value: 0.8863385
+      inSlope: -0.24569249
+      outSlope: -0.24569249
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.044225145
+      outWeight: 0.027777778
     - serializedVersion: 3
       time: 1
-      value: 0.5120239
-      inSlope: -1.2790961
-      outSlope: -1.2790961
+      value: 0.03239149
+      inSlope: -0.25012794
+      outSlope: -0.25012794
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.021198869
+      inWeight: 0.0270468
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

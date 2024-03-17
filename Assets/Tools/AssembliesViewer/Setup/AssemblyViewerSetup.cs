@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Global.UI.Nova.InputManagers.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Scenes;
@@ -9,6 +10,7 @@ using Internal.Scopes.Mocks.Runtime;
 using Tools.AssembliesViewer.Graph.Controller.Abstract;
 using Tools.AssembliesViewer.Graph.Controller.Runtime;
 using Tools.AssembliesViewer.Graph.Controller.Runtime.Inputs;
+using Tools.AssembliesViewer.Graph.Tree;
 using Tools.AssembliesViewer.Graph.View.Abstract;
 using Tools.AssembliesViewer.Graph.View.Runtime;
 using Tools.AssembliesViewer.Services.DomainProvider.Abstract;
@@ -33,7 +35,9 @@ namespace Tools.AssembliesViewer.Setup
         [SerializeField] private NodeFactoryConfig _factoryConfig;
         [SerializeField] private GraphSave _save;
         [SerializeField] private GraphControllerView _controllerView;
-
+        [SerializeField] private GraphTree _tree;
+        [SerializeField] private Camera _camera;
+        
         public LifetimeScope ScopePrefab => _scopePrefab;
         public SceneData ServicesScene => _servicesScene;
         public bool IsMock => true;
@@ -50,6 +54,9 @@ namespace Tools.AssembliesViewer.Setup
 
             await result.RegisterLoadedScene(scope);
             await scope.Callbacks.RunConstruct();
+
+            var inputManager = scope.Scope.Container.Resolve<IUIInputManager>();
+            inputManager.SetCamera(_camera);
         }
 
         public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
@@ -87,6 +94,8 @@ namespace Tools.AssembliesViewer.Setup
             
             services.Register<GraphNodeFactory>()
                 .WithParameter(_factoryConfig);
+
+            services.RegisterInstance(_tree);
         }
     }
 }
