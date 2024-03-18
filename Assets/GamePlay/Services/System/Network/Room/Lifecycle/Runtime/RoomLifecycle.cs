@@ -10,7 +10,7 @@ using Ragon.Client;
 using Ragon.Protocol;
 
 namespace GamePlay.Network.Room.Lifecycle.Runtime
-{   
+{
     public class RoomLifecycle :
         IScopeAwakeAsyncListener,
         IScopeDisableAsyncListener,
@@ -29,33 +29,33 @@ namespace GamePlay.Network.Room.Lifecycle.Runtime
             _callbacks = callbacks;
             _updater = updater;
         }
-        
+
         private readonly IClientProvider _clientProvider;
         private readonly ISceneEntityFactory _sceneEntityFactory;
         private readonly IGamePlayNetworkCallbacks _callbacks;
         private readonly IUpdater _updater;
 
         private bool _isOwnerEventInvoked;
-        
+
         public RagonRoom Room => _clientProvider.Client.Room;
         public string Id => Room.Id;
         public bool IsOwner => Room.Local.IsRoomOwner;
         public RagonPlayer LocalPlayer => Room.Local;
-        
+
         public event Action BecameOwner;
-        
+
         public async UniTask OnAwakeAsync()
         {
             var flagEntityTask = _sceneEntityFactory.Create();
 
             await _callbacks.InvokeRegisterCallbacks(_clientProvider.Client.Event);
 
-            var entityCreation =  _callbacks.InvokeSceneEntityCreation();
+            var entityCreation = _callbacks.InvokeSceneEntityCreation();
 
             await UniTask.Yield();
 
             SceneLoaded();
-            
+
             await flagEntityTask;
             await entityCreation;
 
@@ -85,8 +85,8 @@ namespace GamePlay.Network.Room.Lifecycle.Runtime
                 payload.Serialize(buffer);
 
                 rawPayload = new RagonPayload(buffer.WriteOffset);
-                rawPayload.Read(buffer);    
-                
+                rawPayload.Read(buffer);
+
                 entity.Prepare(_clientProvider.Client, 0, entity.Type, true, Room.Local, rawPayload);
             }
 

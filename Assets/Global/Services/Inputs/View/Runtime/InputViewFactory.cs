@@ -34,19 +34,19 @@ namespace Global.Inputs.View.Runtime
 
             services.Register<MovementInputView>()
                 .As<IMovementInputView>()
-                .AsSelfResolvable();
+                .AsCallbackListener();
 
             services.Register<RollInputView>()
                 .As<IRollInputView>()
-                .AsSelfResolvable();
+                .AsCallbackListener();
 
             services.Register<MouseInput>()
                 .As<IMouseInput>()
-                .AsSelfResolvable();
+                .AsCallbackListener();
 
             services.Register<CombatInput>()
                 .As<ICombatInput>()
-                .AsSelfResolvable();
+                .AsCallbackListener();
 
             var callbacks = new InputCallbacks();
             utils.Callbacks.AddCustomListener(callbacks);
@@ -62,8 +62,7 @@ namespace Global.Inputs.View.Runtime
 
             services.Register<InputActions>()
                 .As<IInputActions>()
-                .AsSelf()
-                .AsSelfResolvable();
+                .AsCallbackListener();
         }
     }
 }

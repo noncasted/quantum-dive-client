@@ -1,9 +1,11 @@
 ﻿using GamePlay.Projectiles.Common;
 using NaughtyAttributes;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace GamePlay.Projectiles.Systems.Sorting
 {
+    [InlineEditor]
     [CreateAssetMenu(fileName = ProjectilesRoutes.SortingConfigName,
         menuName = ProjectilesRoutes.SortingConfigPath)]
     public class ProjectileSortingConfig : ScriptableObject

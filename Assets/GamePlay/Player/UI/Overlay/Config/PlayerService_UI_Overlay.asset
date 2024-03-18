@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6437f660c9dd4fa897751c2284e7b3a2, type: 3}
-  m_Name: LocalConfig_ProjectilesCollisionDetection
+  m_Script: {fileID: 11500000, guid: 9591eae68d5b4df097cc87888f4b38c7, type: 3}
+  m_Name: PlayerService_UI_Overlay
   m_EditorClassIdentifier: 
-  _collisionLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  _scene: {fileID: 11400000, guid: 4c31eff04b1325b48bf53f8fc2060414, type: 2}

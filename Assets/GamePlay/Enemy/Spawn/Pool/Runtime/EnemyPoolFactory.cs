@@ -15,7 +15,7 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
         menuName = EnemyPoolRoutes.PoolPath)]
     public class EnemyPoolFactory : ScriptableObject, IServiceFactory
     {
-        [SerializeField] [Indent] [NestedScriptableObjectField] private SceneData _poolScene;
+        [SerializeField] [Indent] private SceneData _poolScene;
 
         public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {

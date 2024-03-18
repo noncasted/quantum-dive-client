@@ -14,7 +14,7 @@ namespace GamePlay.Player.UI.Overlay.Runtime.Bootstrap
         menuName = PlayerOverlayRoutes.ServicePath)]
     public class PlayerOverlayFactory : ScriptableObject, IServiceFactory
     {
-        [SerializeField] [NestedScriptableObjectField] private SceneData _scene;
+        [SerializeField] private SceneData _scene;
 
         public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: PlayerServicesCompose
   m_EditorClassIdentifier: 
   _playerFactory: {fileID: 11400000, guid: 7c56c68a1621b2c42add3f80cdbe9dfb, type: 2}
-  _playerEquipmentMapper: {fileID: 11400000, guid: 69e225b40cce146418dd1c788fb92476, type: 2}
-  _playerStatesRegistry: {fileID: 11400000, guid: ebb26513f0c8f044e8459e395699b05a, type: 2}
-  _playerOverlay: {fileID: 11400000, guid: ce4c7d8e3cccebf41998d305f65a1401, type: 2}
+  _playerEquipmentMapper: {fileID: 11400000, guid: 69e225b40cce146418dd1c788fb92476,
+    type: 2}
+  _playerStatesRegistry: {fileID: 11400000, guid: ebb26513f0c8f044e8459e395699b05a,
+    type: 2}
+  _playerOverlay: {fileID: 11400000, guid: 7be20f57f00d95a469f3d3b6a2874501, type: 2}
   _playerList: {fileID: 11400000, guid: 7ccdf775f6fa7994982118acea3a319f, type: 2}

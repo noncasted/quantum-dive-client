@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af3373e87254f4d8b11a2b6525e0ff7, type: 3}
   m_Name: ProjectileSortingConfig
   m_EditorClassIdentifier: 
-  _behindWall: Player_Behind
-  _frontWall: Player_Front
+  _behindWall: Default
+  _frontWall: Default
   _checkLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   _rayDistance: 1

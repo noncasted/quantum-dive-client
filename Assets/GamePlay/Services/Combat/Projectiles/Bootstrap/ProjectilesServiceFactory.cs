@@ -23,7 +23,7 @@ namespace GamePlay.Projectiles.Bootstrap
         menuName = ProjectilesRoutes.ServicePath)]
     public class ProjectilesServiceFactory : ScriptableObject, IServiceFactory
     {
-        [SerializeField] [NestedScriptableObjectField] private SceneData _poolScene;
+        [SerializeField] private SceneData _poolScene;
 
         [SerializeField] [Indent] private ProjectilesLogSettings _logSettings;
         [SerializeField] [Indent] private ProjectilesCollisionDetectionConfigAsset _collisionDetectionConfig;

@@ -28,6 +28,6 @@ namespace Internal.Scopes.Runtime.Instances.Entities
         public ILifetime Lifetime { get; }
         public ScopeCallbacks InternalCallbacks { get; }
 
-        public ICallbacksRegistry Callbacks => Callbacks;
+        public ICallbacksRegistry Callbacks => InternalCallbacks;
     }
 }

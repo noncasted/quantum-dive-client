@@ -16,7 +16,7 @@ namespace GamePlay.VfxPools.Runtime
     [CreateAssetMenu(fileName = VfxPoolRoutes.ServiceName, menuName = VfxPoolRoutes.ServicePath)]
     public class VfxPoolFactory : ScriptableObject, IServiceFactory
     {
-        [SerializeField] [NestedScriptableObjectField] [Indent] private SceneData _scene;
+        [SerializeField] [Indent] private SceneData _scene;
 
         public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {

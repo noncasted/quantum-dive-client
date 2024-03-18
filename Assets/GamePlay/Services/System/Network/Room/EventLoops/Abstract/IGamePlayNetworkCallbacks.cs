@@ -4,7 +4,7 @@ using Ragon.Client;
 
 namespace GamePlay.Services.System.Network.Room.EventLoops.Abstract
 {
-    public interface IGamePlayNetworkCallbacks : ICallbacksRegistry
+    public interface IGamePlayNetworkCallbacks
     {
         UniTask InvokeRegisterCallbacks(RagonEventCache events);
         UniTask InvokeSceneEntityCreation();

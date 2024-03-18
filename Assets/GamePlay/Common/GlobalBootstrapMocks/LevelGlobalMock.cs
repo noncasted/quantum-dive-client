@@ -2,6 +2,7 @@
 using GamePlay.Common.Config.Runtime;
 using Global.Network.Connection.Abstract;
 using Global.Network.Session.Abstract;
+using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Mocks.Runtime;
 using UnityEngine;
 using VContainer;
@@ -32,11 +33,11 @@ namespace GamePlay.Common.GlobalBootstrapMocks
             var sessionJoin = resolver.Resolve<ISessionJoin>();
             var joinResult =  await sessionJoin.JoinRandom();
             
-            // var scopeLoaderFactory = resolver.Resolve<IServiceScopeLoader>();
-            // var scopeLoader = scopeLoaderFactory.Create(_levelScope, result.Parent);
-            // var scope = await scopeLoader.Load();
-            //
-            // await result.RegisterLoadedScene(scope);
+            var scopeLoader = resolver.Resolve<IServiceScopeLoader>();
+            var scopeResult = await scopeLoader.Load(result.Parent, _levelScope);
+            
+            await result.RegisterLoadedScene(scopeResult);
+            await scopeResult.Callbacks.RunConstruct();
         }
     }
 }

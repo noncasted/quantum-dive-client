@@ -18,6 +18,7 @@ namespace GamePlay.Network.Room.EventLoops.Runtime
             utils.Callbacks.AddCustomListener(callbacks);
 
             services.RegisterInstance(callbacks)
+                .AsSelf()
                 .As<IGamePlayNetworkCallbacks>();
 
             services.Inject(callbacks);

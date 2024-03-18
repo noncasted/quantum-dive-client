@@ -14,6 +14,9 @@ namespace GamePlay.Network.Room.Entities.Factory
 
         public async UniTask WaitAttachAsync()
         {
+            if (_entity.IsAttached == true)
+                return;
+            
             var completion = new UniTaskCompletionSource();
             
             void OnAttached(RagonEntity entity)

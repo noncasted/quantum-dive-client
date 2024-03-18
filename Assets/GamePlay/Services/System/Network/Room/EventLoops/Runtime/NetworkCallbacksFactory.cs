@@ -9,7 +9,7 @@ using VContainer;
 
 namespace GamePlay.Network.Room.EventLoops.Runtime
 {
-    public class NetworkCallbacksFactory : ICallbacksListener
+    public class NetworkCallbacksFactory : ICallbacksListener, IGamePlayNetworkCallbacks
     {
         [Inject]
         private void Construct(IClientProvider clientProvider, ISceneEntityFactory sceneEntityFactory)
@@ -22,8 +22,6 @@ namespace GamePlay.Network.Room.EventLoops.Runtime
         {
             _awake.Add(new CallbackEntity<INetworkAwakeListener>(
                 listener => listener.OnNetworkAwake(), 0));
-            _callbacksRegistration.Add(
-                new CallbackEntity<INetworkEventsRegistrationListener>(RegisterCallbacks, 0));
             _sceneEntityCreation.Add(
                 new AsyncCallbackEntity<INetworkSceneEntityCreationListener>(CreateSceneEntities, 0));
             _destroy.Add(
@@ -64,11 +62,6 @@ namespace GamePlay.Network.Room.EventLoops.Runtime
         public async UniTask InvokeDestroyCallbacks()
         {
             await _destroy.Run();
-        }
-
-        private void RegisterCallbacks(INetworkEventsRegistrationListener listener)
-        {
-            listener.RegisterEvents(_clientProvider.Client.Event);
         }
 
         private UniTask CreateSceneEntities(INetworkSceneEntityCreationListener listener)

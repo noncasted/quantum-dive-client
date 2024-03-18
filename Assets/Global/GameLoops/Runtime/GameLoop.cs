@@ -126,8 +126,8 @@ namespace Global.GameLoops.Runtime
 
             var scopeLoader = await _scopeLoaderFactory.Load(_scope, config);
             _currentScope = scopeLoader;
-
             await unloadTask;
+            await scopeLoader.Callbacks.RunConstruct();
         }
     }
 }
