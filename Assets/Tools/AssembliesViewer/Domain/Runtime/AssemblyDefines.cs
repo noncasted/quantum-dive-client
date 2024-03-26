@@ -44,6 +44,10 @@ namespace Tools.AssembliesViewer.Domain.Runtime
         public string ListToString(string header, IReadOnlyList<string> list)
         {
             var newLine = Environment.NewLine;
+            
+            if (list.Count == 0)
+                return $"{newLine}    \"{header}\": []";
+            
             var value = $"{newLine}    \"{header}\": [";
 
             for (var i = 0; i < list.Count; i++)

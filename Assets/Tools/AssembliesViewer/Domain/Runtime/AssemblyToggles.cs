@@ -21,15 +21,15 @@ namespace Tools.AssembliesViewer.Domain.Runtime
         public bool OverrideReferences { get; set; }
         public bool AutoReference { get; set; }
         public bool NoEngineReferences { get; set; }
-        
+
         public override string ToString()
         {
             var newLine = Environment.NewLine;
             var value =
-                $"\"allowUnsafeCode\": {AllowUnsafeCode},{newLine}" +
-                $"\"overrideReferences\": {OverrideReferences},{newLine}" +
-                $"\"autoReferenced\": {AutoReference},{newLine}" +
-                $"\"noEngineReferences\": {NoEngineReferences}{newLine}";
+                $"    \"allowUnsafeCode\": {AllowUnsafeCode.ToString().ToLower()},{newLine}" +
+                $"    \"overrideReferences\": {OverrideReferences.ToString().ToLower()},{newLine}" +
+                $"    \"autoReferenced\": {AutoReference.ToString().ToLower()},{newLine}" +
+                $"    \"noEngineReferences\": {NoEngineReferences.ToString().ToLower()}{newLine}";
 
             return value;
         }

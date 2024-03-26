@@ -47,7 +47,7 @@ namespace Tools.AssembliesViewer.Domain.Runtime
             var newLine = Environment.NewLine;
             var json =
                 "{" +
-                $"{newLine}    \"name\": {Path.Name},{newLine}" +
+                $"{newLine}    \"name\": \"{Path.Name}\",{newLine}" +
                 $"    {ReferencesToString()},{newLine}" +
                 $"    {Defines.ToString()},{newLine}" +
                 $"    {Toggles.ToString()}{newLine}" +
@@ -58,11 +58,11 @@ namespace Tools.AssembliesViewer.Domain.Runtime
 
         string ReferencesToString()
         {
-            var value = $"\"references\": [{Environment.NewLine}";
+            var value = $"\"references\": [";
 
             for (var i = 0; i < References.Count; i++)
             {
-                value += $",{Environment.NewLine}    \"GUID:{References[i].Id}\"";
+                value += $"{Environment.NewLine}    \"GUID:{References[i].Id}\"";
                 if (i != References.Count - 1)
                     value += ",";
             }
