@@ -29,8 +29,8 @@ namespace Tools.AssembliesViewer.Graph.Tree
             
             foreach (var assembly in assemblies)
             {
-                _save.Assemblies.TryAdd(assembly.Name, true);
-                var group = GetOrCreate(baseGroup, assembly.FullPathName);
+                _save.Assemblies.TryAdd(assembly.Path.Name, true);
+                var group = GetOrCreate(baseGroup, assembly.Path.FullPathName);
                 group.Assemblies.Add(assembly);
             }
 
@@ -58,14 +58,14 @@ namespace Tools.AssembliesViewer.Graph.Tree
             foreach (var assembly in group.Assemblies)
             {
                 var assemblyEntry = Instantiate(_assemblyPrefab, _entriesRoot);
-                var isEntryActive = _save.Assemblies.GetValueOrDefault(assembly.Name, true);
+                var isEntryActive = _save.Assemblies.GetValueOrDefault(assembly.Path.Name, true);
                 assemblyEntry.Construct(assembly, isEntryActive);
                 foldout.AddEntry(lifetime, assemblyEntry);
 
                 _assemblyToGroup.Add(assembly, group);
 
                 assemblyEntry.IsToggled.View(lifetime,
-                    (_, value) => OnAssemblyToggle(assembly, assembly.Name, value));
+                    (_, value) => OnAssemblyToggle(assembly, assembly.Path.Name, value));
             }
         }
 
@@ -117,7 +117,7 @@ namespace Tools.AssembliesViewer.Graph.Tree
                 {
                     var enableAssembly = value;
                     
-                    if (_save.Assemblies[assembly.Name] == false)
+                    if (_save.Assemblies[assembly.Path.Name] == false)
                         enableAssembly = false;
 
                     if (enableAssembly == true)
@@ -154,7 +154,7 @@ namespace Tools.AssembliesViewer.Graph.Tree
                 return;
             }
 
-            if (_save.Assemblies[assembly.Name] == false)
+            if (_save.Assemblies[assembly.Path.Name] == false)
                 value = false;
 
             _save.Assemblies[save] = value;

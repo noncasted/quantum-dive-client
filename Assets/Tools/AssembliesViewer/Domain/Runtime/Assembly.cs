@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Tools.AssembliesViewer.Domain.Abstract;
 
@@ -43,29 +44,30 @@ namespace Tools.AssembliesViewer.Domain.Runtime
 
         public void Write()
         {
+            var newLine = Environment.NewLine;
             var json =
-                "{\n" +
-                $"    \"name\": {Path.Name},\n" +
-                $"    {ReferencesToString()},\r\n" +
-                $"    {Defines.ToString()},\r\n" +
-                $"    {Toggles.ToString()}\r\n" +
+                "{" +
+                $"{newLine}    \"name\": {Path.Name},{newLine}" +
+                $"    {ReferencesToString()},{newLine}" +
+                $"    {Defines.ToString()},{newLine}" +
+                $"    {Toggles.ToString()}{newLine}" +
                 "}";
-            
+
             File.WriteAllText(Path.FullPathName, json);
         }
 
         string ReferencesToString()
         {
-            var value = "\"references\": [\n";
+            var value = $"\"references\": [{Environment.NewLine}";
 
             for (var i = 0; i < References.Count; i++)
             {
-                value += $",\r\n    \"GUID:{References[i].Id}\"";
+                value += $",{Environment.NewLine}    \"GUID:{References[i].Id}\"";
                 if (i != References.Count - 1)
                     value += ",";
             }
 
-            value += "\r\n    ]";
+            value += $"{Environment.NewLine}    ]";
 
             return value;
         }

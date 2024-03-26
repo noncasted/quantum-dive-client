@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Tools.AssembliesViewer.Domain.Abstract;
 
 namespace Tools.AssembliesViewer.Domain.Runtime
@@ -42,17 +43,18 @@ namespace Tools.AssembliesViewer.Domain.Runtime
 
         public string ListToString(string header, IReadOnlyList<string> list)
         {
-            var value = $"\r\n    \"{header}\": [";
+            var newLine = Environment.NewLine;
+            var value = $"{newLine}    \"{header}\": [";
 
             for (var i = 0; i < list.Count; i++)
             {
-                value += $",\r\n    \"{list[i]}\"";
+                value += $",{newLine}    \"{list[i]}\"";
 
                 if (i != list.Count - 1)
-                    value += ",\r\n";
+                    value += $",{newLine}";
             }
 
-            value += "\r\n    ]";
+            value += $"{newLine}    ]";
 
             return value;
         }

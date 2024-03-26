@@ -1,4 +1,5 @@
-﻿using Tools.AssembliesViewer.Domain.Abstract;
+﻿using System;
+using Tools.AssembliesViewer.Domain.Abstract;
 
 namespace Tools.AssembliesViewer.Domain.Runtime
 {
@@ -23,11 +24,12 @@ namespace Tools.AssembliesViewer.Domain.Runtime
         
         public override string ToString()
         {
+            var newLine = Environment.NewLine;
             var value =
-                $"\"allowUnsafeCode\": {AllowUnsafeCode},\r\n" +
-                $"\"overrideReferences\": {OverrideReferences},\r\n" +
-                $"\"autoReferenced\": {AutoReference},\r\n" +
-                $"\"noEngineReferences\": {NoEngineReferences}\r\n";
+                $"\"allowUnsafeCode\": {AllowUnsafeCode},{newLine}" +
+                $"\"overrideReferences\": {OverrideReferences},{newLine}" +
+                $"\"autoReferenced\": {AutoReference},{newLine}" +
+                $"\"noEngineReferences\": {NoEngineReferences}{newLine}";
 
             return value;
         }

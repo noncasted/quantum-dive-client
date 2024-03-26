@@ -61,9 +61,9 @@ namespace Tools.AssembliesViewer.Graph.Nodes.Runtime
         public void Construct(IAssembly assembly, IGraphControllerInterceptor interceptor)
         {
             _interceptor = interceptor;
-            name = assembly.Name;
+            name = assembly.Path.Name;
             _assembly = assembly;
-            _text.text = assembly.Name;
+            _text.text = assembly.Path.Name;
         }
 
         private void OnSelectionClicked()

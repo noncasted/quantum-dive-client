@@ -45,8 +45,8 @@ namespace Tools.AssembliesViewer.Graph.Tree
         public void Construct(IAssembly assembly, bool isToggled)
         {
             _assembly = assembly;
-            name = assembly.DirectoryName;
-            _assemblyName.text = assembly.DirectoryName;
+            name = assembly.Path.DirectoryName;
+            _assemblyName.text = assembly.Path.DirectoryName;
             _toggle.ToggledOn = isToggled;
             
             _size.Set(_baseSize);

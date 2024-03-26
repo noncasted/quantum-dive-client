@@ -14,6 +14,7 @@ namespace Tools.AssembliesViewer.Domain.Abstract
         
         void AddAssembly(IAssembly assembly);
         void RemoveReference(IAssembly assembly);
-        
+
+        void Write();
     }
 }
