@@ -1,6 +1,5 @@
-﻿using Common.DataTypes.Structs;
+﻿using Common.DataTypes.Runtime.Structs;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Abstract;
-using GamePlay.Enemy.Entity.Views.Transforms.Local.Logs;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime
@@ -10,23 +9,16 @@ namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime
         IEnemyPosition,
         IEnemyTransformProvider
     {
-        public EnemyTransform(
-            Transform transform,
-            TransformLogger logger)
+        public EnemyTransform(Transform transform)
         {
             Transform = transform;
-            _logger = logger;
         }
-
-        private readonly TransformLogger _logger;
 
         public Vector3 Position
         {
             get
             {
                 var position = (Vector2)Transform.position;
-
-                _logger.OnPositionUsed(position);
 
                 return position;
             }
@@ -40,15 +32,11 @@ namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Runtime
         public void SetPosition(Vector3 position)
         {
             Transform.position = position;
-
-            _logger.OnPositionSet(position);
         }
 
         public void SetRotation(float angle)
         {
             Transform.localRotation = Quaternion.Euler(0f, 0f, angle);
-
-            _logger.OnRotationSet(angle);
         }
     }
 }

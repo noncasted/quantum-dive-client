@@ -1,0 +1,17 @@
+{
+    "name": "Global.Configs.Registry.Common",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ab14ae7a0c3843c6be8d0c6f059b02f7",
+        "GUID:fb9b00a9a42c4c1459774b1ef88fcd74"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

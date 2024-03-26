@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using GamePlay.Player.Entity.Components.Network.EntityHandler.Abstract;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Abstract;
-using GamePlay.Player.Entity.Components.StateMachines.Remote.Logs;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Services.Mappers.States.Abstract;
@@ -16,12 +15,10 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
     {
         protected RemoteStateMachine(
             IPlayerStateMapper mapper,
-            IEntityProvider entityProvider,
-            RemoteStateMachineLogger logger) : base(0, false)
+            IEntityProvider entityProvider) : base(0, false)
         {
             _mapper = mapper;
             _entityProvider = entityProvider;
-            _logger = logger;
             _states = new Dictionary<PlayerStateDefinition, IPlayerRemoteState>();
             _flushes = new Dictionary<PlayerStateDefinition, IRemotePayloadFlush>();
 
@@ -33,7 +30,6 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
 
         private readonly IPlayerStateMapper _mapper;
         private readonly IEntityProvider _entityProvider;
-        private readonly RemoteStateMachineLogger _logger;
         private readonly Dictionary<PlayerStateDefinition, IPlayerRemoteState> _states;
         private readonly Dictionary<PlayerStateDefinition, IRemotePayloadFlush> _flushes;
 
@@ -58,13 +54,9 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
         {
             _states.Add(definition, state);
 
-            _logger.OnStateRegistered(_mapper.GetId(definition), definition.name);
-
             lifetime.ListenTerminate(() =>
             {
                 _states.Remove(definition);
-
-                _logger.OnStateUnregistered(_mapper.GetId(definition), definition.name);
             });
         }
 
@@ -80,8 +72,6 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
 
         public override void Serialize(RagonBuffer buffer)
         {
-            _logger.OnSerialize(_state, _mapper.GetDefinition(_state).name);
-
             var compressed = _compressor.Compress(_state);
 
             buffer.Write(compressed, _compressor.RequiredBits);
@@ -112,7 +102,6 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
             }
 
             _state = _compressor.Decompress(compressed);
-            _logger.OnDeserialize(_state, definition.name);
 
             _current?.Break();
             _current = _states[definition];

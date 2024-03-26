@@ -1,7 +1,5 @@
-﻿using Common.DataTypes.Network;
-using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
+﻿using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
 using GamePlay.Enemy.Entity.Views.Transforms.Local.Abstract;
-using GamePlay.Enemy.Entity.Views.Transforms.Remote.Logs;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Ragon.Client;
@@ -14,21 +12,16 @@ namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Runtime
         protected TransformSync(
             IEnemyTransform transform,
             IUpdater updater,
-            IEntityProvider entityProvider,
-            TransformSyncLogger logger) : base(0, false)
+            IEntityProvider entityProvider) : base(0, false)
         {
             _transform = transform;
             _updater = updater;
             _entityProvider = entityProvider;
-            _logger = logger;
-
-            SetFixedSize(RagonBufferExtensions.GetVectorRequiredBits());
         }
 
         private readonly IEnemyTransform _transform;
         private readonly IUpdater _updater;
         private readonly IEntityProvider _entityProvider;
-        private readonly TransformSyncLogger _logger;
 
         public void OnEnabled()
         {
@@ -47,21 +40,10 @@ namespace GamePlay.Enemy.Entity.Views.Transforms.Remote.Runtime
 
         public override void Serialize(RagonBuffer buffer)
         {
-            _logger.OnSerialize(_transform.Position);
-
-            buffer.WriteVector(_transform.Position);
-        }
+         }
 
         public override void Deserialize(RagonBuffer buffer)
         {
-            var position = buffer.ReadVector();
-
-            if (_entityProvider.IsMine == true)
-                return;
-
-            _logger.OnDeserialize(_transform.Position);
-
-            _transform.SetPosition(position);
         }
     }
 }

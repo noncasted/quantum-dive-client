@@ -1,8 +1,6 @@
-﻿using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using GamePlay.Projectiles.Common;
 using GamePlay.Projectiles.Factory;
-using GamePlay.Projectiles.Logs;
 using GamePlay.Projectiles.Network;
 using GamePlay.Projectiles.Pool;
 using GamePlay.Projectiles.Registry.Runtime;
@@ -25,7 +23,6 @@ namespace GamePlay.Projectiles.Bootstrap
     {
         [SerializeField] private SceneData _poolScene;
 
-        [SerializeField] [Indent] private ProjectilesLogSettings _logSettings;
         [SerializeField] [Indent] private ProjectilesCollisionDetectionConfigAsset _collisionDetectionConfig;
         [SerializeField] [Indent] private ProjectileSortingConfig _sortingConfig;
 
@@ -33,10 +30,6 @@ namespace GamePlay.Projectiles.Bootstrap
 
         public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
-            services.Register<ProjectilesLogger>()
-                .WithParameter(_logSettings)
-                .AsSelf();
-
             services.Register<ProjectilesCollisionDetection>()
                 .WithParameter(_collisionDetectionConfig)
                 .AsSelf();

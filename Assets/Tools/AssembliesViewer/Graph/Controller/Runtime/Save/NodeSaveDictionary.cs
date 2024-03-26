@@ -1,5 +1,5 @@
 ﻿using System;
-using Common.DataTypes.Collections.SerializableDictionaries;
+using Common.DataTypes.Runtime.Collections;
 using UnityEngine;
 
 namespace Tools.AssembliesViewer.Graph.Controller.Runtime

@@ -1,5 +1,4 @@
-﻿using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using GamePlay.Environment.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
@@ -15,7 +14,7 @@ namespace GamePlay.Environment.Bootstrap
         menuName = LevelEnvironmentRoutes.ServicePath)]
     public class LevelEnvironmentFactory : ScriptableObject, IServiceFactory
     {
-        [SerializeField] [NestedScriptableObjectField]
+        [SerializeField]
         private SceneData _scene;
 
         public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)

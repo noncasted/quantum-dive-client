@@ -1,8 +1,18 @@
-﻿{
-  "name": "Internal.Scopes.Abstract",
-  "references": [
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:cdfd058b393524bddbb7e850e0d53c8e"
-  ]
+{
+    "name": "Internal.Scopes.Abstract",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

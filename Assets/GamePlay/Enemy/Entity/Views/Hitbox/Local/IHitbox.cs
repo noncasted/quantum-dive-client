@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using GamePlay.Common.Damages;
 using UnityEngine;
 

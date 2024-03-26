@@ -1,7 +1,7 @@
 {
   "name": "GamePlay.Player.Equipment.Slots.Binder.Runtime",
   "references": [
-    "GUID:94e5ca42c58876942a8ffdd1c63b952f",
+    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
     "GUID:a8f6b895322c45408ed64cb258c91d51",
     

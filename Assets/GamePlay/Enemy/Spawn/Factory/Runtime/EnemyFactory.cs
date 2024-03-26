@@ -2,7 +2,6 @@
 using GamePlay.Enemy.Entity.Common.Definition.Asset.Abstract;
 using GamePlay.Enemy.Services.Mappers.Definitions.Abstract;
 using GamePlay.Enemy.Spawn.Factory.Abstract;
-using GamePlay.Enemy.Spawn.Factory.Logs;
 using GamePlay.Enemy.Spawn.Pool.Abstract;
 using GamePlay.Enemy.Spawn.Pool.Runtime;
 using GamePlay.Network.Objects.Factories.Registry;
@@ -21,21 +20,18 @@ namespace GamePlay.Enemy.Spawn.Factory.Runtime
             INetworkFactoriesRegistry factoriesRegistry,
             IDynamicEntityFactory dynamicEntityFactory,
             IEnemyPool pool,
-            IEnemyDefinitionMapper definitionMapper,
-            EnemyFactoryLogger logger)
+            IEnemyDefinitionMapper definitionMapper)
         {
             _factoriesRegistry = factoriesRegistry;
             _dynamicEntityFactory = dynamicEntityFactory;
             _pool = pool;
             _definitionMapper = definitionMapper;
-            _logger = logger;
         }
 
         private readonly INetworkFactoriesRegistry _factoriesRegistry;
         private readonly IDynamicEntityFactory _dynamicEntityFactory;
         private readonly IEnemyPool _pool;
         private readonly IEnemyDefinitionMapper _definitionMapper;
-        private readonly EnemyFactoryLogger _logger;
 
         private readonly ObjectIdGenerator _typeGenerator = new();
 
@@ -55,8 +51,6 @@ namespace GamePlay.Enemy.Spawn.Factory.Runtime
             var root = await _pool.GetLocal(definition, position, entity);
             var payload = new EnemySpawnPayload(position);
             await _dynamicEntityFactory.Send(entity, payload);
-
-            _logger.OnLocal(definition.Identification.Name, position);
         }
 
         public async UniTaskVoid OnRemoteCreated(int objectId, RagonEntity entity)
@@ -64,7 +58,6 @@ namespace GamePlay.Enemy.Spawn.Factory.Runtime
             var prefabId = _typeGenerator.GetPrefabId(objectId);
             var definition = _definitionMapper.GetDefinition(prefabId.ObjectId);
             var root = await _pool.GetRemote(definition, entity);
-            _logger.OnRemote(definition.Identification.Name, entity.GetAttachPayload<EnemySpawnPayload>().Position);
         }
     }
 }

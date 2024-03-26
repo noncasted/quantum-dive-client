@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using GamePlay.Enemy.Entity.Views.Sprites.Abstract;
-using GamePlay.Enemy.Entity.Views.Sprites.Logs;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -14,26 +13,20 @@ namespace GamePlay.Enemy.Entity.Views.Sprites.Runtime
         IEnemySpriteLayer,
         IEnemySprite
     {
-        public EnemySprite(SpriteRenderer sprite, SortingGroup sortingGroup, SpriteLogger logger)
+        public EnemySprite(SpriteRenderer sprite, SortingGroup sortingGroup)
         {
             _sprite = sprite;
             _sortingGroup = sortingGroup;
-            _logger = logger;
         }
 
         private readonly SpriteRenderer _sprite;
         private readonly SortingGroup _sortingGroup;
-        private readonly SpriteLogger _logger;
 
         private readonly List<SpriteRenderer> _subSprites = new();
 
         public Material Material
         {
-            get
-            {
-                _logger.OnMaterialUsed(_sprite.material);
-                return _sprite.material;
-            }
+            get { return _sprite.material; }
         }
 
         public event Action<bool> XFlipped;
@@ -54,8 +47,6 @@ namespace GamePlay.Enemy.Entity.Views.Sprites.Runtime
                 foreach (var subSprite in _subSprites)
                     subSprite.flipX = _sprite.flipX;
 
-            _logger.OnFlipSetted(isFlipped);
-
             XFlipped?.Invoke(isFlipped);
         }
 
@@ -69,8 +60,6 @@ namespace GamePlay.Enemy.Entity.Views.Sprites.Runtime
             };
 
             SetFlipX(isFlipped, flipSubSprites);
-
-            _logger.OnFlippedAlong(direction);
         }
 
         public void FlipAlong(float angle)
@@ -84,9 +73,6 @@ namespace GamePlay.Enemy.Entity.Views.Sprites.Runtime
         public void SetMaterial(Material material)
         {
             _sprite.material = material;
-
-
-            _logger.OnMaterialSetted(material);
         }
 
         public void Enable(bool enableSubSprites = false)
@@ -96,8 +82,6 @@ namespace GamePlay.Enemy.Entity.Views.Sprites.Runtime
             if (enableSubSprites == true)
                 foreach (var subSprite in _subSprites)
                     subSprite.enabled = true;
-
-            _logger.OnEnabled();
         }
 
         public void Disable(bool disableSubSprites = false)
@@ -107,8 +91,6 @@ namespace GamePlay.Enemy.Entity.Views.Sprites.Runtime
             if (disableSubSprites == true)
                 foreach (var subSprite in _subSprites)
                     subSprite.enabled = false;
-
-            _logger.OnDisabled();
         }
 
         public void AddSubSprite(SpriteRenderer subSprite)

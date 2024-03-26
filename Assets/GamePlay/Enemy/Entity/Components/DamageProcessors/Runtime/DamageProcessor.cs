@@ -30,17 +30,17 @@ namespace GamePlay.Enemy.Entity.Components.DamageProcessors.Runtime
 
         public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _hitbox.DamageReceived.Listen(lifetime, ProcessDamage);   
+           // _hitbox.DamageReceived.Listen(lifetime, ProcessDamage);   
         }
         
         private void ProcessDamage(Damage damage)
         {
-            _health.Remove(damage.Amount);
-
-            if (_health.IsAlive == true)
-                _damaged.Enter(damage.Direction, damage.PushForce).Forget();
-            else
-                _death.Enter();
+            // _health.Remove(damage.Amount);
+            //
+            // if (_health.IsAlive == true)
+            //     _damaged.Enter(damage.Direction, damage.PushForce).Forget();
+            // else
+            //     _death.Enter();
         }
     }
 }

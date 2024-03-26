@@ -17,13 +17,11 @@ namespace GamePlay.Enemy.Entity.States.Damaged.Remote
             IRemoteStateMachine stateMachine,
             IEnemyAnimator animator,
             IDamagedVfx vfx,
-            DamagedAnimation animation,
             DamagedDefinition definition)
         {
             _stateMachine = stateMachine;
             _animator = animator;
             _vfx = vfx;
-            _animation = animation;
             _definition = definition;
         }
 
@@ -31,7 +29,6 @@ namespace GamePlay.Enemy.Entity.States.Damaged.Remote
         private readonly IEnemyAnimator _animator;
         private readonly IDamagedVfx _vfx;
         
-        private readonly DamagedAnimation _animation;
         private readonly DamagedDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -46,7 +43,7 @@ namespace GamePlay.Enemy.Entity.States.Damaged.Remote
             var angle = buffer.ReadFloat(0, 360, 1f);
             _vfx.Play(angle);
             _cancellation = new CancellationTokenSource();
-            _animator.PlayAsync(_animation, _cancellation.Token).Forget();
+            //_animator.PlayAsync(_animation, _cancellation.Token).Forget();
         }
 
         public void Break()

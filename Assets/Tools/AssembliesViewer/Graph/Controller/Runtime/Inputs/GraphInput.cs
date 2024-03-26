@@ -52,7 +52,7 @@ namespace Tools.AssembliesViewer.Graph.Controller.Runtime.Inputs
 
         public void OnLifetimeCreated(ILifetime lifetime)
         {
-            _inputView.ListenLifetime.View(lifetime, OnInputConstructed);
+          //  _inputView.ListenLifetime.View(lifetime, OnInputConstructed);
         }
         
         public void OnInputConstructed(IReadOnlyLifetime lifetime)

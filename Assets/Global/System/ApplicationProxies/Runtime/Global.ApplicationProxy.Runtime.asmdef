@@ -1,0 +1,21 @@
+{
+    "name": "Global.ApplicationProxy.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:bd71372aeab84273b835f262f10b44ae",
+        "GUID:e23281dba4af4d40bf7c56f1f12bf3e8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

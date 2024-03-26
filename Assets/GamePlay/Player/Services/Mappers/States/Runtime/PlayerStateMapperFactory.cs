@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.DataTypes.Collections.ScriptableRegistries;
+using Common.DataTypes.Runtime.Collections;
 using Cysharp.Threading.Tasks;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Services.Mappers.States.Abstract;

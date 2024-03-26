@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using Global.Configs.Upgrades.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 

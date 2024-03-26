@@ -32,7 +32,7 @@ namespace GamePlay.Projectiles.Bootstrap
 
         public void OnEnabled()
         {
-            _listener = Msg.Listen<EcsBootstrapEvent>(OnEcsBootstrap);
+          //  _listener = Msg.Listen<EcsBootstrapEvent>(OnEcsBootstrap);
         }
 
         public void OnDisabled()

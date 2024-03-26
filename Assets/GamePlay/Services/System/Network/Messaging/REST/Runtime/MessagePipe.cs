@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using GamePlay.Network.Messaging.REST.Logs;
 using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
@@ -13,17 +12,15 @@ namespace GamePlay.Network.Messaging.REST.Runtime
         where TRequest : IRagonEvent, IMessage, new()
         where TResponse : IRagonEvent, IMessage, new()
     {
-        public MessagePipe(RagonEntity entity, MessengerLogger logger)
+        public MessagePipe(RagonEntity entity)
         {
             _entity = entity;
-            _logger = logger;
 
             _requestListener = _entity.OnEvent<TRequest>(OnRequest);
             _responseListener = _entity.OnEvent<TResponse>(OnResponse);
         }
 
         private readonly RagonEntity _entity;
-        private readonly MessengerLogger _logger;
 
         private readonly IDisposable _requestListener;
         private readonly IDisposable _responseListener;
@@ -52,34 +49,28 @@ namespace GamePlay.Network.Messaging.REST.Runtime
             _requestHandlers.Add(id, requestHandler);
             _entity.ReplicateEvent(payload, player, RagonReplicationMode.Server);
 
-            _logger.OnDirectRequestSent<TRequest>(player);
-
             return requestHandler;
         }
 
         public void SendResponse(RagonPlayer player, TResponse payload)
         {
             _entity.ReplicateEvent(payload, player, RagonReplicationMode.Server);
-            _logger.OnDirectResponseSent<TResponse>(player);
         }
 
         private void OnRequest(RagonPlayer player, TRequest request)
         {
             var responseHandler = new ResponseHandler<TRequest, TResponse>(player, request, this);
             _requestRoute?.Invoke(responseHandler).Forget();
-            _logger.OnDirectRequestReceived<TRequest>(player);
         }
 
         private void OnResponse(RagonPlayer player, TResponse response)
         {
             if (_requestHandlers.TryGetValue(response.RequestId.Value, out var responseHandler) == false)
             {
-                _logger.NoResponseHandlerFoundException<TResponse>(response.RequestId.Value);
                 throw new NullReferenceException();
             }
 
             responseHandler.OnResponded(response);
-            _logger.OnDirectResponseReceived<TResponse>(player);
         }
     }
 }

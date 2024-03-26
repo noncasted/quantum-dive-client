@@ -1,6 +1,6 @@
 ﻿using GamePlay.Player.UI.Overlay.Abstract;
-using Global.UI.UiStateMachines.Abstract;
-using Global.UI.UiStateMachines.Runtime;
+using Global.UI.StateMachines.Abstract;
+using Global.UI.StateMachines.Runtime;
 
 namespace GamePlay.Player.UI.Overlay.Runtime.State
 {

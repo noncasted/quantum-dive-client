@@ -12,17 +12,13 @@ namespace GamePlay.Enemy.Entity.States.Damaged.Local
     public class LocalDamagedFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] private DamagedPushConfig _pushConfig;
-        [SerializeField] private DamagedAnimationFactory _animation;
         [SerializeField] private DamagedDefinition _definition;
         
         public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
-            var animation = _animation.Create();
-            
             services.Register<LocalDamaged>()
                 .WithParameter<IPushConfig>(_pushConfig)
                 .WithParameter(_definition)
-                .WithParameter(animation)
                 .As<IDamaged>()
                 .AsCallbackListener();
         }

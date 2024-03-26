@@ -1,5 +1,4 @@
 ﻿using System;
-using Common.Tools.ObjectsPools.Runtime.Abstract;
 using GamePlay.Projectiles.Entity.Views.Actions;
 using GamePlay.Projectiles.Entity.Views.Transforms;
 using UnityEngine;
@@ -10,13 +9,13 @@ namespace GamePlay.Projectiles.Entity.Views.Facade
     [RequireComponent(typeof(ProjectileTransform))]
     public class ProjectileView :
         MonoBehaviour,
-        IPoolObject,
+        //IPoolObject,
         IProjectileView
     {
         private IProjectileTransform _transform;
         private IProjectileActions _actions;
 
-        private Action<IPoolObject> _returnToPool;
+       // private Action<IPoolObject> _returnToPool;
 
         public IProjectileTransform Transform => _transform;
         public IProjectileActions Actions => _actions;
@@ -28,12 +27,12 @@ namespace GamePlay.Projectiles.Entity.Views.Facade
             _actions = GetComponent<IProjectileActions>();
         }
 
-        public void Construct(Action<IPoolObject> returnToPool)
-        {
-            _returnToPool = returnToPool;
-
-            _actions.Construct(ReturnToPool);
-        }
+        // public void Construct(Action<IPoolObject> returnToPool)
+        // {
+        //     _returnToPool = returnToPool;
+        //
+        //     _actions.Construct(ReturnToPool);
+        // }
         
         public void OnTaken()
         {
@@ -43,9 +42,9 @@ namespace GamePlay.Projectiles.Entity.Views.Facade
         {
         }
 
-        private void ReturnToPool()
-        {
-            _returnToPool?.Invoke(this);
-        }
+        // private void ReturnToPool()
+        // {
+        //     _returnToPool?.Invoke(this);
+        // }
     }
 }

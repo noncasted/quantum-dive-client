@@ -17,13 +17,11 @@ namespace GamePlay.Enemy.Entity.States.Death.Remote
             IRemoteStateMachine stateMachine,
             IEnemyAnimator animator,
             IEnemySpriteSwitcher spriteSwitcher,
-            DeathAnimation animation,
             DeathDefinition definition)
         {
             _stateMachine = stateMachine;
             _animator = animator;
             _spriteSwitcher = spriteSwitcher;
-            _animation = animation;
             _definition = definition;
         }
 
@@ -31,7 +29,6 @@ namespace GamePlay.Enemy.Entity.States.Death.Remote
         private readonly IEnemyAnimator _animator;
         private readonly IEnemySpriteSwitcher _spriteSwitcher;
         
-        private readonly DeathAnimation _animation;
         private readonly DeathDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -50,8 +47,6 @@ namespace GamePlay.Enemy.Entity.States.Death.Remote
         private async UniTask Process()
         {
             _cancellation = new CancellationTokenSource();
-            
-            await _animator.PlayAsync(_animation, _cancellation.Token);
             
             _spriteSwitcher.Disable();
         }

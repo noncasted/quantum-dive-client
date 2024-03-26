@@ -57,7 +57,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Root.Runtime
             _isActive = true;
 
             if (_lifetime != null)
-                await _lifetime.Terminate();
+                 _lifetime.Terminate();
 
             _lifetime = new Lifetime();
             await _callbacks.RunEnable(_lifetime);
@@ -73,7 +73,7 @@ namespace GamePlay.Player.Entity.Weapons.Bow.Components.Root.Runtime
 
             _isActive = false;
 
-            await _lifetime.Terminate();
+             _lifetime.Terminate();
             await _callbacks.RunDisable();
         }
     }

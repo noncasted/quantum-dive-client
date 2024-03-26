@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using Internal.Scopes.Abstract.Environments;
 using Internal.Scopes.Abstract.Options;
 using Internal.Services.Options.Common;
+using Internal.Setup.Abstract;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -8,10 +10,10 @@ namespace Internal.Services.Options.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = "Options", menuName = OptionRoutes.RootPath)]
-    public class Options : ScriptableObject, IOptions
+    public class Options : SerializedScriptableObject, IOptions, IOptionsSetup
     {
-        [SerializeField] private List<EnvironmentType> _optionsPriority;
-        [SerializeField] private OptionsRegistriesDictionary _registries;
+        [SerializeField] private List<EnvironmentDefinition> _optionsPriority;
+        [SerializeField] private Dictionary<EnvironmentDefinition, OptionsRegistry> _registries;
 
         public void Setup()
         {

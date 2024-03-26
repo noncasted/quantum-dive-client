@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Collections.ScriptableRegistries;
+﻿using Common.DataTypes.Runtime.Collections;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Mappers.States.Common;

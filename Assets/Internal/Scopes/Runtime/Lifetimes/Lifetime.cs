@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
 using Internal.Scopes.Abstract.Lifetimes;
 
 namespace Internal.Scopes.Runtime.Lifetimes
@@ -8,7 +7,6 @@ namespace Internal.Scopes.Runtime.Lifetimes
     public class Lifetime : ILifetime
     {
         private readonly HashSet<Action> _terminationListeners = new();
-        private readonly HashSet<Func<UniTask>> _asyncTerminationListeners = new();
 
         private bool _isTerminated;
 
@@ -16,31 +14,18 @@ namespace Internal.Scopes.Runtime.Lifetimes
 
         public void ListenTerminate(Action callback)
         {
+            if (_isTerminated == true)
+                return;
+            
             _terminationListeners.Add(callback);
         }
 
-        public void ListenTerminate(Func<UniTask> callback)
-        {
-            _asyncTerminationListeners.Add(callback);
-        }
-
-        public async UniTask Terminate()
+        public void Terminate()
         {
             _isTerminated = true;
             
             foreach (var listener in _terminationListeners)
                 listener.Invoke();
-
-            var tasks = new UniTask[_asyncTerminationListeners.Count];
-            var index = 0;
-
-            foreach (var listener in _asyncTerminationListeners)
-            {
-                tasks[index] = listener.Invoke();
-                index++;
-            }
-
-            await UniTask.WhenAll(tasks);
         }
     }
 }

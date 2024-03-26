@@ -2,21 +2,19 @@
 using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
 using GamePlay.Network.Compose;
+using Global.Common.Mocks.Runtime;
 using Global.Network.Connection.Abstract;
 using Global.Network.Session.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Scenes;
 using Internal.Scopes.Common.Services;
-using Internal.Scopes.Mocks.Runtime;
 using UnityEngine;
-using VContainer;
 using VContainer.Unity;
 
 namespace GamePlay.Network.Messaging.REST.Tests
 {
     public class MessagesTestGlobalMock : MockBase, IServiceScopeConfig
     {
-        [SerializeField] private GlobalMock _global;
         [SerializeField] private LevelNetworkCompose _network;
 
         [SerializeField] private GamePlayScope _scopePrefab;
@@ -39,27 +37,27 @@ namespace GamePlay.Network.Messaging.REST.Tests
 
         public override async UniTaskVoid Process()
         {
-            var result = await _global.BootstrapGlobal();
-            var resolver = result.Resolver;
-
-            var connection = resolver.Resolve<IConnection>();
-            await connection.Connect("player");
-
-            var sessionName = "message-test";
-
-            var sessionJoin = resolver.Resolve<ISessionJoin>();
-            var joinResult = await sessionJoin.Join(sessionName);
-
-            if (joinResult.Type == SessionJoinResultType.Fail)
-            {
-                var sessionCreate = resolver.Resolve<ISessionCreate>();
-                await sessionCreate.Create("room");
-            }
-
-            var scopeLoaderFactory = resolver.Resolve<IServiceScopeLoader>();
-            var scope = await scopeLoaderFactory.Load(result.Parent, this);
-
-            await result.RegisterLoadedScene(scope);
+            // var result = await _global.BootstrapGlobal();
+            // var resolver = result.Resolver;
+            //
+            // var connection = resolver.Resolve<IConnection>();
+            // await connection.Connect("player");
+            //
+            // var sessionName = "message-test";
+            //
+            // var sessionJoin = resolver.Resolve<ISessionJoin>();
+            // var joinResult = await sessionJoin.Join(sessionName);
+            //
+            // if (joinResult.Type == SessionJoinResultType.Fail)
+            // {
+            //     var sessionCreate = resolver.Resolve<ISessionCreate>();
+            //     await sessionCreate.Create("room");
+            // }
+            //
+            // var scopeLoaderFactory = resolver.Resolve<IServiceScopeLoader>();
+            // var scope = await scopeLoaderFactory.Load(result.Parent, this);
+            //
+            // await result.RegisterLoadedScene(scope);
         }
     }
 }

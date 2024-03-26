@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Abstract;
-using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Logs;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Services.Mappers.States.Abstract;
 using Internal.Scopes.Abstract.Lifetimes;
@@ -15,12 +14,10 @@ namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime
     {
         protected RemoteStateMachine(
             IEnemyStateMapper mapper,
-            IEntityProvider entityProvider,
-            RemoteStateMachineLogger logger) : base(0, false)
+            IEntityProvider entityProvider) : base(0, false)
         {
             _mapper = mapper;
             _entityProvider = entityProvider;
-            _logger = logger;
             _states = new Dictionary<EnemyStateDefinition, IEnemyRemoteState>();
             _flushes = new Dictionary<EnemyStateDefinition, IRemoteStatePayloadFlush>();
             _stateCompressor = new IntCompressor(0, 256);
@@ -31,7 +28,6 @@ namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime
         private readonly IEnemyStateMapper _mapper;
         private readonly IEntityProvider _entityProvider;
 
-        private readonly RemoteStateMachineLogger _logger;
         private readonly Dictionary<EnemyStateDefinition, IEnemyRemoteState> _states;
         private readonly Dictionary<EnemyStateDefinition, IRemoteStatePayloadFlush> _flushes;
 
@@ -62,12 +58,10 @@ namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime
         public void RegisterState(ILifetime lifetime, EnemyStateDefinition definition, IEnemyRemoteState state)
         {
             _states.Add(definition, state);
-            _logger.OnStateRegistered(_mapper.GetId(definition), definition.name);
             
             lifetime.ListenTerminate(() =>
             {
                 _states.Remove(definition);
-                _logger.OnStateUnregistered(_mapper.GetId(definition), definition.name);
             });
         }
 
@@ -83,8 +77,6 @@ namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime
 
         public override void Serialize(RagonBuffer buffer)
         {
-            _logger.OnSerialize(_state, _mapper.GetDefinition(_state).name);
-
             var compressed = _stateCompressor.Compress(_state);
 
             buffer.Write(compressed, _stateCompressor.RequiredBits);
@@ -115,8 +107,6 @@ namespace GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime
 
                 return;
             }
-
-            _logger.OnDeserialize(_state, definition.name);
 
             _current?.Break();
             _current = _states[definition];

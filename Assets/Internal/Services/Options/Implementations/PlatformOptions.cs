@@ -5,12 +5,9 @@ using UnityEngine;
 namespace Internal.Services.Options.Implementations
 {
     [InlineEditor]
+    [CreateAssetMenu(fileName = "Options_Platform", menuName = "Internal/Options/Platform")]
     public class PlatformOptions : OptionsEntry
     {
-        [SerializeField] private TargetPlatform _platform;
-
-        public TargetPlatform Platform => _platform;
-        
         public bool IsEditor
         {
             get

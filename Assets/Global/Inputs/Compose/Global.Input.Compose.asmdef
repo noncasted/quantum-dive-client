@@ -1,0 +1,20 @@
+{
+    "name": "Global.Input.Compose",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9a30e5b105be423994f0ee27d935f22f",
+        "GUID:b03721a1eeb8491da187242f7870dca2",
+        "GUID:3cc113908b8840f1b9eb71e36aec1c03",
+        "GUID:c713b254602614c43a1d94a2a13ba844",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

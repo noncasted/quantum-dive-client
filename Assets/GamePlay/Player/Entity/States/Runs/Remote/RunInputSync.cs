@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Structs;
+﻿using Common.DataTypes.Runtime.Structs;
 using Ragon.Client;
 using Ragon.Client.Compressor;
 using Ragon.Protocol;

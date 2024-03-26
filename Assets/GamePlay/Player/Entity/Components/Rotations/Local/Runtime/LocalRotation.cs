@@ -1,5 +1,4 @@
 ﻿using GamePlay.Player.Entity.Components.Rotations.Local.Abstract;
-using GamePlay.Player.Entity.Components.Rotations.Local.Logs;
 using GamePlay.Player.Entity.Components.Rotations.Remote.Abstract;
 using GamePlay.Player.Entity.Views.RotationPoint.Abstract;
 using Global.Inputs.Utils.Abstract;
@@ -15,18 +14,15 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
             IInputProjection inputProjection,
             IUpdater updater,
             IPlayerRotationPoint point,
-            IRotationSync sync,
-            LocalRotationLogger logger)
+            IRotationSync sync)
         {
             _inputProjection = inputProjection;
             _updater = updater;
             _point = point;
             _sync = sync;
-            _logger = logger;
         }
 
         private readonly IInputProjection _inputProjection;
-        private readonly LocalRotationLogger _logger;
         private readonly IPlayerRotationPoint _point;
         private readonly IRotationSync _sync;
         private readonly IUpdater _updater;
@@ -37,9 +33,7 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
         {
             get
             {
-                _logger.OnRotationUsed(_angle);
-
-                return _angle;
+               return _angle;
             }
         }
 
@@ -51,9 +45,6 @@ namespace GamePlay.Player.Entity.Components.Rotations.Local.Runtime
         public void OnPreUpdate(float delta = 0f)
         {
             _angle = _inputProjection.GetAngleFrom(_point.Position);
-
-            _logger.OnRotationSet(_angle);
-
             _sync.SetRotation(_angle);
         }
     }

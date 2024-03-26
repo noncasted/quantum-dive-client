@@ -19,7 +19,6 @@ namespace GamePlay.Enemy.Entity.States.Respawn.Local
             IEnemySpriteSwitcher spriteSwitcher,
             IHitbox hitbox,
             IHealth health,
-            RespawnAnimation animation,
             RespawnDefinition definition)
         {
             _stateMachine = stateMachine;
@@ -27,7 +26,6 @@ namespace GamePlay.Enemy.Entity.States.Respawn.Local
             _spriteSwitcher = spriteSwitcher;
             _hitbox = hitbox;
             _health = health;
-            _animation = animation;
             _definition = definition;
         }
 
@@ -37,7 +35,6 @@ namespace GamePlay.Enemy.Entity.States.Respawn.Local
         private readonly IHitbox _hitbox;
         private readonly IHealth _health;
 
-        private readonly RespawnAnimation _animation;
         private readonly RespawnDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -59,11 +56,6 @@ namespace GamePlay.Enemy.Entity.States.Respawn.Local
 
             _cancellation = new CancellationTokenSource();
             _spriteSwitcher.Enable();   
-
-            await _animator.PlayAsync(_animation, _cancellation.Token);
-
-            _health.Restore();
-            _hitbox.Enable();
 
             _stateMachine.Exit(this);
         }

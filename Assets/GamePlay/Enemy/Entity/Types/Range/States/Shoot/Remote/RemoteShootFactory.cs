@@ -11,15 +11,11 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Remote
         menuName = EnemyShootRoutes.RemotePath)]
     public class RemoteShootFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] private ShootAnimationFactory _animation;
         [SerializeField] private ShootDefinition _definition;
         
         public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
-            var animation = _animation.Create();
-            
             services.Register<RemoteShoot>()
-                .WithParameter(animation)
                 .WithParameter(_definition)
                 .AsCallbackListener();
         }

@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using UnityEngine;
 
 namespace GamePlay.Player.Entity.States.Roll.Local

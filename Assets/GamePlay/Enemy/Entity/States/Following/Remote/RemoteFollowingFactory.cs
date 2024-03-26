@@ -11,15 +11,11 @@ namespace GamePlay.Enemy.Entity.States.Following.Remote
         menuName = EnemyFollowingRoutes.RemotePath)]
     public class RemoteFollowingFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] private FollowingAnimationFactory _animation;
         [SerializeField] private FollowingDefinition _definition;
         
         public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
-            var animation = _animation.Create();
-            
             services.Register<RemoteFollowing>()
-                .WithParameter(animation)
                 .WithParameter(_definition)
                 .AsCallbackListener();
         }

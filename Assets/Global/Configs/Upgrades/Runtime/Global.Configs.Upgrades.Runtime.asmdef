@@ -1,0 +1,19 @@
+{
+    "name": "Global.Configs.Upgrades.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5d6211c0382e4ffc855e332aed04465b",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b5d66016965c4f8c8e260e3f1678b8f7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

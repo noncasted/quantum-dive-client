@@ -1,5 +1,4 @@
-﻿using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Spawn.Pool.Abstract;
 using GamePlay.Enemy.Spawn.Pool.Common;
 using Internal.Scopes.Abstract.Containers;

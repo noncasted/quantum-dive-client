@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Internal.Services.Options.Implementations
 {
     [InlineEditor]
+    [CreateAssetMenu(fileName = "Options_Debug", menuName = "Internal/Options/Debug")]
     public class DebugOptions : OptionsEntry
     {
         [SerializeField] private bool _enableGizmos;

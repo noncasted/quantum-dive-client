@@ -1,6 +1,4 @@
-﻿using Common.DataTypes.Network;
-using GamePlay.Player.Entity.Components.Network.EntityHandler.Abstract;
-using GamePlay.Player.Entity.Components.Network.TransformSync.Logs;
+﻿using GamePlay.Player.Entity.Components.Network.EntityHandler.Abstract;
 using GamePlay.Player.Entity.Views.Transforms.Abstract;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
@@ -15,21 +13,16 @@ namespace GamePlay.Player.Entity.Components.Network.TransformSync.Runtime
         protected TransformSync(
             IPlayerTransform transform,
             IUpdater updater,
-            IEntityProvider entityProvider,
-            TransformSyncLogger logger) : base(0, false)
+            IEntityProvider entityProvider) : base(0, false)
         {
             _transform = transform;
             _updater = updater;
             _entityProvider = entityProvider;
-            _logger = logger;
-
-            SetFixedSize(RagonBufferExtensions.GetVectorRequiredBits());
         }
 
         private readonly IPlayerTransform _transform;
         private readonly IUpdater _updater;
         private readonly IEntityProvider _entityProvider;
-        private readonly TransformSyncLogger _logger;
 
         public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
@@ -43,21 +36,12 @@ namespace GamePlay.Player.Entity.Components.Network.TransformSync.Runtime
 
         public override void Serialize(RagonBuffer buffer)
         {
-            _logger.OnSerialize(_transform.Position);
 
-            buffer.WriteVector(_transform.Position);
         }
 
         public override void Deserialize(RagonBuffer buffer)
         {
-            var position = buffer.ReadVector();
 
-            if (_entityProvider.IsMine == true)
-                return;
-
-            _logger.OnDeserialize(_transform.Position);
-
-            _transform.SetPosition(position);
         }
     }
 }

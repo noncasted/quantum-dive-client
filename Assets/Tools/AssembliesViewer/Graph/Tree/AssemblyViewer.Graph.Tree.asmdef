@@ -1,7 +1,7 @@
 ﻿{
   "name": "AssemblyViewer.Graph.Tree",
   "references": [
-    "GUID:6d0def324f4849dc99881aa079c4c004",
+    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
     "GUID:552447fb6cdb3d34b969d73c1b33b7d8",
     "GUID:6055be8ebefd69e48b49212b09b47b2f",
     "GUID:6546b03df0bc4494b62f13d0c65c64cd",

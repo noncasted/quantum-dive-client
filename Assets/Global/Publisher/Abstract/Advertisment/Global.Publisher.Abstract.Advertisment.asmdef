@@ -1,0 +1,18 @@
+{
+    "name": "Global.Publisher.Abstract.Advertisment",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:25f79b9f7aeb42a8af7eb332b6a4ba79",
+        "GUID:da1917f3a79694c539a148addd06d33b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

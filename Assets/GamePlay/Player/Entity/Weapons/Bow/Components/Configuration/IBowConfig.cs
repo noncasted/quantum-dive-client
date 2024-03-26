@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 
 namespace GamePlay.Player.Entity.Weapons.Bow.Components.Configuration
 {

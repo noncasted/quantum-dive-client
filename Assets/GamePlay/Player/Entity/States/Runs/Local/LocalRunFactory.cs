@@ -1,6 +1,5 @@
 ﻿using Common.Tools.UniversalAnimators.Abstract;
 using GamePlay.Player.Entity.States.Runs.Common;
-using GamePlay.Player.Entity.States.Runs.Logs;
 using GamePlay.Player.Entity.States.Runs.Remote;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
@@ -15,7 +14,6 @@ namespace GamePlay.Player.Entity.States.Runs.Local
     public class LocalRunFactory : ScriptableObject, IComponentFactory
     {
         [SerializeField] [Indent] private BaseAnimationData _runAnimation;
-        [SerializeField] [Indent] private RunLogSettings _logSettings;
         [SerializeField] [Indent] private RunConfigAsset _config;
         [SerializeField] [Indent] private RunDefinition _definition;
 
@@ -25,9 +23,6 @@ namespace GamePlay.Player.Entity.States.Runs.Local
                 .As<IRunInputSync>()
                 .AsSelf();
             
-            services.Register<RunLogger>()
-                .WithParameter(_logSettings);
-
             services.Register<RunConfig>()
                 .WithParameter(_config)
                 .As<IRunConfig>();

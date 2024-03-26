@@ -1,5 +1,4 @@
-﻿using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using GamePlay.Player.UI.Overlay.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;

@@ -1,6 +1,5 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using GamePlay.Player.Entity.Components.StateMachines.Local.Abstract;
-using GamePlay.Player.Entity.Components.StateMachines.Local.Logs;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Abstract;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
@@ -10,15 +9,13 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Local.Runtime
 {
     public class LocalStateMachine : ILocalStateMachine, IEntityDisableListener
     {
-        public LocalStateMachine(IStateMachineSync sync, LocalStateMachineLogger logger)
+        public LocalStateMachine(IStateMachineSync sync)
         {
             _sync = sync;
-            _logger = logger;
         }
 
         private readonly IStateMachineSync _sync;
-        private readonly LocalStateMachineLogger _logger;
-        private readonly IViewableDelegate _exited = new ViewableDelegate();
+        private readonly ViewableDelegate _exited = new();
 
         private IPlayerLocalState _current;
 
@@ -31,18 +28,11 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Local.Runtime
 
             var result = _current.Definition.IsTransitable(definition);
 
-            _logger.OnAvailabilityChecked(_current.Definition, definition, result);
-
             return result;
         }
 
         public void Enter(IPlayerLocalState playerLocalState)
         {
-            if (_current == null)
-                _logger.OnEnteredFirst(playerLocalState.Definition);
-            else
-                _logger.OnEnteredFrom(_current.Definition, playerLocalState.Definition);
-
             _current?.Break();
 
             _current = playerLocalState;
@@ -51,11 +41,6 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Local.Runtime
 
         public void Enter(IPlayerLocalState playerLocalState, IPlayerRemoteStatePayload payload)
         {
-            if (_current == null)
-                _logger.OnEnteredFirst(playerLocalState.Definition);
-            else
-                _logger.OnEnteredFrom(_current.Definition, playerLocalState.Definition);
-
             _current?.Break();
 
             _current = playerLocalState;
@@ -66,12 +51,10 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Local.Runtime
         {
             if (playerLocalState != _current)
             {
-                _logger.OnExitMiss(playerLocalState.Definition);
                 return;
             }
 
-            _logger.OnExited(_current.Definition);
-            Exited?.Invoke();
+            _exited?.Invoke();
         }
 
         public void OnDisabled()

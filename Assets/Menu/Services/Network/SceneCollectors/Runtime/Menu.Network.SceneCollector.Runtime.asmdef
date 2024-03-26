@@ -1,9 +1,0 @@
-﻿{
-  "name": "Menu.Network.SceneCollector.Runtime",
-  "references": [
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:b970b98ac3424fd0a4d14c9974b91415",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:e99eff0a39414de2ac2ea492817f7345"
-  ]
-}

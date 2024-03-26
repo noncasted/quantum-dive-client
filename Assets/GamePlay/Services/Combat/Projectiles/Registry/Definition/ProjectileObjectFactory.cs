@@ -1,10 +1,9 @@
-﻿using Common.Tools.ObjectsPools.Runtime.Abstract;
-using GamePlay.Projectiles.Entity.Views.Facade;
+﻿using GamePlay.Projectiles.Entity.Views.Facade;
 using UnityEngine;
 
 namespace GamePlay.Projectiles.Registry.Definition
 {
-    public class ProjectileObjectFactory : IObjectFactory<ProjectileView>
+    public class ProjectileObjectFactory 
     {
         public ProjectileObjectFactory(
             ProjectileView prefab,

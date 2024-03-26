@@ -1,5 +1,4 @@
 ﻿using GamePlay.Player.Entity.Components.Network.TransformSync.Common;
-using GamePlay.Player.Entity.Components.Network.TransformSync.Logs;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
@@ -12,13 +11,8 @@ namespace GamePlay.Player.Entity.Components.Network.TransformSync.Runtime
         menuName = TransformSyncRoutes.ServicePath)]
     public class TransformSyncFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] private TransformSyncLogSettings _logSettings;
-
         public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
-            services.Register<TransformSyncLogger>()
-                .WithParameter(_logSettings);
-
             services.Register<TransformSync>()
                 .AsCallbackListener();
         }

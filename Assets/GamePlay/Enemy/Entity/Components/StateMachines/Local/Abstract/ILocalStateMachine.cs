@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using GamePlay.Enemy.Entity.States.Abstract;
 
 namespace GamePlay.Enemy.Entity.Components.StateMachines.Local.Abstract

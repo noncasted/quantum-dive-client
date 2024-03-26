@@ -1,5 +1,5 @@
 ﻿using System;
-using Common.DataTypes.Collections.SerializableDictionaries;
+using Common.DataTypes.Runtime.Collections;
 
 namespace Tools.AssembliesViewer.Graph.Tree
 {

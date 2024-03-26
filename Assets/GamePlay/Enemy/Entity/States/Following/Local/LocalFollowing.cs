@@ -19,7 +19,6 @@ namespace GamePlay.Enemy.Entity.States.Following.Local
             IEnemySpriteFlipper spriteFlipper,
             IEnemyTransform transform,
             IUpdater updater,
-            FollowingAnimation animation,
             FollowingDefinition definition)
         {
             _stateMachine = stateMachine;
@@ -28,7 +27,6 @@ namespace GamePlay.Enemy.Entity.States.Following.Local
             _spriteFlipper = spriteFlipper;
             _transform = transform;
             _updater = updater;
-            _animation = animation;
             _definition = definition;
         }
 
@@ -39,7 +37,6 @@ namespace GamePlay.Enemy.Entity.States.Following.Local
         private readonly IEnemyTransform _transform;
         private readonly IUpdater _updater;
         
-        private readonly FollowingAnimation _animation;
         private readonly FollowingDefinition _definition;
 
         public EnemyStateDefinition Definition => _definition;
@@ -56,7 +53,6 @@ namespace GamePlay.Enemy.Entity.States.Following.Local
             
             _follower.Follow(target);
             _updater.Add(this);
-            _animator.PlayLooped(_animation);
         }
 
         public void OnUpdate(float delta)

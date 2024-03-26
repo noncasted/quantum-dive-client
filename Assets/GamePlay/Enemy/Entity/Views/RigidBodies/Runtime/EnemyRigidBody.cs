@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using GamePlay.Enemy.Entity.Views.RigidBodies.Abstract;
-using GamePlay.Enemy.Entity.Views.RigidBodies.Logs;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using UnityEngine;
@@ -16,17 +15,13 @@ namespace GamePlay.Enemy.Entity.Views.RigidBodies.Runtime
         public EnemyRigidBody(
             Rigidbody2D rigidbody,
             MoveCaster caster,
-            RigidBodyLogger logger,
             IUpdater updater)
         {
             _rigidbody = rigidbody;
             _caster = caster;
-            _logger = logger;
             _updater = updater;
         }
         
-        private readonly RigidBodyLogSettings _logSettings;
-        private readonly RigidBodyLogger _logger;
         private readonly Rigidbody2D _rigidbody;
         
         private readonly MoveCaster _caster;
@@ -60,13 +55,9 @@ namespace GamePlay.Enemy.Entity.Views.RigidBodies.Runtime
                     case PhysicsInteraction.Move:
                         var move = _moves.Dequeue();
                         _currentPosition = _caster.ProcessMove(_currentPosition, move.Direction, move.Distance);
-
-                        _logger.OnMoveProcessed(move.Direction, move.Distance, _currentPosition);
                         break;
                     case PhysicsInteraction.Teleport:
                         _currentPosition = _teleports.Dequeue();
-
-                        _logger.OnPositionSet(_currentPosition);
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -100,8 +91,6 @@ namespace GamePlay.Enemy.Entity.Views.RigidBodies.Runtime
 
             _moves.Enqueue(move);
             _interactions.Enqueue(PhysicsInteraction.Move);
-
-            _logger.OnMoveEnqueued(direction, distance);
         }
 
         public void SetVelocity(Vector2 direction, float force)

@@ -1,0 +1,16 @@
+{
+    "name": "Global.Network.EntityListener.Abstract",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7338080da93f4c60a8926457ef406a5f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

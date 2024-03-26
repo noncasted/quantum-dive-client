@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using GamePlay.Common.Damages;
 using GamePlay.Player.Entity.Views.DamageReceivers.Abstract;
 using GamePlay.Player.Entity.Views.Hitboxes.Common;
@@ -38,7 +38,7 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Local
         public float Radius => _config.Radius;
         public Vector3 Position => _point.position;
 
-        private readonly IViewableDelegate<Damage> _damaged = new ViewableDelegate<Damage>();
+        private readonly ViewableDelegate<Damage> _damaged = new();
 
         public IViewableDelegate<Damage> Damaged => _damaged;
 
@@ -62,7 +62,7 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Local
 
         public void ReceiveDamage(Damage damage)
         {
-            Damaged?.Invoke(damage);
+            _damaged?.Invoke(damage);
         }
     }
 }

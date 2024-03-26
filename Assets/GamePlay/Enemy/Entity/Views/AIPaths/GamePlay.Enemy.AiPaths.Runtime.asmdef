@@ -2,9 +2,7 @@
   "name": "GamePlay.Enemy.AiPaths.Runtime",
   "rootNamespace": "",
   "references": [
-    
     "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
     "GUID:f51ebe6a0ceec4240a699833d6309b23",
     "GUID:0b1cf2365187701478ded818a9129ef7",
     "GUID:4860de18e1e0c7241999f1c5b8e04f5f",

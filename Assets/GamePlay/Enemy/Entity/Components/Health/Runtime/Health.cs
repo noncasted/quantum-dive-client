@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using GamePlay.Enemy.Entity.Components.Health.Abstract;
 using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
 using Ragon.Client;
@@ -20,7 +20,8 @@ namespace GamePlay.Enemy.Entity.Components.Health.Runtime
         private int _current;
         private int _max;
 
-        public IViewableDelegate<int, int> HealthChanged { get; } = new ViewableDelegate<int, int>();
+        private readonly ViewableDelegate<int, int> _healthChanged = new();
+        public IViewableDelegate<int, int> HealthChanged => _healthChanged;
         public int Amount => _current;
         public bool IsAlive => _current > 0;
 
@@ -31,7 +32,7 @@ namespace GamePlay.Enemy.Entity.Components.Health.Runtime
             if (_current < 0)
                 _current = 0;
 
-            HealthChanged.Invoke(_current, _max);
+            _healthChanged.Invoke(_current, _max);
             MarkAsChanged();
         }
 
@@ -39,7 +40,7 @@ namespace GamePlay.Enemy.Entity.Components.Health.Runtime
         {
             _current = _config.Max;
             _max = _config.Max;
-            HealthChanged.Invoke(_current, _max);
+            _healthChanged.Invoke(_current, _max);
             MarkAsChanged();
         }
 
@@ -57,7 +58,7 @@ namespace GamePlay.Enemy.Entity.Components.Health.Runtime
             if (_entity.IsMine == true)
                 return;
 
-            HealthChanged?.Invoke(current, max);
+            _healthChanged?.Invoke(current, max);
         }
     }
 }

@@ -5,7 +5,6 @@ using GamePlay.Player.Entity.Components.CameraFollow.Abstract;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Local;
 using GamePlay.Player.Entity.Components.Healths.Abstract;
 using GamePlay.Player.Entity.States.None.Abstract;
-using GamePlay.Player.Entity.States.Respawns.Local;
 using GamePlay.Player.Entity.Views.Transforms.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;
@@ -18,7 +17,6 @@ namespace GamePlay.Player.Entity.Components.Root.Local
     public class LocalPlayerRoot : ILocalPlayerRoot, IEntityEnableListener
     {
         private LocalPlayerRoot(
-            IRespawn respawn,
             INone none,
             IPlayerPosition position,
             IPlayerTransform transform,
@@ -27,7 +25,6 @@ namespace GamePlay.Player.Entity.Components.Root.Local
             IEquipper equipper,
             IPlayerCameraFollowTarget followTarget)
         {
-            _respawn = respawn;
             _none = none;
             _position = position;
             _health = health;
@@ -44,7 +41,6 @@ namespace GamePlay.Player.Entity.Components.Root.Local
         private readonly IEntityCallbacks _callbacks;
         private readonly IEquipper _equipper;
         private readonly IPlayerCameraFollowTarget _followTarget;
-        private readonly IRespawn _respawn;
 
         private bool _isActive;
         private ILifetime _lifetime;
@@ -63,7 +59,6 @@ namespace GamePlay.Player.Entity.Components.Root.Local
 
         public void Respawn()
         {
-            _respawn.Enter();
         }
 
         public async UniTask Enable()
@@ -77,7 +72,7 @@ namespace GamePlay.Player.Entity.Components.Root.Local
             _isActive = true;
 
             if (_lifetime != null)
-                await _lifetime.Terminate();
+                _lifetime.Terminate();
 
             _lifetime = new Lifetime();
             await _callbacks.RunEnable(_lifetime);
@@ -93,7 +88,7 @@ namespace GamePlay.Player.Entity.Components.Root.Local
 
             _isActive = false;
 
-            await _lifetime.Terminate();
+            _lifetime.Terminate();
             await _callbacks.RunDisable();
         }
     }

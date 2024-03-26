@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Internal.Scopes.Abstract.Loggers;
+using UnityEngine;
 
 namespace Internal.Services.Loggers.Runtime
 {
@@ -16,7 +17,7 @@ namespace Internal.Services.Loggers.Runtime
             Debug.Log($"[{header}]: {message}");
         }
 
-        public void Log(string message, LogParameters parameters)
+        public void Log(string message, ILogParameters parameters)
         {
             Debug.Log(_messageBuilder.Build(message, parameters));
         }
@@ -31,7 +32,7 @@ namespace Internal.Services.Loggers.Runtime
             Debug.LogError(error);
         }
 
-        public void Error(string error, LogParameters parameters)
+        public void Error(string error, ILogParameters parameters)
         {
             Debug.LogError(_messageBuilder.Build(error, parameters));
         }

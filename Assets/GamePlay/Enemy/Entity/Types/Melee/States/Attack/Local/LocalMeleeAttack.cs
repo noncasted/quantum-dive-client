@@ -4,7 +4,6 @@ using GamePlay.Enemy.Entity.Components.StateMachines.Local.Abstract;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.States.SubStates.Pushes.Abstract;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common;
-using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Damages;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Debug;
@@ -21,12 +20,9 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
             IMeleeAttackConfig config,
             IMeleeAttackGizmosDrawer gizmosDrawer,
             ISubPush push,
-
             IEnemyAnimator animator,
             IEnemyPosition position,
             IDamageTrigger damageTrigger,
-
-            MeleeAttackAnimation animation,
             MeleeAttackDefinition definition)
         {
             _stateMachine = stateMachine;
@@ -36,7 +32,6 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
             _config = config;
             _gizmosDrawer = gizmosDrawer;
             _push = push;
-            _animation = animation;
             _definition = definition;
         }
 
@@ -48,7 +43,6 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
         private readonly IMeleeAttackGizmosDrawer _gizmosDrawer;
         private readonly ISubPush _push;
 
-        private readonly MeleeAttackAnimation _animation;
         private readonly MeleeAttackDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -75,14 +69,14 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
 
             _damageTrigger.Enable();
 
-            var animationTask = _animator.PlayAsync(_animation, _cancellation.Token);
-
-            var pushParams = new PushParams(_config.DashTime, _config.DashDistance, _config.DashCurve);
-            var direction = (target.Position - _position.Position).normalized;
-
-            var pushTask = _push.PushAsync(direction, pushParams, _cancellation.Token);
-
-            await UniTask.WhenAll(animationTask, pushTask);
+            // var animationTask = _animator.PlayAsync(_animation, _cancellation.Token);
+            //
+            // var pushParams = new PushParams(_config.DashTime, _config.DashDistance, _config.DashCurve);
+            // var direction = (target.Position - _position.Position).normalized;
+            //
+            // var pushTask = _push.PushAsync(direction, pushParams, _cancellation.Token);
+            //
+            // await UniTask.WhenAll(animationTask, pushTask);
 
             _stateMachine.Exit(this);
         }

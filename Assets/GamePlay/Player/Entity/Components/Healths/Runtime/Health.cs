@@ -20,7 +20,7 @@ namespace GamePlay.Player.Entity.Components.Healths.Runtime
             _max = max;
             _current = max;
 
-            Msg.Publish(new PlayerHealthChangeEvent(max, max));
+           // Msg.Publish(new PlayerHealthChangeEvent(max, max));
         }
 
         public void Heal(int heal)
@@ -30,14 +30,14 @@ namespace GamePlay.Player.Entity.Components.Healths.Runtime
             if (_current > _max)
                 _current = _max;
 
-            Msg.Publish(new PlayerHealthChangeEvent(_max, _current));
+           // Msg.Publish(new PlayerHealthChangeEvent(_max, _current));
         }
 
         public void AddMax(int add)
         {
             _max += add;
 
-            Msg.Publish(new PlayerHealthChangeEvent(_max, _current));
+           // Msg.Publish(new PlayerHealthChangeEvent(_max, _current));
         }
 
         public void ReduceMax(int reduce)
@@ -47,7 +47,7 @@ namespace GamePlay.Player.Entity.Components.Healths.Runtime
             if (_max < 1)
                 _max = 1;
 
-            Msg.Publish(new PlayerHealthChangeEvent(_max, _current));
+           // Msg.Publish(new PlayerHealthChangeEvent(_max, _current));
         }
 
         public void OnDamage(int damage)
@@ -57,7 +57,7 @@ namespace GamePlay.Player.Entity.Components.Healths.Runtime
             if (_current < 0)
                 _current = 0;
 
-            Msg.Publish(new PlayerHealthChangeEvent(_max, _current));
+          //  Msg.Publish(new PlayerHealthChangeEvent(_max, _current));
         }
     }
 }

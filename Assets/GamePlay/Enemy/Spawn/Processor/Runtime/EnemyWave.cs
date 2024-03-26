@@ -2,8 +2,6 @@
 using System.Linq;
 using GamePlay.Enemy.Entity.Common.Definition.Asset;
 using GamePlay.Enemy.Spawn.Processor.Common;
-using GamePlay.Enemy.Spawn.Processor.Definition.Probability.Runtime;
-using GamePlay.Enemy.Spawn.Processor.Definition.ToggleButtons.Runtime;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -14,10 +12,7 @@ namespace GamePlay.Enemy.Spawn.Processor.Runtime
         menuName = WaveProcessorRoutes.WavePath)]
     public class EnemyWave : ScriptableObject
     {
-        [SerializeField] [EnemyToggle] private EnemyTypesDictionary _switches = new();
-        [SerializeField] [EnemyProbability] private EnemyProbabilityDictionary _values = new();
-        
-        [SerializeField] [Min(1)] private int _amount;
+       [SerializeField] [Min(1)] private int _amount;
         
         public IReadOnlyList<EnemyDefinition> GetEnemies()
         {
@@ -25,8 +20,8 @@ namespace GamePlay.Enemy.Spawn.Processor.Runtime
 
             var entries = new List<EnemyEntry>();
 
-            foreach (var (type, value) in _values)
-                entries.Add(new EnemyEntry(type, value));
+            // foreach (var (type, value) in _values)
+            //     entries.Add(new EnemyEntry(type, value));
 
             entries = entries.OrderBy(t => t.Density).ToList();
 

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.DataTypes.Collections.Common;
+using Common.DataTypes.Runtime.Collections;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Services.Mappers.States.Abstract;
 

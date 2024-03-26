@@ -28,7 +28,7 @@ namespace GamePlay.Ecs.Runtime
             var binder = new EcsSystemBinder(_systems);
             var bootstrapEvent = new EcsBootstrapEvent(binder);
 
-            Msg.Publish(bootstrapEvent);
+           // Msg.Publish(bootstrapEvent);
 
             _systems.Update.Init();
             _systems.FixedUpdate.Init();

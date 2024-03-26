@@ -4,11 +4,16 @@ namespace Tools.AssembliesViewer.Domain.Abstract
 {
     public interface IAssembly
     {
-        string DirectoryName { get; }
-        string Name { get; }
-        string FullPathName { get; }
         string Id { get; }
+        
+        IAssemblyPath Path { get; }
         IReadOnlyList<IAssembly> References { get; }
         IAssemblyDetails Details { get; }
+        IAssemblyToggles Toggles { get; }
+        IAssemblyDefines Defines { get; }
+        
+        void AddAssembly(IAssembly assembly);
+        void RemoveReference(IAssembly assembly);
+        
     }
 }

@@ -1,24 +1,23 @@
 {
-  "name": "GamePlay.Player.Services.Compose",
-  "rootNamespace": "",
-  "references": [
-    
-    "GUID:5f9e49065beb4477b935cc833a087c32",
-    "GUID:83ce38e36fba9474f9b9472e950ae2e6",
-    "GUID:30439b97ca9f4e72a253c3fed65c07fd",
-    "GUID:c31268840a1d493eacf10036579b818b",
-    "GUID:02dc332a0f3249bd9c6ad7c3421a0030",
-    "GUID:75f29b67883912c4683d10d111aca113",
-    "GUID:b5878a2475b84dbe861135980ad7c328",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Services.Compose",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5f9e49065beb4477b935cc833a087c32",
+        "GUID:83ce38e36fba9474f9b9472e950ae2e6",
+        "GUID:30439b97ca9f4e72a253c3fed65c07fd",
+        "GUID:c31268840a1d493eacf10036579b818b",
+        "GUID:02dc332a0f3249bd9c6ad7c3421a0030",
+        "GUID:b5878a2475b84dbe861135980ad7c328",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

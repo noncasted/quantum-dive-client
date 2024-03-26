@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.DataTypes.Collections.Common;
+using Common.DataTypes.Runtime.Collections;
 using GamePlay.Player.Entity.Components.Equipment.Definition;
 using GamePlay.Player.Services.Mappers.Equipment.Abstract;
 

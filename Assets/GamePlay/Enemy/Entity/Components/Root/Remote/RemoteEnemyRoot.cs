@@ -48,7 +48,7 @@ namespace GamePlay.Enemy.Entity.Components.Root.Remote
             _entityProvider.Construct(entity);
             
             if (_lifetime != null)
-                await _lifetime.Terminate();
+                 _lifetime.Terminate();
 
             _lifetime = new Lifetime();
             await _callbacks.RunEnable(_lifetime);
@@ -69,7 +69,7 @@ namespace GamePlay.Enemy.Entity.Components.Root.Remote
             _gameObject.Disable();
             _transform.SetPosition(Vector2.zero);
 
-            await _lifetime.Terminate();
+             _lifetime.Terminate();
             await _callbacks.RunDisable();
         }
     }

@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using GamePlay.Common.Damages;
 using GamePlay.Player.Entity.Views.DamageReceivers.Abstract;
 using UnityEngine;
@@ -9,9 +9,9 @@ namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
     public class DamageReceiverTrigger : MonoBehaviour, IDamageReceiver, IDamageReceiverTrigger
     {
         private Collider2D _collider;
-        private readonly IViewableDelegate<Damage> _triggered = new ViewableDelegate<Damage>();
+        private readonly ViewableDelegate<Damage> _triggered = new();
 
-        public Vector3 Position => transform.position;
+        public Vector3 Position => transform.position; 
 
         public IViewableDelegate<Damage> Triggered => _triggered;
 
@@ -22,7 +22,7 @@ namespace GamePlay.Player.Entity.Views.DamageReceivers.Runtime
 
         public void ReceiveDamage(Damage damage)
         {
-            Triggered?.Invoke(damage);
+            _triggered?.Invoke(damage);
         }
 
         public void Enable()

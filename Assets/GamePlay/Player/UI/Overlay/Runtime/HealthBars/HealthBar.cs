@@ -19,7 +19,7 @@ namespace GamePlay.Player.UI.Overlay.Runtime.HealthBars
 
         public void OnEnabled()
         {
-            _listener = Msg.Listen<PlayerHealthChangeEvent>(OnHealthChanged);
+           // _listener = Msg.Listen<PlayerHealthChangeEvent>(OnHealthChanged);
         }
 
         public void OnDisabled()

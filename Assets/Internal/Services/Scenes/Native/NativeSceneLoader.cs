@@ -1,19 +1,11 @@
 ﻿using Cysharp.Threading.Tasks;
 using Internal.Scopes.Abstract.Scenes;
-using Internal.Services.Scenes.Logs;
 using UnityEngine.SceneManagement;
 
 namespace Internal.Services.Scenes.Native
 {
     public class NativeSceneLoader : ISceneLoader
     {
-        public NativeSceneLoader(ScenesFlowLogger logger)
-        {
-            _logger = logger;
-        }
-
-        private readonly ScenesFlowLogger _logger;
-
         public async UniTask<ISceneLoadResult> Load(SceneData data)
         {
             var targetScene = new Scene();
@@ -34,8 +26,6 @@ namespace Internal.Services.Scenes.Native
             await task;
 
             await UniTask.WaitUntil(() => targetScene.name == data.Scene.SceneName);
-
-            _logger.OnSceneLoad(targetScene);
 
             var result = new NativeSceneLoadResult(targetScene);
 

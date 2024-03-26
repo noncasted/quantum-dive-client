@@ -4,7 +4,6 @@ using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Floating.Abstract;
 using GamePlay.Player.Entity.States.Runs.Common;
-using GamePlay.Player.Entity.States.Runs.Logs;
 using GamePlay.Player.Entity.Views.Physics.Abstract;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
@@ -24,8 +23,7 @@ namespace GamePlay.Player.Entity.States.Runs.Local
             IRunInput input,
             IFloatingTransitionsRegistry floatingTransitionsRegistry,
             IAnimation animation,
-            RunDefinition definition,
-            RunLogger logger)
+            RunDefinition definition)
         {
             _stateMachine = stateMachine;
             _playerPhysics = playerPhysics;
@@ -38,13 +36,11 @@ namespace GamePlay.Player.Entity.States.Runs.Local
             _floatingTransitionsRegistry = floatingTransitionsRegistry;
 
             Definition = definition;
-            _logger = logger;
         }
 
         private readonly IAnimation _animation;
         private readonly IEnhancedAnimator _playerAnimator;
 
-        private readonly RunLogger _logger;
         private readonly IPlayerPhysics _playerPhysics;
         private readonly IRunConfig _runConfig;
 
@@ -75,11 +71,8 @@ namespace GamePlay.Player.Entity.States.Runs.Local
         {
             if (_input.Direction == Vector2.zero)
             {
-                _logger.OnEnterFromFloatingError();
                 return;
             }
-
-            _logger.OnEnteredFromFloating(_input.Direction);
 
             Begin();
         }
@@ -91,8 +84,6 @@ namespace GamePlay.Player.Entity.States.Runs.Local
 
             if (_stateMachine.IsAvailable(Definition) == false)
                 return;
-
-            _logger.OnEnteredOnTrigger(_input.Direction);
 
             Begin();
         }
@@ -114,8 +105,6 @@ namespace GamePlay.Player.Entity.States.Runs.Local
 
             _playerPhysics.LockCurrentRotation();
             _updater.Remove(this);
-
-            _logger.OnBroke();
         }
 
         private void Begin()

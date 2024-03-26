@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Network.Messaging.Events.Logs;
 using GamePlay.Network.Room.Entities.Factory;
 using GamePlay.Services.System.Network.Messaging.Events.Abstract;
 using GamePlay.Services.System.Network.Room.EventLoops.Abstract;
@@ -15,14 +14,12 @@ namespace GamePlay.Network.Messaging.Events.Runtime
 {
     public class NetworkEvents : INetworkEvents, IScopeDisableListener, INetworkSceneEntityCreationListener
     {
-        public NetworkEvents(IClientProvider clientProvider, NetworkEventsLogger logger)
+        public NetworkEvents(IClientProvider clientProvider)
         {
             _clientProvider = clientProvider;
-            _logger = logger;
         }
 
         private readonly IClientProvider _clientProvider;
-        private readonly NetworkEventsLogger _logger;
         private readonly CancellationTokenSource _cancellation = new();
 
         private readonly List<IDisposable> _listeners = new();
@@ -48,8 +45,6 @@ namespace GamePlay.Network.Messaging.Events.Runtime
             
             var disposable = _entity.OnEvent(listener);
             _listeners.Add(disposable);
-
-            _logger.OnRouteAdded<TEvent>();
         }
 
         public void AddRouteAsync<TEvent>(Func<RagonPlayer, TEvent, CancellationToken, UniTask> listener)
@@ -59,22 +54,16 @@ namespace GamePlay.Network.Messaging.Events.Runtime
             var receiver = new EventReceiver<TEvent>(_cancellation.Token, listener);
             var disposable = _entity.OnEvent<TEvent>(receiver.Listener);
             _listeners.Add(disposable);
-
-            _logger.OnRouteAdded<TEvent>();
         }
 
         public void SendEvent<TEvent>(TEvent payload) where TEvent : IRagonEvent, new()
         {
             _entity.ReplicateEvent(payload, RagonTarget.All, RagonReplicationMode.LocalAndServer);
-
-            _logger.OnEventSent<TEvent>();
         }
 
         public void SendEvent<TEvent>(TEvent payload, RagonPlayer player) where TEvent : IRagonEvent, new()
         {
             _entity.ReplicateEvent(payload, player, RagonReplicationMode.Server);
-
-            _logger.OnEventSent<TEvent>();
         }
     }
 }

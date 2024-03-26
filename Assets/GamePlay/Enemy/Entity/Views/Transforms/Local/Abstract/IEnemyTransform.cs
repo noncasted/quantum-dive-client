@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Structs;
+﻿using Common.DataTypes.Runtime.Structs;
 using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.Transforms.Local.Abstract

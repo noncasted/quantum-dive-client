@@ -15,18 +15,15 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Remote
         public RemoteShoot(
             IRemoteStateMachine stateMachine,
             IEnemyAnimator animator,
-            ShootAnimation animation,
             ShootDefinition definition)
         {
             _stateMachine = stateMachine;
             _animator = animator;
-            _animation = animation;
             _definition = definition;
         }
 
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IEnemyAnimator _animator;
-        private readonly ShootAnimation _animation;
         private readonly ShootDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -39,7 +36,6 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Remote
         public void Enter(RagonBuffer buffer)
         {
             _cancellation = new CancellationTokenSource();
-            _animator.PlayAsync(_animation, _cancellation.Token).Forget();
         }
 
         public void Break()

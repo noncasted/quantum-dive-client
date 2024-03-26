@@ -4,7 +4,6 @@ using GamePlay.Player.Entity.Components.StateMachines.Local.Abstract;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Idles.Common;
-using GamePlay.Player.Entity.States.Idles.Logs;
 using Global.System.Updaters.Abstract;
 
 namespace GamePlay.Player.Entity.States.Idles.Local
@@ -17,7 +16,6 @@ namespace GamePlay.Player.Entity.States.Idles.Local
             IRotation rotation,
             IUpdater updater,
             IdleDefinition definition,
-            IdleLogger logger,
             IAnimation animation)
         {
             _stateMachine = stateMachine;
@@ -25,7 +23,6 @@ namespace GamePlay.Player.Entity.States.Idles.Local
             _rotation = rotation;
             _updater = updater;
             Definition = definition;
-            _logger = logger;
             _animation = animation;
         }
 
@@ -36,7 +33,6 @@ namespace GamePlay.Player.Entity.States.Idles.Local
         private readonly IEnhancedAnimator _animator;
 
         private readonly IAnimation _animation;
-        private readonly IdleLogger _logger;
         
         public PlayerStateDefinition Definition { get; }
 
@@ -45,15 +41,11 @@ namespace GamePlay.Player.Entity.States.Idles.Local
             _stateMachine.Enter(this);
             _animator.PlayLooped(_animation);
             _updater.Add(this);
-            
-            _logger.OnEntered();
         }
 
         public void Break()
         {
             _updater.Remove(this);
-
-            _logger.OnBroke();
         }
 
         public void OnUpdate(float delta)

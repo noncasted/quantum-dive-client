@@ -1,5 +1,4 @@
 ﻿using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common;
-using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Debug;
 using Internal.Scopes.Abstract.Containers;
@@ -14,7 +13,6 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
         menuName = EnemyMeleeAttackRoutes.LocalPath)]
     public class LocalMeleeAttackFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] private MeleeAttackAnimationFactory _animation;
         [SerializeField] private MeleeAttackDefinition _definition;
         [SerializeField] private MeleeAttackConfig _config;
         [SerializeField] private MeleeAttackGizmosConfig _gizmosConfig;
@@ -27,10 +25,7 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Local
             services.Register<TargetChecker>()
                 .As<ITargetChecker>();
 
-            var animation = _animation.Create();
-
             services.Register<LocalMeleeAttack>()
-                .WithParameter(animation)
                 .WithParameter(_definition)
                 .As<IMeleeAttack>();
 

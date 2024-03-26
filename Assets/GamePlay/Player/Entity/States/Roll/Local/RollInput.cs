@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using GamePlay.Player.Entity.Views.Transforms.Abstract;
 using Global.Inputs.Utils.Abstract;
 using Global.Inputs.View.Implementations.Movement.Abstract;
@@ -26,7 +26,7 @@ namespace GamePlay.Player.Entity.States.Roll.Local
 
         private Vector2 _direction;
         private bool _hasInput;
-        private readonly IViewableDelegate _performed = new ViewableDelegate();
+        private readonly ViewableDelegate _performed = new();
 
         public IViewableDelegate Performed => _performed;
 
@@ -42,8 +42,7 @@ namespace GamePlay.Player.Entity.States.Roll.Local
         private void OnRollPerformed()
         {
             _hasInput = true;
-
-            Performed?.Invoke();
+            _performed?.Invoke();
         }
 
         private void OnRollCanceled()

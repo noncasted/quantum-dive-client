@@ -11,16 +11,12 @@ namespace GamePlay.Enemy.Entity.States.Respawn.Local
         menuName = EnemyRespawnRoutes.LocalPath)]
     public class LocalRespawnFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] private RespawnAnimationFactory _animation;
         [SerializeField] private RespawnDefinition _definition;
 
         public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
-            var animation = _animation.Create();
-
             services.Register<LocalRespawn>()
                 .As<IRespawn>()
-                .WithParameter(animation)
                 .WithParameter(_definition)
                 .AsCallbackListener();
         }

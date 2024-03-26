@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Common.DataTypes.Collections.NestedScriptableObjects.Attributes;
 using Internal.Scopes.Abstract.Options;
 using Internal.Services.Options.Common;
 using Sirenix.OdinInspector;
@@ -12,7 +11,7 @@ namespace Internal.Services.Options.Runtime
     [CreateAssetMenu(fileName = "OptionsRegistry", menuName = OptionRoutes.RegistryPath)]
     public class OptionsRegistry : ScriptableObject
     {
-        [SerializeField] [NestedScriptableObjectSet] private List<OptionsEntry> _options;
+        [SerializeField] private List<OptionsEntry> _options;
 
         private readonly Dictionary<Type, OptionsEntry> _entries = new();
 

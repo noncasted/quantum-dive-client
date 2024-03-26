@@ -19,7 +19,6 @@ using GamePlay.Network.Room.SceneCollectors.Runtime;
 using GamePlay.Player.Services.List.Runtime;
 using GamePlay.Projectiles.Bootstrap;
 using GamePlay.Targets.Registry.Runtime;
-using GamePlay.VfxPools.Runtime;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Scenes;
 using Sirenix.OdinInspector;
@@ -38,9 +37,6 @@ namespace GamePlay.Enemy.Tests.States
 
         [FoldoutGroup("System")] [SerializeField]
         private ProjectilesServiceFactory _projectiles;
-
-        [FoldoutGroup("System")] [SerializeField]
-        private VfxPoolFactory _vfxPool;
 
         [FoldoutGroup("System")] [SerializeField]
         private HitboxRegistryFactory _hitboxRegistry;
@@ -98,7 +94,6 @@ namespace GamePlay.Enemy.Tests.States
         public IReadOnlyList<IServiceFactory> Services => new IServiceFactory[]
         {
             _projectiles,
-            _vfxPool,
             _enemyPool,
             _ecs,
             _hitboxRegistry,

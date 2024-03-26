@@ -1,5 +1,5 @@
 ﻿using System.Threading;
-using Common.DataTypes.Structs;
+using Common.DataTypes.Runtime.Structs;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Components.StateMachines.Local.Abstract;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Abstract;
@@ -25,7 +25,6 @@ namespace GamePlay.Enemy.Entity.States.Damaged.Local
             IPushConfig pushConfig,
             ISubPush subPush,
             IDamagedVfx vfx,
-            DamagedAnimation animation,
             DamagedDefinition definition)
         {
             _localStateMachine = localStateMachine;
@@ -35,7 +34,6 @@ namespace GamePlay.Enemy.Entity.States.Damaged.Local
             _pushConfig = pushConfig;
             _subPush = subPush;
             _vfx = vfx;
-            _animation = animation;
             _definition = definition;
         }
 
@@ -48,7 +46,6 @@ namespace GamePlay.Enemy.Entity.States.Damaged.Local
         private readonly ISubPush _subPush;
         private readonly IDamagedVfx _vfx;
 
-        private readonly DamagedAnimation _animation;
         private readonly DamagedDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -77,13 +74,13 @@ namespace GamePlay.Enemy.Entity.States.Damaged.Local
 
             _vfx.Play(angle);
 
-            var animationTask = _animator.PlayAsync(_animation, _cancellation.Token);
-
-            var distance = _pushConfig.BaseDistance * pushForce;
-            var pushParams = new PushParams(_pushConfig.Time, distance, _pushConfig.Curve);
-            var pushTask = _subPush.PushAsync(damageDirection, pushParams, _cancellation.Token);
-
-            await UniTask.WhenAll(animationTask, pushTask);
+            // var animationTask = _animator.PlayAsync(_animation, _cancellation.Token);
+            //
+            // var distance = _pushConfig.BaseDistance * pushForce;
+            // var pushParams = new PushParams(_pushConfig.Time, distance, _pushConfig.Curve);
+            // var pushTask = _subPush.PushAsync(damageDirection, pushParams, _cancellation.Token);
+            //
+            // await UniTask.WhenAll(animationTask, pushTask);
 
             _localStateMachine.Exit(this);
         }

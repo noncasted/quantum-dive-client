@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using GamePlay.Common.Damages;
 using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
 using GamePlay.Enemy.Entity.Views.Hitbox.Common;
@@ -39,7 +39,8 @@ namespace GamePlay.Enemy.Entity.Views.Hitbox.Local
         public float Radius => _config.Radius;
         public Vector3 Position => _point.position;
 
-        public IViewableDelegate<Damage> DamageReceived { get; } = new ViewableDelegate<Damage>();
+        private readonly ViewableDelegate<Damage> _damageReceived = new();
+        public IViewableDelegate<Damage> DamageReceived => _damageReceived;
 
         public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
@@ -62,12 +63,12 @@ namespace GamePlay.Enemy.Entity.Views.Hitbox.Local
 
         public void ReceiveDamage(Damage damage)
         {
-            DamageReceived.Invoke(damage);
+            _damageReceived.Invoke(damage);
         }
         
         private void OnRemoteDamageReceived(RagonPlayer player, EnemyDamageReceivedEvent payload)
         {
-            DamageReceived.Invoke(payload.Damage);
+            _damageReceived.Invoke(payload.Damage);
         }
     }
 }

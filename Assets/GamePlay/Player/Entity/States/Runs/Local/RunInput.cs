@@ -1,5 +1,4 @@
-﻿using Common.DataTypes.Reactive;
-using GamePlay.Player.Entity.States.Runs.Logs;
+﻿using Common.DataTypes.Runtime.Reactive;
 using GamePlay.Player.Entity.States.Runs.Remote;
 using Global.Inputs.View.Implementations.Movement.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
@@ -12,23 +11,20 @@ namespace GamePlay.Player.Entity.States.Runs.Local
     {
         public RunInput(
             IMovementInputView inputView,
-            IRunInputSync sync,
-            RunLogger logger)
+            IRunInputSync sync)
         {
             _inputView = inputView;
             _sync = sync;
-            _logger = logger;
         }
 
         private readonly IMovementInputView _inputView;
         private readonly IRunInputSync _sync;
-        private readonly RunLogger _logger;
 
         private Vector2 _direction;
         private bool _hasInput;
 
-        private readonly IViewableDelegate _performed = new ViewableDelegate();
-        private readonly IViewableDelegate _canceled = new ViewableDelegate();
+        private readonly ViewableDelegate _performed = new();
+        private readonly ViewableDelegate _canceled = new();
 
         public IViewableDelegate Performed => _performed;
         public IViewableDelegate Canceled => _canceled;
@@ -44,24 +40,20 @@ namespace GamePlay.Player.Entity.States.Runs.Local
 
         private void OnInputView(Vector2 direction)
         {
-            _logger.OnInput(direction);
-
             _direction = direction;
             _sync.OnInput(direction);
             _hasInput = true;
 
-            Performed?.Invoke();
+            _performed?.Invoke();
         }
 
         private void OnCanceled()
         {
-            _logger.OnCanceled();
-
             _direction = Vector2.zero;
             _sync.OnInput(_direction);
             _hasInput = false;
 
-            Canceled?.Invoke();
+            _canceled?.Invoke();
         }
     }
 }

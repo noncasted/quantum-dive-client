@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using Ragon.Client;
 using Ragon.Protocol;
 
@@ -11,8 +11,8 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Network
         }
 
         private bool _state;
+        private readonly ViewableDelegate<bool> _stateChanged = new();
 
-        private readonly IViewableDelegate<bool> _stateChanged = new ViewableDelegate<bool>();
 
         public IViewableDelegate<bool> StateChanged => _stateChanged;
 
@@ -39,7 +39,7 @@ namespace GamePlay.Player.Entity.Views.Hitboxes.Network
         {
             _state = buffer.ReadBool();
 
-            StateChanged?.Invoke(_state);
+            _stateChanged?.Invoke(_state);
         }
     }
 }

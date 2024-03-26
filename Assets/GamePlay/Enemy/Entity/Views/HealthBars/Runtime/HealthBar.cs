@@ -25,7 +25,7 @@ namespace GamePlay.Enemy.Entity.Views.HealthBars.Runtime
 
         public void OnSwitchLifetimeCreated(ILifetime lifetime)
         {
-            _health.HealthChanged.Listen(lifetime, OnChanged);
+            //_health.HealthChanged.Listen(lifetime, OnChanged);
         }
 
         private void OnChanged(int current, int max)

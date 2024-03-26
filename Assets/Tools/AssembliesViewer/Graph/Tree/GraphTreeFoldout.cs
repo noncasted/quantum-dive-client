@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.DataTypes.Reactive;
-using Global.UI.Nova.Components;
+using Common.DataTypes.Runtime.Reactive;
 using Internal.Scopes.Abstract.Lifetimes;
 using Nova;
 using NovaSamples.UIControls;
@@ -15,7 +14,7 @@ namespace Tools.AssembliesViewer.Graph.Tree
         [SerializeField] private TMP_Text _groupNameText;
         [SerializeField] private UIBlock2D _block;
         [SerializeField] private float _baseSize;
-        [SerializeField] private UIButton _expandButton;
+        //[SerializeField] private UIButton _expandButton;
         [SerializeField] private TMP_Text _expandText;
         [SerializeField] private UIBlock _entriesRoot;
         [SerializeField] private Toggle _toggle;
@@ -32,13 +31,13 @@ namespace Tools.AssembliesViewer.Graph.Tree
 
         private void OnEnable()
         {
-            _expandButton.Clicked += OnExpandClicked;
+          //  _expandButton.Clicked += OnExpandClicked;
             _toggle.OnToggled.AddListener(OnToggleClicked);
         }
 
         private void OnDisable()
         {
-            _expandButton.Clicked -= OnExpandClicked;
+           // _expandButton.Clicked -= OnExpandClicked;
             _toggle.OnToggled.RemoveListener(OnToggleClicked);
         }
 

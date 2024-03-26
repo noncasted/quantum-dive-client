@@ -17,22 +17,39 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
 
             var assemblies = new List<Assembly>();
             var idsToAssemblies = new Dictionary<string, Assembly>();
-            var assemblyToReferences = new Dictionary<Assembly, List<Assembly>>();
+            var assemblyToReferences = new Dictionary<Assembly, List<IAssembly>>();
 
             foreach (var rawAssembly in rawAssemblies)
             {
+                var assemblyName = rawAssembly.FilePath.Split("/")[^1].Replace(".asmdef", "");
+                var id = AssetDatabase.AssetPathToGUID(rawAssembly.AssetPath);
+                var references = new List<IAssembly>();
+                var fullPathName = rawAssembly.AssetPath
+                    .Replace("Assets/", "").Replace(".asmdef", "");
+                var fileName = assemblyName.Split(".")[^1];
+
+                var path = new AssemblyPath(fileName, assemblyName, fullPathName);
+                var file = rawAssembly.File;
+
                 var details = new AssemblyDetails(
                     rawAssembly.Namespaces,
                     rawAssembly.Usings,
                     Array.Empty<string>());
 
-                var assemblyName = rawAssembly.FilePath.Split("/")[^1].Replace(".asmdef", "");
-                var id = AssetDatabase.AssetPathToGUID(rawAssembly.AssetPath);
-                var references = new List<Assembly>();
-                var fullPathName = rawAssembly.AssetPath
-                    .Replace("Assets/", "").Replace(".asmdef", "");
-                var fileName = assemblyName.Split(".")[^1];
-                var assembly = new Assembly(fileName, assemblyName, fullPathName, id, references, details);
+                var toggles = new AssemblyToggles(
+                    file.allowUnsafeCode,
+                    file.overrideReferences,
+                    file.autoReferenced,
+                    file.noEngineReferences);
+
+                var defines = new AssemblyDefines(
+                    file.includePlatforms,
+                    file.excludePlatforms,
+                    file.precompiledReferences,
+                    file.defineConstraints,
+                    file.versionDefines);
+
+                var assembly = new Assembly(id, path, references, details, toggles, defines);
                 assemblies.Add(assembly);
                 assemblyToReferences.Add(assembly, references);
                 idsToAssemblies.Add(id, assembly);
@@ -54,20 +71,29 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                             .Replace("Assets/", "").Replace(".asmdef", "");
 
                         var fileName = unknownName.Split(".")[^1];
-                        
+                        var file = rawAssembly.File;
+                        var path = new AssemblyPath(fileName, unknownName, fullPathName);
+
                         var unknownDetails = new AssemblyDetails(
                             Array.Empty<string>(),
                             Array.Empty<string>(),
                             Array.Empty<string>());
 
-                        referencedAssembly = new Assembly(
-                            fileName,
-                            unknownName,
-                            fullPathName,
-                            reference.Id,
-                            Array.Empty<IAssembly>(),
-                            unknownDetails);
-                        
+                        var toggles = new AssemblyToggles(
+                            file.allowUnsafeCode,
+                            file.overrideReferences,
+                            file.autoReferenced,
+                            file.noEngineReferences);
+
+                        var defines = new AssemblyDefines(
+                            file.includePlatforms,
+                            file.excludePlatforms,
+                            file.precompiledReferences,
+                            file.defineConstraints,
+                            file.versionDefines);
+
+                        referencedAssembly = new Assembly(id, path, references, unknownDetails, toggles, defines);
+
                         idsToAssemblies.Add(reference.Id, referencedAssembly);
                         assemblies.Add(referencedAssembly);
                     }
@@ -112,6 +138,9 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
             RawAssembly GetAssembly(string asmdefPath)
             {
                 asmdefPath = ConvertToUnifiedPath(asmdefPath);
+                var jsonContent = File.ReadAllText(asmdefPath);
+                var file = JsonConvert.DeserializeObject<AssemblyFile>(jsonContent);
+
                 var directory = GetParentDirectory(asmdefPath);
                 var codeFiles = Directory.GetFiles(directory, "*.cs", SearchOption.AllDirectories);
 
@@ -141,7 +170,8 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                     namespaces,
                     usings,
                     GetReferences(asmdefPath),
-                    isOwned);
+                    isOwned,
+                    file);
             }
 
             string GetNameSpace(string filePath)
@@ -224,7 +254,8 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                 IReadOnlyList<string> namespaces,
                 IReadOnlyList<string> usings,
                 IReadOnlyList<AssemblyReference> references,
-                bool isOwned)
+                bool isOwned,
+                AssemblyFile file)
             {
                 FilePath = filePath;
                 AssetPath = assetPath;
@@ -233,6 +264,7 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                 Usings = usings;
                 References = references;
                 IsOwned = isOwned;
+                File = file;
             }
 
             public string FilePath { get; }
@@ -242,6 +274,7 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
             public IReadOnlyList<string> Usings { get; }
             public IReadOnlyList<AssemblyReference> References { get; }
             public bool IsOwned { get; }
+            public AssemblyFile File { get; }
         }
 
         public class AssemblyReference
@@ -259,7 +292,18 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
         public class AssemblyFile
         {
             public string name;
+
             public List<string> references = new();
+            public List<string> includePlatforms = new();
+            public List<string> excludePlatforms = new();
+            public List<string> defineConstraints = new();
+            public List<string> versionDefines = new();
+            public List<string> precompiledReferences = new();
+
+            public bool allowUnsafeCode;
+            public bool overrideReferences;
+            public bool autoReferenced;
+            public bool noEngineReferences;
         }
     }
 }

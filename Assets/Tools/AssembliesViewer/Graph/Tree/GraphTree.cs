@@ -47,7 +47,7 @@ namespace Tools.AssembliesViewer.Graph.Tree
             var isActive = _save.Groups.GetValueOrDefault(group.PathName, true);
 
             foldout.Construct(group.Name, isActive);
-            foldout.IsToggled.View(lifetime, value => OnGroupToggle(group, group.PathName, value));
+            foldout.IsToggled.View(lifetime, (_, value) => OnGroupToggle(group, group.PathName, value));
 
             if (root != null)
                 root.AddEntry(lifetime, foldout);
@@ -65,7 +65,7 @@ namespace Tools.AssembliesViewer.Graph.Tree
                 _assemblyToGroup.Add(assembly, group);
 
                 assemblyEntry.IsToggled.View(lifetime,
-                    value => OnAssemblyToggle(assembly, assembly.Name, value));
+                    (_, value) => OnAssemblyToggle(assembly, assembly.Name, value));
             }
         }
 

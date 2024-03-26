@@ -11,15 +11,11 @@ namespace GamePlay.Enemy.Entity.States.Idle.Remote
         menuName = EnemyIdleRoutes.RemotePath)]
     public class RemoteIdleFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] private IdleAnimationFactory _animation;
         [SerializeField] private IdleDefinition _definition;
 
         public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
-            var animation = _animation.Create();
-            
             services.Register<RemoteIdle>()
-                .WithParameter(animation)
                 .WithParameter(_definition)
                 .AsCallbackListener();
         }

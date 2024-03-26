@@ -1,5 +1,4 @@
-﻿using Global.UI.Nova.Components;
-using Nova;
+﻿using Nova;
 using TMPro;
 using Tools.AssembliesViewer.Domain.Abstract;
 using Tools.AssembliesViewer.Graph.Controller.Abstract;
@@ -14,7 +13,7 @@ namespace Tools.AssembliesViewer.Graph.Nodes.Runtime
     {
         [SerializeField] private UIBlock2D _block;
         [SerializeField] private TMP_Text _text;
-        [SerializeField] private UIButton _selectionButton;
+        //[SerializeField] private UIButton _selectionButton;
         [SerializeField] private GameObject _selection;
         
         private IAssembly _assembly;
@@ -27,20 +26,20 @@ namespace Tools.AssembliesViewer.Graph.Nodes.Runtime
         public Vector3 WorldPosition => transform.position;
         
         public bool IsActive => gameObject.activeSelf;
-        public bool IsPressed => _selectionButton.IsPressed;
+        public bool IsPressed => false; //=> _selectionButton.IsPressed;
         public bool IsDirty => _isDirty;
         public IAssembly Assembly => _assembly;
 
         public void Enable()
         {
             gameObject.SetActive(true);
-            _selectionButton.Clicked += OnSelectionClicked;
+            //_selectionButton.Clicked += OnSelectionClicked;
         }
 
         public void Disable()
         {
             gameObject.SetActive(false);
-            _selectionButton.Clicked -= OnSelectionClicked;
+           // _selectionButton.Clicked -= OnSelectionClicked;
         }
 
         public void SetPosition(Vector2 position)

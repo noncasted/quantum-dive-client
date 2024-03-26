@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Internal.Services.Options.Implementations
     {
         [InlineEditor]
+        [CreateAssetMenu(fileName = "Options_Version", menuName = "Internal/Options/Version")]
         public class VersionOptions : OptionsEntry
         {
             [SerializeField] private string _value;

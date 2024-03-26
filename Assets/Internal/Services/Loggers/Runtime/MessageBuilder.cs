@@ -1,10 +1,11 @@
 ﻿using System.Text;
+using Internal.Scopes.Abstract.Loggers;
 
 namespace Internal.Services.Loggers.Runtime
 {
     public class MessageBuilder
     {
-        public string Build(string message, LogParameters parameters)
+        public string Build(string message, ILogParameters parameters)
         {
             var stringBuilder = new StringBuilder();
 
@@ -20,8 +21,8 @@ namespace Internal.Services.Loggers.Runtime
 
             stringBuilder.Append(": ");
 
-            if (parameters.IsMessageColored == true)
-                stringBuilder.Append(ApplyColor(message, parameters.Color));
+            if (parameters.BodyParameters.IsColored == true)
+                stringBuilder.Append(ApplyColor(message, parameters.BodyParameters.Color));
             else
                 stringBuilder.Append(message);
 

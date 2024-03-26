@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Global.Common.Mocks.Runtime;
 using Global.UI.Nova.InputManagers.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Scenes;
 using Internal.Scopes.Common;
-using Internal.Scopes.Mocks.Runtime;
 using Tools.AssembliesViewer.Graph.Controller.Abstract;
 using Tools.AssembliesViewer.Graph.Controller.Runtime;
 using Tools.AssembliesViewer.Graph.Controller.Runtime.Inputs;
@@ -24,7 +24,6 @@ namespace Tools.AssembliesViewer.Setup
     [DisallowMultipleComponent]
     public class AssemblyViewerSetup : MockBase, IServiceScopeConfig, IServiceFactory
     {
-        [SerializeField] private GlobalMock _mock;
         [SerializeField] private AssemblyViewerScope _scopePrefab;
         [SerializeField] private SceneData _servicesScene;
 
@@ -46,16 +45,16 @@ namespace Tools.AssembliesViewer.Setup
 
         public override async UniTaskVoid Process()
         {
-            var result = await _mock.BootstrapGlobal();
+            var result = await BootstrapGlobal();
             var resolver = result.Resolver;
-
+            
             var scopeLoaderFactory = resolver.Resolve<IServiceScopeLoader>();
             var scope = await scopeLoaderFactory.Load(result.Parent, this);
-
+            
             await result.RegisterLoadedScene(scope);
             await scope.Callbacks.RunConstruct();
-
-            var inputManager = scope.Scope.Container.Resolve<IUIInputManager>();
+            
+            var inputManager = scope.Scope.Container.Resolve<IUIInputHandler>();
             inputManager.SetCamera(_camera);
         }
 

@@ -13,19 +13,16 @@ namespace GamePlay.Enemy.Entity.States.Following.Remote
         public RemoteFollowing(
             IRemoteStateMachine stateMachine,
             IEnemyAnimator animator,
-            FollowingAnimation animation,
             FollowingDefinition definition)
         {
             _stateMachine = stateMachine;
             _animator = animator;
-            _animation = animation;
             _definition = definition;
         }
 
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IEnemyAnimator _animator;
         
-        private readonly FollowingAnimation _animation;
         private readonly FollowingDefinition _definition;
 
         public void OnSwitchLifetimeCreated(ILifetime lifetime)
@@ -35,7 +32,6 @@ namespace GamePlay.Enemy.Entity.States.Following.Remote
 
         public void Enter(RagonBuffer buffer)
         {
-            _animator.PlayLooped(_animation);
         }
 
         public void Break()

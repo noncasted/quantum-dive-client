@@ -1,0 +1,20 @@
+{
+    "name": "Global.Nova.InputManager.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:552447fb6cdb3d34b969d73c1b33b7d8",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+        "GUID:b6506c5e27354bbd9a7bdde5aec7ceec",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

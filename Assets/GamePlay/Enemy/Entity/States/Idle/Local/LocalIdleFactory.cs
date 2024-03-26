@@ -11,15 +11,11 @@ namespace GamePlay.Enemy.Entity.States.Idle.Local
         menuName = EnemyIdleRoutes.LocalPath)]
     public class LocalIdleFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] private IdleAnimationFactory _animation;
         [SerializeField] private IdleDefinition _definition;
         
         public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
-            var animation = _animation.Create();
-            
             services.Register<LocalIdle>()
-                .WithParameter(animation)
                 .WithParameter(_definition)
                 .As<IIdle>();
 

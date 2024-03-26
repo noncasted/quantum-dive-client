@@ -1,5 +1,4 @@
-﻿using Common.DataTypes.Network;
-using Ragon.Client;
+﻿using Ragon.Client;
 using Ragon.Protocol;
 using UnityEngine;
 
@@ -23,12 +22,10 @@ namespace GamePlay.Enemy.Spawn.Pool.Runtime
         
         public void Serialize(RagonBuffer buffer)
         {
-            buffer.WriteVector(_position);
         }
 
         public void Deserialize(RagonBuffer buffer)
         {
-            _position = buffer.ReadVector();
         }
     }
 }

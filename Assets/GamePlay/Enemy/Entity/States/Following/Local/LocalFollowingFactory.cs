@@ -11,16 +11,12 @@ namespace GamePlay.Enemy.Entity.States.Following.Local
         menuName = EnemyFollowingRoutes.LocalPath)]
     public class LocalFollowingFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] private FollowingAnimationFactory _animation;
         [SerializeField] private FollowingDefinition _definition;
         
         public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
-            var animation = _animation.Create();
-            
             services.Register<LocalFollowing>()
                 .As<IFollowing>()
-                .WithParameter(animation)
                 .WithParameter(_definition)
                 .AsCallbackListener();
             

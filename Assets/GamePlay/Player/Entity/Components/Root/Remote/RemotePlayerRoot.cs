@@ -37,7 +37,7 @@ namespace GamePlay.Player.Entity.Components.Root.Remote
         public async UniTask Enable()
         {
             if (_lifetime != null)
-                await _lifetime.Terminate();
+                _lifetime.Terminate();
 
             _lifetime = new Lifetime();
 
@@ -46,7 +46,7 @@ namespace GamePlay.Player.Entity.Components.Root.Remote
 
         public async UniTask Disable()
         {
-            await _lifetime.Terminate();
+            _lifetime.Terminate();
 
             _lifetime = new Lifetime();
 

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Network.Messaging.REST.Logs;
 using GamePlay.Network.Room.Entities.Factory;
 using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 using GamePlay.Services.System.Network.Room.EventLoops.Abstract;
@@ -13,14 +12,12 @@ namespace GamePlay.Network.Messaging.REST.Runtime
 {
     public class Messenger : IMessenger, INetworkSceneEntityCreationListener
     {
-        public Messenger(IClientProvider clientProvider, MessengerLogger logger)
+        public Messenger(IClientProvider clientProvider)
         {
             _clientProvider = clientProvider;
-            _logger = logger;
         }
 
         private readonly IClientProvider _clientProvider;
-        private readonly MessengerLogger _logger;
         private readonly Dictionary<Type, object> _pipes = new();
 
         private RagonEntity _entity;
@@ -89,10 +86,8 @@ namespace GamePlay.Network.Messaging.REST.Runtime
         {
             var type = typeof(TRequest);
 
-            var pipe = new MessagePipe<TRequest, TResponse>(_entity, _logger);
+            var pipe = new MessagePipe<TRequest, TResponse>(_entity);
             _pipes.Add(type, pipe);
-            
-            _logger.OnPipeAdded<TRequest, TResponse>();
 
             return pipe;
         }

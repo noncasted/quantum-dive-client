@@ -1,0 +1,21 @@
+{
+    "name": "Global.Updater.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+        "GUID:068b9f2d61da4e3e811cde55f27d8d78"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

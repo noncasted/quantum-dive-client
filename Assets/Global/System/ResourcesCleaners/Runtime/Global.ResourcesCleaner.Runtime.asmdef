@@ -1,0 +1,22 @@
+{
+    "name": "Global.ResourcesCleaner.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:e0ec64bd92fd40ecb815a8bae82556ca",
+        "GUID:72e9885cac6d49f2848c53adf5923ead",
+        "GUID:fb9b00a9a42c4c1459774b1ef88fcd74"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

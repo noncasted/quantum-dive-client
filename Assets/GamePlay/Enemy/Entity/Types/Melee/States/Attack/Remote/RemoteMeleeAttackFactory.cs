@@ -1,5 +1,4 @@
 ﻿using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common;
-using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Animation;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common.Config;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
@@ -13,19 +12,15 @@ namespace GamePlay.Enemy.Entity.Types.Melee.States.Attack.Remote
         menuName = EnemyMeleeAttackRoutes.RemotePath)]
     public class RemoteMeleeAttackFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] private MeleeAttackAnimationFactory _animation;
         [SerializeField] private MeleeAttackDefinition _definition;
         [SerializeField] private MeleeAttackConfig _config;
 
         public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
-            var animation = _animation.Create();
-
             services.RegisterInstance(_config)
                 .As<IMeleeAttackConfig>();
 
             services.Register<RemoteMeleeAttack>()
-                .WithParameter(animation)
                 .WithParameter(_definition)
                 .AsCallbackListener();
         }

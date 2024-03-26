@@ -34,7 +34,7 @@ namespace GamePlay.Enemy.Entity.Components.Network.Properties.Runtime
             _propertyBinder.BindProperty(_transform);
             _propertyBinder.BindProperty(_stateMachine);
             _propertyBinder.BindProperty(_hitboxState);
-            _propertyBinder.BindProperty(_health);
+            //_propertyBinder.BindProperty(_health);
         }
     }
 }

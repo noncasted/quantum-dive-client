@@ -1,18 +1,17 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using GamePlay.Common.Config.Runtime;
+//using GamePlay.Common.Config.Runtime;
 using Global.Cameras.CurrentProvider.Abstract;
 using Global.Cameras.Persistent.Abstract;
-using Global.GameLoops.Events;
 using Global.Network.Connection.Abstract;
-using Global.System.MessageBrokers.Abstract;
+//using Global.System.MessageBrokers.Abstract;
 using Global.System.ScopeDisposer.Abstract;
 using Global.UI.LoadingScreens.Abstract;
 using Global.UI.Overlays.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Options;
 using Internal.Scopes.Abstract.Scenes;
-using Menu.Config.Runtime;
+//using Menu.Config.Runtime;
 using VContainer.Unity;
 
 namespace Global.GameLoops.Runtime
@@ -28,12 +27,13 @@ namespace Global.GameLoops.Runtime
             ICurrentCameraProvider currentCameraProvider,
             IOptions options,
             IConnection connection,
-            IGlobalExceptionController globalException,
-            LevelConfig levelScope,
-            MenuConfig menuScope)
+            IGlobalExceptionController globalException
+            // LevelConfig levelScope,
+            // MenuConfig menuScope
+            )
         {
-            _levelScope = levelScope;
-            _menuScope = menuScope;
+            // _levelScope = levelScope;
+            // _menuScope = menuScope;
             _scope = scope;
             _scopeLoaderFactory = scopeLoaderFactory;
             _loadingScreen = loadingScreen;
@@ -58,8 +58,8 @@ namespace Global.GameLoops.Runtime
         private readonly LifetimeScope _scope;
         private readonly IServiceScopeLoader _scopeLoaderFactory;
 
-        private readonly LevelConfig _levelScope;
-        private readonly MenuConfig _menuScope;
+        // private readonly LevelConfig _levelScope;
+        // private readonly MenuConfig _menuScope;
 
         private IDisposable _restartListener;
         private IDisposable _enterGameListener;
@@ -68,9 +68,9 @@ namespace Global.GameLoops.Runtime
 
         public void OnEnabled()
         {
-            _restartListener = Msg.Listen<GameRestartRequest>(OnRestartRequested);
-            _enterGameListener = Msg.Listen<GameRequest>(OnLevelRequest);
-            _enterMenuListener = Msg.Listen<MenuRequest>(OnMenuRequest);
+            // _restartListener = Msg.Listen<GameRestartRequest>(OnRestartRequested);
+            // _enterGameListener = Msg.Listen<GameRequest>(OnLevelRequest);
+            // _enterMenuListener = Msg.Listen<MenuRequest>(OnMenuRequest);
         }
 
         public void OnDisabled()
@@ -85,21 +85,6 @@ namespace Global.GameLoops.Runtime
             ProcessGameStart().Forget();
         }
 
-        private void OnRestartRequested(GameRestartRequest request)
-        {
-            ProcessGameStart().Forget();
-        }
-
-        private void OnLevelRequest(GameRequest request)
-        {
-            LoadScene(_levelScope).Forget();
-        }
-
-        private void OnMenuRequest(MenuRequest request)
-        {
-            LoadScene(_menuScope).Forget();
-        }
-
         private async UniTask ProcessGameStart()
         {
             var connectionResult = await _connection.Connect("player");
@@ -110,7 +95,7 @@ namespace Global.GameLoops.Runtime
                 return;
             }
 
-            await LoadScene(_menuScope);
+//           await LoadScene(_menuScope);
             _loadingScreen.HideGameLoading();
         }
 

@@ -1,4 +1,4 @@
-﻿using Common.DataTypes.Reactive;
+﻿using Common.DataTypes.Runtime.Reactive;
 using Nova;
 
 namespace Tools.AssembliesViewer.Graph.Tree

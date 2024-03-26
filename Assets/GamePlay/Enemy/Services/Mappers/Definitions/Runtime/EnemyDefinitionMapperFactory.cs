@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Common.DataTypes.Collections.ScriptableRegistries;
+using Common.DataTypes.Runtime.Collections;
 using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Common.Definition.Asset;
 using GamePlay.Enemy.Entity.Common.Definition.Asset.Abstract;

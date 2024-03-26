@@ -1,9 +1,9 @@
 ﻿using Cysharp.Threading.Tasks;
 using GamePlay.Common.Config.Runtime;
+using Global.Common.Mocks.Runtime;
 using Global.Network.Connection.Abstract;
 using Global.Network.Session.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
-using Internal.Scopes.Mocks.Runtime;
 using UnityEngine;
 using VContainer;
 
@@ -13,12 +13,11 @@ namespace GamePlay.Common.GlobalBootstrapMocks
     public class LevelGlobalMock : MockBase
     {
         [SerializeField] private LevelConfig _levelScope;
-        [SerializeField] private GlobalMock _mock;
         
         public override async UniTaskVoid Process()
         {
-            var result = await _mock.BootstrapGlobal();
-            await BootstrapLocal(result);
+            // var result = await _mock.BootstrapGlobal();
+            // await BootstrapLocal(result);
         }
 
         private async UniTask BootstrapLocal(MockBootstrapResult result)

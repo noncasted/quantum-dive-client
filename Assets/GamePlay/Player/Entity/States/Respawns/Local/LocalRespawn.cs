@@ -6,7 +6,6 @@ using GamePlay.Player.Entity.Components.StateMachines.Local.Abstract;
 using GamePlay.Player.Entity.States.Abstract;
 using GamePlay.Player.Entity.States.Common;
 using GamePlay.Player.Entity.States.Respawns.Common;
-using GamePlay.Player.Entity.States.Respawns.Logs;
 using GamePlay.Player.Entity.Views.Hitboxes.Local;
 
 namespace GamePlay.Player.Entity.States.Respawns.Local
@@ -19,7 +18,6 @@ namespace GamePlay.Player.Entity.States.Respawns.Local
             IEquipmentLocker locker,
             IHitbox hitbox,
             IAnimation animation,
-            RespawnLogger logger,
             RespawnDefinition definition)
         {
             _stateMachine = stateMachine;
@@ -27,7 +25,6 @@ namespace GamePlay.Player.Entity.States.Respawns.Local
             _locker = locker;
             _hitbox = hitbox;
             _animation = animation;
-            _logger = logger;
             Definition = definition;
         }
 
@@ -38,7 +35,6 @@ namespace GamePlay.Player.Entity.States.Respawns.Local
         private readonly ILocalStateMachine _stateMachine;
         
         private readonly IAnimation _animation;
-        private readonly RespawnLogger _logger;
 
         private CancellationTokenSource _cancellation;
 
@@ -48,8 +44,6 @@ namespace GamePlay.Player.Entity.States.Respawns.Local
         {
             _locker.Lock();
             _stateMachine.Enter(this);
-
-            _logger.OnEntered();
 
             _cancellation?.Cancel();
             _cancellation?.Dispose();
@@ -64,8 +58,6 @@ namespace GamePlay.Player.Entity.States.Respawns.Local
             _cancellation?.Cancel();
             _cancellation?.Dispose();
             _cancellation = null;
-
-            _logger.OnBroke();
         }
 
         private async UniTask Process()

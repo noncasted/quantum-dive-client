@@ -6,7 +6,6 @@ using GamePlay.Hitboxes.Runtime;
 using GamePlay.Loop.Runtime;
 using GamePlay.Projectiles.Bootstrap;
 using GamePlay.Targets.Registry.Runtime;
-using GamePlay.VfxPools.Runtime;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -24,7 +23,6 @@ namespace GamePlay.Common.Compose
         [SerializeField] private HitboxRegistryFactory _hitboxRegistry;
         [SerializeField] private TargetRegistryFactory _targetRegistry;
         [SerializeField] private LevelCameraFactory _levelCamera;
-        [SerializeField] private VfxPoolFactory _vfxPool;
         [SerializeField] private EcsFactory _ecs;
 
         public IReadOnlyList<IServiceFactory> Factories => new IServiceFactory[]
@@ -34,7 +32,6 @@ namespace GamePlay.Common.Compose
             _hitboxRegistry,
             _targetRegistry,
             _levelCamera,
-            _vfxPool,
             _ecs
         };
     }

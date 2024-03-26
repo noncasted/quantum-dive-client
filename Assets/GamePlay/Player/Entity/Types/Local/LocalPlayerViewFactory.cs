@@ -1,5 +1,4 @@
 ﻿using GamePlay.Player.Entity.Common.Definition;
-using GamePlay.Player.Entity.Components.Debug.Flags;
 using GamePlay.Player.Entity.Components.Equipment.Slots.Binder;
 using GamePlay.Player.Entity.Views.Animators.Runtime;
 using GamePlay.Player.Entity.Views.DamageReceivers.Runtime;
@@ -25,7 +24,6 @@ namespace GamePlay.Player.Entity.Types.Local
         [SerializeField] private PlayerGameObjectFactory _gameObject;
         [SerializeField] private PlayerLocalHitboxFactory _hitbox;
         [SerializeField] private PlayerDamageReceiverFactory _damageReceiver;
-        [SerializeField] private PlayerDebugFlags _debugFlags;
 
         public override void CreateViews(IServiceCollection services, IScopedEntityUtils utils)
         {
@@ -37,7 +35,6 @@ namespace GamePlay.Player.Entity.Types.Local
             _gameObject.Create(services, utils);
             _hitbox.Create(services, utils);
             _damageReceiver.Create(services, utils);
-            _debugFlags.Create(services, utils);
         }
     }
 }

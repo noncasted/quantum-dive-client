@@ -41,8 +41,8 @@ namespace Tools.AssembliesViewer.Graph.Controller.Runtime
 
         private Vector2 GetPosition(IAssembly assembly)
         {
-            if (_save.X.TryGetValue(assembly.Id, out var save) == true)
-                return new Vector2(_save.X[assembly.Id], _save.Y[assembly.Id]);
+            if (_save.X.TryGetValue(assembly.Id, out var x) == true && _save.Y .TryGetValue(assembly.Id, out var y ) == true)
+                return new Vector2(x, y);
 
             var position = new Vector2(Random.Range(-3000, 3000), Random.Range(-3000, 3000));
 

@@ -1,6 +1,5 @@
 ﻿using GamePlay.Player.Entity.Components.StateMachines.Remote.Abstract;
 using GamePlay.Player.Entity.Components.StateMachines.Remote.Common;
-using GamePlay.Player.Entity.Components.StateMachines.Remote.Logs;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
@@ -13,13 +12,8 @@ namespace GamePlay.Player.Entity.Components.StateMachines.Remote.Runtime
         menuName = RemoteStateMachineRoutes.ServicePath)]
     public class RemoteStateMachineFactory : ScriptableObject, IComponentFactory
     {
-        [SerializeField] [Indent] private RemoteStateMachineLogSettings _logSettings;
-        
         public void Create(IServiceCollection services, IScopedEntityUtils utils)
         {
-            services.Register<RemoteStateMachineLogger>()
-                .WithParameter(_logSettings);
-            
             services.Register<RemoteStateMachine>()
                 .As<IRemoteStateMachine>()
                 .As<IStateMachineSync>()

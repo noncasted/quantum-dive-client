@@ -52,15 +52,15 @@ namespace GamePlay.Enemy.Entity.Components.Root.Local
             }
 
             _isActive = true;
-            
+
             _entityProvider.Construct(entity);
-            
+
             if (_lifetime != null)
-                await _lifetime.Terminate();
+                _lifetime.Terminate();
 
             _lifetime = new Lifetime();
             await _callbacks.RunEnable(_lifetime);
-            
+
             _gameObject.Enable();
             _transform.SetPosition(position);
         }
@@ -77,14 +77,14 @@ namespace GamePlay.Enemy.Entity.Components.Root.Local
             _gameObject.Disable();
             _transform.SetPosition(Vector2.zero);
 
-            await _lifetime.Terminate();
+            _lifetime.Terminate();
             await _callbacks.RunDisable();
         }
 
         public async UniTask Respawn()
         {
             await _respawn.Enter();
-            
+
             _stateSelector.Start();
         }
     }

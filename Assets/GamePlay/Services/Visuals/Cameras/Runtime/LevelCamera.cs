@@ -1,5 +1,4 @@
 ﻿using GamePlay.Cameras.Abstract;
-using GamePlay.Cameras.Logs;
 using Global.Cameras.CurrentProvider.Abstract;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
@@ -16,12 +15,10 @@ namespace GamePlay.Cameras.Runtime
         public LevelCamera(
             LevelCameraView camera,
             ICurrentCameraProvider currentCamera,
-            IUpdater updater,
-            LevelCameraLogger logger)
+            IUpdater updater)
         {
             _camera = camera.Camera;
             _updater = updater;
-            _logger = logger;
             _currentCamera = currentCamera;
             _transform = camera.transform;
         }
@@ -33,8 +30,6 @@ namespace GamePlay.Cameras.Runtime
 
         private readonly ICurrentCameraProvider _currentCamera;
         private readonly IUpdater _updater;
-
-        private readonly LevelCameraLogger _logger;
 
         private IFollowTarget _target;
 
@@ -57,19 +52,14 @@ namespace GamePlay.Cameras.Runtime
         public void StartFollow(IFollowTarget target)
         {
             _target = target;
-
-            _logger.OnStartFollow();
         }
 
         public void StopFollow()
         {
             if (_target == null)
             {
-                _logger.OnStopFollowError();
                 return;
             }
-
-            _logger.OnStopFollow();
 
             _target = null;
         }
@@ -78,8 +68,6 @@ namespace GamePlay.Cameras.Runtime
         {
             var position = new Vector3(target.x, target.y, _offsetZ);
             _transform.position = position;
-
-            _logger.OnTeleport(position);
         }
 
         public void SetSize(float size)

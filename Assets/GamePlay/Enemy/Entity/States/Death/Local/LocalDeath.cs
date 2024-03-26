@@ -17,14 +17,12 @@ namespace GamePlay.Enemy.Entity.States.Death.Local
             IEnemyAnimator animator,
             IEnemySpriteSwitcher spriteSwitcher,
             IHitbox hitbox,
-            DeathAnimation animation,
             DeathDefinition definition)
         {
             _stateMachine = stateMachine;
             _animator = animator;
             _spriteSwitcher = spriteSwitcher;
             _hitbox = hitbox;
-            _animation = animation;
             _definition = definition;
         }
 
@@ -33,7 +31,6 @@ namespace GamePlay.Enemy.Entity.States.Death.Local
         private readonly IEnemySpriteSwitcher _spriteSwitcher;
         private readonly IHitbox _hitbox;
 
-        private readonly DeathAnimation _animation;
         private readonly DeathDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -44,7 +41,6 @@ namespace GamePlay.Enemy.Entity.States.Death.Local
 
         public void Enter()
         {
-            _hitbox.Disable();
             Process().Forget();
         }
         
@@ -61,8 +57,6 @@ namespace GamePlay.Enemy.Entity.States.Death.Local
 
             _cancellation = new CancellationTokenSource();
 
-            await _animator.PlayAsync(_animation, _cancellation.Token);
-            
             _spriteSwitcher.Disable();
             
             Died?.Invoke();

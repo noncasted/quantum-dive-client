@@ -1,6 +1,5 @@
-﻿using Common.DataTypes.Structs;
+﻿using Common.DataTypes.Runtime.Structs;
 using GamePlay.Player.Entity.Views.Physics.Abstract;
-using GamePlay.Player.Entity.Views.Physics.Logs;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;
@@ -13,20 +12,16 @@ namespace GamePlay.Player.Entity.Views.Physics.Runtime
         public PlayerPhysics(
             IUpdater updater,
             PlayerPhysicsView view,
-            PlayerPhysicsConfig config,
-            PhysicsLogger logger)
+            PlayerPhysicsConfig config)
         {
             _updater = updater;
             _view = view;
             _config = config;
-            _logger = logger;
         }
 
-        private readonly PhysicsLogSettings _logSettings;
         private readonly IUpdater _updater;
         private readonly PlayerPhysicsView _view;
         private readonly PlayerPhysicsConfig _config;
-        private readonly PhysicsLogger _logger;
 
         private Quaternion _targetDirection;
 
@@ -50,8 +45,6 @@ namespace GamePlay.Player.Entity.Views.Physics.Runtime
             var position = _view.position + convertedDirection * distance;
 
             _view.SetPosition(position);
-
-            _logger.OnMoveEnqueued(direction, distance);
         }
 
         public void SetVelocity(Vector2 direction, float force)
@@ -68,7 +61,6 @@ namespace GamePlay.Player.Entity.Views.Physics.Runtime
             var position = _view.position + direction * force;
 
             _view.SetPosition(position);
-            _logger.OnMoveEnqueued(direction, force);
         }
 
         public void LockCurrentRotation()

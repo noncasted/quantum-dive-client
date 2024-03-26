@@ -18,7 +18,6 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
             IProjectileFactory projectileFactory,
             IShootConfig shootConfig,
             IShootPoint shootPoint,
-            ShootAnimation animation,
             ShootDefinition definition)
         {
             _stateMachine = stateMachine;
@@ -26,7 +25,6 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
             _projectileFactory = projectileFactory;
             _shootConfig = shootConfig;
             _shootPoint = shootPoint;
-            _animation = animation;
             _definition = definition;
         }
 
@@ -36,7 +34,6 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
         private readonly IShootConfig _shootConfig;
         private readonly IShootPoint _shootPoint;
 
-        private readonly ShootAnimation _animation;
         private readonly ShootDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -49,10 +46,10 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 
             _cancellation = new CancellationTokenSource();
 
-            var animationTask = _animator.PlayAsync(_animation, _cancellation.Token);
-            var shootEventTask = _animation.WaitShootFrameAsync(_cancellation.Token);
-
-            await shootEventTask;
+            // var animationTask = _animator.PlayAsync(_animation, _cancellation.Token);
+            // var shootEventTask = _animation.WaitShootFrameAsync(_cancellation.Token);
+            //
+            // await shootEventTask;
 
             var direction = (target.Position - _shootPoint.Point).normalized;
 
@@ -64,7 +61,7 @@ namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
             
             _projectileFactory.CreateLocalEnemy(projectileRequest);
 
-            await animationTask;
+            // await animationTask;
             
             _stateMachine.Exit(this);
         }

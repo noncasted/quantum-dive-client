@@ -5,7 +5,6 @@ using GamePlay.Player.Entity.Common.Definition;
 using GamePlay.Player.Entity.Types.Local;
 using GamePlay.Player.Entity.Types.Remote;
 using GamePlay.Player.Services.Factory.Factory.Abstract;
-using GamePlay.Player.Services.Factory.Factory.Logs;
 using GamePlay.Player.Services.Factory.SpawnPoints;
 using GamePlay.Player.Services.List.Abstract;
 using GamePlay.Services.System.Network.Objects.Factories.Abstract;
@@ -30,8 +29,7 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
             LocalPlayerConfig localConfig,
             RemotePlayerConfig remoteConfig,
             LifetimeScope parentScope,
-            DefaultEquipmentConfig equipment,
-            PlayerFactoryLogger logger)
+            DefaultEquipmentConfig equipment)
         {
             _dynamicEntityFactory = dynamicEntityFactory;
             _factoriesRegistry = factoriesRegistry;
@@ -42,7 +40,6 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
             _remoteConfig = remoteConfig;
             _parentScope = parentScope;
             _equipment = equipment;
-            _logger = logger;
         }
 
         private readonly IDynamicEntityFactory _dynamicEntityFactory;
@@ -54,7 +51,6 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
         private readonly LifetimeScope _parentScope;
         private readonly DefaultEquipmentConfig _equipment;
 
-        private readonly PlayerFactoryLogger _logger;
         private readonly GamePlayScope _scope;
         private readonly ISpawnPoints _spawnPoints;
 
@@ -92,8 +88,6 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
             await root.Callbacks.RunConstruct();
             await root.Enable();
 
-            _logger.OnLocalInstantiated(spawnPosition);
-
             return root;
         }
 
@@ -110,8 +104,6 @@ namespace GamePlay.Player.Services.Factory.Factory.Runtime
  
             await root.Callbacks.RunConstruct();
             await root.Enable();
-
-            _logger.OnRemoteInstantiated(spawnPosition);
         }
     }
 }

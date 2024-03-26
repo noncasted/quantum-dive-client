@@ -17,20 +17,17 @@ namespace GamePlay.Enemy.Entity.States.Respawn.Remote
             IRemoteStateMachine stateMachine,
             IEnemyAnimator animator,
             IEnemySpriteSwitcher spriteSwitcher,
-            RespawnAnimation animation,
             RespawnDefinition definition)
         {
             _stateMachine = stateMachine;
             _animator = animator;
             _spriteSwitcher = spriteSwitcher;
-            _animation = animation;
             _definition = definition;
         }
 
         private readonly IRemoteStateMachine _stateMachine;
         private readonly IEnemyAnimator _animator;
         private readonly IEnemySpriteSwitcher _spriteSwitcher;
-        private readonly RespawnAnimation _animation;
         private readonly RespawnDefinition _definition;
 
         private CancellationTokenSource _cancellation;
@@ -47,7 +44,7 @@ namespace GamePlay.Enemy.Entity.States.Respawn.Remote
 
             _spriteSwitcher.Enable();
 
-            _animator.PlayAsync(_animation, _cancellation.Token).Forget();
+            //_animator.PlayAsync(_animation, _cancellation.Token).Forget();
         }
 
         public void Break()

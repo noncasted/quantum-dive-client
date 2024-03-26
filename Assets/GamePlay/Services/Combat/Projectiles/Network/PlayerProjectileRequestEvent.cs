@@ -1,5 +1,4 @@
-﻿using Common.DataTypes.Network;
-using GamePlay.Projectiles.Factory;
+﻿using GamePlay.Projectiles.Factory;
 using Ragon.Client;
 using Ragon.Protocol;
 using UnityEngine;
@@ -27,8 +26,6 @@ namespace GamePlay.Projectiles.Network
             
         }
 
-        private static readonly NetworkIntCompressor _idCompressor = new(0, 100_000);
-        private static readonly NetworkFloatCompressor _paramsCompressor = new(0, 100, 0.01f);
         
         private int _definitionId;
         private Vector2 _position;
@@ -48,26 +45,12 @@ namespace GamePlay.Projectiles.Network
         
         public void Serialize(RagonBuffer buffer)
         {
-            _idCompressor.Write(buffer, _definitionId);
 
-            buffer.WritePosition(_position);
-            buffer.WriteDirection(_direction);
-            
-            _paramsCompressor.Write(buffer, _speed);
-            _paramsCompressor.Write(buffer, _scale);
-            _paramsCompressor.Write(buffer, _radius);
         }
 
         public void Deserialize(RagonBuffer buffer)
         {
-            _definitionId = _idCompressor.Read(buffer);
 
-            _position = buffer.ReadPosition();
-            _direction = buffer.ReadDirection();
-
-            _speed = _paramsCompressor.Read(buffer);
-            _scale = _paramsCompressor.Read(buffer);
-            _radius = _paramsCompressor.Read(buffer);
         }
     }
 }
