@@ -11,7 +11,7 @@ namespace Tools.AssembliesViewer.Domain.Runtime
             List<string> excludePlatforms,
             List<string> precompiledReferences,
             List<string> defineConstraints,
-            List<string> versionDefines
+            List<VersionDefinesObject> versionDefines
         )
         {
             IncludePlatforms = includePlatforms;
@@ -26,7 +26,7 @@ namespace Tools.AssembliesViewer.Domain.Runtime
         public List<string> ExcludePlatforms { get; set; }
         public List<string> PrecompiledReferences { get; set; }
         public List<string> DefineConstraints { get; set; }
-        public List<string> VersionDefines { get; set; }
+        public List<VersionDefinesObject> VersionDefines { get; set; }
 
         public override string ToString()
         {

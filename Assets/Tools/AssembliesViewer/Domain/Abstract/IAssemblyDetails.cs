@@ -7,5 +7,6 @@ namespace Tools.AssembliesViewer.Domain.Abstract
         IReadOnlyList<string> Namespaces { get; }
         IReadOnlyList<string> Usings { get; }
         IReadOnlyList<string> Interfaces { get; }
+        bool IsOwned { get; }
     }
 }

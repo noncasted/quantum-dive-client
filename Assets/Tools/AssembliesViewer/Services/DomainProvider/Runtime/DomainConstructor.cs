@@ -34,7 +34,8 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                 var details = new AssemblyDetails(
                     rawAssembly.Namespaces,
                     rawAssembly.Usings,
-                    Array.Empty<string>());
+                    Array.Empty<string>(),
+                    rawAssembly.IsOwned);
 
                 var toggles = new AssemblyToggles(
                     file.allowUnsafeCode,
@@ -77,7 +78,8 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                         var unknownDetails = new AssemblyDetails(
                             Array.Empty<string>(),
                             Array.Empty<string>(),
-                            Array.Empty<string>());
+                            Array.Empty<string>(),
+                            rawAssembly.IsOwned);
 
                         var toggles = new AssemblyToggles(
                             file.allowUnsafeCode,
@@ -297,7 +299,7 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
             public List<string> includePlatforms = new();
             public List<string> excludePlatforms = new();
             public List<string> defineConstraints = new();
-            public List<string> versionDefines = new();
+            public List<VersionDefinesObject> versionDefines = new();
             public List<string> precompiledReferences = new();
 
             public bool allowUnsafeCode;

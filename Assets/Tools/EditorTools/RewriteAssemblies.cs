@@ -12,7 +12,10 @@ namespace Tools.EditorTools
             var assemblies = domainConstructor.Construct();
 
             foreach (var assembly in assemblies)
-                assembly.Write();
+            {
+                if (assembly.Details.IsOwned)
+                    assembly.Write();
+            }
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Tools.AssembliesViewer.Domain.Abstract
         List<string> ExcludePlatforms { get; set; }
         List<string> PrecompiledReferences { get; set; }
         List<string> DefineConstraints { get; set; }
-        List<string> VersionDefines { get; set; }
+        List<VersionDefinesObject> VersionDefines { get; set; }
 
         string ToString();
     }
