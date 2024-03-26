@@ -28,7 +28,7 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                     .Replace("Assets/", "").Replace(".asmdef", "");
                 var fileName = assemblyName.Split(".")[^1];
 
-                var path = new AssemblyPath(fileName, assemblyName, fullPathName);
+                var path = new AssemblyPath(fileName, assemblyName, fullPathName, rawAssembly.AssetPath);
                 var file = rawAssembly.File;
 
                 var details = new AssemblyDetails(
@@ -73,7 +73,7 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
 
                         var fileName = unknownName.Split(".")[^1];
                         var file = rawAssembly.File;
-                        var path = new AssemblyPath(fileName, unknownName, fullPathName);
+                        var path = new AssemblyPath(fileName, unknownName, fullPathName, reference.AssetPath);
 
                         var unknownDetails = new AssemblyDetails(
                             Array.Empty<string>(),

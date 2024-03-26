@@ -53,7 +53,7 @@ namespace Tools.AssembliesViewer.Domain.Runtime
                 $"    {Toggles.ToString()}{newLine}" +
                 "}";
 
-            File.WriteAllText(Path.FullPathName, json);
+            File.WriteAllText(Path.Raw, json);
         }
 
         string ReferencesToString()
