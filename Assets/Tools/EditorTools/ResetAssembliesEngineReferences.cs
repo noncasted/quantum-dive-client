@@ -1,4 +1,5 @@
-﻿using Tools.AssembliesViewer.Services.DomainProvider.Runtime;
+﻿using Tools.AssembliesViewer.Domain.Abstract;
+using Tools.AssembliesViewer.Services.DomainProvider.Runtime;
 using UnityEditor;
 
 namespace Tools.EditorTools
@@ -16,7 +17,7 @@ namespace Tools.EditorTools
                 if (assembly.Details.IsOwned == false)
                     continue;
 
-                if (ContainsEngineReferences() == true)
+                if (ContainsEngineReferences() == false)
                     assembly.Toggles.NoEngineReferences = true;
 
                 assembly.Write();
@@ -25,13 +26,27 @@ namespace Tools.EditorTools
 
                 bool ContainsEngineReferences()
                 {
-                    foreach (var usingLine in assembly.Details.Usings)
+                    if (CheckUsing(assembly) == true)
+                        return true;
+
+                    foreach (var reference in assembly.References)
+                    {
+                        if (CheckUsing(reference) == true)
+                            return true;
+                    }
+
+                    return false;
+                }
+
+                bool CheckUsing(IAssembly checkAssembly)
+                {
+                    foreach (var usingLine in checkAssembly.Details.Usings)
                     {
                         if (usingLine.Contains("UnityEngine") || usingLine.Contains("UnityEditor"))
                             return true;
                     }
 
-                    return true;
+                    return false;
                 }
             }
         }

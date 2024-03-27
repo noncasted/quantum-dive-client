@@ -12,5 +12,5 @@
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "autoReferenced": false,
-    "noEngineReferences": false
+    "noEngineReferences": true
 }
