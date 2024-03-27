@@ -1,5 +1,4 @@
-﻿using Global.Common;
-using Global.Common.Paths;
+﻿using Global.Common.Paths;
 using Global.Configs.Common;
 
 namespace Global.Configs.Upgrades.Common

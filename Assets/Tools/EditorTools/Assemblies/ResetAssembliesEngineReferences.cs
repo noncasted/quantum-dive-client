@@ -2,7 +2,7 @@
 using Tools.AssembliesViewer.Services.DomainProvider.Runtime;
 using UnityEditor;
 
-namespace Tools.EditorTools
+namespace Tools.EditorTools.Assemblies
 {
     public static class ResetAssembliesEngineReferences
     {

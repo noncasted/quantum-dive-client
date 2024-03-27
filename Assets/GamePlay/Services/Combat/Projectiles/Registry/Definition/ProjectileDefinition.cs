@@ -1,6 +1,5 @@
 ﻿using GamePlay.Projectiles.Common;
 using GamePlay.Projectiles.Entity.Views.Facade;
-using Internal.Scopes.Abstract.Containers;
 using UnityEngine;
 
 namespace GamePlay.Projectiles.Registry.Definition

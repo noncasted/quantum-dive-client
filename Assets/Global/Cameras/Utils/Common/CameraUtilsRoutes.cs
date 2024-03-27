@@ -1,5 +1,4 @@
 ﻿using Global.Cameras.Common;
-using Global.Common;
 using Global.Common.Paths;
 
 namespace Global.Cameras.Utils.Common

@@ -4,7 +4,6 @@ using GamePlay.Projectiles.Systems.CollisionDetection;
 using GamePlay.Projectiles.Systems.HitDetection;
 using GamePlay.Projectiles.Systems.Movement;
 using GamePlay.Projectiles.Systems.Sorting;
-using Global.System.MessageBrokers.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 
 namespace GamePlay.Projectiles.Bootstrap

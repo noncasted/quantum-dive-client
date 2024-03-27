@@ -1,5 +1,4 @@
-﻿using System;
-using GamePlay.Projectiles.Entity.Views.Actions;
+﻿using GamePlay.Projectiles.Entity.Views.Actions;
 using GamePlay.Projectiles.Entity.Views.Transforms;
 using UnityEngine;
 

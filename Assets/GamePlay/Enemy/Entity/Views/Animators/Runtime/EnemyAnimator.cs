@@ -1,8 +1,5 @@
-﻿using System.Threading;
-using Cysharp.Threading.Tasks;
-using GamePlay.Enemy.Entity.Views.Animators.Abstract;
+﻿using GamePlay.Enemy.Entity.Views.Animators.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
-using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.Animators.Runtime
 {

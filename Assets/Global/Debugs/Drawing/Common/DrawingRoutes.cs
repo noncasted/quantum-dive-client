@@ -1,5 +1,4 @@
-﻿using Global.Common;
-using Global.Common.Paths;
+﻿using Global.Common.Paths;
 
 namespace Global.Debugs.Drawing.Common
 {

@@ -3,8 +3,6 @@ using Cysharp.Threading.Tasks;
 using GamePlay.Common.Scope;
 using GamePlay.Network.Compose;
 using Global.Common.Mocks.Runtime;
-using Global.Network.Connection.Abstract;
-using Global.Network.Session.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Scenes;
 using Internal.Scopes.Common.Services;

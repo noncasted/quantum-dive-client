@@ -1,5 +1,4 @@
 ﻿using Common.DataTypes.Runtime.Reactive;
-using Common.DataTypes.Runtime.Structs;
 using Global.Inputs.Constranits.Abstract;
 using Global.Inputs.Constranits.Definition;
 using Global.Inputs.View.Abstract;

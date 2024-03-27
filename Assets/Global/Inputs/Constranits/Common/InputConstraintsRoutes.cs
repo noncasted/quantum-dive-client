@@ -1,5 +1,4 @@
-﻿using Global.Common;
-using Global.Common.Paths;
+﻿using Global.Common.Paths;
 using Global.Inputs.Common;
 
 namespace Global.Inputs.Constranits.Common

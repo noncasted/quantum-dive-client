@@ -1,9 +1,8 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Global.UI.Design.Runtime.Layouts
 {
-    public class DesignLayoutSceneUpdater : AssetModificationProcessor
+    public class DesignLayoutSceneUpdater : UnityEditor.AssetModificationProcessor
     {
         public static string[] OnWillSaveAssets(string[] paths)
         {

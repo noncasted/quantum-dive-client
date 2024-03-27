@@ -2,7 +2,6 @@
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;
-using VContainer;
 
 namespace Global.System.Updaters.Runtime
 {

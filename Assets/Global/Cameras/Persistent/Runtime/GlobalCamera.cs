@@ -1,7 +1,6 @@
 ﻿using Global.Cameras.Persistent.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
-using VContainer;
 
 namespace Global.Cameras.Persistent.Runtime
 {

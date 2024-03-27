@@ -1,5 +1,4 @@
 ﻿using Global.Audio.Common;
-using Global.Common;
 using Global.Common.Paths;
 
 namespace Global.Audio.Listener.Common

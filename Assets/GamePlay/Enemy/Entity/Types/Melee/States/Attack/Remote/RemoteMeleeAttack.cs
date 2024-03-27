@@ -1,5 +1,4 @@
 ﻿using System.Threading;
-using Cysharp.Threading.Tasks;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Abstract;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.Types.Melee.States.Attack.Common;

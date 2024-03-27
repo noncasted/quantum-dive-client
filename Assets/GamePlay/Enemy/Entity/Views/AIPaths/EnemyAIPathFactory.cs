@@ -1,8 +1,8 @@
 ﻿using System;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Entities;
+
 //using Pathfinding;
-using UnityEngine;
 
 namespace GamePlay.Enemy.Entity.Views.AIPaths
 {

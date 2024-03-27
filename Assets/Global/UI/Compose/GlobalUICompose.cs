@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Global.Common;
 using Global.Common.Paths;
 using Global.UI.EventSystems.Runtime;
 using Global.UI.LoadingScreens.Runtime;

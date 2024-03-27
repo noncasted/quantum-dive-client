@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Common.DataTypes.Runtime.Attributes;
-using Common.DataTypes.Runtime.Collections;
 using Global.UI.Localizations.Common;
 using Global.UI.Localizations.Texts;
 using Sirenix.OdinInspector;
