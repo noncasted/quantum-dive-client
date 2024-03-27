@@ -1,11 +1,11 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Cameras.Abstract;
 using GamePlay.Player.Entity.Common.Definition;
 using GamePlay.Player.Entity.Components.CameraFollow.Abstract;
 using GamePlay.Player.Entity.Components.Equipment.Equipper.Local;
 using GamePlay.Player.Entity.Components.Healths.Abstract;
 using GamePlay.Player.Entity.States.None.Abstract;
 using GamePlay.Player.Entity.Views.Transforms.Abstract;
+using GamePlay.Services.Cameras.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;
 using Internal.Scopes.Common.Entity;

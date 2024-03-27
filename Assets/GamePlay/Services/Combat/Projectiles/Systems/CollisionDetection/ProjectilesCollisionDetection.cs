@@ -2,7 +2,7 @@
 using Leopotam.EcsLite;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Systems.CollisionDetection
+namespace GamePlay.Services.Projectiles.Systems.CollisionDetection
 {
     public class ProjectilesCollisionDetection : IEcsRunSystem
     {

@@ -1,11 +1,11 @@
 ﻿using System;
-using GamePlay.Hitboxes.Flags;
-using GamePlay.Projectiles.Entity.Components;
-using GamePlay.Projectiles.Pool;
+using GamePlay.Services.Hitboxes.Flags;
+using GamePlay.Services.Projectiles.Entity.Components;
+using GamePlay.Services.Projectiles.Pool;
 using GamePlay.Services.System.Ecs.Abstract;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Factory
+namespace GamePlay.Services.Projectiles.Factory
 {
     public class ProjectileFactory : IProjectileFactory
     {

@@ -3,7 +3,7 @@ using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.Network.Messaging.REST.Runtime
+namespace GamePlay.Services.Network.Messaging.REST.Runtime
 {
     public class MessageId : IRagonEvent, IMessageId
     {

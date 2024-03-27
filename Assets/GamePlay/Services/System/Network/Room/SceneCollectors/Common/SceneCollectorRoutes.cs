@@ -1,6 +1,6 @@
-﻿using GamePlay.Network.Common;
+﻿using GamePlay.Services.Network.Common;
 
-namespace GamePlay.Network.Room.SceneCollectors.Common
+namespace GamePlay.Services.Network.Room.SceneCollectors.Common
 {
     public class SceneCollectorRoutes
     {

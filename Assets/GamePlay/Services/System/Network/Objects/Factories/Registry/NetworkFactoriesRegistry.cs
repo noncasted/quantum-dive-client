@@ -6,7 +6,7 @@ using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Client;
 
-namespace GamePlay.Network.Objects.Factories.Registry
+namespace GamePlay.Services.Network.Objects.Factories.Registry
 {
     public class NetworkFactoriesRegistry : INetworkFactoriesRegistry, IScopeSwitchListener
     {

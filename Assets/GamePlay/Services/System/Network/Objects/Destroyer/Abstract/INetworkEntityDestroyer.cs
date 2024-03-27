@@ -1,4 +1,4 @@
-﻿using GamePlay.Network.Objects.Definition;
+﻿using GamePlay.Services.Network.Objects.Definition;
 
 namespace GamePlay.Services.System.Network.Objects.Destroyer.Abstract
 {

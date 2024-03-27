@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Network.Room.Entities.Factory;
+using GamePlay.Services.Network.Room.Entities.Factory;
 using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 using GamePlay.Services.System.Network.Room.EventLoops.Abstract;
 using Global.Network.Handlers.ClientHandler.Abstract;
 using Ragon.Client;
 
-namespace GamePlay.Network.Messaging.REST.Runtime
+namespace GamePlay.Services.Network.Messaging.REST.Runtime
 {
     public class Messenger : IMessenger, INetworkSceneEntityCreationListener
     {

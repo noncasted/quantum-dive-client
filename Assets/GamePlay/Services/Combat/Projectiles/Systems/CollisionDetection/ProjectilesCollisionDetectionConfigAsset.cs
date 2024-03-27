@@ -1,8 +1,8 @@
-﻿using GamePlay.Projectiles.Common;
+﻿using GamePlay.Services.Projectiles.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Systems.CollisionDetection
+namespace GamePlay.Services.Projectiles.Systems.CollisionDetection
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = ProjectilesRoutes.CollisionConfigName,

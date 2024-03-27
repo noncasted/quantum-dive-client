@@ -1,8 +1,8 @@
-﻿using GamePlay.Projectiles.Entity.Components;
+﻿using GamePlay.Services.Projectiles.Entity.Components;
 using Leopotam.EcsLite;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Systems.Sorting
+namespace GamePlay.Services.Projectiles.Systems.Sorting
 {
     public class ProjectilesSorting : IEcsRunSystem
     {

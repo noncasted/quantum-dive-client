@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Cameras.Abstract;
 using GamePlay.Player.Services.Factory.Factory.Abstract;
+using GamePlay.Services.Cameras.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;
 
 namespace GamePlay.Loop.Runtime

@@ -1,6 +1,6 @@
-﻿using GamePlay.Common.Routes;
+﻿using GamePlay.Services.Common.Routes;
 
-namespace GamePlay.Projectiles.Common
+namespace GamePlay.Services.Projectiles.Common
 {
     public static class ProjectilesRoutes
     {

@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Network.Common
+﻿namespace GamePlay.Services.Network.Common
 {
     public class GamePlayNetworkPrefixes
     {

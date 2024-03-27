@@ -4,7 +4,7 @@ using GamePlay.Enemy.Services.Mappers.Definitions.Abstract;
 using GamePlay.Enemy.Spawn.Factory.Abstract;
 using GamePlay.Enemy.Spawn.Pool.Abstract;
 using GamePlay.Enemy.Spawn.Pool.Runtime;
-using GamePlay.Network.Objects.Factories.Registry;
+using GamePlay.Services.Network.Objects.Factories.Registry;
 using GamePlay.Services.System.Network.Objects.Factories.Abstract;
 using Global.Network.Objects.Factories.Abstract;
 using Internal.Scopes.Abstract.Instances.Services;

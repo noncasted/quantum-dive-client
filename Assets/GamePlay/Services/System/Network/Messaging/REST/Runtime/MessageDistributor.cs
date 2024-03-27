@@ -3,7 +3,7 @@
 //using GamePlay.Player.Entity.Definition;
 //using GamePlay.Player.Services.Lists.Runtime;
 
-namespace GamePlay.Network.Messaging.REST.Runtime
+namespace GamePlay.Services.Network.Messaging.REST.Runtime
 {
     public class MessageDistributor : IMessageDistributor
     {

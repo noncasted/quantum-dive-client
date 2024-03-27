@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GamePlay.Projectiles.Factory
+namespace GamePlay.Services.Projectiles.Factory
 {
     public interface IProjectileFactory
     {

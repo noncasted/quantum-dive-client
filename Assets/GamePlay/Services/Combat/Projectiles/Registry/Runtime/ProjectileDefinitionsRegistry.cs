@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Projectiles.Registry.Definition;
 using GamePlay.Services.Combat.Projectiles.Registry.Abstract;
+using GamePlay.Services.Projectiles.Registry.Definition;
 
-namespace GamePlay.Projectiles.Registry.Runtime
+namespace GamePlay.Services.Projectiles.Registry.Runtime
 {
     public class ProjectileDefinitionsRegistry : IProjectileDefinitionsRegistry
     {

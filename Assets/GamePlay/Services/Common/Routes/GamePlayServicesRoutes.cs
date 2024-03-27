@@ -1,4 +1,6 @@
-﻿namespace GamePlay.Common.Routes
+﻿using GamePlay.Common.Routes;
+
+namespace GamePlay.Services.Common.Routes
 {
     public class GamePlayServicesRoutes
     {

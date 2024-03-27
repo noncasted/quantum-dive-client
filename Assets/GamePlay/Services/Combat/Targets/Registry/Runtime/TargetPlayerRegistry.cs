@@ -3,7 +3,7 @@ using GamePlay.Services.Combat.Targets.Registry.Abstract;
 using Global.Debugs.Drawing.Abstract;
 using UnityEngine;
 
-namespace GamePlay.Targets.Registry.Runtime
+namespace GamePlay.Services.Targets.Registry.Runtime
 {
     public class TargetPlayerRegistry : ITargetPlayerRegistry
     {

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Common.Compose;
 using GamePlay.Common.Routes;
-using GamePlay.Common.Scope;
 using GamePlay.Enemy.Compose;
 using GamePlay.Environment.Bootstrap;
-using GamePlay.Network.Compose;
 using GamePlay.Player.Services.Compose;
+using GamePlay.Services.Common.Compose;
+using GamePlay.Services.Common.Scope;
+using GamePlay.Services.Network.Compose;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Scenes;
 using Internal.Scopes.Common.Services;

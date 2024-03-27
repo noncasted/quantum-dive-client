@@ -1,12 +1,12 @@
 ﻿using System;
-using GamePlay.Ecs.Runtime.Bootstrap;
-using GamePlay.Projectiles.Systems.CollisionDetection;
-using GamePlay.Projectiles.Systems.HitDetection;
-using GamePlay.Projectiles.Systems.Movement;
-using GamePlay.Projectiles.Systems.Sorting;
+using GamePlay.Services.Ecs.Runtime.Bootstrap;
+using GamePlay.Services.Projectiles.Systems.CollisionDetection;
+using GamePlay.Services.Projectiles.Systems.HitDetection;
+using GamePlay.Services.Projectiles.Systems.Movement;
+using GamePlay.Services.Projectiles.Systems.Sorting;
 using Internal.Scopes.Abstract.Instances.Services;
 
-namespace GamePlay.Projectiles.Bootstrap
+namespace GamePlay.Services.Projectiles.Bootstrap
 {
     public class ProjectilesSystemsBinder : IScopeSwitchListener
     {

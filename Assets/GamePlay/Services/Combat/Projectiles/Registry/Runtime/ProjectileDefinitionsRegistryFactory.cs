@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Projectiles.Common;
-using GamePlay.Projectiles.Registry.Definition;
 using GamePlay.Services.Combat.Projectiles.Registry.Abstract;
+using GamePlay.Services.Projectiles.Common;
+using GamePlay.Services.Projectiles.Registry.Definition;
 using Internal.Scopes.Abstract.Containers;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace GamePlay.Projectiles.Registry.Runtime
+namespace GamePlay.Services.Projectiles.Registry.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = ProjectilesRoutes.DefinitionsRegistryName,

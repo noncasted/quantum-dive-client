@@ -1,6 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using GamePlay.Network.Room.Entities.Factory;
+using GamePlay.Services.Network.Room.Entities.Factory;
 using GamePlay.Services.System.Network.Room.EventLoops.Abstract;
 using GamePlay.Services.System.Network.Room.Lifecycle.Abstract;
 using Global.Network.Handlers.ClientHandler.Abstract;
@@ -9,7 +9,7 @@ using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.Network.Room.Lifecycle.Runtime
+namespace GamePlay.Services.Network.Room.Lifecycle.Runtime
 {
     public class RoomLifecycle :
         IScopeAwakeAsyncListener,

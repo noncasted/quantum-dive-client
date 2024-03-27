@@ -1,9 +1,9 @@
-﻿using GamePlay.Projectiles.Common;
+﻿using GamePlay.Services.Projectiles.Common;
 using NaughtyAttributes;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Systems.Sorting
+namespace GamePlay.Services.Projectiles.Systems.Sorting
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = ProjectilesRoutes.SortingConfigName,

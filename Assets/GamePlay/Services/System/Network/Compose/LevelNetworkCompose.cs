@@ -1,19 +1,19 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Network.Common;
-using GamePlay.Network.Messaging.Events.Runtime;
-using GamePlay.Network.Messaging.REST.Runtime;
-using GamePlay.Network.Objects.Destroyer.Runtime;
-using GamePlay.Network.Objects.Factories.Registry;
-using GamePlay.Network.Objects.Factories.Runtime;
-using GamePlay.Network.Room.Entities.Factory;
-using GamePlay.Network.Room.EventLoops.Runtime;
-using GamePlay.Network.Room.Lifecycle.Runtime;
-using GamePlay.Network.Room.SceneCollectors.Runtime;
+using GamePlay.Services.Network.Common;
+using GamePlay.Services.Network.Messaging.Events.Runtime;
+using GamePlay.Services.Network.Messaging.REST.Runtime;
+using GamePlay.Services.Network.Objects.Destroyer.Runtime;
+using GamePlay.Services.Network.Objects.Factories.Registry;
+using GamePlay.Services.Network.Objects.Factories.Runtime;
+using GamePlay.Services.Network.Room.Entities.Factory;
+using GamePlay.Services.Network.Room.EventLoops.Runtime;
+using GamePlay.Services.Network.Room.Lifecycle.Runtime;
+using GamePlay.Services.Network.Room.SceneCollectors.Runtime;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Network.Compose
+namespace GamePlay.Services.Network.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = "LevelNetworkCompose", menuName = GamePlayNetworkRoutes.Root + "Compose")]

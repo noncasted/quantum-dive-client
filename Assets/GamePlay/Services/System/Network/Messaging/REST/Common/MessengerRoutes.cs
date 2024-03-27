@@ -1,6 +1,6 @@
-﻿using GamePlay.Network.Common;
+﻿using GamePlay.Services.Network.Common;
 
-namespace GamePlay.Network.Messaging.REST.Common
+namespace GamePlay.Services.Network.Messaging.REST.Common
 {
     public class MessengerRoutes
     {

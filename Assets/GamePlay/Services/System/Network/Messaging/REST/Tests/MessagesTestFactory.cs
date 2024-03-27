@@ -3,7 +3,7 @@ using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using UnityEngine;
 
-namespace GamePlay.Network.Messaging.REST.Tests
+namespace GamePlay.Services.Network.Messaging.REST.Tests
 {
     public class MessagesTestFactory : IServiceFactory
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using GamePlay.Network.Room.Entities.Factory;
+using GamePlay.Services.Network.Room.Entities.Factory;
 using Ragon.Client;
 
-namespace GamePlay.Network.Room.Entities.Entity
+namespace GamePlay.Services.Network.Room.Entities.Entity
 {
     public class StaticEntity : IStaticEntity
     {

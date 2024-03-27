@@ -1,6 +1,6 @@
-﻿using GamePlay.Common.Routes;
+﻿using GamePlay.Services.Common.Routes;
 
-namespace GamePlay.Targets.Registry.Common
+namespace GamePlay.Services.Targets.Registry.Common
 {
     public class TargetsRegistryRoutes
     {

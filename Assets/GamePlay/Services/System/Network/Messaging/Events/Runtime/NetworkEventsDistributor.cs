@@ -3,7 +3,7 @@
 using GamePlay.Services.System.Network.Messaging.Events.Abstract;
 using Ragon.Client;
 
-namespace GamePlay.Network.Messaging.Events.Runtime
+namespace GamePlay.Services.Network.Messaging.Events.Runtime
 {
     public class NetworkEventsDistributor : INetworkEventsDistributor
     {

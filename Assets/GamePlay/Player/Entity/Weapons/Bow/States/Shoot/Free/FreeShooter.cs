@@ -15,7 +15,7 @@ using GamePlay.Player.Entity.Weapons.Bow.States.Shoot.Common;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Animators.Abstract;
 using GamePlay.Player.Entity.Weapons.Bow.Views.Arrow.Abstract;
 using GamePlay.Player.Entity.Weapons.Bow.Views.GameObjects.Abstract;
-using GamePlay.Projectiles.Factory;
+using GamePlay.Services.Projectiles.Factory;
 using Global.System.Updaters.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Internal.Scopes.Abstract.Lifetimes;

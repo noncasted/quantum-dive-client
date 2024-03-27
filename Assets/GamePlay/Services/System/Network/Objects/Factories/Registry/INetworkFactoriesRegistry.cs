@@ -1,7 +1,7 @@
 ﻿using Global.Network.Objects.Factories.Abstract;
 using Internal.Scopes.Abstract.Lifetimes;
 
-namespace GamePlay.Network.Objects.Factories.Registry
+namespace GamePlay.Services.Network.Objects.Factories.Registry
 {
     public interface INetworkFactoriesRegistry
     {

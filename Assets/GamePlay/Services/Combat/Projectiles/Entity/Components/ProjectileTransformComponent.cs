@@ -1,6 +1,6 @@
-﻿using GamePlay.Projectiles.Entity.Views.Transforms;
+﻿using GamePlay.Services.Projectiles.Entity.Views.Transforms;
 
-namespace GamePlay.Projectiles.Entity.Components
+namespace GamePlay.Services.Projectiles.Entity.Components
 {
     public struct ProjectileTransformComponent
     {

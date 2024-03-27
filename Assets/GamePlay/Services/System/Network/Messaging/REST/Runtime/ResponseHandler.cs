@@ -2,7 +2,7 @@
 using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 using Ragon.Client;
 
-namespace GamePlay.Network.Messaging.REST.Runtime
+namespace GamePlay.Services.Network.Messaging.REST.Runtime
 {
     public class ResponseHandler<TRequest, TResponse> : IResponseHandler<TRequest, TResponse>
         where TRequest : IRagonEvent, IMessage, new()

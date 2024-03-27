@@ -1,9 +1,9 @@
 ﻿using GamePlay.Services.Combat.Targets.Registry.Abstract;
-using GamePlay.Targets.Registry.Common;
+using GamePlay.Services.Targets.Registry.Common;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Targets.Registry.Runtime
+namespace GamePlay.Services.Targets.Registry.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = TargetsRegistryRoutes.ConfigName,

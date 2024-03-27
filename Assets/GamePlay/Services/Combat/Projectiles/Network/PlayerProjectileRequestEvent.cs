@@ -1,9 +1,9 @@
-﻿using GamePlay.Projectiles.Factory;
+﻿using GamePlay.Services.Projectiles.Factory;
 using Ragon.Client;
 using Ragon.Protocol;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Network
+namespace GamePlay.Services.Projectiles.Network
 {
     public class PlayerProjectileRequestEvent : IRagonEvent
     {

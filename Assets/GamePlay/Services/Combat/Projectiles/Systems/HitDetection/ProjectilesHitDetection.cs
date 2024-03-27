@@ -2,7 +2,7 @@
 using Global.Debugs.Drawing.Abstract;
 using Leopotam.EcsLite;
 
-namespace GamePlay.Projectiles.Systems.HitDetection
+namespace GamePlay.Services.Projectiles.Systems.HitDetection
 {
     public class ProjectilesHitDetection : IEcsRunSystem
     {

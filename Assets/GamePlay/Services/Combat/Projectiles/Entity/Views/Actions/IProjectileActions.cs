@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Entity.Views.Actions
+namespace GamePlay.Services.Projectiles.Entity.Views.Actions
 {
     public interface IProjectileActions
     {

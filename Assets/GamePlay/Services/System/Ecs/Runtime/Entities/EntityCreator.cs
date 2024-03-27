@@ -1,7 +1,7 @@
 ﻿using GamePlay.Services.System.Ecs.Abstract;
 using Leopotam.EcsLite;
 
-namespace GamePlay.Ecs.Runtime.Entities
+namespace GamePlay.Services.Ecs.Runtime.Entities
 {
     public class EntityCreator : IEntityCreator
     {

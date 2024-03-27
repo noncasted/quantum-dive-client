@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks;
 using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 using Ragon.Client;
 
-namespace GamePlay.Network.Messaging.REST.Runtime
+namespace GamePlay.Services.Network.Messaging.REST.Runtime
 {
     public class RequestHandler<TRequest, TResponse> : IRequestHandler<TRequest, TResponse>
     {

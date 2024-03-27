@@ -1,4 +1,4 @@
-﻿using GamePlay.Projectiles.Registry.Definition;
+﻿using GamePlay.Services.Projectiles.Registry.Definition;
 
 namespace GamePlay.Services.Combat.Projectiles.Registry.Abstract
 {

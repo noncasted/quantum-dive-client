@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
 
-namespace Tools.EditorTools
+namespace Tools.EditorTools.Assemblies
 {
     public class InvalidAssemblyReferencesRemover
     {

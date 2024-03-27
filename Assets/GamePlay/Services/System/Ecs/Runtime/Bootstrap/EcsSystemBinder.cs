@@ -1,7 +1,7 @@
 ﻿using GamePlay.Services.System.Ecs.Abstract;
 using Leopotam.EcsLite;
 
-namespace GamePlay.Ecs.Runtime.Bootstrap
+namespace GamePlay.Services.Ecs.Runtime.Bootstrap
 {
     public class EcsSystemBinder : IEcsSystemBinder
     {

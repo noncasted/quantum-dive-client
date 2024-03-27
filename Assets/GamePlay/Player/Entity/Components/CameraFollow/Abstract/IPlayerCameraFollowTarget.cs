@@ -1,4 +1,4 @@
-﻿using GamePlay.Cameras.Abstract;
+﻿using GamePlay.Services.Cameras.Abstract;
 
 namespace GamePlay.Player.Entity.Components.CameraFollow.Abstract
 {

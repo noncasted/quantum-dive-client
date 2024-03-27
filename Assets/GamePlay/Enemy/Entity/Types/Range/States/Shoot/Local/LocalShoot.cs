@@ -5,8 +5,8 @@ using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.Types.Range.States.Shoot.Common;
 using GamePlay.Enemy.Entity.Types.Range.Views.ShootPoint;
 using GamePlay.Enemy.Entity.Views.Animators.Abstract;
-using GamePlay.Projectiles.Factory;
 using GamePlay.Services.Combat.Targets.Registry.Abstract;
+using GamePlay.Services.Projectiles.Factory;
 
 namespace GamePlay.Enemy.Entity.Types.Range.States.Shoot.Local
 {

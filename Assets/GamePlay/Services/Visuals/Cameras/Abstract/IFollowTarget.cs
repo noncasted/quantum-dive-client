@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Cameras.Abstract
+namespace GamePlay.Services.Cameras.Abstract
 {
     public interface IFollowTarget
     {

@@ -1,8 +1,8 @@
-﻿using GamePlay.Projectiles.Entity.Components;
+﻿using GamePlay.Services.Projectiles.Entity.Components;
 using Leopotam.EcsLite;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Systems.Movement
+namespace GamePlay.Services.Projectiles.Systems.Movement
 {
     public class ProjectilesMovement : IEcsRunSystem
     {

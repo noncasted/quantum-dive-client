@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Factory
+namespace GamePlay.Services.Projectiles.Factory
 {
     [Serializable]
     public class ShootParams

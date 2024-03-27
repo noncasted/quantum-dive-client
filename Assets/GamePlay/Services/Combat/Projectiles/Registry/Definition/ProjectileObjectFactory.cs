@@ -1,7 +1,7 @@
-﻿using GamePlay.Projectiles.Entity.Views.Facade;
+﻿using GamePlay.Services.Projectiles.Entity.Views.Facade;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Registry.Definition
+namespace GamePlay.Services.Projectiles.Registry.Definition
 {
     public class ProjectileObjectFactory 
     {

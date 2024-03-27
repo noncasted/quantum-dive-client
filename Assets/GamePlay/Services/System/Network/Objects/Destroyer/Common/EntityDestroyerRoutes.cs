@@ -1,6 +1,6 @@
-﻿using GamePlay.Network.Common;
+﻿using GamePlay.Services.Network.Common;
 
-namespace GamePlay.Network.Objects.Destroyer.Common
+namespace GamePlay.Services.Network.Objects.Destroyer.Common
 {
     public class EntityDestroyerRoutes
     {

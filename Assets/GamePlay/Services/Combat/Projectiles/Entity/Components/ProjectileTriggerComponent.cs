@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Projectiles.Entity.Components
+﻿namespace GamePlay.Services.Projectiles.Entity.Components
 {
     public struct ProjectileTriggerComponent
     {

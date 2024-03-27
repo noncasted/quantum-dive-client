@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Common.Routes
+﻿namespace GamePlay.Services.Common.Routes
 {
     public class GamePlayServicesPrefixes
     {

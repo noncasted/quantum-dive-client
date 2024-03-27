@@ -1,12 +1,12 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Common.Scope;
-using GamePlay.Network.Objects.Factories.Registry;
 using GamePlay.Player.Entity.Common.Definition;
 using GamePlay.Player.Entity.Types.Local;
 using GamePlay.Player.Entity.Types.Remote;
 using GamePlay.Player.Services.Factory.Factory.Abstract;
 using GamePlay.Player.Services.Factory.SpawnPoints;
 using GamePlay.Player.Services.List.Abstract;
+using GamePlay.Services.Common.Scope;
+using GamePlay.Services.Network.Objects.Factories.Registry;
 using GamePlay.Services.System.Network.Objects.Factories.Abstract;
 using Global.Network.Objects.Factories.Abstract;
 using Internal.Scopes.Abstract.Instances.Entities;

@@ -1,5 +1,5 @@
 ﻿
-namespace GamePlay.Projectiles.Registry.Definition
+namespace GamePlay.Services.Projectiles.Registry.Definition
 {
     public interface IProjectileDefinition
     {

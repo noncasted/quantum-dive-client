@@ -1,6 +1,6 @@
-﻿using GamePlay.Network.Common;
+﻿using GamePlay.Services.Network.Common;
 
-namespace GamePlay.Network.Room.Lifecycle.Common
+namespace GamePlay.Services.Network.Room.Lifecycle.Common
 {
     public class RoomStarterRoutes
     {

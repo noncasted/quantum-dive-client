@@ -1,6 +1,6 @@
-﻿using GamePlay.Common.Routes;
+﻿using GamePlay.Services.Common.Routes;
 
-namespace GamePlay.Network.Common
+namespace GamePlay.Services.Network.Common
 {
     public class GamePlayNetworkRoutes
     {

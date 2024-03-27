@@ -154,13 +154,21 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
             AddAssemblies("/Global", true);
             AddAssemblies("/Internal", true);
             AddAssemblies("/Plugins", false);
-
+            AddPackageAssemblies();
+            
             return assemblies;
 
             void AddAssemblies(string directory, bool isOwned)
             {
                 var path = Application.dataPath + directory;
                 var directoryAssemblies = GetDirectoryAssemblies(path, isOwned);
+                assemblies.AddRange(directoryAssemblies);
+            }
+
+            void AddPackageAssemblies()
+            {
+                var path = Application.dataPath.Replace("Assets", "Library/PackageCache");
+                var directoryAssemblies = GetDirectoryAssemblies(path, false);
                 assemblies.AddRange(directoryAssemblies);
             }
         }

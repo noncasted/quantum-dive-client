@@ -1,5 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Network.Room.Entities.Factory;
+using GamePlay.Services.Network.Room.Entities.Factory;
 
 namespace GamePlay.Services.System.Network.Room.EventLoops.Abstract
 {

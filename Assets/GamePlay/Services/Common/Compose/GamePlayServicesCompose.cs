@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
-using GamePlay.Cameras.Runtime;
-using GamePlay.Common.Routes;
-using GamePlay.Ecs.Runtime.Bootstrap;
-using GamePlay.Hitboxes.Runtime;
 using GamePlay.Loop.Runtime;
-using GamePlay.Projectiles.Bootstrap;
-using GamePlay.Targets.Registry.Runtime;
+using GamePlay.Services.Cameras.Runtime;
+using GamePlay.Services.Common.Routes;
+using GamePlay.Services.Ecs.Runtime.Bootstrap;
+using GamePlay.Services.Hitboxes.Runtime;
+using GamePlay.Services.Projectiles.Bootstrap;
+using GamePlay.Services.Targets.Registry.Runtime;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Common.Compose
+namespace GamePlay.Services.Common.Compose
 {
     [InlineEditor]
     [CreateAssetMenu(

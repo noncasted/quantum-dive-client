@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using GamePlay.Common.Scope;
-using GamePlay.Network.Compose;
+using GamePlay.Services.Common.Scope;
+using GamePlay.Services.Network.Compose;
 using Global.Common.Mocks.Runtime;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Scopes.Abstract.Scenes;
@@ -9,7 +9,7 @@ using Internal.Scopes.Common.Services;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace GamePlay.Network.Messaging.REST.Tests
+namespace GamePlay.Services.Network.Messaging.REST.Tests
 {
     public class MessagesTestGlobalMock : MockBase, IServiceScopeConfig
     {

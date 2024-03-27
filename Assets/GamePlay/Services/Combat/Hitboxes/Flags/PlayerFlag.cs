@@ -1,4 +1,4 @@
-﻿namespace GamePlay.Hitboxes.Flags
+﻿namespace GamePlay.Services.Hitboxes.Flags
 {
     public struct PlayerFlag
     {

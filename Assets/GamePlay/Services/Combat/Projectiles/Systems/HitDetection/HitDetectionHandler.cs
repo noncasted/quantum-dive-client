@@ -3,7 +3,7 @@ using Global.Debugs.Drawing.Abstract;
 using Leopotam.EcsLite;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Systems.HitDetection
+namespace GamePlay.Services.Projectiles.Systems.HitDetection
 {
     public readonly struct HitDetectionHandler
     {

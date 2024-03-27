@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GamePlay.Projectiles.Entity.Views.Transforms
+namespace GamePlay.Services.Projectiles.Entity.Views.Transforms
 {
     public interface IProjectileTransform
     {

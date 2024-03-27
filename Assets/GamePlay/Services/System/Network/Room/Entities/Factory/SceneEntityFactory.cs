@@ -4,7 +4,7 @@ using GamePlay.Services.System.Network.Room.SceneCollectors.Abstract;
 using Global.Network.Handlers.ClientHandler.Abstract;
 using Ragon.Client;
 
-namespace GamePlay.Network.Room.Entities.Factory
+namespace GamePlay.Services.Network.Room.Entities.Factory
 {
     public class SceneEntityFactory : ISceneEntityFactory
     {

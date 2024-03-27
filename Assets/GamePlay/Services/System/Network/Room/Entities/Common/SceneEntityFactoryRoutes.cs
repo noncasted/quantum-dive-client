@@ -1,6 +1,6 @@
-﻿using GamePlay.Network.Common;
+﻿using GamePlay.Services.Network.Common;
 
-namespace GamePlay.Network.Room.Entities.Common
+namespace GamePlay.Services.Network.Room.Entities.Common
 {
     public class SceneEntityFactoryRoutes
     {

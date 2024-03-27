@@ -1,8 +1,8 @@
-﻿using GamePlay.Projectiles.Entity.Views.Actions;
-using GamePlay.Projectiles.Entity.Views.Transforms;
+﻿using GamePlay.Services.Projectiles.Entity.Views.Actions;
+using GamePlay.Services.Projectiles.Entity.Views.Transforms;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Entity.Views.Facade
+namespace GamePlay.Services.Projectiles.Entity.Views.Facade
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(ProjectileTransform))]

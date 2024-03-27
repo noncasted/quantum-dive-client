@@ -1,6 +1,6 @@
-﻿using GamePlay.Network.Common;
+﻿using GamePlay.Services.Network.Common;
 
-namespace GamePlay.Network.Messaging.Events.Common
+namespace GamePlay.Services.Network.Messaging.Events.Common
 {
     public class NetworkEventsRoutes
     {

@@ -8,7 +8,7 @@ using Ragon.Client;
 using UnityEngine;
 using VContainer;
 
-namespace GamePlay.Network.Messaging.REST.Tests
+namespace GamePlay.Services.Network.Messaging.REST.Tests
 {
     public class MessagesTestView : MonoBehaviour, INetworkAwakeListener
     {

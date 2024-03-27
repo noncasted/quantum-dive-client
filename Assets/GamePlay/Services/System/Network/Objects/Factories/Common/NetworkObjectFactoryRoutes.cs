@@ -1,6 +1,6 @@
-﻿using GamePlay.Network.Common;
+﻿using GamePlay.Services.Network.Common;
 
-namespace GamePlay.Network.Objects.Factories.Common
+namespace GamePlay.Services.Network.Objects.Factories.Common
 {
     public class NetworkObjectFactoryRoutes
     {

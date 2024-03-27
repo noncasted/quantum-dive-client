@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Network.Room.Entities.Factory;
+using GamePlay.Services.Network.Room.Entities.Factory;
 using GamePlay.Services.System.Network.Messaging.Events.Abstract;
 using GamePlay.Services.System.Network.Room.EventLoops.Abstract;
 using Global.Network.Handlers.ClientHandler.Abstract;
@@ -10,7 +10,7 @@ using Internal.Scopes.Abstract.Instances.Services;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.Network.Messaging.Events.Runtime
+namespace GamePlay.Services.Network.Messaging.Events.Runtime
 {
     public class NetworkEvents : INetworkEvents, IScopeDisableListener, INetworkSceneEntityCreationListener
     {

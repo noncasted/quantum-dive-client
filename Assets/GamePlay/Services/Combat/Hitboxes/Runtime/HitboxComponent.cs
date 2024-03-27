@@ -1,6 +1,6 @@
 ﻿using GamePlay.Common.Damages;
 
-namespace GamePlay.Hitboxes.Runtime
+namespace GamePlay.Services.Hitboxes.Runtime
 {
     public struct HitboxComponent
     {

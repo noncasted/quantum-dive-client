@@ -1,8 +1,8 @@
-﻿using GamePlay.Projectiles.Entity.Views.Facade;
-using GamePlay.Projectiles.Registry.Definition;
+﻿using GamePlay.Services.Projectiles.Entity.Views.Facade;
+using GamePlay.Services.Projectiles.Registry.Definition;
 using UnityEngine;
 
-namespace GamePlay.Projectiles.Pool
+namespace GamePlay.Services.Projectiles.Pool
 {
     public interface IProjectilesPool
     {

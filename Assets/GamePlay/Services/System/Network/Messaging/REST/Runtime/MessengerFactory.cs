@@ -1,12 +1,12 @@
 ﻿using Cysharp.Threading.Tasks;
-using GamePlay.Network.Messaging.REST.Common;
+using GamePlay.Services.Network.Messaging.REST.Common;
 using GamePlay.Services.System.Network.Messaging.REST.Abstract;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace GamePlay.Network.Messaging.REST.Runtime
+namespace GamePlay.Services.Network.Messaging.REST.Runtime
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = MessengerRoutes.ServiceName, menuName = MessengerRoutes.ServicePath)]

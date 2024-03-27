@@ -1,6 +1,6 @@
-﻿using GamePlay.Common.Routes;
+﻿using GamePlay.Services.Common.Routes;
 
-namespace GamePlay.Cameras.Common
+namespace GamePlay.Services.Cameras.Common
 {
     public static class LevelCameraRoutes
     {
