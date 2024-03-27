@@ -6,7 +6,7 @@ using Internal.Scopes.Abstract.Lifetimes;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.Player.Entity.Components.Network.TransformSync.Runtime
+namespace GamePlay.Player.Entity.Components.Network.TransformSyncs.Runtime
 {
     public class TransformSync : RagonProperty, IEntitySwitchLifetimeListener, IFixedUpdatable
     {

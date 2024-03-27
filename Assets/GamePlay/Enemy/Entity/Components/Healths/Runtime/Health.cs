@@ -1,10 +1,10 @@
 ﻿using Common.DataTypes.Runtime.Reactive;
-using GamePlay.Enemy.Entity.Components.Health.Abstract;
+using GamePlay.Enemy.Entity.Components.Healths.Abstract;
 using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
 using Ragon.Client;
 using Ragon.Protocol;
 
-namespace GamePlay.Enemy.Entity.Components.Health.Runtime
+namespace GamePlay.Enemy.Entity.Components.Healths.Runtime
 {
     public class Health : RagonProperty, IHealth
     {

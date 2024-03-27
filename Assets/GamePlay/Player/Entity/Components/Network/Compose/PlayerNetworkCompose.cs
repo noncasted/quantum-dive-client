@@ -2,7 +2,7 @@
 using GamePlay.Player.Entity.Components.Network.Common;
 using GamePlay.Player.Entity.Components.Network.EntityHandler.Runtime;
 using GamePlay.Player.Entity.Components.Network.Properties.Runtime;
-using GamePlay.Player.Entity.Components.Network.TransformSync.Runtime;
+using GamePlay.Player.Entity.Components.Network.TransformSyncs.Runtime;
 using Internal.Scopes.Abstract.Instances.Entities;
 using Sirenix.OdinInspector;
 using UnityEngine;

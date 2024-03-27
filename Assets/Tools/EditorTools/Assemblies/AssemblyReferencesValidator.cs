@@ -53,6 +53,11 @@ namespace Tools.EditorTools.Assemblies
 
                     bool IsNamespaceValid()
                     {
+                        var name = reference.Path.Name; 
+                        
+                        if (name.Contains("Unity") == true)
+                            return true;
+                        
                         var checkNamespaces = assemblyToNamespaces[reference];
 
                         foreach (var checkNamespace in checkNamespaces)

@@ -1,6 +1,6 @@
 ﻿using Common.DataTypes.Runtime.Reactive;
 
-namespace GamePlay.Enemy.Entity.Components.Health.Abstract
+namespace GamePlay.Enemy.Entity.Components.Healths.Abstract
 {
     public interface IHealth
     {

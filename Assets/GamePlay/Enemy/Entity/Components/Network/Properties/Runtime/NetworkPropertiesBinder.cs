@@ -1,4 +1,5 @@
-﻿using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
+﻿using GamePlay.Enemy.Entity.Components.Healths.Runtime;
+using GamePlay.Enemy.Entity.Components.Network.EntityHandler.Abstract;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
 using GamePlay.Enemy.Entity.Views.Hitbox.Common;
 using GamePlay.Enemy.Entity.Views.Transforms.Remote.Runtime;
@@ -13,7 +14,7 @@ namespace GamePlay.Enemy.Entity.Components.Network.Properties.Runtime
             TransformSync transform,
             RemoteStateMachine stateMachine,
             HitboxStateSync hitboxState,
-            Health.Runtime.Health health)
+            Health health)
         {
             _propertyBinder = propertyBinder;
             _transform = transform;
@@ -27,7 +28,7 @@ namespace GamePlay.Enemy.Entity.Components.Network.Properties.Runtime
         private readonly TransformSync _transform;
         private readonly RemoteStateMachine _stateMachine;
         private readonly HitboxStateSync _hitboxState;
-        private readonly Health.Runtime.Health _health;
+        private readonly Health _health;
 
         public void OnEnabled()
         {

@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
-using GamePlay.Enemy.Entity.Components.Health.Abstract;
+using GamePlay.Enemy.Entity.Components.Healths.Abstract;
 using GamePlay.Enemy.Entity.Components.StateMachines.Local.Abstract;
 using GamePlay.Enemy.Entity.States.Abstract;
 using GamePlay.Enemy.Entity.States.Respawn.Common;

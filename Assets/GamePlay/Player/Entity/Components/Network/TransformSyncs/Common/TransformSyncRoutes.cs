@@ -1,7 +1,7 @@
 ﻿using GamePlay.Player.Entity.Common.Routes;
 using GamePlay.Player.Entity.Components.Network.Common;
 
-namespace GamePlay.Player.Entity.Components.Network.TransformSync.Common
+namespace GamePlay.Player.Entity.Components.Network.TransformSyncs.Common
 {
     public class TransformSyncRoutes
     {

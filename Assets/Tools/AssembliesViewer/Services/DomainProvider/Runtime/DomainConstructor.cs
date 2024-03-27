@@ -179,7 +179,15 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
             var assemblies = new List<RawAssembly>();
 
             foreach (var assemblyPath in assemblyFiles)
-                assemblies.Add(GetAssembly(assemblyPath));
+            {
+                var rawAssembly = GetAssembly(assemblyPath);
+                var id = AssetDatabase.AssetPathToGUID(rawAssembly.AssetPath);
+                
+                if (string.IsNullOrEmpty(id) == true)
+                    continue;
+                
+                assemblies.Add(rawAssembly);
+            }
 
             return assemblies.ToArray();
 

@@ -1,5 +1,5 @@
 ﻿using GamePlay.Common.Damages;
-using GamePlay.Enemy.Entity.Components.Health.Abstract;
+using GamePlay.Enemy.Entity.Components.Healths.Abstract;
 using GamePlay.Enemy.Entity.States.Damaged.Local;
 using GamePlay.Enemy.Entity.States.Death.Local;
 using GamePlay.Enemy.Entity.Views.Hitbox.Local;

@@ -1,7 +1,7 @@
 ﻿using GamePlay.Enemy.Entity.Common.Routes;
 using GamePlay.Enemy.Entity.Components.Common;
 
-namespace GamePlay.Enemy.Entity.Components.Health.Common
+namespace GamePlay.Enemy.Entity.Components.Healths.Common
 {
     public class EnemyHealthRoutes
     {

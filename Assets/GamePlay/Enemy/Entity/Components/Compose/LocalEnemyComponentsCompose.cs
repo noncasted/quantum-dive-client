@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using GamePlay.Enemy.Entity.Components.Common;
 using GamePlay.Enemy.Entity.Components.DamageProcessors.Runtime;
-using GamePlay.Enemy.Entity.Components.Health.Runtime;
+using GamePlay.Enemy.Entity.Components.Healths.Runtime;
 using GamePlay.Enemy.Entity.Components.Sorting.Runtime;
 using GamePlay.Enemy.Entity.Components.StateMachines.Local.Runtime;
 using GamePlay.Enemy.Entity.Components.StateMachines.Remote.Runtime;
