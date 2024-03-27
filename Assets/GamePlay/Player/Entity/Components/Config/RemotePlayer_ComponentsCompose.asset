@@ -16,4 +16,4 @@ MonoBehaviour:
   _remoteRotation: {fileID: 11400000, guid: 6f887b7ce6c52b3468c1b0e60da73380, type: 2}
   _stateMachine: {fileID: 11400000, guid: 1faedbe54ee26654eb2f60c61114a79d, type: 2}
   _root: {fileID: 11400000, guid: e1de2ed8d3d3fe6479094960ad3bbf59, type: 2}
-  _defaultCallbacks: {fileID: 11400000, guid: 5d0520d060c8a3f41a91f33e17684e74, type: 2}
+  _defaultCallbacks: {fileID: 0}

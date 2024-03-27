@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25823fe56a7461597278140e833713b, type: 3}
   m_Name: SwordConfig_Local
   m_EditorClassIdentifier: 
-  _defaultCallbacks: {fileID: 11400000, guid: 5d0520d060c8a3f41a91f33e17684e74, type: 2}
+  _defaultCallbacks: {fileID: 0}
   _root: {fileID: 11400000, guid: bf5d316479ab3514bb178ba4dfc3146e, type: 2}
   _attack: {fileID: 11400000, guid: 248608bb9142e564383b71e288cf2669, type: 2}
-  _input: {fileID: 11400000, guid: 85e4adf3bfb3aad449e951b271766a35, type: 2}
+  _input: {fileID: 0}
   _targetsSearcher: {fileID: 11400000, guid: acbcdf49abfbc7248b4667a36e69e046, type: 2}
   _prefab: {fileID: 2008182729202184238, guid: a4549477240d9194ea14702d618f0492, type: 3}

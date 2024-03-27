@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2356956245481783928}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -310,7 +310,6 @@ MonoBehaviour:
   _groupNameText: {fileID: 4687360511703355620}
   _block: {fileID: 5455940108542302118}
   _baseSize: 40
-  _expandButton: {fileID: 2033853178159394304}
   _expandText: {fileID: 3314520274547510961}
   _entriesRoot: {fileID: 1796447821995874519}
   _toggle: {fileID: 6685944163905205367}
@@ -671,7 +670,6 @@ GameObject:
   - component: {fileID: 1323805458178606229}
   - component: {fileID: 3314520274547510961}
   - component: {fileID: 565736531655035682}
-  - component: {fileID: 2033853178159394304}
   m_Layer: 0
   m_Name: Expand_Button
   m_TagString: Untagged
@@ -695,7 +693,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21.7375, y: 0}
+  m_AnchoredPosition: {x: 22.2375, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &2447876306429202944
@@ -1076,20 +1074,6 @@ MonoBehaviour:
     Y: 0
     Z: 0
   GestureSpace: 0
---- !u!114 &2033853178159394304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2930082486633249150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56b823fc5e048bd9b9a482a7313a9ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colors: {fileID: 0}
-  _handlers: []
 --- !u!1 &5321153367224144022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,7 +1690,7 @@ Transform:
   m_GameObject: {fileID: 6476018660344163115}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 58.975, y: 0, z: 0}
+  m_LocalPosition: {x: 59.475, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2061,7 +2045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 243.975, y: 0}
+  m_AnchoredPosition: {x: 244.475, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4317616071927127019

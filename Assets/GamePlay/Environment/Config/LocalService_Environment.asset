@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ec2d853cba42440a79bed52e743bf1, type: 3}
   m_Name: LocalService_Environment
   m_EditorClassIdentifier: 
-  _scene: {fileID: 6589214050440547764}
+  _scene: {fileID: 0}
 --- !u!114 &6589214050440547764
 MonoBehaviour:
   m_ObjectHideFlags: 0

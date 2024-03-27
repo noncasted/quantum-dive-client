@@ -1803,11 +1803,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44aa54cda0864be08898fa7d2997c7e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mock:
-    _config: {fileID: 11400000, guid: c3772a04da26b5044bbbcd3c0e6b2857, type: 2}
+  _config: {fileID: 0}
   _scopePrefab: {fileID: 7895215850673806337, guid: 69f7e46b1dcb1724eb6dbd9006ce54bf,
     type: 3}
-  _servicesScene: {fileID: 11400000, guid: 4cf740e44591b824d90a8b5a122fcc7e, type: 2}
+  _servicesScene: {fileID: 0}
   _view: {fileID: 177930150}
   _nodesRoot: {fileID: 2001269182}
   _moverConfig: {fileID: 11400000, guid: c26391bccdf393e4783f58168e889ef5, type: 2}

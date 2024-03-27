@@ -332,7 +332,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7110950779257074511}
-  - component: {fileID: 8119785996863548463}
   m_Layer: 0
   m_Name: Pivots
   m_TagString: Untagged
@@ -357,36 +356,6 @@ Transform:
   - {fileID: 75266465809989895}
   m_Father: {fileID: 8497973001368587975}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8119785996863548463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3527796574296085095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10e5895f5ed0463cb2f13c97ac2ca9a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _right:
-    _pivots:
-      _keys: 0100000002000000030000000400000005000000
-      _values:
-      - {fileID: 4632789027679001252}
-      - {fileID: 6825556902746171871}
-      - {fileID: 2357374196676452876}
-      - {fileID: 1410265155227959123}
-      - {fileID: 67573959992420034}
-  _left:
-    _pivots:
-      _keys: 0100000002000000030000000400000005000000
-      _values:
-      - {fileID: 8273243459826851038}
-      - {fileID: 7789640219050492786}
-      - {fileID: 3251022829582446119}
-      - {fileID: 3011713329613411906}
-      - {fileID: 3964719789777466932}
 --- !u!1 &3548641437131719138
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,15 +954,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8497973001368587975}
-  - component: {fileID: 4204158024489407254}
   - component: {fileID: 2148596422467613575}
   - component: {fileID: 1938974469546813040}
-  - component: {fileID: 6808782197874498845}
   - component: {fileID: 1667287176522363630}
   - component: {fileID: 4925165929198842162}
   - component: {fileID: 7586679593477302689}
   - component: {fileID: 8690171505569601457}
-  - component: {fileID: 4125251556246488712}
   - component: {fileID: 2781010321473087066}
   m_Layer: 0
   m_Name: Bow_Remote
@@ -1019,30 +985,6 @@ Transform:
   - {fileID: 7110950779257074511}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4204158024489407254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8497973001368587970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e20063989c2043de9893af203adb1958, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Groups:
-  - Name: Views
-    Components:
-    - {fileID: 2148596422467613575}
-    - {fileID: 1938974469546813040}
-    - {fileID: 6808782197874498845}
-    - {fileID: 1667287176522363630}
-    - {fileID: 4925165929198842162}
-    - {fileID: 7586679593477302689}
-    - {fileID: 8690171505569601457}
-    - {fileID: 4125251556246488712}
-    - {fileID: 2781010321473087066}
 --- !u!114 &2148596422467613575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,26 +1014,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scope: {fileID: 2148596422467613575}
-  _sprite: {fileID: 6808782197874498845}
   _transform: {fileID: 1667287176522363630}
   _shootPoint: {fileID: 4925165929198842162}
   _gameObject: {fileID: 7586679593477302689}
   _animator: {fileID: 8690171505569601457}
-  _pivots: {fileID: 4125251556246488712}
   _arrow: {fileID: 2781010321473087066}
---- !u!114 &6808782197874498845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8497973001368587970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b132cc40646241a1b66f2b0b406609ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 8497973002144715252}
 --- !u!114 &1667287176522363630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,20 +1070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfce322130314fce87a89e988d795f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 8497973002144715252}
---- !u!114 &4125251556246488712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8497973001368587970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4adf8f548c042058eaad8068c52baf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _provider: {fileID: 8119785996863548463}
+  _animator: {fileID: 0}
 --- !u!114 &2781010321473087066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,7 +1083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b7442912dc40efb377110deb74e6e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 5939502031033998759}
 --- !u!1 &8497973002144715250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,19 +1252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ceedf82d7643eabcec1d45befe9cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _points:
-    _keys: 0100000002000000030000000400000005000000
-    _values:
-    - _left: {fileID: 275702561574315116}
-      _right: {fileID: 8810815701824346570}
-    - _left: {fileID: 7042179680152766209}
-      _right: {fileID: 1278073890171997225}
-    - _left: {fileID: 2819292392088562305}
-      _right: {fileID: 7121396140560267387}
-    - _left: {fileID: 5127891200313350826}
-      _right: {fileID: 8502829398252406696}
-    - _left: {fileID: 3190978189724512717}
-      _right: {fileID: 3644219185622372724}
+  _point: {fileID: 0}
 --- !u!1 &8911917201410413287
 GameObject:
   m_ObjectHideFlags: 0

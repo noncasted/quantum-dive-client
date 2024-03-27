@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2b83ab5dbc45a3a1abf25b4ecab9ab, type: 3}
   m_Name: SwordConfig_Remote
   m_EditorClassIdentifier: 
-  _defaultCallbacks: {fileID: 11400000, guid: 5d0520d060c8a3f41a91f33e17684e74, type: 2}
+  _defaultCallbacks: {fileID: 0}
   _root: {fileID: 11400000, guid: bf5d316479ab3514bb178ba4dfc3146e, type: 2}
   _attack: {fileID: 11400000, guid: a94b4ee605762154d9eb11d8919c5901, type: 2}
   _prefab: {fileID: 3169391969492725392, guid: 1e65757431758b44e99494d7b9cd1e6f, type: 3}

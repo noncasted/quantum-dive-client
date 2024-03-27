@@ -496,9 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c1db21e6744f5da7743d50055d146c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _config: {fileID: 0}
   _levelScope: {fileID: 11400000, guid: f89b54c23a70a7d4ab3c84d20dff4fa6, type: 2}
-  _mock:
-    _config: {fileID: 11400000, guid: c3772a04da26b5044bbbcd3c0e6b2857, type: 2}
 --- !u!4 &901689023
 Transform:
   m_ObjectHideFlags: 0
@@ -624,7 +623,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b71b71b0a1f9a48768a27ca6eefcfbdf, type: 2}
+  - {fileID: 2100000, guid: 8d8c16f9e5e112c4fbbe83dfdcc69854, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -837,13 +836,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1764de1de43cc4d19af52679d3eaae06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 1
+  version: 1073741824
   desiredSimulationFPS: 20
   workerThreads: 2
   doubleBuffering: 0
+  hardCollisions: 1
   symmetryBreakingBias: 0.1
   movementPlane: 1
-  drawObstacles: 0
+  useNavmeshAsObstacle: 0
+  drawQuadtree: 0
 --- !u!114 &1712563545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,7 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 1
+  version: 1073741824
   data:
     dataString: UEsDBBQAAAgIAAAYIeyyiIlkngIAALMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGFVF1v2kAQ/CvonpvKUEhD31ogpJVIUEiVh5KHw7fGJ8531n0ESMR/7+7ZYENbVUKy2Zndndnb8zuT2pWQemOnVoqZEcC+dBi9sw+dBryDHV8bvZBvcOQ8S+FzIvHIeeReGox3Kc2ZAryV6Ve9VkROMBi0zIwtJmINI+O8w3DGlQOErPGUrTH03mG7OmFfP9/o2TngWwrag/0fK+hU8aIEQWobcjc50rvdiqjRSc0h1alRSrpaBvP7Mtoc8dIFNIEEITnaigKIn4Nc5x7/9NrJD1nmwNeiLN+PpcXpVFXZN1ONrOBuUyl75SpQn+t+lFTVnP0BX3UjnFlT3B3bVoZ8LtPNI9+n3PnWSNvh8bnuoLdcbfhKwXMO+t5MrQlaIOhtoNTgoDdulTpZG+WQbhpepfUiGMp/Hw+ZOET3u5GSxYqgj/0qsFAmzntIZLB4Mt9RcdwKV5fAKKn46eCJr9vrUwO30jqPUG1Tk7yVCZaobBKHRm6CHxmrIYZr0SVorvx+jmX85RFeYK22F8gtp4tSN6+x4/5fpMRww0+SC2huts1pOfgRinJupPYL4DbNW/VcbrYzcPlD8EpqaBwRcI9DHBmtq/Vzf0lbBJvxtJXmYeeDhTH3PF4C1IRrItqpONCYoYNStJHRBRX/hS7o90JDzjn2VTHM7o2O1+fs+UKLsA5SnO85u1mlw/51r9df8aTfTT5frQY3g+EqGXwaJkIkyYDFiyA1zpyreTW0+qhwg3TjRePSH79lnanlZbx5wvLtVL4VpnX8UmdmkVoA/VBVOJkFi03wCyEmQqLNBXgvddw99r5kyqQbEMtToWUc7GTnLV82VZaslK/GU2TJRvELtmQUPt2ruYVXCVtqflYMFB4diCepoOAlQcmBHX4DUEsDBBQAAAgIAAAYIexoCF6XbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jO01FFQSi9KLMgoBooYgjilmSkgdrSSRVKypYmZkZFJUqKBiaGBuW6SqYWpZZKBqbGlQUqKgYGpUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAYIeyyiIlkngIAALMFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAYIexoCF6XbQAAAHgAAAAJACQAAAAAAAAAAAAAAOsCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAowMAAAAA
     file_cachedStartup: {fileID: 0}

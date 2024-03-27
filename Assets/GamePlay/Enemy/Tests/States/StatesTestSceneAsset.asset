@@ -12,33 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5772ad22c494110a4e53edc689407a3, type: 3}
   m_Name: StatesTestSceneAsset
   m_EditorClassIdentifier: 
-  _config: {fileID: 11400000, guid: 5e3b3abdefd2de34aa31e647a9ce2a7d, type: 2}
-  _loops:
-  - rid: 6682098369993375744
-  - rid: 6682098369993375745
   _ecs: {fileID: 11400000, guid: b9f7a235ef7ae854081187ae4fdbf0e9, type: 2}
-  _projectiles: {fileID: 11400000, guid: cf3ddfa96992fb145b579ec979d2b621, type: 2}
-  _vfxPool: {fileID: 11400000, guid: cea96a53738615f49857ce3c96a9ffd1, type: 2}
+  _projectiles: {fileID: 0}
   _hitboxRegistry: {fileID: 11400000, guid: ee94db3387daa04408e5cc2149ea4520, type: 2}
   _targetRegistry: {fileID: 11400000, guid: dec870b2167f9c249a06058c5b58bafc, type: 2}
   _roomStarter: {fileID: 11400000, guid: d9834be6887265f4cbe7b647af83910b, type: 2}
   _entityDestroyer: {fileID: 11400000, guid: ff9ce1e249587e049b7a219f67586acd, type: 2}
   _factoriesRegistry: {fileID: 11400000, guid: 37bd74f3a3a508e4d82fefbeb84724dc, type: 2}
-  _sceneEntityFactory: {fileID: 11400000, guid: 3b54f159fd462484098362a44c967d77, type: 2}
+  _sceneEntityFactory: {fileID: 11400000, guid: 3b54f159fd462484098362a44c967d77,
+    type: 2}
   _sceneCollector: {fileID: 11400000, guid: 435494323403e204b8b742d0f3cb8633, type: 2}
-  _dynamicEntityFactory: {fileID: 11400000, guid: 67adf2a5e7a06f34198fc24a45e9fb73, type: 2}
-  _playersRegistry: {fileID: 11400000, guid: 7ccdf775f6fa7994982118acea3a319f, type: 2}
-  _enemiesRegistry: {fileID: 11400000, guid: 4bd86458825de2446b40c9dcfe4d6788, type: 2}
+  _dynamicEntityFactory: {fileID: 11400000, guid: 67adf2a5e7a06f34198fc24a45e9fb73,
+    type: 2}
+  _playerList: {fileID: 11400000, guid: 7ccdf775f6fa7994982118acea3a319f, type: 2}
+  _enemyList: {fileID: 11400000, guid: 4bd86458825de2446b40c9dcfe4d6788, type: 2}
   _enemyFactory: {fileID: 11400000, guid: 2ac95e5ac96877b4280a3a3c4428b4e8, type: 2}
-  _enemyPool: {fileID: 11400000, guid: ccf062ee3878f6248af66dbf83462d06, type: 2}
-  _enemyDefinitionsRegistry: {fileID: 11400000, guid: b9f3d332fd5e4be48a215559b6adb7d9, type: 2}
-  _enemyStateDefinitionsRegistry: {fileID: 11400000, guid: 93712cd1869d0eb45a58173acfc74538, type: 2}
+  _enemyPool: {fileID: 0}
+  _enemyDefinitionMapper: {fileID: 11400000, guid: b9f3d332fd5e4be48a215559b6adb7d9,
+    type: 2}
+  _enemyStateMapper: {fileID: 11400000, guid: 93712cd1869d0eb45a58173acfc74538, type: 2}
   _enemyUpdater: {fileID: 11400000, guid: 521f972ea58592242832ba03f3788163, type: 2}
-  _scopePrefab: {fileID: 6256164544057903142, guid: 739bd40898e14fe4ebe3aa07b287a0fb, type: 3}
-  references:
-    version: 2
-    RefIds:
-    - rid: 6682098369993375744
-      type: {class: DefaultEventLoop, ns: Common.Architecture.Local.ComposedSceneConfig, asm: Local.ComposedSceneConfig}
-    - rid: 6682098369993375745
-      type: {class: NetworkEventLoop, ns: GamePlay.Network.Room.EventLoops.Runtime, asm: GamePlay.Network.EventLoops.Runtime}
+  _scopePrefab: {fileID: 6256164544057903142, guid: 739bd40898e14fe4ebe3aa07b287a0fb,
+    type: 3}
+  _servicesScene: {fileID: 0}
+  _isMock: 0

@@ -966,7 +966,6 @@ GameObject:
   - component: {fileID: 8289812940201447702}
   - component: {fileID: 689370889460382465}
   - component: {fileID: 4659289458844527033}
-  - component: {fileID: 6400213092330111712}
   m_Layer: 0
   m_Name: Node
   m_TagString: Untagged
@@ -1264,7 +1263,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _block: {fileID: 8289812940201447702}
   _text: {fileID: 5067765259648034601}
-  _selectionButton: {fileID: 6400213092330111712}
   _selection: {fileID: 4968461096302065012}
 --- !u!114 &4659289458844527033
 MonoBehaviour:
@@ -1315,17 +1313,3 @@ MonoBehaviour:
     Y: 0
     Z: 0
   GestureSpace: 0
---- !u!114 &6400213092330111712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8690345659872398368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56b823fc5e048bd9b9a482a7313a9ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _colors: {fileID: 0}
-  _handlers: []

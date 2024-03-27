@@ -78,17 +78,14 @@ GameObject:
   - component: {fileID: 510699655186289129}
   - component: {fileID: 4796423680687265807}
   - component: {fileID: 3494044675534934861}
-  - component: {fileID: 8354689262756579907}
-  - component: {fileID: 8372046273363020707}
   - component: {fileID: 4454624429417450983}
   - component: {fileID: 7767275915283392358}
   - component: {fileID: 3250082990848342925}
-  - component: {fileID: 5647273683581468608}
   - component: {fileID: 50364629804557351}
   - component: {fileID: 8985464992966259670}
   - component: {fileID: 8366416022107987371}
   - component: {fileID: 8982296590755691493}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Player_Remote
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -186,49 +183,6 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_SortAtRoot: 0
---- !u!114 &8354689262756579907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3834022361475402687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e20063989c2043de9893af203adb1958, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Groups:
-  - Name: Views
-    Components:
-    - {fileID: 8982296590755691493}
-    - {fileID: 8366416022107987371}
-    - {fileID: 8985464992966259670}
-    - {fileID: 50364629804557351}
-    - {fileID: 5647273683581468608}
-    - {fileID: 7767275915283392358}
-    - {fileID: 3250082990848342925}
-    - {fileID: 4454624429417450983}
---- !u!114 &8372046273363020707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3834022361475402687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2d6d18fd8b34fe09ebe961274b0eb75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transform:
-    _isActive: 0
-  _transformSync:
-    _isActive: 0
-  _rotationSync:
-    _isActive: 0
-  _stateMachineSync:
-    _isActive: 0
 --- !u!114 &4454624429417450983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +213,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scope: {fileID: 4454624429417450983}
   _animator: {fileID: 3250082990848342925}
-  _sprite: {fileID: 5647273683581468608}
   _transform: {fileID: 50364629804557351}
   _gameObject: {fileID: 8985464992966259670}
   _equipmentSlotsBinder: {fileID: 8366416022107987371}
@@ -276,23 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49693d1d3fd7b9a4d8ac1b874a99e7ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _logSettings: {fileID: 11400000, guid: 4ff4ec3a22f7aea47955ae505e79301d, type: 2}
-  _spriteRenderer: {fileID: 6936041581366057314}
---- !u!114 &5647273683581468608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3834022361475402687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211cee2e2fa8401da0e44ae379d03dbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 6936041581366057314}
-  _sortingGroup: {fileID: 3494044675534934861}
-  _logSettings: {fileID: 11400000, guid: 266d970930a23454e9674edf9476a8c6, type: 2}
+  _animator: {fileID: 0}
 --- !u!114 &50364629804557351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +243,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _transform: {fileID: 1743216952723330936}
-  _logSettings: {fileID: 11400000, guid: 881828713d0600647bd49975fced4cbc, type: 2}
 --- !u!114 &8985464992966259670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5439,7 +5375,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8864423410797597728
@@ -5452,7 +5388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1044260966996614730}
   - component: {fileID: 7468583867594599871}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
