@@ -1,5 +1,5 @@
-﻿using Global.UI.Design.Abstract.AutoLayouts;
-using Global.UI.Design.Abstract.Extensions;
+﻿using Global.UI.Design.Abstract.Extensions;
+using Global.UI.Design.Abstract.Layouts;
 using UnityEngine;
 
 namespace Global.UI.Design.Runtime.Layouts

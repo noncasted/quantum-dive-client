@@ -17,7 +17,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using VContainer.Unity;
 
-namespace Global.Setup.Config.Runtime
+namespace Global.Setup.Scope
 {
     [InlineEditor]
     [CreateAssetMenu(fileName = "GlobalConfig", menuName = "Global/Config")]

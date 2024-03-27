@@ -1,4 +1,4 @@
-﻿using Global.Setup.Config.Runtime;
+﻿using Global.Setup.Scope;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Setup.Abstract;
 using Internal.Setup.Runtime;

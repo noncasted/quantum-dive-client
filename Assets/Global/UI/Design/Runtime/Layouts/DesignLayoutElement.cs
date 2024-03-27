@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Common.Components.Runtime.ObjectLifetime;
 using Common.DataTypes.Runtime.Reactive;
-using Global.UI.Design.Abstract.AutoLayouts;
 using Global.UI.Design.Abstract.Extensions;
+using Global.UI.Design.Abstract.Layouts;
 using Nova;
 using UnityEngine;
 

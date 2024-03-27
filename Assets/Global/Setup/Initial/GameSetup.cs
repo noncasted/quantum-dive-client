@@ -1,5 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using Global.Setup.Config.Runtime;
+using Global.Setup.Scope;
 using Internal.Scopes.Abstract.Instances.Services;
 using Internal.Setup.Runtime;
 using UnityEngine;

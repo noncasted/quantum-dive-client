@@ -1,8 +1,7 @@
 ﻿using Common.DataTypes.Runtime.Reactive;
-using Internal.Scopes.Abstract.Lifetimes;
 using UnityEngine;
 
-namespace Global.UI.Design.Abstract.AutoLayouts
+namespace Global.UI.Design.Abstract.Layouts
 {
     public abstract class BaseDesignLayoutElement : MonoBehaviour
     {
