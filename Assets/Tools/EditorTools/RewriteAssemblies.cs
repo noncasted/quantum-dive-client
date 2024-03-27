@@ -16,6 +16,8 @@ namespace Tools.EditorTools
                 if (assembly.Details.IsOwned == false)
                     continue;
 
+                assembly.Toggles.AutoReference = false;
+
                 assembly.Write();
             }
         }

@@ -39,6 +39,6 @@
     "versionDefines": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
-    "autoReferenced": true,
+    "autoReferenced": false,
     "noEngineReferences": false
 }
