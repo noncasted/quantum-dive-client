@@ -2,7 +2,6 @@
     "name": "Global.Overlay.Runtime",
     "references": [
         "GUID:e3f90ec7da70443198fdd279336fd055",
-        "GUID:3b992c16a4c84e929d722c6b7d0ed004",
         "GUID:07a044aa3db84ac78852c3db5b8a723e",
         "GUID:298e82b42e834ebc9c229f8df784c429",
         "GUID:1429db28f9474a389cb34ec712b3c8b3",

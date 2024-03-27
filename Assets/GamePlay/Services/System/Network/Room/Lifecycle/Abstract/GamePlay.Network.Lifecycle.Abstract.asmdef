@@ -1,7 +1,6 @@
 {
     "name": "GamePlay.Network.Lifecycle.Abstract",
     "references": [
-        "GUID:32468dfd76aeee64abd199b98b754eda"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

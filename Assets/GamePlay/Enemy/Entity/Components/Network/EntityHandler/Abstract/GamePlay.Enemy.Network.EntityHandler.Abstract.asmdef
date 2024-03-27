@@ -1,7 +1,6 @@
 {
     "name": "GamePlay.Enemy.Network.EntityHandler.Abstract",
     "references": [
-        "GUID:80380efd79ec5be499f83c97806fedb6",
         "GUID:1429db28f9474a389cb34ec712b3c8b3"
     ],
     "includePlatforms": [],

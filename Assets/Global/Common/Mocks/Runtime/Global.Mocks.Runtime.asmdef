@@ -2,7 +2,6 @@
     "name": "Global.Mocks.Runtime",
     "references": [
         "GUID:de7059d40fcb45c5a07d18951d4e1554",
-        "GUID:9a34842b183a1fb4797341ba693aa70c",
         "GUID:4d4d51802f9d644478b589797702a86b",
         "GUID:f05b9158e9c16414aae73cd3747a80c2",
         "GUID:1429db28f9474a389cb34ec712b3c8b3",

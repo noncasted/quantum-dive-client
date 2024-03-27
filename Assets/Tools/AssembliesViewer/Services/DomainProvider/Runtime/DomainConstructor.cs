@@ -154,6 +154,7 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
             AddAssemblies("/Global", true);
             AddAssemblies("/Internal", true);
             AddAssemblies("/Plugins", false);
+            AddLibraryAssemblies();
             AddPackageAssemblies();
             
             return assemblies;
@@ -165,9 +166,16 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                 assemblies.AddRange(directoryAssemblies);
             }
 
-            void AddPackageAssemblies()
+            void AddLibraryAssemblies()
             {
                 var path = Application.dataPath.Replace("Assets", "Library/PackageCache");
+                var directoryAssemblies = GetDirectoryAssemblies(path, false);
+                assemblies.AddRange(directoryAssemblies);
+            }
+            
+            void AddPackageAssemblies()
+            {
+                var path = Application.dataPath.Replace("Assets", "Packages");
                 var directoryAssemblies = GetDirectoryAssemblies(path, false);
                 assemblies.AddRange(directoryAssemblies);
             }

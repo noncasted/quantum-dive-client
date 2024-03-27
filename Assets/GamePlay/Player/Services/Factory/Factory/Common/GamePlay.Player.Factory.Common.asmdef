@@ -1,8 +1,7 @@
 {
     "name": "GamePlay.Player.Factory.Common",
     "references": [
-        "GUID:5f9e49065beb4477b935cc833a087c32",
-        "GUID:5f85ab5dc178ff54c81b21f197b82d14"
+        "GUID:5f9e49065beb4477b935cc833a087c32"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

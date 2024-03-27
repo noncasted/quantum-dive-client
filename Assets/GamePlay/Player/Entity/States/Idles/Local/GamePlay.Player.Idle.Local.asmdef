@@ -2,7 +2,6 @@
     "name": "GamePlay.Player.Idle.Local",
     "references": [
         "GUID:206616f3cddb4dd3bec52b821dc19a39",
-        "GUID:cbf6c85c7d1346afb7e787385ccfa42f",
         "GUID:f9ddee8031644d5eb1067bb67301c6b0",
         "GUID:a3929b3d40018e043872a2b3c6bd9eeb",
         "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",

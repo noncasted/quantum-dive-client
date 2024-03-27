@@ -1,8 +1,7 @@
 {
     "name": "GamePlay.Enemy.Spawn.Zones.Runtime",
     "references": [
-        "GUID:75723932a6badd647925e19bf8b5a064",
-        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+        "GUID:75723932a6badd647925e19bf8b5a064"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,7 +1,6 @@
 {
     "name": "GamePlay.Player.Rotation.Local.Runtime",
     "references": [
-        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
         "GUID:b89f22dd42e718841bef8fbee27d3480",
         "GUID:a3929b3d40018e043872a2b3c6bd9eeb",
         "GUID:f5eabb3ea15e47a28ed3f698f57c6d6a",

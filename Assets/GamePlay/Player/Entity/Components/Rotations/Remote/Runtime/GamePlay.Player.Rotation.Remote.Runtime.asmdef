@@ -1,7 +1,6 @@
 {
     "name": "GamePlay.Player.Rotation.Remote.Runtime",
     "references": [
-        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
         "GUID:bea1adb6c6974d047a8b08da390b27ab",
         "GUID:dbd628ed558e8494e96714d170f044fb",
         "GUID:7f06f044524a4fa3a208ca3040630f97",

@@ -1,7 +1,6 @@
 {
     "name": "GamePlay.Network.Events.Abstract",
     "references": [
-        "GUID:32468dfd76aeee64abd199b98b754eda",
         "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
     "includePlatforms": [],

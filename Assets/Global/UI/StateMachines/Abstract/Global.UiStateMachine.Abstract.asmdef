@@ -1,7 +1,6 @@
 {
     "name": "Global.UiStateMachine.Abstract",
     "references": [
-        "GUID:4e18616727bd4b79a3b107e0489cec76",
         "GUID:9dbe345fbe8e47cb8a0d24c890f0feff"
     ],
     "includePlatforms": [],

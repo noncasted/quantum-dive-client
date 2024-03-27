@@ -1,8 +1,6 @@
 {
     "name": "GamePlay.Player.Weapons.Sword.Input.Abstract",
     "references": [
-        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-        "GUID:ed438ca80c904d1998007d47f177bcac"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,7 +1,6 @@
 {
     "name": "Common.UniversalAnimator.Abstract",
     "references": [
-        "GUID:4c25c05f410a3a447a75c3b0909152ef",
         "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
     "includePlatforms": [],

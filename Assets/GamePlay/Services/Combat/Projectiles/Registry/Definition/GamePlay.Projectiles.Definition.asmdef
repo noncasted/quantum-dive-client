@@ -2,8 +2,7 @@
     "name": "GamePlay.Projectiles.Definition",
     "references": [
         "GUID:861793575c7c4a2d82251cc54eeb8bf5",
-        "GUID:1a1ac4ee6eff4433a04199a96da530a2",
-        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+        "GUID:1a1ac4ee6eff4433a04199a96da530a2"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

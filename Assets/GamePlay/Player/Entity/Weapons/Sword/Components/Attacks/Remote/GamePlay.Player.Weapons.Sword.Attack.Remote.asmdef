@@ -2,7 +2,6 @@
     "name": "GamePlay.Player.Weapons.Sword.Attack.Remote",
     "references": [
         "GUID:206616f3cddb4dd3bec52b821dc19a39",
-        "GUID:239f9a8379f7b964b8f8c879fed530fb",
         "GUID:dbd628ed558e8494e96714d170f044fb",
         "GUID:f0619dc86df636c4898928d3dcc95a57",
         "GUID:47083761e726d344ebda60ec45a5396c",

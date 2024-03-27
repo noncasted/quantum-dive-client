@@ -1,7 +1,6 @@
 {
     "name": "GamePlay.Network.REST.Abstract",
     "references": [
-        "GUID:dec28d2fc9064a05abcbf9e3264fa16a",
         "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
     "includePlatforms": [],
