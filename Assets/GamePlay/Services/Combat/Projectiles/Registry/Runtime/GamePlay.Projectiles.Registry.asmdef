@@ -1,19 +1,18 @@
 {
-  "name": "GamePlay.Projectiles.Registry",
-  "rootNamespace": "",
-  "references": ["GUID:b121a984c9cd3584c94f30d68a57e086",
-    "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:861793575c7c4a2d82251cc54eeb8bf5",
-    "GUID:d89cb064a6d60b243b67336a6540d7a7"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Projectiles.Registry",
+    "references": [
+        "GUID:861793575c7c4a2d82251cc54eeb8bf5",
+        "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
+        "GUID:b121a984c9cd3584c94f30d68a57e086",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

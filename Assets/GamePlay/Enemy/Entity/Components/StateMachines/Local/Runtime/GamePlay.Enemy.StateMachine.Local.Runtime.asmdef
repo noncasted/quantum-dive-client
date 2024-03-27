@@ -1,24 +1,20 @@
 {
-  "name": "GamePlay.Enemy.StateMachine.Local.Runtime",
-  "rootNamespace": "",
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false,
-  "references": ["GUID:a16a43b7c89785f47bb051ec285a5624",
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    "GUID:2d163ca28caf33344a0ce66f34d6262c",
-    "GUID:e5a0179727aadd341bd68ee940b85b6f",
-    "GUID:7638f496058fa1d428172e61ce6a5bed",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    
-    
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"
-  ]
+    "name": "GamePlay.Enemy.StateMachine.Local.Runtime",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:a16a43b7c89785f47bb051ec285a5624",
+        "GUID:7638f496058fa1d428172e61ce6a5bed",
+        "GUID:2d163ca28caf33344a0ce66f34d6262c",
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

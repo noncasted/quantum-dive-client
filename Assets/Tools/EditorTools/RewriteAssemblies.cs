@@ -13,8 +13,10 @@ namespace Tools.EditorTools
 
             foreach (var assembly in assemblies)
             {
-                if (assembly.Details.IsOwned)
-                    assembly.Write();
+                if (assembly.Details.IsOwned == false)
+                    continue;
+
+                assembly.Write();
             }
         }
     }

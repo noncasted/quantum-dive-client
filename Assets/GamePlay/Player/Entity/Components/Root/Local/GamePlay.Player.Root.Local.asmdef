@@ -1,33 +1,30 @@
 {
-  "name": "GamePlay.Player.Root.Local",
-  "references": [
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:cdfd058b393524bddbb7e850e0d53c8e",
-    "GUID:ab1b3c60e062ceb40ac9ae59913b9e15",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    
-    
-    
-    
-    "GUID:ad91b1a77aeb44d782f5498f517b0657",
-    
-    
-    
-    
-    "GUID:6f62c3423cd447c6868a7e1c9400a9d7",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:1b37573996994db99532a569dd6fba98",
-    "GUID:14eecf01b6eb4ff2b3dfe46bcae92d25",
-    "GUID:ad6f2f31f60a460cb3b159c0b03e6e4c",
-    "GUID:36b63739de284ea9aded3ca311c0ede1",
-    "GUID:dccbaf0348504c30995193bc2d0a1498",
-    "GUID:f5e78d1680186b74a848a6c83e98dbd5",
-    "GUID:e26510743a1f8cc459abec906a60ed6c",
-    "GUID:5b5cece014df959428bff97b621a74fd",
-    
-    
-    "GUID:d7f245ec195547edb9c81809078172dd"
-  ]
+    "name": "GamePlay.Player.Root.Local",
+    "references": [
+        "GUID:14eecf01b6eb4ff2b3dfe46bcae92d25",
+        "GUID:ad6f2f31f60a460cb3b159c0b03e6e4c",
+        "GUID:1b37573996994db99532a569dd6fba98",
+        "GUID:ad91b1a77aeb44d782f5498f517b0657",
+        "GUID:5b5cece014df959428bff97b621a74fd",
+        "GUID:d7f245ec195547edb9c81809078172dd",
+        "GUID:f5e78d1680186b74a848a6c83e98dbd5",
+        "GUID:ab1b3c60e062ceb40ac9ae59913b9e15",
+        "GUID:6f62c3423cd447c6868a7e1c9400a9d7",
+        "GUID:e26510743a1f8cc459abec906a60ed6c",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:36b63739de284ea9aded3ca311c0ede1",
+        "GUID:dccbaf0348504c30995193bc2d0a1498",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

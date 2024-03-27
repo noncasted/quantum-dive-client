@@ -31,12 +31,13 @@ namespace Tools.AssembliesViewer.Domain.Runtime
         public override string ToString()
         {
             var value = string.Empty;
+            var newLine = Environment.NewLine;
 
-            value += ListToString("includePlatforms", IncludePlatforms);
-            value += ListToString("excludePlatforms", IncludePlatforms);
-            value += ListToString("precompiledReferences", IncludePlatforms);
-            value += ListToString("defineConstraints", IncludePlatforms);
-            value += ListToString("versionDefines", IncludePlatforms);
+            value += $"{ListToString("includePlatforms", IncludePlatforms)},{newLine}";
+            value += $"    {ListToString("excludePlatforms", ExcludePlatforms)},{newLine}";
+            value += $"    {ListToString("precompiledReferences", PrecompiledReferences)},{newLine}";
+            value += $"    {ListToString("defineConstraints", DefineConstraints)},{newLine}";
+            value += $"    {VersionsToString("versionDefines", VersionDefines)}";
 
             return value;
         }
@@ -44,15 +45,15 @@ namespace Tools.AssembliesViewer.Domain.Runtime
         public string ListToString(string header, IReadOnlyList<string> list)
         {
             var newLine = Environment.NewLine;
-            
+
             if (list.Count == 0)
-                return $"{newLine}    \"{header}\": []";
-            
-            var value = $"{newLine}    \"{header}\": [";
+                return $"\"{header}\": []";
+
+            var value = $"\"{header}\": [{newLine}";
 
             for (var i = 0; i < list.Count; i++)
             {
-                value += $",{newLine}    \"{list[i]}\"";
+                value += $"        \"{list[i]}\"";
 
                 if (i != list.Count - 1)
                     value += $",{newLine}";
@@ -61,6 +62,26 @@ namespace Tools.AssembliesViewer.Domain.Runtime
             value += $"{newLine}    ]";
 
             return value;
+        }
+
+        public string VersionsToString(string header, IReadOnlyList<VersionDefinesObject> list)
+        {
+            var values = new List<string>();
+
+            foreach (var version in list)
+            {
+                var value =
+                    "{" +
+                    $"    \"name\": {version.name}," +
+                    $"    \"expression\": {version.expression}," +
+                    $"    \"define\": {version.define}" +
+                    "}";
+                
+                values.Add(value);
+            }
+
+
+            return ListToString("versionDefines", values);
         }
     }
 }

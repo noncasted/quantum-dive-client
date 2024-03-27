@@ -1,9 +1,18 @@
-﻿{
-  "name": "GamePlay.Player.Hitbox.Debug",
-  "references": [
-    "GUID:6dc79ecacad54fd8bf10905a5d77b08f",
-    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:ca913105e6424d24af37fc9ba8269837"
-  ]
+{
+    "name": "GamePlay.Player.Hitbox.Debug",
+    "references": [
+        "GUID:6dc79ecacad54fd8bf10905a5d77b08f",
+        "GUID:ca913105e6424d24af37fc9ba8269837",
+        "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

@@ -1,21 +1,20 @@
 {
     "name": "Global.Network.Session.Runtime",
-    "rootNamespace": "",
     "references": [
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:27897721eb98469ca005c3866945af04",
-        "GUID:da1917f3a79694c539a148addd06d33b",
-        "GUID:1429db28f9474a389cb34ec712b3c8b3",
         "GUID:ae830b14052a4d1a88d79d9fbdd125ab",
-        "GUID:a6109e4dd6464f3ba58966083df6b5e8"
+        "GUID:a6109e4dd6464f3ba58966083df6b5e8",
+        "GUID:27897721eb98469ca005c3866945af04",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:da1917f3a79694c539a148addd06d33b",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

@@ -1,11 +1,18 @@
 {
-  "name": "GamePlay.Player.Equipment.Slots.Binder.Runtime",
-  "references": [
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:a8f6b895322c45408ed64cb258c91d51",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:a6a753291bc24d5382cc6acf7de3f5f1"
-  ]
+    "name": "GamePlay.Player.Equipment.Slots.Binder.Runtime",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:a6a753291bc24d5382cc6acf7de3f5f1",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

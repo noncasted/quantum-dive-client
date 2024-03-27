@@ -1,22 +1,21 @@
 {
     "name": "Global.ScopeDisposer.Runtime",
-    "rootNamespace": "",
     "references": [
+        "GUID:fb9b00a9a42c4c1459774b1ef88fcd74",
+        "GUID:602d0fa4332f43cbb95f19a1d3d74894",
+        "GUID:7f52ba67bfdf4495bb70298a92934f49",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
         "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-        "GUID:cdfd058b393524bddbb7e850e0d53c8e",
-        "GUID:1429db28f9474a389cb34ec712b3c8b3",
-        "GUID:7f52ba67bfdf4495bb70298a92934f49",
-        "GUID:602d0fa4332f43cbb95f19a1d3d74894",
-        "GUID:fb9b00a9a42c4c1459774b1ef88fcd74"
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

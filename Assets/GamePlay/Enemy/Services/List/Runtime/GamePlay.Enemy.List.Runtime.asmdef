@@ -1,9 +1,18 @@
 {
-  "name": "GamePlay.Enemy.List.Runtime",
-  "references": ["GUID:8da8cefd7ba80494aa0505cd4263e184",
-    "GUID:f2894a9a55f74e49bbe8a7453341e693",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23"
-  ]
+    "name": "GamePlay.Enemy.List.Runtime",
+    "references": [
+        "GUID:8da8cefd7ba80494aa0505cd4263e184",
+        "GUID:f2894a9a55f74e49bbe8a7453341e693",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

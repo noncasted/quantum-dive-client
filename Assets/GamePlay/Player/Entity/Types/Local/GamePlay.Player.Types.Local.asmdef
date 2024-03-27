@@ -1,91 +1,30 @@
 {
-  "name": "GamePlay.Player.Types.Local",
-  "rootNamespace": "",
-  "references": [
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    "GUID:d7f245ec195547edb9c81809078172dd",
-    
-    "GUID:44265e8886254d92835254b3bd1a2a7b",
-    
-    
-    
-    
-    
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:628eed525fe14e23a98070b6664c84b7",
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    "GUID:239f9a8379f7b964b8f8c879fed530fb",
-    
-    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
-    "GUID:8358514cc19e4fa43acfb78a22566558",
-    "GUID:653035ca38aa68b428118c9a452c37a0",
-    "GUID:475e7352b7684936814b6c47a79525dc",
-    "GUID:d95427421dff4580b80c96d9901d0146",
-    
-    
-    
-    "GUID:415a0c8c00934fe0915d7be7cccc8112",
-    "GUID:88761ebbec514559a07be37f623fd944",
-    "GUID:cd2712690bb34b0cbe29835ac04e60ef",
-    "GUID:66b97d729a594e5db5c5a5c3bd367ca2",
-    "GUID:1b37573996994db99532a569dd6fba98",
-    "GUID:00611383f8024d48a83a27d177734ae9",
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    "GUID:64dfcc5eaae37b7479f6d4806d16d2c4"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Types.Local",
+    "references": [
+        "GUID:239f9a8379f7b964b8f8c879fed530fb",
+        "GUID:415a0c8c00934fe0915d7be7cccc8112",
+        "GUID:d95427421dff4580b80c96d9901d0146",
+        "GUID:1b37573996994db99532a569dd6fba98",
+        "GUID:88761ebbec514559a07be37f623fd944",
+        "GUID:44265e8886254d92835254b3bd1a2a7b",
+        "GUID:475e7352b7684936814b6c47a79525dc",
+        "GUID:d7f245ec195547edb9c81809078172dd",
+        "GUID:cd2712690bb34b0cbe29835ac04e60ef",
+        "GUID:653035ca38aa68b428118c9a452c37a0",
+        "GUID:64dfcc5eaae37b7479f6d4806d16d2c4",
+        "GUID:8358514cc19e4fa43acfb78a22566558",
+        "GUID:66b97d729a594e5db5c5a5c3bd367ca2",
+        "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
+        "GUID:628eed525fe14e23a98070b6664c84b7",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

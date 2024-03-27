@@ -1,6 +1,16 @@
 {
-  "name": "GamePlay.Enemy.Spawn.Zones.Runtime",
-  "references": ["GUID:75723932a6badd647925e19bf8b5a064",
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
-  ]
+    "name": "GamePlay.Enemy.Spawn.Zones.Runtime",
+    "references": [
+        "GUID:75723932a6badd647925e19bf8b5a064",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

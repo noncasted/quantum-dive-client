@@ -1,36 +1,27 @@
 {
-  "name": "GamePlay.Enemy.Range.StateSelector.Runtime",
-  "rootNamespace": "",
-  "references": [
-    "GUID:527e199203c94a05960eadfb90a65aba",
-    "GUID:4e385a59d199448d8cc72418aaff5e07",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:721b908a073a4a70891a75e33937496c",
-    "GUID:d1f687e54b5d45199e006815a82486f5",
-    
-    
-    "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
-    
-    "GUID:3b642034007a469f98658fefe92538d8",
-    "GUID:a16a43b7c89785f47bb051ec285a5624",
-    "GUID:0b1cf2365187701478ded818a9129ef7",
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    
-    
-    "GUID:1fd487ce5158932458a4cfb3669996f1"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Range.StateSelector.Runtime",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:d1f687e54b5d45199e006815a82486f5",
+        "GUID:721b908a073a4a70891a75e33937496c",
+        "GUID:3b642034007a469f98658fefe92538d8",
+        "GUID:4e385a59d199448d8cc72418aaff5e07",
+        "GUID:a16a43b7c89785f47bb051ec285a5624",
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:527e199203c94a05960eadfb90a65aba",
+        "GUID:1fd487ce5158932458a4cfb3669996f1",
+        "GUID:0b1cf2365187701478ded818a9129ef7",
+        "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

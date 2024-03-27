@@ -1,22 +1,21 @@
 {
     "name": "Global.Audio.Player.Runtime",
-    "rootNamespace": "",
     "references": [
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:1429db28f9474a389cb34ec712b3c8b3",
-        "GUID:1a1e9f8cc2854e1a9bbf15ced1e67a77",
-        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-        "GUID:25f79b9f7aeb42a8af7eb332b6a4ba79",
         "GUID:cd50199a6a164b788188f55241809f95",
-        "GUID:fb9b00a9a42c4c1459774b1ef88fcd74"
+        "GUID:1a1e9f8cc2854e1a9bbf15ced1e67a77",
+        "GUID:fb9b00a9a42c4c1459774b1ef88fcd74",
+        "GUID:25f79b9f7aeb42a8af7eb332b6a4ba79",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

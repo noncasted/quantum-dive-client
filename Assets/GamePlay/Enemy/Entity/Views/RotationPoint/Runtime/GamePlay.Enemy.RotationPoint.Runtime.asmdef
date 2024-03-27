@@ -1,19 +1,17 @@
 {
-  "name": "GamePlay.Enemy.RotationPoint.Runtime",
-  "rootNamespace": "",
-  "references": ["GUID:47e81931481f0d74f9014ff322323e4e",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.RotationPoint.Runtime",
+    "references": [
+        "GUID:47e81931481f0d74f9014ff322323e4e",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

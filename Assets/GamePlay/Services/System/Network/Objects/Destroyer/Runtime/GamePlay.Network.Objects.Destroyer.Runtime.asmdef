@@ -1,22 +1,20 @@
 {
-  "name": "GamePlay.Network.Objects.Destroyer.Runtime",
-  "rootNamespace": "",
-  "references": ["GUID:d365c079913066c4e8445ab3f4b5e42e",
-    "GUID:df78a595a22a4bf88a8d58ce6cb42746",
-    
-    "GUID:72a74364ef2c452fba2c739c6a14e831",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:80380efd79ec5be499f83c97806fedb6"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Network.Objects.Destroyer.Runtime",
+    "references": [
+        "GUID:80380efd79ec5be499f83c97806fedb6",
+        "GUID:df78a595a22a4bf88a8d58ce6cb42746",
+        "GUID:d365c079913066c4e8445ab3f4b5e42e",
+        "GUID:72a74364ef2c452fba2c739c6a14e831",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

@@ -1,13 +1,17 @@
 {
-  "name": "GamePlay.Player.Weapons.Bow.Strafe.Common",
-  "references": [
-    "GUID:b6431b7d3eb44c7fb19b3735d729087f",
-    "GUID:8f9012bdd1b116c48ab480004500c8f3",
-    "GUID:b0275d8a7d994d97ae1652be17935f0f",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:92c45879a0f342a29c0e271981946ba1",
-    "GUID:6fe3e5bc5e27400aa7e27dded3e1e008",
-    
-    "GUID:1df29afa6177f8e4fa19b25367556ac2"
-  ]
+    "name": "GamePlay.Player.Weapons.Bow.Strafe.Common",
+    "references": [
+        "GUID:8f9012bdd1b116c48ab480004500c8f3",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
+        "GUID:b6431b7d3eb44c7fb19b3735d729087f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

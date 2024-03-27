@@ -1,10 +1,17 @@
 {
-  "name": "GamePlay.Projectiles.Pool",
-  "references": [
-    "GUID:d89cb064a6d60b243b67336a6540d7a7",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
-    "GUID:1a1ac4ee6eff4433a04199a96da530a2"
-    
-  ]
+    "name": "GamePlay.Projectiles.Pool",
+    "references": [
+        "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
+        "GUID:1a1ac4ee6eff4433a04199a96da530a2",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

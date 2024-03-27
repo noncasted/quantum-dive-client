@@ -1,17 +1,16 @@
 {
     "name": "Global.Network.Connection.Configuration",
-    "rootNamespace": "",
     "references": [
         "GUID:1429db28f9474a389cb34ec712b3c8b3",
         "GUID:da1917f3a79694c539a148addd06d33b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

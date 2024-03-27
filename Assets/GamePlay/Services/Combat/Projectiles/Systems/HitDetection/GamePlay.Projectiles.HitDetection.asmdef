@@ -1,20 +1,24 @@
 {
-  "name": "GamePlay.Projectiles.HitDetection",
-  "references": [
-    "GUID:e59bf9fc7d5a44b18a819a92edd46163",
-    "GUID:acafe45b72c24a5e889f7c87f4833aea",
-    "GUID:2f38b8ba30fb4de9af0587598cd52891",
-    
-    "GUID:9e2f6fcfacb84504b029482d260a07d4",
-    
-    "GUID:2435b9189672c5848ae4cc81c2cf0e13",
-    
-    "GUID:ca913105e6424d24af37fc9ba8269837",
-    "GUID:9cfd74e03b544251808825a0d52ed401",
-    "GUID:bb1d6a7e5fa5406197fdacb0c63f217e",
-    "GUID:21b46da5ea3f0994bb848bb5fabda0b7",
-    
-    
-    "GUID:de4e6084e6d474788bb8c799d6b461ec"
-  ]
+    "name": "GamePlay.Projectiles.HitDetection",
+    "references": [
+        "GUID:de4e6084e6d474788bb8c799d6b461ec",
+        "GUID:2435b9189672c5848ae4cc81c2cf0e13",
+        "GUID:bb1d6a7e5fa5406197fdacb0c63f217e",
+        "GUID:9cfd74e03b544251808825a0d52ed401",
+        "GUID:9e2f6fcfacb84504b029482d260a07d4",
+        "GUID:2f38b8ba30fb4de9af0587598cd52891",
+        "GUID:21b46da5ea3f0994bb848bb5fabda0b7",
+        "GUID:acafe45b72c24a5e889f7c87f4833aea",
+        "GUID:ca913105e6424d24af37fc9ba8269837",
+        "GUID:e59bf9fc7d5a44b18a819a92edd46163"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

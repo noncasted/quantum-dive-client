@@ -1,39 +1,27 @@
 {
-  "name": "GamePlay.Enemy.Following.Local",
-  "rootNamespace": "",
-  "references": [
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    
-    
-    "GUID:d44e25549d13469a8a277f4beb75308f",
-    "GUID:9ea2d54e426849979be7b9540662669b",
-    
-    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    "GUID:aac41f60988d442497259de79205647b",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:699865ac82ed4bfc98e47c9342127ab0",
-    
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    "GUID:527e199203c94a05960eadfb90a65aba",
-    
-    "GUID:42d99141f95b4ae41b2dc88b36641944",
-    "GUID:a16a43b7c89785f47bb051ec285a5624",
-    "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
-    "GUID:e8da1ef8362eacc41bfa3671bdaadceb",
-    "GUID:b452df9c387404540bea6be088439d8b",
-    "GUID:1fd487ce5158932458a4cfb3669996f1"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Following.Local",
+    "references": [
+        "GUID:9ea2d54e426849979be7b9540662669b",
+        "GUID:e8da1ef8362eacc41bfa3671bdaadceb",
+        "GUID:d44e25549d13469a8a277f4beb75308f",
+        "GUID:b452df9c387404540bea6be088439d8b",
+        "GUID:a16a43b7c89785f47bb051ec285a5624",
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:527e199203c94a05960eadfb90a65aba",
+        "GUID:42d99141f95b4ae41b2dc88b36641944",
+        "GUID:1fd487ce5158932458a4cfb3669996f1",
+        "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
+        "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

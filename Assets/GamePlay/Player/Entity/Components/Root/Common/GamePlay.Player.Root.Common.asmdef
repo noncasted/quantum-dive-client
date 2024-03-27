@@ -1,8 +1,16 @@
 {
-  "name": "GamePlay.Player.Root.Common",
-  "references": [
-    "GUID:8f9012bdd1b116c48ab480004500c8f3",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23"
-    
-  ]
+    "name": "GamePlay.Player.Root.Common",
+    "references": [
+        "GUID:8f9012bdd1b116c48ab480004500c8f3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

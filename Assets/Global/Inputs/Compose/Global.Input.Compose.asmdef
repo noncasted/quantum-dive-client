@@ -1,6 +1,5 @@
 {
     "name": "Global.Input.Compose",
-    "rootNamespace": "",
     "references": [
         "GUID:9a30e5b105be423994f0ee27d935f22f",
         "GUID:b03721a1eeb8491da187242f7870dca2",
@@ -10,11 +9,11 @@
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

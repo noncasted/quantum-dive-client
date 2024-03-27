@@ -1,6 +1,15 @@
-﻿{
-  "name": "GamePlay.Player.CameraFollow.Abstract",
-  "references": [
-    "GUID:14eecf01b6eb4ff2b3dfe46bcae92d25"
-  ]
+{
+    "name": "GamePlay.Player.CameraFollow.Abstract",
+    "references": [
+        "GUID:14eecf01b6eb4ff2b3dfe46bcae92d25"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

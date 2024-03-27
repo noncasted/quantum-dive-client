@@ -1,6 +1,15 @@
-﻿{
-  "name": "GamePlay.Enemy.Summoner.Common",
-  "references": [
-    "GUID:85504f5f947946d1b714ca45e17b281c"
-  ]
+{
+    "name": "GamePlay.Enemy.Summoner.Common",
+    "references": [
+        "GUID:85504f5f947946d1b714ca45e17b281c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

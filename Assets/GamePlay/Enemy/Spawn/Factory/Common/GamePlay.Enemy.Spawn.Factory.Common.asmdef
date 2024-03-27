@@ -1,16 +1,15 @@
 {
-  "name": "GamePlay.Enemy.Spawn.Factory.Common",
-  "rootNamespace": "",
-  "references": [
-    "GUID:10d7d8ac4a36426789d2f4c296a61d7b"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Spawn.Factory.Common",
+    "references": [
+        "GUID:10d7d8ac4a36426789d2f4c296a61d7b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

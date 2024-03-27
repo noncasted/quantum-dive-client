@@ -1,46 +1,25 @@
 {
-  "name": "GamePlay.Player.Respawn.Local",
-  "rootNamespace": "",
-  "references": [
-    "GUID:47083761e726d344ebda60ec45a5396c",
-    "GUID:1df29afa6177f8e4fa19b25367556ac2",
-    
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    
-    "GUID:5669e452570e4ca48b8844723560b2a7",
-    
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:77afcc2a31fe4e189b0b0b93bd782683",
-    "GUID:b0275d8a7d994d97ae1652be17935f0f",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:92c45879a0f342a29c0e271981946ba1",
-    "GUID:6fe3e5bc5e27400aa7e27dded3e1e008",
-    "GUID:699865ac82ed4bfc98e47c9342127ab0",
-    "GUID:d7f245ec195547edb9c81809078172dd",
-    
-    "GUID:206616f3cddb4dd3bec52b821dc19a39",
-    
-    "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
-    
-    "GUID:2eb155572109eeb40b59f548f295ad7a",
-    
-    
-    
-    
-    
-    "GUID:239f9a8379f7b964b8f8c879fed530fb"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Respawn.Local",
+    "references": [
+        "GUID:206616f3cddb4dd3bec52b821dc19a39",
+        "GUID:239f9a8379f7b964b8f8c879fed530fb",
+        "GUID:2eb155572109eeb40b59f548f295ad7a",
+        "GUID:d7f245ec195547edb9c81809078172dd",
+        "GUID:77afcc2a31fe4e189b0b0b93bd782683",
+        "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
+        "GUID:47083761e726d344ebda60ec45a5396c",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

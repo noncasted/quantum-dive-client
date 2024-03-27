@@ -1,6 +1,15 @@
 {
-  "name": "GamePlay.Player.Bow.Projectiles.Runtime",
-  "references": [
-    "GUID:9e2f6fcfacb84504b029482d260a07d4"
-  ]
+    "name": "GamePlay.Player.Bow.Projectiles.Runtime",
+    "references": [
+        "GUID:9e2f6fcfacb84504b029482d260a07d4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

@@ -1,39 +1,26 @@
 {
-  "name": "GamePlay.Enemy.Spawn.Factory.Runtime",
-  "rootNamespace": "",
-  "references": ["GUID:ab1373cd21e960343aa31da480264eda",
-    "GUID:7338080da93f4c60a8926457ef406a5f",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:f039ae9bb39d4991a4da04c2692781b3",
-    "GUID:4e86b5c5b90b1d441aa5f37150c67ad9",
-    
-    "GUID:260a68bb49e34ca468b5ca59f42994d6",
-    
-    "GUID:3a3690729c7a4e2ca4224f87380e3405",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:2d36441eb3e59d74e8d0f5b8f2b3ce8f",
-    "GUID:d89cb064a6d60b243b67336a6540d7a7",
-    "GUID:1962119cf5634937adc72e0e7d7cc2ed",
-    
-    
-    
-    "GUID:80380efd79ec5be499f83c97806fedb6",
-    
-    "GUID:09eeed04a09c422b9c62d681c78d80ec",
-    
-    "GUID:878d51519a954fb08076e8ee01528c58",
-    
-    
-    
-    "GUID:954bed7845ef3b94c8f2d8ca3cd76154"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Spawn.Factory.Runtime",
+    "references": [
+        "GUID:09eeed04a09c422b9c62d681c78d80ec",
+        "GUID:2d36441eb3e59d74e8d0f5b8f2b3ce8f",
+        "GUID:ab1373cd21e960343aa31da480264eda",
+        "GUID:3a3690729c7a4e2ca4224f87380e3405",
+        "GUID:4e86b5c5b90b1d441aa5f37150c67ad9",
+        "GUID:878d51519a954fb08076e8ee01528c58",
+        "GUID:80380efd79ec5be499f83c97806fedb6",
+        "GUID:260a68bb49e34ca468b5ca59f42994d6",
+        "GUID:f039ae9bb39d4991a4da04c2692781b3",
+        "GUID:7338080da93f4c60a8926457ef406a5f",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

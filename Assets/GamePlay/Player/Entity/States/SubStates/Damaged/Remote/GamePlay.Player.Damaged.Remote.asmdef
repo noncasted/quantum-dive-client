@@ -1,17 +1,19 @@
 {
-  "name": "GamePlay.Player.Damaged.Remote",
-  "references": [
-    
-    
-    "GUID:e17a2c557ad84d3e84a1b94c4b9bdf6b",
-    "GUID:9bd5d026afe0406cab16f1fe227640d6",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    
-    
-    
-    
-    "GUID:bea1adb6c6974d047a8b08da390b27ab"
-  ]
+    "name": "GamePlay.Player.Damaged.Remote",
+    "references": [
+        "GUID:e17a2c557ad84d3e84a1b94c4b9bdf6b",
+        "GUID:9bd5d026afe0406cab16f1fe227640d6",
+        "GUID:bea1adb6c6974d047a8b08da390b27ab",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

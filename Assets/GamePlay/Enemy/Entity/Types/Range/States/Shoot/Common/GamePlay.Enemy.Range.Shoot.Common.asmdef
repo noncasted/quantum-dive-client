@@ -1,14 +1,18 @@
 {
-  "name": "GamePlay.Enemy.Range.Shoot.Common",
-  "references": [
-    "GUID:d97d9c764948444d98c823fdaa970d62",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:aac41f60988d442497259de79205647b",
-    "GUID:92c45879a0f342a29c0e271981946ba1",
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    "GUID:3e7167d9f58d47b7839bb3ce134a78f1",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:b0275d8a7d994d97ae1652be17935f0f",
-    "GUID:c602b6bce09f4d4c89bd075d8924ad90"
-  ]
+    "name": "GamePlay.Enemy.Range.Shoot.Common",
+    "references": [
+        "GUID:d97d9c764948444d98c823fdaa970d62",
+        "GUID:c602b6bce09f4d4c89bd075d8924ad90",
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

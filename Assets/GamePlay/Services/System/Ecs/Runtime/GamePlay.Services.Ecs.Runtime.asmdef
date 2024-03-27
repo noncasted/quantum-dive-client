@@ -1,16 +1,22 @@
 {
-  "name": "GamePlay.Services.Ecs.Runtime",
-  "references": ["GUID:21b46da5ea3f0994bb848bb5fabda0b7",
-    "GUID:e59bf9fc7d5a44b18a819a92edd46163",
-    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    "GUID:3b992c16a4c84e929d722c6b7d0ed004",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:df4d8d145ced406f8e0abd8a1b753f3f",
-    
-    "GUID:d49f87d10289e9340861bf05e1f156f0"
-  ]
+    "name": "GamePlay.Services.Ecs.Runtime",
+    "references": [
+        "GUID:df4d8d145ced406f8e0abd8a1b753f3f",
+        "GUID:21b46da5ea3f0994bb848bb5fabda0b7",
+        "GUID:3b992c16a4c84e929d722c6b7d0ed004",
+        "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:e59bf9fc7d5a44b18a819a92edd46163",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

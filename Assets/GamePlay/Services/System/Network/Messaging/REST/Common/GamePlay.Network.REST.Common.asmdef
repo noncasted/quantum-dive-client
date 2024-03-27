@@ -1,6 +1,15 @@
-﻿{
-  "name": "GamePlay.Network.REST.Common",
-  "references": [
-    "GUID:ab8fcff7ea894a14a4e8393a6ba0191c"
-  ]
+{
+    "name": "GamePlay.Network.REST.Common",
+    "references": [
+        "GUID:ab8fcff7ea894a14a4e8393a6ba0191c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

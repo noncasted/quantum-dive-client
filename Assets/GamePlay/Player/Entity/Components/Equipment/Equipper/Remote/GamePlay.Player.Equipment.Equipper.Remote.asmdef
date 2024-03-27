@@ -1,37 +1,26 @@
 {
-  "name": "GamePlay.Player.Equipment.Equipper.Remote",
-  "rootNamespace": "",
-  "references": [
-    
-    
-    "GUID:44265e8886254d92835254b3bd1a2a7b",
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    
-    "GUID:01cbcd01a3784da9b91f83eff4e7e13c",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
-    "GUID:161418e701fb4e0b9da81e4b18628924",
-    
-    "GUID:a6a753291bc24d5382cc6acf7de3f5f1",
-    
-    "GUID:7ed7124f2aea1f740a72e6e48ba9e672",
-    
-    "GUID:c6515e2d30cb9ca41bde3eddc565a0bd",
-    
-    "GUID:bea1adb6c6974d047a8b08da390b27ab",
-    
-    "GUID:9fcaad132baa463fb8555c14c7d6117a"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Equipment.Equipper.Remote",
+    "references": [
+        "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
+        "GUID:01cbcd01a3784da9b91f83eff4e7e13c",
+        "GUID:161418e701fb4e0b9da81e4b18628924",
+        "GUID:44265e8886254d92835254b3bd1a2a7b",
+        "GUID:a6a753291bc24d5382cc6acf7de3f5f1",
+        "GUID:7ed7124f2aea1f740a72e6e48ba9e672",
+        "GUID:c6515e2d30cb9ca41bde3eddc565a0bd",
+        "GUID:bea1adb6c6974d047a8b08da390b27ab",
+        "GUID:9fcaad132baa463fb8555c14c7d6117a",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

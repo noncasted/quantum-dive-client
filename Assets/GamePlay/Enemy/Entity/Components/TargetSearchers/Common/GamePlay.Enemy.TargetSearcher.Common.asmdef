@@ -1,7 +1,16 @@
-﻿{
-  "name": "GamePlay.Enemy.TargetSearcher.Common",
-  "references": [
-    "GUID:d97d9c764948444d98c823fdaa970d62",
-    "GUID:4395a0108c83426c99fe9ed9004eef08"
-  ]
+{
+    "name": "GamePlay.Enemy.TargetSearcher.Common",
+    "references": [
+        "GUID:4395a0108c83426c99fe9ed9004eef08",
+        "GUID:d97d9c764948444d98c823fdaa970d62"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

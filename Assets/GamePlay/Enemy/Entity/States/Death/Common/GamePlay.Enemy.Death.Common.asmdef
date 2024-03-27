@@ -1,11 +1,17 @@
 {
-  "name": "GamePlay.Enemy.Death.Common",
-  "references": [
-    "GUID:d97d9c764948444d98c823fdaa970d62",
-    "GUID:b0275d8a7d994d97ae1652be17935f0f",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    "GUID:92c45879a0f342a29c0e271981946ba1",
-    "GUID:72041e54c124471db15c17d033547c18"
-  ]
+    "name": "GamePlay.Enemy.Death.Common",
+    "references": [
+        "GUID:d97d9c764948444d98c823fdaa970d62",
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:72041e54c124471db15c17d033547c18"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

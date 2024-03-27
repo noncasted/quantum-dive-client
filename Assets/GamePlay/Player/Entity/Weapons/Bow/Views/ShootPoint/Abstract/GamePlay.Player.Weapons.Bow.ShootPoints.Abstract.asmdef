@@ -1,5 +1,14 @@
 {
- "name": "GamePlay.Player.Weapons.Bow.ShootPoints.Abstract",
-  "references": [
- ]
+    "name": "GamePlay.Player.Weapons.Bow.ShootPoints.Abstract",
+    "references": [
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

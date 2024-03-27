@@ -1,23 +1,21 @@
 {
-  "name": "GamePlay.Player.Combo.Runtime",
-  "rootNamespace": "",
-  "references": ["GUID:35641cfc64c0bc54987f24d4fe9b66b1",
-    "GUID:1df29afa6177f8e4fa19b25367556ac2",
-    "GUID:47083761e726d344ebda60ec45a5396c",
-    "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
-    "GUID:566565389f1a4e1e92bf3bdaaa9e079b",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Combo.Runtime",
+    "references": [
+        "GUID:35641cfc64c0bc54987f24d4fe9b66b1",
+        "GUID:566565389f1a4e1e92bf3bdaaa9e079b",
+        "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
+        "GUID:47083761e726d344ebda60ec45a5396c",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

@@ -1,5 +1,14 @@
 {
- "name": "GamePlay.Enemy.Spawn.Zones.Abstract",
-  "references": [
- ]
+    "name": "GamePlay.Enemy.Spawn.Zones.Abstract",
+    "references": [
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

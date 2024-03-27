@@ -1,13 +1,19 @@
 {
-  "name": "GamePlay.Network.Objects.Factory.Registry",
-  "references": [
-    "GUID:7338080da93f4c60a8926457ef406a5f",
-    
-    "GUID:6ed726b5fa9b4063b265ed65a01a57fa",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    
-    "GUID:d8202f3e0f5f43b1baa06707cdd7f1ba"
-  ]
+    "name": "GamePlay.Network.Objects.Factory.Registry",
+    "references": [
+        "GUID:6ed726b5fa9b4063b265ed65a01a57fa",
+        "GUID:d8202f3e0f5f43b1baa06707cdd7f1ba",
+        "GUID:7338080da93f4c60a8926457ef406a5f",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

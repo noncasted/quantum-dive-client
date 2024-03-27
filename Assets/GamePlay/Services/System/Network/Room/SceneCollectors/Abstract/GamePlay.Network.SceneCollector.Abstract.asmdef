@@ -1,5 +1,15 @@
 {
- "name": "GamePlay.Network.SceneCollector.Abstract",
-  "references": [
- "GUID:e99eff0a39414de2ac2ea492817f7345"]
+    "name": "GamePlay.Network.SceneCollector.Abstract",
+    "references": [
+        "GUID:e99eff0a39414de2ac2ea492817f7345"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

@@ -1,41 +1,27 @@
 {
-  "name": "GamePlay.Enemy.Range.Shoot.Local",
-  "rootNamespace": "",
-  "references": [
-    
-    "GUID:fdc2cf7c250a4094dae93475802ae81f",
-    "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
-    "GUID:6bb6bd8e447145039cf363975b2cda16",
-    
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:aac41f60988d442497259de79205647b",
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    
-    
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:699865ac82ed4bfc98e47c9342127ab0",
-    "GUID:d89cb064a6d60b243b67336a6540d7a7",
-    "GUID:3e7167d9f58d47b7839bb3ce134a78f1",
-    "GUID:b0275d8a7d994d97ae1652be17935f0f",
-    "GUID:4df86b1acb7346feb6c759d43109e103",
-    "GUID:527e199203c94a05960eadfb90a65aba",
-    
-    "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
-    "GUID:42d99141f95b4ae41b2dc88b36641944",
-    "GUID:a16a43b7c89785f47bb051ec285a5624",
-    "GUID:e8da1ef8362eacc41bfa3671bdaadceb",
-    "GUID:1fd487ce5158932458a4cfb3669996f1"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Range.Shoot.Local",
+    "references": [
+        "GUID:e8da1ef8362eacc41bfa3671bdaadceb",
+        "GUID:6bb6bd8e447145039cf363975b2cda16",
+        "GUID:4df86b1acb7346feb6c759d43109e103",
+        "GUID:a16a43b7c89785f47bb051ec285a5624",
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:527e199203c94a05960eadfb90a65aba",
+        "GUID:42d99141f95b4ae41b2dc88b36641944",
+        "GUID:1fd487ce5158932458a4cfb3669996f1",
+        "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
+        "GUID:fdc2cf7c250a4094dae93475802ae81f",
+        "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

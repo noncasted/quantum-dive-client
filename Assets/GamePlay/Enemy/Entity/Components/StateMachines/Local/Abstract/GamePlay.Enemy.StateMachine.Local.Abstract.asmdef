@@ -1,7 +1,16 @@
 {
-  "name": "GamePlay.Enemy.StateMachine.Local.Abstract",
-  "references": [
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"
-  ]
+    "name": "GamePlay.Enemy.StateMachine.Local.Abstract",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:87c37c46dfd9454380a9559a46f1be34"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

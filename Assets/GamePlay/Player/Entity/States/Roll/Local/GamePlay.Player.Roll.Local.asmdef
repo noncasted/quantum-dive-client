@@ -1,59 +1,29 @@
 {
-  "name": "GamePlay.Player.Roll.Local",
-  "references": [
-    "GUID:cafac004f3b045a0ad2d577feb68faed",
-    
-    
-    
-    
-    
-    
-    
-    "GUID:47083761e726d344ebda60ec45a5396c",
-    "GUID:1df29afa6177f8e4fa19b25367556ac2",
-    "GUID:aac41f60988d442497259de79205647b",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:b0275d8a7d994d97ae1652be17935f0f",
-    "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:699865ac82ed4bfc98e47c9342127ab0",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    
-    
-    
-    "GUID:d7f245ec195547edb9c81809078172dd",
-    
-    
-    
-    "GUID:206616f3cddb4dd3bec52b821dc19a39",
-    
-    
-    
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    
-    
-    
-    "GUID:8a39265d65ba4b3e9fd0bf78e82928d4",
-    
-    
-    
-    "GUID:790a3b5bc4214af3948063a02232f1bc",
-    
-    
-    
-    "GUID:9f704c5e06c2b244a90cc9123ff964ab",
-    
-    
-    
-    "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
-    
-    
-    
-    "GUID:ebbb58d1c2909ac4c9a2f356b02dfc8d",
-    
-    
-    
-    "GUID:e26510743a1f8cc459abec906a60ed6c"
-  ]
+    "name": "GamePlay.Player.Roll.Local",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:206616f3cddb4dd3bec52b821dc19a39",
+        "GUID:9f704c5e06c2b244a90cc9123ff964ab",
+        "GUID:d7f245ec195547edb9c81809078172dd",
+        "GUID:cafac004f3b045a0ad2d577feb68faed",
+        "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
+        "GUID:47083761e726d344ebda60ec45a5396c",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
+        "GUID:ebbb58d1c2909ac4c9a2f356b02dfc8d",
+        "GUID:e26510743a1f8cc459abec906a60ed6c",
+        "GUID:790a3b5bc4214af3948063a02232f1bc",
+        "GUID:8a39265d65ba4b3e9fd0bf78e82928d4",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

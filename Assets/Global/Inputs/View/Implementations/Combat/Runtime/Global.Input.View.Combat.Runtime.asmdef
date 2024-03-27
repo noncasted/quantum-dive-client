@@ -1,23 +1,22 @@
 {
     "name": "Global.Input.View.Combat.Runtime",
-    "rootNamespace": "",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c",
-        "GUID:1429db28f9474a389cb34ec712b3c8b3",
-        "GUID:c766a58c8dd048cc8fa5205376f337b4",
-        "GUID:ed438ca80c904d1998007d47f177bcac",
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
         "GUID:4e18616727bd4b79a3b107e0489cec76",
         "GUID:9dbe345fbe8e47cb8a0d24c890f0feff",
+        "GUID:c766a58c8dd048cc8fa5205376f337b4",
+        "GUID:ed438ca80c904d1998007d47f177bcac",
         "GUID:04343f4367ad4da9b66140fa53510cb5",
-        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

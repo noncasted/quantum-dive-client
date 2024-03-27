@@ -1,16 +1,15 @@
 {
-  "name": "GamePlay.Player.Weapons.Bow.ProjectileStarter.Common",
-  "rootNamespace": "",
-  "references": [
-    "GUID:b6431b7d3eb44c7fb19b3735d729087f"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Weapons.Bow.ProjectileStarter.Common",
+    "references": [
+        "GUID:b6431b7d3eb44c7fb19b3735d729087f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

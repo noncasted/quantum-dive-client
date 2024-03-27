@@ -1,17 +1,16 @@
 {
     "name": "Global.Publisher.Web.Common",
-    "rootNamespace": "",
     "references": [
         "GUID:fb9b00a9a42c4c1459774b1ef88fcd74",
         "GUID:f342808fa0c74f4abae7e59fbccbbd8c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

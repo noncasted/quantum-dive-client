@@ -1,24 +1,19 @@
 {
-  "name": "GamePlay.Enemy.Melee.Damage",
-  "rootNamespace": "",
-  "references": [
-    "GUID:2435b9189672c5848ae4cc81c2cf0e13",
-    "GUID:767ae45922ea4bd79ce2db696b63e307",
-    
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    "GUID:1fd487ce5158932458a4cfb3669996f1"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Melee.Damage",
+    "references": [
+        "GUID:2435b9189672c5848ae4cc81c2cf0e13",
+        "GUID:767ae45922ea4bd79ce2db696b63e307",
+        "GUID:1fd487ce5158932458a4cfb3669996f1",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

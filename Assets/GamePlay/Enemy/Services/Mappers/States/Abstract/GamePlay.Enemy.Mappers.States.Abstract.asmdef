@@ -1,5 +1,15 @@
 {
- "name": "GamePlay.Enemy.Mappers.States.Abstract",
-  "references": [
- "GUID:87c37c46dfd9454380a9559a46f1be34"]
+    "name": "GamePlay.Enemy.Mappers.States.Abstract",
+    "references": [
+        "GUID:87c37c46dfd9454380a9559a46f1be34"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

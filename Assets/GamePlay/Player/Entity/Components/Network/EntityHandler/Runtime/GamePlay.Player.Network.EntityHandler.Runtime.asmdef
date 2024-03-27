@@ -1,18 +1,18 @@
 {
-  "name": "GamePlay.Player.Network.EntityHandler.Runtime",
-  "rootNamespace": "",
-  "references": ["GUID:bea1adb6c6974d047a8b08da390b27ab",
-    "GUID:d4c72429e3c94444bfafdc637920e799",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Network.EntityHandler.Runtime",
+    "references": [
+        "GUID:bea1adb6c6974d047a8b08da390b27ab",
+        "GUID:d4c72429e3c94444bfafdc637920e799",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

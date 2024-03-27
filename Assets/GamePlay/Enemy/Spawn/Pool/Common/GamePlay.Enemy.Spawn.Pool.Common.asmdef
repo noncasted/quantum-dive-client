@@ -1,6 +1,15 @@
-﻿{
-  "name": "GamePlay.Enemy.Spawn.Pool.Common",
-  "references": [
-    "GUID:10d7d8ac4a36426789d2f4c296a61d7b"
-  ]
+{
+    "name": "GamePlay.Enemy.Spawn.Pool.Common",
+    "references": [
+        "GUID:10d7d8ac4a36426789d2f4c296a61d7b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

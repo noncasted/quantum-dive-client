@@ -1,6 +1,15 @@
-﻿{
-  "name": "GamePlay.Enemy.Network.Common",
-  "references": [
-    "GUID:d97d9c764948444d98c823fdaa970d62"
-  ]
+{
+    "name": "GamePlay.Enemy.Network.Common",
+    "references": [
+        "GUID:d97d9c764948444d98c823fdaa970d62"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

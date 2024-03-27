@@ -1,5 +1,15 @@
 {
- "name": "GamePlay.Projectiles.Registry.Abstract",
-  "references": [
- "GUID:69e5c45a1bcb48238edb3f30d0eb17a6"]
+    "name": "GamePlay.Projectiles.Registry.Abstract",
+    "references": [
+        "GUID:69e5c45a1bcb48238edb3f30d0eb17a6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

@@ -1,19 +1,18 @@
 {
     "name": "Global.Configs.Compose",
-    "rootNamespace": "",
     "references": [
         "GUID:ab14ae7a0c3843c6be8d0c6f059b02f7",
-        "GUID:8d4a00804ef64d32943a7b543a70bd3f",
         "GUID:0d4a8765f8b14c1baecdf8d644500fcb",
+        "GUID:8d4a00804ef64d32943a7b543a70bd3f",
         "GUID:1429db28f9474a389cb34ec712b3c8b3"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

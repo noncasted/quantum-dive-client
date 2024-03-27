@@ -1,25 +1,22 @@
 {
-  "name": "GamePlay.Player.StateMachine.Remote.Runtime",
-  "rootNamespace": "",
-  "references": ["GUID:f0619dc86df636c4898928d3dcc95a57",
-    "GUID:1df29afa6177f8e4fa19b25367556ac2",
-    "GUID:fa9915635b0341e4ab6e73abc00d46f0",
-    "GUID:280fef4f20e71f84a8658a53d53e9ff5",
-    "GUID:bea1adb6c6974d047a8b08da390b27ab",
-    "GUID:edd14c109d07427682a6f5b7a262a359",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:47083761e726d344ebda60ec45a5396c",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23"
-    
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.StateMachine.Remote.Runtime",
+    "references": [
+        "GUID:280fef4f20e71f84a8658a53d53e9ff5",
+        "GUID:bea1adb6c6974d047a8b08da390b27ab",
+        "GUID:f0619dc86df636c4898928d3dcc95a57",
+        "GUID:edd14c109d07427682a6f5b7a262a359",
+        "GUID:47083761e726d344ebda60ec45a5396c",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

@@ -1,16 +1,19 @@
 {
-  "name": "GamePlay.Player.Weapons.Bow.ShootPoints.Runtime",
-  "references": ["GUID:faa71864943b5ad4289092553caeb4a5",
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    
-    
-    
-    
-    
-    "GUID:e26510743a1f8cc459abec906a60ed6c"
-  ]
+    "name": "GamePlay.Player.Weapons.Bow.ShootPoints.Runtime",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:e26510743a1f8cc459abec906a60ed6c",
+        "GUID:faa71864943b5ad4289092553caeb4a5",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

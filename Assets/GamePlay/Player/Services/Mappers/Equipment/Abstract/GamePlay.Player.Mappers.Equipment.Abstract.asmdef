@@ -1,5 +1,15 @@
 {
- "name": "GamePlay.Player.Mappers.Equipment.Abstract",
-  "references": [
- "GUID:5f68b44ce2aa4327bbdbdd04a5e29202"]
+    "name": "GamePlay.Player.Mappers.Equipment.Abstract",
+    "references": [
+        "GUID:5f68b44ce2aa4327bbdbdd04a5e29202"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

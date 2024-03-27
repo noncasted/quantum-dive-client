@@ -1,8 +1,17 @@
 {
-  "name": "GamePlay.Player.Weapons.Sword.AttackArea.Runtime",
-  "references": ["GUID:233aa0e4dcec47645b70893e50e720cc",
-    "GUID:2435b9189672c5848ae4cc81c2cf0e13",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3"
-    
-  ]
+    "name": "GamePlay.Player.Weapons.Sword.AttackArea.Runtime",
+    "references": [
+        "GUID:2435b9189672c5848ae4cc81c2cf0e13",
+        "GUID:233aa0e4dcec47645b70893e50e720cc",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

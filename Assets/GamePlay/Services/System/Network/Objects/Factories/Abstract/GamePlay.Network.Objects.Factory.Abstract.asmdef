@@ -1,5 +1,15 @@
 {
- "name": "GamePlay.Network.Objects.Factory.Abstract",
-  "references": [
- "GUID:f51ebe6a0ceec4240a699833d6309b23"]
+    "name": "GamePlay.Network.Objects.Factory.Abstract",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

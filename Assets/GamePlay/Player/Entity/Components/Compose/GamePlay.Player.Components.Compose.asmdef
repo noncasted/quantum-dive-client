@@ -1,46 +1,29 @@
 {
-  "name": "GamePlay.Player.Components.Compose",
-  "rootNamespace": "",
-  "references": [
-    "GUID:6f3a352f07be49868890c1e3e7b705e9",
-    
-    "GUID:19aeceb4db894a8eb082d0d5e86a0997",
-    "GUID:9fc0465a17914c63b93268a2a5457dce",
-    "GUID:abb0d563a5fe47c5a5060ef4b01c49e7",
-    "GUID:9dab7ae2c0ec48340870bbfaaeedd676",
-    "GUID:915a5a2ef3dd4eb0868f357c78bbff86",
-    
-    "GUID:145d06f883cb2b94396d697c01e9bd09",
-    "GUID:51ad2d5d390b45bea4a3881475db024d",
-    
-    
-    
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:64dfcc5eaae37b7479f6d4806d16d2c4",
-    "GUID:7adcf9a0f9eb4aa39b12636ab3acc20f",
-    
-    "GUID:7671495664994eacb3c6f012a7ed52b6",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:36b63739de284ea9aded3ca311c0ede1",
-    
-    
-    
-    
-    
-    
-    
-    "GUID:4c2d53a1566442429885755e05430edf"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Components.Compose",
+    "references": [
+        "GUID:7671495664994eacb3c6f012a7ed52b6",
+        "GUID:19aeceb4db894a8eb082d0d5e86a0997",
+        "GUID:6f3a352f07be49868890c1e3e7b705e9",
+        "GUID:9fc0465a17914c63b93268a2a5457dce",
+        "GUID:4c2d53a1566442429885755e05430edf",
+        "GUID:abb0d563a5fe47c5a5060ef4b01c49e7",
+        "GUID:64dfcc5eaae37b7479f6d4806d16d2c4",
+        "GUID:7adcf9a0f9eb4aa39b12636ab3acc20f",
+        "GUID:9dab7ae2c0ec48340870bbfaaeedd676",
+        "GUID:915a5a2ef3dd4eb0868f357c78bbff86",
+        "GUID:145d06f883cb2b94396d697c01e9bd09",
+        "GUID:51ad2d5d390b45bea4a3881475db024d",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:36b63739de284ea9aded3ca311c0ede1",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

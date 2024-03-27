@@ -1,25 +1,22 @@
 {
-  "name": "GamePlay.Network.EventLoops.Runtime",
-  "rootNamespace": "",
-  "references": ["GUID:32468dfd76aeee64abd199b98b754eda",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:ab8fcff7ea894a14a4e8393a6ba0191c",
-    
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:dec28d2fc9064a05abcbf9e3264fa16a",
-    
-    "GUID:dccbaf0348504c30995193bc2d0a1498",
-    "GUID:ae830b14052a4d1a88d79d9fbdd125ab"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Network.EventLoops.Runtime",
+    "references": [
+        "GUID:ab8fcff7ea894a14a4e8393a6ba0191c",
+        "GUID:dec28d2fc9064a05abcbf9e3264fa16a",
+        "GUID:32468dfd76aeee64abd199b98b754eda",
+        "GUID:ae830b14052a4d1a88d79d9fbdd125ab",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:dccbaf0348504c30995193bc2d0a1498",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

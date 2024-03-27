@@ -1,6 +1,5 @@
 {
     "name": "Internal.Scopes.Common",
-    "rootNamespace": "",
     "references": [
         "GUID:1429db28f9474a389cb34ec712b3c8b3",
         "GUID:dccbaf0348504c30995193bc2d0a1498",
@@ -9,11 +8,11 @@
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

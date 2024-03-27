@@ -1,16 +1,15 @@
 {
-  "name": "GamePlay.Enemy.Tests.Common",
-  "rootNamespace": "",
-  "references": [
-    "GUID:73b1dbf9f932442fb40445b9ad42f150"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Tests.Common",
+    "references": [
+        "GUID:73b1dbf9f932442fb40445b9ad42f150"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

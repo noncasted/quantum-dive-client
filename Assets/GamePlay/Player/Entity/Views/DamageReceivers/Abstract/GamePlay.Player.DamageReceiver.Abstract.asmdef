@@ -1,6 +1,16 @@
 {
- "name": "GamePlay.Player.DamageReceiver.Abstract",
-  "references": [
- "GUID:2435b9189672c5848ae4cc81c2cf0e13",
- "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"]
+    "name": "GamePlay.Player.DamageReceiver.Abstract",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:2435b9189672c5848ae4cc81c2cf0e13"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

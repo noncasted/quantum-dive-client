@@ -1,11 +1,20 @@
 {
-  "name": "GamePlay.Player.Weapons.Sword.TargetsSearch.Runtime",
-  "references": ["GUID:73daf949c3e7f2149b61eb372c77092c",
-    "GUID:2435b9189672c5848ae4cc81c2cf0e13",
-    "GUID:233aa0e4dcec47645b70893e50e720cc",
-    "GUID:a3929b3d40018e043872a2b3c6bd9eeb",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:2cb1b3fc50dc4994a116b6b7186bc291"
-    
-  ]
+    "name": "GamePlay.Player.Weapons.Sword.TargetsSearch.Runtime",
+    "references": [
+        "GUID:2435b9189672c5848ae4cc81c2cf0e13",
+        "GUID:a3929b3d40018e043872a2b3c6bd9eeb",
+        "GUID:233aa0e4dcec47645b70893e50e720cc",
+        "GUID:73daf949c3e7f2149b61eb372c77092c",
+        "GUID:2cb1b3fc50dc4994a116b6b7186bc291",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

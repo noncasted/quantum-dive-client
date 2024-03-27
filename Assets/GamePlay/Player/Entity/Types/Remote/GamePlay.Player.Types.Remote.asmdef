@@ -1,48 +1,27 @@
 {
-  "name": "GamePlay.Player.Types.Remote",
-  "references": [
-    "GUID:628eed525fe14e23a98070b6664c84b7",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    "GUID:239f9a8379f7b964b8f8c879fed530fb",
-    
-    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
-    "GUID:475e7352b7684936814b6c47a79525dc",
-    "GUID:44265e8886254d92835254b3bd1a2a7b",
-    "GUID:f4ffe8db16254b12923bfcc86166aba5",
-    
-    
-    
-    "GUID:415a0c8c00934fe0915d7be7cccc8112",
-    "GUID:88761ebbec514559a07be37f623fd944",
-    "GUID:66b97d729a594e5db5c5a5c3bd367ca2",
-    "GUID:cd2712690bb34b0cbe29835ac04e60ef",
-    "GUID:1b37573996994db99532a569dd6fba98",
-    "GUID:00611383f8024d48a83a27d177734ae9",
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    "GUID:7adcf9a0f9eb4aa39b12636ab3acc20f"
-  ]
+    "name": "GamePlay.Player.Types.Remote",
+    "references": [
+        "GUID:239f9a8379f7b964b8f8c879fed530fb",
+        "GUID:415a0c8c00934fe0915d7be7cccc8112",
+        "GUID:1b37573996994db99532a569dd6fba98",
+        "GUID:88761ebbec514559a07be37f623fd944",
+        "GUID:44265e8886254d92835254b3bd1a2a7b",
+        "GUID:475e7352b7684936814b6c47a79525dc",
+        "GUID:f4ffe8db16254b12923bfcc86166aba5",
+        "GUID:cd2712690bb34b0cbe29835ac04e60ef",
+        "GUID:7adcf9a0f9eb4aa39b12636ab3acc20f",
+        "GUID:66b97d729a594e5db5c5a5c3bd367ca2",
+        "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
+        "GUID:628eed525fe14e23a98070b6664c84b7",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

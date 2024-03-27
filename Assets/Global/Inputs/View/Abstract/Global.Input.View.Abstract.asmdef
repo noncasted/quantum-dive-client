@@ -1,19 +1,18 @@
 {
     "name": "Global.Input.View.Abstract",
-    "rootNamespace": "",
     "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
         "GUID:1429db28f9474a389cb34ec712b3c8b3",
-        "GUID:75469ad4d38634e559750d17036d5f7c",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"
+        "GUID:75469ad4d38634e559750d17036d5f7c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

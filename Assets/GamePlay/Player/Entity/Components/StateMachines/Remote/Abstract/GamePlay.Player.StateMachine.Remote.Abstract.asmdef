@@ -1,7 +1,17 @@
 {
- "name": "GamePlay.Player.StateMachine.Remote.Abstract",
-  "references": [
- "GUID:1df29afa6177f8e4fa19b25367556ac2",
- "GUID:47083761e726d344ebda60ec45a5396c",
- "GUID:1429db28f9474a389cb34ec712b3c8b3"]
+    "name": "GamePlay.Player.StateMachine.Remote.Abstract",
+    "references": [
+        "GUID:47083761e726d344ebda60ec45a5396c",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

@@ -1,20 +1,19 @@
 {
     "name": "Global.Nova.Compose",
-    "rootNamespace": "",
     "references": [
         "GUID:2ca692a48c8d4a00a7a1c261a39c239c",
-        "GUID:1429db28f9474a389cb34ec712b3c8b3",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b6506c5e27354bbd9a7bdde5aec7ceec",
         "GUID:7dbab6532d03486bb34fcd8b0440f303",
-        "GUID:b6506c5e27354bbd9a7bdde5aec7ceec"
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

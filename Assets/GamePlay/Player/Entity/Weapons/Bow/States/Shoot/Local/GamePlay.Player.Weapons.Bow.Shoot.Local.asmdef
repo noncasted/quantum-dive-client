@@ -1,60 +1,35 @@
 {
-  "name": "GamePlay.Player.Weapons.Bow.Shoot.Local",
-  "rootNamespace": "",
-  "references": [
-    
-    "GUID:b0275d8a7d994d97ae1652be17935f0f",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    
-    "GUID:47083761e726d344ebda60ec45a5396c",
-    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    "GUID:1df29afa6177f8e4fa19b25367556ac2",
-    
-    
-    "GUID:9571efd1a2b04be7b3bdb6400de107ed",
-    
-    
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    
-    "GUID:3e7167d9f58d47b7839bb3ce134a78f1",
-    "GUID:fdc2cf7c250a4094dae93475802ae81f",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:bd864497808440a98c2eace3cac76fa6",
-    "GUID:699865ac82ed4bfc98e47c9342127ab0",
-    
-    "GUID:92c45879a0f342a29c0e271981946ba1",
-    "GUID:6fe3e5bc5e27400aa7e27dded3e1e008",
-    
-    
-    "GUID:1a1ac4ee6eff4433a04199a96da530a2",
-    "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
-    
-    
-    
-    "GUID:990d31defcc043b185607cafaa155860",
-    "GUID:206616f3cddb4dd3bec52b821dc19a39",
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    "GUID:35641cfc64c0bc54987f24d4fe9b66b1",
-    "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
-    "GUID:7fa2fb6a0ead92e4a898ec2400b82351",
-    "GUID:ad1d169e92bc34b47ba09a9628d8a672",
-    "GUID:a3929b3d40018e043872a2b3c6bd9eeb",
-    "GUID:0cb2a476920347541b994eb21ea94928",
-    "GUID:63bc19ae10888a140805b7ef9209eca7",
-    
-    
-    
-    "GUID:9dab7ae2c0ec48340870bbfaaeedd676"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Weapons.Bow.Shoot.Local",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:206616f3cddb4dd3bec52b821dc19a39",
+        "GUID:ad1d169e92bc34b47ba09a9628d8a672",
+        "GUID:35641cfc64c0bc54987f24d4fe9b66b1",
+        "GUID:a3929b3d40018e043872a2b3c6bd9eeb",
+        "GUID:9dab7ae2c0ec48340870bbfaaeedd676",
+        "GUID:a1218e793c7b4e44fbdb7cc5f9474bf0",
+        "GUID:47083761e726d344ebda60ec45a5396c",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
+        "GUID:0cb2a476920347541b994eb21ea94928",
+        "GUID:990d31defcc043b185607cafaa155860",
+        "GUID:63bc19ae10888a140805b7ef9209eca7",
+        "GUID:7fa2fb6a0ead92e4a898ec2400b82351",
+        "GUID:bd864497808440a98c2eace3cac76fa6",
+        "GUID:9571efd1a2b04be7b3bdb6400de107ed",
+        "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
+        "GUID:fdc2cf7c250a4094dae93475802ae81f",
+        "GUID:1a1ac4ee6eff4433a04199a96da530a2",
+        "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

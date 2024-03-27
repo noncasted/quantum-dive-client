@@ -1,11 +1,19 @@
 {
-  "name": "GamePlay.Enemy.Updater.Runtime",
-  "references": ["GUID:0b1cf2365187701478ded818a9129ef7",
-    "GUID:7ce8cdb2afcf4d36adf6d0a4d363443f",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23"
-    
-  ]
+    "name": "GamePlay.Enemy.Updater.Runtime",
+    "references": [
+        "GUID:0b1cf2365187701478ded818a9129ef7",
+        "GUID:7ce8cdb2afcf4d36adf6d0a4d363443f",
+        "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

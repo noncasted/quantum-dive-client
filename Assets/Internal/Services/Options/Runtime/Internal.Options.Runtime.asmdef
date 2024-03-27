@@ -1,6 +1,5 @@
 {
     "name": "Internal.Options.Runtime",
-    "rootNamespace": "",
     "references": [
         "GUID:ae4831055b9d1e043a6a415fde22dc02",
         "GUID:1429db28f9474a389cb34ec712b3c8b3",
@@ -8,11 +7,11 @@
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

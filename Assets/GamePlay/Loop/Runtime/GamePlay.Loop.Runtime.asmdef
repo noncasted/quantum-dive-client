@@ -1,81 +1,22 @@
 {
-  "name": "GamePlay.Loop.Runtime",
-  "rootNamespace": "",
-  "references": [
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:cdfd058b393524bddbb7e850e0d53c8e",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    
-    
-    
-    "GUID:efdc767e5c6dbaa4591aa748ca63026b",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    
-    
-    
-    "GUID:8f9977ae3d5e4463a714a399c51f6b28",
-    
-    
-    "GUID:18da8e94cbe9dc54eb52b3ddf92cd092",
-    
-    
-    
-    
-    
-    "GUID:14eecf01b6eb4ff2b3dfe46bcae92d25",
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    "GUID:1b37573996994db99532a569dd6fba98"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Loop.Runtime",
+    "references": [
+        "GUID:14eecf01b6eb4ff2b3dfe46bcae92d25",
+        "GUID:8f9977ae3d5e4463a714a399c51f6b28",
+        "GUID:1b37573996994db99532a569dd6fba98",
+        "GUID:18da8e94cbe9dc54eb52b3ddf92cd092",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

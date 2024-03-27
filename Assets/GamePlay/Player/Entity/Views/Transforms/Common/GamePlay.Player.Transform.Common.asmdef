@@ -1,17 +1,16 @@
 {
-  "name": "GamePlay.Player.Transform.Common",
-  "rootNamespace": "",
-  "references": [
-    "GUID:8f9012bdd1b116c48ab480004500c8f3",
-    "GUID:cc66fc856eb5405badce77d51f842134"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Transform.Common",
+    "references": [
+        "GUID:8f9012bdd1b116c48ab480004500c8f3",
+        "GUID:cc66fc856eb5405badce77d51f842134"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

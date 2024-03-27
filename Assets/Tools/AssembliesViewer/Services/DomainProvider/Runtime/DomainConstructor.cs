@@ -79,7 +79,7 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                             Array.Empty<string>(),
                             Array.Empty<string>(),
                             Array.Empty<string>(),
-                            rawAssembly.IsOwned);
+                            false);
 
                         var toggles = new AssemblyToggles(
                             file.allowUnsafeCode,
@@ -94,7 +94,13 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                             file.defineConstraints,
                             file.versionDefines);
 
-                        referencedAssembly = new Assembly(id, path, references, unknownDetails, toggles, defines);
+                        referencedAssembly = new Assembly(
+                            reference.Id,
+                            path,
+                            new List<IAssembly>(),
+                            unknownDetails,
+                            toggles,
+                            defines);
 
                         idsToAssemblies.Add(reference.Id, referencedAssembly);
                         assemblies.Add(referencedAssembly);
@@ -104,7 +110,39 @@ namespace Tools.AssembliesViewer.Services.DomainProvider.Runtime
                 }
             }
 
+            ValidateCyclicDependencies(assemblies);
+
             return assemblies;
+        }
+
+        private void ValidateCyclicDependencies(IReadOnlyList<IAssembly> assemblies)
+        {
+            var allReferences = new Dictionary<IAssembly, List<IAssembly>>();
+
+            foreach (var assembly in assemblies)
+            {
+                allReferences.Add(assembly, new List<IAssembly>());
+
+                foreach (var reference in assembly.References)
+                    allReferences[assembly].Add(reference);
+            }
+
+            foreach (var (source, references) in allReferences)
+            {
+                foreach (var target in references)
+                {
+                    var targetReferences = allReferences[target];
+
+                    foreach (var targetReference in targetReferences)
+                    {
+                        if (targetReference.Equals(source) == true)
+                        {
+                            throw new Exception(
+                                $"Cyclic dependency: {source.Path.Name} -> {targetReference.Path.Name}");
+                        }
+                    }
+                }
+            }
         }
 
         private IReadOnlyList<RawAssembly> GetAllRawAssemblies()

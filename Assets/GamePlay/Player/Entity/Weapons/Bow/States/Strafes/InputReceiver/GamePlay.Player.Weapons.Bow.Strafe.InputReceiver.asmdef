@@ -1,16 +1,20 @@
 {
-  "name": "GamePlay.Player.Weapons.Bow.Strafe.InputReceiver",
-  "references": [
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:9cd20ff68fe34293a478ea6f96510ff9",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    
-    "GUID:8a39265d65ba4b3e9fd0bf78e82928d4",
-    
-    "GUID:ed438ca80c904d1998007d47f177bcac"
-  ]
+    "name": "GamePlay.Player.Weapons.Bow.Strafe.InputReceiver",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:9cd20ff68fe34293a478ea6f96510ff9",
+        "GUID:ed438ca80c904d1998007d47f177bcac",
+        "GUID:8a39265d65ba4b3e9fd0bf78e82928d4",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

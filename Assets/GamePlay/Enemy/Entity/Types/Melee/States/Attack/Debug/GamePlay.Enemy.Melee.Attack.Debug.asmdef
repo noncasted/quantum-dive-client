@@ -1,9 +1,18 @@
-﻿{
-  "name": "GamePlay.Enemy.Melee.Attack.Debug",
-  "references": [
-    "GUID:767ae45922ea4bd79ce2db696b63e307",
-    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    "GUID:ca913105e6424d24af37fc9ba8269837",
-    "GUID:287b9d77b8b64c619022dca7d594289e"
-  ]
+{
+    "name": "GamePlay.Enemy.Melee.Attack.Debug",
+    "references": [
+        "GUID:287b9d77b8b64c619022dca7d594289e",
+        "GUID:767ae45922ea4bd79ce2db696b63e307",
+        "GUID:ca913105e6424d24af37fc9ba8269837",
+        "GUID:10fe20dd1bd946259b6ea4fd3965b06e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

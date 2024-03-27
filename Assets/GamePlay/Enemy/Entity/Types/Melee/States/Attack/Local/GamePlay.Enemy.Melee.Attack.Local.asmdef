@@ -1,39 +1,27 @@
 {
-  "name": "GamePlay.Enemy.Melee.Attack.Local",
-  "rootNamespace": "",
-  "references": [
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    "GUID:527e199203c94a05960eadfb90a65aba",
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    "GUID:767ae45922ea4bd79ce2db696b63e307",
-    "GUID:fb241a1fee9143a298155badb61f1728",
-    
-    
-    
-    "GUID:699865ac82ed4bfc98e47c9342127ab0",
-    "GUID:b0275d8a7d994d97ae1652be17935f0f",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    
-    
-    "GUID:161183806381402698a6af6b3b858411",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
-    "GUID:a16a43b7c89785f47bb051ec285a5624",
-    "GUID:0a414efbed25d954ca13952adf8e0505",
-    "GUID:e8da1ef8362eacc41bfa3671bdaadceb",
-    "GUID:1fd487ce5158932458a4cfb3669996f1",
-    "GUID:42d99141f95b4ae41b2dc88b36641944"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Melee.Attack.Local",
+    "references": [
+        "GUID:e8da1ef8362eacc41bfa3671bdaadceb",
+        "GUID:767ae45922ea4bd79ce2db696b63e307",
+        "GUID:fb241a1fee9143a298155badb61f1728",
+        "GUID:161183806381402698a6af6b3b858411",
+        "GUID:0a414efbed25d954ca13952adf8e0505",
+        "GUID:a16a43b7c89785f47bb051ec285a5624",
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:527e199203c94a05960eadfb90a65aba",
+        "GUID:42d99141f95b4ae41b2dc88b36641944",
+        "GUID:1fd487ce5158932458a4cfb3669996f1",
+        "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

@@ -1,7 +1,16 @@
-﻿{
-  "name": "GamePlay.Player.SubMovement.Common",
-  "references": [
-    "GUID:8f9012bdd1b116c48ab480004500c8f3",
-    "GUID:1df29afa6177f8e4fa19b25367556ac2"
-  ]
+{
+    "name": "GamePlay.Player.SubMovement.Common",
+    "references": [
+        "GUID:8f9012bdd1b116c48ab480004500c8f3",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

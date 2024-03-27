@@ -1,44 +1,24 @@
 {
-  "name": "Player.States.Run.Remote",
-  "rootNamespace": "",
-  "references": [
-    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    
-    
-    
-    "GUID:260f4127d19d40329a9804f72fc47cf8",
-    "GUID:1df29afa6177f8e4fa19b25367556ac2",
-    "GUID:aac41f60988d442497259de79205647b",
-    
-    
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:699865ac82ed4bfc98e47c9342127ab0",
-    
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    "GUID:47083761e726d344ebda60ec45a5396c",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    
-    "GUID:206616f3cddb4dd3bec52b821dc19a39",
-    
-    
-    "GUID:f0619dc86df636c4898928d3dcc95a57",
-    
-    
-    
-    
-    
-    "GUID:239f9a8379f7b964b8f8c879fed530fb"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "Player.States.Run.Remote",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:206616f3cddb4dd3bec52b821dc19a39",
+        "GUID:239f9a8379f7b964b8f8c879fed530fb",
+        "GUID:260f4127d19d40329a9804f72fc47cf8",
+        "GUID:f0619dc86df636c4898928d3dcc95a57",
+        "GUID:47083761e726d344ebda60ec45a5396c",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
+        "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

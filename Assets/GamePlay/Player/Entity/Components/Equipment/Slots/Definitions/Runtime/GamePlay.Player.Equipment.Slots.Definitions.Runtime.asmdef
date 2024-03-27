@@ -1,7 +1,16 @@
 {
-  "name": "GamePlay.Player.Equipment.Slots.Definitions.Runtime",
-  "references": [
-    "GUID:a6a753291bc24d5382cc6acf7de3f5f1",
-    "GUID:87ae6df447f5419ba5b182148b950723"
-  ]
+    "name": "GamePlay.Player.Equipment.Slots.Definitions.Runtime",
+    "references": [
+        "GUID:a6a753291bc24d5382cc6acf7de3f5f1",
+        "GUID:87ae6df447f5419ba5b182148b950723"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

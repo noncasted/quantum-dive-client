@@ -1,23 +1,22 @@
 {
     "name": "Global.Overlay.Runtime",
-    "rootNamespace": "",
     "references": [
-        "GUID:9e24947de15b9834991c9d8411ea37cf",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:1429db28f9474a389cb34ec712b3c8b3",
-        "GUID:298e82b42e834ebc9c229f8df784c429",
-        "GUID:6055be8ebefd69e48b49212b09b47b2f",
         "GUID:e3f90ec7da70443198fdd279336fd055",
         "GUID:3b992c16a4c84e929d722c6b7d0ed004",
-        "GUID:07a044aa3db84ac78852c3db5b8a723e"
+        "GUID:07a044aa3db84ac78852c3db5b8a723e",
+        "GUID:298e82b42e834ebc9c229f8df784c429",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

@@ -1,9 +1,19 @@
 {
-  "name": "GamePlay.Player.DamageReceiver.Runtime",
-  "references": ["GUID:1160fb20d0525a84799a07bbb2bfbeb1",
-    "GUID:2435b9189672c5848ae4cc81c2cf0e13",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"
-  ]
+    "name": "GamePlay.Player.DamageReceiver.Runtime",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:2435b9189672c5848ae4cc81c2cf0e13",
+        "GUID:1160fb20d0525a84799a07bbb2bfbeb1",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

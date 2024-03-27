@@ -1,6 +1,5 @@
 {
     "name": "Internal.Scopes.Runtime",
-    "rootNamespace": "",
     "references": [
         "GUID:1429db28f9474a389cb34ec712b3c8b3",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
@@ -9,11 +8,11 @@
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

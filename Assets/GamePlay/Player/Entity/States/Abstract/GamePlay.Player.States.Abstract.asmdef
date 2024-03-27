@@ -1,6 +1,15 @@
 {
-  "name": "GamePlay.Player.States.Abstract",
-  "references": [
-    "GUID:1df29afa6177f8e4fa19b25367556ac2"
-  ]
+    "name": "GamePlay.Player.States.Abstract",
+    "references": [
+        "GUID:1df29afa6177f8e4fa19b25367556ac2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

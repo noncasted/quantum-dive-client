@@ -1,29 +1,25 @@
 {
-  "name": "GamePlay.Enemy.Melee.StateSelector.Runtime",
-  "rootNamespace": "",
-  "references": [
-    "GUID:cf3d5c4da6e7c044084049c700ef7cfe",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:527e199203c94a05960eadfb90a65aba",
-    "GUID:0b1cf2365187701478ded818a9129ef7",
-    "GUID:a16a43b7c89785f47bb051ec285a5624",
-    "GUID:721b908a073a4a70891a75e33937496c",
-    "GUID:d1f687e54b5d45199e006815a82486f5",
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    "GUID:0d01a4052a8c48b7b6aa59ec6487476a",
-    
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Melee.StateSelector.Runtime",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:d1f687e54b5d45199e006815a82486f5",
+        "GUID:721b908a073a4a70891a75e33937496c",
+        "GUID:0d01a4052a8c48b7b6aa59ec6487476a",
+        "GUID:cf3d5c4da6e7c044084049c700ef7cfe",
+        "GUID:a16a43b7c89785f47bb051ec285a5624",
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:527e199203c94a05960eadfb90a65aba",
+        "GUID:0b1cf2365187701478ded818a9129ef7",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

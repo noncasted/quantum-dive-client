@@ -1,7 +1,16 @@
-﻿{
-  "name": "GamePlay.Enemy.Melee.StateSelector.Common",
-  "references": [
-    "GUID:d97d9c764948444d98c823fdaa970d62",
-    "GUID:27e4b3f0e33845248131a79ff57f3216"
-  ]
+{
+    "name": "GamePlay.Enemy.Melee.StateSelector.Common",
+    "references": [
+        "GUID:d97d9c764948444d98c823fdaa970d62",
+        "GUID:27e4b3f0e33845248131a79ff57f3216"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

@@ -1,5 +1,15 @@
 {
- "name": "GamePlay.Player.List.Abstract",
-  "references": [
- "GUID:1b37573996994db99532a569dd6fba98"]
+    "name": "GamePlay.Player.List.Abstract",
+    "references": [
+        "GUID:1b37573996994db99532a569dd6fba98"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

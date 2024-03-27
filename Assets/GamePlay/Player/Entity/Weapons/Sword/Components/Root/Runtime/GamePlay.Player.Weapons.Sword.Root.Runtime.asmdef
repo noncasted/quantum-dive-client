@@ -1,20 +1,22 @@
 {
-  "name": "GamePlay.Player.Weapons.Sword.Root.Runtime",
-  "references": [
-    
-    "GUID:fe396b719c2041a9941a94b2ba1571bb",
-    "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:d9aeffadfa824685894c5bb390a9e42c",
-    "GUID:a6a753291bc24d5382cc6acf7de3f5f1",
-    
-    
-    
-    "GUID:36b63739de284ea9aded3ca311c0ede1",
-    
-    "GUID:dccbaf0348504c30995193bc2d0a1498"
-  ]
+    "name": "GamePlay.Player.Weapons.Sword.Root.Runtime",
+    "references": [
+        "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
+        "GUID:a6a753291bc24d5382cc6acf7de3f5f1",
+        "GUID:fe396b719c2041a9941a94b2ba1571bb",
+        "GUID:d9aeffadfa824685894c5bb390a9e42c",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:36b63739de284ea9aded3ca311c0ede1",
+        "GUID:dccbaf0348504c30995193bc2d0a1498",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

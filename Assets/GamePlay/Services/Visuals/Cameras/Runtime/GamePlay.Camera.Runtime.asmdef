@@ -1,25 +1,23 @@
 {
-  "name": "GamePlay.Camera.Runtime",
-  "references": [
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:cdfd058b393524bddbb7e850e0d53c8e",
-    
-    "GUID:93a72f0e04fe04849b1ed36f0000b52b",
-    "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:7b9c66811592408da4550239c9ad13e7",
-    
-    
-    "GUID:14eecf01b6eb4ff2b3dfe46bcae92d25",
-    "GUID:31cb5f9dfa6a49149a84438eb2f82f6f",
-    
-    
-    
-    
-    "GUID:3cc113908b8840f1b9eb71e36aec1c03"
-  ]
+    "name": "GamePlay.Camera.Runtime",
+    "references": [
+        "GUID:14eecf01b6eb4ff2b3dfe46bcae92d25",
+        "GUID:7b9c66811592408da4550239c9ad13e7",
+        "GUID:31cb5f9dfa6a49149a84438eb2f82f6f",
+        "GUID:3cc113908b8840f1b9eb71e36aec1c03",
+        "GUID:10fe20dd1bd946259b6ea4fd3965b06e",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

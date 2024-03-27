@@ -1,6 +1,15 @@
-﻿{
-  "name": "GamePlay.Player.Weapons.Sword.Definition.Common",
-  "references": [
-    "GUID:c075eee8fbb245bf9a56dfe2f04f736d"
-  ]
+{
+    "name": "GamePlay.Player.Weapons.Sword.Definition.Common",
+    "references": [
+        "GUID:c075eee8fbb245bf9a56dfe2f04f736d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

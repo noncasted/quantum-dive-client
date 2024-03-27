@@ -1,47 +1,24 @@
 {
-  "name": "GamePlay.Common.GlobalBootstrapMock",
-  "rootNamespace": "",
-  "references": [
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    "GUID:cdfd058b393524bddbb7e850e0d53c8e",
-    "GUID:7ad9ae8d39b4ddb40853cd7c44206e03",
-    
-    "GUID:593a5b492d29ac6448b1ebf7f035ef33",
-    
-    
-    
-    
-    "GUID:84651a3751eca9349aac36a66bba901b",
-    "GUID:51481429a34a4e32ba1e7eab23368623",
-    
-    
-    
-    
-    
-    
-    
-    "GUID:440eeb0cf8854526bc408747cfd7dd20",
-    "GUID:a6109e4dd6464f3ba58966083df6b5e8",
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Common.GlobalBootstrapMock",
+    "references": [
+        "GUID:51481429a34a4e32ba1e7eab23368623",
+        "GUID:440eeb0cf8854526bc408747cfd7dd20",
+        "GUID:a6109e4dd6464f3ba58966083df6b5e8",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:7ad9ae8d39b4ddb40853cd7c44206e03",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:593a5b492d29ac6448b1ebf7f035ef33",
+        "GUID:84651a3751eca9349aac36a66bba901b",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

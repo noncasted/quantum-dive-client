@@ -1,7 +1,16 @@
 {
-  "name": "GamePlay.Player.SubPush.Abstract",
-  "references": [
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:776d03a35f1b52c4a9aed9f56d7b4229"
-  ]
+    "name": "GamePlay.Player.SubPush.Abstract",
+    "references": [
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

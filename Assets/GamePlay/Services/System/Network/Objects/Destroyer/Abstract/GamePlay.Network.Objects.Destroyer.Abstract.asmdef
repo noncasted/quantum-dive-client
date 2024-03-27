@@ -1,6 +1,15 @@
 {
-  "name": "GamePlay.Network.Objects.Destroyer.Abstract",
-  "references": [
-    "GUID:df78a595a22a4bf88a8d58ce6cb42746"
-  ]
+    "name": "GamePlay.Network.Objects.Destroyer.Abstract",
+    "references": [
+        "GUID:df78a595a22a4bf88a8d58ce6cb42746"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

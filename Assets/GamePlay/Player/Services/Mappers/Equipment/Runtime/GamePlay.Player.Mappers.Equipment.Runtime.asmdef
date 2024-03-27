@@ -1,23 +1,20 @@
 {
-  "name": "GamePlay.Player.Mappers.Equipment.Runtime",
-  "rootNamespace": "",
-  "references": ["GUID:c6515e2d30cb9ca41bde3eddc565a0bd",
-    "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
-    "GUID:fedc4140ebaf4ef6a78c67b850e47031",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:268868eb737e485ea3de7810633cbfc7",
-    "GUID:75f29b67883912c4683d10d111aca113",
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Mappers.Equipment.Runtime",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
+        "GUID:c6515e2d30cb9ca41bde3eddc565a0bd",
+        "GUID:fedc4140ebaf4ef6a78c67b850e47031",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

@@ -1,6 +1,15 @@
-﻿{
-  "name": "GamePlay.Player.Weapons.Sword.Paths",
-  "references": [
-    "GUID:7f30d344ae264474b92bd0f7deb4d546"
-  ]
+{
+    "name": "GamePlay.Player.Weapons.Sword.Paths",
+    "references": [
+        "GUID:7f30d344ae264474b92bd0f7deb4d546"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

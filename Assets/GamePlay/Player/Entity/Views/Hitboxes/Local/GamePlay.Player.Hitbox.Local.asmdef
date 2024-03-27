@@ -1,34 +1,25 @@
 {
-  "name": "GamePlay.Player.Hitbox.Local",
-  "rootNamespace": "",
-  "references": [
-    "GUID:2435b9189672c5848ae4cc81c2cf0e13",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:6dc79ecacad54fd8bf10905a5d77b08f",
-    
-    "GUID:dc70dc890b8a4913acb1c03b25e1e3ae",
-    
-    "GUID:c78a7dbfd9ed46b2b27149ec340d0b5c",
-    
-    
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
-    "GUID:850f400d111e37a459d3500562852b80",
-    "GUID:1160fb20d0525a84799a07bbb2bfbeb1",
-    
-    "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Hitbox.Local",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:2435b9189672c5848ae4cc81c2cf0e13",
+        "GUID:850f400d111e37a459d3500562852b80",
+        "GUID:1160fb20d0525a84799a07bbb2bfbeb1",
+        "GUID:6dc79ecacad54fd8bf10905a5d77b08f",
+        "GUID:dc70dc890b8a4913acb1c03b25e1e3ae",
+        "GUID:c78a7dbfd9ed46b2b27149ec340d0b5c",
+        "GUID:8ceb11fc07ecc9847af1f8e5e77cb9f9",
+        "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

@@ -26,7 +26,7 @@ namespace Tools.AssembliesViewer.Domain.Runtime
         {
             var newLine = Environment.NewLine;
             var value =
-                $"    \"allowUnsafeCode\": {AllowUnsafeCode.ToString().ToLower()},{newLine}" +
+                $"\"allowUnsafeCode\": {AllowUnsafeCode.ToString().ToLower()},{newLine}" +
                 $"    \"overrideReferences\": {OverrideReferences.ToString().ToLower()},{newLine}" +
                 $"    \"autoReferenced\": {AutoReference.ToString().ToLower()},{newLine}" +
                 $"    \"noEngineReferences\": {NoEngineReferences.ToString().ToLower()}{newLine}";

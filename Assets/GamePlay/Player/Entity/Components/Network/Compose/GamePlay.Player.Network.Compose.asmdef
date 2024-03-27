@@ -1,11 +1,19 @@
-﻿{
-  "name": "GamePlay.Player.Network.Compose",
-  "references": [
-    
-    "GUID:6abefa6f5cf94dd68ba4a2ac7cabc5d6",
-    "GUID:72ee10059c044befb9afe61cb72eaf8d",
-    "GUID:780b8f375cf44ae1986e3ea31d21c761",
-    "GUID:5c8fed9e223b429babc5110a334eb8e5",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3"
-  ]
+{
+    "name": "GamePlay.Player.Network.Compose",
+    "references": [
+        "GUID:6abefa6f5cf94dd68ba4a2ac7cabc5d6",
+        "GUID:72ee10059c044befb9afe61cb72eaf8d",
+        "GUID:780b8f375cf44ae1986e3ea31d21c761",
+        "GUID:5c8fed9e223b429babc5110a334eb8e5",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

@@ -1,13 +1,19 @@
 {
-  "name": "GamePlay.Player.Weapons.Bow.Configuration",
-  "references": [
-    "GUID:23c3827423cb4fb380b69f0d9a190eca",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:b5d66016965c4f8c8e260e3f1678b8f7",
-    
-    "GUID:b6431b7d3eb44c7fb19b3735d729087f",
-    "GUID:9f12b849425b4eee835913da917e6c20",
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"
-  ]
+    "name": "GamePlay.Player.Weapons.Bow.Configuration",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:b6431b7d3eb44c7fb19b3735d729087f",
+        "GUID:23c3827423cb4fb380b69f0d9a190eca",
+        "GUID:b5d66016965c4f8c8e260e3f1678b8f7",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

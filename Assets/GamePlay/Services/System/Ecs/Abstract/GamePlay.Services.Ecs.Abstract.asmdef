@@ -1,6 +1,15 @@
 {
-  "name": "GamePlay.Services.Ecs.Abstract",
-  "references": [
-    "GUID:e59bf9fc7d5a44b18a819a92edd46163"
-  ]
+    "name": "GamePlay.Services.Ecs.Abstract",
+    "references": [
+        "GUID:e59bf9fc7d5a44b18a819a92edd46163"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

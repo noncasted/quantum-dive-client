@@ -1,6 +1,15 @@
-﻿{
-  "name": "GamePlay.Player.UI.Common",
-  "references": [
-    "GUID:6bcc6699bd4d443e95da858ab625b239"
-  ]
+{
+    "name": "GamePlay.Player.UI.Common",
+    "references": [
+        "GUID:6bcc6699bd4d443e95da858ab625b239"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

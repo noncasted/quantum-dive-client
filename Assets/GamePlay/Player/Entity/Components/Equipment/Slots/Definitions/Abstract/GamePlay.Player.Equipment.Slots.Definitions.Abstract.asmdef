@@ -1,3 +1,14 @@
-﻿{
-  "name": "GamePlay.Player.Equipment.Slots.Definitions.Abstract"
+{
+    "name": "GamePlay.Player.Equipment.Slots.Definitions.Abstract",
+    "references": [
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

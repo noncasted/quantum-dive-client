@@ -1,24 +1,23 @@
 {
     "name": "Global.UiStateMachine.Runtime",
-    "rootNamespace": "",
     "references": [
-        "GUID:9dbe345fbe8e47cb8a0d24c890f0feff",
-        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-        "GUID:cdfd058b393524bddbb7e850e0d53c8e",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:1429db28f9474a389cb34ec712b3c8b3",
-        "GUID:4e649888f1754652ae6f572148f472ee",
         "GUID:4e18616727bd4b79a3b107e0489cec76",
+        "GUID:9dbe345fbe8e47cb8a0d24c890f0feff",
         "GUID:265d18ef1d894d07ac9f0331e8ac2297",
-        "GUID:da1917f3a79694c539a148addd06d33b"
+        "GUID:4e649888f1754652ae6f572148f472ee",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:da1917f3a79694c539a148addd06d33b",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:cdfd058b393524bddbb7e850e0d53c8e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
     "precompiledReferences": [],
-    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
     "noEngineReferences": false
 }

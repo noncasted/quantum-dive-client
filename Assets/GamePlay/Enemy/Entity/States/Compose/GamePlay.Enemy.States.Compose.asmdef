@@ -1,19 +1,27 @@
-﻿{
-  "name": "GamePlay.Enemy.States.Compose",
-  "references": [
-    
-    "GUID:72041e54c124471db15c17d033547c18",
-    "GUID:cba95793f8404b33a54ac8f44e5ae4bf",
-    "GUID:483c1c97199d48899ab2ef29bc389d0d",
-    "GUID:d1f687e54b5d45199e006815a82486f5",
-    "GUID:721b908a073a4a70891a75e33937496c",
-    "GUID:ea8a3562e464425fb3442268f196d9e1",
-    "GUID:51c7d0d29544499a810b2c81f4571dbc",
-    "GUID:ffaa3406b1df48f8bdecb9c41bd2f783",
-    "GUID:78cdf7b8b45a42be84a6b9b9fc432f47",
-    "GUID:2cd1058b8fb0415d9dba71fe9948a965",
-    "GUID:9800b4e6b20b4edf93421401d0502288",
-    "GUID:0af0043b3e9f429c837f90d429af47fb",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3"
-  ]
+{
+    "name": "GamePlay.Enemy.States.Compose",
+    "references": [
+        "GUID:cba95793f8404b33a54ac8f44e5ae4bf",
+        "GUID:ffaa3406b1df48f8bdecb9c41bd2f783",
+        "GUID:483c1c97199d48899ab2ef29bc389d0d",
+        "GUID:78cdf7b8b45a42be84a6b9b9fc432f47",
+        "GUID:d1f687e54b5d45199e006815a82486f5",
+        "GUID:2cd1058b8fb0415d9dba71fe9948a965",
+        "GUID:721b908a073a4a70891a75e33937496c",
+        "GUID:9800b4e6b20b4edf93421401d0502288",
+        "GUID:51c7d0d29544499a810b2c81f4571dbc",
+        "GUID:ea8a3562e464425fb3442268f196d9e1",
+        "GUID:0af0043b3e9f429c837f90d429af47fb",
+        "GUID:72041e54c124471db15c17d033547c18",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

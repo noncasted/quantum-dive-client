@@ -1,16 +1,15 @@
 {
-  "name": "GamePlay.Network.Events.Common",
-  "rootNamespace": "",
-  "references": [
-    "GUID:ab8fcff7ea894a14a4e8393a6ba0191c"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Network.Events.Common",
+    "references": [
+        "GUID:ab8fcff7ea894a14a4e8393a6ba0191c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

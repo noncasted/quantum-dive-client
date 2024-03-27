@@ -1,15 +1,19 @@
 {
-  "name": "GamePlay.Player.Weapons.Sword.Input.Runtime",
-  "references": ["GUID:3e8928d909f99d14dbea990298b40be8",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:6cd1843cd05a49488bf814bbc52e12a5",
-    
-    
-    
-    
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    
-    
-    "GUID:ed438ca80c904d1998007d47f177bcac"
-  ]
+    "name": "GamePlay.Player.Weapons.Sword.Input.Runtime",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:3e8928d909f99d14dbea990298b40be8",
+        "GUID:6cd1843cd05a49488bf814bbc52e12a5",
+        "GUID:ed438ca80c904d1998007d47f177bcac",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

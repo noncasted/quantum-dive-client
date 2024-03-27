@@ -1,25 +1,29 @@
 {
-  "name": "GamePlay.Player.Weapons.Bow.Config.Remote",
-  "references": [
-    "GUID:b05b159862734a98954de233c33ae0c5",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:cba6ac8ac64c48208b19a46ce9ddf862",
-    "GUID:ed3143b9b3134f1ab6ad76169c5ebf96",
-    "GUID:f8ad9e753f9147608b26d5a2571ea357",
-    "GUID:6e0698aa384a406f9c81cc2f5e7ba07e",
-    "GUID:6c2db941bade13442848b216ff408243",
-    
-    
-    
-    "GUID:16458d00134c49e984d156e9e37c97c7",
-    "GUID:c02240f49caa8f940b185955ba215804",
-    "GUID:2a31f6d63bbc49d189e7a3b966dec92a",
-    "GUID:e42c41fa7abb447c9943bfe9a2061827",
-    
-    "GUID:e5f42ee8d28644b89bfd6c2d482fac7f",
-    
-    "GUID:71ac06dca857442f93ceab1558376ae0",
-    "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
-    "GUID:36b63739de284ea9aded3ca311c0ede1"
-  ]
+    "name": "GamePlay.Player.Weapons.Bow.Definition.Remote",
+    "references": [
+        "GUID:5f68b44ce2aa4327bbdbdd04a5e29202",
+        "GUID:cba6ac8ac64c48208b19a46ce9ddf862",
+        "GUID:e42c41fa7abb447c9943bfe9a2061827",
+        "GUID:e5f42ee8d28644b89bfd6c2d482fac7f",
+        "GUID:b05b159862734a98954de233c33ae0c5",
+        "GUID:2a31f6d63bbc49d189e7a3b966dec92a",
+        "GUID:6c2db941bade13442848b216ff408243",
+        "GUID:ed3143b9b3134f1ab6ad76169c5ebf96",
+        "GUID:71ac06dca857442f93ceab1558376ae0",
+        "GUID:f8ad9e753f9147608b26d5a2571ea357",
+        "GUID:c02240f49caa8f940b185955ba215804",
+        "GUID:6e0698aa384a406f9c81cc2f5e7ba07e",
+        "GUID:16458d00134c49e984d156e9e37c97c7",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:36b63739de284ea9aded3ca311c0ede1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

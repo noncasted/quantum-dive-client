@@ -1,10 +1,19 @@
 {
-  "name": "GamePlay.Targets.Registry.Runtime",
-  "references": ["GUID:4860de18e1e0c7241999f1c5b8e04f5f",
-    "GUID:b8aa3bc1ced74968bb12dec0afb6b377",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:ca913105e6424d24af37fc9ba8269837",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23"
-  ]
+    "name": "GamePlay.Targets.Registry.Runtime",
+    "references": [
+        "GUID:4860de18e1e0c7241999f1c5b8e04f5f",
+        "GUID:b8aa3bc1ced74968bb12dec0afb6b377",
+        "GUID:ca913105e6424d24af37fc9ba8269837",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

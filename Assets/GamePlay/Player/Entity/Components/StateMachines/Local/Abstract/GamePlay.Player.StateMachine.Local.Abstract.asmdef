@@ -1,7 +1,17 @@
 {
- "name": "GamePlay.Player.StateMachine.Local.Abstract",
-  "references": [
- "GUID:47083761e726d344ebda60ec45a5396c",
- "GUID:1df29afa6177f8e4fa19b25367556ac2",
- "GUID:ef403b25d3e8417e9854f4cfbbe7bc43"]
+    "name": "GamePlay.Player.StateMachine.Local.Abstract",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:47083761e726d344ebda60ec45a5396c",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

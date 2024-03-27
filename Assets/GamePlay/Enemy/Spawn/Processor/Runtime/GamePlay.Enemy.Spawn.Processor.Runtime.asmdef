@@ -1,12 +1,17 @@
 {
-  "name": "GamePlay.Enemy.Spawn.Processor.Runtime",
-  "references": [
-    "GUID:8a671dd4d32949c0a2914de8aba23216",
-    "GUID:f38aae42bdf8425ca292c68947a20558",
-    "GUID:176371d9ecf14a348fc4fc86548c5b17",
-    "GUID:a8f6b895322c45408ed64cb258c91d51",
-    
-    "GUID:09eeed04a09c422b9c62d681c78d80ec",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3"
-  ]
+    "name": "GamePlay.Enemy.Spawn.Processor.Runtime",
+    "references": [
+        "GUID:09eeed04a09c422b9c62d681c78d80ec",
+        "GUID:8a671dd4d32949c0a2914de8aba23216",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

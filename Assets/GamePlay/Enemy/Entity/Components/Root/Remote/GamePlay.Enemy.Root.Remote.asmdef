@@ -1,27 +1,24 @@
 {
-  "name": "GamePlay.Enemy.Root.Remote",
-  "references": [
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    "GUID:d89cb064a6d60b243b67336a6540d7a7",
-    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-    
-    "GUID:09eeed04a09c422b9c62d681c78d80ec",
-    
-    "GUID:de19aa2e50794ab8b485869d52ea5f5f",
-    
-    
-    
-    "GUID:36b63739de284ea9aded3ca311c0ede1",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:dccbaf0348504c30995193bc2d0a1498",
-    
-    "GUID:acd0f4b5b5b26474e8bba63a3fc50ee6",
-    
-    "GUID:1fd487ce5158932458a4cfb3669996f1",
-    
-    "GUID:5a0b2aea9a2a4de78518f42301cb3375"
-  ]
+    "name": "GamePlay.Enemy.Root.Remote",
+    "references": [
+        "GUID:09eeed04a09c422b9c62d681c78d80ec",
+        "GUID:de19aa2e50794ab8b485869d52ea5f5f",
+        "GUID:acd0f4b5b5b26474e8bba63a3fc50ee6",
+        "GUID:5a0b2aea9a2a4de78518f42301cb3375",
+        "GUID:1fd487ce5158932458a4cfb3669996f1",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:36b63739de284ea9aded3ca311c0ede1",
+        "GUID:dccbaf0348504c30995193bc2d0a1498",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

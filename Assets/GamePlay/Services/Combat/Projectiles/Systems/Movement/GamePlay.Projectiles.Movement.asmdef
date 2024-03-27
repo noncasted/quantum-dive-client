@@ -1,8 +1,17 @@
 {
-  "name": "GamePlay.Projectiles.Movement",
-  "references": [
-    "GUID:e59bf9fc7d5a44b18a819a92edd46163",
-    "GUID:acafe45b72c24a5e889f7c87f4833aea",
-    "GUID:2f38b8ba30fb4de9af0587598cd52891"
-  ]
+    "name": "GamePlay.Projectiles.Movement",
+    "references": [
+        "GUID:2f38b8ba30fb4de9af0587598cd52891",
+        "GUID:acafe45b72c24a5e889f7c87f4833aea",
+        "GUID:e59bf9fc7d5a44b18a819a92edd46163"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

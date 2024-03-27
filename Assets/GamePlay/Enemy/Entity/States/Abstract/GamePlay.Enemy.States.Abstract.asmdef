@@ -1,3 +1,14 @@
-﻿{
-  "name": "GamePlay.Enemy.States.Abstract"
+{
+    "name": "GamePlay.Enemy.States.Abstract",
+    "references": [
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

@@ -1,6 +1,15 @@
-﻿{
-  "name": "GamePlay.Enemy.Spawn.Common",
-  "references": [
-    "GUID:73b1dbf9f932442fb40445b9ad42f150"
-  ]
+{
+    "name": "GamePlay.Enemy.Spawn.Common",
+    "references": [
+        "GUID:73b1dbf9f932442fb40445b9ad42f150"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

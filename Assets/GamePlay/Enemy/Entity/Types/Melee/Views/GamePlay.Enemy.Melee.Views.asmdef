@@ -1,20 +1,16 @@
 {
-  "name": "GamePlay.Enemy.Melee.Views",
-  "rootNamespace": "",
-  "references": [
-    
-    
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:161183806381402698a6af6b3b858411"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Melee.Views",
+    "references": [
+        "GUID:161183806381402698a6af6b3b858411",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

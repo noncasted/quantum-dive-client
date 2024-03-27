@@ -1,25 +1,21 @@
 {
-  "name": "GamePlay.Player.Death.Local",
-  "rootNamespace": "",
-  "references": [
-    "GUID:47083761e726d344ebda60ec45a5396c",
-    "GUID:1df29afa6177f8e4fa19b25367556ac2",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:cbf6c85c7d1346afb7e787385ccfa42f",
-    "GUID:d7f245ec195547edb9c81809078172dd",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    "GUID:8f9012bdd1b116c48ab480004500c8f3"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Player.Death.Local",
+    "references": [
+        "GUID:cbf6c85c7d1346afb7e787385ccfa42f",
+        "GUID:8f9012bdd1b116c48ab480004500c8f3",
+        "GUID:d7f245ec195547edb9c81809078172dd",
+        "GUID:47083761e726d344ebda60ec45a5396c",
+        "GUID:1df29afa6177f8e4fa19b25367556ac2",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

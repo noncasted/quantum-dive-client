@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Tools.AssembliesViewer.Domain.Abstract;
 
 namespace Tools.AssembliesViewer.Domain.Runtime
@@ -45,12 +46,13 @@ namespace Tools.AssembliesViewer.Domain.Runtime
         public void Write()
         {
             var newLine = Environment.NewLine;
+            
             var json =
                 "{" +
                 $"{newLine}    \"name\": \"{Path.Name}\",{newLine}" +
                 $"    {ReferencesToString()},{newLine}" +
                 $"    {Defines.ToString()},{newLine}" +
-                $"    {Toggles.ToString()}{newLine}" +
+                $"    {Toggles.ToString()}" +
                 "}";
 
             File.WriteAllText(Path.Raw, json);
@@ -60,16 +62,27 @@ namespace Tools.AssembliesViewer.Domain.Runtime
         {
             var value = $"\"references\": [";
 
-            for (var i = 0; i < References.Count; i++)
+            var references = new List<IAssembly>(References);
+            references = references.OrderBy(t => t.Path.Name).ToList();
+
+            for (var i = 0; i < references.Count; i++)
             {
-                value += $"{Environment.NewLine}    \"GUID:{References[i].Id}\"";
-                if (i != References.Count - 1)
+                value += $"{Environment.NewLine}        \"GUID:{references[i].Id}\"";
+                if (i != references.Count - 1)
                     value += ",";
             }
 
             value += $"{Environment.NewLine}    ]";
 
             return value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is not IAssembly target)
+                return false;
+
+            return target.Id == Id;
         }
     }
 }

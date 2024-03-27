@@ -1,12 +1,19 @@
 {
-  "name": "GamePlay.Player.Equipment.Locker.Runtime",
-  "references": ["GUID:2eb155572109eeb40b59f548f295ad7a",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:6d61bb01e0c54b1b92bf164db3fe56f2",
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    
-    "GUID:8f9012bdd1b116c48ab480004500c8f3"
-  ]
+    "name": "GamePlay.Player.Equipment.Locker.Runtime",
+    "references": [
+        "GUID:8f9012bdd1b116c48ab480004500c8f3",
+        "GUID:2eb155572109eeb40b59f548f295ad7a",
+        "GUID:6d61bb01e0c54b1b92bf164db3fe56f2",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

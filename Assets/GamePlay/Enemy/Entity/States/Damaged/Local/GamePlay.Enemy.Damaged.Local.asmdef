@@ -1,37 +1,26 @@
 {
-  "name": "GamePlay.Enemy.Damaged.Local",
-  "rootNamespace": "",
-  "references": [
-    "GUID:87c37c46dfd9454380a9559a46f1be34",
-    
-    
-    "GUID:a7e7861bd1f94241aa2a3563a476eb8b",
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:b0275d8a7d994d97ae1652be17935f0f",
-    "GUID:9c221aad6c194a8fb7ac7c64a5cf6928",
-    "GUID:699865ac82ed4bfc98e47c9342127ab0",
-    
-    "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
-    
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:c260e868bcc5423db856245e6ecb862d",
-    
-    "GUID:a16a43b7c89785f47bb051ec285a5624",
-    "GUID:2d163ca28caf33344a0ce66f34d6262c",
-    "GUID:e8da1ef8362eacc41bfa3671bdaadceb",
-    "GUID:768a3e1c75c7b2541b17742bb2f16e03",
-    "GUID:0a414efbed25d954ca13952adf8e0505"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.Damaged.Local",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:e8da1ef8362eacc41bfa3671bdaadceb",
+        "GUID:a7e7861bd1f94241aa2a3563a476eb8b",
+        "GUID:c260e868bcc5423db856245e6ecb862d",
+        "GUID:0a414efbed25d954ca13952adf8e0505",
+        "GUID:768a3e1c75c7b2541b17742bb2f16e03",
+        "GUID:a16a43b7c89785f47bb051ec285a5624",
+        "GUID:2d163ca28caf33344a0ce66f34d6262c",
+        "GUID:87c37c46dfd9454380a9559a46f1be34",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

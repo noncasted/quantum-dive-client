@@ -1,30 +1,24 @@
 {
-  "name": "GamePlay.Enemy.DamageProcessor.Runtime",
-  "rootNamespace": "",
-  "references": [
-    "GUID:2435b9189672c5848ae4cc81c2cf0e13",
-    "GUID:c9c9c54e0cd34dcd8da49012b5cb9286",
-    
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:a7de0afdc601983459601b42c27a5c08",
-    "GUID:483c1c97199d48899ab2ef29bc389d0d",
-    "GUID:cba95793f8404b33a54ac8f44e5ae4bf",
-    "GUID:287b9d77b8b64c619022dca7d594289e",
-    
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    
-    "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
-    
-    "GUID:5f9085b4a2f7f064382566bbacd674d9"
-  ],
-  "includePlatforms": [],
-  "excludePlatforms": [],
-  "allowUnsafeCode": false,
-  "overrideReferences": false,
-  "precompiledReferences": [],
-  "autoReferenced": true,
-  "defineConstraints": [],
-  "versionDefines": [],
-  "noEngineReferences": false
+    "name": "GamePlay.Enemy.DamageProcessor.Runtime",
+    "references": [
+        "GUID:ef403b25d3e8417e9854f4cfbbe7bc43",
+        "GUID:2435b9189672c5848ae4cc81c2cf0e13",
+        "GUID:cba95793f8404b33a54ac8f44e5ae4bf",
+        "GUID:5f9085b4a2f7f064382566bbacd674d9",
+        "GUID:c9c9c54e0cd34dcd8da49012b5cb9286",
+        "GUID:483c1c97199d48899ab2ef29bc389d0d",
+        "GUID:a7de0afdc601983459601b42c27a5c08",
+        "GUID:287b9d77b8b64c619022dca7d594289e",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": true,
+    "noEngineReferences": false
 }

@@ -1,15 +1,21 @@
 {
-  "name": "GamePlay.Services.Projectiles.Network",
-  "references": [
-    
-    "GUID:f51ebe6a0ceec4240a699833d6309b23",
-    "GUID:dec28d2fc9064a05abcbf9e3264fa16a",
-    "GUID:fdc2cf7c250a4094dae93475802ae81f",
-    
-    "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
-    "GUID:954bed7845ef3b94c8f2d8ca3cd76154",
-    "GUID:1429db28f9474a389cb34ec712b3c8b3",
-    "GUID:32468dfd76aeee64abd199b98b754eda",
-    "GUID:b121a984c9cd3584c94f30d68a57e086"
-  ]
+    "name": "GamePlay.Services.Projectiles.Network",
+    "references": [
+        "GUID:dec28d2fc9064a05abcbf9e3264fa16a",
+        "GUID:32468dfd76aeee64abd199b98b754eda",
+        "GUID:69e5c45a1bcb48238edb3f30d0eb17a6",
+        "GUID:fdc2cf7c250a4094dae93475802ae81f",
+        "GUID:b121a984c9cd3584c94f30d68a57e086",
+        "GUID:1429db28f9474a389cb34ec712b3c8b3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }

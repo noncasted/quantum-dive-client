@@ -1,7 +1,16 @@
-﻿{
-  "name": "GamePlay.Enemy.Push.Common",
-  "references": [
-    "GUID:d97d9c764948444d98c823fdaa970d62",
-    "GUID:72041e54c124471db15c17d033547c18"
-  ]
+{
+    "name": "GamePlay.Enemy.Push.Common",
+    "references": [
+        "GUID:d97d9c764948444d98c823fdaa970d62",
+        "GUID:72041e54c124471db15c17d033547c18"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "precompiledReferences": [],
+    "defineConstraints": [],
+    "versionDefines": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "autoReferenced": false,
+    "noEngineReferences": false
 }
