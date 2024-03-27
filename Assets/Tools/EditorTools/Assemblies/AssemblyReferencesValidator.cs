@@ -55,7 +55,7 @@ namespace Tools.EditorTools.Assemblies
                     {
                         var name = reference.Path.Name; 
                         
-                        if (name.Contains("Unity") == true)
+                        if (name.Contains("Unity") == true || name.Contains("Pathfinding") == true)
                             return true;
                         
                         var checkNamespaces = assemblyToNamespaces[reference];
