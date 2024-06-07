@@ -1,6 +1,7 @@
 {
     "name": "Global.MessageBroker.Abstract",
     "references": [
+        "GUID:1429db28f9474a389cb34ec712b3c8b3"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

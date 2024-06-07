@@ -33,6 +33,7 @@ namespace Global.Network.Handlers.ClientHandler.Runtime
             var client = new RagonClient(connection, _options.Rate);
             client.Configure(_entityListener);
             client.Configure(_sceneCollectorBridge);
+            
             return client;
         }
 

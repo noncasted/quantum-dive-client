@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Common.DataTypes.Runtime.Attributes;
 using GamePlay.Common.Routes;
 using GamePlay.Enemy.Compose;
 using GamePlay.Environment.Bootstrap;
@@ -27,7 +28,7 @@ namespace GamePlay.Common.Config.Runtime
         [SerializeField] private ServiceDefaultCallbacksFactory _serviceDefaultCallbacks;
 
         [SerializeField] private GamePlayScope _scopePrefab;
-        [SerializeField] private SceneData _servicesScene;
+        [SerializeField] [CreateSO] private SceneData _servicesScene;
         [SerializeField] private bool _isMock;
 
         public LifetimeScope ScopePrefab => _scopePrefab;

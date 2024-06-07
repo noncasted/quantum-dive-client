@@ -17,8 +17,9 @@ MonoBehaviour:
   _network: {fileID: 11400000, guid: b83e32330189b494998753bbcb4950b1, type: 2}
   _player: {fileID: 11400000, guid: 06730ffe8af1c0646a377ab32160555c, type: 2}
   _enemy: {fileID: 11400000, guid: 25218489eefba8d4483220f1ef84198e, type: 2}
-  _serviceDefaultCallbacks: {fileID: 0}
+  _serviceDefaultCallbacks: {fileID: 11400000, guid: b21fcab815aa43a4a95e81066bc6c431,
+    type: 2}
   _scopePrefab: {fileID: 6256164544057903142, guid: 739bd40898e14fe4ebe3aa07b287a0fb,
     type: 3}
-  _servicesScene: {fileID: 0}
+  _servicesScene: {fileID: 11400000, guid: 59910a87188532e4a8e4e3731c301dbd, type: 2}
   _isMock: 0

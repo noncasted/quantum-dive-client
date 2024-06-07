@@ -1,18 +1,15 @@
-﻿// using System;
-// using Cysharp.Threading.Tasks;
-// using UniRx;
+﻿using System;
+using Internal.Scopes.Abstract.Lifetimes;
 
 namespace Global.System.MessageBrokers.Abstract
 {
     public static class Msg
     {
-        /*private static IMessageBroker _messageBroker;
-        private static IAsyncMessageBroker _asyncMessageBroker;
-        
-        public static void Inject(IMessageBroker messageBroker, IAsyncMessageBroker asyncMessageBroker)
+        private static IMessageBroker _messageBroker;
+
+        public static void Inject(IMessageBroker messageBroker)
         {
             _messageBroker = messageBroker;
-            _asyncMessageBroker = asyncMessageBroker;
         }
 
         public static void Publish<T>(T message)
@@ -20,19 +17,9 @@ namespace Global.System.MessageBrokers.Abstract
             _messageBroker.Publish(message);
         }
 
-        public static IDisposable Listen<T>(Action<T> listener)
+        public static void Listen<T>(IReadOnlyLifetime lifetime, Action<T> listener)
         {
-            return _messageBroker.Receive<T>().Subscribe(listener);
+            _messageBroker.Listen(lifetime, listener);
         }
-        
-        public static async UniTask<IObservable<Unit>> PublishAsync<T>(T message)
-        {
-            return _asyncMessageBroker.PublishAsync(message);
-        }
-        
-        public static IDisposable ListenAsync<T>(Func<T, IObservable<Unit>> listener)
-        {
-            return _asyncMessageBroker.Subscribe(listener);
-        }*/
     }
 }

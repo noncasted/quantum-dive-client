@@ -106,7 +106,7 @@ namespace Common.DataTypes.Editor.Attributes
 
         protected virtual string[] GetAllScriptsOfType()
         {
-            var items = AssetDatabase.FindAssets("t:Monoscript", new[] { "Assets/Features" })
+            var items = AssetDatabase.FindAssets("t:Monoscript", new[] { "Assets/" })
                 .Select(x => AssetDatabase.GUIDToAssetPath(x))
                 .Where(x => IsCorrectType(AssetDatabase.LoadAssetAtPath<MonoScript>(x)))
                 .ToArray();

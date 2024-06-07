@@ -1,11 +1,10 @@
 ﻿using Cysharp.Threading.Tasks;
+using Global.System.MessageBrokers.Abstract;
 using Global.System.MessageBrokers.Common;
 using Internal.Scopes.Abstract.Containers;
 using Internal.Scopes.Abstract.Instances.Services;
 using Sirenix.OdinInspector;
 using UnityEngine;
-
-//using UniRx;
 
 namespace Global.System.MessageBrokers.Runtime
 {
@@ -16,13 +15,12 @@ namespace Global.System.MessageBrokers.Runtime
     {
         public async UniTask Create(IServiceCollection services, IServiceScopeUtils utils)
         {
-            // var messageBroker = new MessageBroker();
-            // var asyncMessageBroker = new AsyncMessageBroker();
+            var broker = new MessageBroker();
+            Msg.Inject(broker);
 
-            // services.Register<MessageBrokerProxy>()
-            //     .WithParameter(messageBroker)
-            //     .WithParameter(asyncMessageBroker)
-            //     .AsSelfResolvable();
+            services.RegisterInstance(broker)
+                .As<IMessageBroker>()
+                .AsSelfResolvable();
         }
     }
 }

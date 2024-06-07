@@ -28,7 +28,7 @@ namespace Internal.Services.Scenes.Native
             await UniTask.WaitUntil(() => targetScene.name == data.Scene.SceneName);
 
             var result = new NativeSceneLoadResult(targetScene);
-
+            
             return result;
         }
     }

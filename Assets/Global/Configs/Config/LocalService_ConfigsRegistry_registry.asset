@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44a49bc5c0a43bab665248748d08e33, type: 3}
   m_Name: LocalService_ConfigsRegistry_registry
   m_EditorClassIdentifier: 
-  _objects: []
+  _objects:
+  - {fileID: 11400000, guid: 8752d3719d6025346b16c9b0fc2fdfd5, type: 2}
